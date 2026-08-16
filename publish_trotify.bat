@@ -9,6 +9,14 @@ echo ==================================================
 echo Trotify publish started: %date% %time%
 echo ==================================================
 
+REM Make sure the large race chart file is ignored by Git.
+git check-ignore -q chart_race_data.json
+if errorlevel 1 (
+    echo ERROR: chart_race_data.json is NOT being ignored by Git.
+    echo Publish aborted to prevent attempting to upload the large file.
+    exit /b 1
+)
+
 REM Stage all website/data changes. Files in .gitignore remain excluded.
 git add .
 if errorlevel 1 (
@@ -16,21 +24,27 @@ if errorlevel 1 (
     exit /b 1
 )
 
-REM If nothing is staged, there is nothing to publish.
+REM Commit only if there are staged changes.
 git diff --cached --quiet
 if %errorlevel%==0 (
-    echo No Trotify changes to publish.
-    exit /b 0
+    echo No new local Trotify changes to commit.
+) else (
+    git commit -m "Automated Trotify update"
+    if errorlevel 1 (
+        echo ERROR: git commit failed.
+        exit /b 1
+    )
 )
 
-REM Commit the staged changes.
-git commit -m "Automated Trotify update"
+REM Bring down any remote changes after local changes are safely committed.
+git pull --rebase origin main
 if errorlevel 1 (
-    echo ERROR: git commit failed.
+    echo ERROR: git pull/rebase failed.
+    echo Trotify publish aborted.
     exit /b 1
 )
 
-REM Push the new commit to GitHub.
+REM Push local commits to GitHub.
 git push
 if errorlevel 1 (
     echo ERROR: git push failed.
