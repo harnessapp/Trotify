@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trotify Dashboard</title>
+    <link rel="stylesheet" href="styles.css?v=8">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <img src="trotify-logo.png" alt="Trotify" class="brand-logo" onerror="this.style.display='none'">
+                <div class="brand-fallback">Trotify</div>
+                <div class="brand-tagline">See More Than The Form</div>
+            </div>
+
+            <nav class="nav">
+                <div class="nav-section">MAIN</div>
+                <a href="#" class="nav-item active" data-view="home">
+                    <span>🏠</span>
+                    <span>Home</span>
+                </a>
+
+                <div class="nav-section">LIVE</div>
+                <a href="#" class="nav-item" data-view="upcoming">
+                    <span>⚡</span>
+                    <span>Upcoming Fields</span>
+                </a>
+                <a href="#" class="nav-item" data-view="next-up">
+                    <span>🟢</span>
+                    <span>Next Up</span>
+                </a>
+                <a href="#" class="nav-item" data-view="latest-results">
+                    <span>🏁</span>
+                    <span>Latest Results</span>
+                </a>
+                <a href="#" class="nav-item" data-view="timeline">
+                    <span>🧵</span>
+                    <span>Timeline</span>
+                </a>
+                <a href="#" class="nav-item" data-view="watchlist">
+                    <span>⭐</span>
+                    <span>Watchlist</span>
+                </a>
+                <a href="#" class="nav-item" data-view="feature-races">
+                    <span>🏆</span>
+                    <span>Feature Races</span>
+                </a>
+                <a href="#" class="nav-item" data-view="stable-changes">
+                    <span>🔄</span>
+                    <span>Stable Changes</span>
+                </a>
+                <div class="nav-section">STATS & INSIGHTS</div>
+                <a href="#" class="nav-item" data-view="drivers">
+                    <span>👤</span>
+                    <span>Drivers</span>
+                </a>
+                <a href="#" class="nav-item" data-view="trainers">
+                    <span>🎓</span>
+                    <span>Trainers</span>
+                </a>
+                <a href="#" class="nav-item" data-view="results">
+                    <span>📋</span>
+                    <span>Results</span>
+                </a>
+                <a href="#" class="nav-item" data-view="good-leaders">
+                    <span>🚀</span>
+                    <span>Good Leaders</span>
+                </a>
+                <a href="#" class="nav-item" data-view="model-tips">
+                    <span>🎯</span>
+                    <span>Model Tips</span>
+                </a>
+                <!-- Hidden temporarily - Box Tickers retained -->
+                <!--
+                <a href="#" class="nav-item" data-view="box-tickers">
+                    <span>☑️</span>
+                    <span>Box Tickers</span>
+                </a>
+                -->
+                <a href="#" class="nav-item" data-view="race-charts">
+                    <span>📈</span>
+                    <span>Race Charts</span>
+                </a>
+
+                <div class="nav-section">RACE TOOLS</div>
+
+                <a href="#" class="nav-item" data-view="tipping-comp">
+                    <span>🏆</span>
+                    <span>Tipping Comp</span>
+                </a>
+
+                <a href="#" class="nav-item" data-view="daily-wraps">
+                    <span>📰</span>
+                    <span>Daily Wraps</span>
+                </a>
+                <!-- Hidden temporarily - Race Finder retained -->
+                <!--
+                <a href="#" class="nav-item" data-view="race-finder">
+                    <span>🎯</span>
+                    <span>Race Finder</span>
+                </a>
+                -->
+            </nav>
+
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div></div>
+                <div class="topbar-right">
+                    <span id="todayLabel">Today</span>
+                    <button class="ghost-button">Race Calendar</button>
+                </div>
+            </header>
+
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>Trotify</h1>
+                    <h2>Australian Harness Racing Insights</h2>
+                </div>
+                <img src="app_icon_v2.png" alt="Trotify" class="hero-icon">
+            </section>
+
+            <section class="trotify-wire" id="trotifyWire">
+                <div class="wire-label">TROTIFY WIRE</div>
+                <div class="wire-track-wrap">
+                    <div class="wire-track" id="wireTrack">Loading latest angles...</div>
+                </div>
+            </section>
+
+            <section class="dashboard-grid">
+                <article class="card next-card">
+                    <div class="card-heading">
+                        <span>⏱️</span>
+                        <span>Next To Go</span>
+                        <span class="live-pill">LIVE</span>
+                    </div>
+
+                    <div class="next-to-go-layout">
+                        <div class="next-main">
+                            <div class="next-race" id="nextRace">Loading...</div>
+                            <div class="next-time" id="nextTime">Checking upcoming fields</div>
+                            <div class="next-countdown" id="nextCountdown">—</div>
+
+                            <div class="next-race-info">
+                                <div class="next-race-name" id="nextRaceName"></div>
+                                <div class="next-race-meta" id="nextRaceMeta"></div>
+                            </div>
+
+                            <a href="#" class="card-button" id="viewNextRaceButton">View Race</a>
+                        </div>
+
+                        <div class="next-list-wrap">
+                            <div class="next-list-title">Today's Next 10 Races</div>
+                            <div class="next-list" id="nextFourList">
+                                <div class="next-list-empty">Loading...</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card today-racing-card">
+                    <div class="card-heading today-racing-heading">
+                        <span>📅</span>
+                        <span>Today’s Racing</span>
+                        <a href="#" class="mini-card-link" id="viewUpcomingFieldsButton">View Upcoming Fields</a>
+                    </div>
+
+                    <div class="today-racing-layout">
+                        <div class="today-racing-stats">
+                            <div>
+                                <div class="big-stat" id="meetingCount">—</div>
+                                <div class="stat-label">Meetings</div>
+                            </div>
+                            <div>
+                                <div class="big-stat" id="raceCount">—</div>
+                                <div class="stat-label">Races</div>
+                            </div>
+                        </div>
+
+                        <div class="today-meeting-list" id="todayMeetingList">
+                            Loading meetings...
+                        </div>
+                    </div>
+
+                    <div class="next-days-list" id="nextDaysList"></div>
+
+                </article>
+
+                <article class="card stable-home-card">
+                    <div class="card-heading">
+                        <span>🔄</span>
+                        <span>Stable Changes</span>
+                    </div>
+
+                    <div class="big-stat" id="stableChangesToday">—</div>
+                    <div class="stat-label accent">Remaining today</div>
+
+                    <div class="mini-stats">
+                        <span><strong id="stableChangesTomorrow">—</strong> tomorrow</span>
+                        <span><strong id="stableChangesFuture">—</strong> future</span>
+                    </div>
+
+                    <a href="#" class="card-button" id="viewStableChangesButton">View Stable Changes</a>
+                </article>
+
+
+                <article class="card last30-card">
+                    <div class="card-heading last30-heading">
+                        <div>
+                            <span>🔥</span>
+                            <span>LAST 30 DAYS</span>
+                        </div>
+
+                        <select id="last30StateFilter" class="last30-filter">
+                            <option value="ALL">ALL</option>
+                            <option value="VIC">VIC</option>
+                            <option value="NSW">NSW</option>
+                            <option value="QLD">QLD</option>
+                            <option value="SA">SA</option>
+                            <option value="WA">WA</option>
+                            <option value="TAS">TAS</option>
+                        </select>
+                    </div>
+
+                    <div class="last30-layout">
+                        <div>
+                            <div class="last30-title">Hot Drivers</div>
+                            <div id="hotDrivers30Preview" class="last30-list">Loading...</div>
+                            <a href="#" class="card-button compact" id="viewDrivers30Button">Driver Stats</a>
+                        </div>
+
+                        <div>
+                            <div class="last30-title">Hot Trainers</div>
+                            <div id="hotTrainers30Preview" class="last30-list">Loading...</div>
+                            <a href="#" class="card-button compact" id="viewTrainers30Button">Trainer Stats</a>
+                        </div>
+                    </div>
+                </article>
+
+
+
+
+
+                <article class="card daily-card">
+                    <div class="card-heading">
+                        <span>📰</span>
+                        <span>Latest Daily Wrap</span>
+                    </div>
+                    <h3>Today’s Wrap</h3>
+                    <p>Pattern of the day, key performances, track talk and what it means.</p>
+                    <a href="#" class="card-button compact">Read Now</a>
+                </article>
+
+                <article class="card latest-results-card">
+                    <div class="card-heading">
+                        <span>🏁</span>
+                        <span>Latest Results</span>
+                        <span class="live-pill">LIVE</span>
+                    </div>
+
+                    <div class="big-stat" id="latestResultsCount">—</div>
+                    <div class="stat-label accent">results captured today</div>
+
+                    <div id="latestResultsPreview" class="latest-results-preview">
+                        Loading latest results...
+                    </div>
+
+                    <a href="#" class="card-button" id="viewLatestResultsButton">View Results</a>
+                </article>
+
+            </section>
+
+            <section class="meetings-panel" style="display: none;">
+                <div class="panel-heading">
+                    <span>📅</span>
+                    <span>Today’s Meetings</span>
+                </div>
+                <div class="meeting-strip" id="meetingStrip">
+                    <div class="meeting-card">Loading meetings...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+
+    <script src="script.js?v=14"></script>
+
+    <script
+        src="https://open.spotify.com/embed/iframe-api/v1"
+        async>
+    </script>
+
+    </body>
+    </html>
