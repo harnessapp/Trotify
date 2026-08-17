@@ -6713,3 +6713,119 @@ body.race-chart-social .race-chart-stage-card::after {
         object-fit: contain;
     }
 }
+
+
+/* =========================================================
+   MOBILE - NEXT UP COMPACT VIEW
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* -----------------------------------------------------
+       MOBILE NAV ORDER
+       Home → Next Up → Upcoming Fields
+       Desktop navigation remains unchanged
+       ----------------------------------------------------- */
+
+    .sidebar .nav-item[data-view="home"] {
+        order: -3;
+    }
+
+    .sidebar .nav-item[data-view="next-up"] {
+        order: -2;
+    }
+
+    .sidebar .nav-item[data-view="upcoming"] {
+        order: -1;
+    }
+
+
+    /* -----------------------------------------------------
+       NEXT UP PAGE - REDUCE TOP SPACE
+       ----------------------------------------------------- */
+
+    .next-up-layout {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .next-up-layout .panel-heading,
+    .next-up-layout .card-heading {
+        margin-bottom: 8px;
+    }
+
+    .next-up-filter {
+        margin: 4px 0 10px;
+        gap: 6px;
+    }
+
+    .next-up-filter button,
+    .next-up-filter .driver-state-button {
+        padding: 6px 11px;
+        font-size: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       COMPACT RACE LIST
+       ----------------------------------------------------- */
+
+    .next-up-race-list {
+        gap: 6px;
+    }
+
+    .next-up-race-card {
+        grid-template-columns: 62px minmax(0, 1fr) 20px;
+
+        gap: 8px;
+
+        min-height: 0;
+        padding: 9px 10px;
+        border-radius: 12px;
+    }
+
+    .next-up-countdown {
+        font-size: 14px;
+    }
+
+    .next-up-main {
+        min-width: 0;
+    }
+
+    .next-up-title {
+        font-size: 16px;
+        line-height: 1.1;
+    }
+
+    .next-up-title span {
+        font-size: 9px;
+        padding: 2px 6px;
+        margin-left: 5px;
+    }
+
+    .next-up-meta {
+        margin-top: 2px;
+        font-size: 11px;
+        line-height: 1.1;
+    }
+
+
+    /* -----------------------------------------------------
+       REMOVE RACE NAME ON MOBILE
+       e.g. MAZDA ASPLEY P...
+       ----------------------------------------------------- */
+
+    .next-up-race-name {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       SMALLER ARROW
+       ----------------------------------------------------- */
+
+    .next-up-race-card .race-arrow {
+        font-size: 25px;
+    }
+
+}
