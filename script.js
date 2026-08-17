@@ -5784,14 +5784,19 @@ function renderUpcomingFields(rows) {
                 const isMobile = window.innerWidth <= 700;
 
                 if (isMobile) {
-                    selectedRaceNo = null;
+                    selectedRaceNo = "1";
 
                     const layout = document.getElementById("upcomingFieldsLayout");
                     layout?.classList.add("mobile-meeting-selected");
 
                     renderRaceListForMeeting(rows, meeting);
 
-                    document.getElementById("raceDetailPanel").innerHTML = "";
+                    renderRaceDetail(
+                        meeting.venue,
+                        meeting.state,
+                        meeting.dateValue,
+                        "1"
+                    );
                 } else {
                     selectedRaceNo = "1";
                     renderRaceListForMeeting(rows, meeting);

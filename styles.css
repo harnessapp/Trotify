@@ -7275,3 +7275,14 @@ body.race-chart-social .race-chart-stage-card::after {
         margin: 0;
     }
 }
+
+@media (max-width: 700px) {
+    .upcoming-fields-layout.mobile-meeting-selected .race-list-panel {
+        display: none !important;
+        border: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        min-height: 0 !important;
+        height: 0 !important;
+    }
+}
