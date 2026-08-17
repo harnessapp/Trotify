@@ -5776,11 +5776,26 @@ function renderUpcomingFields(rows) {
             const meeting = meetings.find(m => `${m.venue}|${m.state}|${m.dateValue}` === key);
 
             if (meeting) {
-                selectedRaceNo = "1";
-                renderRaceListForMeeting(rows, meeting);
-                renderRaceDetail(meeting.venue, meeting.state, meeting.dateValue, "1");
-                enterUpcomingRaceFocus?.();
+                const isMobile = window.innerWidth <= 700;
+
+                if (isMobile) {
+                    selectedRaceNo = null;
+
+                    const layout = document.getElementById("upcomingFieldsLayout");
+                    layout?.classList.add("mobile-meeting-selected");
+
+                    renderRaceListForMeeting(rows, meeting);
+
+                    document.getElementById("raceDetailPanel").innerHTML = "";
+                } else {
+                    selectedRaceNo = "1";
+                    renderRaceListForMeeting(rows, meeting);
+                    renderRaceDetail(meeting.venue, meeting.state, meeting.dateValue, "1");
+                    enterUpcomingRaceFocus?.();
+                }
             }
+
+
         });
     });
 
