@@ -5079,7 +5079,12 @@ function formatNextUpCountdown(raceDateTime) {
     const minutes = Math.floor((totalSeconds % 3600) / 60);
 
     if (days > 0) return `📅 ${days}d ${hours}h`;
-    if (hours > 0) return `⏱ ${hours}h ${minutes}m`;
+
+    if (hours > 0) {
+        if (window.innerWidth <= 700) return `⏱ ${hours}h`;
+        return `⏱ ${hours}h ${minutes}m`;
+    }
+
     if (minutes <= 5) return `🔥 ${minutes}m`;
 
     return `⚡ ${minutes}m`;
