@@ -7301,3 +7301,259 @@ body.race-chart-social .race-chart-stage-card::after {
         height: 0 !important;
     }
 }
+
+/* =========================================================
+   MOBILE - RACE DETAIL FIRST COMPACT PASS
+   Desktop remains untouched
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* -----------------------------------------------------
+       RACE DETAIL OUTER PANEL
+       ----------------------------------------------------- */
+
+    .race-detail-panel {
+        width: 100%;
+        min-width: 0;
+        padding: 10px;
+        border-radius: 16px;
+    }
+
+
+    /* -----------------------------------------------------
+       RACE HEADER
+       ----------------------------------------------------- */
+
+    .race-title-row {
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    .race-title-row h3 {
+        font-size: 20px;
+        line-height: 1.18;
+        margin: 0 0 9px;
+    }
+
+    .race-number-nav {
+        display: flex;
+        gap: 5px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        margin-bottom: 8px;
+    }
+
+    .race-number-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .race-number-nav-button {
+        flex: 0 0 29px;
+        width: 29px;
+        height: 29px;
+        font-size: 11px;
+    }
+
+    .race-title-actions {
+        gap: 7px;
+        margin-bottom: 7px;
+    }
+
+    .race-title-actions button,
+    .race-title-actions .field-result-button {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+
+    .race-detail-header .race-meta-line {
+        margin: 5px 0;
+        font-size: 12px;
+        line-height: 1.35;
+    }
+
+    .benchmark-line {
+        padding: 6px 0;
+        margin: 7px 0 9px;
+        font-size: 11px;
+        line-height: 1.35;
+    }
+
+
+    /* -----------------------------------------------------
+       VENUE STATS
+       Keep functionality, but make horizontally scrollable
+       instead of spilling off screen
+       ----------------------------------------------------- */
+
+    .venue-stat-toggle {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 6px;
+        margin: 8px 0 10px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+    }
+
+    .venue-stat-toggle::-webkit-scrollbar {
+        display: none;
+    }
+
+    .venue-stat-toggle > * {
+        flex: 0 0 auto;
+    }
+
+    .venue-stat-toggle span {
+        font-size: 9px;
+    }
+
+    .venue-stat-toggle button {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       RUNNER LIST
+       ----------------------------------------------------- */
+
+    .runner-list {
+        gap: 6px;
+    }
+
+    .runner-row {
+        position: relative;
+
+        display: grid;
+        grid-template-columns: 50px minmax(0, 1fr);
+        gap: 8px;
+
+        min-height: 0;
+        padding: 9px 10px;
+
+        border-radius: 12px;
+    }
+
+    .runner-number {
+        width: 44px;
+        height: 38px;
+        align-self: start;
+        font-size: 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       MAIN RUNNER INFORMATION
+       ----------------------------------------------------- */
+
+    .runner-main {
+        display: block;
+        min-width: 0;
+    }
+
+    .runner-left {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .runner-horse {
+        padding-right: 70px;
+
+        font-size: 17px;
+        line-height: 1.1;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .runner-meta {
+        margin-top: 2px;
+        padding-right: 2px;
+
+        font-size: 11px;
+        line-height: 1.2;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* -----------------------------------------------------
+       COMMENTARY
+       Hide on first pass.
+       We can make the runner expand on tap later.
+       ----------------------------------------------------- */
+
+    .runner-comment-inline,
+    .runner-comment {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       TRAFFIC LIGHTS + ODDS
+       ----------------------------------------------------- */
+
+    .runner-side {
+        grid-column: 2;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        gap: 8px;
+        margin-top: 5px;
+        padding-right: 70px;
+    }
+
+    .traffic-lights {
+        gap: 5px;
+        margin: 0;
+    }
+
+    .traffic-dot {
+        width: 13px;
+        height: 13px;
+    }
+
+    .runner-odds {
+        position: absolute;
+        right: 11px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        min-width: 58px;
+
+        font-size: 15px;
+        text-align: right;
+        white-space: nowrap;
+    }
+
+
+    /* -----------------------------------------------------
+       SECOND ROW DIVIDER
+       ----------------------------------------------------- */
+
+    .second-row-divider {
+        margin: 4px 0;
+        gap: 8px;
+
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+
+    /* -----------------------------------------------------
+       SCRATCHED RUNNERS
+       ----------------------------------------------------- */
+
+    .runner-row.scratched {
+        min-height: 58px;
+    }
+}
