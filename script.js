@@ -5721,6 +5721,7 @@ function renderUpcomingFields(rows) {
     }
 
     const firstMeeting = grouped[0].meetings[0];
+    const isMobile = window.innerWidth <= 700;
 
     document.getElementById("meetingStrip").innerHTML = `
         <div class="upcoming-fields-layout" id="upcomingFieldsLayout">
@@ -5741,7 +5742,7 @@ function renderUpcomingFields(rows) {
 
                         <div class="upcoming-list">
                             ${group.meetings.map((m) => `
-                                <button class="upcoming-meeting-button ${m === firstMeeting ? "selected" : ""}"
+                                <button class="upcoming-meeting-button ${!isMobile && m === firstMeeting ? "selected" : ""}"
                                     data-meeting-key="${escapeHtml(`${m.venue}|${m.state}|${m.dateValue}`)}">
                                     <span class="meeting-main">
                                         ${escapeHtml(m.venue)}
@@ -5783,15 +5784,24 @@ function renderUpcomingFields(rows) {
         });
     });
 
-    // default load R1
-    renderRaceListForMeeting(rows, firstMeeting);
+    // Desktop keeps current behaviour.
+    // Mobile starts at the meeting-selection screen.
+    if (!isMobile) {
+        renderRaceListForMeeting(rows, firstMeeting);
 
-    setTimeout(() => {
-        if (!firstMeeting) return;
-        selectedRaceNo = "1";
-        renderRaceDetail(firstMeeting.venue, firstMeeting.state, firstMeeting.dateValue, "1");
-        enterUpcomingRaceFocus?.();
-    }, 0);
+        setTimeout(() => {
+            if (!firstMeeting) return;
+            selectedRaceNo = "1";
+            renderRaceDetail(firstMeeting.venue, firstMeeting.state, firstMeeting.dateValue, "1");
+            enterUpcomingRaceFocus?.();
+        }, 0);
+    } else {
+        selectedRaceNo = null;
+
+        document.getElementById("raceListPanel").innerHTML = "";
+        document.getElementById("raceDetailPanel").innerHTML = "";
+    }
+
 }
 
 function renderRaceListForMeeting(rows, meeting) {
