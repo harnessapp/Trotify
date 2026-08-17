@@ -6829,3 +6829,223 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 }
+
+
+/* =========================================================
+   MOBILE - UPCOMING FIELDS COMPACT NAVIGATION
+   Desktop untouched
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Overall spacing */
+    .upcoming-fields-layout {
+        gap: 10px;
+    }
+
+    .upcoming-meetings-column {
+        padding: 0;
+        max-height: none;
+    }
+
+
+    /* -----------------------------------------------------
+       DAY HEADINGS
+       ----------------------------------------------------- */
+
+    .day-group {
+        margin-bottom: 12px;
+    }
+
+    .day-heading {
+        display: block;
+        margin: 8px 0 7px;
+        font-size: 11px;
+        letter-spacing: 2px;
+        color: var(--accent);
+    }
+
+    .day-heading span {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       MEETING LIST
+       Two compact columns before a meeting is selected
+       ----------------------------------------------------- */
+
+    .upcoming-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+    }
+
+    .upcoming-meeting-button {
+        min-height: 0;
+        height: 44px;
+
+        padding: 6px 10px;
+        border-radius: 11px;
+
+        font-size: 14px;
+    }
+
+    .meeting-main {
+        width: 100%;
+        min-width: 0;
+
+        justify-content: space-between;
+        gap: 6px;
+    }
+
+    .meeting-main > strong,
+    .meeting-main > span:first-child {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .state-pill {
+        flex: 0 0 auto;
+
+        padding: 3px 7px;
+        font-size: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    .meeting-time-pill {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       ONCE A MEETING IS SELECTED:
+       hide all other days and meetings
+       ----------------------------------------------------- */
+
+    .upcoming-meetings-column:has(.upcoming-meeting-button.selected)
+        .day-group:not(:has(.upcoming-meeting-button.selected)) {
+        display: none;
+    }
+
+    .upcoming-meetings-column:has(.upcoming-meeting-button.selected)
+        .upcoming-meeting-button:not(.selected) {
+        display: none;
+    }
+
+    .upcoming-meetings-column:has(.upcoming-meeting-button.selected)
+        .day-heading {
+        display: none;
+    }
+
+    .upcoming-meetings-column:has(.upcoming-meeting-button.selected)
+        .upcoming-list {
+        grid-template-columns: 1fr;
+    }
+
+    .upcoming-meeting-button.selected {
+        height: 42px;
+        margin-bottom: 2px;
+
+        border-color: rgba(0, 230, 191, 0.55);
+        background: rgba(0, 230, 191, 0.10);
+    }
+
+
+    /* -----------------------------------------------------
+       SELECTED MEETING / RACE PANEL
+       ----------------------------------------------------- */
+
+    .race-list-panel {
+        padding: 14px;
+        border-radius: 16px;
+    }
+
+    .race-panel-header h2 {
+        margin: 4px 0;
+        font-size: 26px;
+    }
+
+    .race-panel-header h2 span {
+        font-size: 16px;
+    }
+
+    .race-panel-header p {
+        margin-bottom: 12px;
+        font-size: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       RACE LIST
+       Make races much more compact
+       ----------------------------------------------------- */
+
+    .race-list {
+        gap: 5px;
+    }
+
+    .race-button {
+        min-height: 0;
+        height: 47px;
+
+        padding: 5px 8px;
+        border-radius: 10px;
+    }
+
+    .race-left {
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .race-number {
+        flex: 0 0 34px;
+
+        min-width: 34px;
+        width: 34px;
+        height: 34px;
+
+        border-radius: 9px;
+        font-size: 13px;
+    }
+
+    /*
+       Hide the race name on mobile.
+       Keep only time / distance / start / gait.
+    */
+    .race-name {
+        display: none;
+    }
+
+    .race-meta {
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.15;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .race-arrow {
+        font-size: 24px;
+    }
+
+
+    /* -----------------------------------------------------
+       ONCE A RACE IS SELECTED:
+       collapse the race list to the selected race only.
+       This brings the race detail straight underneath.
+       ----------------------------------------------------- */
+
+    .race-list:has(.race-button.selected)
+        .race-button:not(.selected) {
+        display: none;
+    }
+
+    .race-button.selected {
+        height: 44px;
+    }
+}
