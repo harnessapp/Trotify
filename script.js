@@ -2537,7 +2537,12 @@ function showUpcomingFieldsView() {
 
     document.querySelector(".panel-heading").innerHTML = `
         <span>⚡</span>
-        <span>Upcoming Fields</span>
+        <span
+            onclick="resetUpcomingFieldsMobile()"
+            style="cursor: pointer;"
+        >
+            Upcoming Fields
+        </span>
     `;
 
     renderUpcomingFields(allRows);
@@ -5962,6 +5967,28 @@ function renderRecordTooltip(race) {
             ${renderRecordRow("MR", race.recordMR, race.recordMRHorse, race.recordMRDate)}
         </span>
     `;
+}
+
+function resetUpcomingFieldsMobile() {
+    if (window.innerWidth > 700) return;
+
+    selectedRaceNo = null;
+
+    const layout = document.getElementById("upcomingFieldsLayout");
+    if (!layout) return;
+
+    layout.classList.remove("mobile-meeting-selected");
+    layout.classList.remove("race-focus");
+
+    document
+        .querySelectorAll(".upcoming-meeting-button")
+        .forEach(button => button.classList.remove("selected"));
+
+    const raceListPanel = document.getElementById("raceListPanel");
+    const raceDetailPanel = document.getElementById("raceDetailPanel");
+
+    if (raceListPanel) raceListPanel.innerHTML = "";
+    if (raceDetailPanel) raceDetailPanel.innerHTML = "";
 }
 
 function abbrevStart(start) {
