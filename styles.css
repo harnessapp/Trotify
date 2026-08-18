@@ -8310,3 +8310,107 @@ body.race-chart-social .race-chart-stage-card::after {
         margin: 2px 0;
     }
 }
+
+/* =========================================================
+   MOBILE RUNNER - PIN RIGHT SIDE TO WHOLE CARD
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .runner-row {
+        position: relative !important;
+    }
+
+    /*
+       Critical:
+       do NOT allow these to become positioning containers.
+       Lights + odds should anchor to .runner-row.
+    */
+    .runner-horse,
+    .runner-meta,
+    .runner-main,
+    .runner-left,
+    .runner-meta-people {
+        position: static !important;
+    }
+
+
+    /* HORSE NAME */
+    .runner-horse {
+        display: block !important;
+        padding-right: 75px !important;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* TRAFFIC LIGHTS - TRUE TOP RIGHT OF CARD */
+    .mobile-runner-lights {
+        display: block !important;
+
+        position: absolute !important;
+        top: 10px !important;
+        right: 10px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .mobile-runner-lights .traffic-lights {
+        position: static !important;
+
+        display: flex !important;
+        gap: 3px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .mobile-runner-lights .traffic-dot {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+
+    /* SECOND LINE */
+    .runner-meta {
+        display: block !important;
+
+        padding-right: 52px !important;
+        margin-top: 3px !important;
+
+        font-size: 10.5px !important;
+        line-height: 1.2 !important;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* ODDS - TRUE BOTTOM RIGHT OF CARD */
+    .mobile-runner-odds {
+        display: block !important;
+
+        position: absolute !important;
+        right: 10px !important;
+        bottom: 10px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 10.5px !important;
+        line-height: 1 !important;
+        font-weight: 400 !important;
+
+        white-space: nowrap;
+    }
+
+
+    /* Hide old desktop side block */
+    .runner-side {
+        display: none !important;
+    }
+}
