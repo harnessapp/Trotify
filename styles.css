@@ -7559,36 +7559,18 @@ body.race-chart-social .race-chart-stage-card::after {
 }
 
 /* =========================================================
-   UPCOMING FIELDS - MOBILE COMPACT PASS 1
+   MOBILE UPCOMING FIELDS - COMPACT RUNNERS FINAL
    ========================================================= */
 
 @media (max-width: 700px) {
 
-    /* -----------------------------------------
-       Overall race detail
-       ----------------------------------------- */
-
-    .race-detail-panel {
-        padding: 12px;
-        border-radius: 16px;
-    }
-
-    .race-title-actions h3 {
-        font-size: 18px;
-        line-height: 1.22;
-        margin-bottom: 8px;
-    }
-
-
-    /* -----------------------------------------
-       Race information - force into 3 lines
-       ----------------------------------------- */
+    /* ---------- race information ---------- */
 
     .race-meta-line {
         display: block;
+        margin: 6px 0 10px;
         font-size: 12px;
         line-height: 1.35;
-        margin: 6px 0 10px;
     }
 
     .race-meta-main,
@@ -7600,10 +7582,7 @@ body.race-chart-social .race-chart-stage-card::after {
         padding: 0;
     }
 
-    .race-meta-bm {
-        margin-top: 2px;
-    }
-
+    .race-meta-bm,
     .race-meta-record {
         margin-top: 2px;
     }
@@ -7613,14 +7592,11 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 
-    /* -----------------------------------------
-       Venue controls - tighten substantially
-       ----------------------------------------- */
+    /* ---------- venue controls ---------- */
 
     .venue-stat-toggle {
         gap: 4px;
         margin: 7px 0 9px;
-        font-size: 10px;
         white-space: nowrap;
         overflow-x: auto;
         padding-bottom: 2px;
@@ -7637,14 +7613,8 @@ body.race-chart-social .race-chart-stage-card::after {
         min-height: 0;
     }
 
-    .toggle-divider {
-        margin: 0 2px;
-    }
 
-
-    /* -----------------------------------------
-       Runner list density
-       ----------------------------------------- */
+    /* ---------- runners ---------- */
 
     .runner-list {
         gap: 4px;
@@ -7654,238 +7624,49 @@ body.race-chart-social .race-chart-stage-card::after {
         position: relative;
 
         display: grid;
+        grid-template-columns: 42px minmax(0, 1fr);
 
-        /*
-          Silk | Main runner information | Odds
-        */
-        grid-template-columns: 38px minmax(0, 1fr) 46px;
-
-        gap: 7px;
+        column-gap: 8px;
         align-items: center;
 
-        padding: 6px 7px;
-        min-height: 52px;
+        min-height: 54px;
+        padding: 6px 9px;
 
         border-radius: 10px;
     }
 
-
-    /* -----------------------------------------
-       Silk / runner number
-       ----------------------------------------- */
-
     .runner-number {
-        width: 34px;
-        height: 34px;
-        min-width: 34px;
-
-        border-radius: 7px;
-
-        font-size: 13px;
-        font-weight: 800;
-    }
-
-
-    /* -----------------------------------------
-       Main runner section
-       ----------------------------------------- */
-
-    .runner-main {
-        min-width: 0;
-        width: 100%;
-    }
-
-    .runner-left {
-        min-width: 0;
-        width: 100%;
-    }
-
-    .runner-horse {
-        display: block;
-
-        font-size: 14px;
-        line-height: 1.12;
-        font-weight: 750;
-
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
-        padding-right: 2px;
-    }
-
-    .runner-meta {
-        position: relative;
-
-        display: block;
-
-        margin-top: 2px;
-        padding-right: 48px;
-
-        font-size: 10.5px;
-        line-height: 1.2;
-
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-
-    /* -----------------------------------------
-       Side area
-       IMPORTANT:
-       Keep it in the same runner row
-       ----------------------------------------- */
-
-    .runner-side {
-        grid-column: 3;
-        grid-row: 1;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-
-        gap: 3px;
-
-        min-width: 0;
-        width: 46px;
-    }
-
-
-    /* -----------------------------------------
-       Odds - smaller and non-bold
-       ----------------------------------------- */
-
-    .runner-odds {
-        min-width: 0;
-
-        font-size: 12px;
-        line-height: 1;
-        font-weight: 500;
-
-        text-align: right;
-        white-space: nowrap;
-    }
-
-
-    /* -----------------------------------------
-       Traffic lights - smaller and inline
-       visually alongside runner information
-       ----------------------------------------- */
-
-    .traffic-lights {
-        position: absolute;
-
-        right: 56px;
-        bottom: 8px;
-
-        display: flex;
-        align-items: center;
-
-        gap: 3px;
-        margin: 0;
-
-        z-index: 2;
-    }
-
-    .traffic-dot {
-        width: 10px;
-        height: 10px;
-    }
-
-    .traffic-dot.green,
-    .traffic-dot.amber,
-    .traffic-dot.red {
-        border-width: 1.5px;
-    }
-
-
-    /* -----------------------------------------
-       Second-row divider
-       ----------------------------------------- */
-
-    .second-row-divider {
-        margin: 2px 0;
-        gap: 7px;
-
-        font-size: 8px;
-        letter-spacing: 1.5px;
-
-        height: 14px;
-    }
-
-
-    /* -----------------------------------------
-       Scratched runners remain compact
-       ----------------------------------------- */
-
-    .runner-row.scratched::after {
-        height: 6px;
-    }
-
-}
-
-/* =========================================================
-   UPCOMING FIELDS - MOBILE COMPACT PASS 1B
-   horse + lights / people + odds
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-    .runner-row {
-        grid-template-columns: 42px minmax(0, 1fr);
-        grid-template-rows: auto auto;
-
-        column-gap: 8px;
-        row-gap: 1px;
-
-        min-height: 54px;
-        padding: 6px 8px;
-    }
-
-
-    /* Silk spans both text lines */
-    .runner-number {
-        grid-column: 1;
-        grid-row: 1 / 3;
-
         width: 38px;
         height: 38px;
         min-width: 38px;
 
         align-self: center;
 
+        border-radius: 8px;
         font-size: 14px;
     }
 
-
-    /* Main text takes all remaining width */
     .runner-main {
-        grid-column: 2;
-        grid-row: 1 / 3;
-
-        display: grid;
-        grid-template-rows: auto auto;
-
+        display: block;
         min-width: 0;
         width: 100%;
     }
 
     .runner-left {
-        display: contents;
+        position: static;
+        min-width: 0;
+        width: 100%;
     }
 
 
-    /* -----------------------------------------
-       TOP LINE
-       Horse name + traffic lights
-       ----------------------------------------- */
+    /* ---------- horse ---------- */
 
     .runner-horse {
-        grid-row: 1;
-
+        position: static !important;
         display: block;
+
+        width: 100%;
+        min-width: 0;
 
         padding-right: 72px;
 
@@ -7898,505 +7679,84 @@ body.race-chart-social .race-chart-stage-card::after {
         text-overflow: ellipsis;
     }
 
-
-    .runner-mobile-lights {
-        position: absolute;
-
-        right: 55px;
-        top: 9px;
-
-        display: flex;
-        align-items: center;
-    }
-
-    .runner-mobile-lights .traffic-lights {
-        position: static;
-
-        display: flex;
-        align-items: center;
-
-        gap: 3px;
-        margin: 0;
-    }
-
-    .runner-mobile-lights .traffic-dot {
-        width: 10px;
-        height: 10px;
-    }
-
-
-    /* -----------------------------------------
-       SECOND LINE
-       Barrier + trainer + driver + odds
-       ----------------------------------------- */
-
-    .runner-meta {
-        grid-row: 2;
-
-        display: block;
-
-        margin-top: 2px;
-        padding-right: 48px;
-
-        font-size: 10.5px;
-        line-height: 1.2;
-
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-
-    /* Side container no longer behaves as a column */
-    .runner-side {
-        position: static;
-
-        display: contents;
-
-        width: auto;
-        min-width: 0;
-    }
-
-
-    /* Odds sit on the second line */
-    .runner-odds {
-        position: absolute;
-
-        right: 9px;
-        bottom: 8px;
-
-        font-size: 10.5px;
-        line-height: 1.2;
-        font-weight: 400;
-
-        white-space: nowrap;
-        text-align: right;
-    }
-
-
-    /* Kill the previous Pass 1 absolute traffic positioning */
-    .runner-side > .traffic-lights {
-        position: static;
-    }
-
-
-    /* Keep the cards tight */
-    .runner-list {
-        gap: 4px;
-    }
-
-    .second-row-divider {
-        height: 14px;
-        margin: 2px 0;
-    }
-
-}
-
-/* =========================================================
-   UPCOMING FIELDS MOBILE - FINAL TWO-LINE RUNNER LAYOUT
-   ========================================================= */
-
-.mobile-runner-lights,
-.mobile-runner-odds {
-    display: none;
-}
-
-@media (max-width: 700px) {
-
-    .runner-row {
-        display: grid;
-        grid-template-columns: 42px minmax(0, 1fr);
-        gap: 8px;
-
-        min-height: 54px;
-        padding: 6px 9px;
-
-        align-items: center;
-    }
-
-    .runner-number {
-        width: 38px;
-        height: 38px;
-        min-width: 38px;
-
-        font-size: 14px;
-        border-radius: 8px;
-    }
-
-    .runner-main {
-        min-width: 0;
-        width: 100%;
-    }
-
-    .runner-left {
-        min-width: 0;
-        width: 100%;
-    }
-
-
-    /* HORSE + LIGHTS */
-    .runner-horse {
-        display: flex;
-        align-items: center;
-
-        min-width: 0;
-        width: 100%;
-
-        gap: 7px;
-
-        font-size: 14px;
-        line-height: 1.15;
-        font-weight: 700;
-
-        padding: 0;
-    }
-
-    .runner-horse-name {
-        min-width: 0;
-
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .mobile-runner-lights {
-        display: flex;
-        flex: 0 0 auto;
-        margin-left: auto;
-    }
-
-    .mobile-runner-lights .traffic-lights {
-        position: static !important;
-
-        display: flex;
-        align-items: center;
-
-        gap: 3px;
-        margin: 0;
-    }
-
-    .mobile-runner-lights .traffic-dot {
-        width: 10px;
-        height: 10px;
-    }
-
-
-    /* BARRIER + TRAINER + DRIVER + ODDS */
-    .runner-meta {
-        display: flex;
-        align-items: center;
-
-        width: 100%;
-        min-width: 0;
-
-        gap: 6px;
-
-        margin-top: 3px;
-        padding: 0;
-
-        font-size: 10.5px;
-        line-height: 1.2;
-
-        white-space: nowrap;
-    }
-
-    .runner-meta-people {
-        min-width: 0;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    .mobile-runner-odds {
-        display: block;
-        flex: 0 0 auto;
-
-        margin-left: auto;
-
-        font-size: 10.5px;
-        line-height: 1.2;
-        font-weight: 400;
-
-        color: #7cff8b;
-        white-space: nowrap;
-    }
-
-
-    /* Desktop side information is replaced by the
-       two mobile copies above */
-    .runner-side {
-        display: none !important;
-    }
-
-
-    .runner-list {
-        gap: 4px;
-    }
-
-    .second-row-divider {
-        height: 14px;
-        margin: 2px 0;
-    }
-}
-
-/* =========================================================
-   UPCOMING FIELDS MOBILE - FIXED RIGHT SIDE
-   lights top-right / odds bottom-right
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-    .runner-row {
-        position: relative;
-
-        display: grid;
-        grid-template-columns: 42px minmax(0, 1fr);
-
-        column-gap: 8px;
-
-        min-height: 54px;
-        padding: 6px 9px;
-
-        align-items: center;
-    }
-
-    .runner-number {
-        width: 38px;
-        height: 38px;
-        min-width: 38px;
-
-        font-size: 14px;
-        border-radius: 8px;
-    }
-
-    .runner-main,
-    .runner-left {
-        min-width: 0;
-        width: 100%;
-    }
-
-
-    /* -----------------------------------------
-       HORSE NAME
-       Reserve right-hand space for lights
-       ----------------------------------------- */
-
-    .runner-horse {
-        display: block;
-
-        width: 100%;
-        min-width: 0;
-
-        padding-right: 78px;
-
-        font-size: 14px;
-        line-height: 1.15;
-        font-weight: 700;
-
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
     .runner-horse-name {
         display: block;
-
-        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-    }
-
-
-    /* -----------------------------------------
-       TRAFFIC LIGHTS - FIXED TOP RIGHT
-       ----------------------------------------- */
-
-    .mobile-runner-lights {
-        display: block;
-
-        position: absolute;
-        top: 10px;
-        right: 10px;
-
-        margin: 0;
-        padding: 0;
-    }
-
-    .mobile-runner-lights .traffic-lights {
-        position: static !important;
-
-        display: flex;
-        align-items: center;
-
-        gap: 3px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .mobile-runner-lights .traffic-dot {
-        width: 10px;
-        height: 10px;
-    }
-
-
-    /* -----------------------------------------
-       BARRIER / TRAINER / DRIVER
-       Reserve right-hand space for odds
-       ----------------------------------------- */
-
-    .runner-meta {
-        display: block;
-
-        width: 100%;
-        min-width: 0;
-
-        margin-top: 3px;
-        padding-right: 48px;
-
-        font-size: 10.5px;
-        line-height: 1.2;
-
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .runner-meta-people {
-        display: block;
-
-        width: 100%;
-        min-width: 0;
-
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-
-    /* -----------------------------------------
-       ODDS - FIXED BOTTOM RIGHT
-       ----------------------------------------- */
-
-    .mobile-runner-odds {
-        display: block;
-
-        position: absolute;
-        right: 10px;
-        bottom: 9px;
-
-        margin: 0;
-
-        font-size: 10.5px;
-        line-height: 1;
-        font-weight: 400;
-
         white-space: nowrap;
     }
 
 
-    /* Desktop-side versions stay hidden on mobile */
-    .runner-side {
-        display: none !important;
-    }
+    /* ---------- traffic lights: TOP RIGHT ---------- */
 
-
-    .runner-list {
-        gap: 4px;
-    }
-
-    .second-row-divider {
-        height: 14px;
-        margin: 2px 0;
-    }
-}
-
-/* =========================================================
-   MOBILE RUNNER - PIN RIGHT SIDE TO WHOLE CARD
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-    .runner-row {
-        position: relative !important;
-    }
-
-    /*
-       Critical:
-       do NOT allow these to become positioning containers.
-       Lights + odds should anchor to .runner-row.
-    */
-    .runner-horse,
-    .runner-meta,
-    .runner-main,
-    .runner-left,
-    .runner-meta-people {
-        position: static !important;
-    }
-
-
-    /* HORSE NAME */
-    .runner-horse {
-        display: block !important;
-        padding-right: 75px !important;
-
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-
-    /* TRAFFIC LIGHTS - TRUE TOP RIGHT OF CARD */
+    .runner-mobile-lights,
     .mobile-runner-lights {
         display: block !important;
 
         position: absolute !important;
-        top: 10px !important;
-        right: 10px !important;
+        top: 9px !important;
+        right: 9px !important;
 
         margin: 0 !important;
         padding: 0 !important;
     }
 
+    .runner-mobile-lights .traffic-lights,
     .mobile-runner-lights .traffic-lights {
         position: static !important;
 
         display: flex !important;
-        gap: 3px !important;
+        align-items: center;
 
+        gap: 3px !important;
         margin: 0 !important;
         padding: 0 !important;
     }
 
+    .runner-mobile-lights .traffic-dot,
     .mobile-runner-lights .traffic-dot {
         width: 10px !important;
         height: 10px !important;
     }
 
 
-    /* SECOND LINE */
+    /* ---------- barrier / trainer / driver ---------- */
+
     .runner-meta {
-        display: block !important;
+        position: static !important;
+        display: block;
 
-        padding-right: 52px !important;
-        margin-top: 3px !important;
+        width: 100%;
+        min-width: 0;
 
-        font-size: 10.5px !important;
-        line-height: 1.2 !important;
+        margin-top: 3px;
+        padding-right: 48px;
+
+        font-size: 10.5px;
+        line-height: 1.2;
 
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
+    .runner-meta-people {
+        display: block;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 
-    /* ODDS - TRUE BOTTOM RIGHT OF CARD */
+
+    /* ---------- odds: BOTTOM RIGHT ---------- */
+
     .mobile-runner-odds {
         display: block !important;
 
         position: absolute !important;
-        right: 10px !important;
-        bottom: 10px !important;
+        right: 9px !important;
+        bottom: 9px !important;
 
         margin: 0 !important;
         padding: 0 !important;
@@ -8405,12 +7765,29 @@ body.race-chart-social .race-chart-stage-card::after {
         line-height: 1 !important;
         font-weight: 400 !important;
 
+        color: var(--accent-2);
         white-space: nowrap;
     }
 
 
-    /* Hide old desktop side block */
+    /* Desktop copies aren't needed on mobile */
     .runner-side {
         display: none !important;
+    }
+
+
+    /* ---------- second row ---------- */
+
+    .second-row-divider {
+        height: 14px;
+        margin: 2px 0;
+        gap: 7px;
+
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .runner-row.scratched::after {
+        height: 6px;
     }
 }
