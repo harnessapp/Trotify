@@ -6332,8 +6332,16 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                                 ${!isScratched && selectedVenueStatMode !== "off"
                                     ? renderVenueStatBlock(row)
                                     : ""}
-                                ${!isScratched ? renderTrafficLights(leadPct, behindLeadPct, deathPct) : ""}
-                                ${fairOdds && !isScratched ? `<div class="runner-odds">${escapeHtml(fairOdds)}</div>` : ""}
+
+                                ${!isScratched ? `
+                                    <div class="runner-mobile-lights">
+                                        ${renderTrafficLights(leadPct, behindLeadPct, deathPct)}
+                                    </div>
+                                ` : ""}
+
+                                ${fairOdds && !isScratched
+                                    ? `<div class="runner-odds">${escapeHtml(fairOdds)}</div>`
+                                    : ""}
                             </div>
                         </div>
                     `;
