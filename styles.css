@@ -8074,14 +8074,31 @@ body.race-chart-social .race-chart-stage-card::after {
         gap: 5px !important;
     }
 
-    /* Make unlit traffic lights very faint */
+    /* Unlit traffic lights - very faint */
     .runner-mobile-traffic .traffic-dot:not(.filled) {
         opacity: 0.12 !important;
         box-shadow: none !important;
     }
 
-    /* Keep active lights at full strength */
-    .runner-mobile-traffic .traffic-dot.filled {
+    /* Lit lights - full brightness */
+    .runner-mobile-traffic .traffic-dot.green.filled {
         opacity: 1 !important;
+        background: rgb(116, 255, 143) !important;
+        border-color: rgb(116, 255, 143) !important;
+        box-shadow: 0 0 10px rgba(116, 255, 143, 0.75) !important;
+    }
+
+    .runner-mobile-traffic .traffic-dot.amber.filled {
+        opacity: 1 !important;
+        background: rgb(255, 190, 80) !important;
+        border-color: rgb(255, 190, 80) !important;
+        box-shadow: 0 0 10px rgba(255, 190, 80, 0.75) !important;
+    }
+
+    .runner-mobile-traffic .traffic-dot.red.filled {
+        opacity: 1 !important;
+        background: rgb(255, 90, 90) !important;
+        border-color: rgb(255, 90, 90) !important;
+        box-shadow: 0 0 10px rgba(255, 90, 90, 0.75) !important;
     }
 }
