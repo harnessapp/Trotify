@@ -8064,70 +8064,64 @@ body.race-chart-social .race-chart-stage-card::after {
 }
 
 /* =========================================================
-   MOBILE RUNNER - SPACING + TRAFFIC LIGHT STRENGTH
+   MOBILE RUNNER - FINAL TRAFFIC LIGHT APPEARANCE
    ========================================================= */
 
 @media (max-width: 700px) {
 
-    /* Slight breathing room between horse and details */
     .runner-mobile-content {
         gap: 5px !important;
     }
 
-
-    /* -----------------------------------------
-       ALL traffic dots stay at full opacity
-       ----------------------------------------- */
-
-    .runner-mobile-traffic,
-    .runner-mobile-traffic .traffic-lights,
-    .runner-mobile-traffic .traffic-dot {
+    /* Every dot starts as a very faint outline */
+    .traffic-dot {
         opacity: 1 !important;
-    }
-
-
-    /* -----------------------------------------
-       UNLIT - faint outlines only
-       ----------------------------------------- */
-
-    .runner-mobile-traffic .traffic-dot.green:not(.filled) {
         background: transparent !important;
-        border-color: rgba(116, 255, 143, 0.18) !important;
         box-shadow: none !important;
     }
 
-    .runner-mobile-traffic .traffic-dot.amber:not(.filled) {
-        background: transparent !important;
-        border-color: rgba(255, 190, 80, 0.18) !important;
-        box-shadow: none !important;
+    .traffic-dot.green {
+        border: 2px solid rgba(116, 255, 143, 0.12) !important;
     }
 
-    .runner-mobile-traffic .traffic-dot.red:not(.filled) {
-        background: transparent !important;
-        border-color: rgba(255, 90, 90, 0.18) !important;
-        box-shadow: none !important;
+    .traffic-dot.amber {
+        border: 2px solid rgba(255, 190, 80, 0.12) !important;
+    }
+
+    .traffic-dot.red {
+        border: 2px solid rgba(255, 90, 90, 0.12) !important;
     }
 
 
-    /* -----------------------------------------
-       LIT - bright and glowing
-       ----------------------------------------- */
-
-    .runner-mobile-traffic .traffic-dot.green.filled {
-        background: rgb(116, 255, 143) !important;
-        border-color: rgb(116, 255, 143) !important;
-        box-shadow: 0 0 9px rgba(116, 255, 143, 0.85) !important;
+    /* FILLED GREEN */
+    .traffic-dot.green.filled {
+        opacity: 1 !important;
+        background: #74ff8f !important;
+        border: 2px solid #74ff8f !important;
+        box-shadow:
+            0 0 5px #74ff8f,
+            0 0 10px rgba(116, 255, 143, 0.9) !important;
     }
 
-    .runner-mobile-traffic .traffic-dot.amber.filled {
-        background: rgb(255, 190, 80) !important;
-        border-color: rgb(255, 190, 80) !important;
-        box-shadow: 0 0 9px rgba(255, 190, 80, 0.85) !important;
+
+    /* FILLED AMBER */
+    .traffic-dot.amber.filled {
+        opacity: 1 !important;
+        background: #ffbe50 !important;
+        border: 2px solid #ffbe50 !important;
+        box-shadow:
+            0 0 5px #ffbe50,
+            0 0 10px rgba(255, 190, 80, 0.9) !important;
     }
 
-    .runner-mobile-traffic .traffic-dot.red.filled {
-        background: rgb(255, 90, 90) !important;
-        border-color: rgb(255, 90, 90) !important;
-        box-shadow: 0 0 9px rgba(255, 90, 90, 0.85) !important;
+
+    /* FILLED RED */
+    .traffic-dot.red.filled {
+        opacity: 1 !important;
+        background: #ff5a5a !important;
+        border: 2px solid #ff5a5a !important;
+        box-shadow:
+            0 0 5px #ff5a5a,
+            0 0 10px rgba(255, 90, 90, 0.9) !important;
     }
 }
