@@ -9,6 +9,14 @@ echo ==================================================
 echo Trotify publish started: %date% %time%
 echo ==================================================
 
+REM Refresh upcoming_fields.csv from the scraper folder.
+echo Copying latest upcoming_fields.csv...
+copy /Y "C:\harness_scraper\harness_api\upcoming_fields.csv" "C:\trotify_dashboard\upcoming_fields.csv"
+if errorlevel 1 (
+    echo ERROR: Failed to copy upcoming_fields.csv.
+    exit /b 1
+)
+
 REM Make sure the large race chart file is ignored by Git.
 git check-ignore -q chart_race_data.json
 if errorlevel 1 (
