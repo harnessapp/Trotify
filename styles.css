@@ -8063,25 +8063,25 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 }
 
-@media (max-width: 700px) {
-
-    .runner-mobile-content {
-        gap: 4px !important;
-    }
-
-}
+/* =========================================================
+   MOBILE RUNNER - FINAL SPACING + TRAFFIC LIGHT STRENGTH
+   ========================================================= */
 
 @media (max-width: 700px) {
 
-    .runner-mobile-content {
-        gap: 5px !important;
+    /* Slight breathing room between horse and Br/Trainer/Driver */
+    .runner-main {
+        row-gap: 4px !important;
     }
 
-    .runner-mobile-traffic .traffic-dot:not(.filled) {
-        opacity: 0.10 !important;
+    /* Unlit traffic lights */
+    .mobile-runner-lights .traffic-dot:not(.filled) {
+        opacity: 0.15 !important;
+        box-shadow: none !important;
     }
 
-    .runner-mobile-traffic .traffic-dot.filled {
+    /* Lit traffic lights */
+    .mobile-runner-lights .traffic-dot.filled {
         opacity: 1 !important;
     }
 }
