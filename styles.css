@@ -8139,3 +8139,174 @@ body.race-chart-social .race-chart-stage-card::after {
         margin: 2px 0;
     }
 }
+
+/* =========================================================
+   UPCOMING FIELDS MOBILE - FIXED RIGHT SIDE
+   lights top-right / odds bottom-right
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .runner-row {
+        position: relative;
+
+        display: grid;
+        grid-template-columns: 42px minmax(0, 1fr);
+
+        column-gap: 8px;
+
+        min-height: 54px;
+        padding: 6px 9px;
+
+        align-items: center;
+    }
+
+    .runner-number {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    .runner-main,
+    .runner-left {
+        min-width: 0;
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------
+       HORSE NAME
+       Reserve right-hand space for lights
+       ----------------------------------------- */
+
+    .runner-horse {
+        display: block;
+
+        width: 100%;
+        min-width: 0;
+
+        padding-right: 78px;
+
+        font-size: 14px;
+        line-height: 1.15;
+        font-weight: 700;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .runner-horse-name {
+        display: block;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* -----------------------------------------
+       TRAFFIC LIGHTS - FIXED TOP RIGHT
+       ----------------------------------------- */
+
+    .mobile-runner-lights {
+        display: block;
+
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile-runner-lights .traffic-lights {
+        position: static !important;
+
+        display: flex;
+        align-items: center;
+
+        gap: 3px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile-runner-lights .traffic-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+
+    /* -----------------------------------------
+       BARRIER / TRAINER / DRIVER
+       Reserve right-hand space for odds
+       ----------------------------------------- */
+
+    .runner-meta {
+        display: block;
+
+        width: 100%;
+        min-width: 0;
+
+        margin-top: 3px;
+        padding-right: 48px;
+
+        font-size: 10.5px;
+        line-height: 1.2;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .runner-meta-people {
+        display: block;
+
+        width: 100%;
+        min-width: 0;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* -----------------------------------------
+       ODDS - FIXED BOTTOM RIGHT
+       ----------------------------------------- */
+
+    .mobile-runner-odds {
+        display: block;
+
+        position: absolute;
+        right: 10px;
+        bottom: 9px;
+
+        margin: 0;
+
+        font-size: 10.5px;
+        line-height: 1;
+        font-weight: 400;
+
+        white-space: nowrap;
+    }
+
+
+    /* Desktop-side versions stay hidden on mobile */
+    .runner-side {
+        display: none !important;
+    }
+
+
+    .runner-list {
+        gap: 4px;
+    }
+
+    .second-row-divider {
+        height: 14px;
+        margin: 2px 0;
+    }
+}
