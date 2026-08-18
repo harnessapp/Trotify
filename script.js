@@ -246,7 +246,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function loadUpcomingFields() {
     try {
-        const response = await fetch(CSV_URL, { cache: "no-store" });
+        const response = await fetch(
+            CSV_URL + "?v=" + Date.now(),
+            { cache: "no-store" }
+        );
 
         if (!response.ok) {
             throw new Error(`Could not load ${CSV_URL}`);
