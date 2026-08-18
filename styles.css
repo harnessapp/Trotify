@@ -7557,3 +7557,271 @@ body.race-chart-social .race-chart-stage-card::after {
         min-height: 58px;
     }
 }
+
+/* =========================================================
+   UPCOMING FIELDS - MOBILE COMPACT PASS 1
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* -----------------------------------------
+       Overall race detail
+       ----------------------------------------- */
+
+    .race-detail-panel {
+        padding: 12px;
+        border-radius: 16px;
+    }
+
+    .race-title-actions h3 {
+        font-size: 18px;
+        line-height: 1.22;
+        margin-bottom: 8px;
+    }
+
+
+    /* -----------------------------------------
+       Race information - force into 3 lines
+       ----------------------------------------- */
+
+    .race-meta-line {
+        display: block;
+        font-size: 12px;
+        line-height: 1.35;
+        margin: 6px 0 10px;
+    }
+
+    .race-meta-main,
+    .race-meta-bm,
+    .race-meta-record {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .race-meta-bm {
+        margin-top: 2px;
+    }
+
+    .race-meta-record {
+        margin-top: 2px;
+    }
+
+    .race-meta-divider {
+        display: none;
+    }
+
+
+    /* -----------------------------------------
+       Venue controls - tighten substantially
+       ----------------------------------------- */
+
+    .venue-stat-toggle {
+        gap: 4px;
+        margin: 7px 0 9px;
+        font-size: 10px;
+        white-space: nowrap;
+        overflow-x: auto;
+        padding-bottom: 2px;
+    }
+
+    .venue-stat-toggle > span:first-child {
+        font-size: 9px;
+        letter-spacing: 0.4px;
+    }
+
+    .venue-stat-toggle button {
+        padding: 5px 8px;
+        font-size: 10px;
+        min-height: 0;
+    }
+
+    .toggle-divider {
+        margin: 0 2px;
+    }
+
+
+    /* -----------------------------------------
+       Runner list density
+       ----------------------------------------- */
+
+    .runner-list {
+        gap: 4px;
+    }
+
+    .runner-row {
+        position: relative;
+
+        display: grid;
+
+        /*
+          Silk | Main runner information | Odds
+        */
+        grid-template-columns: 38px minmax(0, 1fr) 46px;
+
+        gap: 7px;
+        align-items: center;
+
+        padding: 6px 7px;
+        min-height: 52px;
+
+        border-radius: 10px;
+    }
+
+
+    /* -----------------------------------------
+       Silk / runner number
+       ----------------------------------------- */
+
+    .runner-number {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+
+        border-radius: 7px;
+
+        font-size: 13px;
+        font-weight: 800;
+    }
+
+
+    /* -----------------------------------------
+       Main runner section
+       ----------------------------------------- */
+
+    .runner-main {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .runner-left {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .runner-horse {
+        display: block;
+
+        font-size: 14px;
+        line-height: 1.12;
+        font-weight: 750;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        padding-right: 2px;
+    }
+
+    .runner-meta {
+        position: relative;
+
+        display: block;
+
+        margin-top: 2px;
+        padding-right: 48px;
+
+        font-size: 10.5px;
+        line-height: 1.2;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* -----------------------------------------
+       Side area
+       IMPORTANT:
+       Keep it in the same runner row
+       ----------------------------------------- */
+
+    .runner-side {
+        grid-column: 3;
+        grid-row: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        gap: 3px;
+
+        min-width: 0;
+        width: 46px;
+    }
+
+
+    /* -----------------------------------------
+       Odds - smaller and non-bold
+       ----------------------------------------- */
+
+    .runner-odds {
+        min-width: 0;
+
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 500;
+
+        text-align: right;
+        white-space: nowrap;
+    }
+
+
+    /* -----------------------------------------
+       Traffic lights - smaller and inline
+       visually alongside runner information
+       ----------------------------------------- */
+
+    .traffic-lights {
+        position: absolute;
+
+        right: 56px;
+        bottom: 8px;
+
+        display: flex;
+        align-items: center;
+
+        gap: 3px;
+        margin: 0;
+
+        z-index: 2;
+    }
+
+    .traffic-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .traffic-dot.green,
+    .traffic-dot.amber,
+    .traffic-dot.red {
+        border-width: 1.5px;
+    }
+
+
+    /* -----------------------------------------
+       Second-row divider
+       ----------------------------------------- */
+
+    .second-row-divider {
+        margin: 2px 0;
+        gap: 7px;
+
+        font-size: 8px;
+        letter-spacing: 1.5px;
+
+        height: 14px;
+    }
+
+
+    /* -----------------------------------------
+       Scratched runners remain compact
+       ----------------------------------------- */
+
+    .runner-row.scratched::after {
+        height: 6px;
+    }
+
+}

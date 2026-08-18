@@ -6162,11 +6162,21 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
 
 
                 <div class="race-meta-line">
-                    ${distance ? `${escapeHtml(distance)}m` : ""}
-                    ${start ? ` • ${escapeHtml(start)}` : ""}
-                    ${gait ? ` • ${escapeHtml(gait)}` : ""}
-                    ${bmParts.length ? ` <span class="race-meta-divider">|</span> ${escapeHtml(bmLabel)}: ${bmParts.map(escapeHtml).join(" | ")}` : ""}
-                    ${renderRaceRecordInline(first)}
+                    <div class="race-meta-main">
+                        ${distance ? `${escapeHtml(distance)}m` : ""}
+                        ${start ? ` • ${escapeHtml(start)}` : ""}
+                        ${gait ? ` • ${escapeHtml(gait)}` : ""}
+                    </div>
+
+                    ${bmParts.length ? `
+                        <div class="race-meta-bm">
+                            ${escapeHtml(bmLabel)}: ${bmParts.map(escapeHtml).join(" | ")}
+                        </div>
+                    ` : ""}
+
+                    <div class="race-meta-record">
+                        ${renderRaceRecordInline(first)}
+                    </div>
                 </div>
 
                 <div class="venue-stat-toggle">
