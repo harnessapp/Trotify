@@ -7991,3 +7991,151 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 }
+
+/* =========================================================
+   UPCOMING FIELDS MOBILE - FINAL TWO-LINE RUNNER LAYOUT
+   ========================================================= */
+
+.mobile-runner-lights,
+.mobile-runner-odds {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    .runner-row {
+        display: grid;
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 8px;
+
+        min-height: 54px;
+        padding: 6px 9px;
+
+        align-items: center;
+    }
+
+    .runner-number {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    .runner-main {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .runner-left {
+        min-width: 0;
+        width: 100%;
+    }
+
+
+    /* HORSE + LIGHTS */
+    .runner-horse {
+        display: flex;
+        align-items: center;
+
+        min-width: 0;
+        width: 100%;
+
+        gap: 7px;
+
+        font-size: 14px;
+        line-height: 1.15;
+        font-weight: 700;
+
+        padding: 0;
+    }
+
+    .runner-horse-name {
+        min-width: 0;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .mobile-runner-lights {
+        display: flex;
+        flex: 0 0 auto;
+        margin-left: auto;
+    }
+
+    .mobile-runner-lights .traffic-lights {
+        position: static !important;
+
+        display: flex;
+        align-items: center;
+
+        gap: 3px;
+        margin: 0;
+    }
+
+    .mobile-runner-lights .traffic-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+
+    /* BARRIER + TRAINER + DRIVER + ODDS */
+    .runner-meta {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        min-width: 0;
+
+        gap: 6px;
+
+        margin-top: 3px;
+        padding: 0;
+
+        font-size: 10.5px;
+        line-height: 1.2;
+
+        white-space: nowrap;
+    }
+
+    .runner-meta-people {
+        min-width: 0;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .mobile-runner-odds {
+        display: block;
+        flex: 0 0 auto;
+
+        margin-left: auto;
+
+        font-size: 10.5px;
+        line-height: 1.2;
+        font-weight: 400;
+
+        color: #7cff8b;
+        white-space: nowrap;
+    }
+
+
+    /* Desktop side information is replaced by the
+       two mobile copies above */
+    .runner-side {
+        display: none !important;
+    }
+
+
+    .runner-list {
+        gap: 4px;
+    }
+
+    .second-row-divider {
+        height: 14px;
+        margin: 2px 0;
+    }
+}

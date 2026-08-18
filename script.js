@@ -6309,19 +6309,36 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                             <div class="runner-main ${fadeScratchedOnly ? "scratched-fade-extra" : ""}">
                                 <div class="runner-left">
                                     <div class="runner-horse horse-hover">
-                                        ${escapeHtml(horse)}
+                                        <span class="runner-horse-name">
+                                            ${escapeHtml(horse)}
+                                        </span>
+
+                                        ${!isScratched ? `
+                                            <span class="mobile-runner-lights">
+                                                ${renderTrafficLights(leadPct, behindLeadPct, deathPct)}
+                                            </span>
+                                        ` : ""}
+
                                         ${renderPositionStatsTooltip(row)}
                                     </div>
 
                                     <div class="runner-meta">
-                                        ${barrier ? `
-                                            <span class="barrier-hover">
-                                                ${escapeHtml(barrier)}
-                                                ${renderBarrierStatsTooltip(row, first)}
+                                        <span class="runner-meta-people">
+                                            ${barrier ? `
+                                                <span class="barrier-hover">
+                                                    ${escapeHtml(barrier)}
+                                                    ${renderBarrierStatsTooltip(row, first)}
+                                                </span>
+                                            ` : ""}
+                                            ${trainer ? ` • <span class="stat-hover">${escapeHtml(trainer)}${renderPersonStatsTooltip(row, "trainer")}</span>` : ""}
+                                            ${driver ? ` • <span class="stat-hover">${escapeHtml(driver)}${renderPersonStatsTooltip(row, "driver")}</span>` : ""}
+                                        </span>
+
+                                        ${fairOdds && !isScratched ? `
+                                            <span class="mobile-runner-odds">
+                                                ${escapeHtml(fairOdds)}
                                             </span>
                                         ` : ""}
-                                        ${trainer ? ` • <span class="stat-hover">${escapeHtml(trainer)}${renderPersonStatsTooltip(row, "trainer")}</span>` : ""}
-                                        ${driver ? ` • <span class="stat-hover">${escapeHtml(driver)}${renderPersonStatsTooltip(row, "driver")}</span>` : ""}
                                     </div>
                                 </div>
 
@@ -6332,17 +6349,10 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                                 ${!isScratched && selectedVenueStatMode !== "off"
                                     ? renderVenueStatBlock(row)
                                     : ""}
-
-                                ${!isScratched ? `
-                                    <div class="runner-mobile-lights">
-                                        ${renderTrafficLights(leadPct, behindLeadPct, deathPct)}
-                                    </div>
-                                ` : ""}
-
-                                ${fairOdds && !isScratched
-                                    ? `<div class="runner-odds">${escapeHtml(fairOdds)}</div>`
-                                    : ""}
+                                ${!isScratched ? renderTrafficLights(leadPct, behindLeadPct, deathPct) : ""}
+                                ${fairOdds && !isScratched ? `<div class="runner-odds">${escapeHtml(fairOdds)}</div>` : ""}
                             </div>
+
                         </div>
                     `;
                 }).join("")}
