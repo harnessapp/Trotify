@@ -8073,16 +8073,15 @@ body.race-chart-social .race-chart-stage-card::after {
 
 @media (max-width: 700px) {
 
-    /* Inactive traffic lights */
-    .runner-mobile-traffic .traffic-dot.green:not(.active),
-    .runner-mobile-traffic .traffic-dot.amber:not(.active),
-    .runner-mobile-traffic .traffic-dot.red:not(.active) {
-        opacity: 0.25 !important;
+    .runner-mobile-content {
+        gap: 5px !important;
     }
 
-    /* Active traffic lights remain prominent */
-    .runner-mobile-traffic .traffic-dot.active {
+    .runner-mobile-traffic .traffic-dot:not(.filled) {
+        opacity: 0.10 !important;
+    }
+
+    .runner-mobile-traffic .traffic-dot.filled {
         opacity: 1 !important;
     }
-
 }
