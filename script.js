@@ -5715,7 +5715,22 @@ function openRaceFromHome(race) {
 }
 
 function renderUpcomingFields(rows) {
-    const meetings = groupMeetings(rows);
+    const today = todayIso();
+
+    const currentRows = rows.filter(row => {
+        const dateValue = clean(
+            row.Date ||
+            row.DATE ||
+            row["Meeting Date"] ||
+            ""
+        );
+
+        const dateKey = parseDateToKey(dateValue);
+
+        return dateKey && dateKey >= today;
+    });
+
+    const meetings = groupMeetings(currentRows);
     const grouped = groupMeetingsByDay(meetings);
 
     if (!grouped.length) {
