@@ -8064,24 +8064,24 @@ body.race-chart-social .race-chart-stage-card::after {
 }
 
 /* =========================================================
-   MOBILE RUNNER - FINAL SPACING + TRAFFIC LIGHT STRENGTH
+   MOBILE RUNNER - SPACING + TRAFFIC LIGHT STRENGTH
    ========================================================= */
 
 @media (max-width: 700px) {
 
-    /* Slight breathing room between horse and Br/Trainer/Driver */
-    .runner-main {
-        row-gap: 4px !important;
+    /* Slightly more breathing room between the two lines */
+    .runner-mobile-content {
+        gap: 5px !important;
     }
 
-    /* Unlit traffic lights */
-    .mobile-runner-lights .traffic-dot:not(.filled) {
-        opacity: 0.15 !important;
+    /* Make unlit traffic lights very faint */
+    .runner-mobile-traffic .traffic-dot:not(.filled) {
+        opacity: 0.12 !important;
         box-shadow: none !important;
     }
 
-    /* Lit traffic lights */
-    .mobile-runner-lights .traffic-dot.filled {
+    /* Keep active lights at full strength */
+    .runner-mobile-traffic .traffic-dot.filled {
         opacity: 1 !important;
     }
 }
