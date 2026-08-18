@@ -7791,3 +7791,50 @@ body.race-chart-social .race-chart-stage-card::after {
         height: 6px;
     }
 }
+
+@media (max-width: 700px) {
+
+    /* tighten vertical spacing inside each runner */
+    .runner-row {
+        min-height: 50px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .runner-main {
+        align-self: center;
+    }
+
+    .runner-horse {
+        line-height: 1.05;
+        margin: 0;
+    }
+
+    .runner-meta {
+        margin-top: 0 !important;
+        line-height: 1.05 !important;
+    }
+
+    /* give trainer / driver substantially more room */
+    .runner-meta {
+        padding-right: 38px !important;
+    }
+
+    /* odds only need a narrow reserved area */
+    .mobile-runner-odds {
+        right: 8px !important;
+        bottom: 8px !important;
+        font-size: 10px !important;
+    }
+
+    /* lights stay pinned top-right */
+    .runner-mobile-lights,
+    .mobile-runner-lights {
+        right: 8px !important;
+        top: 8px !important;
+    }
+}
+
+.runner-meta {
+    font-size: 10px !important;
+}
