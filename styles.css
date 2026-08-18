@@ -8095,12 +8095,11 @@ body.race-chart-social .race-chart-stage-card::after {
 
     /* FILLED GREEN */
     .traffic-dot.green.filled {
-        opacity: 1 !important;
-        background: #74ff8f !important;
-        border: 2px solid #74ff8f !important;
+        background: #4cff72 !important;
+        border-color: #4cff72 !important;
         box-shadow:
-            0 0 5px #74ff8f,
-            0 0 10px rgba(116, 255, 143, 0.9) !important;
+            0 0 5px #4cff72,
+            0 0 10px rgba(76, 255, 114, 0.9) !important;
     }
 
 
@@ -8138,6 +8137,6 @@ body.race-chart-social .race-chart-stage-card::after {
 
 @media (max-width: 700px) {
     .runner-mobile-traffic .traffic-dot.filled {
-        transform: scale(1.4) !important;
+        transform: scale(1.2) !important;
     }
 }
