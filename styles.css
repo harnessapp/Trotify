@@ -8069,36 +8069,65 @@ body.race-chart-social .race-chart-stage-card::after {
 
 @media (max-width: 700px) {
 
-    /* Slightly more breathing room between the two lines */
+    /* Slight breathing room between horse and details */
     .runner-mobile-content {
         gap: 5px !important;
     }
 
-    /* Unlit traffic lights - very faint */
-    .runner-mobile-traffic .traffic-dot:not(.filled) {
-        opacity: 0.12 !important;
+
+    /* -----------------------------------------
+       ALL traffic dots stay at full opacity
+       ----------------------------------------- */
+
+    .runner-mobile-traffic,
+    .runner-mobile-traffic .traffic-lights,
+    .runner-mobile-traffic .traffic-dot {
+        opacity: 1 !important;
+    }
+
+
+    /* -----------------------------------------
+       UNLIT - faint outlines only
+       ----------------------------------------- */
+
+    .runner-mobile-traffic .traffic-dot.green:not(.filled) {
+        background: transparent !important;
+        border-color: rgba(116, 255, 143, 0.18) !important;
         box-shadow: none !important;
     }
 
-    /* Lit lights - full brightness */
+    .runner-mobile-traffic .traffic-dot.amber:not(.filled) {
+        background: transparent !important;
+        border-color: rgba(255, 190, 80, 0.18) !important;
+        box-shadow: none !important;
+    }
+
+    .runner-mobile-traffic .traffic-dot.red:not(.filled) {
+        background: transparent !important;
+        border-color: rgba(255, 90, 90, 0.18) !important;
+        box-shadow: none !important;
+    }
+
+
+    /* -----------------------------------------
+       LIT - bright and glowing
+       ----------------------------------------- */
+
     .runner-mobile-traffic .traffic-dot.green.filled {
-        opacity: 1 !important;
         background: rgb(116, 255, 143) !important;
         border-color: rgb(116, 255, 143) !important;
-        box-shadow: 0 0 10px rgba(116, 255, 143, 0.75) !important;
+        box-shadow: 0 0 9px rgba(116, 255, 143, 0.85) !important;
     }
 
     .runner-mobile-traffic .traffic-dot.amber.filled {
-        opacity: 1 !important;
         background: rgb(255, 190, 80) !important;
         border-color: rgb(255, 190, 80) !important;
-        box-shadow: 0 0 10px rgba(255, 190, 80, 0.75) !important;
+        box-shadow: 0 0 9px rgba(255, 190, 80, 0.85) !important;
     }
 
     .runner-mobile-traffic .traffic-dot.red.filled {
-        opacity: 1 !important;
         background: rgb(255, 90, 90) !important;
         border-color: rgb(255, 90, 90) !important;
-        box-shadow: 0 0 10px rgba(255, 90, 90, 0.75) !important;
+        box-shadow: 0 0 9px rgba(255, 90, 90, 0.85) !important;
     }
 }
