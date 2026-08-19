@@ -7686,9 +7686,22 @@ function renderRunnerSpeedMapMobile(row) {
     return `
         <div
             onclick="event.stopPropagation(); openMobileSpeedMapPopup(this)"
+            data-horse="${escapeHtml(clean(row.Horse || row.HORSE || ""))}"
+
             data-lead="${leadPct}"
+            data-lead-sts="${safeNum(parseNumber(row["Bell Pos Lead"] || row["Lead Sts"] || ""))}"
+            data-lead-w="${safeNum(parseNumber(row["Ld Win"] || ""))}"
+            data-lead-p="${safeNum(parseNumber(row["Ld Pla"] || ""))}"
+
             data-bl="${blPct}"
+            data-bl-sts="${safeNum(parseNumber(row["Bell Pos BL"] || row["B/Lead Sts"] || row["BL Sts"] || ""))}"
+            data-bl-w="${safeNum(parseNumber(row["BL Win"] || ""))}"
+            data-bl-p="${safeNum(parseNumber(row["BL Pla"] || ""))}"
+
             data-death="${deathPct}"
+            data-death-sts="${safeNum(parseNumber(row["Bell Pos Dth"] || row["Death Sts"] || row["Dth Sts"] || ""))}"
+            data-death-w="${safeNum(parseNumber(row["Dth Win"] || ""))}"
+            data-death-p="${safeNum(parseNumber(row["Dth Pla"] || ""))}"
             style="
                 width:100%;
                 min-width:0;
@@ -7745,14 +7758,26 @@ function renderRunnerSpeedMapMobile(row) {
 function openMobileSpeedMapPopup(el) {
     if (window.innerWidth > 700) return;
 
-    // Remove any existing map popup
     document
         .querySelector(".mobile-speed-map-popup")
         ?.remove();
 
+    const horse = el.dataset.horse || "Speed Map";
+
     const leadPct = Number(el.dataset.lead || 0);
+    const leadSts = Number(el.dataset.leadSts || 0);
+    const leadW = Number(el.dataset.leadW || 0);
+    const leadP = Number(el.dataset.leadP || 0);
+
     const blPct = Number(el.dataset.bl || 0);
+    const blSts = Number(el.dataset.blSts || 0);
+    const blW = Number(el.dataset.blW || 0);
+    const blP = Number(el.dataset.blP || 0);
+
     const deathPct = Number(el.dataset.death || 0);
+    const deathSts = Number(el.dataset.deathSts || 0);
+    const deathW = Number(el.dataset.deathW || 0);
+    const deathP = Number(el.dataset.deathP || 0);
 
     const popup = document.createElement("div");
 
@@ -7765,13 +7790,19 @@ function openMobileSpeedMapPopup(el) {
             font-weight:950;
             text-align:center;
             margin-bottom:10px;
+            text-transform:uppercase;
         ">
-            Speed Map
+            ${escapeHtml(horse)}
         </div>
 
         <div style="
+            border-top:1px solid rgba(255,255,255,0.12);
+            margin-bottom:4px;
+        "></div>
+
+        <div style="
             display:grid;
-            grid-template-columns:14px 1fr auto;
+            grid-template-columns:14px 1fr 70px 42px;
             gap:8px;
             align-items:center;
             padding:7px 0;
@@ -7787,12 +7818,18 @@ function openMobileSpeedMapPopup(el) {
 
             <span>Lead</span>
 
-            <strong>${leadPct.toFixed(0)}%</strong>
+            <strong style="text-align:center;">
+                ${leadSts}: ${leadW}-${leadP}
+            </strong>
+
+            <strong style="text-align:right;">
+                ${leadPct.toFixed(0)}%
+            </strong>
         </div>
 
         <div style="
             display:grid;
-            grid-template-columns:14px 1fr auto;
+            grid-template-columns:14px 1fr 70px 42px;
             gap:8px;
             align-items:center;
             padding:7px 0;
@@ -7808,12 +7845,18 @@ function openMobileSpeedMapPopup(el) {
 
             <span>Behind leader</span>
 
-            <strong>${blPct.toFixed(0)}%</strong>
+            <strong style="text-align:center;">
+                ${blSts}: ${blW}-${blP}
+            </strong>
+
+            <strong style="text-align:right;">
+                ${blPct.toFixed(0)}%
+            </strong>
         </div>
 
         <div style="
             display:grid;
-            grid-template-columns:14px 1fr auto;
+            grid-template-columns:14px 1fr 70px 42px;
             gap:8px;
             align-items:center;
             padding:7px 0;
@@ -7829,7 +7872,13 @@ function openMobileSpeedMapPopup(el) {
 
             <span>Death seat</span>
 
-            <strong>${deathPct.toFixed(0)}%</strong>
+            <strong style="text-align:center;">
+                ${deathSts}: ${deathW}-${deathP}
+            </strong>
+
+            <strong style="text-align:right;">
+                ${deathPct.toFixed(0)}%
+            </strong>
         </div>
     `;
 
