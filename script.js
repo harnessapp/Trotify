@@ -244,6 +244,33 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 });
 
+document.addEventListener("click", function (e) {
+
+    if (window.innerWidth > 700) return;
+
+    const target = e.target.closest(
+        ".horse-hover, .barrier-hover, .stat-hover"
+    );
+
+    // Close any other open tooltip
+    document.querySelectorAll(
+        ".horse-hover.mobile-open, .barrier-hover.mobile-open, .stat-hover.mobile-open"
+    ).forEach(el => {
+        if (el !== target) {
+            el.classList.remove("mobile-open");
+        }
+    });
+
+    // Tap outside = just close everything
+    if (!target) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Tap same one again = close it
+    target.classList.toggle("mobile-open");
+});
+
 async function loadUpcomingFields() {
     try {
         const response = await fetch(

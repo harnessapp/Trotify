@@ -1404,6 +1404,21 @@ body {
     display: block;
 }
 
+@media (max-width: 700px) {
+
+    .horse-hover.mobile-open .horse-stats-tooltip {
+        display: block;
+    }
+
+    .barrier-hover.mobile-open .barrier-stats-tooltip {
+        display: block;
+    }
+
+    .stat-hover.mobile-open .person-stats-tooltip {
+        display: block;
+    }
+}
+
 .person-stats-tooltip table {
     width: 100%;
     border-collapse: collapse;
@@ -8128,10 +8143,4 @@ body.race-chart-social .race-chart-stage-card::after {
         transform: scale(1.0) !important;
     }
 
-}
-
-@media (max-width: 700px) {
-    .runner-mobile-traffic .traffic-dot.filled {
-        transform: scale(1.0) !important;
-    }
 }
