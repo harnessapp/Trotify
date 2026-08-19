@@ -249,6 +249,7 @@ function closeMobileStatsPopup() {
 }
 
 function openMobileStatsPopup(target) {
+
     const tooltip = target.querySelector(
         ".horse-stats-tooltip, .barrier-stats-tooltip, .person-stats-tooltip"
     );
@@ -264,7 +265,8 @@ function openMobileStatsPopup(target) {
     document.body.appendChild(popup);
 }
 
-document.addEventListener("pointerup", function (e) {
+
+document.addEventListener("click", function (e) {
 
     if (window.innerWidth > 700) return;
 
@@ -272,21 +274,27 @@ document.addEventListener("pointerup", function (e) {
         ".horse-hover, .barrier-hover, .stat-hover"
     );
 
+    /* Horse / barrier / trainer / driver */
     if (target) {
         e.preventDefault();
         e.stopPropagation();
+        e.stopImmediatePropagation();
 
         openMobileStatsPopup(target);
         return;
     }
 
+    /* Tapping the popup itself should not close it */
     if (e.target.closest(".mobile-stats-popup")) {
+        e.stopPropagation();
         return;
     }
 
+    /* Anything else closes it */
     closeMobileStatsPopup();
 
 }, true);
+
 
 async function loadUpcomingFields() {
     try {
@@ -6754,6 +6762,10 @@ function openSizePopup(event, venue, state, dateValue, raceNo) {
 }
 
 function closeSizePopupAndRender(venue, state, dateValue, raceNo) {
+
+    // Nothing to close = don't rebuild the whole race
+    if (!sizePopupOpen) return;
+
     sizePopupOpen = false;
     renderRaceDetail(venue, state, dateValue, raceNo);
 }
