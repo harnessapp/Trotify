@@ -9041,7 +9041,7 @@ body.race-chart-social .race-chart-stage-card::after {
 
 /* Hide Size button on mobile only */
 @media (max-width: 700px) {
-    .size-hover {
+    .fieldsize-click {
         display: none !important;
     }
 }
