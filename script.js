@@ -6563,79 +6563,89 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                             <!-- MOBILE RUNNER -->
                             <div class="runner-mobile-content">
 
-                                <div class="runner-mobile-top">
+                                ${runnerDisplayMode === "trials" && !isScratched ? `
 
-                                    <span class="runner-mobile-horse horse-hover">
-                                        ${escapeHtml(horse)}
-                                        ${renderPositionStatsTooltip(row)}
-                                    </span>
+                                    ${renderRunnerTrialsMobile(row)}
 
-                                    ${!isScratched ? `
-                                        <span class="runner-mobile-traffic">
-                                            ${renderTrafficLights(
-                                                leadPct,
-                                                behindLeadPct,
-                                                deathPct
-                                            )}
+                                ` : `
+
+                                    <div class="runner-mobile-top">
+
+                                        <span class="runner-mobile-horse horse-hover">
+                                            ${escapeHtml(horse)}
+                                            ${renderPositionStatsTooltip(row)}
                                         </span>
-                                    ` : ""}
 
-                                </div>
-
-                                <div class="runner-mobile-bottom">
-
-                                    <span class="runner-mobile-people">
-
-                                        ${barrier ? `
-                                            <span class="barrier-hover">
-                                                ${escapeHtml(barrier)}
-                                                ${renderBarrierStatsTooltip(row, first)}
+                                        ${!isScratched ? `
+                                            <span class="runner-mobile-traffic">
+                                                ${renderTrafficLights(
+                                                    leadPct,
+                                                    behindLeadPct,
+                                                    deathPct
+                                                )}
                                             </span>
                                         ` : ""}
-
-                                        ${trainer ? `
-                                            <span class="runner-mobile-trainer">
-                                                • <span class="stat-hover">
-                                                    ${escapeHtml(trainer)}
-                                                    ${renderPersonStatsTooltip(row, "trainer")}
-                                                </span>
-                                            </span>
-                                        ` : ""}
-
-                                        ${driver ? `
-                                            <span class="runner-mobile-driver">
-                                                • <span class="stat-hover">
-                                                    ${escapeHtml(driver)}
-                                                    ${renderPersonStatsTooltip(row, "driver")}
-                                                </span>
-                                            </span>
-                                        ` : ""}
-
-                                    </span>
-
-                                    ${fairOdds && !isScratched ? `
-                                        <span class="runner-mobile-price">
-                                            ${escapeHtml(fairOdds)}
-                                        </span>
-                                    ` : ""}
-
-                                </div>
-
-                                ${!isScratched ? `
-                                    <div class="mobile-runner-detail">
-
-                                        ${fullComment ? `
-                                            <div class="mobile-runner-comment">
-                                                ${escapeHtml(fullComment)}
-                                            </div>
-                                        ` : ""}
-
-                                        ${renderMobileVenueStats(row)}
 
                                     </div>
-                                ` : ""}
+
+                                    <div class="runner-mobile-bottom">
+
+                                        <span class="runner-mobile-people">
+
+                                            ${barrier ? `
+                                                <span class="barrier-hover">
+                                                    ${escapeHtml(barrier)}
+                                                    ${renderBarrierStatsTooltip(row, first)}
+                                                </span>
+                                            ` : ""}
+
+                                            ${trainer ? `
+                                                <span class="runner-mobile-trainer">
+                                                    • <span class="stat-hover">
+                                                        ${escapeHtml(trainer)}
+                                                        ${renderPersonStatsTooltip(row, "trainer")}
+                                                    </span>
+                                                </span>
+                                            ` : ""}
+
+                                            ${driver ? `
+                                                <span class="runner-mobile-driver">
+                                                    • <span class="stat-hover">
+                                                        ${escapeHtml(driver)}
+                                                        ${renderPersonStatsTooltip(row, "driver")}
+                                                    </span>
+                                                </span>
+                                            ` : ""}
+
+                                        </span>
+
+                                        ${fairOdds && !isScratched ? `
+                                            <span class="runner-mobile-price">
+                                                ${escapeHtml(fairOdds)}
+                                            </span>
+                                        ` : ""}
+
+                                    </div>
+
+                                    ${!isScratched ? `
+                                        <div class="mobile-runner-detail">
+
+                                            ${fullComment ? `
+                                                <div class="mobile-runner-comment">
+                                                    ${escapeHtml(fullComment)}
+                                                </div>
+                                            ` : ""}
+
+                                            ${renderMobileVenueStats(row)}
+
+                                        </div>
+                                    ` : ""}
+
+                                `}
 
                             </div>
+
+
 
                         </div>
                     `;
@@ -7246,6 +7256,171 @@ function renderRunnerTrialsInline(row) {
     return `
         <div class="runner-trials-inline">
             ${lines.join("")}
+        </div>
+    `;
+}
+
+function renderRunnerTrialsMobile(row) {
+    const trialRunner = findTrialRunnerForRow(row);
+
+    if (!trialRunner || !hasAnyTrialForRunner(trialRunner)) {
+        return `
+            <div class="mobile-trials-list">
+                <div class="mobile-trial-empty">
+                    No trials found
+                </div>
+            </div>
+        `;
+    }
+
+    const lines = [1, 2, 3]
+        .map(n => buildMobileTrialLineHtml(trialRunner, n))
+        .filter(Boolean);
+
+    if (!lines.length) {
+        return `
+            <div class="mobile-trials-list">
+                <div class="mobile-trial-empty">
+                    No trials found
+                </div>
+            </div>
+        `;
+    }
+
+    return `
+        <div class="mobile-trials-list">
+            ${lines.join("")}
+        </div>
+    `;
+}
+
+function buildMobileTrialLineHtml(runner, n) {
+    const p = `T${n}`;
+
+    const venue = clean(runner[`${p} Venue`] || "");
+    const date = clean(runner[`${p} Date`] || "");
+    const posRaw = clean(runner[`${p} Pos`] || "");
+    const runnersRaw = clean(runner[`${p} Runners`] || "");
+    const mgnRaw = clean(runner[`${p} Mgn`] || "");
+    const distRaw = clean(runner[`${p} Dist`] || "");
+    const rateRaw = clean(runner[`${p} Rate`] || "");
+    const halfRaw = clean(runner[`${p} Half`] || "");
+    const vision = clean(runner[`${p} Vision`] || "");
+    const sinceRaw = clean(runner[`${p} SinceLR`] || "");
+
+    if (!venue && !date && !posRaw) {
+        return "";
+    }
+
+    const pos = formatTrialOrdinal(posRaw);
+    const runners = cleanIntish(runnersRaw);
+
+    const venueText =
+        venue ? venue.substring(0, 4).toUpperCase() : "";
+
+    const dateText =
+        formatTrialDate(date);
+
+    const distText =
+        distRaw
+            ? `${cleanIntish(distRaw).replace(/m$/i, "")}m`
+            : "";
+
+    const rateText =
+        formatTrialRate(rateRaw);
+
+    const halfText =
+        halfRaw
+            ? formatOneDecimal(halfRaw)
+            : "";
+
+    let marginText = "";
+
+    const marginNumber = Number(mgnRaw);
+
+    if (
+        mgnRaw &&
+        Number.isFinite(marginNumber) &&
+        marginNumber > 0
+    ) {
+        marginText = ` (${Math.round(marginNumber)}m)`;
+    }
+
+    const placingText = [
+        pos,
+        runners ? `/${runners}` : ""
+    ].join("");
+
+    const mainText = [
+        `${placingText}${marginText}`,
+        venueText,
+        dateText
+    ]
+        .filter(Boolean)
+        .join(" ");
+
+    const timingText = [
+        distText,
+        [rateText, halfText]
+            .filter(Boolean)
+            .join(", ")
+    ]
+        .filter(Boolean)
+        .join(" · ");
+
+    const sinceVal = Number(sinceRaw);
+
+    const isPostRaceTrial =
+        Number.isFinite(sinceVal) &&
+        sinceVal > 0;
+
+    const freshBadge = isPostRaceTrial
+        ? `<span class="mobile-trial-fresh">SINCE RACE</span>`
+        : "";
+
+    const visionClean =
+        vision.toUpperCase();
+
+    const hasVision =
+        vision &&
+        visionClean !== "_NOVISION";
+
+    const innerHtml = `
+        <span class="mobile-trial-play">
+            ${hasVision ? "▶" : ""}
+        </span>
+
+        ${freshBadge}
+
+        <span class="mobile-trial-text">
+            <strong>
+                ${escapeHtml(mainText)}
+            </strong>
+
+            ${timingText
+                ? `<span> · ${escapeHtml(timingText)}</span>`
+                : ""
+            }
+        </span>
+    `;
+
+    if (hasVision) {
+        return `
+            <a
+                class="mobile-trial-line has-vision"
+                href="${escapeHtml(vision)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                onclick="event.stopPropagation()"
+            >
+                ${innerHtml}
+            </a>
+        `;
+    }
+
+    return `
+        <div class="mobile-trial-line">
+            ${innerHtml}
         </div>
     `;
 }
