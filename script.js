@@ -13790,3 +13790,4 @@ function closeRaceMedia() {
 
     document.getElementById("raceMediaPopup")?.remove();
 }
+

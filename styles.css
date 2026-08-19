@@ -8144,3 +8144,28 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 }
+
+@media (max-width: 700px) {
+
+    .horse-stats-tooltip,
+    .barrier-stats-tooltip,
+    .person-stats-tooltip {
+        position: fixed !important;
+
+        left: 12px !important;
+        right: 12px !important;
+        top: 50% !important;
+        bottom: auto !important;
+
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+
+        transform: translateY(-50%) !important;
+
+        z-index: 999999 !important;
+
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+}
