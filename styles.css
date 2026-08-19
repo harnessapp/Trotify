@@ -9183,3 +9183,130 @@ body.race-chart-social .race-chart-stage-card::after {
         background: #c9605a;
     }
 }
+
+/* =========================================================
+   MOBILE - ROI+ POPUP
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .mobile-stats-popup.race-roi-tooltip {
+        left: 18px !important;
+        right: 18px !important;
+        top: 50% !important;
+
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+
+        transform: translateY(-50%) !important;
+
+        padding: 12px 14px !important;
+
+        border-radius: 14px !important;
+
+        background: #f4edf7 !important;
+        color: #222 !important;
+
+        max-height: 78vh !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+
+    .mobile-stats-popup.race-roi-tooltip
+    .race-roi-title {
+        margin-bottom: 9px !important;
+
+        font-size: 13px !important;
+        line-height: 1.1 !important;
+
+        text-align: center !important;
+
+        color: #222 !important;
+    }
+
+    .mobile-stats-popup.race-roi-tooltip
+    .race-roi-row {
+        display: grid !important;
+
+        grid-template-columns:
+            43px
+            42px
+            minmax(0, 1fr)
+            58px !important;
+
+        gap: 5px !important;
+        align-items: center !important;
+
+        padding: 6px 0 !important;
+
+        border-bottom:
+            1px solid rgba(0, 0, 0, 0.13) !important;
+    }
+
+    .mobile-stats-popup.race-roi-tooltip
+    .race-roi-pct {
+        font-size: 11px !important;
+        font-weight: 950 !important;
+
+        color: #222 !important;
+
+        white-space: nowrap !important;
+    }
+
+    .mobile-stats-popup.race-roi-tooltip
+    .race-roi-type {
+        font-size: 8px !important;
+        font-weight: 900 !important;
+
+        color: #333 !important;
+
+        white-space: nowrap !important;
+    }
+
+    .mobile-stats-popup.race-roi-tooltip
+    .race-roi-main {
+        min-width: 0 !important;
+    }
+
+    .mobile-stats-popup.race-roi-tooltip
+    .race-roi-main strong {
+        display: block !important;
+
+        font-size: 9px !important;
+        line-height: 1.05 !important;
+
+        color: #222 !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    .mobile-stats-popup.race-roi-tooltip
+    .race-roi-main span {
+        display: block !important;
+
+        margin-top: 1px !important;
+
+        font-size: 8px !important;
+        line-height: 1.05 !important;
+
+        color: #9aa0a6 !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    .mobile-stats-popup.race-roi-tooltip
+    .race-roi-record {
+        font-size: 8px !important;
+        font-weight: 850 !important;
+
+        color: #555 !important;
+
+        text-align: right !important;
+        white-space: nowrap !important;
+    }
+}

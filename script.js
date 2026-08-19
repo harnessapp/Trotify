@@ -253,7 +253,7 @@ function closeMobileStatsPopup() {
 function openMobileStatsPopup(target) {
 
     const tooltip = target.querySelector(
-        ".horse-stats-tooltip, .barrier-stats-tooltip, .person-stats-tooltip, .record-tooltip, .race-summary-tooltip"
+        ".horse-stats-tooltip, .barrier-stats-tooltip, .person-stats-tooltip, .record-tooltip, .race-summary-tooltip, .race-roi-tooltip"
     );
 
     if (!tooltip) return;
@@ -321,7 +321,7 @@ document.addEventListener("click", function (e) {
     if (window.innerWidth > 700) return;
 
     const target = e.target.closest(
-        ".horse-hover, .barrier-hover, .stat-hover, .record-hover, .mobile-race-summary"
+        ".horse-hover, .barrier-hover, .stat-hover, .record-hover, .mobile-race-summary, .race-roi-hover"
     );
 
     /* Horse / barrier / trainer / driver */
