@@ -183,7 +183,6 @@ let selectedGoodLeaderState = "ALL";
 let selectedModelTipState = "ALL";
 
 let selectedVenueStatMode = "off";
-let expandedMobileRunnerKey = null;
 let fieldSizeStatsRows = [];
 let selectedSizePosition = "LEAD";
 let sizePopupOpen = false;
@@ -6135,24 +6134,6 @@ function getStandMetresFromBarrier(barrier) {
     return match[1];
 }
 
-function toggleMobileRunnerDetail(runnerKey) {
-    if (window.innerWidth > 700) return;
-
-    if (expandedMobileRunnerKey === runnerKey) {
-        expandedMobileRunnerKey = null;
-    } else {
-        expandedMobileRunnerKey = runnerKey;
-    }
-
-    document.querySelectorAll(".runner-row").forEach(row => {
-        row.classList.toggle(
-            "mobile-runner-expanded",
-            row.dataset.runnerKey === expandedMobileRunnerKey
-        );
-    });
-}
-
-
 function renderMobileVenueStats(row) {
 
     function statLine(label, prefix) {
@@ -6208,16 +6189,17 @@ function toggleMobileRunnerDetail(el) {
     const row = el.closest(".runner-row");
     if (!row) return;
 
-    const wasOpen = row.classList.contains("mobile-runner-expanded");
+    const wasOpen =
+        row.classList.contains("mobile-runner-expanded");
 
-    // Close any other expanded runner
+    // Close every runner first
     document
         .querySelectorAll(".runner-row.mobile-runner-expanded")
         .forEach(otherRow => {
             otherRow.classList.remove("mobile-runner-expanded");
         });
 
-    // If this one wasn't already open, open it
+    // Re-open tapped runner unless it was already open
     if (!wasOpen) {
         row.classList.add("mobile-runner-expanded");
     }
@@ -6449,8 +6431,6 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
 
 
                     const fullComment = buildRunnerComment(row, raceRows);
-                    const isMobileExpanded =
-                        expandedMobileRunnerKey === runnerKey;
 
                     const previewComment = fullComment;
 
