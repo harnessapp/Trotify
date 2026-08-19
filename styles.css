@@ -9353,7 +9353,19 @@ body.race-chart-social .race-chart-stage-card::after {
 @media (max-width: 700px) {
 
     .dashboard-card {
-        border-width: 5px !important;
+        border-width: 2px !important;
         border-color: rgba(0, 230, 191, 0.18) !important;
     }
+}
+
+/* =========================================================
+   MOBILE HOME - STRONGER CARD OUTLINES
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .dashboard-grid > .card {
+        border: 2px solid rgba(0, 230, 191, 0.45) !important;
+    }
+
 }
