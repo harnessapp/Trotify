@@ -9345,3 +9345,15 @@ body.race-chart-social .race-chart-stage-card::after {
         color: #555 !important;
     }
 }
+
+/* =========================================================
+   MOBILE HOME - STRONGER TILE SEPARATION
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .dashboard-card {
+        border-width: 2px !important;
+        border-color: rgba(0, 230, 191, 0.18) !important;
+    }
+}
