@@ -6567,7 +6567,7 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
 
                                     ${renderRunnerTrialsMobile(row)}
 
-                                ` : runnerDisplayMode === "map" && !isScratched ? `
+                                ` : runnerDisplayMode === "map" ? `
 
                                     ${renderRunnerSpeedMapMobile(row)}
 
@@ -7735,6 +7735,7 @@ function renderRunnerSpeedMapMobile(row) {
 function openMobileSpeedMapPopup(el) {
     if (window.innerWidth > 700) return;
 
+    // Remove any existing map popup
     document
         .querySelector(".mobile-speed-map-popup")
         ?.remove();
@@ -7748,28 +7749,122 @@ function openMobileSpeedMapPopup(el) {
     popup.className = "mobile-speed-map-popup";
 
     popup.innerHTML = `
-        <div class="mobile-speed-map-popup-title">
+        <div style="
+            color:#00e6bf;
+            font-size:14px;
+            font-weight:950;
+            text-align:center;
+            margin-bottom:10px;
+        ">
             Speed Map
         </div>
 
-        <div class="mobile-speed-map-popup-row">
-            <span class="map-dot map-dot-green"></span>
+        <div style="
+            display:grid;
+            grid-template-columns:14px 1fr auto;
+            gap:8px;
+            align-items:center;
+            padding:7px 0;
+            font-size:12px;
+            color:#f4f7fb;
+        ">
+            <span style="
+                width:9px;
+                height:9px;
+                border-radius:50%;
+                background:#78be5a;
+            "></span>
+
             <span>Lead</span>
+
             <strong>${leadPct.toFixed(0)}%</strong>
         </div>
 
-        <div class="mobile-speed-map-popup-row">
-            <span class="map-dot map-dot-amber"></span>
+        <div style="
+            display:grid;
+            grid-template-columns:14px 1fr auto;
+            gap:8px;
+            align-items:center;
+            padding:7px 0;
+            font-size:12px;
+            color:#f4f7fb;
+        ">
+            <span style="
+                width:9px;
+                height:9px;
+                border-radius:50%;
+                background:#d8b14a;
+            "></span>
+
             <span>Behind leader</span>
+
             <strong>${blPct.toFixed(0)}%</strong>
         </div>
 
-        <div class="mobile-speed-map-popup-row">
-            <span class="map-dot map-dot-red"></span>
+        <div style="
+            display:grid;
+            grid-template-columns:14px 1fr auto;
+            gap:8px;
+            align-items:center;
+            padding:7px 0;
+            font-size:12px;
+            color:#f4f7fb;
+        ">
+            <span style="
+                width:9px;
+                height:9px;
+                border-radius:50%;
+                background:#c9605a;
+            "></span>
+
             <span>Death seat</span>
+
             <strong>${deathPct.toFixed(0)}%</strong>
         </div>
     `;
+
+    popup.style.setProperty("position", "fixed", "important");
+    popup.style.setProperty("left", "36px", "important");
+    popup.style.setProperty("right", "36px", "important");
+    popup.style.setProperty("top", "50%", "important");
+
+    popup.style.setProperty(
+        "transform",
+        "translateY(-50%)",
+        "important"
+    );
+
+    popup.style.setProperty("z-index", "9999999", "important");
+
+    popup.style.setProperty(
+        "background",
+        "#0b1721",
+        "important"
+    );
+
+    popup.style.setProperty(
+        "border",
+        "1px solid rgba(0,230,191,0.5)",
+        "important"
+    );
+
+    popup.style.setProperty(
+        "border-radius",
+        "14px",
+        "important"
+    );
+
+    popup.style.setProperty(
+        "padding",
+        "14px 16px",
+        "important"
+    );
+
+    popup.style.setProperty(
+        "box-shadow",
+        "0 18px 45px rgba(0,0,0,0.75)",
+        "important"
+    );
 
     document.body.appendChild(popup);
 }
@@ -7777,10 +7872,7 @@ function openMobileSpeedMapPopup(el) {
 document.addEventListener("click", function (e) {
     if (window.innerWidth > 700) return;
 
-    if (
-        e.target.closest(".mobile-speed-map") ||
-        e.target.closest(".mobile-speed-map-popup")
-    ) {
+    if (e.target.closest(".mobile-speed-map-popup")) {
         return;
     }
 
