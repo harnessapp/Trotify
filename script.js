@@ -7398,7 +7398,7 @@ function buildMobileTrialLineHtml(runner, n) {
     const textHtml = `
         <span style="
             color:rgba(255,255,255,0.78);
-            font-size:8px;
+            font-size:8.5px;
             line-height:1.1;
             font-weight:700;
             white-space:nowrap;
@@ -7425,7 +7425,7 @@ function buildMobileTrialLineHtml(runner, n) {
                     padding:1px 0;
                     color:rgba(255,255,255,0.78);
                     text-decoration:none;
-                    font-size:8px;
+                    font-size:8.5px;
                     line-height:1.1;
                     white-space:nowrap;
                     overflow:hidden;
@@ -7434,7 +7434,7 @@ function buildMobileTrialLineHtml(runner, n) {
             >
                 <span style="
                     color:#74ff8f;
-                    font-size:8px;
+                    font-size:8.5px;
                     margin-right:3px;
                 ">▶</span>
                 ${textHtml}
@@ -7449,7 +7449,7 @@ function buildMobileTrialLineHtml(runner, n) {
                 width:100%;
                 padding:1px 0;
                 color:rgba(255,255,255,0.78);
-                font-size:8px;
+                font-size:8.5px;
                 line-height:1.1;
                 white-space:nowrap;
                 overflow:hidden;
