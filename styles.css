@@ -8779,3 +8779,102 @@ body.race-chart-social .race-chart-stage-card::after {
         top: -4px !important;
     }
 }
+
+/* =========================================================
+   MOBILE - LIGHT POPUPS
+   Race Summary + Race Records
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Restore the original light popup background */
+    .mobile-stats-popup.record-tooltip,
+    .mobile-stats-popup.race-summary-tooltip,
+    .mobile-race-summary-popup {
+        background: #f4edf7 !important;
+        color: #222 !important;
+
+        border: 1px solid rgba(0, 230, 191, 0.45) !important;
+
+        box-shadow:
+            0 18px 40px rgba(0, 0, 0, 0.55) !important;
+    }
+
+
+    /* -----------------------------
+       RACE RECORDS
+       ----------------------------- */
+
+    .mobile-stats-popup.record-tooltip
+    .record-tooltip-title {
+        color: #222 !important;
+        opacity: 1 !important;
+    }
+
+    .mobile-stats-popup.record-tooltip
+    .record-tooltip-row {
+        color: #222 !important;
+        opacity: 1 !important;
+    }
+
+    .mobile-stats-popup.record-tooltip
+    .record-label,
+    .mobile-stats-popup.record-tooltip
+    .record-value,
+    .mobile-stats-popup.record-tooltip
+    .record-horse {
+        color: #222 !important;
+        opacity: 1 !important;
+    }
+
+    .mobile-stats-popup.record-tooltip
+    .record-date {
+        color: #555 !important;
+        opacity: 1 !important;
+    }
+
+
+    /* -----------------------------
+       RACE SUMMARY
+       ----------------------------- */
+
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-title,
+    .mobile-race-summary-popup
+    .race-summary-title {
+        color: #222 !important;
+        opacity: 1 !important;
+    }
+
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-row,
+    .mobile-race-summary-popup
+    .race-summary-row {
+        color: #1f2933 !important;
+        opacity: 1 !important;
+    }
+
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-row span,
+    .mobile-race-summary-popup
+    .race-summary-row span {
+        color: #1f2933 !important;
+        opacity: 1 !important;
+    }
+
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-section-title,
+    .mobile-race-summary-popup
+    .race-summary-section-title {
+        color: #111827 !important;
+        opacity: 1 !important;
+    }
+
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-head,
+    .mobile-race-summary-popup
+    .race-summary-head {
+        color: #26323d !important;
+        opacity: 1 !important;
+    }
+}
