@@ -8265,13 +8265,35 @@ function roiClass(value) {
 }
 
 function positionTooltipRow(label, sts, wins, places, pct, isTotal = false) {
+    const pctNum = parseNumber(pct);
+
+    let positionClass = "";
+
+    if (!isTotal && pctNum > 15) {
+        if (label === "Leader") {
+            positionClass = "position-hot-leader";
+        } else if (label === "B/Lead") {
+            positionClass = "position-hot-blead";
+        } else if (label === "Death") {
+            positionClass = "position-hot-death";
+        }
+    }
+
+    const rowClasses = [
+        isTotal ? "tooltip-total-row" : "",
+        positionClass
+    ].filter(Boolean).join(" ");
+
     return `
-        <tr class="${isTotal ? "tooltip-total-row" : ""}">
-            <td>${escapeHtml(label)}</td>
+        <tr class="${rowClasses}">
+            <td class="position-label">
+                ${positionClass ? `<span class="position-match-dot"></span>` : ""}
+                ${escapeHtml(label)}
+            </td>
             <td>${formatWholeNumber(sts)}</td>
             <td>${formatWholeNumber(wins)}</td>
             <td>${formatWholeNumber(places)}</td>
-            <td>${formatWholeNumber(pct)}%</td>
+            <td class="position-pct">${formatWholeNumber(pct)}%</td>
         </tr>
     `;
 }

@@ -8290,3 +8290,48 @@ body.race-chart-social .race-chart-stage-card::after {
         font-size: 9.5px !important;
     }
 }
+
+/* =========================================================
+   HORSE POSITION POPUP - MATCH TRAFFIC LIGHTS
+   ========================================================= */
+
+.horse-stats-tooltip .position-hot-leader .position-label,
+.horse-stats-tooltip .position-hot-leader .position-pct {
+    color: #4df58b !important;
+    font-weight: 700;
+}
+
+.horse-stats-tooltip .position-hot-blead .position-label,
+.horse-stats-tooltip .position-hot-blead .position-pct {
+    color: #ffd84d !important;
+    font-weight: 700;
+}
+
+.horse-stats-tooltip .position-hot-death .position-label,
+.horse-stats-tooltip .position-hot-death .position-pct {
+    color: #ff5f67 !important;
+    font-weight: 700;
+}
+
+
+/* Small matching dot before position name */
+.horse-stats-tooltip .position-match-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: 1px;
+}
+
+.horse-stats-tooltip .position-hot-leader .position-match-dot {
+    background: #4df58b;
+}
+
+.horse-stats-tooltip .position-hot-blead .position-match-dot {
+    background: #ffd84d;
+}
+
+.horse-stats-tooltip .position-hot-death .position-match-dot {
+    background: #ff5f67;
+}
