@@ -258,9 +258,25 @@ function openMobileStatsPopup(target) {
 
     closeMobileStatsPopup();
 
-    const popup = document.createElement("div");
-    popup.className = "mobile-stats-popup";
-    popup.innerHTML = tooltip.innerHTML;
+    // Clone the REAL tooltip so we retain all its existing styling/classes
+    const popup = tooltip.cloneNode(true);
+
+    popup.classList.add("mobile-stats-popup");
+
+    // Force the cloned tooltip into a proper mobile popup
+    popup.style.setProperty("display", "block", "important");
+    popup.style.setProperty("position", "fixed", "important");
+    popup.style.setProperty("left", "12px", "important");
+    popup.style.setProperty("right", "12px", "important");
+    popup.style.setProperty("top", "50%", "important");
+    popup.style.setProperty("bottom", "auto", "important");
+    popup.style.setProperty("width", "auto", "important");
+    popup.style.setProperty("min-width", "0", "important");
+    popup.style.setProperty("max-width", "none", "important");
+    popup.style.setProperty("transform", "translateY(-50%)", "important");
+    popup.style.setProperty("z-index", "999999", "important");
+    popup.style.setProperty("max-height", "75vh", "important");
+    popup.style.setProperty("overflow-y", "auto", "important");
 
     document.body.appendChild(popup);
 }

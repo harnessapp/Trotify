@@ -8218,3 +8218,18 @@ body.race-chart-social .race-chart-stage-card::after {
         color: var(--accent);
     }
 }
+
+@media (max-width: 700px) {
+
+    /* Touchscreen uses persistent JS popup instead of desktop hover */
+    .horse-hover:hover > .horse-stats-tooltip,
+    .barrier-hover:hover > .barrier-stats-tooltip,
+    .stat-hover:hover > .person-stats-tooltip {
+        display: none !important;
+    }
+
+    /* But cloned persistent popup must remain visible */
+    .mobile-stats-popup {
+        display: block !important;
+    }
+}
