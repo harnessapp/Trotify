@@ -8125,7 +8125,7 @@ body.race-chart-social .race-chart-stage-card::after {
     .runner-mobile-traffic .traffic-dot.filled {
         opacity: 1 !important;
         filter: brightness(1.25) saturate(1.2) !important;
-        transform: scale(1.8) !important;
+        transform: scale(1.0) !important;
     }
 
 }
