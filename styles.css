@@ -8663,3 +8663,118 @@ body.race-chart-social .race-chart-stage-card::after {
         display: block !important;
     }
 }
+
+/* =========================================================
+   MOBILE - RACE SUMMARY / BELL POPUP
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .mobile-stats-popup.race-summary-tooltip {
+        left: 18px !important;
+        right: 18px !important;
+        top: 50% !important;
+
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+
+        transform: translateY(-50%) !important;
+
+        padding: 10px 12px 12px !important;
+
+        box-sizing: border-box !important;
+
+        border-radius: 14px !important;
+
+        font-size: 10px !important;
+
+        max-height: 78vh !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+
+
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-tooltip-title {
+
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+
+        margin: 0 0 8px !important;
+
+        text-align: center !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+
+    .mobile-stats-popup.race-summary-tooltip table {
+        width: 100% !important;
+
+        table-layout: fixed !important;
+
+        font-size: 9px !important;
+
+        border-collapse: collapse !important;
+    }
+
+
+    .mobile-stats-popup.race-summary-tooltip th,
+    .mobile-stats-popup.race-summary-tooltip td {
+
+        padding: 5px 3px !important;
+
+        font-size: 9px !important;
+        line-height: 1.15 !important;
+
+        white-space: nowrap !important;
+
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+
+    /* First column: Lead / B/L / Dth / headings */
+    .mobile-stats-popup.race-summary-tooltip th:first-child,
+    .mobile-stats-popup.race-summary-tooltip td:first-child {
+        width: 25% !important;
+        text-align: left !important;
+    }
+
+
+    /* Stats columns */
+    .mobile-stats-popup.race-summary-tooltip th:nth-child(2),
+    .mobile-stats-popup.race-summary-tooltip td:nth-child(2) {
+        width: 18% !important;
+    }
+
+    .mobile-stats-popup.race-summary-tooltip th:nth-child(3),
+    .mobile-stats-popup.race-summary-tooltip td:nth-child(3) {
+        width: 17% !important;
+    }
+
+    .mobile-stats-popup.race-summary-tooltip th:nth-child(4),
+    .mobile-stats-popup.race-summary-tooltip td:nth-child(4) {
+        width: 17% !important;
+    }
+
+    .mobile-stats-popup.race-summary-tooltip th:nth-child(5),
+    .mobile-stats-popup.race-summary-tooltip td:nth-child(5) {
+        width: 18% !important;
+    }
+
+
+    /* Section headings like VDSG / Venue / All */
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-section-row td {
+
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+
+        font-size: 9.5px !important;
+        font-weight: 900 !important;
+    }
+}
