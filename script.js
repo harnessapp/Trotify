@@ -6202,6 +6202,27 @@ function renderMobileVenueStats(row) {
     `;
 }
 
+function toggleMobileRunnerDetail(el) {
+    if (window.innerWidth > 700) return;
+
+    const row = el.closest(".runner-row");
+    if (!row) return;
+
+    const wasOpen = row.classList.contains("mobile-runner-expanded");
+
+    // Close any other expanded runner
+    document
+        .querySelectorAll(".runner-row.mobile-runner-expanded")
+        .forEach(otherRow => {
+            otherRow.classList.remove("mobile-runner-expanded");
+        });
+
+    // If this one wasn't already open, open it
+    if (!wasOpen) {
+        row.classList.add("mobile-runner-expanded");
+    }
+}
+
 function renderRaceDetail(venue, state, dateValue, raceNo) {
     const raceRows = allRows.filter(row => {
         const rowVenue = clean(row.Venue);
