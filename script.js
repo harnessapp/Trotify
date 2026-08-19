@@ -6985,6 +6985,15 @@ function formatVenueStatRoi(value) {
 function renderPersonStatsTooltip(row, type) {
     const prefix = type === "trainer" ? "Tr" : "Dr";
 
+    const personName = type === "trainer"
+        ? clean(row.Trainer || row.TRAINER || "")
+        : clean(row.Driver || row.DRIVER || "");
+
+    const title = type === "trainer"
+        ? `Trainer: ${personName}`
+        : `Driver: ${personName}`;
+
+
     const rows = [
         personTooltipRow("Month", row[`${prefix} 30 Sts`], row[`${prefix} 30 Win`], row[`${prefix} 30 Pla`], row[`${prefix} 30 Win %`], row[`${prefix} 30 Pla %`], row[`${prefix} 30 ROI %`]),
         personTooltipRow("Quarter", row[`${prefix} 90 Sts`], row[`${prefix} 90 Win`], row[`${prefix} 90 Pla`], row[`${prefix} 90 Win %`], row[`${prefix} 90 Pla %`], row[`${prefix} 90 ROI %`]),
@@ -6996,6 +7005,11 @@ function renderPersonStatsTooltip(row, type) {
 
     return `
         <div class="person-stats-tooltip">
+
+            <div class="barrier-tooltip-title">
+                ${escapeHtml(title)}
+            </div>
+
             <table>
                 <thead>
                     <tr>
@@ -8099,6 +8113,11 @@ function renderPositionStatsTooltip(row) {
 
     return `
         <div class="horse-stats-tooltip">
+
+            <div class="barrier-tooltip-title">
+                ${escapeHtml(clean(row.Horse || row.HORSE || ""))}
+            </div>
+
             <table>
                 <thead>
                     <tr>
