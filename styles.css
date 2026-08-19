@@ -9038,10 +9038,3 @@ body.race-chart-social .race-chart-stage-card::after {
             rgba(255, 255, 255, 0.14) !important;
     }
 }
-
-/* Hide Size button on mobile only */
-@media (max-width: 700px) {
-    .fieldsize-click {
-        display: none !important;
-    }
-}

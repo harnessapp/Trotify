@@ -6385,13 +6385,15 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                         </span>
                     ` : ""}
 
-                    <span class="fieldsize-click" onclick="event.stopPropagation()">
-                        <button type="button" onclick="openSizePopup(event, '${escapeHtml(venue)}', '${escapeHtml(state)}', '${escapeHtml(dateValue)}', '${escapeHtml(raceNo)}')">
-                            Size
-                        </button>
+                    ${window.innerWidth > 700 ? `
+                        <span class="fieldsize-click" onclick="event.stopPropagation()">
+                            <button type="button" onclick="openSizePopup(event, '${escapeHtml(venue)}', '${escapeHtml(state)}', '${escapeHtml(dateValue)}', '${escapeHtml(raceNo)}')">
+                                Size
+                            </button>
 
-                        ${sizePopupOpen ? renderFieldSizeTooltip(first, sortedRows, venue, state, dateValue, raceNo) : ""}
-                    </span>
+                            ${sizePopupOpen ? renderFieldSizeTooltip(first, sortedRows, venue, state, dateValue, raceNo) : ""}
+                        </span>
+                    ` : ""}
 
                     <span class="toggle-divider"></span>
 
