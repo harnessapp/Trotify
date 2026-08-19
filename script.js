@@ -7662,7 +7662,12 @@ function renderRunnerSpeedMapMobile(row) {
 
     if (!hasAny) {
         return `
-            <div class="mobile-speed-map-empty">
+            <div style="
+                color:rgba(255,255,255,0.38);
+                font-size:9px;
+                font-style:italic;
+                padding:8px 0;
+            ">
                 No map data
             </div>
         `;
@@ -7670,31 +7675,56 @@ function renderRunnerSpeedMapMobile(row) {
 
     return `
         <div
-            class="mobile-speed-map"
             onclick="event.stopPropagation(); openMobileSpeedMapPopup(this)"
             data-lead="${leadPct}"
             data-bl="${blPct}"
             data-death="${deathPct}"
+            style="
+                width:100%;
+                min-width:0;
+                padding:12px 0;
+                cursor:pointer;
+                touch-action:manipulation;
+            "
         >
-            <div class="mobile-speed-map-track">
+            <div style="
+                position:relative;
+                width:100%;
+                height:8px;
+                border-radius:999px;
+                background:rgba(255,255,255,0.14);
+                overflow:visible;
+            ">
 
-                <div
-                    class="mobile-speed-map-lead-fill"
-                    style="width: ${leadWidth}%;">
-                </div>
+                <div style="
+                    width:${leadWidth}%;
+                    height:100%;
+                    border-radius:999px;
+                    background:rgba(120,190,90,0.95);
+                "></div>
 
                 ${blPct > 0 ? `
-                    <div
-                        class="mobile-speed-map-dot mobile-speed-map-dot-bl"
-                        style="left: ${blLeft}%;">
-                    </div>
+                    <div style="
+                        position:absolute;
+                        left:${blLeft}%;
+                        top:50%;
+                        width:2px;
+                        height:16px;
+                        transform:translate(-50%,-50%);
+                        background:#d8b14a;
+                    "></div>
                 ` : ""}
 
                 ${deathPct > 0 ? `
-                    <div
-                        class="mobile-speed-map-dot mobile-speed-map-dot-death"
-                        style="left: ${deathLeft}%;">
-                    </div>
+                    <div style="
+                        position:absolute;
+                        left:${deathLeft}%;
+                        top:50%;
+                        width:2px;
+                        height:16px;
+                        transform:translate(-50%,-50%);
+                        background:#c9605a;
+                    "></div>
                 ` : ""}
 
             </div>
