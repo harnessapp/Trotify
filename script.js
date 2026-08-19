@@ -6478,7 +6478,7 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
 
                             <div
                                 class="runner-number saddlecloth-${escapeHtml(horseNo)} mobile-runner-toggle"
-                                onclick="event.stopPropagation(); toggleMobileRunnerDetail('${escapeHtml(runnerKey)}')"
+                                onclick="event.stopPropagation(); toggleMobileRunnerDetail(this)"
                             >
                                 ${escapeHtml(horseNo)}
                             </div>
