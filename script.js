@@ -8269,7 +8269,7 @@ function positionTooltipRow(label, sts, wins, places, pct, isTotal = false) {
 
     let positionClass = "";
 
-    if (!isTotal && pctNum > 15) {
+    if (!isTotal && pctNum >= 14.5) {
         if (label === "Leader") {
             positionClass = "position-hot-leader";
         } else if (label === "B/Lead") {
@@ -8319,9 +8319,9 @@ function returnToMeeting(venue, state, dateValue) {
 function renderTrafficLights(leadPct, behindLeadPct, deathPct) {
     return `
         <div class="traffic-lights">
-            <span class="traffic-dot green ${leadPct > 15 ? "filled" : ""}" title="Lead ${formatOneDecimal(leadPct)}%"></span>
-            <span class="traffic-dot amber ${behindLeadPct > 15 ? "filled" : ""}" title="Behind Lead ${formatOneDecimal(behindLeadPct)}%"></span>
-            <span class="traffic-dot red ${deathPct > 15 ? "filled" : ""}" title="Death Seat ${formatOneDecimal(deathPct)}%"></span>
+            <span class="traffic-dot green ${leadPct >= 14.5 ? "filled" : ""}" title="Lead ${formatOneDecimal(leadPct)}%"></span>
+            <span class="traffic-dot amber ${behindLeadPct >= 14.5 ? "filled" : ""}" title="Behind Lead ${formatOneDecimal(behindLeadPct)}%"></span>
+            <span class="traffic-dot red ${deathPct >= 14.5 ? "filled" : ""}" title="Death Seat ${formatOneDecimal(deathPct)}%"></span>
         </div>
     `;
 }
