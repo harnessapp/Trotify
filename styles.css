@@ -8233,3 +8233,60 @@ body.race-chart-social .race-chart-stage-card::after {
         display: block !important;
     }
 }
+
+/* =========================================================
+   MOBILE RUNNER - ODDS + PEOPLE WIDTH TWEAK
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Odds same subdued grey as trainer / driver */
+    .runner-mobile-price {
+        color: var(--muted) !important;
+    }
+
+    /* Give trainer + driver a little more room */
+    .runner-mobile-bottom {
+        column-gap: 3px !important;
+    }
+
+    /* Slightly smaller odds so they consume less width */
+    .runner-mobile-price {
+        font-size: 9.5px !important;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .runner-mobile-people {
+        display: flex !important;
+        align-items: center;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+
+    /* Trainer can shrink when necessary */
+    .runner-mobile-trainer {
+        flex: 0 1 auto;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Always preserve some space for the driver */
+    .runner-mobile-driver {
+        flex: 0 1 auto;
+        min-width: 45px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Keep odds understated */
+    .runner-mobile-price {
+        color: var(--muted) !important;
+        font-size: 9.5px !important;
+    }
+}

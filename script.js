@@ -6465,16 +6465,20 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                                         ` : ""}
 
                                         ${trainer ? `
-                                            • <span class="stat-hover">
-                                                ${escapeHtml(trainer)}
-                                                ${renderPersonStatsTooltip(row, "trainer")}
+                                            <span class="runner-mobile-trainer">
+                                                • <span class="stat-hover">
+                                                    ${escapeHtml(trainer)}
+                                                    ${renderPersonStatsTooltip(row, "trainer")}
+                                                </span>
                                             </span>
                                         ` : ""}
 
                                         ${driver ? `
-                                            • <span class="stat-hover">
-                                                ${escapeHtml(driver)}
-                                                ${renderPersonStatsTooltip(row, "driver")}
+                                            <span class="runner-mobile-driver">
+                                                • <span class="stat-hover">
+                                                    ${escapeHtml(driver)}
+                                                    ${renderPersonStatsTooltip(row, "driver")}
+                                                </span>
                                             </span>
                                         ` : ""}
 
