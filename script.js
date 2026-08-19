@@ -253,7 +253,7 @@ function closeMobileStatsPopup() {
 function openMobileStatsPopup(target) {
 
     const tooltip = target.querySelector(
-        ".horse-stats-tooltip, .barrier-stats-tooltip, .person-stats-tooltip, .record-tooltip"
+        ".horse-stats-tooltip, .barrier-stats-tooltip, .person-stats-tooltip, .record-tooltip, .race-summary-tooltip"
     );
 
     if (!tooltip) return;
@@ -289,7 +289,7 @@ document.addEventListener("click", function (e) {
     if (window.innerWidth > 700) return;
 
     const target = e.target.closest(
-        ".horse-hover, .barrier-hover, .stat-hover, .record-hover"
+        ".horse-hover, .barrier-hover, .stat-hover, .record-hover, .mobile-race-summary"
     );
 
     /* Horse / barrier / trainer / driver */
@@ -6303,11 +6303,22 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
 
 
                 <div class="race-meta-line">
-                    <div class="race-meta-main">
-                        ${distance ? `${escapeHtml(distance)}m` : ""}
-                        ${start ? ` • ${escapeHtml(start)}` : ""}
-                        ${gait ? ` • ${escapeHtml(gait)}` : ""}
-                    </div>
+                    ${window.innerWidth <= 700 ? `
+                        <div class="race-meta-main mobile-race-summary">
+                            ${venue ? `${escapeHtml(venue)} • ` : ""}
+                            ${distance ? `${escapeHtml(distance)}m` : ""}
+                            ${start ? ` • ${escapeHtml(start)}` : ""}
+                            ${gait ? ` • ${escapeHtml(gait)}` : ""}
+
+                            ${renderRaceSummaryTooltip(first)}
+                        </div>
+                    ` : `
+                        <div class="race-meta-main">
+                            ${distance ? `${escapeHtml(distance)}m` : ""}
+                            ${start ? ` • ${escapeHtml(start)}` : ""}
+                            ${gait ? ` • ${escapeHtml(gait)}` : ""}
+                        </div>
+                    `}
 
                     ${bmParts.length ? `
                         <div class="race-meta-bm">
@@ -6335,10 +6346,12 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                         `).join("")}
                     ` : ""}
 
-                    <span class="race-summary-hover">
-                        <button type="button">Bell</button>
-                        ${renderRaceSummaryTooltip(first)}
-                    </span>
+                    ${window.innerWidth > 700 ? `
+                        <span class="race-summary-hover">
+                            <button type="button">Bell</button>
+                            ${renderRaceSummaryTooltip(first)}
+                        </span>
+                    ` : ""}
 
                     <span class="fieldsize-click" onclick="event.stopPropagation()">
                         <button type="button" onclick="openSizePopup(event, '${escapeHtml(venue)}', '${escapeHtml(state)}', '${escapeHtml(dateValue)}', '${escapeHtml(raceNo)}')">

@@ -8647,3 +8647,19 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 }
 
+@media (max-width: 700px) {
+
+    .mobile-race-summary {
+        cursor: pointer;
+        touch-action: manipulation;
+    }
+
+    /* Tooltip stays hidden until cloned into mobile popup */
+    .mobile-race-summary > .race-summary-tooltip {
+        display: none !important;
+    }
+
+    .mobile-stats-popup.race-summary-tooltip {
+        display: block !important;
+    }
+}
