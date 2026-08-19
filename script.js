@@ -6447,8 +6447,7 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                         ` : ""}
 
                         <div
-                            class="runner-row ${isScratched ? "scratched" : ""} ${fadeScratchedOnly ? "scratched-no-line" : ""} ${isMobileExpanded ? "mobile-runner-expanded" : ""}"
-                            data-runner-key="${escapeHtml(runnerKey)}"
+                            class="runner-row ${isScratched ? "scratched" : ""} ${fadeScratchedOnly ? "scratched-no-line" : ""}"
                         >
 
                             <div
