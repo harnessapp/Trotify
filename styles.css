@@ -8343,80 +8343,111 @@ body.race-chart-social .race-chart-stage-card::after {
 @media (max-width: 700px) {
 
     .record-tooltip {
-        width: calc(100vw - 28px) !important;
+        position: fixed !important;
+
+        left: 18px !important;
+        right: 18px !important;
+        top: 50% !important;
+        bottom: auto !important;
+
+        width: auto !important;
         min-width: 0 !important;
-        max-width: calc(100vw - 28px) !important;
+        max-width: none !important;
 
-        padding: 14px 14px 12px !important;
+        transform: translateY(-50%) !important;
+
+        padding: 12px 14px !important;
+
+        border-radius: 14px !important;
+
+        font-size: 11px !important;
+
+        z-index: 999999 !important;
+
         box-sizing: border-box !important;
-
-        left: 14px !important;
-        right: 14px !important;
-
-        font-size: 12px !important;
     }
+
 
     .record-tooltip-title {
         display: block !important;
-        width: 100% !important;
-        margin-bottom: 10px !important;
 
-        font-size: 14px !important;
-        line-height: 1.25 !important;
+        width: 100% !important;
+
+        margin: 0 0 8px !important;
+
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+
+        text-align: center !important;
 
         white-space: nowrap !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
     }
+
 
     .record-tooltip-row {
         display: grid !important;
 
         grid-template-columns:
-            28px
-            54px
+            26px
+            48px
             minmax(0, 1fr)
-            68px !important;
+            60px !important;
 
-        column-gap: 6px !important;
+        gap: 5px !important;
 
-        min-height: 34px !important;
+        min-height: 0 !important;
+
         padding: 5px 0 !important;
 
         align-items: center !important;
-        box-sizing: border-box !important;
     }
+
 
     .record-label {
-        width: auto !important;
-        min-width: 0 !important;
-        font-size: 11px !important;
-    }
+        font-size: 10px !important;
+        font-weight: 900 !important;
 
-    .record-value {
-        width: auto !important;
-        min-width: 0 !important;
-        font-size: 11px !important;
+        text-align: right !important;
+        padding-right: 2px !important;
+
         white-space: nowrap !important;
     }
 
+
+    .record-value {
+        font-size: 10px !important;
+        font-weight: 900 !important;
+
+        text-align: right !important;
+        padding-right: 2px !important;
+
+        white-space: nowrap !important;
+    }
+
+
     .record-horse {
-        width: auto !important;
         min-width: 0 !important;
 
-        font-size: 11px !important;
+        font-size: 10.5px !important;
+        font-weight: 400 !important;
 
         white-space: nowrap !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
     }
 
+
     .record-date {
-        width: auto !important;
         min-width: 0 !important;
 
-        font-size: 10px !important;
+        font-size: 9px !important;
+
         text-align: right !important;
+
         white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
 }
