@@ -7318,16 +7318,14 @@ function buildMobileTrialLineHtml(runner, n) {
     const venueText =
         venue ? venue.substring(0, 4).toUpperCase() : "";
 
-    const dateText =
-        formatTrialDate(date);
+    const dateText = formatTrialDate(date);
 
     const distText =
         distRaw
             ? `${cleanIntish(distRaw).replace(/m$/i, "")}m`
             : "";
 
-    const rateText =
-        formatTrialRate(rateRaw);
+    const rateText = formatTrialRate(rateRaw);
 
     const halfText =
         halfRaw
@@ -7346,13 +7344,11 @@ function buildMobileTrialLineHtml(runner, n) {
         marginText = ` (${Math.round(marginNumber)}m)`;
     }
 
-    const placingText = [
-        pos,
-        runners ? `/${runners}` : ""
-    ].join("");
+    const placingText =
+        `${pos}${runners ? `/${runners}` : ""}${marginText}`;
 
     const mainText = [
-        `${placingText}${marginText}`,
+        placingText,
         venueText,
         dateText
     ]
@@ -7375,30 +7371,42 @@ function buildMobileTrialLineHtml(runner, n) {
         sinceVal > 0;
 
     const freshBadge = isPostRaceTrial
-        ? `<span class="mobile-trial-fresh">SINCE RACE</span>`
+        ? `
+            <span style="
+                display:inline-block;
+                margin-right:3px;
+                padding:1px 3px;
+                border-radius:3px;
+                background:#63ffb0;
+                color:#04140d;
+                font-size:6px;
+                line-height:1;
+                font-weight:900;
+                vertical-align:middle;
+            ">
+                SINCE RACE
+            </span>
+        `
         : "";
 
-    const visionClean =
-        vision.toUpperCase();
+    const visionClean = vision.toUpperCase();
 
     const hasVision =
         vision &&
         visionClean !== "_NOVISION";
 
-    const innerHtml = `
-        <span class="mobile-trial-play">
-            ${hasVision ? "▶" : ""}
-        </span>
-
-        ${freshBadge}
-
-        <span class="mobile-trial-text">
-            <strong>
-                ${escapeHtml(mainText)}
-            </strong>
-
+    const textHtml = `
+        <span style="
+            color:rgba(255,255,255,0.78);
+            font-size:8px;
+            line-height:1.1;
+            font-weight:700;
+            white-space:nowrap;
+        ">
+            ${freshBadge}
+            ${escapeHtml(mainText)}
             ${timingText
-                ? `<span> · ${escapeHtml(timingText)}</span>`
+                ? ` · ${escapeHtml(timingText)}`
                 : ""
             }
         </span>
@@ -7407,20 +7415,48 @@ function buildMobileTrialLineHtml(runner, n) {
     if (hasVision) {
         return `
             <a
-                class="mobile-trial-line has-vision"
                 href="${escapeHtml(vision)}"
                 target="_blank"
                 rel="noopener noreferrer"
                 onclick="event.stopPropagation()"
+                style="
+                    display:block;
+                    width:100%;
+                    padding:1px 0;
+                    color:rgba(255,255,255,0.78);
+                    text-decoration:none;
+                    font-size:8px;
+                    line-height:1.1;
+                    white-space:nowrap;
+                    overflow:hidden;
+                    text-overflow:ellipsis;
+                "
             >
-                ${innerHtml}
+                <span style="
+                    color:#74ff8f;
+                    font-size:8px;
+                    margin-right:3px;
+                ">▶</span>
+                ${textHtml}
             </a>
         `;
     }
 
     return `
-        <div class="mobile-trial-line">
-            ${innerHtml}
+        <div
+            style="
+                display:block;
+                width:100%;
+                padding:1px 0;
+                color:rgba(255,255,255,0.78);
+                font-size:8px;
+                line-height:1.1;
+                white-space:nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
+            "
+        >
+            ${textHtml}
         </div>
     `;
 }
