@@ -260,24 +260,56 @@ function openMobileStatsPopup(target) {
 
     closeMobileStatsPopup();
 
-    // Clone the REAL tooltip so we retain all its existing styling/classes
     const popup = tooltip.cloneNode(true);
 
     popup.classList.add("mobile-stats-popup");
 
-    // Force the cloned tooltip into a proper mobile popup
+    const isRaceSummary =
+        popup.classList.contains("race-summary-tooltip");
+
+    if (isRaceSummary) {
+        popup.classList.add("mobile-race-summary-popup");
+    }
+
     popup.style.setProperty("display", "block", "important");
     popup.style.setProperty("position", "fixed", "important");
-    popup.style.setProperty("left", "12px", "important");
-    popup.style.setProperty("right", "12px", "important");
+
+    /*
+       Race summary gets its own compact mobile geometry.
+       Other existing popups retain their current behaviour.
+    */
+    if (isRaceSummary) {
+
+        popup.style.setProperty("left", "20px", "important");
+        popup.style.setProperty("right", "20px", "important");
+
+        popup.style.setProperty("padding", "10px", "important");
+
+        popup.style.setProperty("max-height", "78vh", "important");
+        popup.style.setProperty("overflow-x", "hidden", "important");
+
+    } else {
+
+        popup.style.setProperty("left", "12px", "important");
+        popup.style.setProperty("right", "12px", "important");
+
+        popup.style.setProperty("max-height", "75vh", "important");
+    }
+
     popup.style.setProperty("top", "50%", "important");
     popup.style.setProperty("bottom", "auto", "important");
+
     popup.style.setProperty("width", "auto", "important");
     popup.style.setProperty("min-width", "0", "important");
     popup.style.setProperty("max-width", "none", "important");
-    popup.style.setProperty("transform", "translateY(-50%)", "important");
+
+    popup.style.setProperty(
+        "transform",
+        "translateY(-50%)",
+        "important"
+    );
+
     popup.style.setProperty("z-index", "999999", "important");
-    popup.style.setProperty("max-height", "75vh", "important");
     popup.style.setProperty("overflow-y", "auto", "important");
 
     document.body.appendChild(popup);

@@ -8665,40 +8665,32 @@ body.race-chart-social .race-chart-stage-card::after {
 }
 
 /* =========================================================
-   MOBILE - RACE SUMMARY / BELL POPUP
+   MOBILE - RACE SUMMARY POPUP
    ========================================================= */
 
 @media (max-width: 700px) {
 
-    .mobile-stats-popup.race-summary-tooltip {
-        left: 18px !important;
-        right: 18px !important;
-        top: 50% !important;
+    .mobile-race-summary-popup {
+        background: #f4edf7 !important;
+        color: #222 !important;
 
-        width: auto !important;
-        min-width: 0 !important;
-        max-width: none !important;
-
-        transform: translateY(-50%) !important;
-
-        padding: 10px 10px 12px !important;
-
-        box-sizing: border-box !important;
+        border: 1px solid rgba(0, 230, 191, 0.45) !important;
         border-radius: 14px !important;
 
-        max-height: 78vh !important;
-        overflow-y: auto !important;
-        overflow-x: hidden !important;
+        box-sizing: border-box !important;
     }
 
 
-    .mobile-stats-popup.race-summary-tooltip
-    .race-summary-title {
+    .mobile-race-summary-popup .race-summary-title {
+        color: #222 !important;
 
         font-size: 12px !important;
-        line-height: 1.2 !important;
+        font-weight: 900 !important;
+        line-height: 1.15 !important;
 
-        margin-bottom: 8px !important;
+        margin: 0 0 7px !important;
+
+        text-align: center !important;
 
         white-space: nowrap !important;
         overflow: hidden !important;
@@ -8706,81 +8698,84 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 
-    .mobile-stats-popup.race-summary-tooltip
-    .race-summary-table {
-
+    .mobile-race-summary-popup .race-summary-table {
         width: 100% !important;
-        border-radius: 10px !important;
+
+        border-radius: 9px !important;
+
+        overflow: hidden !important;
     }
 
 
-    .mobile-stats-popup.race-summary-tooltip
-    .race-summary-head,
+    .mobile-race-summary-popup .race-summary-head,
+    .mobile-race-summary-popup .race-summary-row {
 
-    .mobile-stats-popup.race-summary-tooltip
-    .race-summary-row {
+        display: grid !important;
 
         grid-template-columns:
-            48px
-            1fr
-            1fr
-            1fr
-            1fr
-            34px !important;
+            42px
+            minmax(0, 1fr)
+            minmax(0, 1fr)
+            minmax(0, 1fr)
+            minmax(0, 1fr)
+            31px !important;
+
+        gap: 0 !important;
 
         width: 100% !important;
+        min-width: 0 !important;
 
         box-sizing: border-box !important;
     }
 
 
-    .mobile-stats-popup.race-summary-tooltip
-    .race-summary-head {
-
-        padding: 6px 5px !important;
+    .mobile-race-summary-popup .race-summary-head {
+        padding: 5px 4px !important;
 
         font-size: 9px !important;
         line-height: 1 !important;
     }
 
 
-    .mobile-stats-popup.race-summary-tooltip
-    .race-summary-row {
-
-        padding: 6px 5px !important;
+    .mobile-race-summary-popup .race-summary-row {
+        padding: 5px 4px !important;
 
         font-size: 9px !important;
-        line-height: 1.1 !important;
+        line-height: 1 !important;
     }
 
 
-    .mobile-stats-popup.race-summary-tooltip
-    .race-summary-section-title {
+    .mobile-race-summary-popup .race-summary-head span,
+    .mobile-race-summary-popup .race-summary-row span {
 
-        padding: 6px 7px 5px !important;
-
-        font-size: 9px !important;
-        line-height: 1.1 !important;
+        min-width: 0 !important;
+        font-size: inherit !important;
     }
 
 
-    .mobile-stats-popup.race-summary-tooltip
-    .summary-diff {
+    .mobile-race-summary-popup .race-summary-section-title {
+        padding: 5px 6px !important;
 
-        min-width: 27px !important;
-        width: 27px !important;
-        height: 27px !important;
+        color: #222 !important;
 
         font-size: 9px !important;
+        line-height: 1 !important;
     }
 
 
-    .mobile-stats-popup.race-summary-tooltip
-    .summary-diff em {
+    .mobile-race-summary-popup .summary-diff {
+        min-width: 23px !important;
+        width: 23px !important;
+        height: 23px !important;
 
         font-size: 8px !important;
+    }
+
+
+    .mobile-race-summary-popup .summary-diff em {
+        font-size: 7px !important;
 
         right: -2px !important;
-        top: -5px !important;
+        top: -4px !important;
     }
 }
