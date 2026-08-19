@@ -8647,9 +8647,3 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 }
 
-/* Hide Venue Stats controls on mobile only */
-@media (max-width: 700px) {
-    .venue-stat-mobile-hide {
-        display: none !important;
-    }
-}
