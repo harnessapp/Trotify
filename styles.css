@@ -8524,3 +8524,125 @@ body.race-chart-social .race-chart-stage-card::after {
         display: block !important;
     }
 }
+
+/* =========================================================
+   MOBILE RUNNER - SADDLECLOTH EXPAND DETAIL
+   ========================================================= */
+
+.mobile-runner-detail {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    /* Saddlecloth becomes the expand/collapse control */
+    .mobile-runner-toggle {
+        cursor: pointer;
+        touch-action: manipulation;
+    }
+
+
+    /* Expanded card needs room for detail below */
+    .runner-row.mobile-runner-expanded {
+        grid-template-columns: 42px minmax(0, 1fr) !important;
+        align-items: start !important;
+        padding-top: 8px !important;
+        padding-bottom: 10px !important;
+
+        border-color: rgba(0, 230, 191, 0.32) !important;
+        background: rgba(18, 32, 44, 0.94) !important;
+    }
+
+
+    .runner-row.mobile-runner-expanded .runner-number {
+        align-self: start !important;
+    }
+
+
+    /* Show extra content only for selected runner */
+    .runner-row.mobile-runner-expanded .mobile-runner-detail {
+        display: block;
+    }
+
+
+    .mobile-runner-detail {
+        grid-column: 1 / -1;
+
+        margin-top: 7px;
+        padding-top: 8px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+
+    /* Commentary */
+    .mobile-runner-comment {
+        color: rgba(255, 255, 255, 0.78);
+
+        font-size: 11px;
+        line-height: 1.45;
+        font-style: italic;
+
+        white-space: normal;
+
+        margin-bottom: 10px;
+    }
+
+
+    /* Venue stats heading */
+    .mobile-runner-detail-heading {
+        color: var(--accent);
+
+        font-size: 8px;
+        font-weight: 950;
+        letter-spacing: 1.3px;
+
+        margin-bottom: 5px;
+    }
+
+
+    /* Horse / Trainer / Driver rows */
+    .mobile-runner-venue-stats {
+        display: grid;
+        gap: 3px;
+    }
+
+
+    .mobile-runner-venue-stat {
+        display: grid;
+
+        grid-template-columns:
+            54px
+            minmax(0, 1fr)
+            auto;
+
+        gap: 7px;
+        align-items: center;
+
+        padding: 3px 0;
+
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+
+    .mobile-runner-venue-label {
+        color: var(--muted);
+        font-weight: 850;
+    }
+
+
+    .mobile-runner-venue-record {
+        color: var(--text);
+        font-weight: 850;
+    }
+
+
+    .mobile-runner-venue-roi {
+        color: var(--muted);
+        font-weight: 850;
+
+        text-align: right;
+        white-space: nowrap;
+    }
+}

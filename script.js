@@ -49,6 +49,8 @@ let raceMediaRows = [];
 
 let selectedTippingTipster = null;
 
+
+
 const RACE_CHART_URL_PARAMS =
     new URLSearchParams(window.location.search);
 
@@ -181,6 +183,7 @@ let selectedGoodLeaderState = "ALL";
 let selectedModelTipState = "ALL";
 
 let selectedVenueStatMode = "off";
+let expandedMobileRunnerKey = null;
 let fieldSizeStatsRows = [];
 let selectedSizePosition = "LEAD";
 let sizePopupOpen = false;
@@ -6132,6 +6135,73 @@ function getStandMetresFromBarrier(barrier) {
     return match[1];
 }
 
+function toggleMobileRunnerDetail(runnerKey) {
+    if (window.innerWidth > 700) return;
+
+    if (expandedMobileRunnerKey === runnerKey) {
+        expandedMobileRunnerKey = null;
+    } else {
+        expandedMobileRunnerKey = runnerKey;
+    }
+
+    document.querySelectorAll(".runner-row").forEach(row => {
+        row.classList.toggle(
+            "mobile-runner-expanded",
+            row.dataset.runnerKey === expandedMobileRunnerKey
+        );
+    });
+}
+
+
+function renderMobileVenueStats(row) {
+
+    function statLine(label, prefix) {
+        const starts = formatWholeNumber(row[`${prefix} Sts`] || "");
+        const wins = formatWholeNumber(row[`${prefix} W`] || "");
+        const places = formatWholeNumber(row[`${prefix} P`] || "");
+        const roi = formatVenueStatRoi(row[`${prefix} ROI %`] || "");
+
+        if (!starts && !wins && !places && !roi) {
+            return "";
+        }
+
+        return `
+            <div class="mobile-runner-venue-stat">
+                <span class="mobile-runner-venue-label">
+                    ${escapeHtml(label)}
+                </span>
+
+                <span class="mobile-runner-venue-record">
+                    ${escapeHtml(starts || "0")}:
+                    ${escapeHtml(wins || "0")}-${escapeHtml(places || "0")}
+                </span>
+
+                <span class="mobile-runner-venue-roi">
+                    ${escapeHtml(roi)}
+                </span>
+            </div>
+        `;
+    }
+
+    const rows = [
+        statLine("Horse", "Venue Horse"),
+        statLine("Trainer", "Venue Trainer"),
+        statLine("Driver", "Venue Driver")
+    ].filter(Boolean);
+
+    if (!rows.length) return "";
+
+    return `
+        <div class="mobile-runner-venue-stats">
+            <div class="mobile-runner-detail-heading">
+                VENUE STATS
+            </div>
+
+            ${rows.join("")}
+        </div>
+    `;
+}
+
 function renderRaceDetail(venue, state, dateValue, raceNo) {
     const raceRows = allRows.filter(row => {
         const rowVenue = clean(row.Venue);
@@ -6309,6 +6379,11 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                     const barrier = clean(row.Barrier || row.BARRIER || "");
                     const trainer = clean(row.Trainer || row.TRAINER || "");
                     const driver = clean(row.Driver || row.DRIVER || "");
+                    const runnerKey = clean(
+                        row.RunnerAnchor ||
+                        row["RunnerAnchor"] ||
+                        `${raceAnchorFull}_${horse}`
+                    );
                     const fairOdds = formatNearestOdds(row["Fair Odds"] || row.FairOdds || row["FairOdds"] || "");
                     const leadPct = parseNumber(row["Ld %"] || row["Ld%"] || row["Lead %"] || "");
                     const behindLeadPct = parseNumber(row["BL %"] || row["BL%"] || row["Behind Lead %"] || "");
@@ -6349,6 +6424,8 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
 
 
                     const fullComment = buildRunnerComment(row, raceRows);
+                    const isMobileExpanded =
+                        expandedMobileRunnerKey === runnerKey;
 
                     const previewComment = fullComment;
 
@@ -6369,9 +6446,15 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                             </div>
                         ` : ""}
 
-                        <div class="runner-row ${isScratched ? "scratched" : ""} ${fadeScratchedOnly ? "scratched-no-line" : ""}">
+                        <div
+                            class="runner-row ${isScratched ? "scratched" : ""} ${fadeScratchedOnly ? "scratched-no-line" : ""} ${isMobileExpanded ? "mobile-runner-expanded" : ""}"
+                            data-runner-key="${escapeHtml(runnerKey)}"
+                        >
 
-                            <div class="runner-number saddlecloth-${escapeHtml(horseNo)}">
+                            <div
+                                class="runner-number saddlecloth-${escapeHtml(horseNo)} mobile-runner-toggle"
+                                onclick="event.stopPropagation(); toggleMobileRunnerDetail('${escapeHtml(runnerKey)}')"
+                            >
                                 ${escapeHtml(horseNo)}
                             </div>
 
@@ -6491,6 +6574,20 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                                     ` : ""}
 
                                 </div>
+
+                                ${!isScratched ? `
+                                    <div class="mobile-runner-detail">
+
+                                        ${fullComment ? `
+                                            <div class="mobile-runner-comment">
+                                                ${escapeHtml(fullComment)}
+                                            </div>
+                                        ` : ""}
+
+                                        ${renderMobileVenueStats(row)}
+
+                                    </div>
+                                ` : ""}
 
                             </div>
 
