@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 });
 
-document.addEventListener("click", function (e) {
+function handleMobileRunnerTooltip(e) {
 
     if (window.innerWidth > 700) return;
 
@@ -252,24 +252,42 @@ document.addEventListener("click", function (e) {
         ".horse-hover, .barrier-hover, .stat-hover"
     );
 
-    // Close any other open tooltip
+    // Tap somewhere else = close any open tooltip
+    if (!target) {
+        document.querySelectorAll(
+            ".horse-hover.mobile-open, .barrier-hover.mobile-open, .stat-hover.mobile-open"
+        ).forEach(el => {
+            el.classList.remove("mobile-open");
+        });
+
+        return;
+    }
+
+    // Stop other runner/race click behaviour
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+
+    const wasOpen = target.classList.contains("mobile-open");
+
+    // Close everything
     document.querySelectorAll(
         ".horse-hover.mobile-open, .barrier-hover.mobile-open, .stat-hover.mobile-open"
     ).forEach(el => {
-        if (el !== target) {
-            el.classList.remove("mobile-open");
-        }
+        el.classList.remove("mobile-open");
     });
 
-    // Tap outside = just close everything
-    if (!target) return;
+    // Open tapped tooltip, unless it was already open
+    if (!wasOpen) {
+        target.classList.add("mobile-open");
+    }
+}
 
-    e.preventDefault();
-    e.stopPropagation();
-
-    // Tap same one again = close it
-    target.classList.toggle("mobile-open");
-});
+document.addEventListener(
+    "pointerup",
+    handleMobileRunnerTooltip,
+    true
+);
 
 async function loadUpcomingFields() {
     try {
