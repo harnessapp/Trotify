@@ -8335,3 +8335,88 @@ body.race-chart-social .race-chart-stage-card::after {
 .horse-stats-tooltip .position-hot-death .position-match-dot {
     background: #ff5f67;
 }
+
+/* =========================================================
+   MOBILE - RACE RECORD TOOLTIP
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .record-tooltip {
+        width: calc(100vw - 28px) !important;
+        min-width: 0 !important;
+        max-width: calc(100vw - 28px) !important;
+
+        padding: 14px 14px 12px !important;
+        box-sizing: border-box !important;
+
+        left: 14px !important;
+        right: 14px !important;
+
+        font-size: 12px !important;
+    }
+
+    .record-tooltip-title {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+
+        font-size: 14px !important;
+        line-height: 1.25 !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    .record-tooltip-row {
+        display: grid !important;
+
+        grid-template-columns:
+            28px
+            54px
+            minmax(0, 1fr)
+            68px !important;
+
+        column-gap: 6px !important;
+
+        min-height: 34px !important;
+        padding: 5px 0 !important;
+
+        align-items: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .record-label {
+        width: auto !important;
+        min-width: 0 !important;
+        font-size: 11px !important;
+    }
+
+    .record-value {
+        width: auto !important;
+        min-width: 0 !important;
+        font-size: 11px !important;
+        white-space: nowrap !important;
+    }
+
+    .record-horse {
+        width: auto !important;
+        min-width: 0 !important;
+
+        font-size: 11px !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    .record-date {
+        width: auto !important;
+        min-width: 0 !important;
+
+        font-size: 10px !important;
+        text-align: right !important;
+        white-space: nowrap !important;
+    }
+}
