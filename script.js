@@ -248,22 +248,7 @@ function closeMobileStatsPopup() {
     document.querySelector(".mobile-stats-popup")?.remove();
 }
 
-document.addEventListener("click", function (e) {
-
-    if (window.innerWidth > 700) return;
-
-    const target = e.target.closest(
-        ".horse-hover, .barrier-hover, .stat-hover"
-    );
-
-    if (!target) {
-        closeMobileStatsPopup();
-        return;
-    }
-
-    e.preventDefault();
-    e.stopPropagation();
-
+function openMobileStatsPopup(target) {
     const tooltip = target.querySelector(
         ".horse-stats-tooltip, .barrier-stats-tooltip, .person-stats-tooltip"
     );
@@ -274,23 +259,34 @@ document.addEventListener("click", function (e) {
 
     const popup = document.createElement("div");
     popup.className = "mobile-stats-popup";
-
     popup.innerHTML = tooltip.innerHTML;
 
     document.body.appendChild(popup);
-});
+}
 
-document.addEventListener(
-    "pointerdown",
-    handleMobileRunnerTooltip,
-    true
-);
+document.addEventListener("pointerup", function (e) {
 
-document.addEventListener(
-    "pointerup",
-    handleMobileRunnerTooltip,
-    true
-);
+    if (window.innerWidth > 700) return;
+
+    const target = e.target.closest(
+        ".horse-hover, .barrier-hover, .stat-hover"
+    );
+
+    if (target) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        openMobileStatsPopup(target);
+        return;
+    }
+
+    if (e.target.closest(".mobile-stats-popup")) {
+        return;
+    }
+
+    closeMobileStatsPopup();
+
+}, true);
 
 async function loadUpcomingFields() {
     try {
