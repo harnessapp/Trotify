@@ -9310,3 +9310,38 @@ body.race-chart-social .race-chart-stage-card::after {
         white-space: nowrap !important;
     }
 }
+
+/* =========================================================
+   MOBILE ROI+ - FORCE POPUP CONTENT VISIBLE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .mobile-stats-popup.race-roi-tooltip,
+    .mobile-stats-popup.race-roi-tooltip * {
+        opacity: 1 !important;
+        visibility: visible !important;
+        filter: none !important;
+        text-shadow: none !important;
+    }
+
+    .mobile-stats-popup.race-roi-tooltip {
+        background: #f4edf7 !important;
+        color: #222 !important;
+    }
+
+    .mobile-stats-popup.race-roi-tooltip .race-roi-title,
+    .mobile-stats-popup.race-roi-tooltip .race-roi-pct,
+    .mobile-stats-popup.race-roi-tooltip .race-roi-type,
+    .mobile-stats-popup.race-roi-tooltip .race-roi-main strong {
+        color: #222 !important;
+    }
+
+    .mobile-stats-popup.race-roi-tooltip .race-roi-main span {
+        color: #9a9a9a !important;
+    }
+
+    .mobile-stats-popup.race-roi-tooltip .race-roi-record {
+        color: #555 !important;
+    }
+}
