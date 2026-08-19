@@ -244,7 +244,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 });
 
-function handleMobileRunnerTooltip(e) {
+function closeMobileStatsPopup() {
+    document.querySelector(".mobile-stats-popup")?.remove();
+}
+
+document.addEventListener("click", function (e) {
 
     if (window.innerWidth > 700) return;
 
@@ -253,32 +257,28 @@ function handleMobileRunnerTooltip(e) {
     );
 
     if (!target) {
-        document.querySelectorAll(
-            ".horse-hover.mobile-open, .barrier-hover.mobile-open, .stat-hover.mobile-open"
-        ).forEach(el => {
-            el.classList.remove("mobile-open");
-        });
-
+        closeMobileStatsPopup();
         return;
     }
 
-    // Stop the runner/race click before it starts
     e.preventDefault();
     e.stopPropagation();
-    e.stopImmediatePropagation();
 
-    const wasOpen = target.classList.contains("mobile-open");
+    const tooltip = target.querySelector(
+        ".horse-stats-tooltip, .barrier-stats-tooltip, .person-stats-tooltip"
+    );
 
-    document.querySelectorAll(
-        ".horse-hover.mobile-open, .barrier-hover.mobile-open, .stat-hover.mobile-open"
-    ).forEach(el => {
-        el.classList.remove("mobile-open");
-    });
+    if (!tooltip) return;
 
-    if (!wasOpen) {
-        target.classList.add("mobile-open");
-    }
-}
+    closeMobileStatsPopup();
+
+    const popup = document.createElement("div");
+    popup.className = "mobile-stats-popup";
+
+    popup.innerHTML = tooltip.innerHTML;
+
+    document.body.appendChild(popup);
+});
 
 document.addEventListener(
     "pointerdown",
