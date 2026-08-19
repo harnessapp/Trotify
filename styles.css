@@ -9048,92 +9048,121 @@ body.race-chart-social .race-chart-stage-card::after {
     .mobile-trials-list {
         display: flex;
         flex-direction: column;
+        gap: 1px;
+
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* Each trial = one very compact line */
+    .mobile-trial-line,
+    a.mobile-trial-line,
+    a.mobile-trial-line:link,
+    a.mobile-trial-line:visited,
+    a.mobile-trial-line:hover,
+    a.mobile-trial-line:active {
+
+        display: flex;
+        align-items: center;
         gap: 3px;
 
         width: 100%;
         min-width: 0;
-    }
 
-    .mobile-trial-line {
-        display: flex;
-        align-items: center;
-        gap: 4px;
+        padding: 1px 0;
 
-        width: 100%;
-        min-width: 0;
+        color: rgba(255, 255, 255, 0.72) !important;
+        text-decoration: none !important;
 
-        color: rgba(255, 255, 255, 0.78);
-        text-decoration: none;
-
-        font-size: 9px;
-        line-height: 1.15;
+        font-size: 7px !important;
+        line-height: 1.05 !important;
 
         white-space: nowrap;
         overflow: hidden;
 
-        padding: 2px 0;
-    }
-
-    .mobile-trial-line.has-vision {
         cursor: pointer;
         touch-action: manipulation;
     }
 
+
     .mobile-trial-play {
-        flex: 0 0 auto;
+        flex: 0 0 7px;
+        width: 7px;
 
-        width: 8px;
+        color: #7dff9c !important;
 
-        color: var(--accent-2);
-        font-size: 9px;
-        font-weight: 950;
+        font-size: 7px !important;
+        line-height: 1 !important;
+
+        text-decoration: none !important;
     }
+
 
     .mobile-trial-text {
         display: block;
 
         min-width: 0;
 
+        color: rgba(255, 255, 255, 0.72) !important;
+
+        font-size: 7px !important;
+        line-height: 1.05 !important;
+
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        text-decoration: none !important;
     }
 
+
     .mobile-trial-text strong {
-        color: rgba(255, 255, 255, 0.92);
-        font-weight: 850;
+        color: rgba(255, 255, 255, 0.90) !important;
+
+        font-size: 7px !important;
+        font-weight: 850 !important;
+
+        text-decoration: none !important;
     }
+
 
     .mobile-trial-fresh {
         flex: 0 0 auto;
 
-        padding: 1px 3px;
+        padding: 1px 2px;
 
-        border-radius: 3px;
+        border-radius: 2px;
 
         background: #63ffb0;
-        color: #04140d;
+        color: #04140d !important;
 
-        font-size: 6.5px;
-        line-height: 1.25;
+        font-size: 5px !important;
+        line-height: 1.1 !important;
         font-weight: 950;
+
+        text-decoration: none !important;
     }
+
 
     .mobile-trial-empty {
         color: rgba(255, 255, 255, 0.38);
 
-        font-size: 9px;
+        font-size: 7px !important;
         font-style: italic;
 
-        padding: 4px 0;
+        padding: 2px 0;
     }
 
-    /* Trials cards need room for three compact lines */
+
+    /* Much smaller runner cards in Trials mode */
     .runner-row:has(.mobile-trials-list) {
-        min-height: 58px !important;
-        padding-top: 6px !important;
-        padding-bottom: 6px !important;
+        min-height: 45px !important;
+
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
     }
+
 
     .runner-row:has(.mobile-trials-list) .runner-number {
         align-self: center !important;
