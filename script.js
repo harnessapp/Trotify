@@ -6386,11 +6386,6 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                     const barrier = clean(row.Barrier || row.BARRIER || "");
                     const trainer = clean(row.Trainer || row.TRAINER || "");
                     const driver = clean(row.Driver || row.DRIVER || "");
-                    const runnerKey = clean(
-                        row.RunnerAnchor ||
-                        row["RunnerAnchor"] ||
-                        `${raceAnchorFull}_${horse}`
-                    );
                     const fairOdds = formatNearestOdds(row["Fair Odds"] || row.FairOdds || row["FairOdds"] || "");
                     const leadPct = parseNumber(row["Ld %"] || row["Ld%"] || row["Lead %"] || "");
                     const behindLeadPct = parseNumber(row["BL %"] || row["BL%"] || row["Behind Lead %"] || "");
