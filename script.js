@@ -252,7 +252,6 @@ function handleMobileRunnerTooltip(e) {
         ".horse-hover, .barrier-hover, .stat-hover"
     );
 
-    // Tap somewhere else = close any open tooltip
     if (!target) {
         document.querySelectorAll(
             ".horse-hover.mobile-open, .barrier-hover.mobile-open, .stat-hover.mobile-open"
@@ -263,25 +262,29 @@ function handleMobileRunnerTooltip(e) {
         return;
     }
 
-    // Stop other runner/race click behaviour
+    // Stop the runner/race click before it starts
     e.preventDefault();
     e.stopPropagation();
     e.stopImmediatePropagation();
 
     const wasOpen = target.classList.contains("mobile-open");
 
-    // Close everything
     document.querySelectorAll(
         ".horse-hover.mobile-open, .barrier-hover.mobile-open, .stat-hover.mobile-open"
     ).forEach(el => {
         el.classList.remove("mobile-open");
     });
 
-    // Open tapped tooltip, unless it was already open
     if (!wasOpen) {
         target.classList.add("mobile-open");
     }
 }
+
+document.addEventListener(
+    "pointerdown",
+    handleMobileRunnerTooltip,
+    true
+);
 
 document.addEventListener(
     "pointerup",
