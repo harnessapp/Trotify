@@ -8878,3 +8878,163 @@ body.race-chart-social .race-chart-stage-card::after {
         opacity: 1 !important;
     }
 }
+
+/* =========================================================
+   MOBILE - READABLE RACE / RECORD POPUPS
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Both popups: deliberately dark */
+    .mobile-stats-popup.record-tooltip,
+    .mobile-stats-popup.race-summary-tooltip,
+    .mobile-race-summary-popup {
+        background: #0b1721 !important;
+        color: #f4f7fb !important;
+
+        color-scheme: dark !important;
+
+        border: 1px solid rgba(0, 230, 191, 0.45) !important;
+
+        box-shadow:
+            0 18px 40px rgba(0, 0, 0, 0.70) !important;
+    }
+
+
+    /* =====================================
+       RECORDS
+       ===================================== */
+
+    .mobile-stats-popup.record-tooltip
+    .record-tooltip-title {
+        color: #f4f7fb !important;
+        opacity: 1 !important;
+    }
+
+    .mobile-stats-popup.record-tooltip
+    .record-tooltip-row {
+        color: #f4f7fb !important;
+        opacity: 1 !important;
+
+        border-bottom-color:
+            rgba(255, 255, 255, 0.14) !important;
+    }
+
+    .mobile-stats-popup.record-tooltip
+    .record-label,
+
+    .mobile-stats-popup.record-tooltip
+    .record-value {
+        color: #ffffff !important;
+        opacity: 1 !important;
+    }
+
+    .mobile-stats-popup.record-tooltip
+    .record-horse {
+        color: #dce5ec !important;
+        opacity: 1 !important;
+    }
+
+    .mobile-stats-popup.record-tooltip
+    .record-date {
+        color: #aebac4 !important;
+        opacity: 1 !important;
+    }
+
+    .mobile-stats-popup.record-tooltip
+    .record-heavy-line {
+        border-bottom-color:
+            rgba(255, 255, 255, 0.45) !important;
+    }
+
+
+    /* =====================================
+       RACE SUMMARY
+       ===================================== */
+
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-title,
+
+    .mobile-race-summary-popup
+    .race-summary-title {
+        color: #f4f7fb !important;
+        opacity: 1 !important;
+    }
+
+
+    /* Column heading row */
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-head,
+
+    .mobile-race-summary-popup
+    .race-summary-head {
+        background: #dce9f2 !important;
+        color: #17212a !important;
+        opacity: 1 !important;
+    }
+
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-head span,
+
+    .mobile-race-summary-popup
+    .race-summary-head span {
+        color: #17212a !important;
+        opacity: 1 !important;
+    }
+
+
+    /* VDSG / Venue / All */
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-section-title,
+
+    .mobile-race-summary-popup
+    .race-summary-section-title {
+        background: #53606a !important;
+        color: #ffffff !important;
+        opacity: 1 !important;
+    }
+
+
+    /* Data rows */
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-row,
+
+    .mobile-race-summary-popup
+    .race-summary-row {
+        color: #f4f7fb !important;
+        opacity: 1 !important;
+
+        border-bottom-color:
+            rgba(255, 255, 255, 0.12) !important;
+    }
+
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-row span,
+
+    .mobile-race-summary-popup
+    .race-summary-row span {
+        color: #f4f7fb !important;
+        opacity: 1 !important;
+    }
+
+
+    /* Row labels slightly brighter */
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-row span:first-child,
+
+    .mobile-race-summary-popup
+    .race-summary-row span:first-child {
+        color: #ffffff !important;
+        font-weight: 950 !important;
+    }
+
+
+    .mobile-stats-popup.race-summary-tooltip
+    .race-summary-table,
+
+    .mobile-race-summary-popup
+    .race-summary-table {
+        border-color:
+            rgba(255, 255, 255, 0.14) !important;
+    }
+}
