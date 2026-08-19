@@ -6237,6 +6237,16 @@ function toggleMobileRunnerDetail(el) {
     }
 }
 
+function truncateMobileName(value, maxLength = 18) {
+    const text = clean(value || "");
+
+    if (text.length <= maxLength) {
+        return text;
+    }
+
+    return text.slice(0, maxLength - 1).trimEnd() + "…";
+}
+
 function renderRaceDetail(venue, state, dateValue, raceNo) {
     const raceRows = allRows.filter(row => {
         const rowVenue = clean(row.Venue);
@@ -6606,7 +6616,7 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                                             ${trainer ? `
                                                 <span class="runner-mobile-trainer">
                                                     • <span class="stat-hover">
-                                                        ${escapeHtml(trainer)}
+                                                        ${escapeHtml(truncateMobileName(trainer, 18))}
                                                         ${renderPersonStatsTooltip(row, "trainer")}
                                                     </span>
                                                 </span>
@@ -6615,7 +6625,7 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                                             ${driver ? `
                                                 <span class="runner-mobile-driver">
                                                     • <span class="stat-hover">
-                                                        ${escapeHtml(driver)}
+                                                        ${escapeHtml(truncateMobileName(driver, 18))}
                                                         ${renderPersonStatsTooltip(row, "driver")}
                                                     </span>
                                                 </span>
@@ -10146,6 +10156,16 @@ function splitCSVLine(line) {
 
 function clean(value) {
     return String(value ?? "").trim();
+}
+
+function truncateMobileName(value, maxLength = 20) {
+    const text = clean(value || "");
+
+    if (text.length <= maxLength) {
+        return text;
+    }
+
+    return text.slice(0, maxLength - 1).trimEnd() + "…";
 }
 
 function pad2(value) {
