@@ -6339,15 +6339,18 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                 </div>
 
                 <div class="venue-stat-toggle">
-                    <span>Venue Stats</span>
-                    ${["off", "horse", "trainer", "driver"].map(mode => `
-                        <button class="${selectedVenueStatMode === mode ? "selected" : ""}"
-                            onclick="setVenueStatMode('${mode}', '${escapeHtml(venue)}', '${escapeHtml(state)}', '${escapeHtml(dateValue)}', '${escapeHtml(raceNo)}')">
-                            ${mode === "off"
-                                ? "Off"
-                                : mode.charAt(0).toUpperCase() + mode.slice(1)}
-                        </button>
-                    `).join("")}
+
+                    <span class="venue-stat-mobile-hide">
+                        <span>Venue Stats</span>
+                        ${["off", "horse", "trainer", "driver"].map(mode => `
+                            <button class="${selectedVenueStatMode === mode ? "selected" : ""}"
+                                onclick="setVenueStatMode('${mode}', '${escapeHtml(venue)}', '${escapeHtml(state)}', '${escapeHtml(dateValue)}', '${escapeHtml(raceNo)}')">
+                                ${mode === "off"
+                                    ? "Off"
+                                    : mode.charAt(0).toUpperCase() + mode.slice(1)}
+                            </button>
+                        `).join("")}
+                    </span>
 
                     <span class="race-summary-hover">
                         <button type="button">Bell</button>
