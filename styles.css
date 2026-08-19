@@ -8137,6 +8137,6 @@ body.race-chart-social .race-chart-stage-card::after {
 
 @media (max-width: 700px) {
     .runner-mobile-traffic .traffic-dot.filled {
-        transform: scale(3.5) !important;
+        transform: scale(1.8) !important;
     }
 }
