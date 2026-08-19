@@ -7287,24 +7287,69 @@ function buildTrialRunnerMap(payload) {
 }
 
 function findTrialRunnerForRow(row) {
+
+    // If upcoming_fields.csv already contains trial data,
+    // use that row directly.
+    if (hasAnyTrialForRunner(row)) {
+        return row;
+    }
+
+    // Otherwise fall back to trials.json
     if (!trialRunnerMap || !trialRunnerMap.size) {
         return null;
     }
 
-    const rowHorse = normaliseTrialText(row.Horse || row.HORSE || "");
-    const rowRaceAnchorFull = normaliseTrialText(row.RaceAnchorFull || row["RaceAnchorFull"] || row["Race Anchor Full"] || "");
+    const rowHorse = normaliseTrialText(
+        row.Horse ||
+        row.HORSE ||
+        ""
+    );
+
+    const rowRaceAnchorFull = normaliseTrialText(
+        row.RaceAnchorFull ||
+        row["RaceAnchorFull"] ||
+        row["Race Anchor Full"] ||
+        ""
+    );
 
     if (rowRaceAnchorFull && rowHorse) {
-        const anchorMatch = trialRunnerMap.get(`ANCHOR|${rowRaceAnchorFull}|${rowHorse}`);
-        if (anchorMatch) return anchorMatch;
+        const anchorMatch = trialRunnerMap.get(
+            `ANCHOR|${rowRaceAnchorFull}|${rowHorse}`
+        );
+
+        if (anchorMatch) {
+            return anchorMatch;
+        }
     }
 
-    const rowVenue = normaliseTrialText(row.Venue || "");
-    const rowState = normaliseTrialText(row.State || row.STATE || row["State "] || "");
-    const rowDate = normaliseDateKey(row.Date || row.DATE || row["Meeting Date"] || "");
-    const rowRaceNo = cleanRaceNumber(row["Race No"] || row.RaceNo || row.Race || "");
+    const rowVenue = normaliseTrialText(
+        row.Venue || ""
+    );
 
-    return trialRunnerMap.get(`RACE|${rowHorse}|${rowVenue}|${rowState}|${rowDate}|${rowRaceNo}`) || null;
+    const rowState = normaliseTrialText(
+        row.State ||
+        row.STATE ||
+        row["State "] ||
+        ""
+    );
+
+    const rowDate = normaliseDateKey(
+        row.Date ||
+        row.DATE ||
+        row["Meeting Date"] ||
+        ""
+    );
+
+    const rowRaceNo = cleanRaceNumber(
+        row["Race No"] ||
+        row.RaceNo ||
+        row.Race ||
+        ""
+    );
+
+    return trialRunnerMap.get(
+        `RACE|${rowHorse}|${rowVenue}|${rowState}|${rowDate}|${rowRaceNo}`
+    ) || null;
 }
 
 function renderRunnerSpeedMapInline(row) {
