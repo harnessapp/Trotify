@@ -6567,6 +6567,10 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
 
                                     ${renderRunnerTrialsMobile(row)}
 
+                                ` : runnerDisplayMode === "map" && !isScratched ? `
+
+                                    ${renderRunnerSpeedMapMobile(row)}
+
                                 ` : `
 
                                     <div class="runner-mobile-top">
@@ -7611,6 +7615,149 @@ function renderRunnerSpeedMapInline(row) {
         </div>
     `;
 }
+
+function renderRunnerSpeedMapMobile(row) {
+    const barrier = clean(
+        row.Barrier ||
+        row.BARRIER ||
+        ""
+    ).toUpperCase();
+
+    if (
+        barrier.includes("SR") ||
+        barrier.includes("SCR")
+    ) {
+        return "";
+    }
+
+    const leadPct = parsePercentValue(
+        row["Ld %"] ||
+        row["Lead %"] ||
+        row["Lead%"] ||
+        row["LD %"]
+    );
+
+    const blPct = parsePercentValue(
+        row["BL %"] ||
+        row["B/L %"] ||
+        row["Behind Leader %"] ||
+        row["BehindLeader %"]
+    );
+
+    const deathPct = parsePercentValue(
+        row["Dth %"] ||
+        row["Death %"] ||
+        row["Death%"] ||
+        row["DTH %"]
+    );
+
+    const leadWidth = speedMapPercentToPosition(leadPct);
+    const blLeft = speedMapPercentToPosition(blPct);
+    const deathLeft = speedMapPercentToPosition(deathPct);
+
+    const hasAny =
+        leadPct > 0 ||
+        blPct > 0 ||
+        deathPct > 0;
+
+    if (!hasAny) {
+        return `
+            <div class="mobile-speed-map-empty">
+                No map data
+            </div>
+        `;
+    }
+
+    return `
+        <div
+            class="mobile-speed-map"
+            onclick="event.stopPropagation(); openMobileSpeedMapPopup(this)"
+            data-lead="${leadPct}"
+            data-bl="${blPct}"
+            data-death="${deathPct}"
+        >
+            <div class="mobile-speed-map-track">
+
+                <div
+                    class="mobile-speed-map-lead-fill"
+                    style="width: ${leadWidth}%;">
+                </div>
+
+                ${blPct > 0 ? `
+                    <div
+                        class="mobile-speed-map-dot mobile-speed-map-dot-bl"
+                        style="left: ${blLeft}%;">
+                    </div>
+                ` : ""}
+
+                ${deathPct > 0 ? `
+                    <div
+                        class="mobile-speed-map-dot mobile-speed-map-dot-death"
+                        style="left: ${deathLeft}%;">
+                    </div>
+                ` : ""}
+
+            </div>
+        </div>
+    `;
+}
+
+function openMobileSpeedMapPopup(el) {
+    if (window.innerWidth > 700) return;
+
+    document
+        .querySelector(".mobile-speed-map-popup")
+        ?.remove();
+
+    const leadPct = Number(el.dataset.lead || 0);
+    const blPct = Number(el.dataset.bl || 0);
+    const deathPct = Number(el.dataset.death || 0);
+
+    const popup = document.createElement("div");
+
+    popup.className = "mobile-speed-map-popup";
+
+    popup.innerHTML = `
+        <div class="mobile-speed-map-popup-title">
+            Speed Map
+        </div>
+
+        <div class="mobile-speed-map-popup-row">
+            <span class="map-dot map-dot-green"></span>
+            <span>Lead</span>
+            <strong>${leadPct.toFixed(0)}%</strong>
+        </div>
+
+        <div class="mobile-speed-map-popup-row">
+            <span class="map-dot map-dot-amber"></span>
+            <span>Behind leader</span>
+            <strong>${blPct.toFixed(0)}%</strong>
+        </div>
+
+        <div class="mobile-speed-map-popup-row">
+            <span class="map-dot map-dot-red"></span>
+            <span>Death seat</span>
+            <strong>${deathPct.toFixed(0)}%</strong>
+        </div>
+    `;
+
+    document.body.appendChild(popup);
+}
+
+document.addEventListener("click", function (e) {
+    if (window.innerWidth > 700) return;
+
+    if (
+        e.target.closest(".mobile-speed-map") ||
+        e.target.closest(".mobile-speed-map-popup")
+    ) {
+        return;
+    }
+
+    document
+        .querySelector(".mobile-speed-map-popup")
+        ?.remove();
+});
 
 function parsePercentValue(value) {
     const raw = clean(value || "").replace("%", "");
