@@ -6,7 +6,7 @@
 
 const RAW_BASE_URL = "https://raw.githubusercontent.com/harnessapp/harness-csv-data/main/";
 
-const CSV_URL = RAW_BASE_URL + "upcoming_fields.csv";
+const CSV_URL = "./upcoming_fields.csv";
 const FIELDSIZE_STATS_URL = RAW_BASE_URL + "fieldsize_stats.csv";
 const BOX_TICKERS_URL = RAW_BASE_URL + "unicorn_tiers_refined.csv";
 const TRIALS_URL = "./data/trials.json";
