@@ -9883,3 +9883,19 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 }
+
+@media (max-width: 700px) {
+
+    .latest-result-placings {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 3px !important;
+    }
+
+    .latest-result-placings > * {
+        display: block !important;
+        width: 100% !important;
+    }
+
+}
