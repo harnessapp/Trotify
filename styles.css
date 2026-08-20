@@ -3954,28 +3954,48 @@ body {
 
 .wire-track-wrap {
     position: relative;
-    flex: 1;
+    flex: 1 1 auto;
     min-width: 0;
     height: 18px;
     overflow: hidden;
 }
 
 .wire-track {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: flex;
-    width: max-content;
+    display: inline-flex;
+    align-items: center;
+
+    min-width: max-content;
     white-space: nowrap;
-    animation: trotifyWireScroll 250s linear infinite;
+
     font-size: 14px;
+    line-height: 18px;
     font-weight: 600;
+
     color: rgba(255, 255, 255, 0.92);
+
+    animation: trotifyWireScroll 250s linear infinite;
+
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+
+    will-change: transform;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.wire-copy {
+    display: inline-flex;
+    align-items: center;
+
+    flex: 0 0 auto;
+
+    white-space: nowrap;
+
+    padding-right: 20px;
 }
 
 .wire-track span {
-    display: inline-block;
-    padding-right: 20px;
     white-space: nowrap;
 }
 
@@ -3985,10 +4005,11 @@ body {
 
 @keyframes trotifyWireScroll {
     from {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
+
     to {
-        transform: translateX(-50%);
+        transform: translate3d(-50%, 0, 0);
     }
 }
 

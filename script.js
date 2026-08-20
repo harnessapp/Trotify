@@ -10343,24 +10343,74 @@ let trotifyWireTimer = null;
 
 async function setupTrotifyWire() {
     const wireTrack = document.getElementById("wireTrack");
+
     if (!wireTrack) return;
+
+    if (trotifyWireTimer) {
+        clearTimeout(trotifyWireTimer);
+        trotifyWireTimer = null;
+    }
 
     const items = await buildTrotifyWireItems();
 
     if (!items.length) {
-        wireTrack.textContent = "See more than the form.";
+        wireTrack.innerHTML = `
+            <span class="wire-copy">
+                See more than the form.
+            </span>
+        `;
+
+        trotifyWireTimer = setTimeout(
+            setupTrotifyWire,
+            60000
+        );
+
         return;
     }
 
     const tickerHtml = items
-        .map(item => typeof item === "string" ? escapeHtml(item) : item.html)
-        .join(`      <span class="wire-separator">✦</span>      `);
+        .map(item =>
+            typeof item === "string"
+                ? escapeHtml(item)
+                : item.html
+        )
+        .join(`
+            <span class="wire-separator">✦</span>
+        `);
+
+    /*
+       Stop the animation before replacing the contents.
+       This is particularly important for iOS Safari.
+    */
+    wireTrack.style.animation = "none";
+    wireTrack.style.transform = "translate3d(0, 0, 0)";
 
     wireTrack.innerHTML = `
-        <span>${tickerHtml}</span>
-        <span>${tickerHtml}</span>
+        <span class="wire-copy">
+            ${tickerHtml}
+        </span>
+
+        <span class="wire-copy">
+            ${tickerHtml}
+        </span>
     `;
-    setTimeout(setupTrotifyWire, 60000);
+
+    /*
+       Force Safari to calculate the completed ticker width
+       before restarting the animation.
+    */
+    void wireTrack.offsetWidth;
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            wireTrack.style.animation = "";
+        });
+    });
+
+    trotifyWireTimer = setTimeout(
+        setupTrotifyWire,
+        60000
+    );
 }
 
 async function buildTrotifyWireItems() {
