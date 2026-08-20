@@ -196,39 +196,124 @@ let selectedBoxTickerState = "ALL";
 document.addEventListener("DOMContentLoaded", async () => {
     setDateLabel();
     setInterval(setDateLabel, 1000);
+
     setupNavigation();
     setupMeetingCalendarButton();
 
-    trialsPayload = await loadTrialsData();
-    trialRunnerMap = buildTrialRunnerMap(trialsPayload);
-
-    first100Payload = await loadFirst100Data();
-    first100RaceMap = buildFirst100RaceMap(first100Payload);
+    /*
+       =====================================================
+       STAGE 1 - LOAD ONLY WHAT THE HOME PAGE NEEDS FIRST
+       =====================================================
+    */
 
     allRows = await loadUpcomingFields();
 
-    hraAnalysisRows = await loadHraAnalysis();
-    console.log("HRA Analysis loaded:", hraAnalysisRows.length);
-
-    raceMediaRows = await loadRaceMedia();
-    console.log("Race media loaded:", raceMediaRows.length);
-
-    fieldSizeStatsRows = await loadFieldSizeStats();
-
-    boxTickerRows = await loadBoxTickers();
-    liveResultsRows = await loadLiveResults();
-    tabDividendRows = await loadTabDividends();
-    charityTipRows = await loadCharityTips();
-    resultsRecentRows = await loadResultsRecent();
-    startLatestResultsRefresh();
-
+    // Get useful content onto the screen immediately
     renderDashboard(allRows);
-    renderLatestResultsHomeTile();
+
     setInterval(refreshNextToGoCard, 60000);
 
+    /*
+       These can start immediately without holding up
+       Next To Go / Today's Racing.
+    */
     updateLatestDailyWrapCard();
     updateLast30HomeTile();
-    setupTrotifyWire();
+
+
+    /*
+       =====================================================
+       STAGE 2 - LOAD EVERYTHING ELSE IN PARALLEL
+       =====================================================
+    */
+
+    const trialsPromise = loadTrialsData()
+        .then(data => {
+            trialsPayload = data;
+            trialRunnerMap = buildTrialRunnerMap(trialsPayload);
+        });
+
+    const first100Promise = loadFirst100Data()
+        .then(data => {
+            first100Payload = data;
+            first100RaceMap = buildFirst100RaceMap(first100Payload);
+        });
+
+    const hraPromise = loadHraAnalysis()
+        .then(data => {
+            hraAnalysisRows = data;
+            console.log(
+                "HRA Analysis loaded:",
+                hraAnalysisRows.length
+            );
+        });
+
+    const raceMediaPromise = loadRaceMedia()
+        .then(data => {
+            raceMediaRows = data;
+            console.log(
+                "Race media loaded:",
+                raceMediaRows.length
+            );
+        });
+
+    const fieldSizePromise = loadFieldSizeStats()
+        .then(data => {
+            fieldSizeStatsRows = data;
+        });
+
+    const boxTickerPromise = loadBoxTickers()
+        .then(data => {
+            boxTickerRows = data;
+        });
+
+    const liveResultsPromise = loadLiveResults()
+        .then(data => {
+            liveResultsRows = data;
+
+            // Populate latest results as soon as this file arrives
+            renderLatestResultsHomeTile();
+
+            startLatestResultsRefresh();
+        });
+
+    const dividendsPromise = loadTabDividends()
+        .then(data => {
+            tabDividendRows = data;
+        });
+
+    const charityPromise = loadCharityTips()
+        .then(data => {
+            charityTipRows = data;
+        });
+
+    const recentResultsPromise = loadResultsRecent()
+        .then(data => {
+            resultsRecentRows = data;
+        });
+
+
+    /*
+       =====================================================
+       STAGE 3 - START THE WIRE AFTER THE IMPORTANT
+       BACKGROUND DATA HAS HAD A CHANCE TO ARRIVE
+       =====================================================
+    */
+
+    Promise.allSettled([
+        liveResultsPromise,
+        boxTickerPromise,
+        charityPromise
+    ]).then(() => {
+        setupTrotifyWire();
+    });
+
+
+    /*
+       =====================================================
+       OPTIONAL SOCIAL RACE CHART MODE
+       =====================================================
+    */
 
     if (RACE_CHART_SOCIAL_MODE) {
         document.body.classList.add("race-chart-social");
