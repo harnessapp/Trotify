@@ -9094,6 +9094,7 @@ function formatWholeNumber(value) {
 
 async function showDriversView() {
     stopTimelineRefresh();
+
     document.querySelector(".hero").style.display = "none";
     document.querySelector(".dashboard-grid").style.display = "none";
     document.querySelector(".meetings-panel").style.display = "";
@@ -9103,35 +9104,85 @@ async function showDriversView() {
         <span>Drivers</span>
     `;
 
+    const isMobile = window.innerWidth <= 700;
+
     document.getElementById("meetingStrip").innerHTML = `
         <div class="drivers-layout">
-            <div class="drivers-menu">
-                ${DRIVER_TABLES.map((table, index) => `
-                    <button class="driver-table-tile ${index === 0 ? "selected" : ""}" data-file="${escapeHtml(table.file)}">
-                        <span>${escapeHtml(table.title)}</span>
-                    </button>
-                `).join("")}
-            </div>
+
+            ${isMobile ? `
+                <div class="mobile-driver-table-selector">
+                    <select
+                        id="mobileDriverTableSelect"
+                        onchange="changeMobileDriverTable(this.value)"
+                    >
+                        ${DRIVER_TABLES.map((table, index) => `
+                            <option
+                                value="${escapeHtml(table.file)}"
+                                ${index === 0 ? "selected" : ""}
+                            >
+                                ${escapeHtml(table.title)}
+                            </option>
+                        `).join("")}
+                    </select>
+                </div>
+            ` : `
+                <div class="drivers-menu">
+                    ${DRIVER_TABLES.map((table, index) => `
+                        <button
+                            class="driver-table-tile ${index === 0 ? "selected" : ""}"
+                            data-file="${escapeHtml(table.file)}"
+                        >
+                            <span>${escapeHtml(table.title)}</span>
+                        </button>
+                    `).join("")}
+                </div>
+            `}
 
             <div class="drivers-table-panel" id="driversTablePanel">
                 <div class="coming-soon-card">
-                    <div class="coming-soon-title">Loading driver table...</div>
+                    <div class="coming-soon-title">
+                        Loading driver table...
+                    </div>
                 </div>
             </div>
+
         </div>
     `;
 
-    document.querySelectorAll(".driver-table-tile").forEach(button => {
-        button.addEventListener("click", async () => {
-            document.querySelectorAll(".driver-table-tile").forEach(b => b.classList.remove("selected"));
-            button.classList.add("selected");
+    if (!isMobile) {
+        document
+            .querySelectorAll(".driver-table-tile")
+            .forEach(button => {
+                button.addEventListener("click", async () => {
 
-            const table = DRIVER_TABLES.find(t => t.file === button.dataset.file);
-            await renderSelectedDriverTable(table);
-        });
-    });
+                    document
+                        .querySelectorAll(".driver-table-tile")
+                        .forEach(b =>
+                            b.classList.remove("selected")
+                        );
+
+                    button.classList.add("selected");
+
+                    const table =
+                        DRIVER_TABLES.find(
+                            t => t.file === button.dataset.file
+                        );
+
+                    await renderSelectedDriverTable(table);
+                });
+            });
+    }
 
     await renderSelectedDriverTable(DRIVER_TABLES[0]);
+}
+
+async function changeMobileDriverTable(file) {
+    const table =
+        DRIVER_TABLES.find(t => t.file === file);
+
+    if (!table) return;
+
+    await renderSelectedDriverTable(table);
 }
 
 async function updateLast30HomeTile() {
@@ -9247,6 +9298,7 @@ async function loadLast30Preview(file, elementId, nameColumn, type) {
 
 async function showTrainersView() {
     stopTimelineRefresh();
+
     document.querySelector(".hero").style.display = "none";
     document.querySelector(".dashboard-grid").style.display = "none";
     document.querySelector(".meetings-panel").style.display = "";
@@ -9256,35 +9308,85 @@ async function showTrainersView() {
         <span>Trainers</span>
     `;
 
+    const isMobile = window.innerWidth <= 700;
+
     document.getElementById("meetingStrip").innerHTML = `
         <div class="drivers-layout">
-            <div class="drivers-menu">
-                ${TRAINER_TABLES.map((table, index) => `
-                    <button class="driver-table-tile ${index === 0 ? "selected" : ""}" data-file="${escapeHtml(table.file)}">
-                        <span>${escapeHtml(table.title)}</span>
-                    </button>
-                `).join("")}
-            </div>
 
-            <div class="drivers-table-panel" id="trainersTablePanel">
+            ${isMobile ? `
+                <div class="mobile-driver-table-selector">
+                    <select
+                        id="mobileTrainerTableSelect"
+                        onchange="changeMobileTrainerTable(this.value)"
+                    >
+                        ${TRAINER_TABLES.map((table, index) => `
+                            <option
+                                value="${escapeHtml(table.file)}"
+                                ${index === 0 ? "selected" : ""}
+                            >
+                                ${escapeHtml(table.title)}
+                            </option>
+                        `).join("")}
+                    </select>
+                </div>
+            ` : `
+                <div class="drivers-menu">
+                    ${TRAINER_TABLES.map((table, index) => `
+                        <button
+                            class="driver-table-tile ${index === 0 ? "selected" : ""}"
+                            data-file="${escapeHtml(table.file)}"
+                        >
+                            <span>${escapeHtml(table.title)}</span>
+                        </button>
+                    `).join("")}
+                </div>
+            `}
+
+            <div class="drivers-table-panel" id="driversTablePanel">
                 <div class="coming-soon-card">
-                    <div class="coming-soon-title">Loading trainer table...</div>
+                    <div class="coming-soon-title">
+                        Loading trainer table...
+                    </div>
                 </div>
             </div>
+
         </div>
     `;
 
-    document.querySelectorAll(".driver-table-tile").forEach(button => {
-        button.addEventListener("click", async () => {
-            document.querySelectorAll(".driver-table-tile").forEach(b => b.classList.remove("selected"));
-            button.classList.add("selected");
+    if (!isMobile) {
+        document
+            .querySelectorAll(".driver-table-tile")
+            .forEach(button => {
+                button.addEventListener("click", async () => {
 
-            const table = TRAINER_TABLES.find(t => t.file === button.dataset.file);
-            await renderSelectedTrainerTable(table);
-        });
-    });
+                    document
+                        .querySelectorAll(".driver-table-tile")
+                        .forEach(b =>
+                            b.classList.remove("selected")
+                        );
+
+                    button.classList.add("selected");
+
+                    const table =
+                        TRAINER_TABLES.find(
+                            t => t.file === button.dataset.file
+                        );
+
+                    await renderSelectedTrainerTable(table);
+                });
+            });
+    }
 
     await renderSelectedTrainerTable(TRAINER_TABLES[0]);
+}
+
+async function changeMobileTrainerTable(file) {
+    const table =
+        TRAINER_TABLES.find(t => t.file === file);
+
+    if (!table) return;
+
+    await renderSelectedTrainerTable(table);
 }
 
 async function renderSelectedTrainerTable(table) {

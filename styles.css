@@ -9516,3 +9516,45 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 }
+
+/* =========================================================
+   MOBILE - DRIVER / TRAINER TABLE SELECTOR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .drivers-layout {
+        display: block !important;
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .mobile-driver-table-selector {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .mobile-driver-table-selector select {
+        width: 100%;
+
+        padding: 11px 38px 11px 13px;
+
+        border-radius: 12px;
+
+        border: 1px solid rgba(0, 230, 191, 0.45);
+
+        background: rgba(18, 32, 44, 0.96);
+        color: #ffffff;
+
+        font-size: 13px;
+        font-weight: 850;
+
+        outline: none;
+    }
+
+    .drivers-table-panel {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+}
