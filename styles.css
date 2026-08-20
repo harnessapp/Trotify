@@ -10208,3 +10208,27 @@ body.race-chart-social .race-chart-stage-card::after {
         line-height: inherit !important;
     }
 }
+
+@media (max-width: 700px) {
+
+    .wire-item,
+    .wire-item *,
+    .wire-separator {
+        font-size: 12px !important;
+        line-height: 18px !important;
+
+        -webkit-text-size-adjust: 100% !important;
+        text-size-adjust: 100% !important;
+    }
+
+    .wire-item {
+        display: inline-flex !important;
+        align-items: center !important;
+
+        white-space: nowrap !important;
+    }
+
+    .wire-horse {
+        font-size: 12px !important;
+    }
+}

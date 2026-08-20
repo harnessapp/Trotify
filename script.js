@@ -10369,14 +10369,23 @@ async function setupTrotifyWire() {
     }
 
     const tickerHtml = items
-        .map(item =>
-            typeof item === "string"
-                ? escapeHtml(item)
-                : item.html
-        )
+        .map(item => {
+            const html =
+                typeof item === "string"
+                    ? escapeHtml(item)
+                    : item.html;
+
+            return `
+                <span class="wire-item">
+                    ${html}
+                </span>
+            `;
+        })
         .join(`
             <span class="wire-separator">✦</span>
         `);
+
+
 
     /*
        Stop the animation before replacing the contents.
