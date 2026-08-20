@@ -10105,3 +10105,45 @@ body.race-chart-social .race-chart-stage-card::after {
         white-space: nowrap !important;
     }
 }
+
+/* =========================================================
+   MOBILE NAV - FINAL PRIORITY ORDER
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* 1 - Home */
+    .sidebar .nav-item[data-view="home"] {
+        order: -70 !important;
+    }
+
+    /* 2 - Next Up */
+    .sidebar .nav-item[data-view="next-up"] {
+        order: -60 !important;
+    }
+
+    /* 3 - Upcoming Fields */
+    .sidebar .nav-item[data-view="upcoming"] {
+        order: -50 !important;
+    }
+
+    /* 4 - Drivers */
+    .sidebar .nav-item[data-view="drivers"] {
+        order: -40 !important;
+    }
+
+    /* 5 - Trainers */
+    .sidebar .nav-item[data-view="trainers"] {
+        order: -30 !important;
+    }
+
+    /* 6 - Stable Changes */
+    .sidebar .nav-item[data-view="stable-changes"] {
+        order: -20 !important;
+    }
+
+    /* 7 - Latest Results */
+    .sidebar .nav-item[data-view="latest-results"] {
+        order: -10 !important;
+    }
+}
