@@ -9749,3 +9749,89 @@ body.race-chart-social .race-chart-stage-card::after {
             rgba(0, 230, 191, 0.10) !important;
     }
 }
+
+/* =========================================================
+   MOBILE DRIVER / TRAINER - FINAL COMPACT LAYOUT
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* STATES - FORCE ALL 7 ON ONE LINE */
+    .driver-state-filter.mobile-person-state-filter {
+        display: grid !important;
+        grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+        gap: 4px !important;
+        width: 100% !important;
+        margin: 8px 0 14px !important;
+    }
+
+    .driver-state-filter.mobile-person-state-filter .driver-state-button {
+        width: auto !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 7px 0 !important;
+
+        font-size: 9px !important;
+        line-height: 1 !important;
+    }
+
+
+    /* EACH DRIVER / TRAINER = ONE ROW */
+    .mobile-person-table-list {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .mobile-person-table-list .mobile-person-table-row {
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            auto
+            50px !important;
+
+        column-gap: 7px !important;
+        align-items: center !important;
+
+        width: 100% !important;
+        box-sizing: border-box !important;
+
+        padding: 7px 4px !important;
+        margin: 0 !important;
+
+        border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+
+        font-size: 10px !important;
+        line-height: 1.2 !important;
+    }
+
+    .mobile-person-table-row .mobile-person-name {
+        display: block !important;
+
+        min-width: 0 !important;
+
+        font-size: 10px !important;
+        font-weight: 800 !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    .mobile-person-table-row .mobile-person-record {
+        display: block !important;
+
+        font-size: 9px !important;
+        white-space: nowrap !important;
+    }
+
+    .mobile-person-table-row .mobile-person-roi {
+        display: block !important;
+
+        font-size: 9px !important;
+        font-weight: 850 !important;
+
+        text-align: right !important;
+        white-space: nowrap !important;
+    }
+}
