@@ -9369,3 +9369,9 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 }
+
+@media (max-width: 700px) {
+    .meeting-name {
+        text-align: left !important;
+    }
+}
