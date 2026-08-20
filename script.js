@@ -4927,11 +4927,16 @@ function renderLatestResultPopup(race, showBSP = false) {
     const q3 = clean(first["3rd Quarter"] || "");
     const q4 = clean(first["4th Quarter"] || "");
     const mileRate = formatMileRateFromRace(first);
+
     const { prev, next } = getAdjacentLatestResults(race);
+
+    const isMobile = window.innerWidth <= 700;
 
     return `
         <div class="latest-result-popup-backdrop" id="latestResultPopup" onclick="closeLatestResultPopup()">
-            <div class="latest-result-popup" onclick="event.stopPropagation()">
+
+            <div class="latest-result-popup ${isMobile ? "latest-result-popup-mobile" : ""}" onclick="event.stopPropagation()">
+
                 ${prev ? `
                     <button class="latest-result-nav latest-result-nav-prev"
                         onclick="event.stopPropagation(); openLatestResultPopup('${escapeHtml(prev.raceKey)}')">
@@ -4945,125 +4950,316 @@ function renderLatestResultPopup(race, showBSP = false) {
                         ›
                     </button>
                 ` : ""}
+
                 <div class="latest-result-popup-header">
                     <div>
-                        <div class="race-panel-eyebrow">Full result</div>
+                        <div class="race-panel-eyebrow">
+                            Full result
+                        </div>
 
                         <h2>
                             ${escapeHtml(shortVenueName(race.venue))} R${escapeHtml(race.raceNo)}
-                            ${race.dateValue ? ` • ${escapeHtml(formatResultDate(race.dateValue))}` : ""}
+                            ${race.dateValue
+                                ? ` • ${escapeHtml(formatResultDate(race.dateValue))}`
+                                : ""
+                            }
                         </h2>
+
                         <p>
                             ${escapeHtml(race.time || "TBC")}
-                            ${raceTitle ? ` • ${escapeHtml(raceTitle)}` : ""}
+                            ${raceTitle
+                                ? ` • ${escapeHtml(raceTitle)}`
+                                : ""
+                            }
                         </p>
+
                         <p>
-                            ${distance ? `${escapeHtml(distance)}m` : ""}
-                            ${start ? ` • ${escapeHtml(start)}` : ""}
-                            ${gait ? ` • ${escapeHtml(gait)}` : ""}
+                            ${distance
+                                ? `${escapeHtml(distance)}m`
+                                : ""
+                            }
+
+                            ${start
+                                ? ` • ${escapeHtml(start)}`
+                                : ""
+                            }
+
+                            ${gait
+                                ? ` • ${escapeHtml(gait)}`
+                                : ""
+                            }
                         </p>
                     </div>
 
                     <button onclick="closeLatestResultPopup()">×</button>
                 </div>
 
-                <div class="latest-result-popup-table-wrap">
-                    <table class="latest-result-popup-table">
-                        <thead>
-                            <tr>
-                                <th>Pl</th>
-                                <th>Horse</th>
-                                <th>Br</th>
-                                <th>Bell</th>
-                                <th>Trainer</th>
-                                <th>Driver</th>
-                                <th>Margin</th>
-                                <th>SP</th>
 
-                                ${showBSP ? `
-                                    <th class="table-divider"></th>
-                                    <th class="runner-bsp">BSP(W)</th>
-                                    <th class="runner-bsp">BSP(P)</th>
-                                    <th class="table-divider"></th>
-                                ` : ""}
+                ${isMobile ? `
 
-                                <th>E.Half</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${runners.map(row => {
-                                let bellPosition = clean(
-                                    row.BellPosition ||
-                                    row["Bell Position"] ||
-                                    row["Bell Pos"] ||
-                                    ""
-                                );
+                    <div class="mobile-result-runner-list">
 
-                                if (bellPosition === "0") {
-                                    bellPosition = "";
-                                }
+                        ${runners.map(row => {
 
-                                return `
-                                    <tr>
-                                        <td>${escapeHtml(ordinal(row.Placing))}</td>
-                                        <td>${escapeHtml(clean(row.Horse || "").toUpperCase())}</td>
-                                        <td>${escapeHtml(row.Barrier || "")}</td>
-                                        <td class="latest-result-bell">
-                                            ${escapeHtml(bellPosition)}
-                                        </td>
-                                        <td>${escapeHtml(toProperCase(row.Trainer || ""))}</td>
-                                        <td>${escapeHtml(toProperCase(row.Driver || ""))}</td>
-                                        <td>${escapeHtml(formatMargin(row.Margin))}</td>
-                                        <td class="latest-result-sp">${formatSP(row.SP, true)}</td>
+                            let bellPosition = clean(
+                                row.BellPosition ||
+                                row["Bell Position"] ||
+                                row["Bell Pos"] ||
+                                ""
+                            );
 
-                                        ${showBSP ? `
-                                            <td class="table-divider"></td>
+                            if (bellPosition === "0") {
+                                bellPosition = "";
+                            }
 
-                                            <td class="runner-bsp">
-                                                ${row.BSP_Win != null && row.BSP_Win !== ""
-                                                    ? `$${parseFloat(row.BSP_Win).toFixed(2)}`
-                                                    : ""
-                                                }
-                                            </td>
+                            const placing =
+                                ordinal(row.Placing);
 
-                                            <td class="runner-bsp">
-                                                ${row.BSP_Place != null && row.BSP_Place !== ""
-                                                    ? `$${parseFloat(row.BSP_Place).toFixed(2)}`
-                                                    : ""
-                                                }
-                                            </td>
+                            const horse =
+                                clean(row.Horse || "").toUpperCase();
 
-                                            <td class="table-divider"></td>
+                            const barrier =
+                                clean(row.Barrier || "");
+
+                            const trainer =
+                                toProperCase(row.Trainer || "");
+
+                            const driver =
+                                toProperCase(row.Driver || "");
+
+                            const margin =
+                                formatMargin(row.Margin);
+
+                            const sp =
+                                formatSP(row.SP, true);
+
+                            const indHalf =
+                                row["Ind Half"] &&
+                                !isNaN(parseFloat(row["Ind Half"]))
+                                    ? parseFloat(row["Ind Half"]).toFixed(1)
+                                    : "";
+
+                            const lowerParts = [
+                                bellPosition,
+                                margin,
+                                indHalf
+                            ].filter(Boolean);
+
+                            return `
+                                <div class="mobile-result-runner-row">
+
+                                    <div class="mobile-result-runner-top">
+
+                                        <span class="mobile-result-placing">
+                                            ${escapeHtml(placing)}
+                                        </span>
+
+                                        <span class="mobile-result-horse">
+                                            ${escapeHtml(horse)}
+                                        </span>
+
+                                        ${barrier ? `
+                                            <span class="mobile-result-barrier">
+                                                (${escapeHtml(barrier)})
+                                            </span>
                                         ` : ""}
 
-                                        <td>${
-                                            row["Ind Half"] && !isNaN(parseFloat(row["Ind Half"]))
-                                                ? escapeHtml(parseFloat(row["Ind Half"]).toFixed(1))
-                                                : ""
-                                        }</td>
-                                    </tr>
-                                `;
-                            }).join("")}
-                        </tbody>
-                    </table>
-                </div>
+                                        <span class="mobile-result-sp">
+                                            ${escapeHtml(sp)}
+                                        </span>
+
+                                    </div>
+
+                                    ${(trainer || driver) ? `
+                                        <div class="mobile-result-people">
+                                            ${escapeHtml(trainer)}
+                                            ${trainer && driver ? " • " : ""}
+                                            ${escapeHtml(driver)}
+                                        </div>
+                                    ` : ""}
+
+                                    ${lowerParts.length ? `
+                                        <div class="mobile-result-race-detail">
+                                            ${lowerParts
+                                                .map(part => escapeHtml(part))
+                                                .join(" • ")
+                                            }
+                                        </div>
+                                    ` : ""}
+
+                                </div>
+                            `;
+
+                        }).join("")}
+
+                    </div>
+
+                ` : `
+
+                    <div class="latest-result-popup-table-wrap">
+
+                        <table class="latest-result-popup-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Pl</th>
+                                    <th>Horse</th>
+                                    <th>Br</th>
+                                    <th>Bell</th>
+                                    <th>Trainer</th>
+                                    <th>Driver</th>
+                                    <th>Margin</th>
+                                    <th>SP</th>
+
+                                    ${showBSP ? `
+                                        <th class="table-divider"></th>
+                                        <th class="runner-bsp">BSP(W)</th>
+                                        <th class="runner-bsp">BSP(P)</th>
+                                        <th class="table-divider"></th>
+                                    ` : ""}
+
+                                    <th>E.Half</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                ${runners.map(row => {
+
+                                    let bellPosition = clean(
+                                        row.BellPosition ||
+                                        row["Bell Position"] ||
+                                        row["Bell Pos"] ||
+                                        ""
+                                    );
+
+                                    if (bellPosition === "0") {
+                                        bellPosition = "";
+                                    }
+
+                                    return `
+                                        <tr>
+                                            <td>
+                                                ${escapeHtml(ordinal(row.Placing))}
+                                            </td>
+
+                                            <td>
+                                                ${escapeHtml(clean(row.Horse || "").toUpperCase())}
+                                            </td>
+
+                                            <td>
+                                                ${escapeHtml(row.Barrier || "")}
+                                            </td>
+
+                                            <td class="latest-result-bell">
+                                                ${escapeHtml(bellPosition)}
+                                            </td>
+
+                                            <td>
+                                                ${escapeHtml(toProperCase(row.Trainer || ""))}
+                                            </td>
+
+                                            <td>
+                                                ${escapeHtml(toProperCase(row.Driver || ""))}
+                                            </td>
+
+                                            <td>
+                                                ${escapeHtml(formatMargin(row.Margin))}
+                                            </td>
+
+                                            <td class="latest-result-sp">
+                                                ${formatSP(row.SP, true)}
+                                            </td>
+
+                                            ${showBSP ? `
+                                                <td class="table-divider"></td>
+
+                                                <td class="runner-bsp">
+                                                    ${row.BSP_Win != null && row.BSP_Win !== ""
+                                                        ? `$${parseFloat(row.BSP_Win).toFixed(2)}`
+                                                        : ""
+                                                    }
+                                                </td>
+
+                                                <td class="runner-bsp">
+                                                    ${row.BSP_Place != null && row.BSP_Place !== ""
+                                                        ? `$${parseFloat(row.BSP_Place).toFixed(2)}`
+                                                        : ""
+                                                    }
+                                                </td>
+
+                                                <td class="table-divider"></td>
+                                            ` : ""}
+
+                                            <td>
+                                                ${
+                                                    row["Ind Half"] &&
+                                                    !isNaN(parseFloat(row["Ind Half"]))
+                                                        ? escapeHtml(
+                                                            parseFloat(row["Ind Half"]).toFixed(1)
+                                                        )
+                                                        : ""
+                                                }
+                                            </td>
+                                        </tr>
+                                    `;
+
+                                }).join("")}
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                `}
+
 
                 ${leadTime || q1 || q2 || q3 || q4 || mileRate ? `
                     <div class="latest-result-sections">
-                        ${leadTime ? `<span><strong>Lead Time:</strong> ${escapeHtml(leadTime)}</span>` : ""}
-                        ${q1 ? `<span><strong>Q1:</strong> ${escapeHtml(formatQuarter(q1))}</span>` : ""}
-                        ${q2 ? `<span><strong>Q2:</strong> ${escapeHtml(formatQuarter(q2))}</span>` : ""}
-                        ${q3 ? `<span><strong>Q3:</strong> ${escapeHtml(formatQuarter(q3))}</span>` : ""}
-                        ${q4 ? `<span><strong>Q4:</strong> ${escapeHtml(formatQuarter(q4))}</span>` : ""}
-                        ${mileRate ? `<span><strong>Mile Rate:</strong> ${escapeHtml(mileRate)}</span>` : ""}
+
+                        ${leadTime
+                            ? `<span><strong>Lead Time:</strong> ${escapeHtml(leadTime)}</span>`
+                            : ""
+                        }
+
+                        ${q1
+                            ? `<span><strong>Q1:</strong> ${escapeHtml(formatQuarter(q1))}</span>`
+                            : ""
+                        }
+
+                        ${q2
+                            ? `<span><strong>Q2:</strong> ${escapeHtml(formatQuarter(q2))}</span>`
+                            : ""
+                        }
+
+                        ${q3
+                            ? `<span><strong>Q3:</strong> ${escapeHtml(formatQuarter(q3))}</span>`
+                            : ""
+                        }
+
+                        ${q4
+                            ? `<span><strong>Q4:</strong> ${escapeHtml(formatQuarter(q4))}</span>`
+                            : ""
+                        }
+
+                        ${mileRate
+                            ? `<span><strong>Mile Rate:</strong> ${escapeHtml(mileRate)}</span>`
+                            : ""
+                        }
+
                     </div>
                 ` : ""}
-                ${renderTabDividendBox(normaliseRaceAnchor(race.raceKey))}
+
+                ${renderTabDividendBox(
+                    normaliseRaceAnchor(race.raceKey)
+                )}
+
             </div>
+
         </div>
     `;
 }
-
 function formatResultDate(dateStr) {
     if (!dateStr) return "";
 

@@ -9899,3 +9899,177 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 }
+
+/* =========================================================
+   MOBILE - FULL RESULT POPUP
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .latest-result-popup-mobile {
+        left: 12px !important;
+        right: 12px !important;
+
+        width: auto !important;
+        max-width: none !important;
+
+        max-height: 88vh !important;
+        overflow-y: auto !important;
+
+        padding: 14px !important;
+    }
+
+    .latest-result-popup-mobile .latest-result-popup-header {
+        margin-bottom: 10px !important;
+    }
+
+    .latest-result-popup-mobile .latest-result-popup-header h2 {
+        font-size: 15px !important;
+        line-height: 1.2 !important;
+    }
+
+    .latest-result-popup-mobile .latest-result-popup-header p {
+        font-size: 9px !important;
+        line-height: 1.25 !important;
+    }
+
+
+    /* -----------------------------
+       RUNNER LIST
+       ----------------------------- */
+
+    .mobile-result-runner-list {
+        display: grid;
+        gap: 0;
+    }
+
+    .mobile-result-runner-row {
+        padding: 9px 2px;
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.08);
+    }
+
+    .mobile-result-runner-top {
+        display: grid;
+
+        grid-template-columns:
+            34px
+            auto
+            auto
+            1fr
+            auto;
+
+        gap: 4px;
+        align-items: baseline;
+
+        min-width: 0;
+    }
+
+    .mobile-result-placing {
+        color: #86ff8b;
+
+        font-size: 10px;
+        font-weight: 950;
+
+        white-space: nowrap;
+    }
+
+    .mobile-result-horse {
+        color: #f4f7fb;
+
+        font-size: 11px;
+        font-weight: 950;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .mobile-result-barrier {
+        color: rgba(0,230,191,0.70);
+
+        font-size: 8px;
+        font-weight: 800;
+
+        white-space: nowrap;
+    }
+
+    .mobile-result-sp {
+        grid-column: 5;
+
+        color: #f4f7fb;
+
+        font-size: 10px;
+        font-weight: 900;
+
+        text-align: right;
+
+        white-space: nowrap;
+    }
+
+
+    /* Trainer / Driver */
+    .mobile-result-people {
+        margin-top: 2px;
+        margin-left: 38px;
+
+        color: rgba(255,255,255,0.68);
+
+        font-size: 8.5px;
+        font-weight: 650;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* Bell / margin / half */
+    .mobile-result-race-detail {
+        margin-top: 2px;
+        margin-left: 38px;
+
+        color: rgba(255,255,255,0.48);
+
+        font-size: 8px;
+        font-weight: 750;
+
+        white-space: nowrap;
+    }
+
+
+    /* -----------------------------
+       SECTIONALS
+       ----------------------------- */
+
+    .latest-result-popup-mobile .latest-result-sections {
+        display: flex !important;
+        flex-wrap: wrap !important;
+
+        gap: 6px 12px !important;
+
+        margin-top: 12px !important;
+        padding: 10px !important;
+
+        font-size: 8px !important;
+    }
+
+
+    /* -----------------------------
+       DIVIDENDS
+       ----------------------------- */
+
+    .latest-result-popup-mobile .latest-result-dividends {
+        display: flex !important;
+        flex-wrap: wrap !important;
+
+        gap: 6px 10px !important;
+
+        margin-top: 8px !important;
+
+        font-size: 8px !important;
+        line-height: 1.25 !important;
+    }
+
+}
