@@ -9391,3 +9391,128 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 }
+
+/* =========================================================
+   MOBILE - STABLE CHANGES COMPACT
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* -----------------------------
+       STATE FILTERS - ONE LINE
+       ----------------------------- */
+
+    .stable-change-filter {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 5px !important;
+
+        width: 100%;
+        margin: 10px 0 14px !important;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+    }
+
+    .stable-change-filter::-webkit-scrollbar {
+        display: none;
+    }
+
+    .stable-change-filter .driver-state-button {
+        flex: 0 0 auto;
+
+        padding: 6px 10px !important;
+
+        font-size: 10px !important;
+        line-height: 1 !important;
+    }
+
+
+    /* -----------------------------
+       STABLE CHANGE ROW
+       ----------------------------- */
+
+    .stable-change-row-one-line {
+        display: grid !important;
+
+        grid-template-columns:
+            58px
+            118px
+            minmax(0, 1fr) !important;
+
+        grid-template-areas:
+            "time race horse"
+            "time trainers trainers" !important;
+
+        column-gap: 8px !important;
+        row-gap: 3px !important;
+
+        width: 100%;
+        min-width: 0;
+
+        padding: 10px 9px !important;
+
+        border-radius: 12px !important;
+    }
+
+
+    /* Countdown */
+    .stable-change-row-one-line .stable-change-time {
+        grid-area: time !important;
+
+        font-size: 12px !important;
+        line-height: 1.1 !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* Venue / race / number */
+    .stable-change-row-one-line .stable-change-race {
+        grid-area: race !important;
+
+        width: auto !important;
+        min-width: 0 !important;
+
+        font-size: 9px !important;
+        line-height: 1.1 !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+
+    /* Horse */
+    .stable-change-row-one-line .stable-change-horse {
+        grid-area: horse !important;
+
+        min-width: 0 !important;
+        padding-left: 0 !important;
+
+        font-size: 11px !important;
+        line-height: 1.1 !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+
+    /* Trainer change */
+    .stable-change-row-one-line .stable-change-trainers {
+        grid-area: trainers !important;
+
+        min-width: 0 !important;
+
+        font-size: 9.5px !important;
+        line-height: 1.15 !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+}
