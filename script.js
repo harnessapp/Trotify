@@ -4705,9 +4705,11 @@ function renderLatestResultCard(race) {
 
                 ${isMobile && (winnerTrainer || winnerDriver) ? `
                     <div class="latest-result-mobile-people">
+                        (
                         ${escapeHtml(winnerTrainer)}
-                        ${winnerTrainer && winnerDriver ? " • " : ""}
+                        ${winnerTrainer && winnerDriver ? " - " : ""}
                         ${escapeHtml(winnerDriver)}
+                        )
                     </div>
                 ` : ""}
 
