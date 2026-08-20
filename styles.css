@@ -9558,3 +9558,78 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 }
+
+/* =========================================================
+   MOBILE - DRIVERS / TRAINERS TRUE SINGLE COLUMN
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .drivers-layout {
+        display: flex !important;
+        flex-direction: column !important;
+
+        grid-template-columns: none !important;
+
+        gap: 10px !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .mobile-driver-table-selector {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 0 10px 0 !important;
+    }
+
+    .mobile-driver-table-selector select {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        box-sizing: border-box !important;
+
+        padding: 10px 36px 10px 12px !important;
+
+        border: 1px solid rgba(0, 230, 191, 0.45) !important;
+        border-radius: 11px !important;
+
+        background: #12202c !important;
+        color: #ffffff !important;
+
+        font-family: inherit !important;
+        font-size: 12px !important;
+        font-weight: 800 !important;
+
+        appearance: auto;
+    }
+
+    .drivers-table-panel {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+    }
+
+    .driver-table-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .table-scroll {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow-x: auto !important;
+    }
+}
