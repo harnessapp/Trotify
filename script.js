@@ -9342,7 +9342,7 @@ async function showTrainersView() {
                 </div>
             `}
 
-            <div class="drivers-table-panel" id="driversTablePanel">
+            <div class="drivers-table-panel" id="trainersTablePanel">
                 <div class="coming-soon-card">
                     <div class="coming-soon-title">
                         Loading trainer table...
