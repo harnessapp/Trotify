@@ -5027,8 +5027,10 @@ function renderLatestResultPopup(race, showBSP = false) {
                             const driver =
                                 toProperCase(row.Driver || "");
 
+                            const marginRaw = formatMargin(row.Margin);
+
                             const margin =
-                                formatMargin(row.Margin);
+                                marginRaw ? `btn ${marginRaw}` : "";
 
                             const sp =
                                 formatSP(row.SP, true);
@@ -5036,7 +5038,7 @@ function renderLatestResultPopup(race, showBSP = false) {
                             const indHalf =
                                 row["Ind Half"] &&
                                 !isNaN(parseFloat(row["Ind Half"]))
-                                    ? parseFloat(row["Ind Half"]).toFixed(1)
+                                    ? `ELH ${parseFloat(row["Ind Half"]).toFixed(1)}`
                                     : "";
 
                             const lowerParts = [
