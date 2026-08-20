@@ -10184,3 +10184,27 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 }
+
+/* =========================================================
+   iOS SAFARI - PREVENT TROTIFY WIRE TEXT AUTO-ENLARGEMENT
+   ========================================================= */
+
+.trotify-wire,
+.wire-track-wrap,
+.wire-track,
+.wire-copy {
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+}
+
+@media (max-width: 700px) {
+    .wire-track {
+        font-size: 12px !important;
+        line-height: 18px !important;
+    }
+
+    .wire-copy {
+        font-size: inherit !important;
+        line-height: inherit !important;
+    }
+}
