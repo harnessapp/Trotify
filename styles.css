@@ -9375,3 +9375,11 @@ body.race-chart-social .race-chart-stage-card::after {
         text-align: left !important;
     }
 }
+
+@media (max-width: 700px) {
+
+    .upcoming-meeting-button .meeting-main {
+        text-align: left !important;
+    }
+
+}
