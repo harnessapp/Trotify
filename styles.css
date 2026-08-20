@@ -9835,3 +9835,23 @@ body.race-chart-social .race-chart-stage-card::after {
         white-space: nowrap !important;
     }
 }
+
+@media (max-width: 700px) {
+
+    .sidebar .nav-item[data-view="stable-changes"] {
+        order: -4;
+    }
+
+    .sidebar .nav-item[data-view="drivers"] {
+        order: -3;
+    }
+
+    .sidebar .nav-item[data-view="trainers"] {
+        order: -2;
+    }
+
+    .sidebar .nav-item[data-view="latest-results"] {
+        order: -1;
+    }
+
+}
