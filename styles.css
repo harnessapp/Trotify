@@ -10073,3 +10073,25 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 }
+
+/* =========================================================
+   MOBILE LATEST RESULTS - STATES ON ONE ROW
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    #latestResultsStateFilters {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 6px !important;
+        width: 100% !important;
+    }
+
+    #latestResultsStateFilters button {
+        min-width: 0 !important;
+        padding: 8px 12px !important;
+        font-size: 11px !important;
+        flex: 1 1 0 !important;
+        white-space: nowrap !important;
+    }
+}
