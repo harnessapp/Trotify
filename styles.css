@@ -6742,16 +6742,24 @@ body.race-chart-social .race-chart-stage-card::after {
        Desktop navigation remains unchanged
        ----------------------------------------------------- */
 
-    .sidebar .nav-item[data-view="home"] {
-        order: -3;
-    }
+    @media (max-width: 700px) {
 
-    .sidebar .nav-item[data-view="next-up"] {
-        order: -2;
-    }
+        .sidebar .nav-item[data-view="home"] {
+            order: -4;
+        }
 
-    .sidebar .nav-item[data-view="upcoming"] {
-        order: -1;
+        .sidebar .nav-item[data-view="next-up"] {
+            order: -3;
+        }
+
+        .sidebar .nav-item[data-view="upcoming"] {
+            order: -2;
+        }
+
+        .sidebar .nav-item[data-view="stable-changes"] {
+            order: -1;
+        }
+
     }
 
 
