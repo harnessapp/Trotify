@@ -9855,3 +9855,31 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 }
+
+/* =========================================================
+   MOBILE - LATEST RESULTS CLEAN CARDS
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .latest-result-card-mobile {
+        cursor: pointer !important;
+        touch-action: manipulation;
+    }
+
+    .latest-result-mobile-people {
+        margin-top: 2px;
+        margin-left: 25px;
+
+        color: rgba(255, 255, 255, 0.62);
+
+        font-size: 9px;
+        font-weight: 650;
+        line-height: 1.2;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}

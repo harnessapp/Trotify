@@ -4647,53 +4647,100 @@ function renderLatestResultCard(race) {
     const winner = runners.find(r => clean(r.Placing || "") === "1");
     const placings = runners.filter(r => ["2", "3"].includes(clean(r.Placing || "")));
 
-    const winnerHorse = winner ? clean(winner.Horse || "").toUpperCase() : "RESULT CAPTURED";
-    const winnerSp = winner ? formatSP(winner.SP, true) : "";
-    const winnerTrainer = winner ? toProperCase(clean(winner.Trainer || "")) : "";
-    const winnerDriver = winner ? toProperCase(clean(winner.Driver || "")) : "";
+    const winnerHorse = winner
+        ? clean(winner.Horse || "").toUpperCase()
+        : "RESULT CAPTURED";
 
-    const isNewResult = latestResultNewRaceKeys.has(normaliseRaceAnchor(race.raceKey));
+    const winnerSp = winner
+        ? formatSP(winner.SP, true)
+        : "";
 
-        return `
-            <div class="latest-result-card ${isNewResult ? "latest-result-card-new" : ""}">
+    const winnerTrainer = winner
+        ? toProperCase(clean(winner.Trainer || ""))
+        : "";
+
+    const winnerDriver = winner
+        ? toProperCase(clean(winner.Driver || ""))
+        : "";
+
+    const isNewResult =
+        latestResultNewRaceKeys.has(
+            normaliseRaceAnchor(race.raceKey)
+        );
+
+    const isMobile = window.innerWidth <= 700;
+
+    return `
+        <div
+            class="latest-result-card ${isNewResult ? "latest-result-card-new" : ""} ${isMobile ? "latest-result-card-mobile" : ""}"
+            ${isMobile
+                ? `onclick="openLatestResultPopup('${escapeHtml(race.raceKey)}')"`
+                : ""
+            }
+        >
             <div class="latest-result-time">
                 ${race.time || "TBC"}
             </div>
 
             <div class="latest-result-race">
-                ${escapeHtml(shortVenueName(race.venue))} R${escapeHtml(race.raceNo)}
-                ${race.state ? `<span>${escapeHtml(race.state)}</span>` : ""}
+                ${escapeHtml(shortVenueName(race.venue))}
+                R${escapeHtml(race.raceNo)}
+
+                ${race.state
+                    ? `<span>${escapeHtml(race.state)}</span>`
+                    : ""
+                }
             </div>
 
             <div class="latest-result-main">
+
                 <div class="latest-result-winner">
                     🥇 ${escapeHtml(winnerHorse)}
-                    ${winnerSp ? `<span>${escapeHtml(winnerSp)}</span>` : ""}
-                    ${winnerTrainer || winnerDriver ? `
-                        <span class="latest-result-trainer-driver">
-                            ${escapeHtml(winnerTrainer)}
-                            ${winnerTrainer && winnerDriver ? " • " : ""}
-                            ${escapeHtml(winnerDriver)}
-                        </span>
-                    ` : ""}
+
+                    ${winnerSp
+                        ? `<span>${escapeHtml(winnerSp)}</span>`
+                        : ""
+                    }
                 </div>
+
+                ${isMobile && (winnerTrainer || winnerDriver) ? `
+                    <div class="latest-result-mobile-people">
+                        ${escapeHtml(winnerTrainer)}
+                        ${winnerTrainer && winnerDriver ? " • " : ""}
+                        ${escapeHtml(winnerDriver)}
+                    </div>
+                ` : ""}
+
+                ${!isMobile && (winnerTrainer || winnerDriver) ? `
+                    <div class="latest-result-trainer-driver">
+                        ${escapeHtml(winnerTrainer)}
+                        ${winnerTrainer && winnerDriver ? " • " : ""}
+                        ${escapeHtml(winnerDriver)}
+                    </div>
+                ` : ""}
 
                 <div class="latest-result-placings">
                     ${placings.map(renderLatestResultPlacing).join("")}
                 </div>
             </div>
 
-            <div class="latest-result-actions">
-                <button class="latest-result-details-button"
-                    onclick="openLatestResultPopup('${escapeHtml(race.raceKey)}')">
-                    Details
-                </button>
+            ${!isMobile ? `
+                <div class="latest-result-actions">
 
-                <button class="latest-result-details-button"
-                    onclick="openFieldFromLatestResult('${escapeHtml(race.raceKey)}')">
-                    Field
-                </button>
-            </div>
+                    <button
+                        class="latest-result-details-button"
+                        onclick="openLatestResultPopup('${escapeHtml(race.raceKey)}')">
+                        Details
+                    </button>
+
+                    <button
+                        class="latest-result-details-button"
+                        onclick="openFieldFromLatestResult('${escapeHtml(race.raceKey)}')">
+                        Field
+                    </button>
+
+                </div>
+            ` : ""}
         </div>
     `;
 }
