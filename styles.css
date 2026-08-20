@@ -10232,3 +10232,12 @@ body.race-chart-social .race-chart-stage-card::after {
         font-size: 12px !important;
     }
 }
+
+@media (max-width: 700px) {
+
+    .wire-horse {
+        margin-left: 2px !important;
+        margin-right: 4px !important;
+    }
+
+}
