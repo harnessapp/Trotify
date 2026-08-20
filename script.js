@@ -9438,6 +9438,7 @@ function renderTrainerTable(title, rows) {
         h !== "Spend" &&
         h !== "P&L"
     );
+
     const trainerStateMap = buildTrainerStateMap(allRows);
 
     const filteredRows = selectedTrainerState === "ALL"
@@ -9448,6 +9449,86 @@ function renderTrainerTable(title, rows) {
             return states.has(selectedTrainerState);
         });
 
+    const isMobile = window.innerWidth <= 700;
+
+    if (isMobile) {
+        return `
+            <div class="driver-table-card mobile-person-table">
+
+                <div class="driver-state-filter mobile-person-state-filter">
+                    ${["ALL", "VIC", "NSW", "QLD", "SA", "WA", "TAS"].map(state => `
+                        <button
+                            class="driver-state-button ${selectedTrainerState === state ? "selected" : ""}"
+                            onclick="setTrainerStateFilter('${state}')"
+                        >
+                            ${state}
+                        </button>
+                    `).join("")}
+                </div>
+
+                <div class="mobile-person-table-list">
+
+                    ${filteredRows.map(row => {
+
+                        const name =
+                            clean(row.Trainer || "");
+
+                        const starts =
+                            formatWholeNumber(row.Starts || "");
+
+                        const wins =
+                            formatWholeNumber(row.Wins || row.Win || "");
+
+                        const seconds =
+                            formatWholeNumber(row["2nds"] || "");
+
+                        const thirds =
+                            formatWholeNumber(row["3rds"] || "");
+
+                        const roiNum =
+                            parseNumber(row["ROI %"]);
+
+                        const roiText =
+                            Number.isFinite(roiNum)
+                                ? `${roiNum > 0 ? "+" : ""}${roiNum.toFixed(1)}%`
+                                : "";
+
+                        const roiClass =
+                            roiNum > 0
+                                ? "positive"
+                                : roiNum < 0
+                                    ? "negative"
+                                    : "";
+
+                        return `
+                            <div class="mobile-person-table-row ${roiNum > 0 ? "positive-roi-row" : ""}">
+
+                                <span class="mobile-person-name">
+                                    ${escapeHtml(name)}
+                                </span>
+
+                                <span class="mobile-person-record">
+                                    ${escapeHtml(starts || "0")}:
+                                    ${escapeHtml(wins || "0")}-
+                                    ${escapeHtml(seconds || "0")}-
+                                    ${escapeHtml(thirds || "0")}
+                                </span>
+
+                                <span class="mobile-person-roi ${roiClass}">
+                                    ${escapeHtml(roiText)}
+                                </span>
+
+                            </div>
+                        `;
+                    }).join("")}
+
+                </div>
+
+            </div>
+        `;
+    }
+
+    /* DESKTOP */
     return `
         <div class="driver-table-card">
             <div class="driver-table-header">
@@ -9455,13 +9536,18 @@ function renderTrainerTable(title, rows) {
                     <div class="race-panel-eyebrow">Trainer table</div>
                     <h2>${escapeHtml(title)}</h2>
                 </div>
-                <div class="driver-count-pill">${filteredRows.length} rows</div>
+
+                <div class="driver-count-pill">
+                    ${filteredRows.length} rows
+                </div>
             </div>
 
             <div class="driver-state-filter">
                 ${["ALL", "VIC", "NSW", "QLD", "SA", "WA", "TAS"].map(state => `
-                    <button class="driver-state-button ${selectedTrainerState === state ? "selected" : ""}"
-                        onclick="setTrainerStateFilter('${state}')">
+                    <button
+                        class="driver-state-button ${selectedTrainerState === state ? "selected" : ""}"
+                        onclick="setTrainerStateFilter('${state}')"
+                    >
                         ${state}
                     </button>
                 `).join("")}
@@ -9471,19 +9557,39 @@ function renderTrainerTable(title, rows) {
                 <table class="data-table">
                     <thead>
                         <tr>
-                            ${headers.map(h => `<th>${escapeHtml(h)}</th>`).join("")}
+                            ${headers.map(h => `
+                                <th>${escapeHtml(h)}</th>
+                            `).join("")}
                         </tr>
                     </thead>
+
                     <tbody>
                         ${filteredRows.map(row => {
                             const spend = parseNumber(row["Spend"]);
                             const pnl = parseNumber(row["P&L"]);
-                            const roi = spend > 0 ? (pnl / spend) * 100 : null;
-                            const positiveClass = roi !== null && roi > 0 ? "positive-roi-row" : "";
+                            const roi =
+                                spend > 0
+                                    ? (pnl / spend) * 100
+                                    : null;
+
+                            const positiveClass =
+                                roi !== null && roi > 0
+                                    ? "positive-roi-row"
+                                    : "";
 
                             return `
                                 <tr class="${positiveClass}">
-                                    ${headers.map(h => `<td>${escapeHtml(formatDriverTableValue(h, row[h], roi))}</td>`).join("")}
+                                    ${headers.map(h => `
+                                        <td>
+                                            ${escapeHtml(
+                                                formatDriverTableValue(
+                                                    h,
+                                                    row[h],
+                                                    roi
+                                                )
+                                            )}
+                                        </td>
+                                    `).join("")}
                                 </tr>
                             `;
                         }).join("")}
@@ -9497,10 +9603,34 @@ function renderTrainerTable(title, rows) {
 function setTrainerStateFilter(state) {
     selectedTrainerState = state;
 
-    const selectedTile = document.querySelector(".driver-table-tile.selected");
-    if (!selectedTile) return;
+    let table = null;
 
-    const table = TRAINER_TABLES.find(t => t.file === selectedTile.dataset.file);
+    if (window.innerWidth <= 700) {
+        const select =
+            document.getElementById(
+                "mobileTrainerTableSelect"
+            );
+
+        if (select) {
+            table =
+                TRAINER_TABLES.find(
+                    t => t.file === select.value
+                );
+        }
+    } else {
+        const selectedTile =
+            document.querySelector(
+                ".driver-table-tile.selected"
+            );
+
+        if (selectedTile) {
+            table =
+                TRAINER_TABLES.find(
+                    t => t.file === selectedTile.dataset.file
+                );
+        }
+    }
+
     if (table) {
         renderSelectedTrainerTable(table);
     }
@@ -9574,6 +9704,7 @@ function renderDriverTable(title, rows) {
         h !== "Spend" &&
         h !== "P&L"
     );
+
     const driverStateMap = buildDriverStateMap(allRows);
 
     const filteredRows = selectedDriverState === "ALL"
@@ -9584,6 +9715,86 @@ function renderDriverTable(title, rows) {
             return states.has(selectedDriverState);
         });
 
+    const isMobile = window.innerWidth <= 700;
+
+    if (isMobile) {
+        return `
+            <div class="driver-table-card mobile-person-table">
+
+                <div class="driver-state-filter mobile-person-state-filter">
+                    ${["ALL", "VIC", "NSW", "QLD", "SA", "WA", "TAS"].map(state => `
+                        <button
+                            class="driver-state-button ${selectedDriverState === state ? "selected" : ""}"
+                            onclick="setDriverStateFilter('${state}')"
+                        >
+                            ${state}
+                        </button>
+                    `).join("")}
+                </div>
+
+                <div class="mobile-person-table-list">
+
+                    ${filteredRows.map(row => {
+
+                        const name =
+                            clean(row.Driver || "");
+
+                        const starts =
+                            formatWholeNumber(row.Starts || "");
+
+                        const wins =
+                            formatWholeNumber(row.Wins || row.Win || "");
+
+                        const seconds =
+                            formatWholeNumber(row["2nds"] || "");
+
+                        const thirds =
+                            formatWholeNumber(row["3rds"] || "");
+
+                        const roiNum =
+                            parseNumber(row["ROI %"]);
+
+                        const roiText =
+                            Number.isFinite(roiNum)
+                                ? `${roiNum > 0 ? "+" : ""}${roiNum.toFixed(1)}%`
+                                : "";
+
+                        const roiClass =
+                            roiNum > 0
+                                ? "positive"
+                                : roiNum < 0
+                                    ? "negative"
+                                    : "";
+
+                        return `
+                            <div class="mobile-person-table-row ${roiNum > 0 ? "positive-roi-row" : ""}">
+
+                                <span class="mobile-person-name">
+                                    ${escapeHtml(name)}
+                                </span>
+
+                                <span class="mobile-person-record">
+                                    ${escapeHtml(starts || "0")}:
+                                    ${escapeHtml(wins || "0")}-
+                                    ${escapeHtml(seconds || "0")}-
+                                    ${escapeHtml(thirds || "0")}
+                                </span>
+
+                                <span class="mobile-person-roi ${roiClass}">
+                                    ${escapeHtml(roiText)}
+                                </span>
+
+                            </div>
+                        `;
+                    }).join("")}
+
+                </div>
+
+            </div>
+        `;
+    }
+
+    /* DESKTOP - KEEP EXISTING TABLE */
     return `
         <div class="driver-table-card">
             <div class="driver-table-header">
@@ -9591,13 +9802,18 @@ function renderDriverTable(title, rows) {
                     <div class="race-panel-eyebrow">Driver table</div>
                     <h2>${escapeHtml(title)}</h2>
                 </div>
-                <div class="driver-count-pill">${filteredRows.length} rows</div>
+
+                <div class="driver-count-pill">
+                    ${filteredRows.length} rows
+                </div>
             </div>
 
             <div class="driver-state-filter">
                 ${["ALL", "VIC", "NSW", "QLD", "SA", "WA", "TAS"].map(state => `
-                    <button class="driver-state-button ${selectedDriverState === state ? "selected" : ""}"
-                        onclick="setDriverStateFilter('${state}')">
+                    <button
+                        class="driver-state-button ${selectedDriverState === state ? "selected" : ""}"
+                        onclick="setDriverStateFilter('${state}')"
+                    >
                         ${state}
                     </button>
                 `).join("")}
@@ -9607,19 +9823,39 @@ function renderDriverTable(title, rows) {
                 <table class="data-table">
                     <thead>
                         <tr>
-                            ${headers.map(h => `<th>${escapeHtml(h)}</th>`).join("")}
+                            ${headers.map(h => `
+                                <th>${escapeHtml(h)}</th>
+                            `).join("")}
                         </tr>
                     </thead>
+
                     <tbody>
                         ${filteredRows.map(row => {
                             const spend = parseNumber(row["Spend"]);
                             const pnl = parseNumber(row["P&L"]);
-                            const roi = spend > 0 ? (pnl / spend) * 100 : null;
-                            const positiveClass = roi !== null && roi > 0 ? "positive-roi-row" : "";
+                            const roi =
+                                spend > 0
+                                    ? (pnl / spend) * 100
+                                    : null;
+
+                            const positiveClass =
+                                roi !== null && roi > 0
+                                    ? "positive-roi-row"
+                                    : "";
 
                             return `
                                 <tr class="${positiveClass}">
-                                    ${headers.map(h => `<td>${escapeHtml(formatDriverTableValue(h, row[h], roi))}</td>`).join("")}
+                                    ${headers.map(h => `
+                                        <td>
+                                            ${escapeHtml(
+                                                formatDriverTableValue(
+                                                    h,
+                                                    row[h],
+                                                    roi
+                                                )
+                                            )}
+                                        </td>
+                                    `).join("")}
                                 </tr>
                             `;
                         }).join("")}
@@ -9633,10 +9869,32 @@ function renderDriverTable(title, rows) {
 function setDriverStateFilter(state) {
     selectedDriverState = state;
 
-    const selectedTile = document.querySelector(".driver-table-tile.selected");
-    if (!selectedTile) return;
+    let table = null;
 
-    const table = DRIVER_TABLES.find(t => t.file === selectedTile.dataset.file);
+    if (window.innerWidth <= 700) {
+        const select =
+            document.getElementById("mobileDriverTableSelect");
+
+        if (select) {
+            table =
+                DRIVER_TABLES.find(
+                    t => t.file === select.value
+                );
+        }
+    } else {
+        const selectedTile =
+            document.querySelector(
+                ".driver-table-tile.selected"
+            );
+
+        if (selectedTile) {
+            table =
+                DRIVER_TABLES.find(
+                    t => t.file === selectedTile.dataset.file
+                );
+        }
+    }
+
     if (table) {
         renderSelectedDriverTable(table);
     }
