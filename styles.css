@@ -10241,3 +10241,27 @@ body.race-chart-social .race-chart-stage-card::after {
     }
 
 }
+
+/* TEMP DESKTOP GRID TEST */
+@media (min-width: 701px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+/* TEMP DESKTOP WIDTH CONTAINMENT TEST */
+@media (min-width: 701px) {
+
+    .app-shell {
+        grid-template-columns: 300px minmax(0, 1fr) !important;
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .main {
+        min-width: 0 !important;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}
