@@ -10315,6 +10315,7 @@ function parseNumber(value) {
 
 
 async function showDailyWrapsView() {
+    resetMobileViewScroll();
     document.querySelector(".hero").style.display = "none";
     document.querySelector(".dashboard-grid").style.display = "none";
     document.querySelector(".meetings-panel").style.display = "";
