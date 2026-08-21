@@ -2765,6 +2765,7 @@ function showUpcomingFieldsView() {
 }
 
 function showStableChangesView() {
+    resetMobileViewScroll();
     stopTimelineRefresh();
     document.querySelector(".hero").style.display = "none";
     document.querySelector(".dashboard-grid").style.display = "none";
