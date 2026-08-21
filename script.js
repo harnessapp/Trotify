@@ -736,6 +736,31 @@ function selectRace(venue, state, dateValue, raceNo) {
     }
 }
 
+function resetMobileViewScroll() {
+    if (window.innerWidth > 700) return;
+
+    document.documentElement.style.scrollBehavior = "auto";
+    document.body.style.scrollBehavior = "auto";
+
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    requestAnimationFrame(() => {
+        window.scrollTo(0, 0);
+
+        requestAnimationFrame(() => {
+            window.scrollTo(0, 0);
+        });
+    });
+
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 100);
+}
+
+function setupNavigation() {
+
 function setupNavigation() {
     document.querySelectorAll(".nav-item").forEach(item => {
         item.addEventListener("click", function (e) {
@@ -785,11 +810,8 @@ function setupNavigation() {
             } else {
                 showComingSoonView(this.innerText.trim());
             }
-            if (window.innerWidth <= 700) {
-                setTimeout(() => {
-                    window.scrollTo(0, 0);
-                }, 0);
-            }
+
+            resetMobileViewScroll();
         });
     });
 }
