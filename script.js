@@ -2741,6 +2741,7 @@ function showHomeView() {
 }
 
 function showUpcomingFieldsView() {
+    resetMobileViewScroll();
     if (nextUpPageTimer) {
         clearInterval(nextUpPageTimer);
         nextUpPageTimer = null;
@@ -9450,6 +9451,7 @@ function formatWholeNumber(value) {
 }
 
 async function showDriversView() {
+    resetMobileViewScroll();
     stopTimelineRefresh();
 
     document.querySelector(".hero").style.display = "none";
@@ -9654,6 +9656,7 @@ async function loadLast30Preview(file, elementId, nameColumn, type) {
 }
 
 async function showTrainersView() {
+    resetMobileViewScroll();
     stopTimelineRefresh();
 
     document.querySelector(".hero").style.display = "none";
