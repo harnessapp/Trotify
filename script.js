@@ -760,8 +760,6 @@ function resetMobileViewScroll() {
 }
 
 function setupNavigation() {
-
-function setupNavigation() {
     document.querySelectorAll(".nav-item").forEach(item => {
         item.addEventListener("click", function (e) {
             e.preventDefault();
