@@ -785,6 +785,11 @@ function setupNavigation() {
             } else {
                 showComingSoonView(this.innerText.trim());
             }
+            if (window.innerWidth <= 700) {
+                setTimeout(() => {
+                    window.scrollTo(0, 0);
+                }, 0);
+            }
         });
     });
 }

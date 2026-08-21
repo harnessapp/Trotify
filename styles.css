@@ -10265,3 +10265,53 @@ body.race-chart-social .race-chart-stage-card::after {
         overflow-x: hidden;
     }
 }
+
+/* =========================================================
+   MOBILE - DAILY WRAPS CLEANUP
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Hide Editorial Archive + Harness Daily Wraps */
+    .daily-wraps-toolbar > div:first-child {
+        display: none !important;
+    }
+
+    /* Dropdown gets the full available width */
+    .daily-wraps-toolbar {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 12px !important;
+    }
+
+    .daily-wrap-controls {
+        width: 100% !important;
+    }
+
+    .daily-wrap-controls select {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Hide duplicate green date */
+    .daily-wrap-title-row > span {
+        display: none !important;
+    }
+
+    /* Date/title can use full width */
+    .daily-wrap-title-row {
+        display: block !important;
+    }
+
+    /*
+       Horse names / bold text inside wrap copy
+       must remain same size as surrounding paragraph
+    */
+    .daily-wrap-body strong,
+    .daily-wrap-body b {
+        font-size: inherit !important;
+        line-height: inherit !important;
+        font-weight: 800 !important;
+    }
+}
