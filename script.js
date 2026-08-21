@@ -4135,6 +4135,7 @@ function stopLatestResultsRefresh() {
 }
 
 function showLatestResultsView() {
+    resetMobileViewScroll();
     stopTimelineRefresh();
     clearNextUpTimer();
 
