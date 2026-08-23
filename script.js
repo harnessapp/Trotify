@@ -5222,7 +5222,7 @@ function renderLatestResultPopup(race, showBSP = false) {
                                                 </div>
 
                                                 ${showBSP ? `
-                                                    <div class="mobile-result-people mobile-result-bsp">
+                                                    <div class="mobile-result-bsp">
                                                         BSP
                                                         ${
                                                             row.BSP_Win != null && row.BSP_Win !== ""
