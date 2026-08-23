@@ -10443,7 +10443,7 @@ body.race-chart-social .race-chart-stage-card::after {
         max-width: none !important;
         margin: 0 !important;
 
-        transform: translateX(-72px) scale(0.34) !important;
+        transform: translateX(-99px) scale(0.34) !important;
         transform-origin: top left !important;
     }
 
