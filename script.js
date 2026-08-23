@@ -9746,16 +9746,22 @@ async function loadLast30Preview(file, elementId, nameColumn, type) {
                 ? `${Math.round(roiValue)}%`
                 : "";
 
-            const record = `${starts}:${wins}-${places}`;
+            const record = `${starts}: ${wins} - ${places}`;
             const roiClassName = roiValue > 0 ? "roi-positive" : roiValue < 0 ? "roi-negative" : "roi-neutral";
 
             return `
                 <div class="last30-row">
                     <span>${escapeHtml(name)}</span>
-                    <strong>
-                        ${escapeHtml(record)}
-                        <span class="${roiClassName}">${escapeHtml(roi)}</span>
-                    </strong>
+
+                    <div class="last30-stats">
+                        <strong class="last30-record">
+                            ${escapeHtml(record)}
+                        </strong>
+
+                        <span class="last30-roi ${roiClassName}">
+                            ${escapeHtml(roi)}
+                        </span>
+                    </div>
                 </div>
             `;
         }).join("");

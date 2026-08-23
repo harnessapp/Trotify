@@ -10483,3 +10483,21 @@ body.race-chart-social .race-chart-stage-card::after {
     .dashboard-grid > :nth-child(5) { order: 5; } /* Latest Daily Wrap */
     .dashboard-grid > :nth-child(6) { order: 3; } /* Latest Results */
 }
+
+.last30-stats {
+    display: grid;
+    grid-template-columns: 110px 44px;
+    justify-content: end;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.last30-record {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.last30-roi {
+    text-align: right;
+    white-space: nowrap;
+}
