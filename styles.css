@@ -10486,10 +10486,11 @@ body.race-chart-social .race-chart-stage-card::after {
 
 .last30-stats {
     display: grid;
-    grid-template-columns: 110px 44px;
+    grid-template-columns: 125px 44px;
     justify-content: end;
     align-items: center;
-    column-gap: 8px;
+    column-gap: 6px;
+    margin-left: 10px;
 }
 
 .last30-record {
@@ -10500,4 +10501,13 @@ body.race-chart-social .race-chart-stage-card::after {
 .last30-roi {
     text-align: right;
     white-space: nowrap;
+}
+
+.last30-row > span:first-child {
+    flex: 0 1 48%;
+    min-width: 0;
+}
+
+.last30-stats {
+    flex: 1;
 }
