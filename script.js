@@ -6898,11 +6898,29 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                     if (start.toLowerCase().includes("stand") && !isScratched) {
                         const currentMetres = getStandMetresFromBarrier(barrier);
 
-                        const prevRow = sortedRows[index - 1];
-                        const prevBarrier = prevRow ? clean(prevRow.Barrier || prevRow.BARRIER || "") : "";
-                        const prevBarrierUpper = prevBarrier.toUpperCase();
-                        const prevIsScratched = prevBarrierUpper.startsWith("SCR") || prevBarrierUpper.includes("SCRATCH");
-                        const prevMetres = prevIsScratched ? "" : getStandMetresFromBarrier(prevBarrier);
+                        let prevMetres = "";
+
+                        for (let i = index - 1; i >= 0; i--) {
+                            const prevRow = sortedRows[i];
+                            const prevBarrier = clean(
+                                prevRow.Barrier ||
+                                prevRow.BARRIER ||
+                                ""
+                            );
+
+                            const prevBarrierUpper = prevBarrier.toUpperCase();
+
+                            const prevIsScratched =
+                                prevBarrierUpper.startsWith("SCR") ||
+                                prevBarrierUpper.includes("SCRATCH");
+
+                            if (prevIsScratched) {
+                                continue;
+                            }
+
+                            prevMetres = getStandMetresFromBarrier(prevBarrier);
+                            break;
+                        }
 
                         if (currentMetres && currentMetres !== prevMetres) {
                             dividerLabel = `${currentMetres} METRES`;
