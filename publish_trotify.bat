@@ -17,6 +17,14 @@ if errorlevel 1 (
     exit /b 1
 )
 
+REM Refresh merged_meta.json from the scraper folder.
+echo Copying latest merged_meta.json...
+copy /Y "C:\harness_scraper\harness_api\merged_meta.json" "C:\trotify_dashboard\merged_meta.json"
+if errorlevel 1 (
+    echo ERROR: Failed to copy merged_meta.json.
+    exit /b 1
+)
+
 REM Make sure the large race chart file is ignored by Git.
 git check-ignore -q chart_race_data.json
 if errorlevel 1 (
