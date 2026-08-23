@@ -6544,10 +6544,21 @@ function formatRecordTime(value) {
 function getStandMetresFromBarrier(barrier) {
     const text = clean(barrier || "").toUpperCase();
 
-    const match = text.match(/(\d+)\s*M/);
-    if (!match) return "";
+    // Old format: 10m, 20m, 30m etc
+    let match = text.match(/^(\d+)\s*M\b/);
 
-    return match[1];
+    if (match) {
+        return match[1];
+    }
+
+    // New HRA format: 10 Fr1, 20 Fr1, 30 Fr1 etc
+    match = text.match(/^(\d+)\s+FR\d+\b/);
+
+    if (match) {
+        return match[1];
+    }
+
+    return "";
 }
 
 function renderMobileVenueStats(row) {
