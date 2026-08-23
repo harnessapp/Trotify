@@ -6976,7 +6976,7 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                                             ${trainer ? `
                                                 <span class="runner-mobile-trainer">
                                                     • <span class="stat-hover">
-                                                        ${escapeHtml(truncateMobileName(trainer, 18))}
+                                                        ${escapeHtml(truncateMobileName(trainer, 12))}
                                                         ${renderPersonStatsTooltip(row, "trainer")}
                                                     </span>
                                                 </span>
@@ -6985,7 +6985,7 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                                             ${driver ? `
                                                 <span class="runner-mobile-driver">
                                                     • <span class="stat-hover">
-                                                        ${escapeHtml(truncateMobileName(driver, 18))}
+                                                        ${escapeHtml(truncateMobileName(driver, 12))}
                                                         ${renderPersonStatsTooltip(row, "driver")}
                                                     </span>
                                                 </span>
