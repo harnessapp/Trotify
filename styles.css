@@ -10359,7 +10359,8 @@ body.race-chart-social .race-chart-stage-card::after {
         font-size: 7px !important;
         line-height: 1.1 !important;
         font-weight: 500 !important;
-        opacity: 0.65 !important;
+        opacity: 1 !important;
+        color: #ffffff !important;
         white-space: nowrap !important;
     }
 }
