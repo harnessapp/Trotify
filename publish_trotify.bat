@@ -32,9 +32,7 @@ if not exist "C:\trotify_dashboard\data" (
     mkdir "C:\trotify_dashboard\data"
 )
 
-copy /Y ^
-"C:\harness_scraper\harness_api\first100.json" ^
-"C:\trotify_dashboard\data\first100.json"
+copy /Y "C:\harness_scraper\harness_api\first100.json" "C:\trotify_dashboard\data\first100.json"
 
 if errorlevel 1 (
     echo ERROR: Failed to copy first100.json.
