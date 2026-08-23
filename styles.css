@@ -10366,22 +10366,16 @@ body.race-chart-social .race-chart-stage-card::after {
 }
 
 @media (max-width: 700px) {
-    .mobile-result-sp {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-end !important;
-    }
 
-    .mobile-result-bsp {
-        margin-top: 2px !important;
-        font-size: 10px !important;
-        font-weight: 700 !important;
+    /* SP stays on the top/right line */
+    .mobile-result-sp {
+        display: block !important;
+        text-align: right !important;
         white-space: nowrap !important;
     }
-}
 
-@media (max-width: 700px) {
-
+    /* Second line:
+       Trainer • Driver                  BSP */
     .mobile-result-second-row {
         display: grid !important;
         grid-template-columns: 50px minmax(0, 1fr) auto !important;
@@ -10390,6 +10384,7 @@ body.race-chart-social .race-chart-stage-card::after {
         width: 100% !important;
     }
 
+    /* Trainer / Driver */
     .mobile-result-second-row .mobile-result-people {
         grid-column: 2 !important;
         margin: 0 !important;
@@ -10401,17 +10396,17 @@ body.race-chart-social .race-chart-stage-card::after {
         white-space: nowrap !important;
     }
 
-    .mobile-result-bsp {
+    /* BSP - positioning only.
+       Font/size/colour comes from mobile-result-people */
+    .mobile-result-second-row .mobile-result-bsp {
         grid-column: 3 !important;
-
         margin: 0 !important;
         padding: 0 !important;
 
-        font-size: inherit !important;
-        font-weight: inherit !important;
-        color: inherit !important;
-
         white-space: nowrap !important;
         text-align: right !important;
+
+        overflow: visible !important;
+        text-overflow: clip !important;
     }
 }
