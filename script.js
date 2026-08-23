@@ -5211,7 +5211,9 @@ function renderLatestResultPopup(race, showBSP = false) {
                                         </div>
 
                                         ${(trainer || driver || showBSP) ? `
-                                            <div class="mobile-result-people-row">
+                                            <div class="mobile-result-second-row">
+
+                                                <div class="mobile-result-second-spacer"></div>
 
                                                 <div class="mobile-result-people">
                                                     ${escapeHtml(trainer)}
@@ -5234,7 +5236,7 @@ function renderLatestResultPopup(race, showBSP = false) {
                                                                 : "—"
                                                         }
                                                     </div>
-                                                ` : ""}
+                                                ` : `<div></div>`}
 
                                             </div>
                                         ` : ""}
