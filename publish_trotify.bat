@@ -25,6 +25,22 @@ if errorlevel 1 (
     exit /b 1
 )
 
+REM Refresh First100 data from the scraper folder.
+echo Copying latest first100.json...
+
+if not exist "C:\trotify_dashboard\data" (
+    mkdir "C:\trotify_dashboard\data"
+)
+
+copy /Y ^
+"C:\harness_scraper\harness_api\first100.json" ^
+"C:\trotify_dashboard\data\first100.json"
+
+if errorlevel 1 (
+    echo ERROR: Failed to copy first100.json.
+    exit /b 1
+)
+
 REM Make sure the large race chart file is ignored by Git.
 git check-ignore -q chart_race_data.json
 if errorlevel 1 (
