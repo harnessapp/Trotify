@@ -10452,3 +10452,18 @@ body.race-chart-social .race-chart-stage-card::after {
         height: 470px !important;
     }
 }
+
+/* =========================================================
+   DESKTOP HOME TILE ORDER
+   Swap Stable Changes and Latest Results
+   ========================================================= */
+
+@media (min-width: 701px) {
+
+    .dashboard-grid > :nth-child(1) { order: 1; } /* Next To Go */
+    .dashboard-grid > :nth-child(2) { order: 2; } /* Today's Racing */
+    .dashboard-grid > :nth-child(3) { order: 6; } /* Stable Changes */
+    .dashboard-grid > :nth-child(4) { order: 4; } /* Last 30 Days */
+    .dashboard-grid > :nth-child(5) { order: 5; } /* Latest Daily Wrap */
+    .dashboard-grid > :nth-child(6) { order: 3; } /* Latest Results */
+}
