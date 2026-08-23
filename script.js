@@ -11545,7 +11545,7 @@ function renderFirst100RacePanel(race) {
                         ["weighted", "Weighted"],
                         ["med", "Median"],
                         ["fast", "Fastest"],
-                        ["avg123", "Avg FR1-3"],
+                        ["avg123", "Avg 1-3"],
                         ["last5", "Last 5"],
                         ["avg", "Average"]
                     ].map(([value, label]) => `
@@ -11693,7 +11693,7 @@ function first100MetricLabel() {
     switch (first100SelectedMetric) {
         case "weighted": return "Weighted";
         case "fast": return "Fast";
-        case "avg123": return "Avg FR1-3";
+        case "avg123": return "Avg 1-3";
         case "last5": return "Last 5";
         case "avg": return "Avg";
         case "med": return "Med";
