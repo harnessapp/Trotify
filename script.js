@@ -5205,6 +5205,23 @@ function renderLatestResultPopup(race, showBSP = false) {
 
                                         <span class="mobile-result-sp">
                                             ${escapeHtml(sp)}
+
+                                            ${showBSP ? `
+                                                <span class="mobile-result-bsp">
+                                                    BSP
+                                                    ${
+                                                        row.BSP_Win != null && row.BSP_Win !== ""
+                                                            ? `$${parseFloat(row.BSP_Win).toFixed(2)}`
+                                                            : "—"
+                                                    }
+                                                    /
+                                                    ${
+                                                        row.BSP_Place != null && row.BSP_Place !== ""
+                                                            ? `$${parseFloat(row.BSP_Place).toFixed(2)}`
+                                                            : "—"
+                                                    }
+                                                </span>
+                                            ` : ""}
                                         </span>
 
                                     </div>
