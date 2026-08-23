@@ -5204,35 +5204,40 @@ function renderLatestResultPopup(race, showBSP = false) {
                                         ` : ""}
 
                                         <span class="mobile-result-sp">
+                                            ${showBSP ? "SP " : ""}
                                             ${escapeHtml(sp)}
-
-                                            ${showBSP ? `
-                                                <span class="mobile-result-bsp">
-                                                    BSP
-                                                    ${
-                                                        row.BSP_Win != null && row.BSP_Win !== ""
-                                                            ? `$${parseFloat(row.BSP_Win).toFixed(2)}`
-                                                            : "—"
-                                                    }
-                                                    /
-                                                    ${
-                                                        row.BSP_Place != null && row.BSP_Place !== ""
-                                                            ? `$${parseFloat(row.BSP_Place).toFixed(2)}`
-                                                            : "—"
-                                                    }
-                                                </span>
-                                            ` : ""}
                                         </span>
 
-                                    </div>
-
-                                    ${(trainer || driver) ? `
-                                        <div class="mobile-result-people">
-                                            ${escapeHtml(trainer)}
-                                            ${trainer && driver ? " • " : ""}
-                                            ${escapeHtml(driver)}
                                         </div>
-                                    ` : ""}
+
+                                        ${(trainer || driver || showBSP) ? `
+                                            <div class="mobile-result-people-row">
+
+                                                <div class="mobile-result-people">
+                                                    ${escapeHtml(trainer)}
+                                                    ${trainer && driver ? " • " : ""}
+                                                    ${escapeHtml(driver)}
+                                                </div>
+
+                                                ${showBSP ? `
+                                                    <div class="mobile-result-bsp">
+                                                        BSP
+                                                        ${
+                                                            row.BSP_Win != null && row.BSP_Win !== ""
+                                                                ? `$${parseFloat(row.BSP_Win).toFixed(2)}`
+                                                                : "—"
+                                                        }
+                                                        /
+                                                        ${
+                                                            row.BSP_Place != null && row.BSP_Place !== ""
+                                                                ? `$${parseFloat(row.BSP_Place).toFixed(2)}`
+                                                                : "—"
+                                                        }
+                                                    </div>
+                                                ` : ""}
+
+                                            </div>
+                                        ` : ""}
 
                                     ${lowerParts.length ? `
                                         <div class="mobile-result-race-detail">

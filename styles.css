@@ -10379,3 +10379,30 @@ body.race-chart-social .race-chart-stage-card::after {
         white-space: nowrap !important;
     }
 }
+
+@media (max-width: 700px) {
+
+    .mobile-result-people-row {
+        display: flex !important;
+        align-items: baseline !important;
+        justify-content: space-between !important;
+        gap: 8px !important;
+        min-width: 0 !important;
+    }
+
+    .mobile-result-people {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+    }
+
+    .mobile-result-bsp {
+        flex: 0 0 auto !important;
+        white-space: nowrap !important;
+
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        color: inherit !important;
+
+        text-align: right !important;
+    }
+}
