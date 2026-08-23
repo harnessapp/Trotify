@@ -10367,41 +10367,73 @@ body.race-chart-social .race-chart-stage-card::after {
 
 @media (max-width: 700px) {
 
+    /* Prevent Android/PWA text boosting inside result rows */
+    .latest-result-popup-mobile,
+    .latest-result-popup-mobile *,
+    .mobile-result-second-row,
+    .mobile-result-bsp {
+        -webkit-text-size-adjust: 100% !important;
+        text-size-adjust: 100% !important;
+    }
+
+    /* Historical SP stays top-right */
     .mobile-result-sp {
         display: block !important;
         text-align: right !important;
         white-space: nowrap !important;
     }
 
+    /* Second line:
+       Trainer • Driver             BSP */
     .mobile-result-second-row {
         display: grid !important;
-        grid-template-columns: 50px minmax(0, 1fr) auto !important;
+        grid-template-columns: 34px minmax(0, 1fr) auto !important;
+        column-gap: 4px !important;
         align-items: baseline !important;
-        column-gap: 8px !important;
+
         width: 100% !important;
-    }
-
-    .mobile-result-second-row .mobile-result-people {
-        grid-column: 2 !important;
-        margin: 0 !important;
-        padding: 0 !important;
         min-width: 0 !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        white-space: nowrap !important;
     }
 
-    .mobile-result-bsp {
-        grid-column: 3 !important;
-        margin: 0 !important;
+    /*
+       Give trainer/driver AND BSP literally identical typography.
+    */
+    .mobile-result-second-row .mobile-result-people,
+    .mobile-result-second-row .mobile-result-bsp {
+        margin-top: 2px !important;
         padding: 0 !important;
 
-        font-size: 11px !important;
-        font-weight: 600 !important;
-        color: #aeb6c2 !important;
+        color: rgba(255,255,255,0.68) !important;
+        font-size: 8.5px !important;
+        font-weight: 650 !important;
         line-height: normal !important;
 
         white-space: nowrap !important;
+
+        -webkit-text-size-adjust: 100% !important;
+        text-size-adjust: 100% !important;
+    }
+
+    /* Trainer / Driver occupies the middle */
+    .mobile-result-second-row .mobile-result-people {
+        grid-column: 2 !important;
+
+        margin-left: 0 !important;
+
+        min-width: 0 !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* BSP sits flush right */
+    .mobile-result-second-row .mobile-result-bsp {
+        grid-column: 3 !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        overflow: visible !important;
+        text-overflow: clip !important;
         text-align: right !important;
     }
 }
