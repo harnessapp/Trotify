@@ -10419,3 +10419,36 @@ body.race-chart-social .race-chart-stage-card::after {
         text-align: right !important;
     }
 }
+
+/* =========================================================
+   MOBILE FIRST100 - SCALE DESKTOP MAP TO PHONE WIDTH
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .first100-panel {
+        overflow: hidden !important;
+    }
+
+    .first100-map-container {
+        position: relative !important;
+        width: 100% !important;
+        height: 165px !important;
+        padding-top: 6px !important;
+        overflow: hidden !important;
+    }
+
+    .first100-speed-map {
+        width: 1120px !important;
+        max-width: none !important;
+        margin: 0 !important;
+
+        transform: scale(0.34) !important;
+        transform-origin: top left !important;
+    }
+
+    .first100-map-track {
+        width: 1120px !important;
+        height: 470px !important;
+    }
+}
