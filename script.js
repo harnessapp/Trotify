@@ -6683,7 +6683,18 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                 ${meetingRaceNav}
 
                 ${hraAvailable
-                    ? renderHraAnalysisHover(raceAnchorFull)
+                    ? (
+                        window.innerWidth <= 700
+                            ? `
+                                <button
+                                    type="button"
+                                    class="field-result-button"
+                                    onclick="event.stopPropagation(); openHraAnalysisPopup('${escapeHtml(raceAnchorFull)}')">
+                                    HRA Analysis
+                                </button>
+                            `
+                            : renderHraAnalysisHover(raceAnchorFull)
+                      )
                     : ""
                 }
 
