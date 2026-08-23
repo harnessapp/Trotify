@@ -200,6 +200,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     setupNavigation();
     setupMeetingCalendarButton();
 
+    loadMergedMeta().then(meta => {
+        if (!meta) return;
+
+        const el = document.getElementById("heroDataMeta");
+        if (!el) return;
+
+        const sinceYear =
+            meta.data_from
+                ? String(meta.data_from).slice(0, 4)
+                : "2021";
+
+        const races =
+            Number(meta.races || 0).toLocaleString("en-AU");
+
+        const runs =
+            Number(meta.runners || 0).toLocaleString("en-AU");
+
+        el.textContent =
+            window.innerWidth <= 700
+                ? `Since ${sinceYear} · ${races} races · ${runs} runs`
+                : `Harness data since ${sinceYear} · ${races} races · ${runs} runs`;
+    });
+
+
     /*
        =====================================================
        STAGE 1 - LOAD ONLY WHAT THE HOME PAGE NEEDS FIRST
@@ -9546,6 +9570,25 @@ async function showDriversView() {
     }
 
     await renderSelectedDriverTable(DRIVER_TABLES[0]);
+}
+
+async function loadMergedMeta() {
+    try {
+        const response = await fetch(
+            "merged_meta.json?v=" + Date.now(),
+            { cache: "no-store" }
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not load merged_meta.json");
+        }
+
+        return await response.json();
+
+    } catch (error) {
+        console.error("Failed to load merged metadata:", error);
+        return null;
+    }
 }
 
 async function changeMobileDriverTable(file) {
