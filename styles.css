@@ -10495,12 +10495,14 @@ body.race-chart-social .race-chart-stage-card::after {
     display: contents;
 }
 
-.last30-record {
+.last30-row .last30-record {
+    display: block;
     text-align: right;
     white-space: nowrap;
 }
 
-.last30-roi {
+.last30-row .last30-roi {
+    display: block;
     text-align: right;
     white-space: nowrap;
 }
