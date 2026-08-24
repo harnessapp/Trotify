@@ -10484,14 +10484,15 @@ body.race-chart-social .race-chart-stage-card::after {
     .dashboard-grid > :nth-child(6) { order: 3; } /* Latest Results */
 }
 
-.last30-stats {
+.last30-row {
     display: grid;
-    grid-template-columns: 120px 44px;
-    justify-content: end;
-    align-items: center;
+    grid-template-columns: minmax(0, 1fr) 120px 44px;
     column-gap: 6px;
-    margin-left: 10px;
-    flex: 1;
+    align-items: center;
+}
+
+.last30-stats {
+    display: contents;
 }
 
 .last30-record {
@@ -10502,9 +10503,4 @@ body.race-chart-social .race-chart-stage-card::after {
 .last30-roi {
     text-align: right;
     white-space: nowrap;
-}
-
-.last30-row > span:first-child {
-    flex: 0 1 48%;
-    min-width: 0;
 }
