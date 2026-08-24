@@ -10506,3 +10506,17 @@ body.race-chart-social .race-chart-stage-card::after {
     text-align: right;
     white-space: nowrap;
 }
+
+@media (min-width: 701px) and (max-width: 1500px) {
+    .last30-row {
+        grid-template-columns: minmax(0, 1fr) 95px 40px;
+        column-gap: 4px;
+        font-size: 12px;
+    }
+}
+
+.last30-row > span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
