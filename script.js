@@ -12289,7 +12289,7 @@ async function showPositionRaceChartView() {
     document.querySelector(".meetings-panel").style.display = "";
 
     document.querySelector(".panel-heading").innerHTML = `
-        <span>📈</span>
+        <span>🔔</span>
         <span>Barrier & Bell</span>
     `;
 
@@ -13922,7 +13922,7 @@ async function showRaceChartsView() {
                         }"
                         onclick="setRaceChartType('POSITION')"
                     >
-                        <span>📊</span>
+                        <span>🔔</span>
                         <strong>Barrier & Bell Position</strong>
                         <small>Strike rate and ROI</small>
                     </button>
