@@ -826,7 +826,7 @@ function setupNavigation() {
             } else if (view === "box-tickers") {
                 showBoxTickersView();
             } else if (view === "race-charts") {
-                showRaceChartsView();
+                showPositionRaceChartView();
             } else if (view === "race-finder") {
                 showRaceFinderView();
             } else {
@@ -12290,7 +12290,7 @@ async function showPositionRaceChartView() {
 
     document.querySelector(".panel-heading").innerHTML = `
         <span>📈</span>
-        <span>Race Charts</span>
+        <span>Barrier & Bell</span>
     `;
 
     document.getElementById("meetingStrip").innerHTML = `
@@ -13694,8 +13694,8 @@ async function showRaceChartsView() {
     document.querySelector(".meetings-panel").style.display = "";
 
     document.querySelector(".panel-heading").innerHTML = `
-        <span>📈</span>
-        <span>Race Charts</span>
+        <span>🔔</span>
+        <span>Barrier & Bell</span>
     `;
 
     document.getElementById("meetingStrip").innerHTML = `
