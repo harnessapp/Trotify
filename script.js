@@ -4121,12 +4121,12 @@ function startLatestResultsRefresh() {
 
     latestResultsRefreshTimer = setInterval(async () => {
         const beforeKeys = new Set(
-            getLatestResultRaces().map(race => normaliseRaceAnchor(race.raceKey))
+            getLatestResultRaces(true).map(race => normaliseRaceAnchor(race.raceKey))
         );
 
         liveResultsRows = await loadLiveResults();
 
-        const afterRaces = getLatestResultRaces();
+        const afterRaces = getLatestResultRaces(true);
 
         latestResultNewRaceKeys = new Set(
             afterRaces
@@ -4175,7 +4175,7 @@ function showLatestResultsView() {
     renderLatestResultsView();
 }
 
-function getLatestResultRaces() {
+function getLatestResultRaces(todayByRaceDate = false) {
     const raceMap = new Map();
 
     (liveResultsRows || []).forEach(row => {
@@ -4197,7 +4197,10 @@ function getLatestResultRaces() {
                 videoLink: clean(row["Video Link"] || ""),
                 photoLink: clean(row["Photo Link"] || ""),
                 capturedAt: clean(row.LiveCapturedAtUTC || ""),
-                raceDateTime: buildRaceDateTime(parseDateToKey(clean(row.Date || "")), clean(row.Time || "")),
+                raceDateTime: buildRaceDateTime(
+                    parseDateToKey(clean(row.Date || "")),
+                    clean(row.Time || "")
+                ),
                 runners: []
             });
         }
@@ -4209,10 +4212,22 @@ function getLatestResultRaces() {
 
     return [...raceMap.values()]
         .filter(race => {
+
+            // Homepage:
+            // only actual races dated today.
+            if (todayByRaceDate) {
+                return parseDateToKey(race.dateValue) === todayKey;
+            }
+
+            // Existing Latest Results behaviour:
+            // anything captured today.
             if (!race.capturedAt) return false;
 
             const captured = new Date(race.capturedAt);
-            if (Number.isNaN(captured.getTime())) return false;
+
+            if (Number.isNaN(captured.getTime())) {
+                return false;
+            }
 
             return captured.toLocaleDateString("en-CA") === todayKey;
         })
@@ -4226,8 +4241,7 @@ function getLatestResultRaces() {
 
             return Number(b.raceNo || 0) - Number(a.raceNo || 0);
         });
-
-    }
+}
 
 async function loadResultsRecent() {
     try {
@@ -5443,9 +5457,9 @@ function renderLatestResultsHomeTile() {
 
     if (!countEl || !previewEl) return;
 
-    const races = getLatestResultRaces();
+    const races = getLatestResultRaces(true);
 
-    countEl.textContent = races.length || "—";
+    countEl.textContent = races.length;
 
     previewEl.innerHTML = races.length
         ? races.slice(0, 4).map(race => {
