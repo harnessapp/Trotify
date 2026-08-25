@@ -10532,7 +10532,7 @@ body.race-chart-social .race-chart-stage-card::after {
    ========================================================= */
 
 @media (max-width: 700px) {
-    .runner-comment-inline .runner-comment {
+    .mobile-runner-comment {
         text-align: justify !important;
         text-justify: inter-word;
     }
