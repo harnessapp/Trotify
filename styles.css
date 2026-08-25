@@ -10526,3 +10526,14 @@ body.race-chart-social .race-chart-stage-card::after {
         display: none !important;
     }
 }
+
+/* =========================================================
+   MOBILE RUNNER COMMENT - JUSTIFIED TEXT
+   ========================================================= */
+
+@media (max-width: 700px) {
+    .runner-comment-inline .runner-comment {
+        text-align: justify !important;
+        text-justify: inter-word;
+    }
+}
