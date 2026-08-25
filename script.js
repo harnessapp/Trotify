@@ -13852,6 +13852,9 @@ async function showRaceChartsView() {
                 </div>
 
                 <div class="race-chart-library-grid">
+
+                    <!-- TEMPORARILY HIDDEN - ANIMATED RACE CHARTS
+
                     <button
                         type="button"
                         class="race-chart-library-card ${
@@ -13908,22 +13911,24 @@ async function showRaceChartsView() {
                         <small>Starts since last win</small>
                     </button>
 
-                               <button
-                                   type="button"
-                                   class="race-chart-library-card ${
-                                       chartRaceSelectedType === "POSITION"
-                                           ? "active"
-                                           : ""
-                                   }"
-                                   onclick="setRaceChartType('POSITION')"
-                               >
-                                   <span>📊</span>
-                                   <strong>Barrier & Bell Position</strong>
-                                   <small>Strike rate and ROI</small>
-                               </button>
+                    END TEMPORARILY HIDDEN -->
+
+                    <button
+                        type="button"
+                        class="race-chart-library-card ${
+                            chartRaceSelectedType === "POSITION"
+                                ? "active"
+                                : ""
+                        }"
+                        onclick="setRaceChartType('POSITION')"
+                    >
+                        <span>📊</span>
+                        <strong>Barrier & Bell Position</strong>
+                        <small>Strike rate and ROI</small>
+                    </button>
 
                 </div>
-            </div>
+            </div>            </div>
         </div>
     `;
 
