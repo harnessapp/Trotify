@@ -12440,6 +12440,8 @@ async function showPositionRaceChartView() {
                 </div>
 
                 <div class="race-chart-library-grid">
+
+                    <!--
                     <button
                         type="button"
                         class="race-chart-library-card"
@@ -12469,6 +12471,7 @@ async function showPositionRaceChartView() {
                         <strong>Horse Wins Race</strong>
                         <small>From January 2021</small>
                     </button>
+                    -->
 
                     <button
                         type="button"
