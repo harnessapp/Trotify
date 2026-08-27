@@ -3,6 +3,7 @@
   "short_name": "Trotify",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#ffffff",
   "theme_color": "#07151b",
   "description": "Australian harness racing stats and insights",
