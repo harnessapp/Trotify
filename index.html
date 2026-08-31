@@ -105,7 +105,7 @@
 
                 <div class="nav-section">RACE TOOLS</div>
 
-                <a href="#" class="nav-item" data-view="tipping-comp">
+                <a href="#" class="nav-item" data-view="tipping-comp" id="tippingCompNav">
                     <span>🏆</span>
                     <span>Tipping Comp</span>
                 </a>
@@ -321,7 +321,21 @@
                     });
             });
         }
+
+        const tippingCompNav = document.getElementById("tippingCompNav");
+
+        if (
+            tippingCompNav &&
+            (
+                location.hostname === "trotify.app" ||
+                location.hostname === "www.trotify.app"
+            )
+        ) {
+            tippingCompNav.style.display = "none";
+        }
     </script>
+
+
 
 </body>
 </html>
