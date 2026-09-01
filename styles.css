@@ -10537,3 +10537,268 @@ body.race-chart-social .race-chart-stage-card::after {
         text-justify: inter-word;
     }
 }
+
+/* =========================================================
+   AV PREVIEWS
+   ========================================================= */
+
+.av-previews-layout {
+    width: 100%;
+}
+
+.av-preview-day-group {
+    margin-top: 18px;
+}
+
+.av-preview-two-pane {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: start;
+}
+
+.av-preview-column {
+    display: grid;
+    gap: 8px;
+    align-content: start;
+}
+
+.av-preview-row {
+    display: grid;
+
+    grid-template-columns:
+        82px
+        170px
+        minmax(0, 1fr)
+        auto;
+
+    gap: 12px;
+    align-items: center;
+
+    width: 100%;
+    min-width: 0;
+
+    border: 1px solid rgba(0, 230, 191, 0.14);
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border-radius: 14px;
+
+    padding: 11px 13px;
+
+    cursor: pointer;
+
+    transition: 180ms ease;
+}
+
+.av-preview-row:hover {
+    border-color: rgba(0, 230, 191, 0.55);
+
+    background:
+        rgba(0, 230, 191, 0.08);
+
+    transform: translateY(-1px);
+}
+
+.av-preview-time {
+    color: var(--accent-2);
+
+    font-size: 15px;
+    font-weight: 950;
+
+    white-space: nowrap;
+}
+
+.av-preview-race {
+    color: var(--text);
+
+    font-size: 11px;
+    font-weight: 950;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+.av-preview-name {
+    min-width: 0;
+
+    color: var(--accent);
+
+    font-size: 13px;
+    font-weight: 900;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.av-preview-media {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    justify-content: flex-end;
+
+    min-width: 0;
+}
+
+.av-preview-media-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border:
+        1px solid rgba(0, 230, 191, 0.35);
+
+    background:
+        rgba(0, 230, 191, 0.09);
+
+    color: var(--accent);
+
+    border-radius: 999px;
+
+    padding: 7px 11px;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition: 160ms ease;
+}
+
+.av-preview-media-button:hover {
+    border-color: var(--accent);
+
+    background:
+        rgba(0, 230, 191, 0.18);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   AV PREVIEWS - NARROWER DESKTOP / TABLET
+   ========================================================= */
+
+@media (max-width: 1350px) {
+
+    .av-preview-two-pane {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   AV PREVIEWS - MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .av-preview-two-pane {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 7px !important;
+    }
+
+    .av-preview-column {
+        gap: 7px !important;
+    }
+
+    .av-preview-row {
+        display: grid !important;
+
+        grid-template-columns:
+            58px
+            minmax(0, 1fr)
+            auto !important;
+
+        grid-template-areas:
+            "time race media"
+            "time name media" !important;
+
+        column-gap: 8px !important;
+        row-gap: 3px !important;
+
+        padding: 10px 9px !important;
+
+        border-radius: 12px !important;
+
+        min-width: 0 !important;
+    }
+
+    .av-preview-time {
+        grid-area: time !important;
+
+        font-size: 12px !important;
+
+        align-self: center;
+    }
+
+    .av-preview-race {
+        grid-area: race !important;
+
+        min-width: 0 !important;
+
+        font-size: 10px !important;
+
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    .av-preview-name {
+        grid-area: name !important;
+
+        min-width: 0 !important;
+
+        font-size: 10px !important;
+
+        color: var(--muted) !important;
+
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    .av-preview-media {
+        grid-area: media !important;
+
+        align-self: center !important;
+
+        justify-content: flex-end !important;
+
+        gap: 4px !important;
+    }
+
+    .av-preview-media-button {
+        padding: 6px 8px !important;
+
+        font-size: 0 !important;
+
+        min-width: 34px;
+
+        height: 30px;
+    }
+
+    .av-preview-media-button span:first-child {
+        font-size: 14px !important;
+    }
+
+    /*
+       Hide the written label on phone.
+       The audio/video icon becomes the compact action.
+    */
+    .av-preview-media-button span:last-child {
+        display: none !important;
+    }
+
+}

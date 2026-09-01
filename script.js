@@ -181,6 +181,7 @@ let selectedStableChangeState = "ALL";
 
 let selectedGoodLeaderState = "ALL";
 let selectedModelTipState = "ALL";
+let selectedAvPreviewState = "ALL";
 
 let selectedVenueStatMode = "off";
 let fieldSizeStatsRows = [];
@@ -823,6 +824,8 @@ function setupNavigation() {
                 showGoodLeadersView();
             } else if (view === "model-tips") {
                 showModelTipsView();
+            } else if (view === "av-previews") {
+                showAvPreviewsView();
             } else if (view === "box-tickers") {
                 showBoxTickersView();
             } else if (view === "race-charts") {
