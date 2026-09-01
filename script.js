@@ -1647,6 +1647,407 @@ function renderModelTipRow(item) {
     `;
 }
 
+/* =========================================================
+   AV PREVIEWS
+   ========================================================= */
+
+function showAvPreviewsView() {
+    stopTimelineRefresh();
+    clearNextUpTimer();
+
+    document.querySelector(".hero").style.display = "none";
+    document.querySelector(".dashboard-grid").style.display = "none";
+    document.querySelector(".meetings-panel").style.display = "";
+
+    document.querySelector(".panel-heading").innerHTML = `
+        <span>🎙️</span>
+        <span>AV Previews</span>
+    `;
+
+    const allPreviews = getAvPreviewRaces();
+
+    const previews =
+        selectedAvPreviewState === "ALL"
+            ? allPreviews
+            : allPreviews.filter(
+                item => item.state === selectedAvPreviewState
+            );
+
+    const grouped = groupAvPreviewsByDay(previews);
+
+    document.getElementById("meetingStrip").innerHTML = `
+        <div class="av-previews-layout">
+
+            <div class="stable-changes-header">
+                <div>
+                    <h2>
+                        ${previews.length}
+                        ${previews.length === 1 ? "race" : "races"}
+                        with AV previews
+                    </h2>
+                </div>
+            </div>
+
+            <div class="driver-state-filter stable-change-filter">
+                ${["ALL", "VIC", "NSW", "QLD", "SA", "WA", "TAS"]
+                    .map(state => `
+                        <button
+                            class="driver-state-button ${
+                                selectedAvPreviewState === state
+                                    ? "selected"
+                                    : ""
+                            }"
+                            onclick="setAvPreviewStateFilter('${state}')"
+                        >
+                            ${state}
+                        </button>
+                    `)
+                    .join("")}
+            </div>
+
+            ${
+                grouped.length
+                    ? grouped
+                        .map(renderAvPreviewDayGroup)
+                        .join("")
+                    : `
+                        <div class="coming-soon-card">
+                            <div class="coming-soon-title">
+                                No AV previews found
+                            </div>
+                            <p>
+                                No upcoming races with audio or video
+                                previews match this filter.
+                            </p>
+                        </div>
+                    `
+            }
+
+        </div>
+    `;
+}
+
+
+function setAvPreviewStateFilter(state) {
+    selectedAvPreviewState = state;
+    showAvPreviewsView();
+}
+
+
+function getAvPreviewRaces() {
+    const now = new Date();
+
+    /*
+       Build one lookup row per upcoming race.
+
+       upcoming_fields.csv contains one row per runner,
+       so RaceAnchorFull lets us collapse those runners
+       back to a single race.
+    */
+    const upcomingRaceMap = new Map();
+
+    (allRows || []).forEach(row => {
+        const anchor = normaliseRaceAnchor(
+            row.RaceAnchorFull ||
+            row["RaceAnchorFull"] ||
+            ""
+        );
+
+        if (!anchor) return;
+
+        if (!upcomingRaceMap.has(anchor)) {
+            upcomingRaceMap.set(anchor, row);
+        }
+    });
+
+
+    /*
+       Group race_media.csv rows by race so a race appears
+       only once even if it has multiple preview sources.
+    */
+    const mediaRaceMap = new Map();
+
+    (raceMediaRows || []).forEach(media => {
+        const anchor = normaliseRaceAnchor(
+            media.RaceAnchorFull || ""
+        );
+
+        if (!anchor) return;
+
+        const fieldRow = upcomingRaceMap.get(anchor);
+
+        /*
+           Ignore media belonging to old races that are no
+           longer present in upcoming_fields.csv.
+        */
+        if (!fieldRow) return;
+
+        if (!mediaRaceMap.has(anchor)) {
+            mediaRaceMap.set(anchor, {
+                anchor,
+                fieldRow,
+                media: []
+            });
+        }
+
+        mediaRaceMap.get(anchor).media.push(media);
+    });
+
+
+    return [...mediaRaceMap.values()]
+        .map(group => {
+            const row = group.fieldRow;
+
+            const venue = clean(row.Venue || "");
+
+            const state = clean(
+                row.State ||
+                row.STATE ||
+                row["State "] ||
+                ""
+            ).toUpperCase();
+
+            const dateValue = clean(
+                row.Date ||
+                row.DATE ||
+                row["Meeting Date"] ||
+                ""
+            );
+
+            const dateKey = parseDateToKey(dateValue);
+
+            const raceNo = clean(
+                row["Race No"] ||
+                row.RaceNo ||
+                row.Race ||
+                ""
+            ).replace(/^R/i, "");
+
+            const time = getRaceDisplayTime(row);
+
+            const raceDateTime = getRaceDateTime(row);
+
+            const raceName = clean(
+                row["Race Name"] ||
+                row.RaceName ||
+                ""
+            );
+
+            return {
+                anchor: group.anchor,
+
+                key:
+                    `${venue}|${state}|${dateValue}|${raceNo}`,
+
+                venue,
+                state,
+                dateValue,
+                dateKey,
+                raceNo,
+                raceName,
+                time,
+                raceDateTime,
+
+                timeUntil:
+                    raceDateTime
+                        ? formatTimeUntil(
+                            raceDateTime,
+                            now
+                        )
+                        : "TBC",
+
+                media: group.media
+            };
+        })
+        .filter(item => {
+            if (!item.raceDateTime) return false;
+
+            /*
+               Same general concept as your other upcoming
+               pages — allow a small grace period after jump.
+            */
+            return (
+                item.raceDateTime.getTime() >=
+                now.getTime() - 5 * 60 * 1000
+            );
+        })
+        .sort((a, b) =>
+            a.raceDateTime - b.raceDateTime
+        );
+}
+
+
+function groupAvPreviewsByDay(items) {
+    const map = new Map();
+
+    items.forEach(item => {
+        const key = item.dateKey || "unknown";
+
+        const label =
+            dayLabelFromDateKey(
+                key,
+                item.dateValue
+            );
+
+        if (!map.has(key)) {
+            map.set(key, {
+                key,
+                label,
+                items: []
+            });
+        }
+
+        map.get(key).items.push(item);
+    });
+
+    return [...map.values()]
+        .sort((a, b) =>
+            (a.key || "9999-99-99")
+                .localeCompare(
+                    b.key || "9999-99-99"
+                )
+        );
+}
+
+
+function renderAvPreviewDayGroup(group) {
+    const midpoint =
+        Math.ceil(group.items.length / 2);
+
+    const leftItems =
+        group.items.slice(0, midpoint);
+
+    const rightItems =
+        group.items.slice(midpoint);
+
+    return `
+        <div class="av-preview-day-group">
+
+            <div class="day-heading stable-change-day-heading">
+                <span></span>
+
+                <strong>
+                    ${escapeHtml(group.label)}
+                </strong>
+
+                <span></span>
+            </div>
+
+            <div class="av-preview-two-pane">
+
+                <div class="av-preview-column">
+                    ${leftItems
+                        .map(renderAvPreviewRow)
+                        .join("")}
+                </div>
+
+                <div class="av-preview-column">
+                    ${rightItems
+                        .map(renderAvPreviewRow)
+                        .join("")}
+                </div>
+
+            </div>
+
+        </div>
+    `;
+}
+
+
+function renderAvPreviewRow(item) {
+    const timeDisplay =
+        item.dateKey === todayIso()
+            ? item.timeUntil
+            : item.time || "TBC";
+
+    return `
+        <div
+            class="av-preview-row"
+            onclick="openRaceFromHomeByKey(
+                '${escapeHtml(item.key)}'
+            )"
+        >
+
+            <div class="av-preview-time">
+                ${escapeHtml(timeDisplay)}
+            </div>
+
+            <div class="av-preview-race">
+                ${escapeHtml(
+                    shortVenueName(item.venue)
+                )}
+                RACE ${escapeHtml(item.raceNo)}
+            </div>
+
+            <div
+                class="av-preview-name"
+                title="${escapeHtml(item.raceName)}"
+            >
+                ${escapeHtml(
+                    item.raceName || "Race Preview"
+                )}
+            </div>
+
+            <div
+                class="av-preview-media"
+                onclick="event.stopPropagation()"
+            >
+                ${item.media
+                    .map(renderAvPreviewMediaButton)
+                    .join("")}
+            </div>
+
+        </div>
+    `;
+}
+
+
+function renderAvPreviewMediaButton(media) {
+    const type = clean(
+        media.MediaType || ""
+    ).toLowerCase();
+
+    const source = clean(
+        media.Source || ""
+    );
+
+    const title = clean(
+        media.Title || ""
+    );
+
+    let icon = "▶";
+
+    if (type === "audio") {
+        icon = "🎧";
+    } else if (type === "video") {
+        icon = "▶";
+    }
+
+    const label =
+        title ||
+        (
+            source
+                ? `${source} Preview`
+                : "Preview"
+        );
+
+    return `
+        <button
+            type="button"
+            class="av-preview-media-button"
+            onclick="
+                event.stopPropagation();
+                openRaceMedia(
+                    '${escapeHtml(media.MediaID)}'
+                );
+            "
+        >
+            <span>${icon}</span>
+            <span>${escapeHtml(label)}</span>
+        </button>
+    `;
+}
+
 function showBoxTickersView() {
     stopTimelineRefresh();
     clearNextUpTimer();
