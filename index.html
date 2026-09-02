@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trotify Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=21">
+    <link rel="stylesheet" href="styles.css?v=22">
 
     <link rel="manifest" href="/manifest.json?v=2">
     <meta name="theme-color" content="#07151b">
@@ -119,7 +119,6 @@
                     <span>📰</span>
                     <span>Daily Wraps</span>
                 </a>
-
 
                 <!-- Hidden temporarily - Race Finder retained -->
                 <!--
@@ -308,7 +307,51 @@
                     <div class="meeting-card">Loading meetings...</div>
                 </div>
             </section>
+
+            <footer class="site-footer">
+                <div class="site-footer-main">
+                    <span>© 2026 Trotify</span>
+                    <span class="footer-dot">•</span>
+                    <button type="button" class="footer-link" data-legal-modal="disclaimer">
+                        Disclaimer
+                    </button>
+                    <span class="footer-dot">•</span>
+                    <button type="button" class="footer-link" data-legal-modal="privacy">
+                        Privacy
+                    </button>
+                    <span class="footer-dot">•</span>
+                    <span>Gamble Responsibly</span>
+                </div>
+
+                <div class="site-footer-sub">
+                    Independent Australian harness racing information platform · Beta
+                </div>
+            </footer>
         </main>
+    </div>
+
+    <div class="legal-modal" id="legalModal" aria-hidden="true">
+        <div class="legal-modal-backdrop" data-close-legal-modal></div>
+
+        <div class="legal-modal-card" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle">
+            <div class="legal-modal-header">
+                <div>
+                    <div class="legal-modal-eyebrow">TROTIFY</div>
+                    <h2 id="legalModalTitle">Disclaimer</h2>
+                </div>
+
+                <button
+                    type="button"
+                    class="legal-modal-close"
+                    data-close-legal-modal
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+            </div>
+
+            <div class="legal-modal-body" id="legalModalBody"></div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
@@ -342,9 +385,172 @@
         ) {
             tippingCompNav.style.display = "none";
         }
+
+        const legalModal = document.getElementById("legalModal");
+        const legalModalTitle = document.getElementById("legalModalTitle");
+        const legalModalBody = document.getElementById("legalModalBody");
+
+        const legalContent = {
+            disclaimer: {
+                title: "Disclaimer",
+                html: `
+                    <section class="legal-section">
+                        <h3>About Trotify</h3>
+                        <p>
+                            Trotify is an independent Australian harness racing information
+                            platform and is not affiliated with or endorsed by Harness Racing
+                            Australia, state racing controlling bodies, wagering operators or
+                            other third-party services referenced on the site.
+                        </p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h3>Beta service</h3>
+                        <p>
+                            Trotify is currently in beta and is being actively developed and
+                            tested. Features, data and analysis may change without notice and
+                            some information may be incomplete, delayed or inaccurate.
+                        </p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h3>Data & accuracy</h3>
+                        <p>
+                            Trotify compiles and processes racing information from a range of
+                            publicly available and third-party sources to build its own
+                            database, statistics and analysis.
+                        </p>
+
+                        <p>
+                            Reasonable care is taken in collecting, matching and presenting
+                            information; however, Trotify does not guarantee that information
+                            is accurate, complete, current or free from error. Information may
+                            occasionally be missing, delayed, incorrectly matched or otherwise
+                            inaccurate.
+                        </p>
+
+                        <p>
+                            Where accuracy is important, users should verify information
+                            against an official source.
+                        </p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h3>Models & wagering</h3>
+                        <p>
+                            Prices, probabilities, ratings, rankings, indicators and other
+                            model-generated outputs displayed by Trotify are estimates only.
+                            They are not bookmaker prices, guarantees of future performance
+                            or wagering advice and should not be relied upon as such.
+                        </p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h3>Third-party content</h3>
+                        <p>
+                            Trotify may link to or display content made available through
+                            third-party racing, media and other services. Rights in
+                            third-party content remain with their respective owners.
+                            References or links to third parties do not imply affiliation
+                            with or endorsement of Trotify.
+                        </p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h3>Use of Trotify</h3>
+                        <p>
+                            Trotify is provided for general information and entertainment
+                            purposes. To the extent permitted by law, Trotify accepts no
+                            responsibility for loss arising from reliance on information
+                            displayed on the site.
+                        </p>
+
+                        <p class="legal-highlight">Gamble responsibly.</p>
+                    </section>
+                `
+            },
+
+            privacy: {
+                title: "Privacy",
+                html: `
+                    <section class="legal-section">
+                        <h3>Analytics</h3>
+                        <p>
+                            Trotify uses analytics to understand how the site is used and to
+                            improve its features, reliability and user experience.
+                        </p>
+
+                        <p>
+                            This may include information such as pages and features viewed,
+                            browser and device information and interactions with the site,
+                            including session replay where enabled.
+                        </p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h3>PostHog</h3>
+                        <p>
+                            Trotify currently uses PostHog as its analytics provider.
+                            Analytics data is processed using PostHog's European infrastructure.
+                        </p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h3>Third-party services</h3>
+                        <p>
+                            Trotify may contain links to or embedded content from third-party
+                            services. Those services operate under their own privacy policies
+                            and practices.
+                        </p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h3>Changes</h3>
+                        <p>
+                            Trotify is currently in beta and this privacy information may be
+                            updated as the service develops or additional functionality is
+                            introduced.
+                        </p>
+                    </section>
+                `
+            }
+        };
+
+        function openLegalModal(type) {
+            const content = legalContent[type];
+            if (!content || !legalModal) return;
+
+            legalModalTitle.textContent = content.title;
+            legalModalBody.innerHTML = content.html;
+
+            legalModal.classList.add("open");
+            legalModal.setAttribute("aria-hidden", "false");
+            document.body.classList.add("legal-modal-open");
+        }
+
+        function closeLegalModal() {
+            if (!legalModal) return;
+
+            legalModal.classList.remove("open");
+            legalModal.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("legal-modal-open");
+        }
+
+        document.querySelectorAll("[data-legal-modal]").forEach(button => {
+            button.addEventListener("click", () => {
+                openLegalModal(button.dataset.legalModal);
+            });
+        });
+
+        document.querySelectorAll("[data-close-legal-modal]").forEach(button => {
+            button.addEventListener("click", closeLegalModal);
+        });
+
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape") {
+                closeLegalModal();
+            }
+        });
     </script>
-
-
-
 </body>
 </html>
