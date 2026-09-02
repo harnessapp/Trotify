@@ -685,7 +685,7 @@ function openHraAnalysisPopup(raceAnchorFull) {
 
             ${analysisUrl ? `
                 <div class="hra-popup-source">
-                    Source: Harness Racing Australia
+                    Harness Racing Australia
                     <a href="${escapeHtml(analysisUrl)}"
                        target="_blank"
                        rel="noopener noreferrer">
@@ -704,38 +704,50 @@ function openHraAnalysisPopup(raceAnchorFull) {
 }
 
 function renderHraAnalysisHover(raceAnchorFull) {
-
     const race = hraAnalysisRows.find(
-        r => r.RaceAnchorFull === raceAnchorFull
+        row => row.RaceAnchorFull === raceAnchorFull
     );
 
     if (!race) return "";
 
     const analysis = race["HRA Analysis"] || "";
-    const analysisUrl = clean(race["HRA Analysis URL"] || "");
-
-    if (!analysis) return "";
+    const analysisUrl = clean(
+        race["HRA Analysis URL"] || ""
+    );
 
     return `
-        <div class="hra-analysis-hover">
-            <div class="hra-analysis-hover-title">
+        <div class="hra-analysis-hover"
+            onclick="event.stopPropagation()">
+
+            <button
+                type="button"
+                class="field-result-button hra-analysis-hover-button">
                 HRA Analysis
-            </div>
+            </button>
 
-            ${analysisUrl ? `
-                <div class="hra-analysis-hover-source">
-                    Source: Harness Racing Australia
-                    <a href="${escapeHtml(analysisUrl)}"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       onclick="event.stopPropagation();">
-                        View original ↗
-                    </a>
+            <div class="hra-analysis-hover-panel">
+
+                <div class="hra-analysis-hover-title">
+                    HRA Analysis
                 </div>
-            ` : ""}
 
-            <div class="hra-analysis-hover-body">
-                ${escapeHtml(analysis).replace(/\n/g, "<br>")}
+                ${analysisUrl ? `
+                    <div class="hra-analysis-hover-source">
+                        Source: Harness Racing Australia
+                        <a
+                            href="${escapeHtml(analysisUrl)}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onclick="event.stopPropagation();">
+                            View original ↗
+                        </a>
+                    </div>
+                ` : ""}
+
+                <div class="hra-analysis-hover-body">
+                    ${escapeHtml(analysis).replace(/\r?\n/g, "<br>")}
+                </div>
+
             </div>
         </div>
     `;

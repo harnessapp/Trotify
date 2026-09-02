@@ -11107,18 +11107,19 @@ body.legal-modal-open {
 }
 
 .hra-analysis-hover-source {
-    margin: 4px 0 9px;
-    font-size: 10px;
-    color: rgba(255, 255, 255, 0.50);
+    margin: -4px 0 10px;
+    font-size: 11px;
+    color: #8a8f94;
 }
 
 .hra-analysis-hover-source a {
-    margin-left: 5px;
-    color: #63d6c5;
+    margin-left: 4px;
+    color: #687078;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .hra-analysis-hover-source a:hover {
+    color: #159b8c;
     text-decoration: underline;
 }
