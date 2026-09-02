@@ -11087,3 +11087,38 @@ body.legal-modal-open {
         font-size: 12.5px;
     }
 }
+
+.hra-popup-source {
+    padding: 8px 18px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.55);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hra-popup-source a {
+    margin-left: 6px;
+    color: #63d6c5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.hra-popup-source a:hover {
+    text-decoration: underline;
+}
+
+.hra-analysis-hover-source {
+    margin: 4px 0 9px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.hra-analysis-hover-source a {
+    margin-left: 5px;
+    color: #63d6c5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.hra-analysis-hover-source a:hover {
+    text-decoration: underline;
+}
