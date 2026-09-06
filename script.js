@@ -10183,8 +10183,8 @@ async function loadLast30Preview(file, elementId, nameColumn, type) {
             const places = parseInt(
                 row.Places ||
                 row.Place ||
-                row["2nds"] ||
                 row["2nds + 3rds"] ||
+                ((parseInt(row["2nds"] || 0, 10)) + (parseInt(row["3rds"] || 0, 10))) ||
                 0,
                 10
             );
