@@ -1659,7 +1659,12 @@ function renderModelTipDayGroup(group) {
 function renderModelTipRow(item) {
     const timeDisplay = item.dateKey === todayIso()
         ? item.timeUntil
-        : item.time || "TBC";
+        : item.raceDateTime
+            ? item.raceDateTime.toLocaleTimeString([], {
+                hour: "numeric",
+                minute: "2-digit"
+            })
+            : item.time || "TBC";
 
     return `
         <div class="stable-change-row-one-line" onclick="openRaceFromHomeByKey('${escapeHtml(item.key)}')">
@@ -2226,7 +2231,12 @@ function renderBoxTickerDayGroup(group) {
 function renderBoxTickerRow(item) {
     const timeDisplay = item.dateKey === todayIso()
         ? item.timeUntil
-        : item.time || "TBC";
+        : item.raceDateTime
+            ? item.raceDateTime.toLocaleTimeString([], {
+                hour: "numeric",
+                minute: "2-digit"
+            })
+            : item.time || "TBC";
 
     return `
         <div class="box-ticker-row-card" onclick="openRaceFromHomeByKey('${escapeHtml(item.key)}')">
@@ -3361,21 +3371,60 @@ function getGoodLeaders(rows) {
         const state = clean(row.State || row.STATE || row["State "] || "").toUpperCase();
         const dateValue = clean(row.Date || row.DATE || row["Meeting Date"] || "");
         const raceNo = clean(row["Race No"] || row.RaceNo || row.Race || "").replace(/^R/i, "");
+
         const time = clean(row.Time || row.TIME || row["Race Time"] || "");
+
+        const raceStartUTC = clean(
+            row.RaceStartUTC ||
+            row["Race Start UTC"] ||
+            ""
+        );
+
         const horse = clean(row.Horse || "");
-        const horseNo = formatWholeNumber(row["Horse No"] || row.HorseNo || row.Tab || "");
+        const horseNo = formatWholeNumber(
+            row["Horse No"] || row.HorseNo || row.Tab || ""
+        );
         const barrier = clean(row.Barrier || row.BARRIER || "").toUpperCase();
 
         const dateKey = parseDateToKey(dateValue);
-        const raceDateTime = buildRaceDateTime(dateKey, time);
 
-        const leadStarts = parseNumber(row["Bell Pos Lead"] || row["Lead Sts"] || row["Ld Sts"] || "");
-        const leadWins = parseNumber(row["Ld Win"] || row["Lead Wins"] || "");
-        const leadPlaces = parseNumber(row["Ld Pla"] || row["Lead Places"] || "");
-        const leadPct = parseNumber(row["Ld %"] || row["Ld%"] || row["Lead %"] || "");
+        const raceDateTime = raceStartUTC
+            ? new Date(raceStartUTC)
+            : buildRaceDateTime(dateKey, time);
 
-        const winPct = leadStarts > 0 ? (leadWins / leadStarts) * 100 : 0;
-        const placePct = leadStarts > 0 ? ((leadWins + leadPlaces) / leadStarts) * 100 : 0;
+        const leadStarts = parseNumber(
+            row["Bell Pos Lead"] ||
+            row["Lead Sts"] ||
+            row["Ld Sts"] ||
+            ""
+        );
+
+        const leadWins = parseNumber(
+            row["Ld Win"] ||
+            row["Lead Wins"] ||
+            ""
+        );
+
+        const leadPlaces = parseNumber(
+            row["Ld Pla"] ||
+            row["Lead Places"] ||
+            ""
+        );
+
+        const leadPct = parseNumber(
+            row["Ld %"] ||
+            row["Ld%"] ||
+            row["Lead %"] ||
+            ""
+        );
+
+        const winPct = leadStarts > 0
+            ? (leadWins / leadStarts) * 100
+            : 0;
+
+        const placePct = leadStarts > 0
+            ? ((leadWins + leadPlaces) / leadStarts) * 100
+            : 0;
 
         return {
             key: `${venue}|${state}|${dateValue}|${raceNo}`,
@@ -3390,7 +3439,9 @@ function getGoodLeaders(rows) {
             horseNo,
             barrier,
             raceDateTime,
-            timeUntil: raceDateTime ? formatTimeUntil(raceDateTime, now) : "TBC",
+            timeUntil: raceDateTime
+                ? formatTimeUntil(raceDateTime, now)
+                : "TBC",
             leadStarts,
             leadWins,
             leadPlaces,
@@ -3402,9 +3453,18 @@ function getGoodLeaders(rows) {
         if (!item.raceDateTime) return false;
         if (!item.venue || !item.raceNo || !item.horse) return false;
         if (!item.barrier.includes("FR")) return false;
-        if (item.raceDateTime.getTime() < now.getTime() - 5 * 60 * 1000) return false;
 
-        return item.leadStarts >= 5 && (item.winPct > 59 || item.placePct > 89);
+        if (
+            item.raceDateTime.getTime() <
+            now.getTime() - 5 * 60 * 1000
+        ) {
+            return false;
+        }
+
+        return (
+            item.leadStarts >= 5 &&
+            (item.winPct > 59 || item.placePct > 89)
+        );
     });
 
     const frontRowRankMap = new Map();
@@ -3414,52 +3474,115 @@ function getGoodLeaders(rows) {
             const raceFrontRow = rows
                 .filter(row => {
                     const venue = clean(row.Venue || "");
-                    const state = clean(row.State || row.STATE || row["State "] || "").toUpperCase();
-                    const dateValue = clean(row.Date || row.DATE || row["Meeting Date"] || "");
-                    const raceNo = clean(row["Race No"] || row.RaceNo || row.Race || "").replace(/^R/i, "");
-                    const barrier = clean(row.Barrier || row.BARRIER || "").toUpperCase();
+                    const state = clean(
+                        row.State ||
+                        row.STATE ||
+                        row["State "] ||
+                        ""
+                    ).toUpperCase();
 
-                    return `${venue}|${state}|${dateValue}|${raceNo}` === item.raceKey &&
-                        barrier.includes("FR");
+                    const dateValue = clean(
+                        row.Date ||
+                        row.DATE ||
+                        row["Meeting Date"] ||
+                        ""
+                    );
+
+                    const raceNo = clean(
+                        row["Race No"] ||
+                        row.RaceNo ||
+                        row.Race ||
+                        ""
+                    ).replace(/^R/i, "");
+
+                    const barrier = clean(
+                        row.Barrier ||
+                        row.BARRIER ||
+                        ""
+                    ).toUpperCase();
+
+                    return (
+                        `${venue}|${state}|${dateValue}|${raceNo}` === item.raceKey &&
+                        barrier.includes("FR")
+                    );
                 })
                 .map(row => ({
                     horse: clean(row.Horse || ""),
-                    horseNo: formatWholeNumber(row["Horse No"] || row.HorseNo || row.Tab || ""),
-                    leadPct: parseNumber(row["Ld %"] || row["Ld%"] || row["Lead %"] || "")
+                    horseNo: formatWholeNumber(
+                        row["Horse No"] ||
+                        row.HorseNo ||
+                        row.Tab ||
+                        ""
+                    ),
+                    leadPct: parseNumber(
+                        row["Ld %"] ||
+                        row["Ld%"] ||
+                        row["Lead %"] ||
+                        ""
+                    )
                 }))
                 .sort((a, b) => {
-                    const leadDiff = safeNum(b.leadPct) - safeNum(a.leadPct);
+                    const leadDiff =
+                        safeNum(b.leadPct) -
+                        safeNum(a.leadPct);
+
                     if (leadDiff !== 0) return leadDiff;
 
-                    return Number(a.horseNo || 999) - Number(b.horseNo || 999);
+                    return (
+                        Number(a.horseNo || 999) -
+                        Number(b.horseNo || 999)
+                    );
                 });
 
             const rankSet = new Set(
                 raceFrontRow
                     .slice(0, 2)
-                    .map(r => `${normaliseName(r.horse)}|${r.horseNo}`)
+                    .map(
+                        r =>
+                            `${normaliseName(r.horse)}|${r.horseNo}`
+                    )
             );
 
             frontRowRankMap.set(item.raceKey, rankSet);
         }
     });
 
-    return baseItems.filter(item => {
-        const rankSet = frontRowRankMap.get(item.raceKey);
-        return rankSet && rankSet.has(`${normaliseName(item.horse)}|${item.horseNo}`);
-    }).sort((a, b) => {
-        const timeDiff = a.raceDateTime - b.raceDateTime;
-        if (timeDiff !== 0) return timeDiff;
+    return baseItems
+        .filter(item => {
+            const rankSet = frontRowRankMap.get(item.raceKey);
 
-        const venueDiff = a.venue.localeCompare(b.venue);
-        if (venueDiff !== 0) return venueDiff;
+            return (
+                rankSet &&
+                rankSet.has(
+                    `${normaliseName(item.horse)}|${item.horseNo}`
+                )
+            );
+        })
+        .sort((a, b) => {
+            const timeDiff =
+                a.raceDateTime -
+                b.raceDateTime;
 
-        const raceDiff = Number(a.raceNo || 999) - Number(b.raceNo || 999);
-        if (raceDiff !== 0) return raceDiff;
+            if (timeDiff !== 0) return timeDiff;
 
-        return Number(a.horseNo || 999) - Number(b.horseNo || 999);
-    });
+            const venueDiff =
+                a.venue.localeCompare(b.venue);
+
+            if (venueDiff !== 0) return venueDiff;
+
+            const raceDiff =
+                Number(a.raceNo || 999) -
+                Number(b.raceNo || 999);
+
+            if (raceDiff !== 0) return raceDiff;
+
+            return (
+                Number(a.horseNo || 999) -
+                Number(b.horseNo || 999)
+            );
+        });
 }
+
 
 function groupGoodLeadersByDay(leaders) {
     const map = new Map();
@@ -3513,7 +3636,12 @@ function renderGoodLeaderDayGroup(group) {
 function renderGoodLeaderRow(item) {
     const timeDisplay = item.dateKey === todayIso()
         ? item.timeUntil
-        : item.time || "TBC";
+        : item.raceDateTime
+            ? item.raceDateTime.toLocaleTimeString([], {
+                hour: "numeric",
+                minute: "2-digit"
+            })
+            : item.time || "TBC";
 
     return `
         <div class="stable-change-row-one-line" onclick="openRaceFromHomeByKey('${escapeHtml(item.key)}')">
