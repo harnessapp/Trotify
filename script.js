@@ -3627,12 +3627,25 @@ function getStableChanges(rows) {
         const state = clean(row.State || row.STATE || row["State "] || "");
         const dateValue = clean(row.Date || row.DATE || row["Meeting Date"] || "");
         const raceNo = clean(row["Race No"] || row.RaceNo || row.Race || "").replace(/^R/i, "");
+
         const time = clean(row.Time || row.TIME || row["Race Time"] || "");
+
+        const raceStartUTC = clean(
+            row.RaceStartUTC ||
+            row["Race Start UTC"] ||
+            ""
+        );
+
         const horse = clean(row.Horse || "");
-        const horseNo = formatWholeNumber(row["Horse No"] || row.HorseNo || row.Tab || "");
+        const horseNo = formatWholeNumber(
+            row["Horse No"] || row.HorseNo || row.Tab || ""
+        );
 
         const dateKey = parseDateToKey(dateValue);
-        const raceDateTime = buildRaceDateTime(dateKey, time);
+
+        const raceDateTime = raceStartUTC
+            ? new Date(raceStartUTC)
+            : buildRaceDateTime(dateKey, time);
 
         return {
             key: `${venue}|${state}|${dateValue}|${raceNo}`,
@@ -3667,26 +3680,6 @@ function getStableChanges(rows) {
 
         return Number(a.horseNo || 999) - Number(b.horseNo || 999);
     });
-    }
-
-
-const WATCHLIST_STORAGE_KEY = "trotifyWatchlist";
-let watchlistSearchText = "";
-
-function showWatchlistView() {
-    stopTimelineRefresh();
-    clearNextUpTimer();
-
-    document.querySelector(".hero").style.display = "none";
-    document.querySelector(".dashboard-grid").style.display = "none";
-    document.querySelector(".meetings-panel").style.display = "";
-
-    document.querySelector(".panel-heading").innerHTML = `
-        <span>⭐</span>
-        <span>Search / Watchlist</span>
-    `;
-
-    renderWatchlistView();
 }
 
 function renderWatchlistView() {
