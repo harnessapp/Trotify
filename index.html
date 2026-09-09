@@ -85,7 +85,7 @@
                     <span>🚀</span>
                     <span>Good Leaders</span>
                 </a>
-                <a href="#" class="nav-item" data-view="model-tips">
+                <a href="#" class="nav-item" data-view="model-tips" id="modelTipsNav">
                     <span>🎯</span>
                     <span>Model Tips</span>
                 </a>
@@ -384,6 +384,18 @@
             )
         ) {
             tippingCompNav.style.display = "none";
+        }
+
+        const modelTipsNav = document.getElementById("modelTipsNav");
+
+        if (
+            modelTipsNav &&
+            (
+                location.hostname === "trotify.app" ||
+                location.hostname === "www.trotify.app"
+            )
+        ) {
+            modelTipsNav.style.display = "none";
         }
 
         const legalModal = document.getElementById("legalModal");

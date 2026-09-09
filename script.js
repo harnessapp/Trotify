@@ -872,6 +872,15 @@ function setupNavigation() {
 }
 
 function showModelTipsView() {
+
+    if (
+        location.hostname === "trotify.app" ||
+        location.hostname === "www.trotify.app"
+    ) {
+        showHomeView();
+        return;
+    }
+
     clearNextUpTimer();
 
     document.querySelector(".hero").style.display = "none";
