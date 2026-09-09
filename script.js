@@ -183,6 +183,9 @@ let selectedGoodLeaderState = "ALL";
 let selectedModelTipState = "ALL";
 let selectedAvPreviewState = "ALL";
 
+const WATCHLIST_STORAGE_KEY = "trotifyWatchlist";
+let watchlistSearchText = "";
+
 let selectedVenueStatMode = "off";
 let fieldSizeStatsRows = [];
 let selectedSizePosition = "LEAD";
@@ -3817,6 +3820,22 @@ function getStableChanges(rows) {
 
         return Number(a.horseNo || 999) - Number(b.horseNo || 999);
     });
+}
+
+function showWatchlistView() {
+    stopTimelineRefresh();
+    clearNextUpTimer();
+
+    document.querySelector(".hero").style.display = "none";
+    document.querySelector(".dashboard-grid").style.display = "none";
+    document.querySelector(".meetings-panel").style.display = "";
+
+    document.querySelector(".panel-heading").innerHTML = `
+        <span>⭐</span>
+        <span>Watchlist</span>
+    `;
+
+    renderWatchlistView();
 }
 
 function renderWatchlistView() {
