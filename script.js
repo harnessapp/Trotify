@@ -3694,8 +3694,13 @@ function showTrialWatchView() {
                         Upcoming runners
                     </div>
 
-                    <h2>
-                        ${items.length} runners trialled since their last race
+                    <h2 class="trial-watch-count-heading">
+                        <span class="trial-watch-count-desktop">
+                            ${items.length} runners trialled since their last race
+                        </span>
+                        <span class="trial-watch-count-mobile">
+                            ${items.length} trialled since race
+                        </span>
                     </h2>
                 </div>
             </div>

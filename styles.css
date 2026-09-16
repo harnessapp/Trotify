@@ -11503,3 +11503,23 @@ body.legal-modal-open {
         display: none;
     }
 }
+
+/* Trial Watch count heading — desktop/mobile wording */
+
+.trial-watch-count-desktop {
+    display: inline;
+}
+
+.trial-watch-count-mobile {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .trial-watch-count-desktop {
+        display: none;
+    }
+
+    .trial-watch-count-mobile {
+        display: inline;
+    }
+}
