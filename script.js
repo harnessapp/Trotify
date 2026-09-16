@@ -851,6 +851,8 @@ function setupNavigation() {
                 showTippingCompView();
             } else if (view === "stable-changes") {
                 showStableChangesView();
+            } else if (view === "trial-watch") {
+                showTrialWatchView();
             } else if (view === "watchlist") {
                 showWatchlistView();
             } else if (view === "good-leaders") {
@@ -3242,6 +3244,575 @@ function showUpcomingFieldsView() {
     `;
 
     renderUpcomingFields(allRows);
+}
+
+// ============================================================
+// TRIAL WATCH
+// Upcoming runners that have trialled since their last race
+// Uses the exact same SinceLR > 0 rule as the runner trial card
+// ============================================================
+
+let selectedTrialWatchState = "ALL";
+let trialWatchTodayOnly = false;
+
+function getTrialWatchItems(rows) {
+    const today = todayIso();
+    const items = [];
+
+    // Build this ONCE, not once per runner
+    const upcomingRaces = findUpcomingRaces(rows);
+
+    rows.forEach(row => {
+        const dateValue = clean(
+            row.Date ||
+            row.DATE ||
+            row["Meeting Date"] ||
+            ""
+        );
+
+        const dateKey = parseDateToKey(dateValue);
+
+        // Upcoming runners only
+        if (!dateKey || dateKey < today) return;
+
+        const trials = [];
+
+        [1, 2, 3].forEach(n => {
+            const p = `T${n}`;
+
+            const sinceRaw = clean(row[`${p} SinceLR`] || "");
+            const sinceVal = Number(sinceRaw);
+
+            // IMPORTANT:
+            // exact same definition currently used for SINCE RACE
+            if (!Number.isFinite(sinceVal) || sinceVal <= 0) {
+                return;
+            }
+
+            trials.push({
+                number: n,
+                sinceLR: sinceVal,
+                venue: clean(row[`${p} Venue`] || ""),
+                date: clean(row[`${p} Date`] || ""),
+                pos: clean(row[`${p} Pos`] || ""),
+                runners: clean(row[`${p} Runners`] || ""),
+                dist: clean(row[`${p} Dist`] || ""),
+                margin: clean(row[`${p} Mgn`] || ""),
+                winner: clean(row[`${p} Winner`] || ""),
+                start: clean(row[`${p} Start`] || ""),
+                rate: clean(row[`${p} Rate`] || ""),
+                half: clean(row[`${p} Half`] || ""),
+                trialNo: clean(row[`${p} Trial No`] || ""),
+                url: clean(row[`${p} URL`] || ""),
+                vision: clean(row[`${p} Vision`] || "")
+            });
+        });
+
+        if (!trials.length) return;
+
+        const venue = clean(row.Venue || "");
+        const state = clean(row.State || "");
+        const raceNo = clean(row["Race No"] || "").replace(/^R/i, "");
+
+        const race = upcomingRaces.find(r =>
+            r.venue === venue &&
+            r.state === state &&
+            parseDateToKey(r.dateValue) === dateKey &&
+            String(r.raceNo) === String(raceNo)
+        );
+
+        items.push({
+            row,
+            horse: clean(row.Horse || ""),
+            venue,
+            state,
+            dateValue,
+            dateKey,
+            raceNo,
+            horseNo: clean(
+                row["Horse No"] ||
+                row["HorseNo"] ||
+                row["No"] ||
+                row.Number ||
+                ""
+            ),
+            barrier: clean(row.Barrier || ""),
+            trainer: clean(
+                row.Trainer_clean ||
+                row["Trainer Clean"] ||
+                row.Trainer ||
+                ""
+            ),
+            driver: clean(row.Driver || ""),
+            race,
+            trials
+        });
+    });
+
+    return items.sort((a, b) => {
+        if (a.dateKey !== b.dateKey) {
+            return a.dateKey.localeCompare(b.dateKey);
+        }
+
+        const timeA = a.race?.dateTime?.getTime?.() || 0;
+        const timeB = b.race?.dateTime?.getTime?.() || 0;
+
+        if (timeA !== timeB) {
+            return timeA - timeB;
+        }
+
+        if (a.venue !== b.venue) {
+            return a.venue.localeCompare(b.venue);
+        }
+
+        if (Number(a.raceNo) !== Number(b.raceNo)) {
+            return Number(a.raceNo) - Number(b.raceNo);
+        }
+
+        return Number(a.horseNo || 999) - Number(b.horseNo || 999);
+    });
+}
+
+
+function groupTrialWatchByDay(items) {
+    const map = new Map();
+
+    items.forEach(item => {
+        if (!map.has(item.dateKey)) {
+            map.set(item.dateKey, []);
+        }
+
+        map.get(item.dateKey).push(item);
+    });
+
+    return [...map.entries()].map(([dateKey, dayItems]) => ({
+        dateKey,
+        label: formatTrialWatchDayLabel(dateKey),
+        items: dayItems
+    }));
+}
+
+
+function formatTrialWatchDayLabel(dateKey) {
+    const date = new Date(`${dateKey}T12:00:00`);
+
+    if (Number.isNaN(date.getTime())) {
+        return dateKey;
+    }
+
+    const today = todayIso();
+    const tomorrow = addDaysIso(1);
+
+    const formatted = date
+        .toLocaleDateString("en-AU", {
+            weekday: "long",
+            day: "numeric",
+            month: "long"
+        })
+        .toUpperCase();
+
+    if (dateKey === today) {
+        return `TODAY — ${formatted}`;
+    }
+
+    if (dateKey === tomorrow) {
+        return `TOMORROW — ${formatted}`;
+    }
+
+    return formatted;
+}
+
+
+function getTrialWatchCountdown(item) {
+    if (!item.race?.dateTime) return "";
+
+    const diff = item.race.dateTime.getTime() - Date.now();
+
+    if (diff <= 0) {
+        return "DUE";
+    }
+
+    const totalMinutes = Math.floor(diff / 60000);
+
+    const days = Math.floor(totalMinutes / 1440);
+    const hours = Math.floor((totalMinutes % 1440) / 60);
+    const mins = totalMinutes % 60;
+
+    if (days > 0) {
+        return `${days}d ${hours}h`;
+    }
+
+    if (hours > 0) {
+        return `${hours}h ${mins}m`;
+    }
+
+    return `${mins}m`;
+}
+
+
+function renderTrialWatchHomeTile() {
+    const todayEl = document.getElementById("trialWatchToday");
+    const tomorrowEl = document.getElementById("trialWatchTomorrow");
+    const futureEl = document.getElementById("trialWatchFuture");
+    const button = document.getElementById("viewTrialWatchButton");
+
+    if (!todayEl || !tomorrowEl || !futureEl) return;
+
+    const today = todayIso();
+    const tomorrow = addDaysIso(1);
+
+    let todayCount = 0;
+    let tomorrowCount = 0;
+    let futureCount = 0;
+
+    allRows.forEach(row => {
+        const dateValue = clean(
+            row.Date ||
+            row.DATE ||
+            row["Meeting Date"] ||
+            ""
+        );
+
+        const dateKey = parseDateToKey(dateValue);
+
+        if (!dateKey || dateKey < today) return;
+
+        // Same SINCE RACE rule, but all we need to know here
+        // is whether this runner has AT LEAST ONE qualifying trial.
+        const hasTrialSinceRace = [1, 2, 3].some(n => {
+            const sinceRaw = clean(row[`T${n} SinceLR`] || "");
+            const sinceVal = Number(sinceRaw);
+
+            return Number.isFinite(sinceVal) && sinceVal > 0;
+        });
+
+        if (!hasTrialSinceRace) return;
+
+        if (dateKey === today) {
+            todayCount++;
+        } else if (dateKey === tomorrow) {
+            tomorrowCount++;
+        } else {
+            futureCount++;
+        }
+    });
+
+    todayEl.textContent = todayCount;
+    tomorrowEl.textContent = tomorrowCount;
+    futureEl.textContent = futureCount;
+
+    if (button) {
+        button.onclick = function (e) {
+            e.preventDefault();
+
+            document
+                .querySelectorAll(".nav-item")
+                .forEach(i => i.classList.remove("active"));
+
+            document
+                .querySelector('.nav-item[data-view="trial-watch"]')
+                ?.classList.add("active");
+
+            showTrialWatchView();
+        };
+    }
+}
+
+function formatTrialWatchCountdown(raceDateTime) {
+    if (!raceDateTime || Number.isNaN(raceDateTime.getTime())) return "";
+
+    const diffMs = raceDateTime.getTime() - Date.now();
+
+    if (diffMs <= 0) return "Due";
+
+    const totalMinutes = Math.floor(diffMs / 60000);
+    const days = Math.floor(totalMinutes / 1440);
+    const hours = Math.floor((totalMinutes % 1440) / 60);
+    const minutes = totalMinutes % 60;
+
+    if (days > 0) {
+        return `${days}d ${hours}h`;
+    }
+
+    if (hours > 0) {
+        return `${hours}h ${minutes}m`;
+    }
+
+    return `${minutes}m`;
+}
+
+
+function renderTrialWatchItem(item, sameRace = false) {
+    const raceDateTime = item.row ? getRaceDateTime(item.row) : null;
+
+    const countdown = raceDateTime
+        ? formatTrialWatchCountdown(raceDateTime)
+        : "";
+
+    const raceTime = item.row
+        ? getRaceDisplayTime(item.row)
+        : "";
+
+    const horseNo = item.horseNo
+        ? `No. ${item.horseNo}`
+        : "";
+
+    const raceText = [
+        shortVenueName(item.venue),
+        `R${item.raceNo}`,
+        horseNo,
+        raceTime
+    ].filter(Boolean).join(" · ");
+
+    const openRace = item.race
+        ? `onclick="openRaceFromHomeByKey('${escapeHtml(item.race.key)}')"`
+        : "";
+
+    return `
+        <div class="trial-watch-row" ${openRace}>
+            <div class="trial-watch-runner-line">
+
+                <div class="trial-watch-race">
+                    ${escapeHtml(raceText)}
+                </div>
+
+                <div class="trial-watch-horse">
+                    ${escapeHtml(item.horse)}
+                </div>
+
+                <div class="trial-watch-countdown">
+                    ${!sameRace && countdown
+                        ? `<span class="trial-watch-countdown-text">${escapeHtml(countdown)}</span>`
+                        : ""}
+                </div>
+
+            </div>
+
+            <div class="trial-watch-trials">
+                ${item.trials
+                    .map(trial => buildRunnerTrialLineHtml(item.row, trial.number))
+                    .join("")}
+            </div>
+        </div>
+    `;
+}
+
+
+function renderTrialWatchDayGroup(group) {
+    const sortedItems = [...group.items].sort((a, b) => {
+        const timeA = a.row ? getRaceDateTime(a.row) : null;
+        const timeB = b.row ? getRaceDateTime(b.row) : null;
+
+        const msA = timeA && !Number.isNaN(timeA.getTime())
+            ? timeA.getTime()
+            : Number.MAX_SAFE_INTEGER;
+
+        const msB = timeB && !Number.isNaN(timeB.getTime())
+            ? timeB.getTime()
+            : Number.MAX_SAFE_INTEGER;
+
+        return msA - msB;
+    });
+
+    const rowsHtml = sortedItems.map((item, index) => {
+        const previousItem = index > 0
+            ? sortedItems[index - 1]
+            : null;
+
+        const sameRace = previousItem &&
+            previousItem.venue === item.venue &&
+            previousItem.state === item.state &&
+            previousItem.dateKey === item.dateKey &&
+            String(previousItem.raceNo) === String(item.raceNo);
+
+        const separatorClass = index === 0
+            ? "first-race"
+            : sameRace
+                ? "same-race"
+                : "new-race";
+
+        return `
+            <div class="trial-watch-race-group ${separatorClass}">
+                ${renderTrialWatchItem(item, sameRace)}
+            </div>
+        `;
+    }).join("");
+
+    return `
+        <div class="trial-watch-day-group">
+
+            <div class="day-heading trial-watch-day-heading">
+                <strong>${escapeHtml(group.label)}</strong>
+            </div>
+
+            <div class="trial-watch-day-list">
+                ${rowsHtml}
+            </div>
+
+        </div>
+    `;
+}
+
+
+function showTrialWatchView() {
+    resetMobileViewScroll();
+    stopTimelineRefresh();
+    clearNextUpTimer();
+
+    document.querySelector(".hero").style.display = "none";
+    document.querySelector(".dashboard-grid").style.display = "none";
+    document.querySelector(".meetings-panel").style.display = "";
+
+    document.querySelector(".panel-heading").innerHTML = `
+        <span>🧪</span>
+        <span>Trial Watch</span>
+    `;
+
+    const allItems = getTrialWatchItems(allRows);
+    const today = todayIso();
+
+    const items = allItems.filter(item => {
+        const stateMatches =
+            selectedTrialWatchState === "ALL" ||
+            item.state === selectedTrialWatchState;
+
+        const dateMatches =
+            !trialWatchTodayOnly ||
+            item.dateKey === today;
+
+        return stateMatches && dateMatches;
+    });
+
+    const grouped = groupTrialWatchByDay(items);
+
+    document.getElementById("meetingStrip").innerHTML = `
+        <div class="stable-changes-layout trial-watch-layout">
+
+            <div class="stable-changes-header">
+                <div>
+                    <div class="race-panel-eyebrow">
+                        Upcoming runners
+                    </div>
+
+                    <h2>
+                        ${items.length} runners trialled since their last race
+                    </h2>
+                </div>
+            </div>
+
+            <div class="driver-state-filter stable-change-filter">
+                ${["ALL", "VIC", "NSW", "QLD", "SA", "WA", "TAS"]
+                    .map(state => `
+                        <button
+                            class="driver-state-button ${
+                                selectedTrialWatchState === state
+                                    ? "selected"
+                                    : ""
+                            }"
+                            onclick="setTrialWatchStateFilter('${state}')"
+                        >
+                            ${state}
+                        </button>
+                    `)
+                    .join("")}
+
+                <label class="trial-watch-today-filter">
+                    <input
+                        type="checkbox"
+                        ${trialWatchTodayOnly ? "checked" : ""}
+                        onchange="setTrialWatchTodayOnly(this.checked)"
+                    >
+                    <span>Today only</span>
+                </label>
+            </div>
+
+            ${
+                grouped.length
+                    ? grouped
+                        .map(renderTrialWatchDayGroup)
+                        .join("")
+                    : `
+                        <div class="coming-soon-card">
+                            <div class="coming-soon-title">
+                                No Trial Watch runners found
+                            </div>
+                            <p>
+                                No upcoming runners match the selected filters.
+                            </p>
+                        </div>
+                    `
+            }
+
+        </div>
+    `;
+}
+
+function setTrialWatchTodayOnly(checked) {
+    trialWatchTodayOnly = checked;
+    showTrialWatchView();
+}
+
+
+function setTrialWatchStateFilter(state) {
+    selectedTrialWatchState = state;
+    showTrialWatchView();
+}
+
+
+function renderTrialWatchHomeTile() {
+    const todayEl =
+        document.getElementById("trialWatchToday");
+
+    const tomorrowEl =
+        document.getElementById("trialWatchTomorrow");
+
+    const futureEl =
+        document.getElementById("trialWatchFuture");
+
+    const button =
+        document.getElementById("viewTrialWatchButton");
+
+    if (!todayEl || !tomorrowEl || !futureEl) {
+        return;
+    }
+
+    const items = getTrialWatchItems(allRows);
+
+    const today = todayIso();
+    const tomorrow = addDaysIso(1);
+
+    todayEl.textContent =
+        items.filter(item => item.dateKey === today).length;
+
+    tomorrowEl.textContent =
+        items.filter(item => item.dateKey === tomorrow).length;
+
+    futureEl.textContent =
+        items.filter(item =>
+            item.dateKey &&
+            item.dateKey !== today &&
+            item.dateKey !== tomorrow
+        ).length;
+
+    if (button) {
+        button.onclick = function (e) {
+            e.preventDefault();
+
+            document
+                .querySelectorAll(".nav-item")
+                .forEach(i =>
+                    i.classList.remove("active")
+                );
+
+            document
+                .querySelector(
+                    '.nav-item[data-view="trial-watch"]'
+                )
+                ?.classList.add("active");
+
+            showTrialWatchView();
+        };
+    }
 }
 
 function showStableChangesView() {
@@ -6418,6 +6989,7 @@ function renderDashboard(rows) {
     renderStableChangesHomeTile();
     renderGoodLeadersHomeTile();
     renderLatestResultsHomeTile();
+    renderTrialWatchHomeTile();
 
     renderMeetings(meetings.slice(0, 6));
 }
@@ -9073,7 +9645,7 @@ function buildRunnerTrialLineHtml(runner, n) {
     const visionClean = vision.toUpperCase();
     const visionHtml =
         vision && visionClean !== "_NOVISION"
-            ? `<a class="runner-trial-play" href="${escapeHtml(vision)}" target="_blank" rel="noopener noreferrer" title="Watch vision">▶</a>`
+            ? `<a class="runner-trial-play" href="${escapeHtml(vision)}" target="_blank" rel="noopener noreferrer" title="Watch vision" onclick="event.stopPropagation()">▶</a>`
             : "";
 
     const freshBadge = isPostRaceTrial

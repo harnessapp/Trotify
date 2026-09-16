@@ -11123,3 +11123,224 @@ body.legal-modal-open {
     color: #159b8c;
     text-decoration: underline;
 }
+
+/* =========================================================
+   TRIAL WATCH — DESKTOP
+   ========================================================= */
+
+.trial-watch-page {
+    width: 100%;
+}
+
+.trial-watch-day-group {
+    margin-top: 22px;
+    margin-bottom: 30px;
+}
+
+/* Individual upcoming runner */
+.trial-watch-row {
+    display: grid;
+    grid-template-columns: 420px minmax(0, 1fr);
+    column-gap: 28px;
+
+    padding: 14px 4px 15px;
+    border-bottom: none;
+
+    cursor: pointer;
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.trial-watch-row:hover {
+    background: rgba(94, 255, 210, 0.035);
+    border-bottom-color: rgba(94, 255, 210, 0.22);
+}
+
+
+/* ---------------------------------------------------------
+   RUNNER / UPCOMING RACE
+   --------------------------------------------------------- */
+
+.trial-watch-runner-line {
+    display: grid;
+
+    grid-template-columns: 90px minmax(0, 1fr);
+    grid-template-areas:
+        "countdown race"
+        "countdown horse";
+
+    column-gap: 16px;
+    align-content: center;
+}
+
+.trial-watch-countdown {
+    grid-area: countdown;
+
+    color: var(--accent);
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.15;
+
+    white-space: pre-line;
+    align-self: center;
+}
+
+.trial-watch-race {
+    grid-area: race;
+
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.3;
+
+    margin-bottom: 4px;
+}
+
+.trial-watch-horse {
+    grid-area: horse;
+
+    color: var(--text);
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 1.2;
+
+    margin-bottom: 4px;
+}
+
+.trial-watch-people {
+    grid-area: people;
+
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+
+/* ---------------------------------------------------------
+   TRIAL HISTORY
+   --------------------------------------------------------- */
+
+.trial-watch-trials {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 4px;
+
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+/*
+   Trial Watch deliberately reuses the normal runner trial
+   renderer, so only tighten its presentation inside this view.
+*/
+
+.trial-watch-trials .runner-trial-line {
+    margin: 0;
+    padding: 0;
+
+    white-space: normal;
+}
+
+.trial-watch-trials .runner-trial-play {
+    margin-right: 5px;
+}
+
+.trial-watch-trials .trial-fresh-badge {
+    margin-right: 6px;
+}
+
+
+/* ---------------------------------------------------------
+   DATE DIVIDERS
+   --------------------------------------------------------- */
+
+.trial-watch-day-heading {
+    margin: 0;
+    padding: 0 0 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 2px solid rgba(94, 255, 210, 0.30);
+}
+
+.trial-watch-day-heading strong {
+    color: rgba(255, 255, 255, 0.90);
+
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 3px;
+
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Trial Watch race grouping */
+
+.trial-watch-race-group {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* First runner after the day heading doesn't need another line */
+.trial-watch-race-group.first-race {
+    border-top: none;
+}
+
+/* Another Trial Watch horse in the same race */
+.trial-watch-race-group.same-race {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* First Trial Watch horse in a different race */
+.trial-watch-race-group.new-race {
+    border-top: 2px solid rgba(94, 255, 210, 0.24);
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+
+
+/* ---------------------------------------------------------
+   STATE FILTERS
+   --------------------------------------------------------- */
+
+.trial-watch-state-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 14px;
+    margin-bottom: 8px;
+}
+
+/* Trial Watch — Today Only filter */
+
+.trial-watch-today-filter {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-left: 12px;
+
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 12px;
+    font-weight: 800;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.trial-watch-today-filter input {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+
+    accent-color: var(--accent);
+    cursor: pointer;
+}
