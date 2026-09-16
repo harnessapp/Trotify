@@ -9612,37 +9612,102 @@ function buildRunnerTrialLineHtml(runner, n) {
     const trialNo = cleanIntish(trialNoRaw);
     const trialLabel = trialNo ? `(Trial ${trialNo})` : "";
 
-    const distText = distRaw ? `${cleanIntish(distRaw).replace(/m$/i, "")}m` : "";
+    const distText = distRaw
+        ? `${cleanIntish(distRaw).replace(/m$/i, "")}m`
+        : "";
+
     const startText = start.toLowerCase().includes("stand")
         ? "SS"
         : start.toLowerCase().includes("mobile")
             ? "MS"
             : "";
 
-    const distStartText = [distText, startText].filter(Boolean).join(" ");
+    const distStartText = [distText, startText]
+        .filter(Boolean)
+        .join(" ");
 
     const rateText = formatTrialRate(rateRaw);
-    const halfText = halfRaw ? escapeHtml(formatOneDecimal(halfRaw)) : "";
+    const halfText = halfRaw
+        ? escapeHtml(formatOneDecimal(halfRaw))
+        : "";
 
     const isWin = pos === "1st";
-    const sinceVal = Number(sinceRaw);
-    const isPostRaceTrial = Number.isFinite(sinceVal) && sinceVal > 0;
 
+    const sinceVal = Number(sinceRaw);
+    const isPostRaceTrial =
+        Number.isFinite(sinceVal) && sinceVal > 0;
+
+    /*
+     * DESKTOP DETAIL
+     * Keep the existing full version exactly as before.
+     */
     const detailParts = [];
 
     if (trialTrainer || trialDriver) {
-        detailParts.push(`(${[trialTrainer, trialDriver].filter(Boolean).join(" / ")})`);
+        detailParts.push(
+            `(${[trialTrainer, trialDriver]
+                .filter(Boolean)
+                .join(" / ")})`
+        );
     }
 
-    if (mgnRaw) detailParts.push(`btn ${mgnFmtTrial(mgnRaw)}`);
-    if (winner && !isWin) detailParts.push(`wnr ${winner.toUpperCase()}`);
+    if (mgnRaw) {
+        detailParts.push(`btn ${mgnFmtTrial(mgnRaw)}`);
+    }
+
+    if (winner && !isWin) {
+        detailParts.push(`wnr ${winner.toUpperCase()}`);
+    }
+
     if (rateText) detailParts.push(rateText);
     if (halfText) detailParts.push(halfText);
 
-    const mainParts = [posText, runnersText, venueText, dateText].filter(Boolean);
-    const extraParts = [trialLabel, distStartText].filter(Boolean);
+    const mainParts = [
+        posText,
+        runnersText,
+        venueText,
+        dateText
+    ].filter(Boolean);
+
+    const extraParts = [
+        trialLabel,
+        distStartText
+    ].filter(Boolean);
+
+    /*
+     * MOBILE DETAIL
+     *
+     * Example:
+     * 7th ALBI 11Sep26 1660m MS, btn 89.6m,
+     * wnr CAPTAIN SHUFFLES, 1:50.5, 54.1
+     *
+     * Deliberately removes:
+     * - field size "(of 7)"
+     * - trial number
+     * - trainer / driver
+     */
+    const mobileMainParts = [
+        posText,
+        venueText,
+        dateText,
+        distStartText
+    ].filter(Boolean);
+
+    const mobileDetailParts = [];
+
+    if (mgnRaw) {
+        mobileDetailParts.push(`btn ${mgnFmtTrial(mgnRaw)}`);
+    }
+
+    if (winner && !isWin) {
+        mobileDetailParts.push(`wnr ${winner.toUpperCase()}`);
+    }
+
+    if (rateText) mobileDetailParts.push(rateText);
+    if (halfText) mobileDetailParts.push(halfText);
 
     const visionClean = vision.toUpperCase();
+
     const visionHtml =
         vision && visionClean !== "_NOVISION"
             ? `<a class="runner-trial-play" href="${escapeHtml(vision)}" target="_blank" rel="noopener noreferrer" title="Watch vision" onclick="event.stopPropagation()">▶</a>`
@@ -9652,22 +9717,57 @@ function buildRunnerTrialLineHtml(runner, n) {
         ? `<span class="trial-fresh-badge">SINCE RACE</span>`
         : "";
 
-    const lineInner = `
+    /*
+     * Existing desktop content.
+     */
+    const desktopLineInner = `
         ${freshBadge}
         <span class="runner-trial-main">
             ${escapeHtml(mainParts.join("  "))}
         </span>
-        ${extraParts.length ? `<span class="runner-trial-extra">${escapeHtml(extraParts.join("  "))}</span>` : ""}
-        ${detailParts.length ? `<span class="runner-trial-detail">, ${escapeHtml(detailParts.join(", "))}</span>` : ""}
-        ${visionHtml}
+        ${extraParts.length
+            ? `<span class="runner-trial-extra">${escapeHtml(extraParts.join("  "))}</span>`
+            : ""}
+        ${detailParts.length
+            ? `<span class="runner-trial-detail">, ${escapeHtml(detailParts.join(", "))}</span>`
+            : ""}
+    `;
+
+    /*
+     * Short mobile content.
+     */
+    const mobileLineInner = `
+        ${freshBadge}
+        <span class="runner-trial-main">
+            ${escapeHtml(mobileMainParts.join("  "))}
+        </span>
+        ${mobileDetailParts.length
+            ? `<span class="runner-trial-detail">, ${escapeHtml(mobileDetailParts.join(", "))}</span>`
+            : ""}
+    `;
+
+    const lineInner = `
+        <span class="runner-trial-desktop">
+            ${desktopLineInner}
+        </span>
+
+        <span class="runner-trial-mobile">
+            ${mobileLineInner}
+        </span>
     `;
 
     if (url) {
         return `
             <div class="runner-trial-line ${isPostRaceTrial ? "post-race-trial" : ""}">
                 ${visionHtml}
-                <a class="runner-trial-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">
-                    ${lineInner.replace(visionHtml, "")}
+                <a
+                    class="runner-trial-link"
+                    href="${escapeHtml(url)}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onclick="event.stopPropagation()"
+                >
+                    ${lineInner}
                 </a>
             </div>
         `;
@@ -9677,12 +9777,11 @@ function buildRunnerTrialLineHtml(runner, n) {
         <div class="runner-trial-line ${isPostRaceTrial ? "post-race-trial" : ""}">
             ${visionHtml}
             <span class="runner-trial-link">
-                ${lineInner.replace(visionHtml, "")}
+                ${lineInner}
             </span>
         </div>
     `;
 }
-
 function normaliseTrialText(value) {
     return clean(value || "")
         .toUpperCase()
