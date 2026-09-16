@@ -11497,3 +11497,9 @@ body.legal-modal-open {
         display: inline;
     }
 }
+
+@media (max-width: 700px) {
+    .trial-watch-trials .trial-fresh-badge {
+        display: none;
+    }
+}
