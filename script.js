@@ -6998,7 +6998,7 @@ function renderDashboard(rows) {
     renderStableChangesHomeTile();
     renderGoodLeadersHomeTile();
     renderLatestResultsHomeTile();
-    renderTrialWatchHomeTile();
+    // renderTrialWatchHomeTile();
 
     renderMeetings(meetings.slice(0, 6));
 }
