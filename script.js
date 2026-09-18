@@ -7904,6 +7904,52 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                Number(clean(b["Horse No"] || b.HorseNo || b.Tab || 999));
     });
 
+    // Top 4 selections by Fair Odds, excluding scratchings
+    const selections = [...raceRows]
+        .filter(row => {
+            const barrier = clean(row.Barrier || row.BARRIER || "").toUpperCase();
+            const fairOdds = parseNumber(
+                row["Fair Odds"] ||
+                row.FairOdds ||
+                row["FairOdds"] ||
+                ""
+            );
+
+            const isScratched =
+                barrier.startsWith("SCR") ||
+                barrier.includes("SCRATCH");
+
+            return !isScratched &&
+                   Number.isFinite(fairOdds) &&
+                   fairOdds > 0;
+        })
+        .sort((a, b) => {
+            const oddsA = parseNumber(
+                a["Fair Odds"] || a.FairOdds || a["FairOdds"] || ""
+            );
+
+            const oddsB = parseNumber(
+                b["Fair Odds"] || b.FairOdds || b["FairOdds"] || ""
+            );
+
+            return oddsA - oddsB;
+        })
+        .slice(0, 4);
+
+const selectionsText = selections
+    .map((row, index) => {
+        const horse = clean(row.Horse || row.HORSE || "");
+
+        const displayHorse = index === 0
+            ? horse
+            : horse
+                .toLowerCase()
+                .replace(/\b\w/g, char => char.toUpperCase());
+
+        return `${displayHorse} ${index + 1}`;
+    })
+    .join(", ");
+
     let secondRowDividerShown = false;
 
     console.log("Race lookup:", raceAnchorFull);
@@ -7979,6 +8025,12 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                     <div class="race-meta-record">
                         ${renderRaceRecordInline(first)}
                     </div>
+
+                    ${selectionsText ? `
+                        <div class="race-selections">
+                            Selections: ${escapeHtml(selectionsText)}.
+                        </div>
+                    ` : ""}
                 </div>
 
                 <div class="venue-stat-toggle">

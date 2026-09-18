@@ -11523,3 +11523,8 @@ body.legal-modal-open {
         display: inline;
     }
 }
+
+.race-selections {
+    color: rgba(255, 255, 255, 0.58);
+    font-weight: 600;
+}
