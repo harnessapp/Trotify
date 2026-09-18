@@ -7932,8 +7932,23 @@ function renderRaceDetail(venue, state, dateValue, raceNo) {
                 b["Fair Odds"] || b.FairOdds || b["FairOdds"] || ""
             );
 
-            return oddsA - oddsB;
+            // Fair Odds first
+            if (oddsA !== oddsB) {
+                return oddsA - oddsB;
+            }
+
+            // Same Fair Odds: lower horse number gets preference
+            const horseNoA = Number(
+                clean(a["Horse No"] || a.HorseNo || a.Tab || 999)
+            );
+
+            const horseNoB = Number(
+                clean(b["Horse No"] || b.HorseNo || b.Tab || 999)
+            );
+
+            return horseNoA - horseNoB;
         })
+
         .slice(0, 4);
 
 const selectionsText = selections
@@ -7944,7 +7959,8 @@ const selectionsText = selections
             ? horse
             : horse
                 .toLowerCase()
-                .replace(/\b\w/g, char => char.toUpperCase());
+                .replace(/\b\w/g, char => char.toUpperCase())
+                .replace(/ Nz$/, " NZ");
 
         return `${displayHorse} ${index + 1}`;
     })

@@ -11527,4 +11527,5 @@ body.legal-modal-open {
 .race-selections {
     color: rgba(255, 255, 255, 0.58);
     font-weight: 600;
+    font-style: italic;
 }
