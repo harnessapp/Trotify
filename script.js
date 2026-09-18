@@ -3321,6 +3321,10 @@ function getTrialWatchItems(rows) {
             String(r.raceNo) === String(raceNo)
         );
 
+        // Keep Trial Watch runners only while their race is still upcoming.
+        // findUpcomingRaces() keeps races until 2 minutes after scheduled start.
+        if (!race) return;
+
         items.push({
             row,
             horse: clean(row.Horse || ""),
