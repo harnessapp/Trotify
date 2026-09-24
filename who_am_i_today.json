@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-25",
+  "type": "DRIVER",
+  "answer": "Harrison Ross",
+  "stats": {
+    "career_starts": 1751,
+    "career_wins": 225,
+    "recent_starts": 603,
+    "recent_wins": 67,
+    "recent_places": 209
+  },
+  "clues": [
+    {
+      "clue_number": 1,
+      "text": "In the past 12 months, I've had 603 drives.",
+      "difficulty": 15,
+      "source": "recent_starts",
+      "revealed_letters": 0,
+      "name_pattern": "_ _ _ _ _ _ _ _    _ _ _ _"
+    },
+    {
+      "clue_number": 2,
+      "text": "The track I've driven at most in the past 12 months is Wagga.",
+      "difficulty": 40,
+      "source": "favourite_venue",
+      "revealed_letters": 1,
+      "name_pattern": "H _ _ _ _ _ _ _    _ _ _ _"
+    },
+    {
+      "clue_number": 3,
+      "text": "My win strike rate over the past 12 months is about 11%.",
+      "difficulty": 50,
+      "source": "win_pct",
+      "revealed_letters": 2,
+      "name_pattern": "H _ _ _ _ _ _ _    R _ _ _"
+    },
+    {
+      "clue_number": 4,
+      "text": "One of my most recent winners was Snipers Fire at Canberra.",
+      "difficulty": 75,
+      "source": "recent_winner",
+      "revealed_letters": 3,
+      "name_pattern": "H _ _ _ _ _ O _    R _ _ _"
+    },
+    {
+      "clue_number": 5,
+      "text": "My first name is Harrison. ",
+      "difficulty": 95,
+      "source": "first_name",
+      "revealed_letters": 4,
+      "name_pattern": "H _ _ _ _ _ O _    R O _ _"
+    }
+  ],
+  "puzzle_number": 1
+}

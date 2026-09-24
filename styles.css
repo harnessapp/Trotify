@@ -11529,3 +11529,394 @@ body.legal-modal-open {
     font-weight: 600;
     font-style: italic;
 }
+
+/* =========================================================
+   WHO AM I?
+   ========================================================= */
+
+.who-am-i-layout {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 18px 0 30px;
+}
+
+.who-am-i-game-card {
+    width: min(720px, 100%);
+    padding: 34px 38px 38px;
+
+    border: 1px solid rgba(0, 230, 191, 0.18);
+    border-radius: 22px;
+
+    background:
+        radial-gradient(
+            circle at 90% 0%,
+            rgba(0, 230, 191, 0.08),
+            transparent 30%
+        ),
+        rgba(10, 20, 29, 0.92);
+
+    box-shadow:
+        0 22px 60px rgba(0, 0, 0, 0.24);
+
+    text-align: center;
+}
+
+.who-am-i-eyebrow {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 950;
+    letter-spacing: 1.4px;
+}
+
+.who-am-i-progress {
+    margin-top: 10px;
+
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.who-am-i-boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 28px;
+
+    margin: 30px auto 28px;
+}
+
+.who-am-i-word {
+    display: inline-flex;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.who-am-i-letter-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 44px;
+
+    border: 2px solid rgba(255, 255, 255, 0.20);
+    border-radius: 7px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 950;
+    line-height: 1;
+}
+
+.who-am-i-letter-box.revealed {
+    border-color: var(--accent);
+
+    background: rgba(0, 230, 191, 0.12);
+
+    color: var(--accent);
+}
+
+.who-am-i-punctuation {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 12px;
+    height: 44px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.who-am-i-clue {
+    max-width: 600px;
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.94);
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.who-am-i-previous-guesses {
+    max-width: 480px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin: 22px auto 0;
+}
+
+.who-am-i-previous-guess {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 6px 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: rgba(255, 255, 255, 0.60);
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.who-am-i-previous-guess span:first-child {
+    color: #ff6b6b;
+}
+
+.who-am-i-guess-form {
+    display: flex;
+    justify-content: center;
+
+    margin: 22px auto 0;
+}
+
+.who-am-i-guess-input {
+    width: 100%;
+    min-width: 0;
+
+    padding: 13px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 10px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    color: #ffffff;
+
+    font: inherit;
+    font-size: 15px;
+}
+
+.who-am-i-guess-input::placeholder {
+    color: rgba(255, 255, 255, 0.34);
+}
+
+.who-am-i-guess-input:focus {
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 0 3px rgba(0, 230, 191, 0.08);
+}
+
+.who-am-i-guess-button {
+    padding: 0 24px;
+
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+
+    background: var(--accent);
+    color: #06110f;
+
+    font: inherit;
+    font-size: 12px;
+    font-weight: 950;
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+}
+
+.who-am-i-guess-button:hover {
+    filter: brightness(1.08);
+}
+
+.who-am-i-feedback {
+    min-height: 18px;
+    margin-top: 10px;
+
+    color: #ff8b8b;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.who-am-i-guesses-left {
+    margin-top: 4px;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.who-am-i-result {
+    padding: 30px 10px;
+}
+
+.who-am-i-result-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+
+    color: var(--accent);
+
+    font-size: 28px;
+    font-weight: 950;
+}
+
+.who-am-i-result-title {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 14px;
+    font-weight: 850;
+}
+
+.who-am-i-answer {
+    margin-top: 8px;
+
+    color: #ffffff;
+
+    font-size: 34px;
+    font-weight: 950;
+    letter-spacing: -0.5px;
+}
+
+.who-am-i-result-sub {
+    margin-top: 10px;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   WHO AM I? - MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .who-am-i-layout {
+        padding: 4px 0 20px;
+    }
+
+    .who-am-i-game-card {
+        padding: 24px 14px 28px;
+        border-radius: 16px;
+    }
+
+    .who-am-i-boxes {
+        gap: 18px;
+
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .who-am-i-word {
+        gap: 3px;
+    }
+
+    .who-am-i-letter-box {
+        width: 28px;
+        height: 34px;
+
+        border-radius: 5px;
+
+        font-size: 16px;
+    }
+
+    .who-am-i-punctuation {
+        height: 34px;
+
+        font-size: 17px;
+    }
+
+    .who-am-i-clue {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .who-am-i-guess-form {
+        grid-template-columns: 1fr;
+
+        margin-top: 24px;
+    }
+
+    .who-am-i-guess-input {
+        padding: 13px 14px;
+        text-align: center;
+    }
+
+    .who-am-i-guess-button {
+        min-height: 43px;
+    }
+
+    .who-am-i-answer {
+        font-size: 28px;
+    }
+}
+
+.who-am-i-hidden-input {
+    position: fixed;
+    left: -9999px;
+    top: 0;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+}
+
+.who-am-i-input-boxes {
+    cursor: text;
+}
+
+.who-am-i-input-boxes:focus-within {
+    outline: none;
+}
+
+.who-am-i-guess-button {
+    min-height: 44px;
+    min-width: 120px;
+}
+
+.who-am-i-next-clue {
+    display: block;
+    margin: 2px auto 0;
+    padding: 7px 10px;
+
+    border: 0;
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.42);
+    font: inherit;
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: 0.7px;
+
+    cursor: pointer;
+    transition: 160ms ease;
+}
+
+.who-am-i-next-clue:hover {
+    color: var(--accent);
+}

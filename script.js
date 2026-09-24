@@ -853,6 +853,8 @@ function setupNavigation() {
                 showStableChangesView();
             } else if (view === "trial-watch") {
                 showTrialWatchView();
+            } else if (view === "who-am-i") {
+                showWhoAmIView();
             } else if (view === "watchlist") {
                 showWatchlistView();
             } else if (view === "good-leaders") {
@@ -3245,6 +3247,742 @@ function showUpcomingFieldsView() {
 
     renderUpcomingFields(allRows);
 }
+
+// ============================================================
+// WHO AM I?
+// Daily harness racing guessing game
+// ============================================================
+
+let whoAmIPuzzle = null;
+
+const WHO_AM_I_STORAGE_PREFIX = "trotifyWhoAmI_";
+
+
+async function loadWhoAmIPuzzle() {
+    try {
+        const response = await fetch(
+            `who_am_i_today.json?v=${Date.now()}`,
+            {
+                cache: "no-store"
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error(
+                `HTTP ${response.status}`
+            );
+        }
+
+        whoAmIPuzzle = await response.json();
+
+        return whoAmIPuzzle;
+
+    } catch (error) {
+        console.error(
+            "Could not load Who Am I puzzle:",
+            error
+        );
+
+        whoAmIPuzzle = null;
+
+        return null;
+    }
+}
+
+
+function getWhoAmIStorageKey() {
+    if (!whoAmIPuzzle?.date) {
+        return `${WHO_AM_I_STORAGE_PREFIX}unknown`;
+    }
+
+    return (
+        WHO_AM_I_STORAGE_PREFIX +
+        whoAmIPuzzle.date
+    );
+}
+
+
+function getWhoAmIState() {
+    const defaultState = {
+        clueIndex: 0,
+        guesses: [],
+        solved: false,
+        finished: false
+    };
+
+    if (!whoAmIPuzzle) {
+        return defaultState;
+    }
+
+    try {
+        const raw = localStorage.getItem(
+            getWhoAmIStorageKey()
+        );
+
+        if (!raw) {
+            return defaultState;
+        }
+
+        const saved = JSON.parse(raw);
+
+        return {
+            clueIndex: Math.max(
+                0,
+                Math.min(
+                    Number(saved.clueIndex) || 0,
+                    4
+                )
+            ),
+            guesses: Array.isArray(saved.guesses)
+                ? saved.guesses
+                : [],
+            solved: saved.solved === true,
+            finished: saved.finished === true
+        };
+
+    } catch (error) {
+        console.error(
+            "Could not read Who Am I state:",
+            error
+        );
+
+        return defaultState;
+    }
+}
+
+
+function saveWhoAmIState(state) {
+    try {
+        localStorage.setItem(
+            getWhoAmIStorageKey(),
+            JSON.stringify(state)
+        );
+    } catch (error) {
+        console.error(
+            "Could not save Who Am I state:",
+            error
+        );
+    }
+}
+
+
+function normaliseWhoAmIGuess(value) {
+    return String(value || "")
+        .toUpperCase()
+        .replace(/[^A-Z0-9]/g, "");
+}
+
+
+function buildWhoAmILetterBoxes(pattern) {
+    const text = String(pattern || "");
+
+    /*
+        Python currently outputs patterns like:
+
+        _ _ _ _ _ _ _ _    _ _ _ _
+
+        Single spaces separate letters.
+        Multiple spaces separate words.
+
+        Split on 2+ spaces first so we preserve
+        actual word breaks.
+    */
+
+    const words = text
+        .trim()
+        .split(/\s{2,}/)
+        .filter(Boolean);
+
+    return words
+        .map(word => {
+            const characters = word
+                .split(/\s+/)
+                .filter(Boolean);
+
+            const boxes = characters
+                .map(char => {
+                    if (char === "_") {
+                        return `
+                            <span
+                                class="who-am-i-letter-box"
+                            ></span>
+                        `;
+                    }
+
+                    if (/^[A-Za-z0-9]$/.test(char)) {
+                        return `
+                            <span
+                                class="who-am-i-letter-box revealed"
+                            >
+                                ${escapeHtml(char.toUpperCase())}
+                            </span>
+                        `;
+                    }
+
+                    return `
+                        <span
+                            class="who-am-i-punctuation"
+                        >
+                            ${escapeHtml(char)}
+                        </span>
+                    `;
+                })
+                .join("");
+
+            return `
+                <span class="who-am-i-word">
+                    ${boxes}
+                </span>
+            `;
+        })
+        .join("");
+}
+
+function updateWhoAmIInputBoxes() {
+    const input =
+        document.getElementById("whoAmIGuessInput");
+
+    const boxesContainer =
+        document.getElementById("whoAmIBoxes");
+
+    const nextClueButton =
+        document.getElementById("whoAmINextClue");
+
+    if (
+        !input ||
+        !boxesContainer ||
+        !whoAmIPuzzle
+    ) {
+        return;
+    }
+
+    const state = getWhoAmIState();
+
+    const clueIndex = Math.min(
+        state.clueIndex,
+        whoAmIPuzzle.clues.length - 1
+    );
+
+    const clue =
+        whoAmIPuzzle.clues[clueIndex];
+
+    const answer =
+        String(whoAmIPuzzle.answer || "");
+
+    const pattern =
+        String(clue.name_pattern || "");
+
+    const typedLetters =
+        String(input.value || "")
+            .toUpperCase()
+            .replace(/[^A-Z0-9]/g, "")
+            .split("");
+
+    let typedIndex = 0;
+
+    const patternWords =
+        pattern
+            .trim()
+            .split(/\s{2,}/)
+            .map(word =>
+                word.split(/\s+/).filter(Boolean)
+            );
+
+    const answerWords =
+        answer.trim().split(/\s+/);
+
+    const html = answerWords
+        .map((answerWord, wordIndex) => {
+
+            const patternWord =
+                patternWords[wordIndex] || [];
+
+            let patternIndex = 0;
+
+            const wordHtml = [];
+
+            for (
+                let i = 0;
+                i < answerWord.length;
+                i++
+            ) {
+                const answerChar =
+                    answerWord[i];
+
+                if (
+                    !/[A-Za-z0-9]/.test(answerChar)
+                ) {
+                    wordHtml.push(`
+                        <span class="who-am-i-punctuation">
+                            ${escapeHtml(answerChar)}
+                        </span>
+                    `);
+
+                    continue;
+                }
+
+                const patternChar =
+                    patternWord[patternIndex] || "_";
+
+                patternIndex++;
+
+                let displayChar = "";
+                let className =
+                    "who-am-i-letter-box";
+
+                if (
+                    patternChar !== "_"
+                ) {
+                    displayChar =
+                        patternChar.toUpperCase();
+
+                    className += " revealed";
+
+                } else if (
+                    typedIndex <
+                    typedLetters.length
+                ) {
+                    displayChar =
+                        typedLetters[typedIndex];
+
+                    className += " typed";
+
+                    typedIndex++;
+                }
+
+                wordHtml.push(`
+                    <span class="${className}">
+                        ${escapeHtml(displayChar)}
+                    </span>
+                `);
+            }
+
+            return `
+                <span class="who-am-i-word">
+                    ${wordHtml.join("")}
+                </span>
+            `;
+        })
+        .join("");
+
+    boxesContainer.innerHTML = html;
+}
+
+
+function getWhoAmIResultMessage(state) {
+    if (state.solved) {
+        const clueNumber =
+            Math.min(state.clueIndex + 1, 5);
+
+        return `
+            <div class="who-am-i-result success">
+                <div class="who-am-i-result-icon">
+                    ✓
+                </div>
+
+                <div class="who-am-i-result-title">
+                    You got it!
+                </div>
+
+                <div class="who-am-i-answer">
+                    ${escapeHtml(whoAmIPuzzle.answer)}
+                </div>
+
+                <div class="who-am-i-result-sub">
+                    Solved on clue ${clueNumber}.
+                </div>
+            </div>
+        `;
+    }
+
+    return `
+        <div class="who-am-i-result failed">
+            <div class="who-am-i-result-icon">
+                ?
+            </div>
+
+            <div class="who-am-i-result-title">
+                Today's answer was
+            </div>
+
+            <div class="who-am-i-answer">
+                ${escapeHtml(whoAmIPuzzle.answer)}
+            </div>
+
+            <div class="who-am-i-result-sub">
+                A new Who Am I? arrives tomorrow.
+            </div>
+        </div>
+    `;
+}
+
+
+function renderWhoAmIGame() {
+    const meetingStrip =
+        document.getElementById("meetingStrip");
+
+    if (
+        !meetingStrip ||
+        !whoAmIPuzzle ||
+        !whoAmIPuzzle.clues?.length
+    ) {
+        return;
+    }
+
+    const state = getWhoAmIState();
+
+    if (state.finished) {
+        meetingStrip.innerHTML = `
+            <div class="who-am-i-layout">
+                <div class="who-am-i-game-card">
+                    ${getWhoAmIResultMessage(state)}
+                </div>
+            </div>
+        `;
+
+        return;
+    }
+
+    const clueIndex = Math.min(
+        state.clueIndex,
+        whoAmIPuzzle.clues.length - 1
+    );
+
+    const clue =
+        whoAmIPuzzle.clues[clueIndex];
+
+    const previousGuessesHtml =
+        state.guesses.length
+            ? `
+                <div class="who-am-i-previous-guesses">
+                    ${state.guesses
+                        .map(guess => `
+                            <div class="who-am-i-previous-guess">
+                                <span>✕</span>
+                                <span>
+                                    ${escapeHtml(guess)}
+                                </span>
+                            </div>
+                        `)
+                        .join("")}
+                </div>
+            `
+            : "";
+
+    meetingStrip.innerHTML = `
+        <div class="who-am-i-layout">
+
+            <div class="who-am-i-game-card">
+
+                <div class="who-am-i-eyebrow">
+                    TODAY'S HARNESS RACING CHALLENGE · #${whoAmIPuzzle.puzzle_number}
+                </div>
+
+                <div class="who-am-i-progress">
+                    CLUE ${clueIndex + 1} OF 5
+                </div>
+
+                <div
+                    class="who-am-i-boxes who-am-i-input-boxes"
+                    id="whoAmIBoxes"
+                    tabindex="0"
+                    role="textbox"
+                    aria-label="Enter your guess"
+                >
+                    ${buildWhoAmILetterBoxes(
+                        clue.name_pattern
+                    )}
+                </div>
+
+                <div class="who-am-i-clue">
+                    ${escapeHtml(clue.text)}
+                </div>
+
+                ${previousGuessesHtml}
+
+                <form
+                    class="who-am-i-guess-form"
+                    id="whoAmIGuessForm"
+                >
+                    <input
+                        type="text"
+                        id="whoAmIGuessInput"
+                        class="who-am-i-guess-input who-am-i-hidden-input"
+                        autocomplete="off"
+                        autocapitalize="characters"
+                        spellcheck="false"
+                        maxlength="60"
+                        aria-label="Enter your guess"
+                    >
+
+                    <button
+                        type="submit"
+                        class="who-am-i-guess-button"
+                    >
+                        GUESS
+                    </button>
+                </form>
+
+                <div
+                    class="who-am-i-feedback"
+                    id="whoAmIFeedback"
+                ></div>
+
+                <button
+                    type="button"
+                    class="who-am-i-next-clue"
+                    id="whoAmINextClue"
+                >
+                    ${
+                        clueIndex < 4
+                            ? "NEXT CLUE →"
+                            : "REVEAL ANSWER"
+                    }
+                </button>
+
+            </div>
+
+        </div>
+    `;
+
+    const form =
+        document.getElementById("whoAmIGuessForm");
+
+    const input =
+        document.getElementById("whoAmIGuessInput");
+
+    const boxes =
+        document.getElementById("whoAmIBoxes");
+
+    const nextClueButton =
+        document.getElementById("whoAmINextClue");
+
+    if (form) {
+        form.addEventListener(
+            "submit",
+            handleWhoAmIGuess
+        );
+    }
+
+    if (input) {
+        input.addEventListener(
+            "input",
+            updateWhoAmIInputBoxes
+        );
+
+        updateWhoAmIInputBoxes();
+    }
+
+    if (boxes && input) {
+        boxes.addEventListener(
+            "click",
+            () => {
+                input.focus();
+            }
+        );
+
+        boxes.addEventListener(
+            "keydown",
+            event => {
+                if (
+                    event.key.length === 1 ||
+                    event.key === "Backspace" ||
+                    event.key === "Delete"
+                ) {
+                    input.focus();
+                }
+            }
+        );
+    }
+
+    if (nextClueButton) {
+        nextClueButton.addEventListener(
+            "click",
+            () => {
+                const state = getWhoAmIState();
+
+                if (state.clueIndex >= 4) {
+                    state.finished = true;
+                    state.solved = false;
+                } else {
+                    state.clueIndex++;
+                }
+
+                saveWhoAmIState(state);
+                renderWhoAmIGame();
+            }
+        );
+    }
+
+    if (
+        input &&
+        window.innerWidth > 700
+    ) {
+        input.focus();
+    }
+}
+
+function getWhoAmIFullGuess() {
+    const boxes =
+        document.querySelectorAll(
+            "#whoAmIBoxes .who-am-i-letter-box"
+        );
+
+    const words =
+        document.querySelectorAll(
+            "#whoAmIBoxes .who-am-i-word"
+        );
+
+    if (!boxes.length || !words.length) {
+        return "";
+    }
+
+    return Array.from(words)
+        .map(word => {
+            return Array.from(
+                word.querySelectorAll(
+                    ".who-am-i-letter-box, .who-am-i-punctuation"
+                )
+            )
+                .map(box =>
+                    box.textContent.trim()
+                )
+                .join("");
+        })
+        .join(" ")
+        .toUpperCase();
+}
+
+function handleWhoAmIGuess(event) {
+    event.preventDefault();
+
+    const input =
+        document.getElementById("whoAmIGuessInput");
+
+    const feedback =
+        document.getElementById("whoAmIFeedback");
+
+    if (!input || !whoAmIPuzzle) {
+        return;
+    }
+
+    const guess = getWhoAmIFullGuess();
+
+    if (!guess) {
+        if (feedback) {
+            feedback.textContent =
+                "Enter a name first.";
+        }
+
+        input.focus();
+        return;
+    }
+
+    const normalisedGuess =
+        normaliseWhoAmIGuess(guess);
+
+    const normalisedAnswer =
+        normaliseWhoAmIGuess(
+            whoAmIPuzzle.answer
+        );
+
+    const state = getWhoAmIState();
+
+    if (
+        normalisedGuess ===
+        normalisedAnswer
+    ) {
+        state.solved = true;
+        state.finished = true;
+
+        saveWhoAmIState(state);
+        renderWhoAmIGame();
+
+        return;
+    }
+
+    state.guesses.push(guess);
+
+    if (state.guesses.length >= 5) {
+        state.finished = true;
+        state.solved = false;
+
+        saveWhoAmIState(state);
+        renderWhoAmIGame();
+
+        return;
+    }
+
+    state.clueIndex = Math.min(
+        state.clueIndex + 1,
+        4
+    );
+
+    saveWhoAmIState(state);
+    renderWhoAmIGame();
+}
+
+
+async function showWhoAmIView() {
+    resetMobileViewScroll();
+    stopTimelineRefresh();
+    clearNextUpTimer();
+
+    document.querySelector(".hero").style.display =
+        "none";
+
+    document.querySelector(".dashboard-grid").style.display =
+        "none";
+
+    document.querySelector(".meetings-panel").style.display =
+        "";
+
+    document.querySelector(".panel-heading").innerHTML = `
+        <span>❓</span>
+        <span>Who Am I?</span>
+    `;
+
+    const meetingStrip =
+        document.getElementById("meetingStrip");
+
+    meetingStrip.innerHTML = `
+        <div class="who-am-i-layout">
+            <div class="coming-soon-card">
+                <div class="coming-soon-title">
+                    Loading today's puzzle...
+                </div>
+            </div>
+        </div>
+    `;
+
+    const puzzle =
+        whoAmIPuzzle ||
+        await loadWhoAmIPuzzle();
+
+    if (
+        !puzzle ||
+        !puzzle.clues?.length
+    ) {
+        meetingStrip.innerHTML = `
+            <div class="who-am-i-layout">
+                <div class="coming-soon-card">
+                    <div class="coming-soon-title">
+                        Today's puzzle isn't available yet
+                    </div>
+
+                    <p>
+                        Please check back shortly.
+                    </p>
+                </div>
+            </div>
+        `;
+
+        return;
+    }
+
+    renderWhoAmIGame();
+}
+
 
 // ============================================================
 // TRIAL WATCH
