@@ -11983,6 +11983,11 @@ body.legal-modal-open {
         overflow-x: hidden !important;
     }
 
+    /* Hide hero tagline on iPad/tablet only */
+    .hero h2 {
+        display: none !important;
+    }
+
     /* Keep the nice one-column iPad homepage */
     .dashboard-grid {
         grid-template-columns: 1fr !important;
