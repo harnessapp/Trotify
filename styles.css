@@ -11922,152 +11922,38 @@ body.legal-modal-open {
 }
 
 /* =========================================================
-   TABLET / IPAD ONLY
-   701px - 850px
+   TABLET / IPAD LANDSCAPE ONLY
 
-   IMPORTANT:
-   - Does not affect phone layout (<=700px)
-   - Does not affect existing desktop layouts (>850px)
-   - Overrides only the awkward crossover between the
-     existing mobile/tablet and desktop rules
+   - Phone layout remains untouched
+   - Existing desktop layouts remain untouched
+   - Designed specifically for landscape tablet widths
    ========================================================= */
 
-@media (min-width: 701px) and (max-width: 850px) {
+@media (min-width: 851px) and (max-width: 1194px) and (orientation: landscape) {
 
-    /* -----------------------------------------------------
-       APP SHELL
-       Keep a proper desktop-style sidebar on tablet,
-       but make it narrower so the content has room.
-       ----------------------------------------------------- */
-
+    /* Narrow the left navigation only */
     .app-shell {
-        display: grid !important;
         grid-template-columns: 210px minmax(0, 1fr) !important;
-
         width: 100% !important;
         max-width: 100vw !important;
-        min-width: 0 !important;
     }
-
-
-    /* -----------------------------------------------------
-       SIDEBAR
-       Keep the normal labelled desktop navigation.
-       ----------------------------------------------------- */
 
     .sidebar {
-        position: sticky !important;
-        top: 0 !important;
-
-        width: auto !important;
-        height: 100vh !important;
-
-        padding: 18px 12px !important;
-
-        overflow-y: auto !important;
-        overflow-x: hidden !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
     }
 
-
-    /* -----------------------------------------------------
-       MAIN CONTENT
-       ----------------------------------------------------- */
-
+    /* Give the homepage the recovered width */
     .main {
+        min-width: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
-        min-width: 0 !important;
-
-        padding: 14px !important;
-
+        padding: 16px !important;
         overflow-x: hidden !important;
     }
 
-
-    /* -----------------------------------------------------
-       HOMEPAGE
-       Keep the two-column dashboard rather than turning
-       tablet into the phone layout.
-       ----------------------------------------------------- */
-
+    /* Keep the homepage as two columns */
     .dashboard-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr)) !important;
-
-        gap: 12px !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     }
-
-
-    /* -----------------------------------------------------
-       HERO
-       Undo the existing <=850px vertical hero treatment.
-       Tablet has enough width to retain desktop behaviour.
-       ----------------------------------------------------- */
-
-    .hero {
-        flex-direction: row !important;
-        align-items: center !important;
-    }
-
-    .hero-icon {
-        width: auto !important;
-        max-width: 100% !important;
-    }
-
-
-    /* -----------------------------------------------------
-       UPCOMING FIELDS
-       One column is safer at tablet width.
-       ----------------------------------------------------- */
-
-    .upcoming-fields-layout {
-        grid-template-columns: 1fr !important;
-    }
-
-    .upcoming-meetings-column {
-        max-height: none !important;
-    }
-
-    .race-list-panel,
-    .race-detail-panel {
-        min-height: auto !important;
-    }
-
-
-    /* -----------------------------------------------------
-       TODAY'S RACING
-       Allow it to use available tablet width.
-       ----------------------------------------------------- */
-
-    .today-racing-layout {
-        grid-template-columns: 1fr !important;
-    }
-
-
-    /* -----------------------------------------------------
-       RUNNERS
-       Restore the wider runner layout that the existing
-       <=850px rule otherwise collapses.
-       ----------------------------------------------------- */
-
-    .runner-row {
-        grid-template-columns: 42px 1fr auto !important;
-        gap: 10px !important;
-    }
-
-    .runner-side {
-        grid-column: auto !important;
-        justify-content: flex-end !important;
-    }
-
-
-    /* -----------------------------------------------------
-       STABLE CHANGES
-       One pane at this width prevents squeezing.
-       ----------------------------------------------------- */
-
-    .stable-change-two-pane {
-        grid-template-columns: 1fr !important;
-    }
-
 }
