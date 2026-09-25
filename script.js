@@ -8419,7 +8419,9 @@ function renderRecordTooltip(race) {
 }
 
 function resetUpcomingFieldsMobile() {
-    if (window.innerWidth > 700) return;
+    // Phone + iPad/tablet use the drill-down/reset behaviour.
+    // Desktop remains unchanged.
+    if (window.innerWidth > 1100) return;
 
     selectedRaceNo = null;
 
