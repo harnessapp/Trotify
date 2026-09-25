@@ -1,55 +1,53 @@
 {
-  "date": "2026-09-25",
-  "type": "DRIVER",
-  "answer": "Harrison Ross",
+  "date": "2026-09-26",
+  "puzzle_number": 2,
+  "type": "HORSE",
+  "answer": "ADMIRALOFTHEFLEET",
   "stats": {
-    "career_starts": 1751,
-    "career_wins": 225,
-    "recent_starts": 603,
-    "recent_wins": 67,
-    "recent_places": 209
+    "starts": 77,
+    "wins": 13,
+    "places": 22
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "In the past 12 months, I've had 603 drives.",
+      "text": "I've had 77 race starts.",
       "difficulty": 15,
-      "source": "recent_starts",
+      "source": "career_starts",
       "revealed_letters": 0,
-      "name_pattern": "_ _ _ _ _ _ _ _    _ _ _ _"
+      "name_pattern": "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "The track I've driven at most in the past 12 months is Wagga.",
-      "difficulty": 40,
-      "source": "favourite_venue",
+      "text": "All of my recorded starts have been in Victoria.",
+      "difficulty": 35,
+      "source": "state",
       "revealed_letters": 1,
-      "name_pattern": "H _ _ _ _ _ _ _    _ _ _ _"
+      "name_pattern": "A _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "My win strike rate over the past 12 months is about 11%.",
-      "difficulty": 50,
-      "source": "win_pct",
+      "text": "I've won at tracks including Maryborough, Cranbourne, Shepparton.",
+      "difficulty": 55,
+      "source": "winning_tracks",
       "revealed_letters": 2,
-      "name_pattern": "H _ _ _ _ _ _ _    R _ _ _"
+      "name_pattern": "A _ _ _ _ _ _ _ F _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "One of my most recent winners was Snipers Fire at Canberra.",
+      "text": "I'm currently associated most often with trainer Wayne Ronan.",
       "difficulty": 75,
-      "source": "recent_winner",
+      "source": "trainer",
       "revealed_letters": 3,
-      "name_pattern": "H _ _ _ _ _ O _    R _ _ _"
+      "name_pattern": "A _ _ _ _ _ _ _ F _ _ _ F _ _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Harrison. ",
+      "text": "My most recent start was at Ballarat on 14 May 2026, where I finished 10th for trainer Wayne Ronan and driver Connor Ronan.",
       "difficulty": 95,
-      "source": "first_name",
+      "source": "last_start",
       "revealed_letters": 4,
-      "name_pattern": "H _ _ _ _ _ O _    R O _ _"
+      "name_pattern": "A _ _ _ R _ _ _ F _ _ _ F _ _ _ _"
     }
-  ],
-  "puzzle_number": 1
+  ]
 }
