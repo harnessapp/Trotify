@@ -12000,3 +12000,37 @@ body.legal-modal-open {
         grid-template-columns: 1fr !important;
     }
 }
+
+    /* =====================================================
+       IPAD UPCOMING FIELDS - PHONE-STYLE COLLAPSING
+       ===================================================== */
+
+    /* Once a meeting is selected, hide all other days */
+    .upcoming-meetings-column:has(.upcoming-meeting-button.selected)
+        .day-group:not(:has(.upcoming-meeting-button.selected)) {
+        display: none !important;
+    }
+
+    /* Hide all other meetings */
+    .upcoming-meetings-column:has(.upcoming-meeting-button.selected)
+        .upcoming-meeting-button:not(.selected) {
+        display: none !important;
+    }
+
+    /* Hide the day heading once we're drilled into a meeting */
+    .upcoming-meetings-column:has(.upcoming-meeting-button.selected)
+        .day-heading {
+        display: none !important;
+    }
+
+    /* Selected meeting becomes a single row */
+    .upcoming-meetings-column:has(.upcoming-meeting-button.selected)
+        .upcoming-list {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Once a race is selected, hide all the other races */
+    .race-list:has(.race-button.selected)
+        .race-button:not(.selected) {
+        display: none !important;
+    }
