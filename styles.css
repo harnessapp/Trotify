@@ -11926,14 +11926,14 @@ body.legal-modal-open {
 
    - Phone layout remains untouched
    - Existing desktop layouts remain untouched
-   - Designed specifically for landscape tablet widths
+   - iPad gets sidebar + single-column tiles
    ========================================================= */
 
 @media (min-width: 851px) and (max-width: 1194px) and (orientation: landscape) {
 
-    /* Narrow the left navigation only */
+    /* Left navigation */
     .app-shell {
-        grid-template-columns: 150px minmax(0, 1fr) !important;
+        grid-template-columns: 190px minmax(0, 1fr) !important;
         width: 100% !important;
         max-width: 100vw !important;
     }
@@ -11943,7 +11943,7 @@ body.legal-modal-open {
         padding-right: 12px !important;
     }
 
-    /* Give the homepage the recovered width */
+    /* Main iPad content area */
     .main {
         min-width: 0 !important;
         width: 100% !important;
@@ -11952,8 +11952,9 @@ body.legal-modal-open {
         overflow-x: hidden !important;
     }
 
-    /* Keep the homepage as two columns */
+    /* One full-width tile at a time */
     .dashboard-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
     }
 }
