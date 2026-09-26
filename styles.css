@@ -12053,3 +12053,44 @@ body.legal-modal-open {
     overflow-y: auto !important;
     box-sizing: border-box !important;
 }
+
+/* =========================================================
+   IPAD / TABLET - HRA ANALYSIS POPUP
+   ========================================================= */
+
+@media (min-width: 701px) and (max-width: 1100px) {
+
+    .hra-popup-overlay {
+        position: fixed !important;
+
+        top: 0 !important;
+        bottom: 0 !important;
+        left: 260px !important;
+        right: 0 !important;
+
+        width: auto !important;
+        height: auto !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 20px !important;
+        box-sizing: border-box !important;
+
+        overflow: auto !important;
+        z-index: 999999 !important;
+    }
+
+    .hra-popup {
+        position: relative !important;
+
+        width: calc(100vw - 320px) !important;
+        max-width: 650px !important;
+        max-height: calc(100vh - 40px) !important;
+
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        overflow-y: auto !important;
+    }
+}
