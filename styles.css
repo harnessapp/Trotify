@@ -12034,3 +12034,22 @@ body.legal-modal-open {
         .race-button:not(.selected) {
         display: none !important;
     }
+
+/* HRA Analysis popup - iPad/tablet only */
+.hra-popup-overlay {
+    left: 260px !important;
+    width: calc(100vw - 260px) !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.hra-popup-overlay .hra-popup {
+    width: 100% !important;
+    max-width: 620px !important;
+    max-height: calc(100vh - 40px) !important;
+    overflow-y: auto !important;
+    box-sizing: border-box !important;
+}
