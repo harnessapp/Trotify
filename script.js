@@ -8170,7 +8170,7 @@ function renderUpcomingFields(rows) {
     }
 
     const firstMeeting = grouped[0].meetings[0];
-    const isMobile = window.innerWidth <= 700;
+    const isMobile = window.innerWidth <= 1100;
 
     document.getElementById("meetingStrip").innerHTML = `
         <div class="upcoming-fields-layout" id="upcomingFieldsLayout">
@@ -8225,7 +8225,7 @@ function renderUpcomingFields(rows) {
             const meeting = meetings.find(m => `${m.venue}|${m.state}|${m.dateValue}` === key);
 
             if (meeting) {
-                const isMobile = window.innerWidth <= 700;
+                const isMobile = window.innerWidth <= 1100;
 
                 if (isMobile) {
                     selectedRaceNo = "1";
