@@ -11946,7 +11946,6 @@ body.legal-modal-open {
         overflow-x: hidden !important;
     }
 
-    /* Restore the proper sidebar contents on iPad */
     .sidebar .brand,
     .sidebar .nav-section {
         display: flex !important;
@@ -11963,14 +11962,12 @@ body.legal-modal-open {
         height: auto !important;
         min-height: 46px !important;
         padding: 10px 12px !important;
-
         display: flex !important;
         align-items: center !important;
         justify-content: flex-start !important;
         gap: 12px !important;
     }
 
-    /* THIS brings back Upcoming Fields, Next Up, etc. */
     .sidebar .nav-item span:last-child {
         display: inline !important;
     }
@@ -11983,12 +11980,12 @@ body.legal-modal-open {
         overflow-x: hidden !important;
     }
 
-    /* Hide hero tagline on iPad/tablet only */
+    /* Hide hero tagline on iPad only */
     .hero h2 {
         display: none !important;
     }
 
-    /* Keep the nice one-column iPad homepage */
+    /* One-column iPad layouts */
     .dashboard-grid {
         grid-template-columns: 1fr !important;
         gap: 12px !important;
@@ -11999,70 +11996,44 @@ body.legal-modal-open {
     .stable-change-two-pane {
         grid-template-columns: 1fr !important;
     }
-}
+
 
     /* =====================================================
-       IPAD UPCOMING FIELDS - PHONE-STYLE COLLAPSING
+       IPAD UPCOMING FIELDS - DRILL DOWN
        ===================================================== */
 
-    /* Once a meeting is selected, hide all other days */
     .upcoming-meetings-column:has(.upcoming-meeting-button.selected)
         .day-group:not(:has(.upcoming-meeting-button.selected)) {
         display: none !important;
     }
 
-    /* Hide all other meetings */
     .upcoming-meetings-column:has(.upcoming-meeting-button.selected)
         .upcoming-meeting-button:not(.selected) {
         display: none !important;
     }
 
-    /* Hide the day heading once we're drilled into a meeting */
     .upcoming-meetings-column:has(.upcoming-meeting-button.selected)
         .day-heading {
         display: none !important;
     }
 
-    /* Selected meeting becomes a single row */
     .upcoming-meetings-column:has(.upcoming-meeting-button.selected)
         .upcoming-list {
         grid-template-columns: 1fr !important;
     }
 
-    /* Once a race is selected, hide all the other races */
     .race-list:has(.race-button.selected)
         .race-button:not(.selected) {
         display: none !important;
     }
 
-/* HRA Analysis popup - iPad/tablet only */
-.hra-popup-overlay {
-    left: 260px !important;
-    width: calc(100vw - 260px) !important;
-    padding: 20px !important;
-    box-sizing: border-box !important;
 
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-.hra-popup-overlay .hra-popup {
-    width: 100% !important;
-    max-width: 620px !important;
-    max-height: calc(100vh - 40px) !important;
-    overflow-y: auto !important;
-    box-sizing: border-box !important;
-}
-
-/* =========================================================
-   IPAD / TABLET - HRA ANALYSIS POPUP
-   ========================================================= */
-
-@media (min-width: 701px) and (max-width: 1100px) {
+    /* =====================================================
+       IPAD HRA ANALYSIS POPUP
+       ===================================================== */
 
     .hra-popup-overlay {
         position: fixed !important;
-
         top: 0 !important;
         bottom: 0 !important;
         left: 260px !important;
@@ -12077,14 +12048,13 @@ body.legal-modal-open {
 
         padding: 20px !important;
         box-sizing: border-box !important;
-
         overflow: auto !important;
+
         z-index: 999999 !important;
     }
 
     .hra-popup {
         position: relative !important;
-
         width: calc(100vw - 320px) !important;
         max-width: 650px !important;
         max-height: calc(100vh - 40px) !important;
@@ -12093,4 +12063,5 @@ body.legal-modal-open {
         box-sizing: border-box !important;
         overflow-y: auto !important;
     }
+
 }
