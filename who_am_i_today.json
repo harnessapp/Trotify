@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-28",
-  "puzzle_number": 4,
-  "type": "TRAINER",
-  "answer": "Luke Watson",
+  "date": "2026-09-29",
+  "puzzle_number": 5,
+  "type": "HORSE",
+  "answer": "A Little Dilemma",
   "stats": {
-    "recent_starts": 210,
-    "recent_wins": 11,
-    "horses": 19
+    "starts": 10,
+    "wins": 2,
+    "places": 2
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "My stable has had 210 race starts in the past 12 months.",
+      "text": "I've had 10 race starts.",
       "difficulty": 15,
-      "source": "recent_starts",
+      "source": "career_starts",
       "revealed_letters": 1,
-      "name_pattern": "L _ _ _    _ _ _ _ _ _"
+      "name_pattern": "A    _ _ _ _ _ _    _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've trained 11 winners in the past 12 months.",
-      "difficulty": 40,
-      "source": "recent_wins",
+      "text": "All of my recorded starts have been in New South Wales.",
+      "difficulty": 35,
+      "source": "state",
       "revealed_letters": 2,
-      "name_pattern": "L _ _ _    W _ _ _ _ _"
+      "name_pattern": "A    L _ _ _ _ _    _ _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "The track where I've had the most runners in the past 12 months is Mildura.",
+      "text": "I've won at tracks including Newcastle.",
       "difficulty": 55,
-      "source": "favourite_venue",
-      "revealed_letters": 3,
-      "name_pattern": "L _ _ _    W A _ _ _ _"
+      "source": "winning_tracks",
+      "revealed_letters": 4,
+      "name_pattern": "A    L _ _ _ _ E    D _ _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "The driver used most often by my stable recently is Luke Watson.",
-      "difficulty": 70,
-      "source": "favourite_driver",
-      "revealed_letters": 4,
-      "name_pattern": "L _ _ _    W A T _ _ _"
+      "text": "I'm currently associated most often with trainer Laura Osborn.",
+      "difficulty": 75,
+      "source": "trainer",
+      "revealed_letters": 5,
+      "name_pattern": "A    L _ _ _ _ E    D _ L _ _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Luke. ",
+      "text": "My most recent start was at Newcastle on 4 September 2026, where I finished 8th for trainer Laura Osborn and driver Blake Hughes.",
       "difficulty": 95,
-      "source": "first_name",
-      "revealed_letters": 5,
-      "name_pattern": "L _ K _    W A T _ _ _"
+      "source": "last_start",
+      "revealed_letters": 7,
+      "name_pattern": "A    L _ T _ _ E    D _ L _ M _ _"
     }
   ]
 }
