@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-27",
-  "puzzle_number": 3,
+  "date": "2026-09-28",
+  "puzzle_number": 4,
   "type": "TRAINER",
-  "answer": "Jeremy Quinlan",
+  "answer": "Luke Watson",
   "stats": {
-    "recent_starts": 95,
-    "recent_wins": 3,
-    "horses": 16
+    "recent_starts": 210,
+    "recent_wins": 11,
+    "horses": 19
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "My stable has had 95 race starts in the past 12 months.",
+      "text": "My stable has had 210 race starts in the past 12 months.",
       "difficulty": 15,
       "source": "recent_starts",
-      "revealed_letters": 0,
-      "name_pattern": "_ _ _ _ _ _    _ _ _ _ _ _ _"
+      "revealed_letters": 1,
+      "name_pattern": "L _ _ _    _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've trained 3 winners in the past 12 months.",
+      "text": "I've trained 11 winners in the past 12 months.",
       "difficulty": 40,
       "source": "recent_wins",
-      "revealed_letters": 1,
-      "name_pattern": "J _ _ _ _ _    _ _ _ _ _ _ _"
+      "revealed_letters": 2,
+      "name_pattern": "L _ _ _    W _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "The track where I've had the most runners in the past 12 months is Shepparton.",
+      "text": "The track where I've had the most runners in the past 12 months is Mildura.",
       "difficulty": 55,
       "source": "favourite_venue",
-      "revealed_letters": 2,
-      "name_pattern": "J _ _ _ _ _    Q _ _ _ _ _ _"
+      "revealed_letters": 3,
+      "name_pattern": "L _ _ _    W A _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "The driver used most often by my stable recently is Jeremy Quinlan.",
+      "text": "The driver used most often by my stable recently is Luke Watson.",
       "difficulty": 70,
       "source": "favourite_driver",
-      "revealed_letters": 3,
-      "name_pattern": "J _ _ _ _ Y    Q _ _ _ _ _ _"
+      "revealed_letters": 4,
+      "name_pattern": "L _ _ _    W A T _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Jeremy. ",
+      "text": "My first name is Luke. ",
       "difficulty": 95,
       "source": "first_name",
-      "revealed_letters": 4,
-      "name_pattern": "J _ _ _ _ Y    Q _ _ N _ _ _"
+      "revealed_letters": 5,
+      "name_pattern": "L _ K _    W A T _ _ _"
     }
   ]
 }
