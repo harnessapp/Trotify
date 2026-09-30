@@ -3375,6 +3375,48 @@ async function loadWhoAmIPuzzle() {
     }
 }
 
+async function loadAdcData() {
+
+    try {
+
+        const response = await fetch(
+            `adc_today.json?v=${Date.now()}`,
+            {
+                cache: "no-store"
+            }
+        );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                `HTTP ${response.status}`
+            );
+
+        }
+
+
+        adcData = await response.json();
+
+
+        return adcData;
+
+
+    } catch (error) {
+
+        console.error(
+            "Could not load ADC data:",
+            error
+        );
+
+
+        adcData = null;
+
+
+        return null;
+    }
+}
+
 
 function getWhoAmIStorageKey() {
     if (!whoAmIPuzzle?.date) {
@@ -7798,11 +7840,24 @@ function showComingSoonView(title) {
     `;
 }
 
-function showAdcView() {
+async function showAdcView() {
 
-    document.querySelector(".hero").style.display = "none";
-    document.querySelector(".dashboard-grid").style.display = "none";
-    document.querySelector(".meetings-panel").style.display = "";
+    resetMobileViewScroll();
+    stopTimelineRefresh();
+    clearNextUpTimer();
+
+
+    document.querySelector(".hero").style.display =
+        "none";
+
+
+    document.querySelector(".dashboard-grid").style.display =
+        "none";
+
+
+    document.querySelector(".meetings-panel").style.display =
+        "";
+
 
 
     document.querySelector(".panel-heading").innerHTML = `
@@ -7811,18 +7866,48 @@ function showAdcView() {
     `;
 
 
-    const container =
+
+    const meetingStrip =
         document.getElementById("meetingStrip");
 
 
-    if (!adcData) {
 
-        container.innerHTML = `
+    meetingStrip.innerHTML = `
+        <div class="who-am-i-layout">
             <div class="coming-soon-card">
                 <div class="coming-soon-title">
-                    Australian Drivers Championship
+                    Loading championship...
                 </div>
-                <p>Loading championship data...</p>
+            </div>
+        </div>
+    `;
+
+
+
+    const adc =
+        adcData ||
+        await loadAdcData();
+
+
+
+    if (
+        !adc ||
+        !adc.drivers
+    ) {
+
+        meetingStrip.innerHTML = `
+            <div class="who-am-i-layout">
+                <div class="coming-soon-card">
+
+                    <div class="coming-soon-title">
+                        Championship data unavailable
+                    </div>
+
+                    <p>
+                        Please check back shortly.
+                    </p>
+
+                </div>
             </div>
         `;
 
@@ -7830,97 +7915,8 @@ function showAdcView() {
     }
 
 
-    let html = `
 
-        <div class="coming-soon-card">
-
-            <div class="coming-soon-title">
-                🏆 Live Standings
-            </div>
-
-            <table class="adc-table">
-
-                <tr>
-                    <th>Driver</th>
-                    <th>Total</th>
-                </tr>
-
-    `;
-
-
-    adcData.drivers.forEach(driver => {
-
-        html += `
-
-            <tr>
-                <td>
-                    ${escapeHtml(driver.name)}
-                    ${driver.state ? "(" + driver.state + ")" : ""}
-                </td>
-
-                <td>
-                    ${driver.total} pts
-                </td>
-            </tr>
-
-        `;
-
-    });
-
-
-    html += `
-
-            </table>
-
-
-            <br>
-
-
-            <div class="coming-soon-title">
-                💰 Trotify Market
-            </div>
-
-            <table class="adc-table">
-
-                <tr>
-                    <th>Driver</th>
-                    <th>Odds</th>
-                </tr>
-
-    `;
-
-
-    adcData.market.drivers.forEach(driver => {
-
-        html += `
-
-            <tr>
-
-                <td>
-                    ${escapeHtml(driver.driver)}
-                </td>
-
-                <td>
-                    $${driver.trotify_odds.toFixed(2)}
-                </td>
-
-            </tr>
-
-        `;
-
-    });
-
-
-    html += `
-
-            </table>
-
-        </div>
-
-    `;
-
-
-    container.innerHTML = html;
+    renderAdc();
 
 }
 

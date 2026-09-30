@@ -210,7 +210,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-09-30 21:48:21",
+    "generated": "2026-09-30 22:10:13",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -229,109 +229,109 @@
       {
         "driver": "Emily Suvaljko",
         "current_points": 15,
-        "probability": 23.43,
-        "fair_odds": 4.27,
+        "probability": 23.3,
+        "fair_odds": 4.29,
         "market_percent": 125,
-        "market_odds": 3.41,
+        "market_odds": 3.43,
         "trotify_odds": 3.4
       },
       {
         "driver": "Mark Pitt",
         "current_points": 15,
-        "probability": 17.44,
-        "fair_odds": 5.73,
+        "probability": 17.48,
+        "fair_odds": 5.72,
         "market_percent": 125,
-        "market_odds": 4.59,
+        "market_odds": 4.58,
         "trotify_odds": 4.5
       },
       {
         "driver": "Jett Turnbull",
         "current_points": 15,
-        "probability": 12.83,
-        "fair_odds": 7.79,
+        "probability": 12.69,
+        "fair_odds": 7.88,
         "market_percent": 125,
-        "market_odds": 6.24,
-        "trotify_odds": 6.0
+        "market_odds": 6.3,
+        "trotify_odds": 6.5
       },
       {
         "driver": "Danielle Hill",
         "current_points": 15,
-        "probability": 10.49,
-        "fair_odds": 9.53,
+        "probability": 10.85,
+        "fair_odds": 9.22,
         "market_percent": 125,
-        "market_odds": 7.63,
-        "trotify_odds": 8.0
+        "market_odds": 7.37,
+        "trotify_odds": 7.0
       },
       {
         "driver": "Jordan Chibnall",
         "current_points": 15,
-        "probability": 7.88,
-        "fair_odds": 12.69,
+        "probability": 7.87,
+        "fair_odds": 12.7,
         "market_percent": 125,
-        "market_odds": 10.15,
+        "market_odds": 10.16,
         "trotify_odds": 10.0
       },
       {
         "driver": "Dylan Ford",
         "current_points": 15,
-        "probability": 6.86,
-        "fair_odds": 14.57,
+        "probability": 6.9,
+        "fair_odds": 14.48,
         "market_percent": 125,
-        "market_odds": 11.66,
+        "market_odds": 11.59,
         "trotify_odds": 12.0
       },
       {
         "driver": "Wayne Hill",
         "current_points": 15,
-        "probability": 6.53,
-        "fair_odds": 15.32,
+        "probability": 6.6,
+        "fair_odds": 15.16,
         "market_percent": 125,
-        "market_odds": 12.26,
+        "market_odds": 12.12,
         "trotify_odds": 12.0
       },
       {
         "driver": "Angus Garrard",
         "current_points": 15,
-        "probability": 3.8,
-        "fair_odds": 26.34,
+        "probability": 3.76,
+        "fair_odds": 26.59,
         "market_percent": 125,
-        "market_odds": 21.07,
+        "market_odds": 21.27,
         "trotify_odds": 21.0
       },
       {
         "driver": "Gary Hall Jnr",
         "current_points": 15,
-        "probability": 2.98,
-        "fair_odds": 33.6,
+        "probability": 2.99,
+        "fair_odds": 33.43,
         "market_percent": 125,
-        "market_odds": 26.88,
+        "market_odds": 26.75,
         "trotify_odds": 26.0
-      },
-      {
-        "driver": "James Herbertson",
-        "current_points": 15,
-        "probability": 2.8,
-        "fair_odds": 35.73,
-        "market_percent": 125,
-        "market_odds": 28.58,
-        "trotify_odds": 31.0
       },
       {
         "driver": "Ashleigh Delosa",
         "current_points": 15,
-        "probability": 2.79,
-        "fair_odds": 35.82,
+        "probability": 2.74,
+        "fair_odds": 36.46,
         "market_percent": 125,
-        "market_odds": 28.65,
+        "market_odds": 29.17,
+        "trotify_odds": 31.0
+      },
+      {
+        "driver": "James Herbertson",
+        "current_points": 15,
+        "probability": 2.74,
+        "fair_odds": 36.55,
+        "market_percent": 125,
+        "market_odds": 29.24,
         "trotify_odds": 31.0
       },
       {
         "driver": "Adam Sanderson",
         "current_points": 15,
-        "probability": 2.18,
-        "fair_odds": 45.91,
+        "probability": 2.07,
+        "fair_odds": 48.4,
         "market_percent": 125,
-        "market_odds": 36.73,
+        "market_odds": 38.72,
         "trotify_odds": 41.0
       }
     ]
