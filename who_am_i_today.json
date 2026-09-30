@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-29",
-  "puzzle_number": 5,
+  "date": "2026-09-30",
+  "puzzle_number": 6,
   "type": "HORSE",
-  "answer": "A Little Dilemma",
+  "answer": "Mi Bow",
   "stats": {
-    "starts": 10,
-    "wins": 2,
-    "places": 2
+    "starts": 11,
+    "wins": 1,
+    "places": 9
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 10 race starts.",
+      "text": "I've had 11 race starts.",
       "difficulty": 15,
       "source": "career_starts",
-      "revealed_letters": 1,
-      "name_pattern": "A    _ _ _ _ _ _    _ _ _ _ _ _ _"
+      "revealed_letters": 0,
+      "name_pattern": "_ _    _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "All of my recorded starts have been in New South Wales.",
+      "text": "All of my recorded starts have been in Victoria.",
       "difficulty": 35,
       "source": "state",
-      "revealed_letters": 2,
-      "name_pattern": "A    L _ _ _ _ _    _ _ _ _ _ _ _"
+      "revealed_letters": 1,
+      "name_pattern": "M _    _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Newcastle.",
+      "text": "I've won at tracks including Shepparton.",
       "difficulty": 55,
       "source": "winning_tracks",
-      "revealed_letters": 4,
-      "name_pattern": "A    L _ _ _ _ E    D _ _ _ _ _ _"
+      "revealed_letters": 1,
+      "name_pattern": "M _    _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Laura Osborn.",
+      "text": "I'm currently associated most often with trainer Ross Graham.",
       "difficulty": 75,
       "source": "trainer",
-      "revealed_letters": 5,
-      "name_pattern": "A    L _ _ _ _ E    D _ L _ _ _ _"
+      "revealed_letters": 2,
+      "name_pattern": "M _    B _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Newcastle on 4 September 2026, where I finished 8th for trainer Laura Osborn and driver Blake Hughes.",
+      "text": "My most recent start was at Shepparton on 29 September 2026, where I finished 1st for trainer Ross Graham and driver James Herbertson.",
       "difficulty": 95,
       "source": "last_start",
-      "revealed_letters": 7,
-      "name_pattern": "A    L _ T _ _ E    D _ L _ M _ _"
+      "revealed_letters": 2,
+      "name_pattern": "M _    B _ _"
     }
   ]
 }
