@@ -443,10 +443,23 @@ function renderAdc() {
 
         <h2>Live Standings</h2>
 
-        <table>
+        <div class="table-scroll">
+
+        <table class="adc-table">
+
         <tr>
-        <th>Driver</th>
-        <th>Total</th>
+            <th class="driver-col">Driver</th>
+            <th>R1</th>
+            <th>R2</th>
+            <th>R3</th>
+            <th>R4</th>
+            <th>R5</th>
+            <th>R6</th>
+            <th>R7</th>
+            <th>R8</th>
+            <th>R9</th>
+            <th>R10</th>
+            <th>Total</th>
         </tr>
     `;
 
@@ -455,8 +468,35 @@ function renderAdc() {
 
         html += `
         <tr>
+
             <td>${d.name}</td>
-            <td>${d.total} pts</td>
+        `;
+
+
+        for (let i = 1; i <= 10; i++) {
+
+            const race =
+                d.races[`R${i}`];
+
+
+            const points =
+                race?.points;
+
+
+            html += `
+                <td class="points-cell">
+                    ${points ?? "-"}
+                </td>
+            `;
+        }
+
+
+        html += `
+
+            <td class="points-cell total-cell">
+                <strong>${d.total}</strong>
+            </td>
+
         </tr>
         `;
 
@@ -464,32 +504,81 @@ function renderAdc() {
 
 
     html += `
+
         </table>
+
+        </div>
+
 
         <h2>Trotify Market</h2>
 
-        `;
+
+        <table class="adc-market-table">
+
+        <tr>
+            <th>Driver</th>
+            <th>Odds</th>
+        </tr>
+
+    `;
 
 
     adcData.market.drivers.forEach(m => {
 
+        let odds = "";
+
+        if (m.trotify_odds) {
+
+            odds =
+                m.trotify_odds >= 10
+                    ? `$${Math.round(m.trotify_odds)}`
+                    : `$${m.trotify_odds.toFixed(2)}`;
+
+        }
+
+
         html += `
-        <div>
-            ${m.driver}
-            $${m.trotify_odds.toFixed(2)}
-        </div>
+
+        <tr>
+
+            <td>
+                ${m.driver}
+                ${
+                    adcData.drivers.find(
+                        d => d.name === m.driver
+                    )?.state
+                    ? `<span class="state-label">
+                        (${adcData.drivers.find(
+                            d => d.name === m.driver
+                        ).state})
+                      </span>`
+                    : ""
+                }
+            </td>
+
+            <td class="odds-cell">
+                ${odds}
+            </td>
+
+        </tr>
+
         `;
 
     });
 
 
-    html += "</div>";
+    html += `
+
+        </table>
+
+        </div>
+
+    `;
 
 
     container.innerHTML = html;
 
 }
-
 
 document.addEventListener("click", function (e) {
 

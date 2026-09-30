@@ -1,7 +1,7 @@
 {
   "event": "Australian Drivers Championship",
   "date": "2026-10-03",
-  "generated": "2026-09-30 21:47:38",
+  "generated": "2026-09-30 22:15:27",
   "points_system": {
     "12": {
       "1": 19,
@@ -210,7 +210,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-09-30 22:10:13",
+    "generated": "2026-09-30 22:16:04",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -229,109 +229,109 @@
       {
         "driver": "Emily Suvaljko",
         "current_points": 15,
-        "probability": 23.3,
-        "fair_odds": 4.29,
+        "probability": 23.56,
+        "fair_odds": 4.25,
         "market_percent": 125,
-        "market_odds": 3.43,
+        "market_odds": 3.4,
         "trotify_odds": 3.4
       },
       {
         "driver": "Mark Pitt",
         "current_points": 15,
-        "probability": 17.48,
-        "fair_odds": 5.72,
+        "probability": 17.28,
+        "fair_odds": 5.79,
         "market_percent": 125,
-        "market_odds": 4.58,
+        "market_odds": 4.63,
         "trotify_odds": 4.5
       },
       {
         "driver": "Jett Turnbull",
         "current_points": 15,
-        "probability": 12.69,
-        "fair_odds": 7.88,
+        "probability": 12.83,
+        "fair_odds": 7.79,
         "market_percent": 125,
-        "market_odds": 6.3,
-        "trotify_odds": 6.5
+        "market_odds": 6.23,
+        "trotify_odds": 6.0
       },
       {
         "driver": "Danielle Hill",
         "current_points": 15,
-        "probability": 10.85,
-        "fair_odds": 9.22,
+        "probability": 10.48,
+        "fair_odds": 9.54,
         "market_percent": 125,
-        "market_odds": 7.37,
-        "trotify_odds": 7.0
+        "market_odds": 7.63,
+        "trotify_odds": 8.0
       },
       {
         "driver": "Jordan Chibnall",
         "current_points": 15,
-        "probability": 7.87,
-        "fair_odds": 12.7,
+        "probability": 7.92,
+        "fair_odds": 12.63,
         "market_percent": 125,
-        "market_odds": 10.16,
+        "market_odds": 10.1,
         "trotify_odds": 10.0
       },
       {
         "driver": "Dylan Ford",
         "current_points": 15,
-        "probability": 6.9,
-        "fair_odds": 14.48,
+        "probability": 7.05,
+        "fair_odds": 14.18,
         "market_percent": 125,
-        "market_odds": 11.59,
-        "trotify_odds": 12.0
+        "market_odds": 11.34,
+        "trotify_odds": 11.0
       },
       {
         "driver": "Wayne Hill",
         "current_points": 15,
-        "probability": 6.6,
-        "fair_odds": 15.16,
+        "probability": 6.52,
+        "fair_odds": 15.33,
         "market_percent": 125,
-        "market_odds": 12.12,
+        "market_odds": 12.26,
         "trotify_odds": 12.0
       },
       {
         "driver": "Angus Garrard",
         "current_points": 15,
-        "probability": 3.76,
-        "fair_odds": 26.59,
+        "probability": 3.7,
+        "fair_odds": 27.03,
         "market_percent": 125,
-        "market_odds": 21.27,
+        "market_odds": 21.62,
         "trotify_odds": 21.0
       },
       {
         "driver": "Gary Hall Jnr",
         "current_points": 15,
-        "probability": 2.99,
-        "fair_odds": 33.43,
+        "probability": 2.9,
+        "fair_odds": 34.47,
         "market_percent": 125,
-        "market_odds": 26.75,
+        "market_odds": 27.58,
+        "trotify_odds": 26.0
+      },
+      {
+        "driver": "James Herbertson",
+        "current_points": 15,
+        "probability": 2.85,
+        "fair_odds": 35.09,
+        "market_percent": 125,
+        "market_odds": 28.07,
         "trotify_odds": 26.0
       },
       {
         "driver": "Ashleigh Delosa",
         "current_points": 15,
-        "probability": 2.74,
-        "fair_odds": 36.46,
+        "probability": 2.77,
+        "fair_odds": 36.17,
         "market_percent": 125,
-        "market_odds": 29.17,
-        "trotify_odds": 31.0
-      },
-      {
-        "driver": "James Herbertson",
-        "current_points": 15,
-        "probability": 2.74,
-        "fair_odds": 36.55,
-        "market_percent": 125,
-        "market_odds": 29.24,
+        "market_odds": 28.93,
         "trotify_odds": 31.0
       },
       {
         "driver": "Adam Sanderson",
         "current_points": 15,
-        "probability": 2.07,
-        "fair_odds": 48.4,
+        "probability": 2.14,
+        "fair_odds": 46.84,
         "market_percent": 125,
-        "market_odds": 38.72,
+        "market_odds": 37.47,
         "trotify_odds": 41.0
       }
     ]
@@ -1166,8 +1166,8 @@
         "R4": {
           "race_anchor": "GD031026_R4",
           "horse": "LETSGO BIG GIRL",
-          "fair_pct": NaN,
-          "fair_odds": NaN,
+          "fair_pct": null,
+          "fair_odds": null,
           "points": null
         },
         "R5": {
@@ -1297,6 +1297,5 @@
       },
       "total": 15
     }
-  ],
-  "last_updated": "2026-09-30 21:47:39"
+  ]
 }

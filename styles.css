@@ -12065,3 +12065,90 @@ body.legal-modal-open {
     }
 
 }
+
+.adc-table,
+.adc-market-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+
+.adc-table th,
+.adc-table td,
+.adc-market-table th,
+.adc-market-table td {
+
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 8px 10px;
+}
+
+
+.adc-table th,
+.adc-market-table th {
+
+    text-align: center;
+    font-weight: 700;
+    background: rgba(255,255,255,0.04);
+
+}
+
+
+.adc-table .driver-col {
+
+    text-align: left;
+
+}
+
+
+.adc-table td:first-child,
+.adc-market-table td:first-child {
+
+    text-align: left;
+
+}
+
+
+.points-cell {
+
+    text-align: right;
+
+    font-variant-numeric: tabular-nums;
+
+}
+
+
+.total-cell {
+
+    font-weight: 800;
+
+}
+
+
+.odds-cell {
+
+    text-align: right;
+
+    font-variant-numeric: tabular-nums;
+
+    font-weight: 700;
+
+}
+
+
+.state-label {
+
+    opacity: 0.55;
+
+    font-size: 0.85em;
+
+    margin-left: 4px;
+
+}
+
+
+.adc-market-table {
+
+    max-width: 450px;
+
+}
