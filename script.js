@@ -49,6 +49,8 @@ let raceMediaRows = [];
 
 let selectedTippingTipster = null;
 
+let adcData = null;
+
 
 
 const RACE_CHART_URL_PARAMS =
@@ -428,6 +430,66 @@ function openMobileStatsPopup(target) {
     document.body.appendChild(popup);
 }
 
+function renderAdc() {
+
+    const container =
+        document.getElementById(
+            "meetingStrip"
+        );
+
+
+    let html = `
+        <div class="adc-card">
+
+        <h2>Live Standings</h2>
+
+        <table>
+        <tr>
+        <th>Driver</th>
+        <th>Total</th>
+        </tr>
+    `;
+
+
+    adcData.drivers.forEach(d => {
+
+        html += `
+        <tr>
+            <td>${d.name}</td>
+            <td>${d.total} pts</td>
+        </tr>
+        `;
+
+    });
+
+
+    html += `
+        </table>
+
+        <h2>Trotify Market</h2>
+
+        `;
+
+
+    adcData.market.drivers.forEach(m => {
+
+        html += `
+        <div>
+            ${m.driver}
+            $${m.trotify_odds.toFixed(2)}
+        </div>
+        `;
+
+    });
+
+
+    html += "</div>";
+
+
+    container.innerHTML = html;
+
+}
+
 
 document.addEventListener("click", function (e) {
 
@@ -584,6 +646,28 @@ async function loadRaceMedia() {
     } catch (error) {
         console.error("Failed to load race media:", error);
         return [];
+    }
+}
+
+async function loadAdcData() {
+
+    try {
+
+        const response = await fetch(
+            "adc_today.json"
+        );
+
+        adcData = await response.json();
+
+        console.log("✅ ADC loaded", adcData);
+
+    } catch (error) {
+
+        console.error(
+            "Failed loading ADC",
+            error
+        );
+
     }
 }
 
@@ -855,6 +939,8 @@ function setupNavigation() {
                 showTrialWatchView();
             } else if (view === "who-am-i") {
                 showWhoAmIView();
+            } else if (view === "adc") {
+                showAdcView();
             } else if (view === "watchlist") {
                 showWatchlistView();
             } else if (view === "good-leaders") {
@@ -7710,6 +7796,132 @@ function showComingSoonView(title) {
             <p>This section is ready to be wired into the Trotify dashboard.</p>
         </div>
     `;
+}
+
+function showAdcView() {
+
+    document.querySelector(".hero").style.display = "none";
+    document.querySelector(".dashboard-grid").style.display = "none";
+    document.querySelector(".meetings-panel").style.display = "";
+
+
+    document.querySelector(".panel-heading").innerHTML = `
+        <span>🏆</span>
+        <span>Australian Drivers Championship</span>
+    `;
+
+
+    const container =
+        document.getElementById("meetingStrip");
+
+
+    if (!adcData) {
+
+        container.innerHTML = `
+            <div class="coming-soon-card">
+                <div class="coming-soon-title">
+                    Australian Drivers Championship
+                </div>
+                <p>Loading championship data...</p>
+            </div>
+        `;
+
+        return;
+    }
+
+
+    let html = `
+
+        <div class="coming-soon-card">
+
+            <div class="coming-soon-title">
+                🏆 Live Standings
+            </div>
+
+            <table class="adc-table">
+
+                <tr>
+                    <th>Driver</th>
+                    <th>Total</th>
+                </tr>
+
+    `;
+
+
+    adcData.drivers.forEach(driver => {
+
+        html += `
+
+            <tr>
+                <td>
+                    ${escapeHtml(driver.name)}
+                    ${driver.state ? "(" + driver.state + ")" : ""}
+                </td>
+
+                <td>
+                    ${driver.total} pts
+                </td>
+            </tr>
+
+        `;
+
+    });
+
+
+    html += `
+
+            </table>
+
+
+            <br>
+
+
+            <div class="coming-soon-title">
+                💰 Trotify Market
+            </div>
+
+            <table class="adc-table">
+
+                <tr>
+                    <th>Driver</th>
+                    <th>Odds</th>
+                </tr>
+
+    `;
+
+
+    adcData.market.drivers.forEach(driver => {
+
+        html += `
+
+            <tr>
+
+                <td>
+                    ${escapeHtml(driver.driver)}
+                </td>
+
+                <td>
+                    $${driver.trotify_odds.toFixed(2)}
+                </td>
+
+            </tr>
+
+        `;
+
+    });
+
+
+    html += `
+
+            </table>
+
+        </div>
+
+    `;
+
+
+    container.innerHTML = html;
+
 }
 
 function renderDashboard(rows) {
