@@ -12068,11 +12068,33 @@ body.legal-modal-open {
 
 .adc-table,
 .adc-market-table {
-    width: 100%;
+
     border-collapse: collapse;
     margin-top: 12px;
+
 }
 
+
+.adc-table {
+
+    width: auto;
+    min-width: 0;
+
+}
+
+
+.adc-market-table {
+
+    width: 340px;
+    max-width: 100%;
+
+}
+
+
+
+/* =========================================================
+   ADC TABLE CELLS
+   ========================================================= */
 
 .adc-table th,
 .adc-table td,
@@ -12080,28 +12102,51 @@ body.legal-modal-open {
 .adc-market-table td {
 
     border: 1px solid rgba(255,255,255,0.12);
-    padding: 8px 10px;
+    padding: 7px 8px;
+    white-space: nowrap;
+
 }
 
+
+
+/* =========================================================
+   HEADERS
+   ========================================================= */
 
 .adc-table th,
 .adc-market-table th {
 
-    text-align: center;
     font-weight: 700;
     background: rgba(255,255,255,0.04);
+    text-align: center;
 
 }
 
 
-.adc-table .driver-col {
+/* Race headers + totals align with numbers */
 
+.adc-table th:not(:first-child) {
+
+    text-align: right;
+
+}
+
+
+
+/* =========================================================
+   DRIVER COLUMN
+   ========================================================= */
+
+.adc-table th:first-child,
+.adc-table td:first-child {
+
+    width: 150px;
+    min-width: 150px;
     text-align: left;
 
 }
 
 
-.adc-table td:first-child,
 .adc-market-table td:first-child {
 
     text-align: left;
@@ -12109,11 +12154,40 @@ body.legal-modal-open {
 }
 
 
-.points-cell {
 
+/* =========================================================
+   RACE POINT COLUMNS
+   ========================================================= */
+
+.adc-table th:not(:first-child):not(:last-child),
+.adc-table td:not(:first-child):not(:last-child) {
+
+    width: 34px;
+    min-width: 34px;
     text-align: right;
 
+}
+
+
+.points-cell {
+
     font-variant-numeric: tabular-nums;
+    text-align: right;
+
+}
+
+
+
+/* =========================================================
+   TOTAL COLUMN
+   ========================================================= */
+
+.adc-table th:last-child,
+.adc-table td:last-child {
+
+    width: 48px;
+    min-width: 48px;
+    text-align: right;
 
 }
 
@@ -12125,30 +12199,93 @@ body.legal-modal-open {
 }
 
 
+
+/* =========================================================
+   MARKET
+   ========================================================= */
+
+.adc-market-table {
+
+    width: 340px;
+    max-width: 100%;
+
+}
+
+
 .odds-cell {
 
     text-align: right;
-
     font-variant-numeric: tabular-nums;
-
     font-weight: 700;
 
 }
 
 
+
+/* =========================================================
+   STATES
+   ========================================================= */
+
 .state-label {
 
     opacity: 0.55;
-
     font-size: 0.85em;
-
     margin-left: 4px;
 
 }
 
+/* =========================================================
+   ADC COLOUR POLISH
+   ========================================================= */
 
-.adc-market-table {
+.adc-card h2 {
 
-    max-width: 450px;
+    color: #7ee7cf;
+    margin-top: 24px;
+
+}
+
+
+.adc-card > h2:first-of-type {
+
+    color: #f6c85f;
+
+}
+
+
+/* Table headers */
+
+.adc-table th,
+.adc-market-table th {
+
+    color: #ffffff;
+    background: rgba(126,231,207,0.08);
+
+}
+
+
+/* Total column emphasis */
+
+.adc-table td:last-child {
+
+    color: #7ee7cf;
+
+}
+
+
+/* Market odds highlight */
+
+.adc-market-table .odds-cell {
+
+    color: #7ee7cf;
+
+}
+
+
+/* Driver state labels */
+
+.state-label {
+
+    color: #8b949e;
 
 }
