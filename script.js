@@ -238,12 +238,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     allRows = await loadUpcomingFields();
 
-    // Direct link to Australian Drivers Championship
-    if (window.location.search.includes("adc")) {
-        await showAdcView();
-        return;
-    }
-
     // Get useful content onto the screen immediately
     renderDashboard(allRows);
 
@@ -365,7 +359,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         await showRaceChartsView();
     }
+
+
+    /*
+       =====================================================
+       DIRECT LINK - AUSTRALIAN DRIVERS CHAMPIONSHIP
+       =====================================================
+    */
+
+    if (window.location.search.includes("adc")) {
+        await showAdcView();
+    }
+
 });
+
 
 function closeMobileStatsPopup() {
     document.querySelector(".mobile-stats-popup")?.remove();
