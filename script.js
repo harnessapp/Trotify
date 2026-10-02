@@ -238,6 +238,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     allRows = await loadUpcomingFields();
 
+    // Direct link to Australian Drivers Championship
+    if (window.location.search.includes("adc")) {
+        await showAdcView();
+        return;
+    }
+
     // Get useful content onto the screen immediately
     renderDashboard(allRows);
 
