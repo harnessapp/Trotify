@@ -449,6 +449,7 @@ function renderAdc() {
 
         <tr>
             <th class="driver-col">Driver</th>
+            <th>Total</th>
             <th>R1</th>
             <th>R2</th>
             <th>R3</th>
@@ -459,7 +460,6 @@ function renderAdc() {
             <th>R8</th>
             <th>R9</th>
             <th>R10</th>
-            <th>Total</th>
         </tr>
     `;
 
@@ -470,6 +470,10 @@ function renderAdc() {
         <tr>
 
             <td>${d.name}</td>
+
+            <td class="points-cell total-cell">
+                <strong>${d.total}</strong>
+            </td>
         `;
 
 
@@ -492,10 +496,6 @@ function renderAdc() {
 
 
         html += `
-
-            <td class="points-cell total-cell">
-                <strong>${d.total}</strong>
-            </td>
 
         </tr>
         `;
@@ -579,6 +579,7 @@ function renderAdc() {
     container.innerHTML = html;
 
 }
+
 
 document.addEventListener("click", function (e) {
 
