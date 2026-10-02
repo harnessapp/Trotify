@@ -1,7 +1,7 @@
 {
   "event": "Australian Drivers Championship",
   "date": "2026-10-03",
-  "generated": "2026-09-30 22:57:19",
+  "generated": "2026-10-02 12:25:58",
   "points_system": {
     "12": {
       "1": 19,
@@ -84,23 +84,24 @@
   "no_drive_points": 5,
   "races": {
     "GD031026_R1": {
-      "starters": 11,
+      "starters": 10,
+      "scratched": 1,
       "points_table": {
-        "1": 18,
-        "2": 13,
-        "3": 10,
-        "4": 8,
-        "5": 7,
-        "6": 6,
-        "7": 5,
-        "8": 4,
-        "9": 3,
-        "10": 2,
-        "11": 1
+        "1": 17,
+        "2": 12,
+        "3": 9,
+        "4": 7,
+        "5": 6,
+        "6": 5,
+        "7": 4,
+        "8": 3,
+        "9": 2,
+        "10": 1
       }
     },
     "GD031026_R2": {
       "starters": 8,
+      "scratched": 0,
       "points_table": {
         "1": 15,
         "2": 10,
@@ -114,6 +115,7 @@
     },
     "GD031026_R3": {
       "starters": 8,
+      "scratched": 0,
       "points_table": {
         "1": 15,
         "2": 10,
@@ -126,23 +128,24 @@
       }
     },
     "GD031026_R4": {
-      "starters": 11,
+      "starters": 10,
+      "scratched": 1,
       "points_table": {
-        "1": 18,
-        "2": 13,
-        "3": 10,
-        "4": 8,
-        "5": 7,
-        "6": 6,
-        "7": 5,
-        "8": 4,
-        "9": 3,
-        "10": 2,
-        "11": 1
+        "1": 17,
+        "2": 12,
+        "3": 9,
+        "4": 7,
+        "5": 6,
+        "6": 5,
+        "7": 4,
+        "8": 3,
+        "9": 2,
+        "10": 1
       }
     },
     "GD031026_R5": {
       "starters": 11,
+      "scratched": 0,
       "points_table": {
         "1": 18,
         "2": 13,
@@ -159,6 +162,7 @@
     },
     "GD031026_R6": {
       "starters": 11,
+      "scratched": 0,
       "points_table": {
         "1": 18,
         "2": 13,
@@ -175,6 +179,7 @@
     },
     "GD031026_R7": {
       "starters": 8,
+      "scratched": 0,
       "points_table": {
         "1": 15,
         "2": 10,
@@ -188,6 +193,7 @@
     },
     "GD031026_R8": {
       "starters": 8,
+      "scratched": 0,
       "points_table": {
         "1": 15,
         "2": 10,
@@ -200,17 +206,33 @@
       }
     },
     "GD031026_R9": {
-      "starters": 7,
-      "points_table": {}
+      "starters": 6,
+      "scratched": 1,
+      "points_table": {
+        "1": 13,
+        "2": 8,
+        "3": 5,
+        "4": 3,
+        "5": 2,
+        "6": 1
+      }
     },
     "GD031026_R10": {
       "starters": 6,
-      "points_table": {}
+      "scratched": 0,
+      "points_table": {
+        "1": 13,
+        "2": 8,
+        "3": 5,
+        "4": 3,
+        "5": 2,
+        "6": 1
+      }
     }
   },
   "market": {
     "enabled": true,
-    "generated": "2026-09-30 22:58:05",
+    "generated": "2026-10-02 12:33:27",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -229,8 +251,8 @@
       {
         "driver": "Emily Suvaljko",
         "current_points": 15,
-        "probability": 23.67,
-        "fair_odds": 4.23,
+        "probability": 23.69,
+        "fair_odds": 4.22,
         "market_percent": 125,
         "market_odds": 3.38,
         "trotify_odds": 3.4
@@ -238,105 +260,187 @@
       {
         "driver": "Mark Pitt",
         "current_points": 15,
-        "probability": 17.61,
-        "fair_odds": 5.68,
+        "probability": 12.55,
+        "fair_odds": 7.97,
         "market_percent": 125,
-        "market_odds": 4.54,
-        "trotify_odds": 4.5
-      },
-      {
-        "driver": "Jett Turnbull",
-        "current_points": 15,
-        "probability": 12.73,
-        "fair_odds": 7.85,
-        "market_percent": 125,
-        "market_odds": 6.28,
+        "market_odds": 6.37,
         "trotify_odds": 6.5
       },
       {
         "driver": "Danielle Hill",
         "current_points": 15,
-        "probability": 10.47,
-        "fair_odds": 9.55,
+        "probability": 10.92,
+        "fair_odds": 9.16,
         "market_percent": 125,
-        "market_odds": 7.64,
-        "trotify_odds": 8.0
-      },
-      {
-        "driver": "Jordan Chibnall",
-        "current_points": 15,
-        "probability": 7.86,
-        "fair_odds": 12.73,
-        "market_percent": 125,
-        "market_odds": 10.18,
-        "trotify_odds": 10.0
+        "market_odds": 7.32,
+        "trotify_odds": 7.0
       },
       {
         "driver": "Dylan Ford",
         "current_points": 15,
-        "probability": 6.82,
-        "fair_odds": 14.67,
+        "probability": 9.8,
+        "fair_odds": 10.2,
         "market_percent": 125,
-        "market_odds": 11.73,
-        "trotify_odds": 12.0
+        "market_odds": 8.16,
+        "trotify_odds": 8.0
+      },
+      {
+        "driver": "Jett Turnbull",
+        "current_points": 15,
+        "probability": 9.15,
+        "fair_odds": 10.93,
+        "market_percent": 125,
+        "market_odds": 8.75,
+        "trotify_odds": 9.0
+      },
+      {
+        "driver": "Jordan Chibnall",
+        "current_points": 15,
+        "probability": 7.97,
+        "fair_odds": 12.55,
+        "market_percent": 125,
+        "market_odds": 10.04,
+        "trotify_odds": 10.0
+      },
+      {
+        "driver": "Gary Hall Jnr",
+        "current_points": 20,
+        "probability": 7.24,
+        "fair_odds": 13.8,
+        "market_percent": 125,
+        "market_odds": 11.04,
+        "trotify_odds": 11.0
       },
       {
         "driver": "Wayne Hill",
         "current_points": 15,
-        "probability": 6.53,
-        "fair_odds": 15.31,
+        "probability": 7.17,
+        "fair_odds": 13.95,
         "market_percent": 125,
-        "market_odds": 12.25,
-        "trotify_odds": 12.0
-      },
-      {
-        "driver": "Angus Garrard",
-        "current_points": 15,
-        "probability": 3.81,
-        "fair_odds": 26.22,
-        "market_percent": 125,
-        "market_odds": 20.98,
-        "trotify_odds": 21.0
-      },
-      {
-        "driver": "Gary Hall Jnr",
-        "current_points": 15,
-        "probability": 2.91,
-        "fair_odds": 34.33,
-        "market_percent": 125,
-        "market_odds": 27.46,
-        "trotify_odds": 26.0
-      },
-      {
-        "driver": "James Herbertson",
-        "current_points": 15,
-        "probability": 2.77,
-        "fair_odds": 36.14,
-        "market_percent": 125,
-        "market_odds": 28.91,
-        "trotify_odds": 31.0
+        "market_odds": 11.16,
+        "trotify_odds": 11.0
       },
       {
         "driver": "Ashleigh Delosa",
         "current_points": 15,
-        "probability": 2.67,
-        "fair_odds": 37.45,
+        "probability": 3.97,
+        "fair_odds": 25.21,
         "market_percent": 125,
-        "market_odds": 29.96,
+        "market_odds": 20.17,
+        "trotify_odds": 21.0
+      },
+      {
+        "driver": "James Herbertson",
+        "current_points": 15,
+        "probability": 3.62,
+        "fair_odds": 27.62,
+        "market_percent": 125,
+        "market_odds": 22.09,
+        "trotify_odds": 21.0
+      },
+      {
+        "driver": "Angus Garrard",
+        "current_points": 15,
+        "probability": 2.56,
+        "fair_odds": 39.06,
+        "market_percent": 125,
+        "market_odds": 31.25,
         "trotify_odds": 31.0
       },
       {
         "driver": "Adam Sanderson",
         "current_points": 15,
-        "probability": 2.15,
-        "fair_odds": 46.47,
+        "probability": 1.36,
+        "fair_odds": 73.75,
         "market_percent": 125,
-        "market_odds": 37.17,
-        "trotify_odds": 41.0
+        "market_odds": 59.0,
+        "trotify_odds": 51.0
       }
     ]
   },
   "drivers": [
+    {
+      "name": "Gary Hall Jnr",
+      "state": "WA",
+      "races": {
+        "R1": {
+          "race_anchor": "GD031026_R1",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R2": {
+          "race_anchor": "GD031026_R2",
+          "horse": "TAKE MY WALLET NZ",
+          "fair_pct": 14.0654337941288,
+          "fair_odds": 7.1096278624369225,
+          "points": null
+        },
+        "R3": {
+          "race_anchor": "GD031026_R3",
+          "horse": "SAMMY BARBARO",
+          "fair_pct": 8.230353682768405,
+          "fair_odds": 12.150146136412872,
+          "points": null
+        },
+        "R4": {
+          "race_anchor": "GD031026_R4",
+          "horse": "LETSGO BIG GIRL",
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "scratched",
+          "placing": "SCR"
+        },
+        "R5": {
+          "race_anchor": "GD031026_R5",
+          "horse": "LINCS POOR BOY",
+          "fair_pct": 12.2184516216542,
+          "fair_odds": 8.18434308180053,
+          "points": null
+        },
+        "R6": {
+          "race_anchor": "GD031026_R6",
+          "horse": "STAR OF WILLOUGHBY",
+          "fair_pct": 15.670007995264688,
+          "fair_odds": 6.38161767563992,
+          "points": null
+        },
+        "R7": {
+          "race_anchor": "GD031026_R7",
+          "horse": "MY ULTIMATE FLYNN NZ",
+          "fair_pct": 14.589007420308668,
+          "fair_odds": 6.8544759159416655,
+          "points": null
+        },
+        "R8": {
+          "race_anchor": "GD031026_R8",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R9": {
+          "race_anchor": "GD031026_R9",
+          "horse": "MISS OUT",
+          "fair_pct": 7.527648330791317,
+          "fair_odds": 13.284361278004582,
+          "points": null
+        },
+        "R10": {
+          "race_anchor": "GD031026_R10",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        }
+      },
+      "total": 20
+    },
     {
       "name": "James Herbertson",
       "state": "VIC",
@@ -344,8 +448,8 @@
         "R1": {
           "race_anchor": "GD031026_R1",
           "horse": "BAY LA VILLE",
-          "fair_pct": 11.153570792030344,
-          "fair_odds": 8.965738584046452,
+          "fair_pct": 12.04542805017791,
+          "fair_odds": 8.301905053388536,
           "points": null
         },
         "R2": {
@@ -424,8 +528,8 @@
         "R1": {
           "race_anchor": "GD031026_R1",
           "horse": "B T CAPTIVATE NZ",
-          "fair_pct": 35.988076715456465,
-          "fair_odds": 2.7786980891104736,
+          "fair_pct": 37.74994926906804,
+          "fair_odds": 2.6490101824306045,
           "points": null
         },
         "R2": {
@@ -504,8 +608,8 @@
         "R1": {
           "race_anchor": "GD031026_R1",
           "horse": "TWIN CONNECTION",
-          "fair_pct": 4.23490326995679,
-          "fair_odds": 23.61329022776483,
+          "fair_pct": 4.493251133065896,
+          "fair_odds": 22.25560001845849,
           "points": null
         },
         "R2": {
@@ -584,8 +688,8 @@
         "R1": {
           "race_anchor": "GD031026_R1",
           "horse": "WEREGOINGTOGETCHA",
-          "fair_pct": 8.905100190510582,
-          "fair_odds": 11.229519922365569,
+          "fair_pct": 9.341068240064152,
+          "fair_odds": 10.70541370965439,
           "points": null
         },
         "R2": {
@@ -664,8 +768,8 @@
         "R1": {
           "race_anchor": "GD031026_R1",
           "horse": "CHILDERS ROAD",
-          "fair_pct": 5.953262784736952,
-          "fair_odds": 16.797511485026536,
+          "fair_pct": 6.244717379207136,
+          "fair_odds": 16.01353494923041,
           "points": null
         },
         "R2": {
@@ -744,8 +848,8 @@
         "R1": {
           "race_anchor": "GD031026_R1",
           "horse": "YOUVE BEEN SERVED",
-          "fair_pct": 5.464950325786468,
-          "fair_odds": 18.29842798902456,
+          "fair_pct": 5.816392336975055,
+          "fair_odds": 17.192787935623894,
           "points": null
         },
         "R2": {
@@ -824,8 +928,8 @@
         "R1": {
           "race_anchor": "GD031026_R1",
           "horse": "GRUMPYPANTS GRACIE",
-          "fair_pct": 8.905100190510582,
-          "fair_odds": 11.229519922365569,
+          "fair_pct": 10.176959539810737,
+          "fair_odds": 9.826117477308918,
           "points": null
         },
         "R2": {
@@ -904,8 +1008,8 @@
         "R1": {
           "race_anchor": "GD031026_R1",
           "horse": "RIVERGUM VELOX",
-          "fair_pct": 5.922383898135815,
-          "fair_odds": 16.885092510040923,
+          "fair_pct": 6.244717379207136,
+          "fair_odds": 16.01353494923041,
           "points": null
         },
         "R2": {
@@ -984,8 +1088,8 @@
         "R1": {
           "race_anchor": "GD031026_R1",
           "horse": "FEARFULL DRAGON NZ",
-          "fair_pct": 2.777318053252887,
-          "fair_odds": 36.00595901606468,
+          "fair_pct": 2.9132875436306427,
+          "fair_odds": 34.325482295296,
           "points": null
         },
         "R2": {
@@ -1064,8 +1168,8 @@
         "R1": {
           "race_anchor": "GD031026_R1",
           "horse": "NOT VICIOUS",
-          "fair_pct": 4.74207099488615,
-          "fair_odds": 21.087832743929816,
+          "fair_pct": 4.974229128793292,
+          "fair_odds": 20.10361754772225,
           "points": null
         },
         "R2": {
@@ -1133,86 +1237,6 @@
           "fair_pct": 38.26125513655072,
           "fair_odds": 2.6136100251575565,
           "points": null
-        }
-      },
-      "total": 15
-    },
-    {
-      "name": "Gary Hall Jnr",
-      "state": "WA",
-      "races": {
-        "R1": {
-          "race_anchor": "GD031026_R1",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R2": {
-          "race_anchor": "GD031026_R2",
-          "horse": "TAKE MY WALLET NZ",
-          "fair_pct": 14.0654337941288,
-          "fair_odds": 7.1096278624369225,
-          "points": null
-        },
-        "R3": {
-          "race_anchor": "GD031026_R3",
-          "horse": "SAMMY BARBARO",
-          "fair_pct": 8.230353682768405,
-          "fair_odds": 12.150146136412872,
-          "points": null
-        },
-        "R4": {
-          "race_anchor": "GD031026_R4",
-          "horse": "LETSGO BIG GIRL",
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": null
-        },
-        "R5": {
-          "race_anchor": "GD031026_R5",
-          "horse": "LINCS POOR BOY",
-          "fair_pct": 12.2184516216542,
-          "fair_odds": 8.18434308180053,
-          "points": null
-        },
-        "R6": {
-          "race_anchor": "GD031026_R6",
-          "horse": "STAR OF WILLOUGHBY",
-          "fair_pct": 15.670007995264688,
-          "fair_odds": 6.38161767563992,
-          "points": null
-        },
-        "R7": {
-          "race_anchor": "GD031026_R7",
-          "horse": "MY ULTIMATE FLYNN NZ",
-          "fair_pct": 14.589007420308668,
-          "fair_odds": 6.8544759159416655,
-          "points": null
-        },
-        "R8": {
-          "race_anchor": "GD031026_R8",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R9": {
-          "race_anchor": "GD031026_R9",
-          "horse": "MISS OUT",
-          "fair_pct": 7.527648330791317,
-          "fair_odds": 13.284361278004582,
-          "points": null
-        },
-        "R10": {
-          "race_anchor": "GD031026_R10",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
         }
       },
       "total": 15
@@ -1297,5 +1321,6 @@
       },
       "total": 15
     }
-  ]
+  ],
+  "last_updated": "2026-10-02 12:33:11"
 }
