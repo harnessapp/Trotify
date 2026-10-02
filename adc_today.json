@@ -232,7 +232,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-02 20:18:59",
+    "generated": "2026-10-02 20:33:51",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -251,133 +251,133 @@
       {
         "driver": "Emily Suvaljko",
         "current_points": 15,
-        "simulation_wins": 23255,
-        "probability": 23.25,
+        "simulation_wins": 21473,
+        "probability": 21.47,
         "eliminated": false,
-        "fair_odds": 4.3,
+        "fair_odds": 4.66,
         "market_percent": 125,
-        "market_odds": 3.44,
-        "trotify_odds": 3.4
+        "market_odds": 3.73,
+        "trotify_odds": 3.8
+      },
+      {
+        "driver": "Gary Hall Jnr",
+        "current_points": 15,
+        "simulation_wins": 13560,
+        "probability": 13.56,
+        "eliminated": false,
+        "fair_odds": 7.37,
+        "market_percent": 125,
+        "market_odds": 5.9,
+        "trotify_odds": 6.0
       },
       {
         "driver": "Mark Pitt",
         "current_points": 15,
-        "simulation_wins": 12625,
-        "probability": 12.62,
+        "simulation_wins": 11696,
+        "probability": 11.7,
         "eliminated": false,
-        "fair_odds": 7.92,
+        "fair_odds": 8.55,
         "market_percent": 125,
-        "market_odds": 6.34,
-        "trotify_odds": 6.5
+        "market_odds": 6.84,
+        "trotify_odds": 7.0
       },
       {
         "driver": "Danielle Hill",
         "current_points": 15,
-        "simulation_wins": 11222,
-        "probability": 11.22,
+        "simulation_wins": 10317,
+        "probability": 10.32,
         "eliminated": false,
-        "fair_odds": 8.91,
+        "fair_odds": 9.69,
         "market_percent": 125,
-        "market_odds": 7.13,
-        "trotify_odds": 7.0
+        "market_odds": 7.75,
+        "trotify_odds": 8.0
       },
       {
         "driver": "Dylan Ford",
         "current_points": 15,
-        "simulation_wins": 9832,
-        "probability": 9.83,
+        "simulation_wins": 9131,
+        "probability": 9.13,
         "eliminated": false,
-        "fair_odds": 10.17,
+        "fair_odds": 10.95,
         "market_percent": 125,
-        "market_odds": 8.14,
-        "trotify_odds": 8.0
+        "market_odds": 8.76,
+        "trotify_odds": 9.0
       },
       {
         "driver": "Jett Turnbull",
         "current_points": 15,
-        "simulation_wins": 9067,
-        "probability": 9.07,
+        "simulation_wins": 8265,
+        "probability": 8.27,
         "eliminated": false,
-        "fair_odds": 11.03,
+        "fair_odds": 12.1,
         "market_percent": 125,
-        "market_odds": 8.82,
-        "trotify_odds": 9.0
+        "market_odds": 9.68,
+        "trotify_odds": 10.0
       },
       {
         "driver": "Jordan Chibnall",
         "current_points": 15,
-        "simulation_wins": 8171,
-        "probability": 8.17,
+        "simulation_wins": 8238,
+        "probability": 8.24,
         "eliminated": false,
-        "fair_odds": 12.24,
+        "fair_odds": 12.14,
         "market_percent": 125,
-        "market_odds": 9.79,
+        "market_odds": 9.71,
         "trotify_odds": 10.0
-      },
-      {
-        "driver": "Gary Hall Jnr",
-        "current_points": 20,
-        "simulation_wins": 7282,
-        "probability": 7.28,
-        "eliminated": false,
-        "fair_odds": 13.73,
-        "market_percent": 125,
-        "market_odds": 10.99,
-        "trotify_odds": 11.0
       },
       {
         "driver": "Wayne Hill",
         "current_points": 15,
-        "simulation_wins": 7092,
-        "probability": 7.09,
+        "simulation_wins": 6470,
+        "probability": 6.47,
         "eliminated": false,
-        "fair_odds": 14.1,
+        "fair_odds": 15.46,
         "market_percent": 125,
-        "market_odds": 11.28,
-        "trotify_odds": 11.0
+        "market_odds": 12.36,
+        "trotify_odds": 12.0
       },
       {
         "driver": "Ashleigh Delosa",
         "current_points": 15,
-        "simulation_wins": 3995,
-        "probability": 4.0,
+        "simulation_wins": 3965,
+        "probability": 3.96,
         "eliminated": false,
-        "fair_odds": 25.03,
+        "fair_odds": 25.22,
         "market_percent": 125,
-        "market_odds": 20.03,
+        "market_odds": 20.18,
         "trotify_odds": 21.0
       },
       {
         "driver": "James Herbertson",
         "current_points": 15,
-        "simulation_wins": 3502,
-        "probability": 3.5,
+        "simulation_wins": 3154,
+        "probability": 3.15,
         "eliminated": false,
-        "fair_odds": 28.56,
+        "fair_odds": 31.71,
         "market_percent": 125,
-        "market_odds": 22.84,
-        "trotify_odds": 21.0
+        "market_odds": 25.36,
+        "trotify_odds": 26.0
       },
       {
         "driver": "Angus Garrard",
         "current_points": 15,
-        "simulation_wins": 2647,
-        "probability": 2.65,
+        "simulation_wins": 2497,
+        "probability": 2.5,
         "eliminated": false,
-        "fair_odds": 37.78,
+        "fair_odds": 40.05,
         "market_percent": 125,
-        "market_odds": 30.22,
+        "market_odds": 32.04,
         "trotify_odds": 31.0
       },
       {
         "driver": "Adam Sanderson",
         "current_points": 15,
-        "simulation_wins": 1310,
-        "probability": 1.31,
+        "simulation_wins": 1234,
+        "probability": 1.23,
         "eliminated": false,
-        "fair_odds": 76.34,
+        "fair_odds": 81.04,
         "market_percent": 125,
-        "market_odds": 61.07,
+        "market_odds": 64.83,
         "trotify_odds": 67.0
       }
     ]
@@ -411,12 +411,13 @@
         },
         "R4": {
           "race_anchor": "GD031026_R4",
-          "horse": "LETSGO BIG GIRL",
-          "fair_pct": null,
+          "horse": "KETO NZ",
+          "fair_pct": 14.6327567,
           "fair_odds": null,
-          "points": 5,
-          "status": "scratched",
-          "placing": "SCR"
+          "points": null,
+          "status": "upcoming",
+          "placing": null,
+          "original_horse": "LETSGO BIG GIRL"
         },
         "R5": {
           "race_anchor": "GD031026_R5",
@@ -463,7 +464,7 @@
           "status": "no_drive"
         }
       },
-      "total": 20
+      "total": 15
     },
     {
       "name": "James Herbertson",
@@ -1346,5 +1347,5 @@
       "total": 15
     }
   ],
-  "last_updated": "2026-10-02 20:18:42"
+  "last_updated": "2026-10-02 20:33:34"
 }
