@@ -84,19 +84,18 @@
   "no_drive_points": 5,
   "races": {
     "GD031026_R1": {
-      "starters": 10,
-      "scratched": 1,
+      "starters": 9,
+      "scratched": 2,
       "points_table": {
-        "1": 17,
-        "2": 12,
-        "3": 9,
-        "4": 7,
-        "5": 6,
-        "6": 5,
-        "7": 4,
-        "8": 3,
-        "9": 2,
-        "10": 1
+        "1": 16,
+        "2": 11,
+        "3": 8,
+        "4": 6,
+        "5": 5,
+        "6": 4,
+        "7": 3,
+        "8": 2,
+        "9": 1
       }
     },
     "GD031026_R2": {
@@ -161,20 +160,19 @@
       }
     },
     "GD031026_R6": {
-      "starters": 11,
-      "scratched": 0,
+      "starters": 10,
+      "scratched": 1,
       "points_table": {
-        "1": 18,
-        "2": 13,
-        "3": 10,
-        "4": 8,
-        "5": 7,
-        "6": 6,
-        "7": 5,
-        "8": 4,
-        "9": 3,
-        "10": 2,
-        "11": 1
+        "1": 17,
+        "2": 12,
+        "3": 9,
+        "4": 7,
+        "5": 6,
+        "6": 5,
+        "7": 4,
+        "8": 3,
+        "9": 2,
+        "10": 1
       }
     },
     "GD031026_R7": {
@@ -232,7 +230,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-02 20:33:51",
+    "generated": "2026-10-03 09:19:52",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -251,138 +249,220 @@
       {
         "driver": "Emily Suvaljko",
         "current_points": 15,
-        "simulation_wins": 21473,
-        "probability": 21.47,
+        "simulation_wins": 20299,
+        "probability": 20.3,
         "eliminated": false,
-        "fair_odds": 4.66,
+        "fair_odds": 4.93,
         "market_percent": 125,
-        "market_odds": 3.73,
-        "trotify_odds": 3.8
-      },
-      {
-        "driver": "Gary Hall Jnr",
-        "current_points": 15,
-        "simulation_wins": 13560,
-        "probability": 13.56,
-        "eliminated": false,
-        "fair_odds": 7.37,
-        "market_percent": 125,
-        "market_odds": 5.9,
-        "trotify_odds": 6.0
-      },
-      {
-        "driver": "Mark Pitt",
-        "current_points": 15,
-        "simulation_wins": 11696,
-        "probability": 11.7,
-        "eliminated": false,
-        "fair_odds": 8.55,
-        "market_percent": 125,
-        "market_odds": 6.84,
-        "trotify_odds": 7.0
-      },
-      {
-        "driver": "Danielle Hill",
-        "current_points": 15,
-        "simulation_wins": 10317,
-        "probability": 10.32,
-        "eliminated": false,
-        "fair_odds": 9.69,
-        "market_percent": 125,
-        "market_odds": 7.75,
-        "trotify_odds": 8.0
+        "market_odds": 3.94,
+        "trotify_odds": 4.0
       },
       {
         "driver": "Dylan Ford",
         "current_points": 15,
-        "simulation_wins": 9131,
-        "probability": 9.13,
+        "simulation_wins": 15168,
+        "probability": 15.17,
         "eliminated": false,
-        "fair_odds": 10.95,
+        "fair_odds": 6.59,
         "market_percent": 125,
-        "market_odds": 8.76,
-        "trotify_odds": 9.0
+        "market_odds": 5.27,
+        "trotify_odds": 5.5
+      },
+      {
+        "driver": "Gary Hall Jnr",
+        "current_points": 15,
+        "simulation_wins": 13286,
+        "probability": 13.29,
+        "eliminated": false,
+        "fair_odds": 7.53,
+        "market_percent": 125,
+        "market_odds": 6.02,
+        "trotify_odds": 6.0
+      },
+      {
+        "driver": "Danielle Hill",
+        "current_points": 15,
+        "simulation_wins": 9877,
+        "probability": 9.88,
+        "eliminated": false,
+        "fair_odds": 10.12,
+        "market_percent": 125,
+        "market_odds": 8.1,
+        "trotify_odds": 8.0
+      },
+      {
+        "driver": "Mark Pitt",
+        "current_points": 20,
+        "simulation_wins": 7802,
+        "probability": 7.8,
+        "eliminated": false,
+        "fair_odds": 12.82,
+        "market_percent": 125,
+        "market_odds": 10.25,
+        "trotify_odds": 10.0
       },
       {
         "driver": "Jett Turnbull",
         "current_points": 15,
-        "simulation_wins": 8265,
-        "probability": 8.27,
+        "simulation_wins": 7714,
+        "probability": 7.71,
         "eliminated": false,
-        "fair_odds": 12.1,
+        "fair_odds": 12.96,
         "market_percent": 125,
-        "market_odds": 9.68,
+        "market_odds": 10.37,
         "trotify_odds": 10.0
       },
       {
         "driver": "Jordan Chibnall",
         "current_points": 15,
-        "simulation_wins": 8238,
-        "probability": 8.24,
+        "simulation_wins": 7648,
+        "probability": 7.65,
         "eliminated": false,
-        "fair_odds": 12.14,
+        "fair_odds": 13.08,
         "market_percent": 125,
-        "market_odds": 9.71,
+        "market_odds": 10.46,
         "trotify_odds": 10.0
       },
       {
         "driver": "Wayne Hill",
         "current_points": 15,
-        "simulation_wins": 6470,
-        "probability": 6.47,
+        "simulation_wins": 7442,
+        "probability": 7.44,
         "eliminated": false,
-        "fair_odds": 15.46,
+        "fair_odds": 13.44,
         "market_percent": 125,
-        "market_odds": 12.36,
-        "trotify_odds": 12.0
+        "market_odds": 10.75,
+        "trotify_odds": 11.0
       },
       {
         "driver": "Ashleigh Delosa",
         "current_points": 15,
-        "simulation_wins": 3965,
-        "probability": 3.96,
+        "simulation_wins": 3736,
+        "probability": 3.74,
         "eliminated": false,
-        "fair_odds": 25.22,
+        "fair_odds": 26.77,
         "market_percent": 125,
-        "market_odds": 20.18,
+        "market_odds": 21.41,
         "trotify_odds": 21.0
       },
       {
         "driver": "James Herbertson",
         "current_points": 15,
-        "simulation_wins": 3154,
-        "probability": 3.15,
+        "simulation_wins": 3558,
+        "probability": 3.56,
         "eliminated": false,
-        "fair_odds": 31.71,
+        "fair_odds": 28.11,
         "market_percent": 125,
-        "market_odds": 25.36,
-        "trotify_odds": 26.0
+        "market_odds": 22.48,
+        "trotify_odds": 21.0
       },
       {
         "driver": "Angus Garrard",
         "current_points": 15,
-        "simulation_wins": 2497,
-        "probability": 2.5,
+        "simulation_wins": 2259,
+        "probability": 2.26,
         "eliminated": false,
-        "fair_odds": 40.05,
+        "fair_odds": 44.27,
         "market_percent": 125,
-        "market_odds": 32.04,
+        "market_odds": 35.41,
         "trotify_odds": 31.0
       },
       {
         "driver": "Adam Sanderson",
         "current_points": 15,
-        "simulation_wins": 1234,
-        "probability": 1.23,
+        "simulation_wins": 1211,
+        "probability": 1.21,
         "eliminated": false,
-        "fair_odds": 81.04,
+        "fair_odds": 82.58,
         "market_percent": 125,
-        "market_odds": 64.83,
+        "market_odds": 66.06,
         "trotify_odds": 67.0
       }
     ]
   },
   "drivers": [
+    {
+      "name": "Mark Pitt",
+      "state": "VIC",
+      "races": {
+        "R1": {
+          "race_anchor": "GD031026_R1",
+          "horse": "GRUMPYPANTS GRACIE",
+          "fair_pct": 10.176959539810737,
+          "fair_odds": 9.826117477308918,
+          "points": 5,
+          "status": "scratched",
+          "placing": "SCR"
+        },
+        "R2": {
+          "race_anchor": "GD031026_R2",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R3": {
+          "race_anchor": "GD031026_R3",
+          "horse": "LORD LOGAN",
+          "fair_pct": 37.595030907974106,
+          "fair_odds": 2.659925995134359,
+          "points": null
+        },
+        "R4": {
+          "race_anchor": "GD031026_R4",
+          "horse": "LOCHINVAR LEADER",
+          "fair_pct": 21.19259703815006,
+          "fair_odds": 4.718628859878949,
+          "points": null
+        },
+        "R5": {
+          "race_anchor": "GD031026_R5",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R6": {
+          "race_anchor": "GD031026_R6",
+          "horse": "ALLORNOTHINGLEVI",
+          "fair_pct": 6.695929691629077,
+          "fair_odds": 14.934445940347178,
+          "points": null
+        },
+        "R7": {
+          "race_anchor": "GD031026_R7",
+          "horse": "SO SIRIUS NZ",
+          "fair_pct": 12.470589387006864,
+          "fair_odds": 8.018867183951244,
+          "points": null
+        },
+        "R8": {
+          "race_anchor": "GD031026_R8",
+          "horse": "HARRO HILL",
+          "fair_pct": 9.04664011673905,
+          "fair_odds": 11.053827576822629,
+          "points": null
+        },
+        "R9": {
+          "race_anchor": "GD031026_R9",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R10": {
+          "race_anchor": "GD031026_R10",
+          "horse": "ALL THE TRIX",
+          "fair_pct": 6.681964734178912,
+          "fair_odds": 14.965658152682265,
+          "points": null
+        }
+      },
+      "total": 20
+    },
     {
       "name": "Gary Hall Jnr",
       "state": "WA",
@@ -947,86 +1027,6 @@
       "total": 15
     },
     {
-      "name": "Mark Pitt",
-      "state": "VIC",
-      "races": {
-        "R1": {
-          "race_anchor": "GD031026_R1",
-          "horse": "GRUMPYPANTS GRACIE",
-          "fair_pct": 10.176959539810737,
-          "fair_odds": 9.826117477308918,
-          "points": null
-        },
-        "R2": {
-          "race_anchor": "GD031026_R2",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R3": {
-          "race_anchor": "GD031026_R3",
-          "horse": "LORD LOGAN",
-          "fair_pct": 37.595030907974106,
-          "fair_odds": 2.659925995134359,
-          "points": null
-        },
-        "R4": {
-          "race_anchor": "GD031026_R4",
-          "horse": "LOCHINVAR LEADER",
-          "fair_pct": 21.19259703815006,
-          "fair_odds": 4.718628859878949,
-          "points": null
-        },
-        "R5": {
-          "race_anchor": "GD031026_R5",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R6": {
-          "race_anchor": "GD031026_R6",
-          "horse": "ALLORNOTHINGLEVI",
-          "fair_pct": 6.695929691629077,
-          "fair_odds": 14.934445940347178,
-          "points": null
-        },
-        "R7": {
-          "race_anchor": "GD031026_R7",
-          "horse": "SO SIRIUS NZ",
-          "fair_pct": 12.470589387006864,
-          "fair_odds": 8.018867183951244,
-          "points": null
-        },
-        "R8": {
-          "race_anchor": "GD031026_R8",
-          "horse": "HARRO HILL",
-          "fair_pct": 9.04664011673905,
-          "fair_odds": 11.053827576822629,
-          "points": null
-        },
-        "R9": {
-          "race_anchor": "GD031026_R9",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R10": {
-          "race_anchor": "GD031026_R10",
-          "horse": "ALL THE TRIX",
-          "fair_pct": 6.681964734178912,
-          "fair_odds": 14.965658152682265,
-          "points": null
-        }
-      },
-      "total": 15
-    },
-    {
       "name": "Ashleigh Delosa",
       "state": "NSW",
       "races": {
@@ -1228,10 +1228,13 @@
         },
         "R6": {
           "race_anchor": "GD031026_R6",
-          "horse": "ROAD STAR",
-          "fair_pct": 3.0737794705878634,
+          "horse": "MALACHITE ROCK",
+          "fair_pct": 11.20102974164714,
           "fair_odds": 32.53323830055866,
-          "points": null
+          "points": null,
+          "original_horse": "ROAD STAR",
+          "placing": null,
+          "status": "upcoming"
         },
         "R7": {
           "race_anchor": "GD031026_R7",
@@ -1347,5 +1350,5 @@
       "total": 15
     }
   ],
-  "last_updated": "2026-10-02 20:33:34"
+  "last_updated": "2026-10-03 09:19:34"
 }
