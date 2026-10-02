@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-02",
-  "puzzle_number": 1,
-  "type": "TRAINER",
-  "answer": "Andy Gath",
+  "date": "2026-10-03",
+  "puzzle_number": 2,
+  "type": "HORSE",
+  "answer": "Nonis Gold Class",
   "stats": {
-    "recent_starts": 403,
-    "recent_wins": 69,
-    "horses": 56
+    "starts": 10,
+    "wins": 1,
+    "places": 6
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "My stable has had 403 race starts in the past 12 months.",
+      "text": "I've had 10 race starts.",
       "difficulty": 15,
-      "source": "recent_starts",
-      "revealed_letters": 0,
-      "name_pattern": "_ _ _ _    _ _ _ _"
+      "source": "career_starts",
+      "revealed_letters": 1,
+      "name_pattern": "N _ _ _ _    _ _ _ _    _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've trained 69 winners in the past 12 months.",
-      "difficulty": 40,
-      "source": "recent_wins",
-      "revealed_letters": 1,
-      "name_pattern": "A _ _ _    _ _ _ _"
+      "text": "All of my recorded starts have been in Queensland.",
+      "difficulty": 35,
+      "source": "state",
+      "revealed_letters": 2,
+      "name_pattern": "N _ _ _ _    G _ _ _    _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "The track where I've had the most runners in the past 12 months is Melton.",
+      "text": "I've won at tracks including Albion Park.",
       "difficulty": 55,
-      "source": "favourite_venue",
-      "revealed_letters": 2,
-      "name_pattern": "A _ _ _    G _ _ _"
+      "source": "winning_tracks",
+      "revealed_letters": 4,
+      "name_pattern": "N _ _ _ _    G O _ _    C _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "The driver used most often by my stable recently is Kate Gath.",
-      "difficulty": 70,
-      "source": "favourite_driver",
-      "revealed_letters": 3,
-      "name_pattern": "A _ _ Y    G _ _ _"
+      "text": "I'm currently associated most often with trainer Shane Graham.",
+      "difficulty": 75,
+      "source": "trainer",
+      "revealed_letters": 5,
+      "name_pattern": "N _ _ _ _    G O _ _    C L _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Andy. ",
+      "text": "My most recent start was at Albion Park on 2 October 2026, where I finished 7th for trainer Shane Graham and driver Shane Graham.",
       "difficulty": 95,
-      "source": "first_name",
-      "revealed_letters": 4,
-      "name_pattern": "A _ _ Y    G A _ _"
+      "source": "last_start",
+      "revealed_letters": 7,
+      "name_pattern": "N _ _ _ S    G O _ _    C L A _ _"
     }
   ]
 }
