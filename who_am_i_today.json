@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-30",
-  "puzzle_number": 6,
-  "type": "HORSE",
-  "answer": "Mi Bow",
+  "date": "2026-10-02",
+  "puzzle_number": 1,
+  "type": "TRAINER",
+  "answer": "Andy Gath",
   "stats": {
-    "starts": 11,
-    "wins": 1,
-    "places": 9
+    "recent_starts": 403,
+    "recent_wins": 69,
+    "horses": 56
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 11 race starts.",
+      "text": "My stable has had 403 race starts in the past 12 months.",
       "difficulty": 15,
-      "source": "career_starts",
+      "source": "recent_starts",
       "revealed_letters": 0,
-      "name_pattern": "_ _    _ _ _"
+      "name_pattern": "_ _ _ _    _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "All of my recorded starts have been in Victoria.",
-      "difficulty": 35,
-      "source": "state",
+      "text": "I've trained 69 winners in the past 12 months.",
+      "difficulty": 40,
+      "source": "recent_wins",
       "revealed_letters": 1,
-      "name_pattern": "M _    _ _ _"
+      "name_pattern": "A _ _ _    _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Shepparton.",
+      "text": "The track where I've had the most runners in the past 12 months is Melton.",
       "difficulty": 55,
-      "source": "winning_tracks",
-      "revealed_letters": 1,
-      "name_pattern": "M _    _ _ _"
+      "source": "favourite_venue",
+      "revealed_letters": 2,
+      "name_pattern": "A _ _ _    G _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Ross Graham.",
-      "difficulty": 75,
-      "source": "trainer",
-      "revealed_letters": 2,
-      "name_pattern": "M _    B _ _"
+      "text": "The driver used most often by my stable recently is Kate Gath.",
+      "difficulty": 70,
+      "source": "favourite_driver",
+      "revealed_letters": 3,
+      "name_pattern": "A _ _ Y    G _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Shepparton on 29 September 2026, where I finished 1st for trainer Ross Graham and driver James Herbertson.",
+      "text": "My first name is Andy. ",
       "difficulty": 95,
-      "source": "last_start",
-      "revealed_letters": 2,
-      "name_pattern": "M _    B _ _"
+      "source": "first_name",
+      "revealed_letters": 4,
+      "name_pattern": "A _ _ Y    G A _ _"
     }
   ]
 }
