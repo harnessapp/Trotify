@@ -540,7 +540,11 @@ function renderAdc() {
 
         let odds = "";
 
-        if (m.trotify_odds) {
+        if (m.eliminated) {
+
+            odds = "ELIM";
+
+        } else if (m.trotify_odds) {
 
             odds =
                 m.trotify_odds >= 10
