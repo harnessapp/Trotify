@@ -441,7 +441,7 @@ function renderAdc() {
     let html = `
         <div class="adc-card">
 
-        <h2>Live Standings</h2>
+        <h2>Live Standings (UNOFFICIAL)</h2>
 
         <div class="table-scroll">
 
@@ -510,7 +510,7 @@ function renderAdc() {
         </div>
 
 
-        <h2>Trotify Market</h2>
+        <h2>Trotify Market (UNOFFICIAL)</h2>
 
 
         <table class="adc-market-table">
