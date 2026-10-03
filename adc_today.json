@@ -229,11 +229,10 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-03 18:26:18",
+    "generated": "2026-10-03 18:31:20",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
-      "R2",
       "R3",
       "R4",
       "R5",
@@ -246,135 +245,135 @@
     "drivers": [
       {
         "driver": "Emily Suvaljko",
-        "current_points": 31,
-        "simulation_wins": 31209,
-        "probability": 31.21,
+        "current_points": 33,
+        "simulation_wins": 25993,
+        "probability": 25.99,
         "eliminated": false,
-        "fair_odds": 3.2,
+        "fair_odds": 3.85,
         "market_percent": 125,
-        "market_odds": 2.56,
-        "trotify_odds": 2.6
-      },
-      {
-        "driver": "Dylan Ford",
-        "current_points": 20,
-        "simulation_wins": 14840,
-        "probability": 14.84,
-        "eliminated": false,
-        "fair_odds": 6.74,
-        "market_percent": 125,
-        "market_odds": 5.39,
-        "trotify_odds": 5.5
+        "market_odds": 3.08,
+        "trotify_odds": 3.0
       },
       {
         "driver": "Gary Hall Jnr",
-        "current_points": 15,
-        "simulation_wins": 12158,
-        "probability": 12.16,
+        "current_points": 25,
+        "simulation_wins": 18979,
+        "probability": 18.98,
         "eliminated": false,
-        "fair_odds": 8.23,
+        "fair_odds": 5.27,
         "market_percent": 125,
-        "market_odds": 6.58,
-        "trotify_odds": 6.5
+        "market_odds": 4.22,
+        "trotify_odds": 4.0
+      },
+      {
+        "driver": "Dylan Ford",
+        "current_points": 27,
+        "simulation_wins": 9807,
+        "probability": 9.81,
+        "eliminated": false,
+        "fair_odds": 10.2,
+        "market_percent": 125,
+        "market_odds": 8.16,
+        "trotify_odds": 8.0
       },
       {
         "driver": "Mark Pitt",
         "current_points": 20,
-        "simulation_wins": 8419,
-        "probability": 8.42,
+        "simulation_wins": 9242,
+        "probability": 9.24,
         "eliminated": false,
-        "fair_odds": 11.88,
+        "fair_odds": 10.82,
         "market_percent": 125,
-        "market_odds": 9.5,
-        "trotify_odds": 10.0
+        "market_odds": 8.66,
+        "trotify_odds": 9.0
       },
       {
         "driver": "Wayne Hill",
         "current_points": 21,
-        "simulation_wins": 7713,
-        "probability": 7.71,
+        "simulation_wins": 8474,
+        "probability": 8.47,
         "eliminated": false,
-        "fair_odds": 12.97,
+        "fair_odds": 11.8,
         "market_percent": 125,
-        "market_odds": 10.37,
-        "trotify_odds": 10.0
+        "market_odds": 9.44,
+        "trotify_odds": 9.0
+      },
+      {
+        "driver": "Angus Garrard",
+        "current_points": 33,
+        "simulation_wins": 7438,
+        "probability": 7.44,
+        "eliminated": false,
+        "fair_odds": 13.44,
+        "market_percent": 125,
+        "market_odds": 10.76,
+        "trotify_odds": 11.0
       },
       {
         "driver": "Danielle Hill",
         "current_points": 16,
-        "simulation_wins": 5086,
-        "probability": 5.09,
+        "simulation_wins": 5828,
+        "probability": 5.83,
         "eliminated": false,
-        "fair_odds": 19.66,
+        "fair_odds": 17.16,
         "market_percent": 125,
-        "market_odds": 15.73,
-        "trotify_odds": 15.0
-      },
-      {
-        "driver": "Ashleigh Delosa",
-        "current_points": 23,
-        "simulation_wins": 4895,
-        "probability": 4.9,
-        "eliminated": false,
-        "fair_odds": 20.43,
-        "market_percent": 125,
-        "market_odds": 16.34,
-        "trotify_odds": 17.0
+        "market_odds": 13.73,
+        "trotify_odds": 14.0
       },
       {
         "driver": "James Herbertson",
         "current_points": 26,
-        "simulation_wins": 4720,
-        "probability": 4.72,
+        "simulation_wins": 5321,
+        "probability": 5.32,
         "eliminated": false,
-        "fair_odds": 21.19,
+        "fair_odds": 18.79,
         "market_percent": 125,
-        "market_odds": 16.95,
-        "trotify_odds": 17.0
+        "market_odds": 15.03,
+        "trotify_odds": 15.0
       },
       {
         "driver": "Jordan Chibnall",
-        "current_points": 19,
-        "simulation_wins": 4036,
-        "probability": 4.04,
+        "current_points": 23,
+        "simulation_wins": 3022,
+        "probability": 3.02,
         "eliminated": false,
-        "fair_odds": 24.78,
+        "fair_odds": 33.09,
         "market_percent": 125,
-        "market_odds": 19.82,
-        "trotify_odds": 19.0
+        "market_odds": 26.47,
+        "trotify_odds": 26.0
       },
       {
         "driver": "Jett Turnbull",
-        "current_points": 17,
-        "simulation_wins": 3845,
-        "probability": 3.84,
+        "current_points": 20,
+        "simulation_wins": 2652,
+        "probability": 2.65,
         "eliminated": false,
-        "fair_odds": 26.01,
+        "fair_odds": 37.71,
         "market_percent": 125,
-        "market_odds": 20.81,
-        "trotify_odds": 21.0
+        "market_odds": 30.17,
+        "trotify_odds": 31.0
       },
       {
-        "driver": "Angus Garrard",
-        "current_points": 18,
-        "simulation_wins": 1778,
-        "probability": 1.78,
+        "driver": "Ashleigh Delosa",
+        "current_points": 24,
+        "simulation_wins": 2434,
+        "probability": 2.43,
         "eliminated": false,
-        "fair_odds": 56.24,
+        "fair_odds": 41.08,
         "market_percent": 125,
-        "market_odds": 44.99,
-        "trotify_odds": 41.0
+        "market_odds": 32.87,
+        "trotify_odds": 31.0
       },
       {
         "driver": "Adam Sanderson",
-        "current_points": 15,
-        "simulation_wins": 1301,
-        "probability": 1.3,
+        "current_points": 20,
+        "simulation_wins": 810,
+        "probability": 0.81,
         "eliminated": false,
-        "fair_odds": 76.86,
+        "fair_odds": 123.46,
         "market_percent": 125,
-        "market_odds": 61.49,
-        "trotify_odds": 67.0
+        "market_odds": 98.77,
+        "trotify_odds": 101.0
       }
     ]
   },
@@ -397,7 +396,9 @@
           "horse": "ROCKAMARA",
           "fair_pct": 5.898048517538024,
           "fair_odds": 16.954760494534252,
-          "points": null
+          "points": 2,
+          "placing": 7,
+          "status": "complete"
         },
         "R3": {
           "race_anchor": "GD031026_R3",
@@ -459,7 +460,178 @@
           "points": null
         }
       },
-      "total": 31
+      "total": 33
+    },
+    {
+      "name": "Angus Garrard",
+      "state": "QLD",
+      "races": {
+        "R1": {
+          "race_anchor": "GD031026_R1",
+          "horse": "FEARFULL DRAGON NZ",
+          "fair_pct": 2.9132875436306427,
+          "fair_odds": 34.325482295296,
+          "points": 3,
+          "placing": 7,
+          "status": "complete"
+        },
+        "R2": {
+          "race_anchor": "GD031026_R2",
+          "horse": "KEILAH NZ",
+          "fair_pct": 9.61083081200924,
+          "fair_odds": 10.404927727480615,
+          "points": 15,
+          "placing": 1,
+          "status": "complete"
+        },
+        "R3": {
+          "race_anchor": "GD031026_R3",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R4": {
+          "race_anchor": "GD031026_R4",
+          "horse": "PER ARDUA AD ASTRA",
+          "fair_pct": 6.87147270707001,
+          "fair_odds": 14.55292107863729,
+          "points": null
+        },
+        "R5": {
+          "race_anchor": "GD031026_R5",
+          "horse": "MIKISPUR",
+          "fair_pct": 10.514179490804242,
+          "fair_odds": 9.510965652380248,
+          "points": null
+        },
+        "R6": {
+          "race_anchor": "GD031026_R6",
+          "horse": "HEATHBERN BRUCE",
+          "fair_pct": 4.119474670133269,
+          "fair_odds": 24.27493989100433,
+          "points": null
+        },
+        "R7": {
+          "race_anchor": "GD031026_R7",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R8": {
+          "race_anchor": "GD031026_R8",
+          "horse": "HEEZ A VIBE",
+          "fair_pct": 11.265498058798135,
+          "fair_odds": 8.876660355189706,
+          "points": null
+        },
+        "R9": {
+          "race_anchor": "GD031026_R9",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R10": {
+          "race_anchor": "GD031026_R10",
+          "horse": "KYVALLEY HEIST NZ",
+          "fair_pct": 6.844987299928963,
+          "fair_odds": 14.609230904057016,
+          "points": null
+        }
+      },
+      "total": 33
+    },
+    {
+      "name": "Dylan Ford",
+      "state": "TAS",
+      "races": {
+        "R1": {
+          "race_anchor": "GD031026_R1",
+          "horse": "NOT VICIOUS",
+          "fair_pct": 4.974229128793292,
+          "fair_odds": 20.10361754772225,
+          "points": 5,
+          "placing": 5,
+          "status": "complete"
+        },
+        "R2": {
+          "race_anchor": "GD031026_R2",
+          "horse": "MIDNIGHT CRIMES",
+          "fair_pct": 35.91399693931251,
+          "fair_odds": 2.784429707698089,
+          "points": 7,
+          "placing": 3,
+          "status": "complete"
+        },
+        "R3": {
+          "race_anchor": "GD031026_R3",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R4": {
+          "race_anchor": "GD031026_R4",
+          "horse": "KITTYKAT CUTIE",
+          "fair_pct": 10.182690029370438,
+          "fair_odds": 9.820587655282155,
+          "points": null
+        },
+        "R5": {
+          "race_anchor": "GD031026_R5",
+          "horse": "UPRIGHT",
+          "fair_pct": 3.645450120869418,
+          "fair_odds": 27.43145474067016,
+          "points": null
+        },
+        "R6": {
+          "race_anchor": "GD031026_R6",
+          "horse": "MALACHITE ROCK",
+          "fair_pct": 11.20102974164714,
+          "fair_odds": 32.53323830055866,
+          "points": null,
+          "original_horse": "ROAD STAR",
+          "placing": null,
+          "status": "upcoming"
+        },
+        "R7": {
+          "race_anchor": "GD031026_R7",
+          "horse": "ZENARIO",
+          "fair_pct": 15.646832162910863,
+          "fair_odds": 6.391070023556542,
+          "points": null
+        },
+        "R8": {
+          "race_anchor": "GD031026_R8",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R9": {
+          "race_anchor": "GD031026_R9",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R10": {
+          "race_anchor": "GD031026_R10",
+          "horse": "REGAL ATTIRE NZ",
+          "fair_pct": 38.26125513655072,
+          "fair_odds": 2.6136100251575565,
+          "points": null
+        }
+      },
+      "total": 27
     },
     {
       "name": "James Herbertson",
@@ -544,6 +716,91 @@
       "total": 26
     },
     {
+      "name": "Gary Hall Jnr",
+      "state": "WA",
+      "races": {
+        "R1": {
+          "race_anchor": "GD031026_R1",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R2": {
+          "race_anchor": "GD031026_R2",
+          "horse": "TAKE MY WALLET NZ",
+          "fair_pct": 14.0654337941288,
+          "fair_odds": 7.1096278624369225,
+          "points": 10,
+          "placing": 2,
+          "status": "complete"
+        },
+        "R3": {
+          "race_anchor": "GD031026_R3",
+          "horse": "SAMMY BARBARO",
+          "fair_pct": 8.230353682768405,
+          "fair_odds": 12.150146136412872,
+          "points": null
+        },
+        "R4": {
+          "race_anchor": "GD031026_R4",
+          "horse": "KETO NZ",
+          "fair_pct": 14.6327567,
+          "fair_odds": null,
+          "points": null,
+          "status": "upcoming",
+          "placing": null,
+          "original_horse": "LETSGO BIG GIRL"
+        },
+        "R5": {
+          "race_anchor": "GD031026_R5",
+          "horse": "LINCS POOR BOY",
+          "fair_pct": 12.2184516216542,
+          "fair_odds": 8.18434308180053,
+          "points": null
+        },
+        "R6": {
+          "race_anchor": "GD031026_R6",
+          "horse": "STAR OF WILLOUGHBY",
+          "fair_pct": 15.670007995264688,
+          "fair_odds": 6.38161767563992,
+          "points": null
+        },
+        "R7": {
+          "race_anchor": "GD031026_R7",
+          "horse": "MY ULTIMATE FLYNN NZ",
+          "fair_pct": 14.589007420308668,
+          "fair_odds": 6.8544759159416655,
+          "points": null
+        },
+        "R8": {
+          "race_anchor": "GD031026_R8",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R9": {
+          "race_anchor": "GD031026_R9",
+          "horse": "MISS OUT",
+          "fair_pct": 7.527648330791317,
+          "fair_odds": 13.284361278004582,
+          "points": null
+        },
+        "R10": {
+          "race_anchor": "GD031026_R10",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        }
+      },
+      "total": 25
+    },
+    {
       "name": "Ashleigh Delosa",
       "state": "NSW",
       "races": {
@@ -561,7 +818,9 @@
           "horse": "PERFECT GAMBLE",
           "fair_pct": 5.697389456028287,
           "fair_odds": 17.551898245992664,
-          "points": null
+          "points": 1,
+          "placing": 8,
+          "status": "complete"
         },
         "R3": {
           "race_anchor": "GD031026_R3",
@@ -612,6 +871,90 @@
           "horse": "VATICAN GREEN NZ",
           "fair_pct": 25.02983633683681,
           "fair_odds": 3.995231876639497,
+          "points": null
+        },
+        "R10": {
+          "race_anchor": "GD031026_R10",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        }
+      },
+      "total": 24
+    },
+    {
+      "name": "Jordan Chibnall",
+      "state": "TAS",
+      "races": {
+        "R1": {
+          "race_anchor": "GD031026_R1",
+          "horse": "WEREGOINGTOGETCHA",
+          "fair_pct": 9.341068240064152,
+          "fair_odds": 10.70541370965439,
+          "points": 4,
+          "placing": 6,
+          "status": "complete"
+        },
+        "R2": {
+          "race_anchor": "GD031026_R2",
+          "horse": "JAWSOFGOODTIME",
+          "fair_pct": 9.17493440870707,
+          "fair_odds": 10.899260479192025,
+          "points": 4,
+          "placing": 5,
+          "status": "complete"
+        },
+        "R3": {
+          "race_anchor": "GD031026_R3",
+          "horse": "MAJESTIC SUMMER",
+          "fair_pct": 13.852560738867052,
+          "fair_odds": 7.218881900977582,
+          "points": null
+        },
+        "R4": {
+          "race_anchor": "GD031026_R4",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R5": {
+          "race_anchor": "GD031026_R5",
+          "horse": "BALLADORO",
+          "fair_pct": 9.872857012466536,
+          "fair_odds": 10.12878033924012,
+          "points": null
+        },
+        "R6": {
+          "race_anchor": "GD031026_R6",
+          "horse": "ASHANTE PRINCE",
+          "fair_pct": 6.724389222381366,
+          "fair_odds": 14.871239110782188,
+          "points": null
+        },
+        "R7": {
+          "race_anchor": "GD031026_R7",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R8": {
+          "race_anchor": "GD031026_R8",
+          "horse": "NAROBI NZ",
+          "fair_pct": 12.656866627234804,
+          "fair_odds": 7.900849629308877,
+          "points": null
+        },
+        "R9": {
+          "race_anchor": "GD031026_R9",
+          "horse": "FE FE ON FIRE",
+          "fair_pct": 14.869782862812988,
+          "fair_odds": 6.72504776448918,
           "points": null
         },
         "R10": {
@@ -790,255 +1133,6 @@
       "total": 20
     },
     {
-      "name": "Dylan Ford",
-      "state": "TAS",
-      "races": {
-        "R1": {
-          "race_anchor": "GD031026_R1",
-          "horse": "NOT VICIOUS",
-          "fair_pct": 4.974229128793292,
-          "fair_odds": 20.10361754772225,
-          "points": 5,
-          "placing": 5,
-          "status": "complete"
-        },
-        "R2": {
-          "race_anchor": "GD031026_R2",
-          "horse": "MIDNIGHT CRIMES",
-          "fair_pct": 35.91399693931251,
-          "fair_odds": 2.784429707698089,
-          "points": null
-        },
-        "R3": {
-          "race_anchor": "GD031026_R3",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R4": {
-          "race_anchor": "GD031026_R4",
-          "horse": "KITTYKAT CUTIE",
-          "fair_pct": 10.182690029370438,
-          "fair_odds": 9.820587655282155,
-          "points": null
-        },
-        "R5": {
-          "race_anchor": "GD031026_R5",
-          "horse": "UPRIGHT",
-          "fair_pct": 3.645450120869418,
-          "fair_odds": 27.43145474067016,
-          "points": null
-        },
-        "R6": {
-          "race_anchor": "GD031026_R6",
-          "horse": "MALACHITE ROCK",
-          "fair_pct": 11.20102974164714,
-          "fair_odds": 32.53323830055866,
-          "points": null,
-          "original_horse": "ROAD STAR",
-          "placing": null,
-          "status": "upcoming"
-        },
-        "R7": {
-          "race_anchor": "GD031026_R7",
-          "horse": "ZENARIO",
-          "fair_pct": 15.646832162910863,
-          "fair_odds": 6.391070023556542,
-          "points": null
-        },
-        "R8": {
-          "race_anchor": "GD031026_R8",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R9": {
-          "race_anchor": "GD031026_R9",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R10": {
-          "race_anchor": "GD031026_R10",
-          "horse": "REGAL ATTIRE NZ",
-          "fair_pct": 38.26125513655072,
-          "fair_odds": 2.6136100251575565,
-          "points": null
-        }
-      },
-      "total": 20
-    },
-    {
-      "name": "Jordan Chibnall",
-      "state": "TAS",
-      "races": {
-        "R1": {
-          "race_anchor": "GD031026_R1",
-          "horse": "WEREGOINGTOGETCHA",
-          "fair_pct": 9.341068240064152,
-          "fair_odds": 10.70541370965439,
-          "points": 4,
-          "placing": 6,
-          "status": "complete"
-        },
-        "R2": {
-          "race_anchor": "GD031026_R2",
-          "horse": "JAWSOFGOODTIME",
-          "fair_pct": 9.17493440870707,
-          "fair_odds": 10.899260479192025,
-          "points": null
-        },
-        "R3": {
-          "race_anchor": "GD031026_R3",
-          "horse": "MAJESTIC SUMMER",
-          "fair_pct": 13.852560738867052,
-          "fair_odds": 7.218881900977582,
-          "points": null
-        },
-        "R4": {
-          "race_anchor": "GD031026_R4",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R5": {
-          "race_anchor": "GD031026_R5",
-          "horse": "BALLADORO",
-          "fair_pct": 9.872857012466536,
-          "fair_odds": 10.12878033924012,
-          "points": null
-        },
-        "R6": {
-          "race_anchor": "GD031026_R6",
-          "horse": "ASHANTE PRINCE",
-          "fair_pct": 6.724389222381366,
-          "fair_odds": 14.871239110782188,
-          "points": null
-        },
-        "R7": {
-          "race_anchor": "GD031026_R7",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R8": {
-          "race_anchor": "GD031026_R8",
-          "horse": "NAROBI NZ",
-          "fair_pct": 12.656866627234804,
-          "fair_odds": 7.900849629308877,
-          "points": null
-        },
-        "R9": {
-          "race_anchor": "GD031026_R9",
-          "horse": "FE FE ON FIRE",
-          "fair_pct": 14.869782862812988,
-          "fair_odds": 6.72504776448918,
-          "points": null
-        },
-        "R10": {
-          "race_anchor": "GD031026_R10",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        }
-      },
-      "total": 19
-    },
-    {
-      "name": "Angus Garrard",
-      "state": "QLD",
-      "races": {
-        "R1": {
-          "race_anchor": "GD031026_R1",
-          "horse": "FEARFULL DRAGON NZ",
-          "fair_pct": 2.9132875436306427,
-          "fair_odds": 34.325482295296,
-          "points": 3,
-          "placing": 7,
-          "status": "complete"
-        },
-        "R2": {
-          "race_anchor": "GD031026_R2",
-          "horse": "KEILAH NZ",
-          "fair_pct": 9.61083081200924,
-          "fair_odds": 10.404927727480615,
-          "points": null
-        },
-        "R3": {
-          "race_anchor": "GD031026_R3",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R4": {
-          "race_anchor": "GD031026_R4",
-          "horse": "PER ARDUA AD ASTRA",
-          "fair_pct": 6.87147270707001,
-          "fair_odds": 14.55292107863729,
-          "points": null
-        },
-        "R5": {
-          "race_anchor": "GD031026_R5",
-          "horse": "MIKISPUR",
-          "fair_pct": 10.514179490804242,
-          "fair_odds": 9.510965652380248,
-          "points": null
-        },
-        "R6": {
-          "race_anchor": "GD031026_R6",
-          "horse": "HEATHBERN BRUCE",
-          "fair_pct": 4.119474670133269,
-          "fair_odds": 24.27493989100433,
-          "points": null
-        },
-        "R7": {
-          "race_anchor": "GD031026_R7",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R8": {
-          "race_anchor": "GD031026_R8",
-          "horse": "HEEZ A VIBE",
-          "fair_pct": 11.265498058798135,
-          "fair_odds": 8.876660355189706,
-          "points": null
-        },
-        "R9": {
-          "race_anchor": "GD031026_R9",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R10": {
-          "race_anchor": "GD031026_R10",
-          "horse": "KYVALLEY HEIST NZ",
-          "fair_pct": 6.844987299928963,
-          "fair_odds": 14.609230904057016,
-          "points": null
-        }
-      },
-      "total": 18
-    },
-    {
       "name": "Jett Turnbull",
       "state": "NSW",
       "races": {
@@ -1056,7 +1150,9 @@
           "horse": "MANDS PEARL",
           "fair_pct": 7.246075704054196,
           "fair_odds": 13.800573453027791,
-          "points": null
+          "points": 3,
+          "placing": 6,
+          "status": "complete"
         },
         "R3": {
           "race_anchor": "GD031026_R3",
@@ -1118,7 +1214,89 @@
           "points": null
         }
       },
-      "total": 17
+      "total": 20
+    },
+    {
+      "name": "Adam Sanderson",
+      "state": "QLD",
+      "races": {
+        "R1": {
+          "race_anchor": "GD031026_R1",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R2": {
+          "race_anchor": "GD031026_R2",
+          "horse": "JACKIE DANIELS",
+          "fair_pct": 12.393290368221864,
+          "fair_odds": 8.068882195838325,
+          "points": 5,
+          "placing": 4,
+          "status": "complete"
+        },
+        "R3": {
+          "race_anchor": "GD031026_R3",
+          "horse": "THE CLIPPER",
+          "fair_pct": 3.1070694509435963,
+          "fair_odds": 32.18466840824259,
+          "points": null
+        },
+        "R4": {
+          "race_anchor": "GD031026_R4",
+          "horse": "MISTER QUIRK",
+          "fair_pct": 10.182690029370438,
+          "fair_odds": 9.820587655282155,
+          "points": null
+        },
+        "R5": {
+          "race_anchor": "GD031026_R5",
+          "horse": "ROCKNROLL SPIRIT",
+          "fair_pct": 5.739911324371703,
+          "fair_odds": 17.421871933003445,
+          "points": null
+        },
+        "R6": {
+          "race_anchor": "GD031026_R6",
+          "horse": "SANTA CASA LANE",
+          "fair_pct": 4.187241587850967,
+          "fair_odds": 23.882070786205425,
+          "points": null
+        },
+        "R7": {
+          "race_anchor": "GD031026_R7",
+          "horse": "LORD ZARIAS NZ",
+          "fair_pct": 7.515804614479206,
+          "fair_odds": 13.305295324914365,
+          "points": null
+        },
+        "R8": {
+          "race_anchor": "GD031026_R8",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R9": {
+          "race_anchor": "GD031026_R9",
+          "horse": "BONNY MY BOY",
+          "fair_pct": 3.331201403298244,
+          "fair_odds": 30.01919965000896,
+          "points": null
+        },
+        "R10": {
+          "race_anchor": "GD031026_R10",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        }
+      },
+      "total": 20
     },
     {
       "name": "Danielle Hill",
@@ -1201,170 +1379,7 @@
         }
       },
       "total": 16
-    },
-    {
-      "name": "Gary Hall Jnr",
-      "state": "WA",
-      "races": {
-        "R1": {
-          "race_anchor": "GD031026_R1",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R2": {
-          "race_anchor": "GD031026_R2",
-          "horse": "TAKE MY WALLET NZ",
-          "fair_pct": 14.0654337941288,
-          "fair_odds": 7.1096278624369225,
-          "points": null
-        },
-        "R3": {
-          "race_anchor": "GD031026_R3",
-          "horse": "SAMMY BARBARO",
-          "fair_pct": 8.230353682768405,
-          "fair_odds": 12.150146136412872,
-          "points": null
-        },
-        "R4": {
-          "race_anchor": "GD031026_R4",
-          "horse": "KETO NZ",
-          "fair_pct": 14.6327567,
-          "fair_odds": null,
-          "points": null,
-          "status": "upcoming",
-          "placing": null,
-          "original_horse": "LETSGO BIG GIRL"
-        },
-        "R5": {
-          "race_anchor": "GD031026_R5",
-          "horse": "LINCS POOR BOY",
-          "fair_pct": 12.2184516216542,
-          "fair_odds": 8.18434308180053,
-          "points": null
-        },
-        "R6": {
-          "race_anchor": "GD031026_R6",
-          "horse": "STAR OF WILLOUGHBY",
-          "fair_pct": 15.670007995264688,
-          "fair_odds": 6.38161767563992,
-          "points": null
-        },
-        "R7": {
-          "race_anchor": "GD031026_R7",
-          "horse": "MY ULTIMATE FLYNN NZ",
-          "fair_pct": 14.589007420308668,
-          "fair_odds": 6.8544759159416655,
-          "points": null
-        },
-        "R8": {
-          "race_anchor": "GD031026_R8",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R9": {
-          "race_anchor": "GD031026_R9",
-          "horse": "MISS OUT",
-          "fair_pct": 7.527648330791317,
-          "fair_odds": 13.284361278004582,
-          "points": null
-        },
-        "R10": {
-          "race_anchor": "GD031026_R10",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        }
-      },
-      "total": 15
-    },
-    {
-      "name": "Adam Sanderson",
-      "state": "QLD",
-      "races": {
-        "R1": {
-          "race_anchor": "GD031026_R1",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R2": {
-          "race_anchor": "GD031026_R2",
-          "horse": "JACKIE DANIELS",
-          "fair_pct": 12.393290368221864,
-          "fair_odds": 8.068882195838325,
-          "points": null
-        },
-        "R3": {
-          "race_anchor": "GD031026_R3",
-          "horse": "THE CLIPPER",
-          "fair_pct": 3.1070694509435963,
-          "fair_odds": 32.18466840824259,
-          "points": null
-        },
-        "R4": {
-          "race_anchor": "GD031026_R4",
-          "horse": "MISTER QUIRK",
-          "fair_pct": 10.182690029370438,
-          "fair_odds": 9.820587655282155,
-          "points": null
-        },
-        "R5": {
-          "race_anchor": "GD031026_R5",
-          "horse": "ROCKNROLL SPIRIT",
-          "fair_pct": 5.739911324371703,
-          "fair_odds": 17.421871933003445,
-          "points": null
-        },
-        "R6": {
-          "race_anchor": "GD031026_R6",
-          "horse": "SANTA CASA LANE",
-          "fair_pct": 4.187241587850967,
-          "fair_odds": 23.882070786205425,
-          "points": null
-        },
-        "R7": {
-          "race_anchor": "GD031026_R7",
-          "horse": "LORD ZARIAS NZ",
-          "fair_pct": 7.515804614479206,
-          "fair_odds": 13.305295324914365,
-          "points": null
-        },
-        "R8": {
-          "race_anchor": "GD031026_R8",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R9": {
-          "race_anchor": "GD031026_R9",
-          "horse": "BONNY MY BOY",
-          "fair_pct": 3.331201403298244,
-          "fair_odds": 30.01919965000896,
-          "points": null
-        },
-        "R10": {
-          "race_anchor": "GD031026_R10",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        }
-      },
-      "total": 15
     }
   ],
-  "last_updated": "2026-10-03 18:26:02"
+  "last_updated": "2026-10-03 18:31:02"
 }
