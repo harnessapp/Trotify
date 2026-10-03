@@ -364,15 +364,18 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     /*
        =====================================================
-       DIRECT LINK - AUSTRALIAN DRIVERS CHAMPIONSHIP
+       DIRECT LINK - CHAMPIONSHIPS
        =====================================================
     */
 
-    if (window.location.search.includes("adc")) {
+    if (window.location.search.includes("horsham")) {
+        await showHorshamView();
+
+    } else if (window.location.search.includes("adc")) {
         await showAdcView();
     }
 
-});
+    });
 
 
 function closeMobileStatsPopup() {
@@ -1050,7 +1053,7 @@ function setupNavigation() {
             } else if (view === "adc") {
                 showAdcView();
             } else if (view === "horsham") {
-                showAdcView();
+                showHorshamView();
             } else if (view === "watchlist") {
                 showWatchlistView();
             } else if (view === "good-leaders") {
