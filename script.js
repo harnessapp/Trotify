@@ -8086,7 +8086,7 @@ async function showHorshamView() {
 
     document.querySelector(".panel-heading").innerHTML = `
         <span>🏆</span>
-        <span>Horsham Drivers Championship</span>
+        <span>NOEL SMITH MEMORIAL DRIVERS CHAMPIONSHIP</span>
     `;
 
     const meetingStrip =
