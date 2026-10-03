@@ -8153,11 +8153,11 @@ function renderHorsham() {
         <tr>
             <th class="driver-col">Driver</th>
             <th>Total</th>
-            <th>R1</th>
-            <th>R2</th>
-            <th>R3</th>
             <th>R4</th>
             <th>R5</th>
+            <th>R6</th>
+            <th>R7</th>
+            <th>R8</th>
         </tr>
     `;
 
