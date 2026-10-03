@@ -229,7 +229,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-03 21:36:05",
+    "generated": "2026-10-03 21:41:05",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -241,8 +241,8 @@
       {
         "driver": "Ashleigh Delosa",
         "current_points": 63,
-        "simulation_wins": 99961,
-        "probability": 99.96,
+        "simulation_wins": 99954,
+        "probability": 99.95,
         "eliminated": false,
         "fair_odds": 1.0,
         "market_percent": 125,
@@ -252,12 +252,12 @@
       {
         "driver": "Emily Suvaljko",
         "current_points": 37,
-        "simulation_wins": 39,
-        "probability": 0.04,
+        "simulation_wins": 46,
+        "probability": 0.05,
         "eliminated": false,
-        "fair_odds": 2564.1,
+        "fair_odds": 2173.91,
         "market_percent": 125,
-        "market_odds": 2051.28,
+        "market_odds": 1739.13,
         "trotify_odds": 1001.0
       },
       {
@@ -1488,5 +1488,5 @@
       "total": 11
     }
   ],
-  "last_updated": "2026-10-03 21:36:01"
+  "last_updated": "2026-10-03 21:41:01"
 }
