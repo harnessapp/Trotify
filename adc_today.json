@@ -229,11 +229,10 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-03 21:41:05",
+    "generated": "2026-10-03 21:46:04",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
-      "R8",
       "R9",
       "R10"
     ],
@@ -241,24 +240,13 @@
       {
         "driver": "Ashleigh Delosa",
         "current_points": 63,
-        "simulation_wins": 99954,
-        "probability": 99.95,
+        "simulation_wins": 100000,
+        "probability": 100.0,
         "eliminated": false,
         "fair_odds": 1.0,
         "market_percent": 125,
         "market_odds": 0.8,
         "trotify_odds": 1.01
-      },
-      {
-        "driver": "Emily Suvaljko",
-        "current_points": 37,
-        "simulation_wins": 46,
-        "probability": 0.05,
-        "eliminated": false,
-        "fair_odds": 2173.91,
-        "market_percent": 125,
-        "market_odds": 1739.13,
-        "trotify_odds": 1001.0
       },
       {
         "driver": "Adam Sanderson",
@@ -294,19 +282,8 @@
         "trotify_odds": null
       },
       {
-        "driver": "Danielle Hill",
-        "current_points": 31,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "fair_odds": null,
-        "market_percent": 125,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "driver": "James Herbertson",
-        "current_points": 30,
+        "driver": "Emily Suvaljko",
+        "current_points": 40,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -317,7 +294,7 @@
       },
       {
         "driver": "Jett Turnbull",
-        "current_points": 30,
+        "current_points": 40,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -328,7 +305,29 @@
       },
       {
         "driver": "Angus Garrard",
-        "current_points": 25,
+        "current_points": 40,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "fair_odds": null,
+        "market_percent": 125,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "driver": "James Herbertson",
+        "current_points": 35,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "fair_odds": null,
+        "market_percent": 125,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "driver": "Danielle Hill",
+        "current_points": 33,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -339,7 +338,7 @@
       },
       {
         "driver": "Wayne Hill",
-        "current_points": 21,
+        "current_points": 25,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -350,7 +349,7 @@
       },
       {
         "driver": "Jordan Chibnall",
-        "current_points": 16,
+        "current_points": 23,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -361,7 +360,7 @@
       },
       {
         "driver": "Mark Pitt",
-        "current_points": 11,
+        "current_points": 12,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -821,8 +820,9 @@
           "horse": "ALAKAZAM",
           "fair_pct": 9.04664011673905,
           "fair_odds": 11.053827576822629,
-          "points": null,
-          "status": "upcoming"
+          "points": 3,
+          "status": "complete",
+          "placing": 6
         },
         "R9": {
           "race_anchor": "GD031026_R9",
@@ -841,191 +841,7 @@
           "status": "upcoming"
         }
       },
-      "total": 37
-    },
-    {
-      "name": "Danielle Hill",
-      "state": "SA",
-      "races": {
-        "R1": {
-          "race_anchor": "GD031026_R1",
-          "horse": "YOUVE BEEN SERVED",
-          "fair_pct": 6.258762659640642,
-          "fair_odds": 15.977598998096804,
-          "points": 1,
-          "status": "complete",
-          "placing": 9
-        },
-        "R2": {
-          "race_anchor": "GD031026_R2",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": null,
-          "status": "no_drive"
-        },
-        "R3": {
-          "race_anchor": "GD031026_R3",
-          "horse": "HAYOAK",
-          "fair_pct": 10.404520971621626,
-          "fair_odds": 9.611206539229476,
-          "points": 3,
-          "status": "complete",
-          "placing": 6
-        },
-        "R4": {
-          "race_anchor": "GD031026_R4",
-          "horse": "CLARENDEN TRIBUTE",
-          "fair_pct": 6.863737500257167,
-          "fair_odds": 14.569321742892011,
-          "points": 17,
-          "status": "complete",
-          "placing": 1
-        },
-        "R5": {
-          "race_anchor": "GD031026_R5",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": null,
-          "status": "no_drive"
-        },
-        "R6": {
-          "race_anchor": "GD031026_R6",
-          "horse": "ALOHA PRINCESS",
-          "fair_pct": 21.283794701304217,
-          "fair_odds": 4.698410288362359,
-          "points": 7,
-          "status": "complete",
-          "placing": 4
-        },
-        "R7": {
-          "race_anchor": "GD031026_R7",
-          "horse": "ARTILLERY",
-          "fair_pct": 10.860630778010783,
-          "fair_odds": 9.207568330420294,
-          "points": 3,
-          "status": "complete",
-          "placing": 6
-        },
-        "R8": {
-          "race_anchor": "GD031026_R8",
-          "horse": "IM ALL BUSINESS",
-          "fair_pct": 18.324726304355583,
-          "fair_odds": 5.4571074262774175,
-          "points": null,
-          "status": "upcoming"
-        },
-        "R9": {
-          "race_anchor": "GD031026_R9",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": null,
-          "status": "no_drive"
-        },
-        "R10": {
-          "race_anchor": "GD031026_R10",
-          "horse": "BITTA IRISH LUCK",
-          "fair_pct": 20.09353180628819,
-          "fair_odds": 4.976725891896486,
-          "points": null,
-          "status": "upcoming"
-        }
-      },
-      "total": 31
-    },
-    {
-      "name": "James Herbertson",
-      "state": "VIC",
-      "races": {
-        "R1": {
-          "race_anchor": "GD031026_R1",
-          "horse": "BAY LA VILLE",
-          "fair_pct": 13.41335062537603,
-          "fair_odds": 7.455258778579539,
-          "points": 11,
-          "status": "complete",
-          "placing": 2
-        },
-        "R2": {
-          "race_anchor": "GD031026_R2",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": null,
-          "status": "no_drive"
-        },
-        "R3": {
-          "race_anchor": "GD031026_R3",
-          "horse": "CYCLONE S ADAMS NZ",
-          "fair_pct": 4.538479773753816,
-          "fair_odds": 22.03380977443227,
-          "points": 4,
-          "status": "complete",
-          "placing": 5
-        },
-        "R4": {
-          "race_anchor": "GD031026_R4",
-          "horse": "WATCHMEDAZZLE",
-          "fair_pct": 6.099423606716481,
-          "fair_odds": 16.394991797238568,
-          "points": 2,
-          "status": "complete",
-          "placing": 9
-        },
-        "R5": {
-          "race_anchor": "GD031026_R5",
-          "horse": "SEASIDE LADY",
-          "fair_pct": 6.040906844606324,
-          "fair_odds": 16.55380600501825,
-          "points": 6,
-          "status": "complete",
-          "placing": 5
-        },
-        "R6": {
-          "race_anchor": "GD031026_R6",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": null,
-          "status": "no_drive"
-        },
-        "R7": {
-          "race_anchor": "GD031026_R7",
-          "horse": "DON ARTHUR",
-          "fair_pct": 6.246161788007835,
-          "fair_odds": 16.009831860582374,
-          "points": 7,
-          "status": "complete",
-          "placing": 3
-        },
-        "R8": {
-          "race_anchor": "GD031026_R8",
-          "horse": "DUKE OF DUNDEE NZ",
-          "fair_pct": 8.458988263853223,
-          "fair_odds": 11.8217447383534,
-          "points": null,
-          "status": "upcoming"
-        },
-        "R9": {
-          "race_anchor": "GD031026_R9",
-          "horse": "ALWAYSBEALADY",
-          "fair_pct": 26.595524811780408,
-          "fair_odds": 3.760031084466711,
-          "points": null,
-          "status": "upcoming"
-        },
-        "R10": {
-          "race_anchor": "GD031026_R10",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": null,
-          "status": "no_drive"
-        }
-      },
-      "total": 30
+      "total": 40
     },
     {
       "name": "Jett Turnbull",
@@ -1097,8 +913,9 @@
           "horse": "CEE CEE LOU",
           "fair_pct": 17.245960292634592,
           "fair_odds": 5.798459366899274,
-          "points": null,
-          "status": "upcoming"
+          "points": 10,
+          "status": "complete",
+          "placing": 2
         },
         "R9": {
           "race_anchor": "GD031026_R9",
@@ -1117,7 +934,7 @@
           "status": "upcoming"
         }
       },
-      "total": 30
+      "total": 40
     },
     {
       "name": "Angus Garrard",
@@ -1189,8 +1006,9 @@
           "horse": "HEEZ A VIBE",
           "fair_pct": 11.265498058798135,
           "fair_odds": 8.876660355189706,
-          "points": null,
-          "status": "upcoming"
+          "points": 15,
+          "status": "complete",
+          "placing": 1
         },
         "R9": {
           "race_anchor": "GD031026_R9",
@@ -1209,7 +1027,193 @@
           "status": "upcoming"
         }
       },
-      "total": 25
+      "total": 40
+    },
+    {
+      "name": "James Herbertson",
+      "state": "VIC",
+      "races": {
+        "R1": {
+          "race_anchor": "GD031026_R1",
+          "horse": "BAY LA VILLE",
+          "fair_pct": 13.41335062537603,
+          "fair_odds": 7.455258778579539,
+          "points": 11,
+          "status": "complete",
+          "placing": 2
+        },
+        "R2": {
+          "race_anchor": "GD031026_R2",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": null,
+          "status": "no_drive"
+        },
+        "R3": {
+          "race_anchor": "GD031026_R3",
+          "horse": "CYCLONE S ADAMS NZ",
+          "fair_pct": 4.538479773753816,
+          "fair_odds": 22.03380977443227,
+          "points": 4,
+          "status": "complete",
+          "placing": 5
+        },
+        "R4": {
+          "race_anchor": "GD031026_R4",
+          "horse": "WATCHMEDAZZLE",
+          "fair_pct": 6.099423606716481,
+          "fair_odds": 16.394991797238568,
+          "points": 2,
+          "status": "complete",
+          "placing": 9
+        },
+        "R5": {
+          "race_anchor": "GD031026_R5",
+          "horse": "SEASIDE LADY",
+          "fair_pct": 6.040906844606324,
+          "fair_odds": 16.55380600501825,
+          "points": 6,
+          "status": "complete",
+          "placing": 5
+        },
+        "R6": {
+          "race_anchor": "GD031026_R6",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": null,
+          "status": "no_drive"
+        },
+        "R7": {
+          "race_anchor": "GD031026_R7",
+          "horse": "DON ARTHUR",
+          "fair_pct": 6.246161788007835,
+          "fair_odds": 16.009831860582374,
+          "points": 7,
+          "status": "complete",
+          "placing": 3
+        },
+        "R8": {
+          "race_anchor": "GD031026_R8",
+          "horse": "DUKE OF DUNDEE NZ",
+          "fair_pct": 8.458988263853223,
+          "fair_odds": 11.8217447383534,
+          "points": 5,
+          "status": "complete",
+          "placing": 4
+        },
+        "R9": {
+          "race_anchor": "GD031026_R9",
+          "horse": "ALWAYSBEALADY",
+          "fair_pct": 26.595524811780408,
+          "fair_odds": 3.760031084466711,
+          "points": null,
+          "status": "upcoming"
+        },
+        "R10": {
+          "race_anchor": "GD031026_R10",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": null,
+          "status": "no_drive"
+        }
+      },
+      "total": 35
+    },
+    {
+      "name": "Danielle Hill",
+      "state": "SA",
+      "races": {
+        "R1": {
+          "race_anchor": "GD031026_R1",
+          "horse": "YOUVE BEEN SERVED",
+          "fair_pct": 6.258762659640642,
+          "fair_odds": 15.977598998096804,
+          "points": 1,
+          "status": "complete",
+          "placing": 9
+        },
+        "R2": {
+          "race_anchor": "GD031026_R2",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": null,
+          "status": "no_drive"
+        },
+        "R3": {
+          "race_anchor": "GD031026_R3",
+          "horse": "HAYOAK",
+          "fair_pct": 10.404520971621626,
+          "fair_odds": 9.611206539229476,
+          "points": 3,
+          "status": "complete",
+          "placing": 6
+        },
+        "R4": {
+          "race_anchor": "GD031026_R4",
+          "horse": "CLARENDEN TRIBUTE",
+          "fair_pct": 6.863737500257167,
+          "fair_odds": 14.569321742892011,
+          "points": 17,
+          "status": "complete",
+          "placing": 1
+        },
+        "R5": {
+          "race_anchor": "GD031026_R5",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": null,
+          "status": "no_drive"
+        },
+        "R6": {
+          "race_anchor": "GD031026_R6",
+          "horse": "ALOHA PRINCESS",
+          "fair_pct": 21.283794701304217,
+          "fair_odds": 4.698410288362359,
+          "points": 7,
+          "status": "complete",
+          "placing": 4
+        },
+        "R7": {
+          "race_anchor": "GD031026_R7",
+          "horse": "ARTILLERY",
+          "fair_pct": 10.860630778010783,
+          "fair_odds": 9.207568330420294,
+          "points": 3,
+          "status": "complete",
+          "placing": 6
+        },
+        "R8": {
+          "race_anchor": "GD031026_R8",
+          "horse": "IM ALL BUSINESS",
+          "fair_pct": 18.324726304355583,
+          "fair_odds": 5.4571074262774175,
+          "points": 2,
+          "status": "complete",
+          "placing": 7
+        },
+        "R9": {
+          "race_anchor": "GD031026_R9",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": null,
+          "status": "no_drive"
+        },
+        "R10": {
+          "race_anchor": "GD031026_R10",
+          "horse": "BITTA IRISH LUCK",
+          "fair_pct": 20.09353180628819,
+          "fair_odds": 4.976725891896486,
+          "points": null,
+          "status": "upcoming"
+        }
+      },
+      "total": 33
     },
     {
       "name": "Wayne Hill",
@@ -1281,8 +1285,9 @@
           "horse": "CHASE THE STARS NZ",
           "fair_pct": 13.954680219645551,
           "fair_odds": 7.166054572803389,
-          "points": null,
-          "status": "upcoming"
+          "points": 4,
+          "status": "complete",
+          "placing": 5
         },
         "R9": {
           "race_anchor": "GD031026_R9",
@@ -1301,7 +1306,7 @@
           "status": "no_drive"
         }
       },
-      "total": 21
+      "total": 25
     },
     {
       "name": "Jordan Chibnall",
@@ -1373,8 +1378,9 @@
           "horse": "NAROBI NZ",
           "fair_pct": 12.656866627234804,
           "fair_odds": 7.900849629308877,
-          "points": null,
-          "status": "upcoming"
+          "points": 7,
+          "status": "complete",
+          "placing": 3
         },
         "R9": {
           "race_anchor": "GD031026_R9",
@@ -1393,7 +1399,7 @@
           "status": "no_drive"
         }
       },
-      "total": 16
+      "total": 23
     },
     {
       "name": "Mark Pitt",
@@ -1465,8 +1471,9 @@
           "horse": "HARRO HILL",
           "fair_pct": 9.04664011673905,
           "fair_odds": 11.053827576822629,
-          "points": null,
-          "status": "upcoming"
+          "points": 1,
+          "status": "complete",
+          "placing": 8
         },
         "R9": {
           "race_anchor": "GD031026_R9",
@@ -1485,8 +1492,8 @@
           "status": "upcoming"
         }
       },
-      "total": 11
+      "total": 12
     }
   ],
-  "last_updated": "2026-10-03 21:41:01"
+  "last_updated": "2026-10-03 21:46:01"
 }
