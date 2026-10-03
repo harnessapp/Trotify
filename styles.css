@@ -12266,10 +12266,8 @@ body.legal-modal-open {
 
 /* Total column emphasis */
 
-.adc-table td:last-child {
-
+.adc-table td:nth-child(2) {
     color: #7ee7cf;
-
 }
 
 
