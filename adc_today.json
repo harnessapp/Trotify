@@ -229,7 +229,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-03 22:11:03",
+    "generated": "2026-10-03 22:13:52",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -246,7 +246,7 @@
         "fair_odds": 1.0,
         "market_percent": 125,
         "market_odds": 0.8,
-        "trotify_odds": 1.01
+        "trotify_odds": 1.0
       },
       {
         "driver": "Adam Sanderson",
@@ -1495,5 +1495,5 @@
       "total": 12
     }
   ],
-  "last_updated": "2026-10-03 22:11:01"
+  "last_updated": "2026-10-03 22:13:50"
 }
