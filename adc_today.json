@@ -229,7 +229,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-03 20:16:10",
+    "generated": "2026-10-03 20:21:10",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -243,134 +243,134 @@
       {
         "driver": "Gary Hall Jnr",
         "current_points": 36,
-        "simulation_wins": 32923,
-        "probability": 32.92,
+        "simulation_wins": 33047,
+        "probability": 33.05,
         "eliminated": false,
-        "fair_odds": 3.04,
+        "fair_odds": 3.03,
         "market_percent": 125,
-        "market_odds": 2.43,
+        "market_odds": 2.42,
         "trotify_odds": 2.4
-      },
-      {
-        "driver": "Dylan Ford",
-        "current_points": 29,
-        "simulation_wins": 16834,
-        "probability": 16.83,
-        "eliminated": false,
-        "fair_odds": 5.94,
-        "market_percent": 125,
-        "market_odds": 4.75,
-        "trotify_odds": 5.0
       },
       {
         "driver": "Danielle Hill",
         "current_points": 21,
-        "simulation_wins": 16691,
-        "probability": 16.69,
+        "simulation_wins": 16587,
+        "probability": 16.59,
         "eliminated": false,
-        "fair_odds": 5.99,
+        "fair_odds": 6.03,
         "market_percent": 125,
-        "market_odds": 4.79,
+        "market_odds": 4.82,
+        "trotify_odds": 5.0
+      },
+      {
+        "driver": "Dylan Ford",
+        "current_points": 29,
+        "simulation_wins": 16572,
+        "probability": 16.57,
+        "eliminated": false,
+        "fair_odds": 6.03,
+        "market_percent": 125,
+        "market_odds": 4.83,
         "trotify_odds": 5.0
       },
       {
         "driver": "Emily Suvaljko",
         "current_points": 31,
-        "simulation_wins": 14433,
-        "probability": 14.43,
+        "simulation_wins": 14398,
+        "probability": 14.4,
         "eliminated": false,
-        "fair_odds": 6.93,
+        "fair_odds": 6.95,
         "market_percent": 125,
-        "market_odds": 5.54,
+        "market_odds": 5.56,
         "trotify_odds": 5.5
       },
       {
         "driver": "Ashleigh Delosa",
         "current_points": 31,
-        "simulation_wins": 11948,
-        "probability": 11.95,
+        "simulation_wins": 12075,
+        "probability": 12.07,
         "eliminated": false,
-        "fair_odds": 8.37,
+        "fair_odds": 8.28,
         "market_percent": 125,
-        "market_odds": 6.7,
+        "market_odds": 6.63,
         "trotify_odds": 6.5
       },
       {
         "driver": "Adam Sanderson",
         "current_points": 31,
-        "simulation_wins": 2298,
-        "probability": 2.3,
+        "simulation_wins": 2285,
+        "probability": 2.28,
         "eliminated": false,
-        "fair_odds": 43.52,
+        "fair_odds": 43.76,
         "market_percent": 125,
-        "market_odds": 34.81,
+        "market_odds": 35.01,
         "trotify_odds": 31.0
       },
       {
         "driver": "Wayne Hill",
         "current_points": 19,
-        "simulation_wins": 1610,
-        "probability": 1.61,
+        "simulation_wins": 1636,
+        "probability": 1.64,
         "eliminated": false,
-        "fair_odds": 62.11,
+        "fair_odds": 61.12,
         "market_percent": 125,
-        "market_odds": 49.69,
+        "market_odds": 48.9,
         "trotify_odds": 51.0
       },
       {
         "driver": "Jett Turnbull",
         "current_points": 21,
-        "simulation_wins": 1100,
-        "probability": 1.1,
+        "simulation_wins": 1107,
+        "probability": 1.11,
         "eliminated": false,
-        "fair_odds": 90.91,
+        "fair_odds": 90.33,
         "market_percent": 125,
-        "market_odds": 72.73,
+        "market_odds": 72.27,
         "trotify_odds": 67.0
       },
       {
         "driver": "James Herbertson",
         "current_points": 23,
-        "simulation_wins": 992,
-        "probability": 0.99,
+        "simulation_wins": 1040,
+        "probability": 1.04,
         "eliminated": false,
-        "fair_odds": 100.81,
+        "fair_odds": 96.15,
         "market_percent": 125,
-        "market_odds": 80.65,
+        "market_odds": 76.92,
         "trotify_odds": 81.0
       },
       {
         "driver": "Angus Garrard",
         "current_points": 24,
-        "simulation_wins": 860,
-        "probability": 0.86,
+        "simulation_wins": 910,
+        "probability": 0.91,
         "eliminated": false,
-        "fair_odds": 116.28,
+        "fair_odds": 109.89,
         "market_percent": 125,
-        "market_odds": 93.02,
-        "trotify_odds": 101.0
+        "market_odds": 87.91,
+        "trotify_odds": 81.0
       },
       {
         "driver": "Mark Pitt",
         "current_points": 8,
-        "simulation_wins": 189,
-        "probability": 0.19,
+        "simulation_wins": 220,
+        "probability": 0.22,
         "eliminated": false,
-        "fair_odds": 529.1,
+        "fair_odds": 454.55,
         "market_percent": 125,
-        "market_odds": 423.28,
-        "trotify_odds": 101.0
+        "market_odds": 363.64,
+        "trotify_odds": 501.0
       },
       {
         "driver": "Jordan Chibnall",
         "current_points": 13,
-        "simulation_wins": 122,
+        "simulation_wins": 123,
         "probability": 0.12,
         "eliminated": false,
-        "fair_odds": 819.67,
+        "fair_odds": 813.01,
         "market_percent": 125,
-        "market_odds": 655.74,
-        "trotify_odds": 101.0
+        "market_odds": 650.41,
+        "trotify_odds": 501.0
       }
     ]
   },
@@ -1472,5 +1472,5 @@
       "total": 8
     }
   ],
-  "last_updated": "2026-10-03 20:16:02"
+  "last_updated": "2026-10-03 20:21:02"
 }
