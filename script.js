@@ -50,6 +50,7 @@ let raceMediaRows = [];
 let selectedTippingTipster = null;
 
 let adcData = null;
+let horshamData = null;
 
 
 
@@ -1047,6 +1048,8 @@ function setupNavigation() {
             } else if (view === "who-am-i") {
                 showWhoAmIView();
             } else if (view === "adc") {
+                showAdcView();
+            } else if (view === "horsham") {
                 showAdcView();
             } else if (view === "watchlist") {
                 showWatchlistView();
@@ -3519,6 +3522,42 @@ async function loadAdcData() {
 
         adcData = null;
 
+
+        return null;
+    }
+}
+
+async function loadHorshamData() {
+
+    try {
+
+        const response = await fetch(
+            `horsham_today.json?v=${Date.now()}`,
+            {
+                cache: "no-store"
+            }
+        );
+
+        if (!response.ok) {
+
+            throw new Error(
+                `HTTP ${response.status}`
+            );
+
+        }
+
+        horshamData = await response.json();
+
+        return horshamData;
+
+    } catch (error) {
+
+        console.error(
+            "Could not load Horsham Championship data:",
+            error
+        );
+
+        horshamData = null;
 
         return null;
     }
@@ -8025,6 +8064,206 @@ async function showAdcView() {
 
     renderAdc();
 
+}
+
+async function showHorshamView() {
+
+    resetMobileViewScroll();
+    stopTimelineRefresh();
+    clearNextUpTimer();
+
+    document.querySelector(".hero").style.display =
+        "none";
+
+    document.querySelector(".dashboard-grid").style.display =
+        "none";
+
+    document.querySelector(".meetings-panel").style.display =
+        "";
+
+    document.querySelector(".panel-heading").innerHTML = `
+        <span>🏆</span>
+        <span>Horsham Drivers Championship</span>
+    `;
+
+    const meetingStrip =
+        document.getElementById("meetingStrip");
+
+    meetingStrip.innerHTML = `
+        <div class="who-am-i-layout">
+            <div class="coming-soon-card">
+                <div class="coming-soon-title">
+                    Loading championship...
+                </div>
+            </div>
+        </div>
+    `;
+
+    const horsham =
+        horshamData ||
+        await loadHorshamData();
+
+    if (
+        !horsham ||
+        !horsham.drivers
+    ) {
+
+        meetingStrip.innerHTML = `
+            <div class="who-am-i-layout">
+                <div class="coming-soon-card">
+
+                    <div class="coming-soon-title">
+                        Championship data unavailable
+                    </div>
+
+                    <p>
+                        Please check back shortly.
+                    </p>
+
+                </div>
+            </div>
+        `;
+
+        return;
+    }
+
+    renderHorsham();
+}
+
+
+function renderHorsham() {
+
+    const container =
+        document.getElementById(
+            "meetingStrip"
+        );
+
+    let html = `
+        <div class="adc-card">
+
+        <h2>Live Standings (UNOFFICIAL)</h2>
+
+        <div class="table-scroll">
+
+        <table class="adc-table">
+
+        <tr>
+            <th class="driver-col">Driver</th>
+            <th>Total</th>
+            <th>R1</th>
+            <th>R2</th>
+            <th>R3</th>
+            <th>R4</th>
+            <th>R5</th>
+        </tr>
+    `;
+
+
+    horshamData.drivers.forEach(d => {
+
+        html += `
+        <tr>
+
+            <td>${d.name}</td>
+
+            <td class="points-cell total-cell">
+                <strong>${d.total}</strong>
+            </td>
+        `;
+
+
+        for (let i = 1; i <= 5; i++) {
+
+            const race =
+                d.races[`R${i}`];
+
+            const points =
+                race?.points;
+
+            html += `
+                <td class="points-cell">
+                    ${points ?? "-"}
+                </td>
+            `;
+        }
+
+
+        html += `
+        </tr>
+        `;
+
+    });
+
+
+    html += `
+
+        </table>
+
+        </div>
+
+
+        <h2>Trotify Market (UNOFFICIAL)</h2>
+
+
+        <table class="adc-market-table">
+
+        <tr>
+            <th>Driver</th>
+            <th>Odds</th>
+        </tr>
+    `;
+
+
+    if (
+        horshamData.market &&
+        Array.isArray(horshamData.market.drivers)
+    ) {
+
+        horshamData.market.drivers.forEach(m => {
+
+            let odds = "";
+
+            if (m.eliminated) {
+
+                odds = "ELIM";
+
+            } else if (m.trotify_odds) {
+
+                odds =
+                    m.trotify_odds >= 10
+                        ? `$${Math.round(m.trotify_odds)}`
+                        : `$${m.trotify_odds.toFixed(2)}`;
+            }
+
+
+            html += `
+
+            <tr>
+
+                <td>
+                    ${m.driver}
+                </td>
+
+                <td class="odds-cell">
+                    ${odds}
+                </td>
+
+            </tr>
+            `;
+        });
+
+    }
+
+
+    html += `
+
+        </table>
+
+        </div>
+    `;
+
+
+    container.innerHTML = html;
 }
 
 function renderDashboard(rows) {
