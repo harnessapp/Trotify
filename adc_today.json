@@ -84,152 +84,59 @@
   "no_drive_points": 5,
   "races": {
     "GD031026_R1": {
-      "starters": 9,
-      "scratched": 2,
-      "points_table": {
-        "1": 16,
-        "2": 11,
-        "3": 8,
-        "4": 6,
-        "5": 5,
-        "6": 4,
-        "7": 3,
-        "8": 2,
-        "9": 1
-      }
+      "starters": 0,
+      "scratched": 0,
+      "points_table": {}
     },
     "GD031026_R2": {
-      "starters": 8,
+      "starters": 0,
       "scratched": 0,
-      "points_table": {
-        "1": 15,
-        "2": 10,
-        "3": 7,
-        "4": 5,
-        "5": 4,
-        "6": 3,
-        "7": 2,
-        "8": 1
-      }
+      "points_table": {}
     },
     "GD031026_R3": {
-      "starters": 8,
+      "starters": 0,
       "scratched": 0,
-      "points_table": {
-        "1": 15,
-        "2": 10,
-        "3": 7,
-        "4": 5,
-        "5": 4,
-        "6": 3,
-        "7": 2,
-        "8": 1
-      }
+      "points_table": {}
     },
     "GD031026_R4": {
-      "starters": 10,
-      "scratched": 1,
-      "points_table": {
-        "1": 17,
-        "2": 12,
-        "3": 9,
-        "4": 7,
-        "5": 6,
-        "6": 5,
-        "7": 4,
-        "8": 3,
-        "9": 2,
-        "10": 1
-      }
+      "starters": 0,
+      "scratched": 0,
+      "points_table": {}
     },
     "GD031026_R5": {
-      "starters": 10,
-      "scratched": 1,
-      "points_table": {
-        "1": 17,
-        "2": 12,
-        "3": 9,
-        "4": 7,
-        "5": 6,
-        "6": 5,
-        "7": 4,
-        "8": 3,
-        "9": 2,
-        "10": 1
-      }
+      "starters": 0,
+      "scratched": 0,
+      "points_table": {}
     },
     "GD031026_R6": {
-      "starters": 10,
-      "scratched": 1,
-      "points_table": {
-        "1": 17,
-        "2": 12,
-        "3": 9,
-        "4": 7,
-        "5": 6,
-        "6": 5,
-        "7": 4,
-        "8": 3,
-        "9": 2,
-        "10": 1
-      }
+      "starters": 0,
+      "scratched": 0,
+      "points_table": {}
     },
     "GD031026_R7": {
-      "starters": 8,
+      "starters": 0,
       "scratched": 0,
-      "points_table": {
-        "1": 15,
-        "2": 10,
-        "3": 7,
-        "4": 5,
-        "5": 4,
-        "6": 3,
-        "7": 2,
-        "8": 1
-      }
+      "points_table": {}
     },
     "GD031026_R8": {
-      "starters": 8,
+      "starters": 0,
       "scratched": 0,
-      "points_table": {
-        "1": 15,
-        "2": 10,
-        "3": 7,
-        "4": 5,
-        "5": 4,
-        "6": 3,
-        "7": 2,
-        "8": 1
-      }
+      "points_table": {}
     },
     "GD031026_R9": {
-      "starters": 6,
-      "scratched": 1,
-      "points_table": {
-        "1": 13,
-        "2": 8,
-        "3": 5,
-        "4": 3,
-        "5": 2,
-        "6": 1
-      }
+      "starters": 0,
+      "scratched": 0,
+      "points_table": {}
     },
     "GD031026_R10": {
-      "starters": 6,
+      "starters": 0,
       "scratched": 0,
-      "points_table": {
-        "1": 13,
-        "2": 8,
-        "3": 5,
-        "4": 3,
-        "5": 2,
-        "6": 1
-      }
+      "points_table": {}
     }
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-04 01:16:02",
+    "generated": "2026-10-04 01:21:02",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [],
@@ -1504,5 +1411,5 @@
       "total": 25
     }
   ],
-  "last_updated": "2026-10-04 01:16:02"
+  "last_updated": "2026-10-04 01:21:02"
 }
