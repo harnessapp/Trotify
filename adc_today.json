@@ -1,7 +1,7 @@
 {
   "event": "Australian Drivers Championship",
   "date": "2026-10-03",
-  "generated": "2026-10-03 20:21:51",
+  "generated": "2026-10-03 21:11:55",
   "points_system": {
     "12": {
       "1": 19,
@@ -229,7 +229,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-03 21:11:06",
+    "generated": "2026-10-03 21:12:01",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -241,23 +241,23 @@
       {
         "driver": "Ashleigh Delosa",
         "current_points": 63,
-        "simulation_wins": 99952,
+        "simulation_wins": 99946,
         "probability": 99.95,
         "eliminated": false,
         "fair_odds": 1.0,
         "market_percent": 125,
         "market_odds": 0.8,
-        "trotify_odds": 1.05
+        "trotify_odds": 1.01
       },
       {
         "driver": "Emily Suvaljko",
         "current_points": 37,
-        "simulation_wins": 48,
+        "simulation_wins": 54,
         "probability": 0.05,
         "eliminated": false,
-        "fair_odds": 2083.33,
+        "fair_odds": 1851.85,
         "market_percent": 125,
-        "market_odds": 1666.67,
+        "market_odds": 1481.48,
         "trotify_odds": 1001.0
       },
       {
@@ -305,7 +305,7 @@
         "trotify_odds": null
       },
       {
-        "driver": "Jett Turnbull",
+        "driver": "James Herbertson",
         "current_points": 30,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -316,7 +316,7 @@
         "trotify_odds": null
       },
       {
-        "driver": "James Herbertson",
+        "driver": "Jett Turnbull",
         "current_points": 30,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -936,98 +936,6 @@
       "total": 31
     },
     {
-      "name": "Jett Turnbull",
-      "state": "NSW",
-      "races": {
-        "R1": {
-          "race_anchor": "GD031026_R1",
-          "horse": "CHILDERS ROAD",
-          "fair_pct": 6.936281408949741,
-          "fair_odds": 14.416946790966708,
-          "points": 2,
-          "status": "complete",
-          "placing": 8
-        },
-        "R2": {
-          "race_anchor": "GD031026_R2",
-          "horse": "MANDS PEARL",
-          "fair_pct": 7.246075704054196,
-          "fair_odds": 13.800573453027791,
-          "points": 3,
-          "status": "complete",
-          "placing": 6
-        },
-        "R3": {
-          "race_anchor": "GD031026_R3",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": null,
-          "status": "no_drive"
-        },
-        "R4": {
-          "race_anchor": "GD031026_R4",
-          "horse": "OAKHAY",
-          "fair_pct": 6.200284310878542,
-          "fair_odds": 16.128292669506735,
-          "points": 7,
-          "status": "complete",
-          "placing": 4
-        },
-        "R5": {
-          "race_anchor": "GD031026_R5",
-          "horse": "REACH THE PEAK",
-          "fair_pct": 27.14241788247404,
-          "fair_odds": 3.6842701498811694,
-          "points": 9,
-          "status": "complete",
-          "placing": 3
-        },
-        "R6": {
-          "race_anchor": "GD031026_R6",
-          "horse": "TUFFASNAILS",
-          "fair_pct": 8.411435230879258,
-          "fair_odds": 11.888577544161494,
-          "points": 9,
-          "status": "complete",
-          "placing": 3
-        },
-        "R7": {
-          "race_anchor": "GD031026_R7",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": null,
-          "status": "no_drive"
-        },
-        "R8": {
-          "race_anchor": "GD031026_R8",
-          "horse": "CEE CEE LOU",
-          "fair_pct": 17.245960292634592,
-          "fair_odds": 5.798459366899274,
-          "points": null,
-          "status": "upcoming"
-        },
-        "R9": {
-          "race_anchor": "GD031026_R9",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": null,
-          "status": "no_drive"
-        },
-        "R10": {
-          "race_anchor": "GD031026_R10",
-          "horse": "THE VICARS GIRL",
-          "fair_pct": 7.527750368076538,
-          "fair_odds": 13.28418121090692,
-          "points": null,
-          "status": "upcoming"
-        }
-      },
-      "total": 30
-    },
-    {
       "name": "James Herbertson",
       "state": "VIC",
       "races": {
@@ -1115,6 +1023,98 @@
           "fair_odds": null,
           "points": null,
           "status": "no_drive"
+        }
+      },
+      "total": 30
+    },
+    {
+      "name": "Jett Turnbull",
+      "state": "NSW",
+      "races": {
+        "R1": {
+          "race_anchor": "GD031026_R1",
+          "horse": "CHILDERS ROAD",
+          "fair_pct": 6.936281408949741,
+          "fair_odds": 14.416946790966708,
+          "points": 2,
+          "status": "complete",
+          "placing": 8
+        },
+        "R2": {
+          "race_anchor": "GD031026_R2",
+          "horse": "MANDS PEARL",
+          "fair_pct": 7.246075704054196,
+          "fair_odds": 13.800573453027791,
+          "points": 3,
+          "status": "complete",
+          "placing": 6
+        },
+        "R3": {
+          "race_anchor": "GD031026_R3",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": null,
+          "status": "no_drive"
+        },
+        "R4": {
+          "race_anchor": "GD031026_R4",
+          "horse": "OAKHAY",
+          "fair_pct": 6.200284310878542,
+          "fair_odds": 16.128292669506735,
+          "points": 7,
+          "status": "complete",
+          "placing": 4
+        },
+        "R5": {
+          "race_anchor": "GD031026_R5",
+          "horse": "REACH THE PEAK",
+          "fair_pct": 27.14241788247404,
+          "fair_odds": 3.6842701498811694,
+          "points": 9,
+          "status": "complete",
+          "placing": 3
+        },
+        "R6": {
+          "race_anchor": "GD031026_R6",
+          "horse": "TUFFASNAILS",
+          "fair_pct": 8.411435230879258,
+          "fair_odds": 11.888577544161494,
+          "points": 9,
+          "status": "complete",
+          "placing": 3
+        },
+        "R7": {
+          "race_anchor": "GD031026_R7",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": null,
+          "status": "no_drive"
+        },
+        "R8": {
+          "race_anchor": "GD031026_R8",
+          "horse": "CEE CEE LOU",
+          "fair_pct": 17.245960292634592,
+          "fair_odds": 5.798459366899274,
+          "points": null,
+          "status": "upcoming"
+        },
+        "R9": {
+          "race_anchor": "GD031026_R9",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": null,
+          "status": "no_drive"
+        },
+        "R10": {
+          "race_anchor": "GD031026_R10",
+          "horse": "THE VICARS GIRL",
+          "fair_pct": 7.527750368076538,
+          "fair_odds": 13.28418121090692,
+          "points": null,
+          "status": "upcoming"
         }
       },
       "total": 30
@@ -1488,5 +1488,5 @@
       "total": 11
     }
   ],
-  "last_updated": "2026-10-03 21:11:02"
+  "last_updated": "2026-10-03 21:11:55"
 }
