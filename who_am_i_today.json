@@ -1,55 +1,53 @@
 {
-  "date": "2026-10-04",
-  "puzzle_number": 3,
-  "type": "DRIVER",
-  "answer": "Kate Gath",
+  "date": "2026-10-05",
+  "puzzle_number": 4,
+  "type": "HORSE",
+  "answer": "Mondo Glitz",
   "stats": {
-    "career_starts": 2936,
-    "career_wins": 603,
-    "recent_starts": 393,
-    "recent_wins": 63,
-    "recent_places": 165
+    "starts": 11,
+    "wins": 2,
+    "places": 4
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "In the past 12 months, I've had 393 drives.",
+      "text": "I've had 11 race starts.",
       "difficulty": 15,
-      "source": "recent_starts",
-      "revealed_letters": 0,
-      "name_pattern": "_ _ _ _    _ _ _ _"
+      "source": "career_starts",
+      "revealed_letters": 1,
+      "name_pattern": "M _ _ _ _    _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "The track I've driven at most in the past 12 months is Melton.",
-      "difficulty": 40,
-      "source": "favourite_venue",
-      "revealed_letters": 1,
-      "name_pattern": "K _ _ _    _ _ _ _"
+      "text": "All of my recorded starts have been in New South Wales.",
+      "difficulty": 35,
+      "source": "state",
+      "revealed_letters": 2,
+      "name_pattern": "M _ _ _ _    G _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "My win strike rate over the past 12 months is about 16%.",
-      "difficulty": 50,
-      "source": "win_pct",
-      "revealed_letters": 2,
-      "name_pattern": "K _ _ _    G _ _ _"
+      "text": "I've won at tracks including Parkes, Eugowra.",
+      "difficulty": 55,
+      "source": "winning_tracks",
+      "revealed_letters": 3,
+      "name_pattern": "M _ _ _ O    G _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "One of my most recent winners was Ollies The Boss at Geelong.",
+      "text": "I'm currently associated most often with trainer Nathan Hurst.",
       "difficulty": 75,
-      "source": "recent_winner",
-      "revealed_letters": 3,
-      "name_pattern": "K _ _ E    G _ _ _"
+      "source": "trainer",
+      "revealed_letters": 4,
+      "name_pattern": "M _ _ _ O    G L _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Kate. ",
+      "text": "My most recent start was at Eugowra on 27 September 2026, where I finished 1st for trainer Nathan Hurst and driver Nathan Hurst.",
       "difficulty": 95,
-      "source": "first_name",
-      "revealed_letters": 4,
-      "name_pattern": "K _ _ E    G A _ _"
+      "source": "last_start",
+      "revealed_letters": 5,
+      "name_pattern": "M _ N _ O    G L _ _ _"
     }
   ]
 }
