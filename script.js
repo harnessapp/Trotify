@@ -11367,6 +11367,27 @@ function buildRunnerComment(row, raceRows) {
     const lrDate = formatShortRaceDate(row["LR Date"]);
     const lrSp = formatLatestRunSp(row["LR SP"]);
     const lrPos = clean(row["LR Pos"] || "");
+    const lrRaceMileRate = parseFloat(row["LR Race Mile Rate"]);
+    const lrIndHalf = parseFloat(row["LR Ind Half"]);
+
+    // First starter / most recent trial details
+    const t1Venue = clean(row["T1 Venue"] || "");
+    const t1Distance = clean(row["T1 Dist"] || "");
+    const t1Placing = clean(row["T1 Pos"] || "");
+    const t1Margin = formatLatestRunMargin(row["T1 Mgn"]);
+    const t1Winner = clean(row["T1 Winner"] || "");
+    const t1Date = formatShortRaceDate(row["T1 Date"]);
+    const t1RaceMileRate = parseFloat(row["T1 Rate"]);
+    const t1IndHalf = parseFloat(row["T1 Half"]);
+
+    console.log(
+        "LR SPEED TEST",
+        horse,
+        row["LR Race Mile Rate"],
+        row["LR Ind Half"],
+        lrRaceMileRate,
+        lrIndHalf
+    );
 
     if (lrPlacing && lrVenue) {
         const latestKey = [
@@ -11386,6 +11407,22 @@ function buildRunnerComment(row, raceRows) {
         ], latestKey);
 
         const posPhrase = latestRunPositionPhrase(lrPos, latestKey);
+
+        const speedBits = [];
+
+        if (Number.isFinite(lrRaceMileRate)) {
+            const mins = Math.floor(lrRaceMileRate / 60);
+            const secs = (lrRaceMileRate % 60).toFixed(1).padStart(4, "0");
+            speedBits.push(`MR ${mins}:${secs}`);
+        }
+
+        if (Number.isFinite(lrIndHalf)) {
+            speedBits.push(`ELH ${lrIndHalf.toFixed(1)}`);
+        }
+
+        const speedPhrase = speedBits.length
+            ? `(${speedBits.join(", ")})`
+            : "";
 
         const bits = [];
 
@@ -11424,9 +11461,57 @@ function buildRunnerComment(row, raceRows) {
         if (lrDate) bits.push(`on ${lrDate}`);
         if (lrSp) bits.push(`at ${lrSp}`);
         if (posPhrase) bits.push(`when ${posPhrase}`);
+        if (speedPhrase) bits.push(speedPhrase);
 
         parts.push(`${bits.join(" ")}.`);
+
+    } else if (t1Venue && t1Placing) {
+        // No previous race start, but we have trial information
+        const trialBits = ["First start. At most recent trial"];
+
+        const trialPlacingNum = parseInt(t1Placing, 10);
+
+        if (trialPlacingNum === 1) {
+            trialBits.push(`1st at ${t1Venue}`);
+        } else {
+            trialBits.push(`${toOrdinal(t1Placing)} at ${t1Venue}`);
+        }
+
+        if (t1Distance) {
+            trialBits.push(`over ${formatWholeNumber(t1Distance)}m`);
+        }
+
+        if (trialPlacingNum !== 1 && t1Margin) {
+            trialBits.push(`beaten ${t1Margin}`);
+        }
+
+        if (trialPlacingNum !== 1 && t1Winner) {
+            trialBits.push(`by ${toProperCase(t1Winner)}`);
+        }
+
+        if (t1Date) {
+            trialBits.push(`on ${t1Date}`);
+        }
+
+        const trialSpeedBits = [];
+
+        if (Number.isFinite(t1RaceMileRate)) {
+            const mins = Math.floor(t1RaceMileRate / 60);
+            const secs = (t1RaceMileRate % 60).toFixed(1).padStart(4, "0");
+            trialSpeedBits.push(`MR ${mins}:${secs}`);
+        }
+
+        if (Number.isFinite(t1IndHalf)) {
+            trialSpeedBits.push(`ELH ${t1IndHalf.toFixed(1)}`);
+        }
+
+        if (trialSpeedBits.length) {
+            trialBits.push(`(${trialSpeedBits.join(", ")})`);
+        }
+
+        parts.push(`${trialBits.join(" ")}.`);
     }
+    
 
     // #4 Positive trainer/driver recent ROI
     const recentRoiComments = buildPositiveRecentRoiComments(row, horse);
