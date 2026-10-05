@@ -92,7 +92,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-05 18:16:02",
+    "generated": "2026-10-05 18:21:02",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [],
@@ -728,5 +728,5 @@
       "total": 20
     }
   ],
-  "last_updated": "2026-10-05 18:16:01"
+  "last_updated": "2026-10-05 18:21:02"
 }
