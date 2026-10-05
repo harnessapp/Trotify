@@ -92,7 +92,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-05 17:01:06",
+    "generated": "2026-10-05 17:06:06",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -102,46 +102,46 @@
       {
         "driver": "Kate Gath",
         "current_points": 34,
-        "simulation_wins": 46035,
-        "probability": 46.03,
+        "simulation_wins": 46362,
+        "probability": 46.36,
         "eliminated": false,
-        "fair_odds": 2.17,
+        "fair_odds": 2.16,
         "market_percent": 125,
-        "market_odds": 1.74,
+        "market_odds": 1.73,
         "trotify_odds": 1.75
       },
       {
         "driver": "Jordan Leedham",
         "current_points": 34,
-        "simulation_wins": 37206,
-        "probability": 37.21,
+        "simulation_wins": 37037,
+        "probability": 37.04,
         "eliminated": false,
-        "fair_odds": 2.69,
+        "fair_odds": 2.7,
         "market_percent": 125,
-        "market_odds": 2.15,
+        "market_odds": 2.16,
         "trotify_odds": 2.2
       },
       {
         "driver": "James Herbertson",
         "current_points": 29,
-        "simulation_wins": 13981,
-        "probability": 13.98,
+        "simulation_wins": 13752,
+        "probability": 13.75,
         "eliminated": false,
-        "fair_odds": 7.15,
+        "fair_odds": 7.27,
         "market_percent": 125,
-        "market_odds": 5.72,
-        "trotify_odds": 5.5
+        "market_odds": 5.82,
+        "trotify_odds": 6.0
       },
       {
         "driver": "Michael Bellman",
         "current_points": 28,
-        "simulation_wins": 2778,
-        "probability": 2.78,
+        "simulation_wins": 2849,
+        "probability": 2.85,
         "eliminated": false,
-        "fair_odds": 36.0,
+        "fair_odds": 35.1,
         "market_percent": 125,
-        "market_odds": 28.8,
-        "trotify_odds": 31.0
+        "market_odds": 28.08,
+        "trotify_odds": 26.0
       },
       {
         "driver": "Taylor Youl",
@@ -720,5 +720,5 @@
       "total": 17
     }
   ],
-  "last_updated": "2026-10-05 17:01:02"
+  "last_updated": "2026-10-05 17:06:02"
 }
