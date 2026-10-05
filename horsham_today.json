@@ -1,7 +1,7 @@
 {
   "event": "Noel Smith Memorial Horsham Invitational Drivers Championship",
   "date": "2026-10-05",
-  "generated": "2026-10-03 22:39:59",
+  "generated": "2026-10-05 11:05:56",
   "points_system": {
     "1": 11,
     "2": 9,
@@ -78,8 +78,8 @@
       }
     },
     "HS051026_R8": {
-      "starters": 11,
-      "scratched": 0,
+      "starters": 10,
+      "scratched": 1,
       "points_table": {
         "1": 11,
         "2": 9,
@@ -96,7 +96,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-04 17:46:09",
+    "generated": "2026-10-05 11:06:31",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -110,10 +110,10 @@
       {
         "driver": "Michael Bellman",
         "current_points": 0,
-        "simulation_wins": 23485,
-        "probability": 23.48,
+        "simulation_wins": 23436,
+        "probability": 23.44,
         "eliminated": false,
-        "fair_odds": 4.26,
+        "fair_odds": 4.27,
         "market_percent": 125,
         "market_odds": 3.41,
         "trotify_odds": 3.4
@@ -121,100 +121,100 @@
       {
         "driver": "Taylor Youl",
         "current_points": 0,
-        "simulation_wins": 14738,
-        "probability": 14.74,
+        "simulation_wins": 14973,
+        "probability": 14.97,
         "eliminated": false,
-        "fair_odds": 6.79,
+        "fair_odds": 6.68,
         "market_percent": 125,
-        "market_odds": 5.43,
+        "market_odds": 5.34,
         "trotify_odds": 5.5
       },
       {
         "driver": "Jackie Barker",
         "current_points": 0,
-        "simulation_wins": 12516,
-        "probability": 12.52,
+        "simulation_wins": 12559,
+        "probability": 12.56,
         "eliminated": false,
-        "fair_odds": 7.99,
+        "fair_odds": 7.96,
         "market_percent": 125,
-        "market_odds": 6.39,
+        "market_odds": 6.37,
         "trotify_odds": 6.5
       },
       {
         "driver": "Chris Alford",
         "current_points": 0,
-        "simulation_wins": 10723,
-        "probability": 10.72,
+        "simulation_wins": 10897,
+        "probability": 10.9,
         "eliminated": false,
-        "fair_odds": 9.33,
+        "fair_odds": 9.18,
         "market_percent": 125,
-        "market_odds": 7.46,
+        "market_odds": 7.34,
         "trotify_odds": 7.0
       },
       {
         "driver": "Jordan Leedham",
         "current_points": 0,
-        "simulation_wins": 9365,
-        "probability": 9.37,
+        "simulation_wins": 8970,
+        "probability": 8.97,
         "eliminated": false,
-        "fair_odds": 10.68,
+        "fair_odds": 11.15,
         "market_percent": 125,
-        "market_odds": 8.54,
+        "market_odds": 8.92,
         "trotify_odds": 9.0
       },
       {
         "driver": "Jason Lee",
         "current_points": 0,
-        "simulation_wins": 7323,
-        "probability": 7.32,
+        "simulation_wins": 7281,
+        "probability": 7.28,
         "eliminated": false,
-        "fair_odds": 13.66,
+        "fair_odds": 13.73,
         "market_percent": 125,
-        "market_odds": 10.92,
+        "market_odds": 10.99,
         "trotify_odds": 11.0
       },
       {
         "driver": "Kate Gath",
         "current_points": 5,
-        "simulation_wins": 7275,
-        "probability": 7.27,
+        "simulation_wins": 7159,
+        "probability": 7.16,
         "eliminated": false,
-        "fair_odds": 13.75,
+        "fair_odds": 13.97,
         "market_percent": 125,
-        "market_odds": 11.0,
+        "market_odds": 11.17,
         "trotify_odds": 11.0
       },
       {
         "driver": "Ellen Tormey",
         "current_points": 0,
-        "simulation_wins": 5739,
-        "probability": 5.74,
+        "simulation_wins": 5753,
+        "probability": 5.75,
         "eliminated": false,
-        "fair_odds": 17.42,
+        "fair_odds": 17.38,
         "market_percent": 125,
-        "market_odds": 13.94,
+        "market_odds": 13.91,
         "trotify_odds": 14.0
       },
       {
         "driver": "Aaron Dunn",
         "current_points": 5,
-        "simulation_wins": 4940,
-        "probability": 4.94,
+        "simulation_wins": 5070,
+        "probability": 5.07,
         "eliminated": false,
-        "fair_odds": 20.24,
+        "fair_odds": 19.72,
         "market_percent": 125,
-        "market_odds": 16.19,
-        "trotify_odds": 17.0
+        "market_odds": 15.78,
+        "trotify_odds": 15.0
       },
       {
         "driver": "James Herbertson",
         "current_points": 5,
-        "simulation_wins": 3896,
+        "simulation_wins": 3902,
         "probability": 3.9,
         "eliminated": false,
-        "fair_odds": 25.67,
+        "fair_odds": 25.63,
         "market_percent": 125,
-        "market_odds": 20.53,
+        "market_odds": 20.5,
         "trotify_odds": 21.0
       }
     ]
@@ -259,8 +259,8 @@
         "R5": {
           "race_anchor": "HS051026_R8",
           "horse": "OUTBACK QUEENIE",
-          "fair_pct": 3.1127517871366086,
-          "fair_odds": 32.125915215356464,
+          "fair_pct": 3.178456799567294,
+          "fair_odds": 31.461808766321354,
           "points": null,
           "status": "upcoming"
         }
@@ -306,8 +306,8 @@
         "R5": {
           "race_anchor": "HS051026_R8",
           "horse": "WE FAVOUR ROSIE",
-          "fair_pct": 6.04454477973716,
-          "fair_odds": 16.543843026066288,
+          "fair_pct": 6.274198133873727,
+          "fair_odds": 15.938291693421451,
           "points": null,
           "status": "upcoming"
         }
@@ -353,8 +353,8 @@
         "R5": {
           "race_anchor": "HS051026_R8",
           "horse": "MUSELET",
-          "fair_pct": 18.5281325124357,
-          "fair_odds": 5.397198014040652,
+          "fair_pct": 19.01946775910805,
+          "fair_odds": 5.257770683520413,
           "points": null,
           "status": "upcoming"
         }
@@ -400,8 +400,8 @@
         "R5": {
           "race_anchor": "HS051026_R8",
           "horse": "HUXHAM CHUBB",
-          "fair_pct": 5.490738984831704,
-          "fair_odds": 18.2124847449956,
+          "fair_pct": 5.606639351427874,
+          "fair_odds": 17.835996526962706,
           "points": null,
           "status": "upcoming"
         }
@@ -447,8 +447,8 @@
         "R5": {
           "race_anchor": "HS051026_R8",
           "horse": "FROSTY DROP",
-          "fair_pct": 13.55526531370912,
-          "fair_odds": 7.377207135803162,
+          "fair_pct": 13.841394416459648,
+          "fair_odds": 7.224705617888028,
           "points": null,
           "status": "upcoming"
         }
@@ -494,8 +494,8 @@
         "R5": {
           "race_anchor": "HS051026_R8",
           "horse": "SPORTING RAGE",
-          "fair_pct": 4.932249814316837,
-          "fair_odds": 20.27472325301328,
+          "fair_pct": 5.036361403522299,
+          "fair_odds": 19.855604470732107,
           "points": null,
           "status": "upcoming"
         }
@@ -541,8 +541,8 @@
         "R5": {
           "race_anchor": "HS051026_R8",
           "horse": "FOREGONE CONCLUSION NZ",
-          "fair_pct": 4.372663497075889,
-          "fair_odds": 22.86935641557429,
+          "fair_pct": 4.490439789768512,
+          "fair_odds": 22.269533649655088,
           "points": null,
           "status": "upcoming"
         }
@@ -588,8 +588,8 @@
         "R5": {
           "race_anchor": "HS051026_R8",
           "horse": "MAJOR ROY",
-          "fair_pct": 13.55526531370912,
-          "fair_odds": 7.377207135803162,
+          "fair_pct": 14.107318679662043,
+          "fair_odds": 7.088519248109564,
           "points": null,
           "status": "upcoming"
         }
@@ -635,8 +635,8 @@
         "R5": {
           "race_anchor": "HS051026_R8",
           "horse": "VINNY ROCK",
-          "fair_pct": 6.809647461587934,
-          "fair_odds": 14.6850480240105,
+          "fair_pct": 7.00048888029501,
+          "fair_odds": 14.284716640502094,
           "points": null,
           "status": "upcoming"
         }
@@ -682,8 +682,8 @@
         "R5": {
           "race_anchor": "HS051026_R8",
           "horse": "JILLIBY ZUCCHINI",
-          "fair_pct": 20.48598874832333,
-          "fair_odds": 4.881385088536891,
+          "fair_pct": 21.44523478631554,
+          "fair_odds": 4.663040577378578,
           "points": null,
           "status": "upcoming"
         }
@@ -691,5 +691,5 @@
       "total": 0
     }
   ],
-  "last_updated": "2026-10-04 17:45:58"
+  "last_updated": "2026-10-05 11:06:15"
 }
