@@ -92,7 +92,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-05 16:46:07",
+    "generated": "2026-10-05 16:51:07",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -102,46 +102,46 @@
       {
         "driver": "Kate Gath",
         "current_points": 34,
-        "simulation_wins": 46281,
-        "probability": 46.28,
+        "simulation_wins": 46448,
+        "probability": 46.45,
         "eliminated": false,
-        "fair_odds": 2.16,
+        "fair_odds": 2.15,
         "market_percent": 125,
-        "market_odds": 1.73,
-        "trotify_odds": 1.75
+        "market_odds": 1.72,
+        "trotify_odds": 1.7
       },
       {
         "driver": "Jordan Leedham",
         "current_points": 34,
-        "simulation_wins": 37081,
-        "probability": 37.08,
+        "simulation_wins": 36896,
+        "probability": 36.9,
         "eliminated": false,
-        "fair_odds": 2.7,
+        "fair_odds": 2.71,
         "market_percent": 125,
-        "market_odds": 2.16,
+        "market_odds": 2.17,
         "trotify_odds": 2.2
       },
       {
         "driver": "James Herbertson",
         "current_points": 29,
-        "simulation_wins": 13830,
-        "probability": 13.83,
+        "simulation_wins": 13931,
+        "probability": 13.93,
         "eliminated": false,
-        "fair_odds": 7.23,
+        "fair_odds": 7.18,
         "market_percent": 125,
-        "market_odds": 5.78,
-        "trotify_odds": 6.0
+        "market_odds": 5.74,
+        "trotify_odds": 5.5
       },
       {
         "driver": "Michael Bellman",
         "current_points": 28,
-        "simulation_wins": 2808,
-        "probability": 2.81,
+        "simulation_wins": 2725,
+        "probability": 2.73,
         "eliminated": false,
-        "fair_odds": 35.61,
+        "fair_odds": 36.7,
         "market_percent": 125,
-        "market_odds": 28.49,
-        "trotify_odds": 26.0
+        "market_odds": 29.36,
+        "trotify_odds": 31.0
       },
       {
         "driver": "Taylor Youl",
@@ -720,5 +720,5 @@
       "total": 17
     }
   ],
-  "last_updated": "2026-10-05 16:46:02"
+  "last_updated": "2026-10-05 16:51:02"
 }
