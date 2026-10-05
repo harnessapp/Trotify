@@ -92,60 +92,58 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-05 17:06:06",
+    "generated": "2026-10-05 17:11:02",
     "simulations": 100000,
     "market_percent": 125,
-    "remaining_races": [
-      "HS051026_R8"
-    ],
+    "remaining_races": [],
     "drivers": [
       {
         "driver": "Kate Gath",
-        "current_points": 34,
-        "simulation_wins": 46362,
-        "probability": 46.36,
+        "current_points": 37,
+        "simulation_wins": 100000,
+        "probability": 100.0,
         "eliminated": false,
-        "fair_odds": 2.16,
+        "fair_odds": 1.0,
         "market_percent": 125,
-        "market_odds": 1.73,
-        "trotify_odds": 1.75
+        "market_odds": 0.8,
+        "trotify_odds": 1.0
       },
       {
         "driver": "Jordan Leedham",
-        "current_points": 34,
-        "simulation_wins": 37037,
-        "probability": 37.04,
-        "eliminated": false,
-        "fair_odds": 2.7,
+        "current_points": 36,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "fair_odds": null,
         "market_percent": 125,
-        "market_odds": 2.16,
-        "trotify_odds": 2.2
-      },
-      {
-        "driver": "James Herbertson",
-        "current_points": 29,
-        "simulation_wins": 13752,
-        "probability": 13.75,
-        "eliminated": false,
-        "fair_odds": 7.27,
-        "market_percent": 125,
-        "market_odds": 5.82,
-        "trotify_odds": 6.0
+        "market_odds": null,
+        "trotify_odds": null
       },
       {
         "driver": "Michael Bellman",
-        "current_points": 28,
-        "simulation_wins": 2849,
-        "probability": 2.85,
-        "eliminated": false,
-        "fair_odds": 35.1,
+        "current_points": 35,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "fair_odds": null,
         "market_percent": 125,
-        "market_odds": 28.08,
-        "trotify_odds": 26.0
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "driver": "James Herbertson",
+        "current_points": 33,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "fair_odds": null,
+        "market_percent": 125,
+        "market_odds": null,
+        "trotify_odds": null
       },
       {
         "driver": "Taylor Youl",
-        "current_points": 22,
+        "current_points": 33,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -156,7 +154,7 @@
       },
       {
         "driver": "Aaron Dunn",
-        "current_points": 22,
+        "current_points": 27,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -167,18 +165,7 @@
       },
       {
         "driver": "Ellen Tormey",
-        "current_points": 21,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "fair_odds": null,
-        "market_percent": 125,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "driver": "Jason Lee",
-        "current_points": 19,
+        "current_points": 27,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -189,7 +176,7 @@
       },
       {
         "driver": "Jackie Barker",
-        "current_points": 19,
+        "current_points": 27,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -200,7 +187,18 @@
       },
       {
         "driver": "Chris Alford",
-        "current_points": 17,
+        "current_points": 26,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "fair_odds": null,
+        "market_percent": 125,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "driver": "Jason Lee",
+        "current_points": 20,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -212,6 +210,57 @@
     ]
   },
   "drivers": [
+    {
+      "name": "Kate Gath",
+      "state": "VIC",
+      "races": {
+        "R1": {
+          "race_anchor": "HS051026_R4",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R2": {
+          "race_anchor": "HS051026_R5",
+          "horse": "MAORIS RETURN",
+          "fair_pct": 3.2592407156202943,
+          "fair_odds": 30.68199274780112,
+          "points": 9,
+          "status": "complete",
+          "placing": 2
+        },
+        "R3": {
+          "race_anchor": "HS051026_R6",
+          "horse": "TORQUE IN HEAVEN",
+          "fair_pct": 13.902045601793104,
+          "fair_odds": 7.193186014805035,
+          "points": 9,
+          "status": "complete",
+          "placing": 2
+        },
+        "R4": {
+          "race_anchor": "HS051026_R7",
+          "horse": "JILLIBY SNIPER",
+          "fair_pct": 35.35469931375171,
+          "fair_odds": 2.8284783053183427,
+          "points": 11,
+          "status": "complete",
+          "placing": 1
+        },
+        "R5": {
+          "race_anchor": "HS051026_R8",
+          "horse": "WE FAVOUR ROSIE",
+          "fair_pct": 6.274198133873727,
+          "fair_odds": 15.938291693421451,
+          "points": 3,
+          "status": "complete",
+          "placing": 8
+        }
+      },
+      "total": 37
+    },
     {
       "name": "Jordan Leedham",
       "state": "VIC",
@@ -257,111 +306,12 @@
           "horse": "SPORTING RAGE",
           "fair_pct": 5.036361403522299,
           "fair_odds": 19.855604470732107,
-          "points": null,
-          "status": "upcoming"
+          "points": 2,
+          "status": "complete",
+          "placing": 9
         }
       },
-      "total": 34
-    },
-    {
-      "name": "Kate Gath",
-      "state": "VIC",
-      "races": {
-        "R1": {
-          "race_anchor": "HS051026_R4",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R2": {
-          "race_anchor": "HS051026_R5",
-          "horse": "MAORIS RETURN",
-          "fair_pct": 3.2592407156202943,
-          "fair_odds": 30.68199274780112,
-          "points": 9,
-          "status": "complete",
-          "placing": 2
-        },
-        "R3": {
-          "race_anchor": "HS051026_R6",
-          "horse": "TORQUE IN HEAVEN",
-          "fair_pct": 13.902045601793104,
-          "fair_odds": 7.193186014805035,
-          "points": 9,
-          "status": "complete",
-          "placing": 2
-        },
-        "R4": {
-          "race_anchor": "HS051026_R7",
-          "horse": "JILLIBY SNIPER",
-          "fair_pct": 35.35469931375171,
-          "fair_odds": 2.8284783053183427,
-          "points": 11,
-          "status": "complete",
-          "placing": 1
-        },
-        "R5": {
-          "race_anchor": "HS051026_R8",
-          "horse": "WE FAVOUR ROSIE",
-          "fair_pct": 6.274198133873727,
-          "fair_odds": 15.938291693421451,
-          "points": null,
-          "status": "upcoming"
-        }
-      },
-      "total": 34
-    },
-    {
-      "name": "James Herbertson",
-      "state": "VIC",
-      "races": {
-        "R1": {
-          "race_anchor": "HS051026_R4",
-          "horse": null,
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "status": "no_drive"
-        },
-        "R2": {
-          "race_anchor": "HS051026_R5",
-          "horse": "BETSY ANNE",
-          "fair_pct": null,
-          "fair_odds": null,
-          "points": 5,
-          "placing": "SCR",
-          "status": "scratched"
-        },
-        "R3": {
-          "race_anchor": "HS051026_R6",
-          "horse": "YANKEE RAIN",
-          "fair_pct": 8.512374339105273,
-          "fair_odds": 11.74760366688842,
-          "points": 11,
-          "status": "complete",
-          "placing": 1
-        },
-        "R4": {
-          "race_anchor": "HS051026_R7",
-          "horse": "CALF PEN NZ",
-          "fair_pct": 3.078184967233588,
-          "fair_odds": 32.48667674765221,
-          "points": 8,
-          "status": "complete",
-          "placing": 3
-        },
-        "R5": {
-          "race_anchor": "HS051026_R8",
-          "horse": "MUSELET",
-          "fair_pct": 19.01946775910805,
-          "fair_odds": 5.257770683520413,
-          "points": null,
-          "status": "upcoming"
-        }
-      },
-      "total": 29
+      "total": 36
     },
     {
       "name": "Michael Bellman",
@@ -408,11 +358,63 @@
           "horse": "HUXHAM CHUBB",
           "fair_pct": 5.606639351427874,
           "fair_odds": 17.835996526962706,
-          "points": null,
-          "status": "upcoming"
+          "points": 7,
+          "status": "complete",
+          "placing": 4
         }
       },
-      "total": 28
+      "total": 35
+    },
+    {
+      "name": "James Herbertson",
+      "state": "VIC",
+      "races": {
+        "R1": {
+          "race_anchor": "HS051026_R4",
+          "horse": null,
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "status": "no_drive"
+        },
+        "R2": {
+          "race_anchor": "HS051026_R5",
+          "horse": "BETSY ANNE",
+          "fair_pct": null,
+          "fair_odds": null,
+          "points": 5,
+          "placing": "SCR",
+          "status": "scratched"
+        },
+        "R3": {
+          "race_anchor": "HS051026_R6",
+          "horse": "YANKEE RAIN",
+          "fair_pct": 8.512374339105273,
+          "fair_odds": 11.74760366688842,
+          "points": 11,
+          "status": "complete",
+          "placing": 1
+        },
+        "R4": {
+          "race_anchor": "HS051026_R7",
+          "horse": "CALF PEN NZ",
+          "fair_pct": 3.078184967233588,
+          "fair_odds": 32.48667674765221,
+          "points": 8,
+          "status": "complete",
+          "placing": 3
+        },
+        "R5": {
+          "race_anchor": "HS051026_R8",
+          "horse": "MUSELET",
+          "fair_pct": 19.01946775910805,
+          "fair_odds": 5.257770683520413,
+          "points": 4,
+          "status": "complete",
+          "placing": 7
+        }
+      },
+      "total": 33
     },
     {
       "name": "Taylor Youl",
@@ -459,11 +461,12 @@
           "horse": "JILLIBY ZUCCHINI",
           "fair_pct": 21.44523478631554,
           "fair_odds": 4.663040577378578,
-          "points": null,
-          "status": "upcoming"
+          "points": 11,
+          "status": "complete",
+          "placing": 1
         }
       },
-      "total": 22
+      "total": 33
     },
     {
       "name": "Aaron Dunn",
@@ -509,11 +512,12 @@
           "horse": "OUTBACK QUEENIE",
           "fair_pct": 3.178456799567294,
           "fair_odds": 31.461808766321354,
-          "points": null,
-          "status": "upcoming"
+          "points": 5,
+          "status": "complete",
+          "placing": 6
         }
       },
-      "total": 22
+      "total": 27
     },
     {
       "name": "Ellen Tormey",
@@ -560,62 +564,12 @@
           "horse": "FOREGONE CONCLUSION NZ",
           "fair_pct": 4.490439789768512,
           "fair_odds": 22.269533649655088,
-          "points": null,
-          "status": "upcoming"
+          "points": 6,
+          "status": "complete",
+          "placing": 5
         }
       },
-      "total": 21
-    },
-    {
-      "name": "Jason Lee",
-      "state": "VIC",
-      "races": {
-        "R1": {
-          "race_anchor": "HS051026_R4",
-          "horse": "DANCIN WITH ELVIS",
-          "fair_pct": 9.20932672754214,
-          "fair_odds": 10.858557086581811,
-          "points": 7,
-          "status": "complete",
-          "placing": 4
-        },
-        "R2": {
-          "race_anchor": "HS051026_R5",
-          "horse": "CALLINAN",
-          "fair_pct": 3.366624894469757,
-          "fair_odds": 29.703338843678925,
-          "points": 5,
-          "status": "complete",
-          "placing": 6
-        },
-        "R3": {
-          "race_anchor": "HS051026_R6",
-          "horse": "LUCKY VINCENT",
-          "fair_pct": 12.670016581538142,
-          "fair_odds": 7.892649497058509,
-          "points": 3,
-          "status": "complete",
-          "placing": 8
-        },
-        "R4": {
-          "race_anchor": "HS051026_R7",
-          "horse": "YAPPER",
-          "fair_pct": 12.200286568406852,
-          "fair_odds": 8.196528781459458,
-          "points": 4,
-          "status": "complete",
-          "placing": 7
-        },
-        "R5": {
-          "race_anchor": "HS051026_R8",
-          "horse": "VINNY ROCK",
-          "fair_pct": 7.00048888029501,
-          "fair_odds": 14.284716640502094,
-          "points": null,
-          "status": "upcoming"
-        }
-      },
-      "total": 19
+      "total": 27
     },
     {
       "name": "Jackie Barker",
@@ -662,11 +616,12 @@
           "horse": "MAJOR ROY",
           "fair_pct": 14.107318679662043,
           "fair_odds": 7.088519248109564,
-          "points": null,
-          "status": "upcoming"
+          "points": 8,
+          "status": "complete",
+          "placing": 3
         }
       },
-      "total": 19
+      "total": 27
     },
     {
       "name": "Chris Alford",
@@ -713,12 +668,65 @@
           "horse": "FROSTY DROP",
           "fair_pct": 13.841394416459648,
           "fair_odds": 7.224705617888028,
-          "points": null,
-          "status": "upcoming"
+          "points": 9,
+          "status": "complete",
+          "placing": 2
         }
       },
-      "total": 17
+      "total": 26
+    },
+    {
+      "name": "Jason Lee",
+      "state": "VIC",
+      "races": {
+        "R1": {
+          "race_anchor": "HS051026_R4",
+          "horse": "DANCIN WITH ELVIS",
+          "fair_pct": 9.20932672754214,
+          "fair_odds": 10.858557086581811,
+          "points": 7,
+          "status": "complete",
+          "placing": 4
+        },
+        "R2": {
+          "race_anchor": "HS051026_R5",
+          "horse": "CALLINAN",
+          "fair_pct": 3.366624894469757,
+          "fair_odds": 29.703338843678925,
+          "points": 5,
+          "status": "complete",
+          "placing": 6
+        },
+        "R3": {
+          "race_anchor": "HS051026_R6",
+          "horse": "LUCKY VINCENT",
+          "fair_pct": 12.670016581538142,
+          "fair_odds": 7.892649497058509,
+          "points": 3,
+          "status": "complete",
+          "placing": 8
+        },
+        "R4": {
+          "race_anchor": "HS051026_R7",
+          "horse": "YAPPER",
+          "fair_pct": 12.200286568406852,
+          "fair_odds": 8.196528781459458,
+          "points": 4,
+          "status": "complete",
+          "placing": 7
+        },
+        "R5": {
+          "race_anchor": "HS051026_R8",
+          "horse": "VINNY ROCK",
+          "fair_pct": 7.00048888029501,
+          "fair_odds": 14.284716640502094,
+          "points": 1,
+          "status": "complete",
+          "placing": 10
+        }
+      },
+      "total": 20
     }
   ],
-  "last_updated": "2026-10-05 17:06:02"
+  "last_updated": "2026-10-05 17:11:02"
 }
