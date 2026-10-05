@@ -92,7 +92,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-05 16:26:10",
+    "generated": "2026-10-05 16:31:10",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -103,8 +103,8 @@
       {
         "driver": "Kate Gath",
         "current_points": 23,
-        "simulation_wins": 43303,
-        "probability": 43.3,
+        "simulation_wins": 43348,
+        "probability": 43.35,
         "eliminated": false,
         "fair_odds": 2.31,
         "market_percent": 125,
@@ -114,19 +114,19 @@
       {
         "driver": "Jordan Leedham",
         "current_points": 25,
-        "simulation_wins": 20930,
-        "probability": 20.93,
+        "simulation_wins": 20698,
+        "probability": 20.7,
         "eliminated": false,
-        "fair_odds": 4.78,
+        "fair_odds": 4.83,
         "market_percent": 125,
-        "market_odds": 3.82,
+        "market_odds": 3.87,
         "trotify_odds": 3.8
       },
       {
         "driver": "Michael Bellman",
         "current_points": 22,
-        "simulation_wins": 15061,
-        "probability": 15.06,
+        "simulation_wins": 15055,
+        "probability": 15.05,
         "eliminated": false,
         "fair_odds": 6.64,
         "market_percent": 125,
@@ -136,67 +136,67 @@
       {
         "driver": "Taylor Youl",
         "current_points": 20,
-        "simulation_wins": 8830,
-        "probability": 8.83,
+        "simulation_wins": 8763,
+        "probability": 8.76,
         "eliminated": false,
-        "fair_odds": 11.33,
+        "fair_odds": 11.41,
         "market_percent": 125,
-        "market_odds": 9.06,
+        "market_odds": 9.13,
         "trotify_odds": 9.0
       },
       {
         "driver": "James Herbertson",
         "current_points": 21,
-        "simulation_wins": 8418,
-        "probability": 8.42,
+        "simulation_wins": 8696,
+        "probability": 8.7,
         "eliminated": false,
-        "fair_odds": 11.88,
+        "fair_odds": 11.5,
         "market_percent": 125,
-        "market_odds": 9.5,
-        "trotify_odds": 10.0
+        "market_odds": 9.2,
+        "trotify_odds": 9.0
       },
       {
         "driver": "Ellen Tormey",
         "current_points": 18,
-        "simulation_wins": 2070,
-        "probability": 2.07,
+        "simulation_wins": 2057,
+        "probability": 2.06,
         "eliminated": false,
-        "fair_odds": 48.31,
+        "fair_odds": 48.61,
         "market_percent": 125,
-        "market_odds": 38.65,
+        "market_odds": 38.89,
         "trotify_odds": 41.0
-      },
-      {
-        "driver": "Jason Lee",
-        "current_points": 15,
-        "simulation_wins": 665,
-        "probability": 0.66,
-        "eliminated": false,
-        "fair_odds": 150.38,
-        "market_percent": 125,
-        "market_odds": 120.3,
-        "trotify_odds": 101.0
       },
       {
         "driver": "Aaron Dunn",
         "current_points": 17,
-        "simulation_wins": 649,
-        "probability": 0.65,
+        "simulation_wins": 663,
+        "probability": 0.66,
         "eliminated": false,
-        "fair_odds": 154.08,
+        "fair_odds": 150.83,
         "market_percent": 125,
-        "market_odds": 123.27,
+        "market_odds": 120.66,
+        "trotify_odds": 101.0
+      },
+      {
+        "driver": "Jason Lee",
+        "current_points": 15,
+        "simulation_wins": 661,
+        "probability": 0.66,
+        "eliminated": false,
+        "fair_odds": 151.29,
+        "market_percent": 125,
+        "market_odds": 121.03,
         "trotify_odds": 101.0
       },
       {
         "driver": "Jackie Barker",
         "current_points": 12,
-        "simulation_wins": 74,
-        "probability": 0.07,
+        "simulation_wins": 59,
+        "probability": 0.06,
         "eliminated": false,
-        "fair_odds": 1351.35,
+        "fair_odds": 1694.92,
         "market_percent": 125,
-        "market_odds": 1081.08,
+        "market_odds": 1355.93,
         "trotify_odds": 1001.0
       },
       {
@@ -712,5 +712,5 @@
       "total": 12
     }
   ],
-  "last_updated": "2026-10-05 16:26:02"
+  "last_updated": "2026-10-05 16:31:02"
 }
