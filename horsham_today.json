@@ -92,7 +92,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-05 16:11:10",
+    "generated": "2026-10-05 16:16:11",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -103,8 +103,8 @@
       {
         "driver": "Kate Gath",
         "current_points": 23,
-        "simulation_wins": 43478,
-        "probability": 43.48,
+        "simulation_wins": 43536,
+        "probability": 43.54,
         "eliminated": false,
         "fair_odds": 2.3,
         "market_percent": 125,
@@ -114,89 +114,89 @@
       {
         "driver": "Jordan Leedham",
         "current_points": 25,
-        "simulation_wins": 20772,
-        "probability": 20.77,
+        "simulation_wins": 21004,
+        "probability": 21.0,
         "eliminated": false,
-        "fair_odds": 4.81,
+        "fair_odds": 4.76,
         "market_percent": 125,
-        "market_odds": 3.85,
+        "market_odds": 3.81,
         "trotify_odds": 3.8
       },
       {
         "driver": "Michael Bellman",
         "current_points": 22,
-        "simulation_wins": 15187,
-        "probability": 15.19,
+        "simulation_wins": 14854,
+        "probability": 14.85,
         "eliminated": false,
-        "fair_odds": 6.58,
+        "fair_odds": 6.73,
         "market_percent": 125,
-        "market_odds": 5.27,
+        "market_odds": 5.39,
         "trotify_odds": 5.5
       },
       {
         "driver": "Taylor Youl",
         "current_points": 20,
-        "simulation_wins": 8596,
-        "probability": 8.6,
+        "simulation_wins": 8708,
+        "probability": 8.71,
         "eliminated": false,
-        "fair_odds": 11.63,
+        "fair_odds": 11.48,
         "market_percent": 125,
-        "market_odds": 9.31,
+        "market_odds": 9.19,
         "trotify_odds": 9.0
       },
       {
         "driver": "James Herbertson",
         "current_points": 21,
-        "simulation_wins": 8548,
-        "probability": 8.55,
+        "simulation_wins": 8395,
+        "probability": 8.39,
         "eliminated": false,
-        "fair_odds": 11.7,
+        "fair_odds": 11.91,
         "market_percent": 125,
-        "market_odds": 9.36,
-        "trotify_odds": 9.0
+        "market_odds": 9.53,
+        "trotify_odds": 10.0
       },
       {
         "driver": "Ellen Tormey",
         "current_points": 18,
-        "simulation_wins": 2059,
-        "probability": 2.06,
+        "simulation_wins": 2111,
+        "probability": 2.11,
         "eliminated": false,
-        "fair_odds": 48.57,
+        "fair_odds": 47.37,
         "market_percent": 125,
-        "market_odds": 38.85,
+        "market_odds": 37.9,
         "trotify_odds": 41.0
       },
       {
         "driver": "Jason Lee",
         "current_points": 15,
-        "simulation_wins": 649,
-        "probability": 0.65,
+        "simulation_wins": 682,
+        "probability": 0.68,
         "eliminated": false,
-        "fair_odds": 154.08,
+        "fair_odds": 146.63,
         "market_percent": 125,
-        "market_odds": 123.27,
+        "market_odds": 117.3,
         "trotify_odds": 101.0
       },
       {
         "driver": "Aaron Dunn",
         "current_points": 17,
-        "simulation_wins": 643,
-        "probability": 0.64,
+        "simulation_wins": 647,
+        "probability": 0.65,
         "eliminated": false,
-        "fair_odds": 155.52,
+        "fair_odds": 154.56,
         "market_percent": 125,
-        "market_odds": 124.42,
+        "market_odds": 123.65,
         "trotify_odds": 101.0
       },
       {
         "driver": "Jackie Barker",
         "current_points": 12,
-        "simulation_wins": 68,
-        "probability": 0.07,
+        "simulation_wins": 63,
+        "probability": 0.06,
         "eliminated": false,
-        "fair_odds": 1470.59,
+        "fair_odds": 1587.3,
         "market_percent": 125,
-        "market_odds": 1176.47,
+        "market_odds": 1269.84,
         "trotify_odds": 1001.0
       },
       {
@@ -712,5 +712,5 @@
       "total": 12
     }
   ],
-  "last_updated": "2026-10-05 16:11:02"
+  "last_updated": "2026-10-05 16:16:02"
 }
