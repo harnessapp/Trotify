@@ -92,7 +92,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-05 16:56:07",
+    "generated": "2026-10-05 17:01:06",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -102,45 +102,45 @@
       {
         "driver": "Kate Gath",
         "current_points": 34,
-        "simulation_wins": 46426,
-        "probability": 46.43,
+        "simulation_wins": 46035,
+        "probability": 46.03,
         "eliminated": false,
-        "fair_odds": 2.15,
+        "fair_odds": 2.17,
         "market_percent": 125,
-        "market_odds": 1.72,
-        "trotify_odds": 1.7
+        "market_odds": 1.74,
+        "trotify_odds": 1.75
       },
       {
         "driver": "Jordan Leedham",
         "current_points": 34,
-        "simulation_wins": 37042,
-        "probability": 37.04,
+        "simulation_wins": 37206,
+        "probability": 37.21,
         "eliminated": false,
-        "fair_odds": 2.7,
+        "fair_odds": 2.69,
         "market_percent": 125,
-        "market_odds": 2.16,
+        "market_odds": 2.15,
         "trotify_odds": 2.2
       },
       {
         "driver": "James Herbertson",
         "current_points": 29,
-        "simulation_wins": 13748,
-        "probability": 13.75,
+        "simulation_wins": 13981,
+        "probability": 13.98,
         "eliminated": false,
-        "fair_odds": 7.27,
+        "fair_odds": 7.15,
         "market_percent": 125,
-        "market_odds": 5.82,
-        "trotify_odds": 6.0
+        "market_odds": 5.72,
+        "trotify_odds": 5.5
       },
       {
         "driver": "Michael Bellman",
         "current_points": 28,
-        "simulation_wins": 2784,
+        "simulation_wins": 2778,
         "probability": 2.78,
         "eliminated": false,
-        "fair_odds": 35.92,
+        "fair_odds": 36.0,
         "market_percent": 125,
-        "market_odds": 28.74,
+        "market_odds": 28.8,
         "trotify_odds": 31.0
       },
       {
@@ -720,5 +720,5 @@
       "total": 17
     }
   ],
-  "last_updated": "2026-10-05 16:56:02"
+  "last_updated": "2026-10-05 17:01:02"
 }
