@@ -92,7 +92,7 @@
   },
   "market": {
     "enabled": true,
-    "generated": "2026-10-05 16:51:07",
+    "generated": "2026-10-05 16:56:07",
     "simulations": 100000,
     "market_percent": 125,
     "remaining_races": [
@@ -102,8 +102,8 @@
       {
         "driver": "Kate Gath",
         "current_points": 34,
-        "simulation_wins": 46448,
-        "probability": 46.45,
+        "simulation_wins": 46426,
+        "probability": 46.43,
         "eliminated": false,
         "fair_odds": 2.15,
         "market_percent": 125,
@@ -113,34 +113,34 @@
       {
         "driver": "Jordan Leedham",
         "current_points": 34,
-        "simulation_wins": 36896,
-        "probability": 36.9,
+        "simulation_wins": 37042,
+        "probability": 37.04,
         "eliminated": false,
-        "fair_odds": 2.71,
+        "fair_odds": 2.7,
         "market_percent": 125,
-        "market_odds": 2.17,
+        "market_odds": 2.16,
         "trotify_odds": 2.2
       },
       {
         "driver": "James Herbertson",
         "current_points": 29,
-        "simulation_wins": 13931,
-        "probability": 13.93,
+        "simulation_wins": 13748,
+        "probability": 13.75,
         "eliminated": false,
-        "fair_odds": 7.18,
+        "fair_odds": 7.27,
         "market_percent": 125,
-        "market_odds": 5.74,
-        "trotify_odds": 5.5
+        "market_odds": 5.82,
+        "trotify_odds": 6.0
       },
       {
         "driver": "Michael Bellman",
         "current_points": 28,
-        "simulation_wins": 2725,
-        "probability": 2.73,
+        "simulation_wins": 2784,
+        "probability": 2.78,
         "eliminated": false,
-        "fair_odds": 36.7,
+        "fair_odds": 35.92,
         "market_percent": 125,
-        "market_odds": 29.36,
+        "market_odds": 28.74,
         "trotify_odds": 31.0
       },
       {
@@ -720,5 +720,5 @@
       "total": 17
     }
   ],
-  "last_updated": "2026-10-05 16:51:02"
+  "last_updated": "2026-10-05 16:56:02"
 }
