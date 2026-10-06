@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-06",
-  "puzzle_number": 5,
+  "date": "2026-10-07",
+  "puzzle_number": 6,
   "type": "HORSE",
-  "answer": "Angelic Attitude",
+  "answer": "Metallica Man",
   "stats": {
     "starts": 10,
-    "wins": 4,
-    "places": 7
+    "wins": 1,
+    "places": 3
   },
   "clues": [
     {
@@ -15,39 +15,39 @@
       "difficulty": 15,
       "source": "career_starts",
       "revealed_letters": 1,
-      "name_pattern": "A _ _ _ _ _ _    _ _ _ _ _ _ _ _"
+      "name_pattern": "M _ _ _ _ _ _ _ _    _ _ _"
     },
     {
       "clue_number": 2,
       "text": "All of my recorded starts have been in New South Wales.",
       "difficulty": 35,
       "source": "state",
-      "revealed_letters": 3,
-      "name_pattern": "A _ _ _ _ _ C    A _ _ _ _ _ _ _"
+      "revealed_letters": 2,
+      "name_pattern": "M _ _ _ _ _ _ _ _    M _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Riverina Paceway, Albury, Leeton.",
+      "text": "I've won at tracks including Newcastle.",
       "difficulty": 55,
       "source": "winning_tracks",
-      "revealed_letters": 4,
-      "name_pattern": "A _ _ _ _ _ C    A _ _ I _ _ _ _"
+      "revealed_letters": 3,
+      "name_pattern": "M _ _ _ _ _ I _ _    M _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Jackson Painting.",
+      "text": "I'm currently associated most often with trainer Tom Ison.",
       "difficulty": 75,
       "source": "trainer",
-      "revealed_letters": 6,
-      "name_pattern": "A _ _ _ L _ C    A _ _ I _ U _ _"
+      "revealed_letters": 4,
+      "name_pattern": "M _ _ _ _ _ I _ A    M _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Young on 29 September 2026, where I finished 5th for trainer Jackson Painting and driver Eli Lepper.",
+      "text": "My most recent start was at Newcastle on 25 September 2026, where I finished 1st for trainer Tom Ison and driver Cooper Griffiths.",
       "difficulty": 95,
       "source": "last_start",
-      "revealed_letters": 7,
-      "name_pattern": "A N _ _ L _ C    A _ _ I _ U _ _"
+      "revealed_letters": 6,
+      "name_pattern": "M _ _ A _ _ I _ A    M A _"
     }
   ]
 }
