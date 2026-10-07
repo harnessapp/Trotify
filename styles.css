@@ -12287,3 +12287,198 @@ body.legal-modal-open {
     color: #8b949e;
 
 }
+
+/* =========================================================
+   TROTIFY TIPS
+   ========================================================= */
+
+.trotify-tips-view {
+    width: 100%;
+    padding: 4px 0 0;
+}
+
+.trotify-tips-intro {
+    margin: 0 0 16px;
+    color: #9aa8b6;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.trotify-tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* Individual tip row */
+
+.trotify-tip-card {
+    width: 100%;
+    min-height: 66px;
+
+    display: grid;
+    grid-template-columns: 100px 220px minmax(0, 1fr) 30px;
+    align-items: center;
+    gap: 14px;
+
+    padding: 10px 16px;
+
+    background: #122631;
+    border: 1px solid #16414a;
+    border-radius: 14px;
+
+    color: #f4f7fa;
+    font-family: inherit;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.15s ease,
+        background 0.15s ease,
+        transform 0.15s ease;
+}
+
+.trotify-tip-card:hover {
+    background: #14303a;
+    border-color: #00d8c0;
+    transform: translateY(-1px);
+}
+
+
+/* Countdown */
+
+.trotify-tip-countdown {
+    color: #62ef91;
+    font-size: 15px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+
+/* Race */
+
+.trotify-tip-race {
+    min-width: 0;
+}
+
+.trotify-tip-race strong {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #f5f7fa;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.trotify-tip-race strong span {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 2px 7px;
+
+    border: 1px solid rgba(0, 216, 192, 0.35);
+    border-radius: 999px;
+
+    color: #00d8c0;
+    background: rgba(0, 216, 192, 0.08);
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.trotify-tip-race > div {
+    margin-top: 3px;
+
+    color: #8d9aa7;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* Horse */
+
+.trotify-tip-runner {
+    min-width: 0;
+}
+
+.trotify-tip-runner > strong {
+    display: block;
+
+    color: #00e0c6;
+    font-size: 15px;
+    font-weight: 900;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trotify-tip-prices {
+    margin-top: 4px;
+
+    color: #8d9aa7;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.trotify-tip-prices strong {
+    color: #62ef91;
+    font-weight: 800;
+}
+
+
+/* Arrow */
+
+.trotify-tip-arrow {
+    justify-self: end;
+
+    color: #00e0c6;
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   TROTIFY TIPS - MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .trotify-tips-intro {
+        margin-bottom: 12px;
+        font-size: 12px;
+    }
+
+    .trotify-tip-card {
+        grid-template-columns: 66px 1fr 20px;
+        gap: 9px;
+
+        min-height: 68px;
+        padding: 10px 11px;
+        border-radius: 12px;
+    }
+
+    .trotify-tip-countdown {
+        font-size: 12px;
+    }
+
+    .trotify-tip-race {
+        display: none;
+    }
+
+    .trotify-tip-runner > strong {
+        font-size: 14px;
+    }
+
+    .trotify-tip-prices {
+        font-size: 11px;
+    }
+
+    .trotify-tip-arrow {
+        font-size: 23px;
+    }
+}

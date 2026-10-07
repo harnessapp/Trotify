@@ -27,6 +27,8 @@ const HRA_ANALYSIS_URL = "hra_analysis.csv";
 
 const RACE_MEDIA_URL = "race_media.csv";
 
+const TROTIFY_TIPS_URL = "trotify_tips.csv";
+
 let chartRacePayload = null;
 let chartRaceInstance = null;
 let chartRaceTimer = null;
@@ -702,6 +704,25 @@ async function loadFieldSizeStats() {
     }
 }
 
+async function loadTrotifyTips() {
+    try {
+        const response = await fetch(
+            TROTIFY_TIPS_URL + "?v=" + Date.now(),
+            { cache: "no-store" }
+        );
+
+        if (!response.ok) {
+            throw new Error(`Could not load ${TROTIFY_TIPS_URL}`);
+        }
+
+        const text = await response.text();
+        return parseCSV(text);
+    } catch (error) {
+        console.log("Could not load Trotify Tips:", error);
+        return [];
+    }
+}
+
 async function loadTrialsData() {
     try {
         const response = await fetch(TRIALS_URL, { cache: "no-store" });
@@ -1028,6 +1049,8 @@ function setupNavigation() {
                 showUpcomingFieldsView();
             } else if (view === "next-up") {
                 showNextUpView();
+            } else if (view === "trotify-tips") {
+                showTrotifyTipsView();
             } else if (view === "feature-races") {
                 showFeatureRacesView();
             } else if (view === "latest-results") {
@@ -7682,6 +7705,143 @@ function renderLatestResultsHomeTile() {
     }
 }
 
+
+async function showTrotifyTipsView() {
+    stopTimelineRefresh();
+    clearNextUpTimer();
+
+    document.querySelector(".hero").style.display = "none";
+    document.querySelector(".dashboard-grid").style.display = "none";
+    document.querySelector(".meetings-panel").style.display = "";
+
+    document.querySelector(".panel-heading").innerHTML = `
+        <span>💡</span>
+        <span>Trotify Tips</span>
+    `;
+
+    const container = document.getElementById("meetingStrip");
+
+    container.innerHTML = `
+        <div class="coming-soon-card">
+            <div class="coming-soon-title">Loading Trotify Tips...</div>
+        </div>
+    `;
+
+    const tips = await loadTrotifyTips();
+
+    if (!tips.length) {
+        container.innerHTML = `
+            <div class="coming-soon-card">
+                <div class="coming-soon-title">No Trotify Tips currently available</div>
+                <p>
+                    Tips will appear here when Trotify finds a runner
+                    meeting the price criteria.
+                </p>
+            </div>
+        `;
+        return;
+    }
+
+    container.innerHTML = `
+        <div class="trotify-tips-view">
+
+            <div class="trotify-tips-intro">
+                Trotify Tips finds runners strongly rated by Trotify
+                where a better TAB Fixed Win price was found.
+            </div>
+
+            <div class="trotify-tips-list">
+                ${tips.map(renderTrotifyTipCard).join("")}
+            </div>
+
+        </div>
+    `;
+}
+
+
+function renderTrotifyTipCard(tip) {
+    const venue = clean(tip.Venue);
+    const state = clean(tip.State);
+    const raceNo = clean(tip["Race No"]).replace(/^R/i, "");
+    const horse = clean(tip.Horse);
+
+    const trotifyPrice = Number(tip.TrotifyPrice);
+    const foundPrice = Number(tip.TABFixedWin);
+
+    const raceStart = tip.RaceStartUTC
+        ? new Date(tip.RaceStartUTC)
+        : null;
+
+    let timeText = "";
+    let countdownText = "";
+
+    if (raceStart && !Number.isNaN(raceStart.getTime())) {
+        timeText = raceStart.toLocaleTimeString("en-AU", {
+            hour: "numeric",
+            minute: "2-digit"
+        });
+
+        const diffMs = raceStart.getTime() - Date.now();
+        const diffMinutes = Math.ceil(diffMs / 60000);
+
+        if (diffMinutes <= 0) {
+            countdownText = "Due";
+        } else if (diffMinutes < 60) {
+            countdownText = `${diffMinutes}m`;
+        } else {
+            const hours = Math.floor(diffMinutes / 60);
+            const minutes = diffMinutes % 60;
+            countdownText = minutes
+                ? `${hours}h ${minutes}m`
+                : `${hours}h`;
+        }
+    }
+
+    const raceKey = `${venue}|${state}|${clean(tip.Date)}|${raceNo}`;
+
+    return `
+        <button
+            type="button"
+            class="trotify-tip-card"
+            onclick="openTrotifyTipRace('${escapeHtml(raceKey)}')"
+        >
+            <div class="trotify-tip-countdown">
+                ⚡ ${escapeHtml(countdownText)}
+            </div>
+
+            <div class="trotify-tip-race">
+                <strong>
+                    ${escapeHtml(venue)} R${escapeHtml(raceNo)}
+                    ${state ? `<span>${escapeHtml(state)}</span>` : ""}
+                </strong>
+                <div>${escapeHtml(timeText)}</div>
+            </div>
+
+            <div class="trotify-tip-runner">
+                <strong>${escapeHtml(horse)}</strong>
+
+                <div class="trotify-tip-prices">
+                    Trotify $${Number.isFinite(trotifyPrice) ? trotifyPrice.toFixed(2) : "—"}
+                    ·
+                    <strong>
+                        Found at $${Number.isFinite(foundPrice) ? foundPrice.toFixed(2) : "—"}
+                    </strong>
+                </div>
+            </div>
+
+            <div class="trotify-tip-arrow">›</div>
+        </button>
+    `;
+}
+
+
+function openTrotifyTipRace(raceKey) {
+    const race = findUpcomingRaces(allRows).find(r => r.key === raceKey);
+
+    if (race) {
+        openRaceFromHome(race);
+    }
+}
 
 function showNextUpView() {
     stopTimelineRefresh();
