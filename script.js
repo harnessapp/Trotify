@@ -28,6 +28,7 @@ const HRA_ANALYSIS_URL = "hra_analysis.csv";
 const RACE_MEDIA_URL = "race_media.csv";
 
 const TROTIFY_TIPS_URL = "trotify_tips.csv";
+const TROTIFY_TIPS_HISTORY_URL = "trotify_tips_history.csv";
 
 let chartRacePayload = null;
 let chartRaceInstance = null;
@@ -719,6 +720,25 @@ async function loadTrotifyTips() {
         return parseCSV(text);
     } catch (error) {
         console.log("Could not load Trotify Tips:", error);
+        return [];
+    }
+}
+
+async function loadTrotifyTipsHistory() {
+    try {
+        const response = await fetch(
+            TROTIFY_TIPS_HISTORY_URL + "?v=" + Date.now(),
+            { cache: "no-store" }
+        );
+
+        if (!response.ok) {
+            throw new Error(`Could not load ${TROTIFY_TIPS_HISTORY_URL}`);
+        }
+
+        const text = await response.text();
+        return parseCSV(text);
+    } catch (error) {
+        console.log("Could not load Trotify Tips history:", error);
         return [];
     }
 }
@@ -7727,7 +7747,10 @@ async function showTrotifyTipsView() {
         </div>
     `;
 
-    const tips = await loadTrotifyTips();
+    const [tips, history] = await Promise.all([
+        loadTrotifyTips(),
+        loadTrotifyTipsHistory()
+    ]);
 
     if (!tips.length) {
         container.innerHTML = `
@@ -7751,7 +7774,7 @@ async function showTrotifyTipsView() {
             </div>
 
             <div class="trotify-tips-list">
-                ${tips.map(renderTrotifyTipCard).join("")}
+                ${tips.map(tip => renderTrotifyTipCard(tip, history)).join("")}
             </div>
 
         </div>
@@ -7759,14 +7782,22 @@ async function showTrotifyTipsView() {
 }
 
 
-function renderTrotifyTipCard(tip) {
+function renderTrotifyTipCard(tip, history) {
     const venue = clean(tip.Venue);
     const state = clean(tip.State);
     const raceNo = clean(tip["Race No"]).replace(/^R/i, "");
     const horse = clean(tip.Horse);
 
     const trotifyPrice = Number(tip.TrotifyPrice);
-    const foundPrice = Number(tip.TABFixedWin);
+
+    const historyRow = history.find(row =>
+        clean(row.RaceAnchorFull) === clean(tip.RaceAnchorFull) &&
+        clean(row.Horse).toUpperCase() === clean(tip.Horse).toUpperCase()
+    );
+
+    const foundPrice = Number(
+        historyRow?.FirstTABPrice || tip.TABFixedWin
+    );
 
     const raceStart = tip.RaceStartUTC
         ? new Date(tip.RaceStartUTC)
@@ -7824,7 +7855,7 @@ function renderTrotifyTipCard(tip) {
                     Trotify $${Number.isFinite(trotifyPrice) ? trotifyPrice.toFixed(2) : "—"}
                     ·
                     <strong>
-                        Found at $${Number.isFinite(foundPrice) ? foundPrice.toFixed(2) : "—"}
+                        Found $${Number.isFinite(foundPrice) ? foundPrice.toFixed(2) : "—"}
                     </strong>
                 </div>
             </div>
