@@ -7769,8 +7769,6 @@ async function showTrotifyTipsView() {
         <div class="trotify-tips-view">
 
             <div class="trotify-tips-intro">
-                Trotify Tips finds runners strongly rated by Trotify
-                where a better TAB Fixed Win price was found.
             </div>
 
             <div class="trotify-tips-list">
