@@ -7786,6 +7786,26 @@ function renderTrotifyTipCard(tip, history) {
     const raceNo = clean(tip["Race No"]).replace(/^R/i, "");
     const horse = clean(tip.Horse);
 
+    const matchingRunner = allRows.find(row =>
+        clean(row.Venue) === venue &&
+        clean(row.State || row.STATE || row["State "] || "") === state &&
+        clean(row["Race No"] || row.RaceNo || row.Race || "").replace(/^R/i, "") === raceNo &&
+        clean(row.Horse).toUpperCase() === horse.toUpperCase()
+    );
+
+    const driver = matchingRunner
+        ? clean(matchingRunner.Driver)
+        : "";
+
+    const horseNo = matchingRunner
+        ? clean(
+            matchingRunner["Horse No"] ||
+            matchingRunner.HorseNo ||
+            matchingRunner["No"] ||
+            ""
+        )
+        : "";
+
     const trotifyPrice = Number(tip.TrotifyPrice);
 
     const historyRow = history.find(row =>
@@ -7840,14 +7860,21 @@ function renderTrotifyTipCard(tip, history) {
 
             <div class="trotify-tip-race">
                 <strong>
-                    ${escapeHtml(venue)} R${escapeHtml(raceNo)}
+                    ${escapeHtml(venue)}
                     ${state ? `<span>${escapeHtml(state)}</span>` : ""}
                 </strong>
-                <div>${escapeHtml(timeText)}</div>
+                <div>
+                    R${escapeHtml(raceNo)}
+                    ${horseNo ? ` No ${escapeHtml(horseNo)}` : ""}
+                    · ${escapeHtml(timeText)}
+                </div>
             </div>
 
             <div class="trotify-tip-runner">
-                <strong>${escapeHtml(horse)}</strong>
+                <strong>
+                    ${escapeHtml(horse)}
+                    ${driver ? `<span class="trotify-tip-driver">(${escapeHtml(driver)})</span>` : ""}
+                </strong>
 
                 <div class="trotify-tip-prices">
                     Trotify $${Number.isFinite(trotifyPrice) ? trotifyPrice.toFixed(2) : "—"}

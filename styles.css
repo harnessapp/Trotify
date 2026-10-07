@@ -12482,3 +12482,10 @@ body.legal-modal-open {
         font-size: 23px;
     }
 }
+
+.trotify-tip-driver {
+    font-size: 0.67em;
+    font-weight: 600;
+    color: #9aa8b6;
+    margin-left: 4px;
+}
