@@ -1,2 +1,2 @@
-RaceAnchorFull,Date,Venue,State,Race No,RaceStartUTC,Horse,Barrier,TrotifyPrice,FirstTABPrice,BestTABPrice,LastTABPrice,FirstListedUTC,LastSeenUTC,FinalStatus
-RE071026_R8,7/10/2026,Redcliffe,QLD,8,2026-10-07T10:54:00Z,DISEMBARK,Fr5,1.10,1.6,1.60,1.40,2026-10-06T20:40:15.340838+00:00,2026-10-07T10:40:19.074632+00:00,
+RaceAnchorFull,Date,Venue,State,Race No,RaceStartUTC,Horse,Barrier,TrotifyPrice,TABOpenPrice,FirstTABPrice,BestTABPrice,LastTABPrice,FirstListedUTC,LastSeenUTC,FinalStatus
+RE071026_R8,7/10/2026,Redcliffe,QLD,8,2026-10-07T10:54:00Z,DISEMBARK,Fr5,1.10,,1.6,1.60,1.33,2026-10-06T20:40:15.340838+00:00,2026-10-07T10:51:41.973703+00:00,
