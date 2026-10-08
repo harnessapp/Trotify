@@ -7725,10 +7725,19 @@ function renderLatestResultsHomeTile() {
     }
 }
 
+let trotifyTipsRefreshTimer = null;
+
+function stopTrotifyTipsRefresh() {
+    if (trotifyTipsRefreshTimer !== null) {
+        clearInterval(trotifyTipsRefreshTimer);
+        trotifyTipsRefreshTimer = null;
+    }
+}
 
 async function showTrotifyTipsView() {
     stopTimelineRefresh();
     clearNextUpTimer();
+    stopTrotifyTipsRefresh();
 
     document.querySelector(".hero").style.display = "none";
     document.querySelector(".dashboard-grid").style.display = "none";
@@ -7747,36 +7756,46 @@ async function showTrotifyTipsView() {
         </div>
     `;
 
-    const [tips, history] = await Promise.all([
-        loadTrotifyTips(),
-        loadTrotifyTipsHistory()
-    ]);
+    async function refreshTips() {
+        const [tips] = await Promise.all([
+            loadTrotifyTips()
+        ]);
 
-    if (!tips.length) {
+        // Only display tips for races that haven't started.
+        const now = Date.now();
+
+        const activeTips = tips.filter(tip => {
+            const raceStart = Date.parse(tip.RaceStartUTC);
+            return Number.isFinite(raceStart) && raceStart > now;
+        });
+
+        if (!activeTips.length) {
+            container.innerHTML = `
+                <div class="coming-soon-card">
+                    <div class="coming-soon-title">No Trotify Tips currently available</div>
+                    <p>
+                        Tips will appear here when Trotify finds a runner
+                        meeting the price criteria.
+                    </p>
+                </div>
+            `;
+            return;
+        }
+
         container.innerHTML = `
-            <div class="coming-soon-card">
-                <div class="coming-soon-title">No Trotify Tips currently available</div>
-                <p>
-                    Tips will appear here when Trotify finds a runner
-                    meeting the price criteria.
-                </p>
+            <div class="trotify-tips-view">
+                <div class="trotify-tips-intro"></div>
+
+                <div class="trotify-tips-list">
+                    ${activeTips.map(tip => renderTrotifyTipCard(tip)).join("")}
+                </div>
             </div>
         `;
-        return;
     }
 
-    container.innerHTML = `
-        <div class="trotify-tips-view">
+    await refreshTips();
 
-            <div class="trotify-tips-intro">
-            </div>
-
-            <div class="trotify-tips-list">
-                ${tips.map(tip => renderTrotifyTipCard(tip, history)).join("")}
-            </div>
-
-        </div>
-    `;
+    trotifyTipsRefreshTimer = setInterval(refreshTips, 60000);
 }
 
 
