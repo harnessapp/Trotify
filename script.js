@@ -7747,7 +7747,7 @@ async function showTrotifyTipsView() {
 
     document.querySelector(".panel-heading").innerHTML = `
         <span>💡</span>
-        <span>Trotify Tips</span>
+        <span>Today's Trotify Tips</span>
     `;
 
     const container = document.getElementById("meetingStrip");
