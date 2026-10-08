@@ -7826,15 +7826,14 @@ function renderTrotifyTipCard(tip, history) {
         : "";
 
     const trotifyPrice = Number(tip.TrotifyPrice);
+    const openPrice = tip.TABOpenPrice
+        ? Number(tip.TABOpenPrice)
+        : NaN;
+    const lastPrice = tip.TABFixedWin
+        ? Number(tip.TABFixedWin)
+        : NaN;
 
-    const historyRow = history.find(row =>
-        clean(row.RaceAnchorFull) === clean(tip.RaceAnchorFull) &&
-        clean(row.Horse).toUpperCase() === clean(tip.Horse).toUpperCase()
-    );
 
-    const foundPrice = Number(
-        historyRow?.FirstTABPrice || tip.TABFixedWin
-    );
 
     const raceStart = tip.RaceStartUTC
         ? new Date(tip.RaceStartUTC)
@@ -7896,12 +7895,15 @@ function renderTrotifyTipCard(tip, history) {
                 </strong>
 
                 <div class="trotify-tip-prices">
-                    Trotify $${Number.isFinite(trotifyPrice) ? trotifyPrice.toFixed(2) : "—"}
+                    Trotify ${Number.isFinite(trotifyPrice) ? "$" + trotifyPrice.toFixed(2) : "—"}
                     ·
-                    <strong>
-                        Found $${Number.isFinite(foundPrice) ? foundPrice.toFixed(2) : "—"}
+                    Open ${Number.isFinite(openPrice) ? "$" + openPrice.toFixed(2) : "—"}
+                    ·
+                    <strong style="${Number.isFinite(lastPrice) && lastPrice < trotifyPrice ? "color: #e74c3c;" : ""}">
+                        Last ${Number.isFinite(lastPrice) ? "$" + lastPrice.toFixed(2) : "—"}
                     </strong>
                 </div>
+
             </div>
 
             <div class="trotify-tip-arrow">›</div>
