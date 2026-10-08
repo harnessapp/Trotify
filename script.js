@@ -7771,6 +7771,10 @@ async function showTrotifyTipsView() {
             return Number.isFinite(raceStart) && raceStart > now;
         });
 
+        if (!document.querySelector('.nav-item[data-view="trotify-tips"]')?.classList.contains("active")) {
+            return;
+        }
+
         if (!activeTips.length) {
             container.innerHTML = `
                 <div class="coming-soon-card">
