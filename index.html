@@ -449,6 +449,26 @@
         );
     }
 
+    async function updateTipAlertButtons() {
+        if (!("serviceWorker" in navigator)) return;
+
+        const registration = await navigator.serviceWorker.ready;
+        const subscription = await registration.pushManager.getSubscription();
+
+        document.querySelectorAll(
+            "#enableTipNotifications, #enableTipNotificationsMobile"
+        ).forEach(button => {
+            button.style.display = subscription ? "none" : "";
+        });
+
+        const mobileContainer = document.getElementById("mobileTipAlerts");
+        if (mobileContainer) {
+            mobileContainer.style.display = subscription ? "none" : "";
+        }
+    }
+
+    updateTipAlertButtons().catch(console.error);
+
     document.querySelectorAll(
         "#enableTipNotifications, #enableTipNotificationsMobile"
     ).forEach(button => {
@@ -485,6 +505,7 @@
                     JSON.stringify(subscription));
 
                 alert("Trotify notification subscription created successfully!");
+                await updateTipAlertButtons();
 
                 // Next step: securely send this subscription to our backend.
 
