@@ -159,6 +159,13 @@
                 <div class="topbar-right">
                     <span id="todayLabel">Today</span>
                     <button class="ghost-button">Race Calendar</button>
+                    <button
+                        type="button"
+                        class="ghost-button"
+                        id="enableTipNotifications"
+                    >
+                        🔔 Enable Alerts
+                    </button>
                 </div>
             </header>
 
@@ -412,6 +419,69 @@
     <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 
     <script src="script.js?v=133"></script>
+
+
+    <script>
+    const TROTIFY_VAPID_PUBLIC_KEY =
+        "BMZfG4ig9MeACOkSpyEtwJISup0dzUG2v2KCDLVtYxTN1mIsEW8MYcRqJBJfLYG8CSKGJdlRPCH2d7tieLQcKk8";
+
+    function urlBase64ToUint8Array(base64String) {
+        const padding = "=".repeat((4 - base64String.length % 4) % 4);
+        const base64 = (base64String + padding)
+            .replace(/-/g, "+")
+            .replace(/_/g, "/");
+
+        const rawData = atob(base64);
+        return Uint8Array.from(
+            rawData,
+            character => character.charCodeAt(0)
+        );
+    }
+
+    document.getElementById("enableTipNotifications")
+        ?.addEventListener("click", async function () {
+            try {
+                if (!("serviceWorker" in navigator) ||
+                    !("PushManager" in window) ||
+                    !("Notification" in window)) {
+                    alert("Push notifications are not supported here.");
+                    return;
+                }
+
+                const permission = await Notification.requestPermission();
+
+                if (permission !== "granted") {
+                    alert("Notifications were not enabled.");
+                    return;
+                }
+
+                const registration = await navigator.serviceWorker.ready;
+
+                let subscription =
+                    await registration.pushManager.getSubscription();
+
+                if (!subscription) {
+                    subscription = await registration.pushManager.subscribe({
+                        userVisibleOnly: true,
+                        applicationServerKey:
+                            urlBase64ToUint8Array(TROTIFY_VAPID_PUBLIC_KEY)
+                    });
+                }
+
+                console.log("Trotify push subscription:",
+                    JSON.stringify(subscription));
+
+                alert("Trotify notification subscription created successfully!");
+
+                // Next step: securely send this subscription to our backend.
+
+            } catch (error) {
+                console.error("Trotify notification setup failed:", error);
+                alert("Notification setup failed: " + error.message);
+            }
+        });
+    </script>
+
 
     <script
         src="https://open.spotify.com/embed/iframe-api/v1"
