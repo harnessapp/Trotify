@@ -1,53 +1,55 @@
 {
-  "date": "2026-10-08",
-  "puzzle_number": 7,
-  "type": "HORSE",
-  "answer": "Racing Writer",
+  "date": "2026-10-09",
+  "puzzle_number": 8,
+  "type": "DRIVER",
+  "answer": "Todd Rattray",
   "stats": {
-    "starts": 11,
-    "wins": 3,
-    "places": 5
+    "career_starts": 1923,
+    "career_wins": 244,
+    "recent_starts": 329,
+    "recent_wins": 39,
+    "recent_places": 125
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 11 race starts.",
+      "text": "In the past 12 months, I've had 329 drives.",
       "difficulty": 15,
-      "source": "career_starts",
+      "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "R _ _ _ _ _    _ _ _ _ _ _"
+      "name_pattern": "T _ _ _    _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "All of my recorded starts have been in New South Wales.",
-      "difficulty": 35,
-      "source": "state",
+      "text": "The track I've driven at most in the past 12 months is Launceston.",
+      "difficulty": 40,
+      "source": "favourite_venue",
       "revealed_letters": 2,
-      "name_pattern": "R _ _ _ _ _    W _ _ _ _ _"
+      "name_pattern": "T _ _ _    R _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Penrith, Menangle.",
-      "difficulty": 55,
-      "source": "winning_tracks",
+      "text": "My win strike rate over the past 12 months is about 12%.",
+      "difficulty": 50,
+      "source": "win_pct",
       "revealed_letters": 3,
-      "name_pattern": "R _ _ _ _ G    W _ _ _ _ _"
+      "name_pattern": "T _ _ _    R A _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Chris Judd.",
+      "text": "One of my most recent winners was Phlow Jo at Hobart.",
       "difficulty": 75,
-      "source": "trainer",
+      "source": "recent_winner",
       "revealed_letters": 4,
-      "name_pattern": "R _ _ _ _ G    W _ I _ _ _"
+      "name_pattern": "T _ _ _    R A _ T _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Penrith on 1 October 2026, where I finished 7th for trainer Chris Judd and driver Mason Bigeni.",
+      "text": "My first name is Todd. ",
       "difficulty": 95,
-      "source": "last_start",
-      "revealed_letters": 6,
-      "name_pattern": "R _ _ I _ G    W _ I _ E _"
+      "source": "first_name",
+      "revealed_letters": 5,
+      "name_pattern": "T _ _ D    R A _ T _ _ _"
     }
   ]
 }
