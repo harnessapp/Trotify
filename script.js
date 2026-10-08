@@ -1058,6 +1058,8 @@ function setupNavigation() {
         item.addEventListener("click", function (e) {
             e.preventDefault();
 
+            stopTrotifyTipsRefresh();
+
             document.querySelectorAll(".nav-item").forEach(i => i.classList.remove("active"));
             this.classList.add("active");
 
@@ -8903,6 +8905,8 @@ function openRaceFromHomeByKey(key) {
 }
 
 function openRaceFromHome(race) {
+    stopTrotifyTipsRefresh();
+
     document.querySelectorAll(".nav-item").forEach(i => i.classList.remove("active"));
     document.querySelector('.nav-item[data-view="upcoming"]').classList.add("active");
 
