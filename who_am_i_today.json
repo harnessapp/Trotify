@@ -1,55 +1,53 @@
 {
-  "date": "2026-10-09",
-  "puzzle_number": 8,
-  "type": "DRIVER",
-  "answer": "Todd Rattray",
+  "date": "2026-10-10",
+  "puzzle_number": 9,
+  "type": "HORSE",
+  "answer": "Feelin Forastar",
   "stats": {
-    "career_starts": 1923,
-    "career_wins": 244,
-    "recent_starts": 329,
-    "recent_wins": 39,
-    "recent_places": 125
+    "starts": 14,
+    "wins": 2,
+    "places": 2
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "In the past 12 months, I've had 329 drives.",
+      "text": "I've had 14 race starts.",
       "difficulty": 15,
-      "source": "recent_starts",
+      "source": "career_starts",
       "revealed_letters": 1,
-      "name_pattern": "T _ _ _    _ _ _ _ _ _ _"
+      "name_pattern": "F _ _ _ _ _    _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "The track I've driven at most in the past 12 months is Launceston.",
-      "difficulty": 40,
-      "source": "favourite_venue",
+      "text": "All of my recorded starts have been in Queensland.",
+      "difficulty": 35,
+      "source": "state",
       "revealed_letters": 2,
-      "name_pattern": "T _ _ _    R _ _ _ _ _ _"
+      "name_pattern": "F _ _ _ _ _    F _ _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "My win strike rate over the past 12 months is about 12%.",
-      "difficulty": 50,
-      "source": "win_pct",
-      "revealed_letters": 3,
-      "name_pattern": "T _ _ _    R A _ _ _ _ _"
+      "text": "I've won at tracks including Redcliffe.",
+      "difficulty": 55,
+      "source": "winning_tracks",
+      "revealed_letters": 4,
+      "name_pattern": "F _ _ _ _ _    F O _ A _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "One of my most recent winners was Phlow Jo at Hobart.",
+      "text": "I'm currently associated most often with trainer Jonah Hutchinson.",
       "difficulty": 75,
-      "source": "recent_winner",
-      "revealed_letters": 4,
-      "name_pattern": "T _ _ _    R A _ T _ _ _"
+      "source": "trainer",
+      "revealed_letters": 5,
+      "name_pattern": "F _ _ L _ _    F O _ A _ _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Todd. ",
+      "text": "My most recent start was at Redcliffe on 7 October 2026, where I finished 8th for trainer Jonah Hutchinson and driver Jonah Hutchinson.",
       "difficulty": 95,
-      "source": "first_name",
-      "revealed_letters": 5,
-      "name_pattern": "T _ _ D    R A _ T _ _ _"
+      "source": "last_start",
+      "revealed_letters": 7,
+      "name_pattern": "F E _ L _ _    F O _ A _ _ A _"
     }
   ]
 }
