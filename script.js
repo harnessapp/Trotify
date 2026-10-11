@@ -18558,7 +18558,7 @@ function showNotificationSettingsView() {
             id: "watchlist",
             icon: "⭐",
             name: "Watchlist",
-            description: "Get notified when a horse on your watchlist is racing.",
+            description: "Get notified when a horse, trainer or driver on your watchlist is racing.",
             enabled: false,
             defaultMinutes: [60]
         },
