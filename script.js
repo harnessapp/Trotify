@@ -18772,16 +18772,6 @@ function showNotificationSettingsView() {
                 Checking your notification settings...
             </div>
 
-            <p style="
-                margin-top: 14px;
-                color: #a5b6bf;
-                font-size: 12px;
-            ">
-                Beta: preferences can be saved, but alert delivery
-                will not follow these settings until the notification
-                sender has been updated.
-            </p>
-
         </div>
     `;
 
@@ -19086,10 +19076,7 @@ function showNotificationSettingsView() {
 
             applyPreferences(savedPreferences);
 
-            setMessage(
-                "Preferences saved successfully to Cloudflare. " +
-                "Alert delivery rules are not active yet."
-            );
+            setMessage("");
 
         } catch (error) {
             console.error(
