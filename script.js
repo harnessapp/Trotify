@@ -1095,6 +1095,8 @@ function setupNavigation() {
                 showTrialWatchView();
             } else if (view === "who-am-i") {
                 showWhoAmIView();
+            } else if (view === "notification-settings") {
+                showNotificationSettingsView();
             } else if (view === "adc") {
                 showAdcView();
             } else if (view === "horsham") {
@@ -18470,5 +18472,43 @@ function closeRaceMedia() {
     activeMediaStopped = false;
 
     document.getElementById("raceMediaPopup")?.remove();
+}
+
+function showNotificationSettingsView() {
+    stopTimelineRefresh();
+    clearNextUpTimer();
+    stopTrotifyTipsRefresh();
+
+    document.querySelector(".hero").style.display = "none";
+    document.querySelector(".dashboard-grid").style.display = "none";
+    document.querySelector(".meetings-panel").style.display = "";
+
+    document.querySelector(".panel-heading").innerHTML = `
+        <span>🔔</span>
+        <span>Notification Settings</span>
+    `;
+
+    document.getElementById("meetingStrip").innerHTML = `
+        <div class="coming-soon-card">
+            <div class="coming-soon-title">
+                🔔 Manage Your Notifications
+            </div>
+
+            <p>
+                Choose which Trotify notifications you want
+                to receive and when you'd like to receive them.
+            </p>
+
+            <p>
+                💰 Trotify Tips<br>
+                ⭐ Watchlist<br>
+                🏆 Feature Races
+            </p>
+
+            <p>
+                Notification preferences will be available here shortly.
+            </p>
+        </div>
+    `;
 }
 
