@@ -439,140 +439,213 @@
     <script src="script.js?v=134"></script>
 
 
+
     <script>
-    const TROTIFY_VAPID_PUBLIC_KEY =
-        "BMZfG4ig9MeACOkSpyEtwJISup0dzUG2v2KCDLVtYxTN1mIsEW8MYcRqJBJfLYG8CSKGJdlRPCH2d7tieLQcKk8";
+        const TROTIFY_VAPID_PUBLIC_KEY =
+            "BMZfG4ig9MeACOkSpyEtwJISup0dzUG2v2KCDLVtYxTN1mIsEW8MYcRqJBJfLYG8CSKGJdlRPCH2d7tieLQcKk8";
 
-    function urlBase64ToUint8Array(base64String) {
-        const padding = "=".repeat((4 - base64String.length % 4) % 4);
-        const base64 = (base64String + padding)
-            .replace(/-/g, "+")
-            .replace(/_/g, "/");
+        const TROTIFY_NOTIFICATION_API =
+            "https://trotify-notifications.joelpatching.workers.dev";
 
-        const rawData = atob(base64);
-        return Uint8Array.from(
-            rawData,
-            character => character.charCodeAt(0)
-        );
-    }
+        const TROTIFY_TOKEN_STORAGE_KEY =
+            "trotify_notification_management_token_v1";
 
-    async function updateTipAlertButtons() {
-        if (!("serviceWorker" in navigator)) return;
+        function urlBase64ToUint8Array(base64String) {
+            const padding = "=".repeat(
+                (4 - base64String.length % 4) % 4
+            );
 
-        const registration = await navigator.serviceWorker.ready;
-        const subscription = await registration.pushManager.getSubscription();
+            const base64 = (base64String + padding)
+                .replace(/-/g, "+")
+                .replace(/_/g, "/");
+
+            const rawData = atob(base64);
+
+            return Uint8Array.from(
+                rawData,
+                character => character.charCodeAt(0)
+            );
+        }
+
+        function getTrotifyManagementToken() {
+            return localStorage.getItem(TROTIFY_TOKEN_STORAGE_KEY);
+        }
+
+        function saveTrotifyManagementToken(token) {
+            if (typeof token === "string" &&
+                /^[a-f0-9]{64}$/.test(token)) {
+                localStorage.setItem(
+                    TROTIFY_TOKEN_STORAGE_KEY,
+                    token
+                );
+            }
+        }
+
+        async function registerTrotifySubscription(subscription) {
+            const response = await fetch(
+                TROTIFY_NOTIFICATION_API + "/subscribe",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(subscription)
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error(
+                    "Subscription registration failed: HTTP " +
+                    response.status
+                );
+            }
+
+            const result = await response.json();
+
+            if (result.management_token) {
+                saveTrotifyManagementToken(
+                    result.management_token
+                );
+
+                console.log(
+                    "Trotify notification management token saved"
+                );
+            } else if (result.already_managed) {
+                console.log(
+                    "Trotify subscription already has a management token"
+                );
+
+                if (!getTrotifyManagementToken()) {
+                    console.warn(
+                        "This device is registered but has no locally saved management token."
+                    );
+                }
+            }
+
+            return result;
+        }
+
+        async function updateTipAlertButtons() {
+            if (!("serviceWorker" in navigator)) return;
+
+            const registration =
+                await navigator.serviceWorker.ready;
+
+            const subscription =
+                await registration.pushManager.getSubscription();
+
+            document.querySelectorAll(
+                "#enableTipNotifications, #enableTipNotificationsMobile"
+            ).forEach(button => {
+                button.style.display = subscription ? "none" : "";
+            });
+
+            const mobileContainer =
+                document.getElementById("mobileTipAlerts");
+
+            if (mobileContainer) {
+                mobileContainer.style.display =
+                    subscription ? "none" : "";
+            }
+        }
+
+        async function syncExistingTipSubscription() {
+            if (!("serviceWorker" in navigator) ||
+                !("PushManager" in window) ||
+                !("Notification" in window)) {
+                return;
+            }
+
+            if (Notification.permission !== "granted") {
+                return;
+            }
+
+            const registration =
+                await navigator.serviceWorker.ready;
+
+            const subscription =
+                await registration.pushManager.getSubscription();
+
+            if (!subscription) return;
+
+            await registerTrotifySubscription(subscription);
+
+            console.log(
+                "Existing Trotify subscription synchronised"
+            );
+        }
+
+        // Preserve the existing automatic subscription sync.
+        syncExistingTipSubscription().catch(error => {
+            console.error(
+                "Trotify subscription sync failed:",
+                error
+            );
+        });
+
+        updateTipAlertButtons().catch(console.error);
 
         document.querySelectorAll(
             "#enableTipNotifications, #enableTipNotificationsMobile"
         ).forEach(button => {
-            button.style.display = subscription ? "none" : "";
-        });
+            button.addEventListener("click", async function () {
+                try {
+                    if (!("serviceWorker" in navigator) ||
+                        !("PushManager" in window) ||
+                        !("Notification" in window)) {
 
-        const mobileContainer = document.getElementById("mobileTipAlerts");
-        if (mobileContainer) {
-            mobileContainer.style.display = subscription ? "none" : "";
-        }
-    }
-
-    updateTipAlertButtons().catch(console.error);
-
-
-    async function syncExistingTipSubscription() {
-        if (!("serviceWorker" in navigator) ||
-            !("PushManager" in window)) return;
-
-        const registration = await navigator.serviceWorker.ready;
-        const subscription = await registration.pushManager.getSubscription();
-
-        if (!subscription || Notification.permission !== "granted") return;
-
-        const response = await fetch(
-            "https://trotify-notifications.joelpatching.workers.dev/subscribe",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(subscription)
-            }
-        );
-
-        if (!response.ok) {
-            throw new Error("Subscription sync failed: " + response.status);
-        }
-
-        console.log("Existing Trotify subscription synced");
-    }
-
-    syncExistingTipSubscription().catch(console.error);
-
-
-    document.querySelectorAll(
-        "#enableTipNotifications, #enableTipNotificationsMobile"
-    ).forEach(button => {
-        button.addEventListener("click", async function () {
-            try {
-                if (!("serviceWorker" in navigator) ||
-                    !("PushManager" in window) ||
-                    !("Notification" in window)) {
-                    alert("Push notifications are not supported here.");
-                    return;
-                }
-
-                const permission = await Notification.requestPermission();
-
-                if (permission !== "granted") {
-                    alert("Notifications were not enabled.");
-                    return;
-                }
-
-                const registration = await navigator.serviceWorker.ready;
-
-                let subscription =
-                    await registration.pushManager.getSubscription();
-
-                if (!subscription) {
-                    subscription = await registration.pushManager.subscribe({
-                        userVisibleOnly: true,
-                        applicationServerKey:
-                            urlBase64ToUint8Array(TROTIFY_VAPID_PUBLIC_KEY)
-                    });
-                }
-
-
-                const response = await fetch(
-                    "https://trotify-notifications.joelpatching.workers.dev/subscribe",
-                    {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify(subscription)
+                        alert(
+                            "Push notifications are not supported here."
+                        );
+                        return;
                     }
-                );
 
-                if (!response.ok) {
-                    throw new Error(
-                        "Unable to save subscription: HTTP " + response.status
+                    const permission =
+                        await Notification.requestPermission();
+
+                    if (permission !== "granted") {
+                        alert("Notifications were not enabled.");
+                        return;
+                    }
+
+                    const registration =
+                        await navigator.serviceWorker.ready;
+
+                    let subscription =
+                        await registration.pushManager.getSubscription();
+
+                    if (!subscription) {
+                        subscription =
+                            await registration.pushManager.subscribe({
+                                userVisibleOnly: true,
+                                applicationServerKey:
+                                    urlBase64ToUint8Array(
+                                        TROTIFY_VAPID_PUBLIC_KEY
+                                    )
+                            });
+                    }
+
+                    await registerTrotifySubscription(subscription);
+
+                    await updateTipAlertButtons();
+
+                    alert("Trotify Tip Alerts enabled!");
+
+                } catch (error) {
+                    console.error(
+                        "Trotify notification setup failed:",
+                        error
+                    );
+
+                    alert(
+                        "Notification setup failed: " +
+                        error.message
                     );
                 }
-
-                console.log("Trotify push subscription registered successfully");
-
-                alert("Trotify Tip Alerts enabled!");
-
-
-                await updateTipAlertButtons();
-
-                // Next step: securely send this subscription to our backend.
-
-            } catch (error) {
-                console.error("Trotify notification setup failed:", error);
-                alert("Notification setup failed: " + error.message);
-            }
             });
         });
     </script>
+
 
 
     <script
