@@ -18474,6 +18474,7 @@ function closeRaceMedia() {
     document.getElementById("raceMediaPopup")?.remove();
 }
 
+
 function showNotificationSettingsView() {
     stopTimelineRefresh();
     clearNextUpTimer();
@@ -18487,6 +18488,9 @@ function showNotificationSettingsView() {
         <span>🔔</span>
         <span>Notification Settings</span>
     `;
+
+    const API =
+        "https://trotify-notifications.joelpatching.workers.dev";
 
     const categories = [
         {
@@ -18524,6 +18528,20 @@ function showNotificationSettingsView() {
 
     const container = document.getElementById("meetingStrip");
 
+    const defaultPreferences = Object.fromEntries(
+        categories.map(category => [
+            category.id,
+            {
+                enabled: category.enabled,
+                reminder_minutes: [...category.defaultMinutes]
+            }
+        ])
+    );
+
+    let savedPreferences = null;
+    let isSaving = false;
+    let isReady = false;
+
     container.innerHTML = `
         <div class="coming-soon-card">
 
@@ -18540,7 +18558,6 @@ function showNotificationSettingsView() {
             <div id="notificationCategoryList">
 
                 ${categories.map(category => `
-
                     <div
                         class="notification-category"
                         data-category="${category.id}"
@@ -18591,7 +18608,6 @@ function showNotificationSettingsView() {
                                     type="checkbox"
                                     class="notification-category-toggle"
                                     data-category="${category.id}"
-                                    ${category.enabled ? "checked" : ""}
                                     style="
                                         width: 20px;
                                         height: 20px;
@@ -18600,20 +18616,17 @@ function showNotificationSettingsView() {
                                     "
                                 >
                                 <span class="notification-toggle-label">
-                                    ${category.enabled ? "On" : "Off"}
+                                    Off
                                 </span>
                             </label>
 
                         </div>
 
-                        <div
-                            class="notification-reminder-section"
-                            style="
-                                margin-top: 20px;
-                                padding-top: 16px;
-                                border-top: 1px solid #24434a;
-                            "
-                        >
+                        <div style="
+                            margin-top: 20px;
+                            padding-top: 16px;
+                            border-top: 1px solid #24434a;
+                        ">
 
                             <div style="
                                 font-weight: 600;
@@ -18630,7 +18643,6 @@ function showNotificationSettingsView() {
                             ">
 
                                 ${reminderOptions.map(option => `
-
                                     <label style="
                                         display: flex;
                                         align-items: center;
@@ -18644,8 +18656,6 @@ function showNotificationSettingsView() {
                                             class="notification-reminder-checkbox"
                                             data-category="${category.id}"
                                             value="${option.minutes}"
-                                            ${category.defaultMinutes.includes(option.minutes) ? "checked" : ""}
-                                            ${!category.enabled ? "disabled" : ""}
                                             style="
                                                 width: 18px;
                                                 height: 18px;
@@ -18654,17 +18664,12 @@ function showNotificationSettingsView() {
                                         >
 
                                         ${option.label}
-
                                     </label>
-
                                 `).join("")}
 
                             </div>
-
                         </div>
-
                     </div>
-
                 `).join("")}
 
             </div>
@@ -18696,11 +18701,9 @@ function showNotificationSettingsView() {
                     type="button"
                     id="disableAllNotificationCategories"
                     class="ghost-button"
-                    style="cursor: pointer;"
                 >
                     Turn All Categories Off
                 </button>
-
             </div>
 
             <div
@@ -18713,100 +18716,111 @@ function showNotificationSettingsView() {
                     font-size: 14px;
                 "
             >
-                Preview only — changes are not yet connected to your device.
+                Checking your notification settings...
             </div>
+
+            <p style="
+                margin-top: 14px;
+                color: #a5b6bf;
+                font-size: 12px;
+            ">
+                Beta: preferences can be saved, but alert delivery
+                will not follow these settings until the notification
+                sender has been updated.
+            </p>
 
         </div>
     `;
 
-    // Update the appearance when a category is switched on or off.
-    container.querySelectorAll(
-        ".notification-category-toggle"
-    ).forEach(toggle => {
+    const message = container.querySelector(
+        "#notificationSettingsMessage"
+    );
 
-        toggle.addEventListener("change", function () {
+    const saveButton = container.querySelector(
+        "#saveNotificationPreferences"
+    );
 
-            const card = this.closest(".notification-category");
+    const offButton = container.querySelector(
+        "#disableAllNotificationCategories"
+    );
 
-            const reminderCheckboxes = card.querySelectorAll(
-                ".notification-reminder-checkbox"
+    const categoryCards = Array.from(
+        container.querySelectorAll(".notification-category")
+    );
+
+    function setMessage(text, isError = false) {
+        message.textContent = text;
+        message.style.color = isError ? "#ff9999" : "#a5b6bf";
+    }
+
+    function setControlsDisabled(disabled) {
+        container.querySelectorAll(
+            ".notification-category-toggle, " +
+            ".notification-reminder-checkbox"
+        ).forEach(input => {
+            input.disabled = disabled;
+        });
+
+        saveButton.disabled = disabled;
+        offButton.disabled = disabled;
+
+        if (!disabled) {
+            categoryCards.forEach(updateCategoryAppearance);
+        }
+    }
+
+    function updateCategoryAppearance(card) {
+        const toggle = card.querySelector(
+            ".notification-category-toggle"
+        );
+
+        const enabled = toggle.checked;
+
+        card.querySelector(
+            ".notification-toggle-label"
+        ).textContent = enabled ? "On" : "Off";
+
+        card.querySelectorAll(
+            ".notification-reminder-checkbox"
+        ).forEach(checkbox => {
+            checkbox.disabled = !enabled || !isReady || isSaving;
+        });
+    }
+
+    function applyPreferences(preferences) {
+        categoryCards.forEach(card => {
+            const category = card.dataset.category;
+
+            const setting =
+                preferences[category] ||
+                defaultPreferences[category];
+
+            const toggle = card.querySelector(
+                ".notification-category-toggle"
             );
 
-            reminderCheckboxes.forEach(checkbox => {
-                checkbox.disabled = !this.checked;
+            toggle.checked = Boolean(setting.enabled);
+
+            const selected = Array.isArray(setting.reminder_minutes)
+                ? setting.reminder_minutes
+                : [];
+
+            card.querySelectorAll(
+                ".notification-reminder-checkbox"
+            ).forEach(checkbox => {
+                checkbox.checked = selected.includes(
+                    Number(checkbox.value)
+                );
             });
 
-            card.querySelector(
-                ".notification-toggle-label"
-            ).textContent = this.checked ? "On" : "Off";
-
+            updateCategoryAppearance(card);
         });
+    }
 
-    });
-
-    // Don't allow the last reminder to be unticked
-    // while a category remains enabled.
-    container.querySelectorAll(
-        ".notification-reminder-checkbox"
-    ).forEach(checkbox => {
-
-        checkbox.addEventListener("change", function () {
-
-            const card = this.closest(".notification-category");
-
-            const enabled = card.querySelector(
-                ".notification-category-toggle"
-            ).checked;
-
-            const selected = card.querySelectorAll(
-                ".notification-reminder-checkbox:checked"
-            );
-
-            if (enabled && selected.length === 0) {
-                this.checked = true;
-
-                document.getElementById(
-                    "notificationSettingsMessage"
-                ).textContent =
-                    "Select at least one reminder time, or turn the category off.";
-            }
-
-        });
-
-    });
-
-    // Turn off all three categories locally.
-    document.getElementById(
-        "disableAllNotificationCategories"
-    ).addEventListener("click", function () {
-
-        container.querySelectorAll(
-            ".notification-category-toggle"
-        ).forEach(toggle => {
-
-            toggle.checked = false;
-            toggle.dispatchEvent(new Event("change"));
-
-        });
-
-        document.getElementById(
-            "notificationSettingsMessage"
-        ).textContent =
-            "All categories switched off in this preview. No live settings have changed.";
-
-    });
-
-    // Temporary save button until Cloudflare integration.
-    document.getElementById(
-        "saveNotificationPreferences"
-    ).addEventListener("click", function () {
-
+    function collectPreferences() {
         const preferences = {};
 
-        container.querySelectorAll(
-            ".notification-category"
-        ).forEach(card => {
-
+        categoryCards.forEach(card => {
             const category = card.dataset.category;
 
             const enabled = card.querySelector(
@@ -18820,21 +18834,269 @@ function showNotificationSettingsView() {
             ).map(checkbox => Number(checkbox.value));
 
             preferences[category] = {
-                enabled: enabled,
+                enabled,
                 reminder_minutes: reminderMinutes
             };
-
         });
 
-        console.log(
-            "Trotify notification preferences preview:",
-            preferences
-        );
+        return preferences;
+    }
 
-        document.getElementById(
-            "notificationSettingsMessage"
-        ).textContent =
-            "Preview captured. No settings have been saved to Cloudflare yet.";
+    async function requestPreferences(path, options = {}) {
+        const token = typeof getTrotifyManagementToken === "function"
+            ? getTrotifyManagementToken()
+            : null;
 
+        if (!token) {
+            throw new Error(
+                "This device has no notification management token. " +
+                "Enable notifications on this device first."
+            );
+        }
+
+        const response = await fetch(API + path, {
+            ...options,
+            headers: {
+                ...(options.headers || {}),
+                "Authorization": "Bearer " + token
+            }
+        });
+
+        if (!response.ok) {
+            let detail = "";
+
+            try {
+                const errorBody = await response.json();
+                detail = errorBody.error || "";
+            } catch {
+                // Keep the HTTP error if no JSON was returned.
+            }
+
+            throw new Error(
+                detail || "Cloudflare returned HTTP " + response.status
+            );
+        }
+
+        return response.json();
+    }
+
+    function normalisePreferences(preferences) {
+        const normalised = {};
+
+        categories.forEach(category => {
+            const setting =
+                preferences?.[category.id] ||
+                defaultPreferences[category.id];
+
+            const selected = Array.isArray(setting.reminder_minutes)
+                ? setting.reminder_minutes.filter(
+                    value => reminderOptions.some(
+                        option => option.minutes === value
+                    )
+                )
+                : [];
+
+            normalised[category.id] = {
+                enabled: Boolean(setting.enabled),
+                reminder_minutes: selected.length
+                    ? [...new Set(selected)]
+                    : [...category.defaultMinutes]
+            };
+        });
+
+        return normalised;
+    }
+
+    // Don't let an enabled category have zero reminder times.
+    container.querySelectorAll(
+        ".notification-reminder-checkbox"
+    ).forEach(checkbox => {
+        checkbox.addEventListener("change", function () {
+            const card = this.closest(".notification-category");
+
+            const enabled = card.querySelector(
+                ".notification-category-toggle"
+            ).checked;
+
+            const selected = card.querySelectorAll(
+                ".notification-reminder-checkbox:checked"
+            );
+
+            if (enabled && selected.length === 0) {
+                this.checked = true;
+
+                setMessage(
+                    "Select at least one reminder time, " +
+                    "or turn this category off."
+                );
+            } else {
+                setMessage("Unsaved changes.");
+            }
+        });
     });
+
+    container.querySelectorAll(
+        ".notification-category-toggle"
+    ).forEach(toggle => {
+        toggle.addEventListener("change", function () {
+            const card = this.closest(".notification-category");
+
+            if (this.checked) {
+                const selected = card.querySelectorAll(
+                    ".notification-reminder-checkbox:checked"
+                );
+
+                if (!selected.length) {
+                    const category = categories.find(
+                        item => item.id === card.dataset.category
+                    );
+
+                    card.querySelectorAll(
+                        ".notification-reminder-checkbox"
+                    ).forEach(checkbox => {
+                        checkbox.checked =
+                            category.defaultMinutes.includes(
+                                Number(checkbox.value)
+                            );
+                    });
+                }
+            }
+
+            updateCategoryAppearance(card);
+            setMessage("Unsaved changes.");
+        });
+    });
+
+    offButton.addEventListener("click", function () {
+        categoryCards.forEach(card => {
+            card.querySelector(
+                ".notification-category-toggle"
+            ).checked = false;
+
+            updateCategoryAppearance(card);
+        });
+
+        setMessage(
+            "All categories switched off. " +
+            "Click Save Preferences to confirm."
+        );
+    });
+
+    saveButton.addEventListener("click", async function () {
+        if (!isReady || isSaving) return;
+
+        const preferences = collectPreferences();
+
+        for (const category of categories) {
+            const setting = preferences[category.id];
+
+            if (!setting.reminder_minutes.length) {
+                setMessage(
+                    "Select at least one reminder time for " +
+                    category.name + ".",
+                    true
+                );
+                return;
+            }
+        }
+
+        isSaving = true;
+        setControlsDisabled(true);
+        saveButton.textContent = "Saving...";
+        setMessage("Saving your preferences to Cloudflare...");
+
+        try {
+            // The Worker saves one category per request.
+            // Save all three sequentially.
+            for (const category of categories) {
+                const setting = preferences[category.id];
+
+                await requestPreferences("/preferences", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        category: category.id,
+                        enabled: setting.enabled,
+                        reminder_minutes: setting.reminder_minutes
+                    })
+                });
+            }
+
+            // Read the settings back to confirm what is stored.
+            const result = await requestPreferences("/preferences");
+
+            savedPreferences = normalisePreferences(
+                result.preferences
+            );
+
+            applyPreferences(savedPreferences);
+
+            setMessage(
+                "Preferences saved successfully to Cloudflare. " +
+                "Alert delivery rules are not active yet."
+            );
+
+        } catch (error) {
+            console.error(
+                "Trotify preference save failed:",
+                error
+            );
+
+            setMessage(
+                "Could not save all preferences: " +
+                error.message +
+                ". Please reload this page to check what was saved.",
+                true
+            );
+
+        } finally {
+            isSaving = false;
+            saveButton.textContent = "Save Preferences";
+            setControlsDisabled(false);
+        }
+    });
+
+    // Keep the controls locked until actual preferences load.
+    setControlsDisabled(true);
+
+    async function loadPreferences() {
+        try {
+            const result = await requestPreferences("/preferences");
+
+            // Ignore the result if the user has navigated away.
+            if (!container.isConnected ||
+                !container.querySelector("#notificationCategoryList")) {
+                return;
+            }
+
+            savedPreferences = normalisePreferences(
+                result.preferences
+            );
+
+            applyPreferences(savedPreferences);
+
+            isReady = true;
+            setControlsDisabled(false);
+
+            setMessage(
+                "Your saved notification preferences have been loaded."
+            );
+
+        } catch (error) {
+            console.error(
+                "Trotify preference loading failed:",
+                error
+            );
+
+            setMessage(
+                "Unable to load preferences: " +
+                error.message,
+                true
+            );
+        }
+    }
+
+    loadPreferences();
 }
