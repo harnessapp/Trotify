@@ -18488,27 +18488,346 @@ function showNotificationSettingsView() {
         <span>Notification Settings</span>
     `;
 
-    document.getElementById("meetingStrip").innerHTML = `
+    const categories = [
+        {
+            id: "trotify-tips",
+            icon: "💰",
+            name: "Trotify Tips",
+            description: "Get notified when a Trotify Tip is approaching.",
+            enabled: true,
+            defaultMinutes: [3]
+        },
+        {
+            id: "watchlist",
+            icon: "⭐",
+            name: "Watchlist",
+            description: "Get notified when a horse on your watchlist is racing.",
+            enabled: false,
+            defaultMinutes: [60]
+        },
+        {
+            id: "feature-races",
+            icon: "🏆",
+            name: "Feature Races",
+            description: "Get notified about upcoming feature races.",
+            enabled: false,
+            defaultMinutes: [1440]
+        }
+    ];
+
+    const reminderOptions = [
+        { minutes: 3, label: "3 minutes" },
+        { minutes: 60, label: "1 hour" },
+        { minutes: 240, label: "4 hours" },
+        { minutes: 1440, label: "1 day" }
+    ];
+
+    const container = document.getElementById("meetingStrip");
+
+    container.innerHTML = `
         <div class="coming-soon-card">
+
             <div class="coming-soon-title">
                 🔔 Manage Your Notifications
             </div>
 
-            <p>
-                Choose which Trotify notifications you want
-                to receive and when you'd like to receive them.
+            <p style="margin-bottom: 24px;">
+                Choose which alerts you want to receive and
+                how far in advance you'd like to receive them.
+                You can select multiple reminder times for each category.
             </p>
 
-            <p>
-                💰 Trotify Tips<br>
-                ⭐ Watchlist<br>
-                🏆 Feature Races
-            </p>
+            <div id="notificationCategoryList">
 
-            <p>
-                Notification preferences will be available here shortly.
-            </p>
+                ${categories.map(category => `
+
+                    <div
+                        class="notification-category"
+                        data-category="${category.id}"
+                        style="
+                            border: 1px solid #24434a;
+                            border-radius: 12px;
+                            padding: 20px;
+                            margin-bottom: 16px;
+                            background: rgba(255,255,255,0.025);
+                        "
+                    >
+
+                        <div style="
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            gap: 16px;
+                            flex-wrap: wrap;
+                        ">
+
+                            <div>
+                                <div style="
+                                    font-size: 19px;
+                                    font-weight: 700;
+                                    color: #ffffff;
+                                ">
+                                    ${category.icon} ${category.name}
+                                </div>
+
+                                <div style="
+                                    color: #a5b6bf;
+                                    margin-top: 6px;
+                                    font-size: 14px;
+                                ">
+                                    ${category.description}
+                                </div>
+                            </div>
+
+                            <label style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                cursor: pointer;
+                                color: #ffffff;
+                                font-weight: 600;
+                            ">
+                                <input
+                                    type="checkbox"
+                                    class="notification-category-toggle"
+                                    data-category="${category.id}"
+                                    ${category.enabled ? "checked" : ""}
+                                    style="
+                                        width: 20px;
+                                        height: 20px;
+                                        accent-color: #00d5b5;
+                                        cursor: pointer;
+                                    "
+                                >
+                                <span class="notification-toggle-label">
+                                    ${category.enabled ? "On" : "Off"}
+                                </span>
+                            </label>
+
+                        </div>
+
+                        <div
+                            class="notification-reminder-section"
+                            style="
+                                margin-top: 20px;
+                                padding-top: 16px;
+                                border-top: 1px solid #24434a;
+                            "
+                        >
+
+                            <div style="
+                                font-weight: 600;
+                                margin-bottom: 12px;
+                                color: #ffffff;
+                            ">
+                                Remind me before the race:
+                            </div>
+
+                            <div style="
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 12px 22px;
+                            ">
+
+                                ${reminderOptions.map(option => `
+
+                                    <label style="
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 8px;
+                                        cursor: pointer;
+                                        color: #c3d0d6;
+                                    ">
+
+                                        <input
+                                            type="checkbox"
+                                            class="notification-reminder-checkbox"
+                                            data-category="${category.id}"
+                                            value="${option.minutes}"
+                                            ${category.defaultMinutes.includes(option.minutes) ? "checked" : ""}
+                                            ${!category.enabled ? "disabled" : ""}
+                                            style="
+                                                width: 18px;
+                                                height: 18px;
+                                                accent-color: #00d5b5;
+                                            "
+                                        >
+
+                                        ${option.label}
+
+                                    </label>
+
+                                `).join("")}
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                `).join("")}
+
+            </div>
+
+            <div style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 24px;
+            ">
+
+                <button
+                    type="button"
+                    id="saveNotificationPreferences"
+                    class="card-button"
+                    style="cursor: pointer;"
+                >
+                    Save Preferences
+                </button>
+
+                <button
+                    type="button"
+                    id="disableAllNotificationCategories"
+                    class="ghost-button"
+                    style="cursor: pointer;"
+                >
+                    Turn All Categories Off
+                </button>
+
+            </div>
+
+            <div
+                id="notificationSettingsMessage"
+                role="status"
+                aria-live="polite"
+                style="
+                    margin-top: 16px;
+                    color: #a5b6bf;
+                    font-size: 14px;
+                "
+            >
+                Preview only — changes are not yet connected to your device.
+            </div>
+
         </div>
     `;
-}
 
+    // Update the appearance when a category is switched on or off.
+    container.querySelectorAll(
+        ".notification-category-toggle"
+    ).forEach(toggle => {
+
+        toggle.addEventListener("change", function () {
+
+            const card = this.closest(".notification-category");
+
+            const reminderCheckboxes = card.querySelectorAll(
+                ".notification-reminder-checkbox"
+            );
+
+            reminderCheckboxes.forEach(checkbox => {
+                checkbox.disabled = !this.checked;
+            });
+
+            card.querySelector(
+                ".notification-toggle-label"
+            ).textContent = this.checked ? "On" : "Off";
+
+        });
+
+    });
+
+    // Don't allow the last reminder to be unticked
+    // while a category remains enabled.
+    container.querySelectorAll(
+        ".notification-reminder-checkbox"
+    ).forEach(checkbox => {
+
+        checkbox.addEventListener("change", function () {
+
+            const card = this.closest(".notification-category");
+
+            const enabled = card.querySelector(
+                ".notification-category-toggle"
+            ).checked;
+
+            const selected = card.querySelectorAll(
+                ".notification-reminder-checkbox:checked"
+            );
+
+            if (enabled && selected.length === 0) {
+                this.checked = true;
+
+                document.getElementById(
+                    "notificationSettingsMessage"
+                ).textContent =
+                    "Select at least one reminder time, or turn the category off.";
+            }
+
+        });
+
+    });
+
+    // Turn off all three categories locally.
+    document.getElementById(
+        "disableAllNotificationCategories"
+    ).addEventListener("click", function () {
+
+        container.querySelectorAll(
+            ".notification-category-toggle"
+        ).forEach(toggle => {
+
+            toggle.checked = false;
+            toggle.dispatchEvent(new Event("change"));
+
+        });
+
+        document.getElementById(
+            "notificationSettingsMessage"
+        ).textContent =
+            "All categories switched off in this preview. No live settings have changed.";
+
+    });
+
+    // Temporary save button until Cloudflare integration.
+    document.getElementById(
+        "saveNotificationPreferences"
+    ).addEventListener("click", function () {
+
+        const preferences = {};
+
+        container.querySelectorAll(
+            ".notification-category"
+        ).forEach(card => {
+
+            const category = card.dataset.category;
+
+            const enabled = card.querySelector(
+                ".notification-category-toggle"
+            ).checked;
+
+            const reminderMinutes = Array.from(
+                card.querySelectorAll(
+                    ".notification-reminder-checkbox:checked"
+                )
+            ).map(checkbox => Number(checkbox.value));
+
+            preferences[category] = {
+                enabled: enabled,
+                reminder_minutes: reminderMinutes
+            };
+
+        });
+
+        console.log(
+            "Trotify notification preferences preview:",
+            preferences
+        );
+
+        document.getElementById(
+            "notificationSettingsMessage"
+        ).textContent =
+            "Preview captured. No settings have been saved to Cloudflare yet.";
+
+    });
+}
