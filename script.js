@@ -5666,6 +5666,59 @@ function getSavedWatchlist() {
 
 function saveWatchlist(items) {
     localStorage.setItem(WATCHLIST_STORAGE_KEY, JSON.stringify(items));
+
+    watchlistSyncQueue = watchlistSyncQueue
+        .catch(() => {})
+        .then(() => syncWatchlistToNotifications(items));
+}
+
+let watchlistSyncQueue = Promise.resolve();
+
+async function syncWatchlistToNotifications(items) {
+    if (
+        typeof getTrotifyManagementToken !== "function" ||
+        typeof TROTIFY_NOTIFICATION_API === "undefined"
+    ) {
+        return;
+    }
+
+    const token = getTrotifyManagementToken();
+
+    // No notification subscription on this device yet.
+    if (!token) return;
+
+    try {
+        const response = await fetch(
+            TROTIFY_NOTIFICATION_API + "/watchlist",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + token
+                },
+                body: JSON.stringify({
+                    watchlist: items.map(item => ({
+                        type: item.type,
+                        value: item.value
+                    }))
+                })
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error(
+                "Watchlist sync failed: HTTP " + response.status
+            );
+        }
+
+        console.log("Trotify notification Watchlist synchronised");
+
+    } catch (error) {
+        console.warn(
+            "Unable to synchronise notification Watchlist:",
+            error
+        );
+    }
 }
 
 function isWatchlistSaved(type, value) {

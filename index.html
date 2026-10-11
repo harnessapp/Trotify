@@ -478,6 +478,14 @@
                     TROTIFY_TOKEN_STORAGE_KEY,
                     token
                 );
+                // Synchronise any existing Watchlist when notifications are enabled.
+                if (typeof getSavedWatchlist === "function" &&
+                    typeof syncWatchlistToNotifications === "function") {
+
+                    watchlistSyncQueue = watchlistSyncQueue
+                        .catch(() => {})
+                        .then(() => syncWatchlistToNotifications(getSavedWatchlist()));
+                }
             }
         }
 
