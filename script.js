@@ -18679,8 +18679,15 @@ function showNotificationSettingsView() {
                 <button
                     type="button"
                     id="saveNotificationPreferences"
-                    class="card-button"
-                    style="cursor: pointer;"
+                    style="
+                        cursor: pointer;
+                        background: #102b30;
+                        color: #00d5b5;
+                        border: 1px solid #00a994;
+                        border-radius: 9px;
+                        padding: 12px 20px;
+                        font-weight: 700;
+                    "
                 >
                     Save Preferences
                 </button>
