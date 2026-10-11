@@ -18755,7 +18755,7 @@ function showNotificationSettingsView() {
                     id="disableAllNotificationCategories"
                     class="ghost-button"
                 >
-                    Turn All Categories Off
+                    Turn All Off
                 </button>
             </div>
 
