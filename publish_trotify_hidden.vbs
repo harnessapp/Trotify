@@ -1,2 +1,5 @@
 Set shell = CreateObject("WScript.Shell")
-shell.Run """C:\trotify_dashboard\publish_trotify.bat""", 0, True
+
+command = "cmd.exe /c """"C:\trotify_dashboard\publish_trotify.bat"" >> ""C:\trotify_dashboard\publish_trotify_log.txt"" 2>&1"""
+
+shell.Run command, 0, True
