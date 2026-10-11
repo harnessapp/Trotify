@@ -1,2 +1,3 @@
 RaceAnchorFull,Date,Venue,State,Race No,RaceStartUTC,Horse,Barrier,TrotifyPrice,TABFixedWin,TABOpenPrice,TABHighPrice,PriceDifference,TAB_URL,CapturedAtUTC
 EH111026_R1,2026-10-11,Hobart,TAS,1,2026-10-11T02:04:00Z,TWILIGHT STORM,Fr1,2.00,1.55,2.10,2.10,-0.45,https://www.tab.com.au/racing/2026-10-11/HOBART/HOB/H/1?jurisdiction=VIC,2026-10-11T00:00:20.329408+00:00
+EH111026_R4,2026-10-11,Hobart,TAS,4,2026-10-11T03:44:00Z,COMINSKI LEIS,Fr5,1.90,3.40,3.80,4.00,1.50,https://www.tab.com.au/racing/2026-10-11/HOBART/HOB/H/4?jurisdiction=VIC,2026-10-11T00:05:23.563664+00:00
