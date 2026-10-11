@@ -18550,7 +18550,7 @@ function showNotificationSettingsView() {
             id: "trotify-tips",
             icon: "💰",
             name: "Trotify Tips",
-            description: "Get notified when a Trotify Tip is approaching.",
+            description: "Get notified when a Trotify Tip is approaching",
             enabled: true,
             defaultMinutes: [3]
         },
@@ -18558,7 +18558,7 @@ function showNotificationSettingsView() {
             id: "watchlist",
             icon: "⭐",
             name: "Watchlist",
-            description: "Get notified when a horse, trainer or driver on your watchlist is racing.",
+            description: "Get notified when a horse, trainer or driver on your watchlist is racing",
             enabled: false,
             defaultMinutes: [60]
         },
@@ -18566,7 +18566,7 @@ function showNotificationSettingsView() {
             id: "feature-races",
             icon: "🏆",
             name: "Feature Races",
-            description: "Get notified about upcoming feature races.",
+            description: "Get notified about upcoming feature races",
             enabled: false,
             defaultMinutes: [1440]
         }
