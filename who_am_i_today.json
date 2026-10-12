@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-12",
-  "puzzle_number": 11,
-  "type": "HORSE",
-  "answer": "Major Friend",
+  "date": "2026-10-13",
+  "puzzle_number": 12,
+  "type": "TRAINER",
+  "answer": "Ashleigh Chalmers",
   "stats": {
-    "starts": 10,
-    "wins": 1,
-    "places": 8
+    "recent_starts": 69,
+    "recent_wins": 7,
+    "horses": 8
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 10 race starts.",
+      "text": "My stable has had 69 race starts in the past 12 months.",
       "difficulty": 15,
-      "source": "career_starts",
+      "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "M _ _ _ _    _ _ _ _ _ _"
+      "name_pattern": "A _ _ _ _ _ _ _    _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "All of my recorded starts have been in Victoria.",
-      "difficulty": 35,
-      "source": "state",
-      "revealed_letters": 2,
-      "name_pattern": "M _ _ _ _    F _ _ _ _ _"
+      "text": "I've trained 7 winners in the past 12 months.",
+      "difficulty": 40,
+      "source": "recent_wins",
+      "revealed_letters": 3,
+      "name_pattern": "A _ _ _ _ _ _ H    C _ _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Shepparton.",
+      "text": "The track where I've had the most runners in the past 12 months is Redcliffe.",
       "difficulty": 55,
-      "source": "winning_tracks",
-      "revealed_letters": 3,
-      "name_pattern": "M _ _ _ R    F _ _ _ _ _"
+      "source": "favourite_venue",
+      "revealed_letters": 4,
+      "name_pattern": "A _ _ _ _ _ _ H    C _ _ L _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer David Abrahams.",
-      "difficulty": 75,
-      "source": "trainer",
-      "revealed_letters": 4,
-      "name_pattern": "M _ _ _ R    F _ I _ _ _"
+      "text": "The driver used most often by my stable recently is Holly Chalmers.",
+      "difficulty": 70,
+      "source": "favourite_driver",
+      "revealed_letters": 6,
+      "name_pattern": "A _ _ _ E _ _ H    C _ _ L _ E _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Shepparton on 6 October 2026, where I finished 1st for trainer David Abrahams and driver Mark Pitt.",
+      "text": "My first name is Ashleigh. ",
       "difficulty": 95,
-      "source": "last_start",
-      "revealed_letters": 5,
-      "name_pattern": "M _ _ O R    F _ I _ _ _"
+      "source": "first_name",
+      "revealed_letters": 8,
+      "name_pattern": "A _ H _ E _ _ H    C H _ L _ E _ _"
     }
   ]
 }
