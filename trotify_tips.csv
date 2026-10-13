@@ -1,3 +1,4 @@
 RaceAnchorFull,Date,Venue,State,Race No,RaceStartUTC,Horse,Barrier,TrotifyPrice,TABFixedWin,TABOpenPrice,TABHighPrice,PriceDifference,TAB_URL,CapturedAtUTC
+AW141026_R6,2026-10-14,Gawler,SA,6,2026-10-14T05:28:00Z,WOODVILLE FLYER,Sr4,1.80,3.10,4.40,4.40,1.30,https://www.tab.com.au/racing/2026-10-14/GAWLER/GAW/H/6?jurisdiction=VIC,2026-10-13T20:52:18.910700+00:00
 KI141026_R8,2026-10-14,Kilmore,VIC,8,2026-10-14T11:09:00Z,OVER HERE,Fr7,2.00,2.60,,2.60,0.60,https://www.tab.com.au/racing/2026-10-14/KILMORE/KIL/H/8?jurisdiction=VIC,2026-10-13T20:44:20.190845+00:00
 BH141026_R9,2026-10-14,Bathurst,NSW,9,2026-10-14T11:19:00Z,IM THE MAJOR,Fr7,1.80,1.50,2.30,2.30,-0.30,https://www.tab.com.au/racing/2026-10-14/BATHURST/BAT/H/9?jurisdiction=VIC,2026-10-13T20:45:18.718100+00:00
