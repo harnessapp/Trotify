@@ -1,2 +1,3 @@
 RaceAnchorFull,Date,Venue,State,Race No,RaceStartUTC,Horse,Barrier,TrotifyPrice,TABFixedWin,TABOpenPrice,TABHighPrice,PriceDifference,TAB_URL,CapturedAtUTC
 PK131026_R1,2026-10-13,Parkes,NSW,1,2026-10-13T07:07:00Z,FIVE OCLOCK WAVE,Sr5,2.00,2.60,2.60,3.10,0.60,https://www.tab.com.au/racing/2026-10-13/PARKES/PRK/H/1?jurisdiction=VIC,2026-10-13T06:53:37.709045+00:00
+MG131026_R2,2026-10-13,Mount Gambier,SA,2,2026-10-13T07:45:00Z,EASTBRO KAZ,Fr5,1.60,3.00,3.10,3.80,1.40,https://www.tab.com.au/racing/2026-10-13/MOUNT-GAMBIER/MTG/H/2?jurisdiction=VIC,2026-10-13T06:55:35.198004+00:00
