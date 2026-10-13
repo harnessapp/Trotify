@@ -1,53 +1,55 @@
 {
-  "date": "2026-10-13",
-  "puzzle_number": 12,
-  "type": "TRAINER",
-  "answer": "Ashleigh Chalmers",
+  "date": "2026-10-14",
+  "puzzle_number": 13,
+  "type": "DRIVER",
+  "answer": "Jack Chapple",
   "stats": {
-    "recent_starts": 69,
-    "recent_wins": 7,
-    "horses": 8
+    "career_starts": 3149,
+    "career_wins": 315,
+    "recent_starts": 1350,
+    "recent_wins": 137,
+    "recent_places": 435
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "My stable has had 69 race starts in the past 12 months.",
+      "text": "In the past 12 months, I've had 1,350 drives.",
       "difficulty": 15,
       "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "A _ _ _ _ _ _ _    _ _ _ _ _ _ _ _"
+      "name_pattern": "J _ _ _    _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've trained 7 winners in the past 12 months.",
+      "text": "The track I've driven at most in the past 12 months is Redcliffe.",
       "difficulty": 40,
-      "source": "recent_wins",
-      "revealed_letters": 3,
-      "name_pattern": "A _ _ _ _ _ _ H    C _ _ _ _ _ _ _"
+      "source": "favourite_venue",
+      "revealed_letters": 2,
+      "name_pattern": "J _ _ _    C _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "The track where I've had the most runners in the past 12 months is Redcliffe.",
-      "difficulty": 55,
-      "source": "favourite_venue",
-      "revealed_letters": 4,
-      "name_pattern": "A _ _ _ _ _ _ H    C _ _ L _ _ _ _"
+      "text": "My win strike rate over the past 12 months is about 10%.",
+      "difficulty": 50,
+      "source": "win_pct",
+      "revealed_letters": 3,
+      "name_pattern": "J _ _ _    C H _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "The driver used most often by my stable recently is Holly Chalmers.",
-      "difficulty": 70,
-      "source": "favourite_driver",
-      "revealed_letters": 6,
-      "name_pattern": "A _ _ _ E _ _ H    C _ _ L _ E _ _"
+      "text": "One of my most recent winners was Rocky Leigh at Albion Park.",
+      "difficulty": 75,
+      "source": "recent_winner",
+      "revealed_letters": 4,
+      "name_pattern": "J _ _ _    C H _ P _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Ashleigh. ",
+      "text": "My first name is Jack. ",
       "difficulty": 95,
       "source": "first_name",
-      "revealed_letters": 8,
-      "name_pattern": "A _ H _ E _ _ H    C H _ L _ E _ _"
+      "revealed_letters": 5,
+      "name_pattern": "J _ _ K    C H _ P _ _ _"
     }
   ]
 }
