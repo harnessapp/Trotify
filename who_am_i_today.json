@@ -1,55 +1,53 @@
 {
-  "date": "2026-10-14",
-  "puzzle_number": 13,
-  "type": "DRIVER",
-  "answer": "Jack Chapple",
+  "date": "2026-10-15",
+  "puzzle_number": 14,
+  "type": "TRAINER",
+  "answer": "Peter Keogh",
   "stats": {
-    "career_starts": 3149,
-    "career_wins": 315,
-    "recent_starts": 1350,
-    "recent_wins": 137,
-    "recent_places": 435
+    "recent_starts": 98,
+    "recent_wins": 5,
+    "horses": 8
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "In the past 12 months, I've had 1,350 drives.",
+      "text": "My stable has had 98 race starts in the past 12 months.",
       "difficulty": 15,
       "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "J _ _ _    _ _ _ _ _ _ _"
+      "name_pattern": "P _ _ _ _    _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "The track I've driven at most in the past 12 months is Redcliffe.",
+      "text": "I've trained 5 winners in the past 12 months.",
       "difficulty": 40,
-      "source": "favourite_venue",
+      "source": "recent_wins",
       "revealed_letters": 2,
-      "name_pattern": "J _ _ _    C _ _ _ _ _ _"
+      "name_pattern": "P _ _ _ _    K _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "My win strike rate over the past 12 months is about 10%.",
-      "difficulty": 50,
-      "source": "win_pct",
+      "text": "The track where I've had the most runners in the past 12 months is Bathurst.",
+      "difficulty": 55,
+      "source": "favourite_venue",
       "revealed_letters": 3,
-      "name_pattern": "J _ _ _    C H _ _ _ _ _"
+      "name_pattern": "P _ _ _ R    K _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "One of my most recent winners was Rocky Leigh at Albion Park.",
-      "difficulty": 75,
-      "source": "recent_winner",
+      "text": "The driver used most often by my stable recently is Vaughan Duncan.",
+      "difficulty": 70,
+      "source": "favourite_driver",
       "revealed_letters": 4,
-      "name_pattern": "J _ _ _    C H _ P _ _ _"
+      "name_pattern": "P _ _ _ R    K E _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Jack. ",
+      "text": "My first name is Peter. ",
       "difficulty": 95,
       "source": "first_name",
       "revealed_letters": 5,
-      "name_pattern": "J _ _ K    C H _ P _ _ _"
+      "name_pattern": "P _ T _ R    K E _ _ _"
     }
   ]
 }
