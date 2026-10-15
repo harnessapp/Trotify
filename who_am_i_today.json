@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-15",
-  "puzzle_number": 14,
-  "type": "TRAINER",
-  "answer": "Peter Keogh",
+  "date": "2026-10-16",
+  "puzzle_number": 15,
+  "type": "HORSE",
+  "answer": "Queenhigh Flush NZ",
   "stats": {
-    "recent_starts": 98,
-    "recent_wins": 5,
-    "horses": 8
+    "starts": 12,
+    "wins": 2,
+    "places": 6
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "My stable has had 98 race starts in the past 12 months.",
+      "text": "I've had 12 race starts.",
       "difficulty": 15,
-      "source": "recent_starts",
+      "source": "career_starts",
       "revealed_letters": 1,
-      "name_pattern": "P _ _ _ _    _ _ _ _ _"
+      "name_pattern": "Q _ _ _ _ _ _ _ _    _ _ _ _ _    _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've trained 5 winners in the past 12 months.",
-      "difficulty": 40,
-      "source": "recent_wins",
-      "revealed_letters": 2,
-      "name_pattern": "P _ _ _ _    K _ _ _ _"
+      "text": "All of my recorded starts have been in Victoria.",
+      "difficulty": 35,
+      "source": "state",
+      "revealed_letters": 3,
+      "name_pattern": "Q _ _ _ _ _ _ _ _    F _ _ _ _    N _"
     },
     {
       "clue_number": 3,
-      "text": "The track where I've had the most runners in the past 12 months is Bathurst.",
+      "text": "I've won at tracks including Kilmore, Melton.",
       "difficulty": 55,
-      "source": "favourite_venue",
-      "revealed_letters": 3,
-      "name_pattern": "P _ _ _ R    K _ _ _ _"
+      "source": "winning_tracks",
+      "revealed_letters": 4,
+      "name_pattern": "Q _ _ _ _ _ _ _ H    F _ _ _ _    N _"
     },
     {
       "clue_number": 4,
-      "text": "The driver used most often by my stable recently is Vaughan Duncan.",
-      "difficulty": 70,
-      "source": "favourite_driver",
-      "revealed_letters": 4,
-      "name_pattern": "P _ _ _ R    K E _ _ _"
+      "text": "I'm currently associated most often with trainer Michael Tobin.",
+      "difficulty": 75,
+      "source": "trainer",
+      "revealed_letters": 6,
+      "name_pattern": "Q _ _ _ N _ _ _ H    F _ _ S _    N _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Peter. ",
+      "text": "My most recent start was at Shepparton on 13 October 2026, where I finished 4th for trainer Michael Tobin and driver Liam Older.",
       "difficulty": 95,
-      "source": "first_name",
-      "revealed_letters": 5,
-      "name_pattern": "P _ T _ R    K E _ _ _"
+      "source": "last_start",
+      "revealed_letters": 8,
+      "name_pattern": "Q _ E _ N _ _ _ H    F _ _ S H    N _"
     }
   ]
 }
