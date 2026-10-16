@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-16",
-  "puzzle_number": 15,
-  "type": "HORSE",
-  "answer": "Queenhigh Flush NZ",
+  "date": "2026-10-17",
+  "puzzle_number": 16,
+  "type": "TRAINER",
+  "answer": "Tim Gillespie",
   "stats": {
-    "starts": 12,
-    "wins": 2,
-    "places": 6
+    "recent_starts": 87,
+    "recent_wins": 8,
+    "horses": 15
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 12 race starts.",
+      "text": "My stable has had 87 race starts in the past 12 months.",
       "difficulty": 15,
-      "source": "career_starts",
+      "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "Q _ _ _ _ _ _ _ _    _ _ _ _ _    _ _"
+      "name_pattern": "T _ _    _ _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "All of my recorded starts have been in Victoria.",
-      "difficulty": 35,
-      "source": "state",
-      "revealed_letters": 3,
-      "name_pattern": "Q _ _ _ _ _ _ _ _    F _ _ _ _    N _"
+      "text": "I've trained 8 winners in the past 12 months.",
+      "difficulty": 40,
+      "source": "recent_wins",
+      "revealed_letters": 2,
+      "name_pattern": "T _ _    G _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Kilmore, Melton.",
+      "text": "The track where I've had the most runners in the past 12 months is Albion Park.",
       "difficulty": 55,
-      "source": "winning_tracks",
-      "revealed_letters": 4,
-      "name_pattern": "Q _ _ _ _ _ _ _ H    F _ _ _ _    N _"
+      "source": "favourite_venue",
+      "revealed_letters": 3,
+      "name_pattern": "T _ _    G _ L _ _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Michael Tobin.",
-      "difficulty": 75,
-      "source": "trainer",
-      "revealed_letters": 6,
-      "name_pattern": "Q _ _ _ N _ _ _ H    F _ _ S _    N _"
+      "text": "I am the driver used most often by my stable recently.",
+      "difficulty": 70,
+      "source": "favourite_driver",
+      "revealed_letters": 4,
+      "name_pattern": "T _ _    G _ L _ _ S _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Shepparton on 13 October 2026, where I finished 4th for trainer Michael Tobin and driver Liam Older.",
+      "text": "My first name is Tim. ",
       "difficulty": 95,
-      "source": "last_start",
-      "revealed_letters": 8,
-      "name_pattern": "Q _ E _ N _ _ _ H    F _ _ S H    N _"
+      "source": "first_name",
+      "revealed_letters": 6,
+      "name_pattern": "T _ M    G _ L _ _ S _ I _"
     }
   ]
 }
