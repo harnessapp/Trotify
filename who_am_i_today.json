@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-17",
-  "puzzle_number": 16,
+  "date": "2026-10-18",
+  "puzzle_number": 17,
   "type": "TRAINER",
-  "answer": "Tim Gillespie",
+  "answer": "David Simmonds",
   "stats": {
-    "recent_starts": 87,
-    "recent_wins": 8,
-    "horses": 15
+    "recent_starts": 178,
+    "recent_wins": 11,
+    "horses": 19
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "My stable has had 87 race starts in the past 12 months.",
+      "text": "My stable has had 178 race starts in the past 12 months.",
       "difficulty": 15,
       "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "T _ _    _ _ _ _ _ _ _ _ _"
+      "name_pattern": "D _ _ _ _    _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've trained 8 winners in the past 12 months.",
+      "text": "I've trained 11 winners in the past 12 months.",
       "difficulty": 40,
       "source": "recent_wins",
       "revealed_letters": 2,
-      "name_pattern": "T _ _    G _ _ _ _ _ _ _ _"
+      "name_pattern": "D _ _ _ _    S _ _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "The track where I've had the most runners in the past 12 months is Albion Park.",
+      "text": "The track where I've had the most runners in the past 12 months is Pinjarra.",
       "difficulty": 55,
       "source": "favourite_venue",
       "revealed_letters": 3,
-      "name_pattern": "T _ _    G _ L _ _ _ _ _ _"
+      "name_pattern": "D _ _ _ _    S I _ _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I am the driver used most often by my stable recently.",
+      "text": "The driver used most often by my stable recently is Gary Hall Jnr.",
       "difficulty": 70,
       "source": "favourite_driver",
-      "revealed_letters": 4,
-      "name_pattern": "T _ _    G _ L _ _ S _ _ _"
+      "revealed_letters": 5,
+      "name_pattern": "D _ _ I _    S I _ _ O _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Tim. ",
+      "text": "My first name is David. ",
       "difficulty": 95,
       "source": "first_name",
       "revealed_letters": 6,
-      "name_pattern": "T _ M    G _ L _ _ S _ I _"
+      "name_pattern": "D _ _ I _    S I _ _ O _ D _"
     }
   ]
 }
