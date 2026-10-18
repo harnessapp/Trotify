@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-18",
-  "puzzle_number": 17,
-  "type": "TRAINER",
-  "answer": "David Simmonds",
+  "date": "2026-10-19",
+  "puzzle_number": 18,
+  "type": "HORSE",
+  "answer": "Rose Noire NZ",
   "stats": {
-    "recent_starts": 178,
-    "recent_wins": 11,
-    "horses": 19
+    "starts": 10,
+    "wins": 2,
+    "places": 5
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "My stable has had 178 race starts in the past 12 months.",
+      "text": "I've had 10 race starts.",
       "difficulty": 15,
-      "source": "recent_starts",
+      "source": "career_starts",
       "revealed_letters": 1,
-      "name_pattern": "D _ _ _ _    _ _ _ _ _ _ _ _"
+      "name_pattern": "R _ _ _    _ _ _ _ _    _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've trained 11 winners in the past 12 months.",
-      "difficulty": 40,
-      "source": "recent_wins",
+      "text": "All of my recorded starts have been in Tasmania.",
+      "difficulty": 35,
+      "source": "state",
       "revealed_letters": 2,
-      "name_pattern": "D _ _ _ _    S _ _ _ _ _ _ _"
+      "name_pattern": "R _ _ _    N _ _ _ _    _ _"
     },
     {
       "clue_number": 3,
-      "text": "The track where I've had the most runners in the past 12 months is Pinjarra.",
+      "text": "I've won at tracks including Hobart, Launceston.",
       "difficulty": 55,
-      "source": "favourite_venue",
+      "source": "winning_tracks",
       "revealed_letters": 3,
-      "name_pattern": "D _ _ _ _    S I _ _ _ _ _ _"
+      "name_pattern": "R _ _ _    N _ _ _ _    N _"
     },
     {
       "clue_number": 4,
-      "text": "The driver used most often by my stable recently is Gary Hall Jnr.",
-      "difficulty": 70,
-      "source": "favourite_driver",
-      "revealed_letters": 5,
-      "name_pattern": "D _ _ I _    S I _ _ O _ _ _"
+      "text": "I'm currently associated most often with trainer Jordan Chibnall.",
+      "difficulty": 75,
+      "source": "trainer",
+      "revealed_letters": 4,
+      "name_pattern": "R _ _ _    N O _ _ _    N _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is David. ",
+      "text": "My most recent start was at Launceston on 18 October 2026, where I finished 1st for trainer Jordan Chibnall and driver Jordan Chibnall.",
       "difficulty": 95,
-      "source": "first_name",
-      "revealed_letters": 6,
-      "name_pattern": "D _ _ I _    S I _ _ O _ D _"
+      "source": "last_start",
+      "revealed_letters": 5,
+      "name_pattern": "R _ _ _    N O _ _ E    N _"
     }
   ]
 }
