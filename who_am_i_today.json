@@ -1,53 +1,55 @@
 {
-  "date": "2026-10-19",
-  "puzzle_number": 18,
-  "type": "HORSE",
-  "answer": "Rose Noire NZ",
+  "date": "2026-10-20",
+  "puzzle_number": 19,
+  "type": "DRIVER",
+  "answer": "Ryan Sanderson",
   "stats": {
-    "starts": 10,
-    "wins": 2,
-    "places": 5
+    "career_starts": 4002,
+    "career_wins": 565,
+    "recent_starts": 556,
+    "recent_wins": 85,
+    "recent_places": 236
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 10 race starts.",
+      "text": "In the past 12 months, I've had 556 drives.",
       "difficulty": 15,
-      "source": "career_starts",
+      "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "R _ _ _    _ _ _ _ _    _ _"
+      "name_pattern": "R _ _ _    _ _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "All of my recorded starts have been in Tasmania.",
-      "difficulty": 35,
-      "source": "state",
+      "text": "The track I've driven at most in the past 12 months is Melton.",
+      "difficulty": 40,
+      "source": "favourite_venue",
       "revealed_letters": 2,
-      "name_pattern": "R _ _ _    N _ _ _ _    _ _"
+      "name_pattern": "R _ _ _    S _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Hobart, Launceston.",
-      "difficulty": 55,
-      "source": "winning_tracks",
+      "text": "My win strike rate over the past 12 months is about 15%.",
+      "difficulty": 50,
+      "source": "win_pct",
       "revealed_letters": 3,
-      "name_pattern": "R _ _ _    N _ _ _ _    N _"
+      "name_pattern": "R _ _ _    S A _ _ _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Jordan Chibnall.",
+      "text": "One of my most recent winners was Sandelton at Melton.",
       "difficulty": 75,
-      "source": "trainer",
-      "revealed_letters": 4,
-      "name_pattern": "R _ _ _    N O _ _ _    N _"
+      "source": "recent_winner",
+      "revealed_letters": 5,
+      "name_pattern": "R _ _ N    S A _ _ _ R _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Launceston on 18 October 2026, where I finished 1st for trainer Jordan Chibnall and driver Jordan Chibnall.",
+      "text": "My first name is Ryan. ",
       "difficulty": 95,
-      "source": "last_start",
-      "revealed_letters": 5,
-      "name_pattern": "R _ _ _    N O _ _ E    N _"
+      "source": "first_name",
+      "revealed_letters": 6,
+      "name_pattern": "R _ _ N    S A _ _ _ R _ O _"
     }
   ]
 }
