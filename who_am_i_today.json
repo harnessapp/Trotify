@@ -1,55 +1,53 @@
 {
-  "date": "2026-10-20",
-  "puzzle_number": 19,
-  "type": "DRIVER",
-  "answer": "Ryan Sanderson",
+  "date": "2026-10-21",
+  "puzzle_number": 20,
+  "type": "TRAINER",
+  "answer": "Tonia Stampalia",
   "stats": {
-    "career_starts": 4002,
-    "career_wins": 565,
-    "recent_starts": 556,
-    "recent_wins": 85,
-    "recent_places": 236
+    "recent_starts": 70,
+    "recent_wins": 8,
+    "horses": 9
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "In the past 12 months, I've had 556 drives.",
+      "text": "My stable has had 70 race starts in the past 12 months.",
       "difficulty": 15,
       "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "R _ _ _    _ _ _ _ _ _ _ _ _"
+      "name_pattern": "T _ _ _ _    _ _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "The track I've driven at most in the past 12 months is Melton.",
+      "text": "I've trained 8 winners in the past 12 months.",
       "difficulty": 40,
-      "source": "favourite_venue",
+      "source": "recent_wins",
       "revealed_letters": 2,
-      "name_pattern": "R _ _ _    S _ _ _ _ _ _ _ _"
+      "name_pattern": "T _ _ _ _    S _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "My win strike rate over the past 12 months is about 15%.",
-      "difficulty": 50,
-      "source": "win_pct",
-      "revealed_letters": 3,
-      "name_pattern": "R _ _ _    S A _ _ _ _ _ _ _"
+      "text": "The track where I've had the most runners in the past 12 months is Gloucester Park.",
+      "difficulty": 55,
+      "source": "favourite_venue",
+      "revealed_letters": 4,
+      "name_pattern": "T _ _ _ _    S T _ _ P _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "One of my most recent winners was Sandelton at Melton.",
-      "difficulty": 75,
-      "source": "recent_winner",
+      "text": "The driver used most often by my stable recently is Vance Stampalia.",
+      "difficulty": 70,
+      "source": "favourite_driver",
       "revealed_letters": 5,
-      "name_pattern": "R _ _ N    S A _ _ _ R _ _ _"
+      "name_pattern": "T _ _ I _    S T _ _ P _ _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Ryan. ",
+      "text": "My first name is Tonia. ",
       "difficulty": 95,
       "source": "first_name",
-      "revealed_letters": 6,
-      "name_pattern": "R _ _ N    S A _ _ _ R _ O _"
+      "revealed_letters": 7,
+      "name_pattern": "T O _ I _    S T _ _ P _ _ I _"
     }
   ]
 }
