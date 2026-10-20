@@ -1,2 +1,4 @@
 RaceAnchorFull,Date,Venue,State,Race No,RaceStartUTC,Horse,Barrier,TrotifyPrice,TABFixedWin,TABOpenPrice,TABHighPrice,PriceDifference,TAB_URL,CapturedAtUTC
 MX211026_R3,2026-10-21,Melton,VIC,3,2026-10-21T08:00:00Z,CATCH THE CAPTAIN,Fr1,1.70,2.80,,2.80,1.10,https://www.tab.com.au/racing/2026-10-21/MELTON/MLT/H/3?jurisdiction=VIC,2026-10-20T20:12:39.201450+00:00
+BH211026_R5,2026-10-21,Bathurst,NSW,5,2026-10-21T08:42:00Z,SEASIDE SID,Sr2,1.70,2.10,2.25,2.25,0.40,https://www.tab.com.au/racing/2026-10-21/BATHURST/BAT/H/5?jurisdiction=VIC,2026-10-20T20:29:35.475177+00:00
+MX211026_R5,2026-10-21,Melton,VIC,5,2026-10-21T09:00:00Z,HOWDY MATE,Sr1,1.60,1.55,1.95,1.95,-0.05,https://www.tab.com.au/racing/2026-10-21/MELTON/MLT/H/5?jurisdiction=VIC,2026-10-20T20:30:10.670722+00:00
