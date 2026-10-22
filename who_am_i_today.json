@@ -4,18 +4,18 @@
   "type": "HORSE",
   "answer": "Magicol Ideal NZ",
   "stats": {
-    "starts": 14,
-    "wins": 4,
-    "places": 5
+    "starts": 175,
+    "wins": 20,
+    "places": 52
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 14 race starts.",
+      "text": "I've had 175 race starts.",
       "difficulty": 15,
       "source": "career_starts",
       "revealed_letters": 1,
-      "name_pattern": "M _ _ _ _ _ _    _ _ _ _ _    _ _"
+      "name_pattern": "M _ _ _ _ _ _    _ _ _ _ _    N Z"
     },
     {
       "clue_number": 2,
@@ -23,31 +23,31 @@
       "difficulty": 35,
       "source": "state",
       "revealed_letters": 2,
-      "name_pattern": "M _ _ _ _ _ _    I _ _ _ _    _ _"
+      "name_pattern": "M _ _ _ _ _ _    I _ _ _ _    N Z"
     },
     {
       "clue_number": 3,
       "text": "I've won at tracks including Marburg, Albion Park, Redcliffe.",
       "difficulty": 55,
       "source": "winning_tracks",
-      "revealed_letters": 4,
-      "name_pattern": "M _ _ _ _ _ L    I _ _ _ _    N _"
+      "revealed_letters": 3,
+      "name_pattern": "M _ _ _ _ _ L    I _ _ _ _    N Z"
     },
     {
       "clue_number": 4,
       "text": "I'm currently associated most often with trainer John Stariha.",
       "difficulty": 75,
       "source": "trainer",
-      "revealed_letters": 5,
-      "name_pattern": "M _ _ _ _ _ L    I _ _ A _    N _"
+      "revealed_letters": 4,
+      "name_pattern": "M _ _ _ _ _ L    I D _ _ _    N Z"
     },
     {
       "clue_number": 5,
       "text": "My most recent start was at Albion Park on 9 October 2026, where I finished 8th for trainer John Stariha and driver Adam Sanderson.",
       "difficulty": 95,
       "source": "last_start",
-      "revealed_letters": 7,
-      "name_pattern": "M _ _ _ C _ L    I _ _ A L    N _"
+      "revealed_letters": 6,
+      "name_pattern": "M _ _ I _ _ L    I D _ A _    N Z"
     }
   ]
 }
