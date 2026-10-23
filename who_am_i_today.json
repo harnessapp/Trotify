@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-23",
-  "puzzle_number": 22,
-  "type": "HORSE",
-  "answer": "Majestic Tooth",
+  "date": "2026-10-24",
+  "puzzle_number": 23,
+  "type": "TRAINER",
+  "answer": "Ross Adams",
   "stats": {
-    "starts": 86,
-    "wins": 10,
-    "places": 29
+    "recent_starts": 168,
+    "recent_wins": 14,
+    "horses": 18
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 86 race starts.",
+      "text": "My stable has had 168 race starts in the past 12 months.",
       "difficulty": 15,
-      "source": "career_starts",
-      "revealed_letters": 1,
-      "name_pattern": "M _ _ _ _ _ _ _    _ _ _ _ _"
+      "source": "recent_starts",
+      "revealed_letters": 0,
+      "name_pattern": "_ _ _ _    _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've won 10 races and placed 29 times.",
-      "difficulty": 25,
-      "source": "career_record",
-      "revealed_letters": 2,
-      "name_pattern": "M _ _ _ _ _ _ _    T _ _ _ _"
+      "text": "I've trained 14 winners in the past 12 months.",
+      "difficulty": 40,
+      "source": "recent_wins",
+      "revealed_letters": 1,
+      "name_pattern": "R _ _ _    _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Shepparton, Geelong, Kilmore.",
+      "text": "The track where I've had the most runners in the past 12 months is Penrith.",
       "difficulty": 55,
-      "source": "winning_tracks",
-      "revealed_letters": 3,
-      "name_pattern": "M _ _ _ _ _ I _    T _ _ _ _"
+      "source": "favourite_venue",
+      "revealed_letters": 2,
+      "name_pattern": "R _ _ _    A _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Kari Males.",
-      "difficulty": 75,
-      "source": "trainer",
-      "revealed_letters": 5,
-      "name_pattern": "M _ _ E _ _ I _    T O _ _ _"
+      "text": "The driver used most often by my stable recently is Stephanie Morris.",
+      "difficulty": 70,
+      "source": "favourite_driver",
+      "revealed_letters": 3,
+      "name_pattern": "R _ _ S    A _ _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Melton on 9 October 2026, where I finished 9th for trainer Kari Males and driver Ellen Tormey.",
+      "text": "My first name is Ross. ",
       "difficulty": 95,
-      "source": "last_start",
-      "revealed_letters": 6,
-      "name_pattern": "M _ _ E _ _ I _    T O _ T _"
+      "source": "first_name",
+      "revealed_letters": 4,
+      "name_pattern": "R _ _ S    A _ A _ _"
     }
   ]
 }
