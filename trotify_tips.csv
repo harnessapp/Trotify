@@ -1,2 +1,3 @@
 RaceAnchorFull,Date,Venue,State,Race No,RaceStartUTC,Horse,Barrier,TrotifyPrice,TABFixedWin,TABOpenPrice,TABHighPrice,PriceDifference,TAB_URL,CapturedAtUTC
 NG241026_R1,2026-10-24,Narrogin,WA,1,2026-10-24T09:10:00Z,ELVIRA JANE,Fr5,2.00,2.50,2.60,2.80,0.50,https://www.tab.com.au/racing/2026-10-24/NARROGIN/NGN/H/1?jurisdiction=VIC,2026-10-23T23:32:27.579848+00:00
+NG241026_R2,2026-10-24,Narrogin,WA,2,2026-10-24T09:39:00Z,BETTOR WASH UP,Fr6,2.00,3.00,3.00,3.10,1.00,https://www.tab.com.au/racing/2026-10-24/NARROGIN/NGN/H/2?jurisdiction=VIC,2026-10-23T23:33:29.815752+00:00
