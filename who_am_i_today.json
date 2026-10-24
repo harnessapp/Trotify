@@ -1,53 +1,55 @@
 {
-  "date": "2026-10-24",
-  "puzzle_number": 23,
-  "type": "TRAINER",
-  "answer": "Ross Adams",
+  "date": "2026-10-25",
+  "puzzle_number": 24,
+  "type": "DRIVER",
+  "answer": "Neil McCallum",
   "stats": {
-    "recent_starts": 168,
-    "recent_wins": 14,
-    "horses": 18
+    "career_starts": 1647,
+    "career_wins": 110,
+    "recent_starts": 145,
+    "recent_wins": 8,
+    "recent_places": 26
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "My stable has had 168 race starts in the past 12 months.",
+      "text": "In the past 12 months, I've had 145 drives.",
       "difficulty": 15,
       "source": "recent_starts",
-      "revealed_letters": 0,
-      "name_pattern": "_ _ _ _    _ _ _ _ _"
+      "revealed_letters": 1,
+      "name_pattern": "N _ _ _    _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've trained 14 winners in the past 12 months.",
+      "text": "The track I've driven at most in the past 12 months is Kilmore.",
       "difficulty": 40,
-      "source": "recent_wins",
-      "revealed_letters": 1,
-      "name_pattern": "R _ _ _    _ _ _ _ _"
+      "source": "favourite_venue",
+      "revealed_letters": 2,
+      "name_pattern": "N _ _ _    M _ _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "The track where I've had the most runners in the past 12 months is Penrith.",
-      "difficulty": 55,
-      "source": "favourite_venue",
-      "revealed_letters": 2,
-      "name_pattern": "R _ _ _    A _ _ _ _"
+      "text": "My win strike rate over the past 12 months is about 6%.",
+      "difficulty": 50,
+      "source": "win_pct",
+      "revealed_letters": 3,
+      "name_pattern": "N _ _ _    M C _ _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "The driver used most often by my stable recently is Stephanie Morris.",
-      "difficulty": 70,
-      "source": "favourite_driver",
-      "revealed_letters": 3,
-      "name_pattern": "R _ _ S    A _ _ _ _"
+      "text": "One of my most recent winners was Koufax at Kilmore.",
+      "difficulty": 75,
+      "source": "recent_winner",
+      "revealed_letters": 4,
+      "name_pattern": "N _ _ _    M C _ _ L _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Ross. ",
+      "text": "My first name is Neil. ",
       "difficulty": 95,
       "source": "first_name",
-      "revealed_letters": 4,
-      "name_pattern": "R _ _ S    A _ A _ _"
+      "revealed_letters": 6,
+      "name_pattern": "N _ _ L    M C _ _ L _ U _"
     }
   ]
 }
