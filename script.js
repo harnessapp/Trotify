@@ -7068,6 +7068,20 @@ function setLatestResultsStateFilter(state) {
     renderLatestResultsView();
 }
 
+function getLatestResultFinishLink(race) {
+    const runner = (race.runners || []).find(row =>
+        clean(row.FinishVideoLink || "").trim()
+    );
+
+    const url = runner
+        ? clean(runner.FinishVideoLink).trim()
+        : "";
+
+    return /^https:\/\/players\.brightcove\.net\//i.test(url)
+        ? url
+        : "";
+}
+
 function renderLatestResultCard(race) {
     const runners = [...race.runners].sort((a, b) => {
         return resultPlacingSortValue(a.Placing) - resultPlacingSortValue(b.Placing);
@@ -7098,6 +7112,7 @@ function renderLatestResultCard(race) {
         );
 
     const isMobile = window.innerWidth <= 700;
+    const finishLink = getLatestResultFinishLink(race);
 
     return `
         <div
@@ -7169,6 +7184,17 @@ function renderLatestResultCard(race) {
                         onclick="openFieldFromLatestResult('${escapeHtml(race.raceKey)}')">
                         Field
                     </button>
+
+                    ${finishLink ? `
+                        <a
+                            class="latest-result-details-button"
+                            href="${escapeHtml(finishLink)}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onclick="event.stopPropagation()">
+                            ▶ Finish
+                        </a>
+                    ` : ""}
 
                 </div>
             ` : ""}
@@ -7360,6 +7386,7 @@ function renderLatestResultPopup(race, showBSP = false) {
     const { prev, next } = getAdjacentLatestResults(race);
 
     const isMobile = window.innerWidth <= 700;
+    const finishLink = getLatestResultFinishLink(race);
 
     return `
         <div class="latest-result-popup-backdrop" id="latestResultPopup" onclick="closeLatestResultPopup()">
@@ -7420,7 +7447,22 @@ function renderLatestResultPopup(race, showBSP = false) {
                         </p>
                     </div>
 
-                    <button onclick="closeLatestResultPopup()">×</button>
+                    <div style="display:flex; align-items:center; gap:10px;">
+
+                        ${finishLink ? `
+                            <a
+                                href="${escapeHtml(finishLink)}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style="white-space:nowrap; font-size:13px; text-decoration:none;"
+                                onclick="event.stopPropagation()">
+                                ▶ Watch Finish
+                            </a>
+                        ` : ""}
+
+                        <button onclick="closeLatestResultPopup()">×</button>
+
+                    </div>
                 </div>
 
 
