@@ -6574,6 +6574,7 @@ function getResultRacesFromRows(rows, options = {}) {
                 start: clean(row.Start || ""),
                 videoLink: clean(row["Video Link"] || ""),
                 photoLink: clean(row["Photo Link"] || ""),
+                finishVideoLink: clean(row["FinishVideoLink"] || ""),
                 raceDateTime: buildRaceDateTime(parseDateToKey(clean(row.Date || "")), clean(row.Time || "")),
                 runners: []
             });
@@ -6883,6 +6884,15 @@ function renderResultCard(race) {
             </div>
 
             <div class="latest-result-actions">
+                ${getLatestResultFinishLink(race) ? `
+                    <a class="latest-result-watch-button"
+                       href="${escapeHtml(getLatestResultFinishLink(race))}"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        ▶ Watch Finish
+                    </a>
+                ` : ""}
+
                 <button class="latest-result-details-button"
                     onclick="openResultPopup('${escapeHtml(race.raceKey)}')">
                     Details
