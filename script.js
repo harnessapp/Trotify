@@ -6885,11 +6885,12 @@ function renderResultCard(race) {
 
             <div class="latest-result-actions">
                 ${getLatestResultFinishLink(race) ? `
-                    <a class="latest-result-watch-button"
+                    <a class="latest-result-details-button"
                        href="${escapeHtml(getLatestResultFinishLink(race))}"
                        target="_blank"
-                       rel="noopener noreferrer">
-                        ▶ Watch Finish
+                       rel="noopener noreferrer"
+                       style="display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">
+                        ▶ Watch
                     </a>
                 ` : ""}
 
