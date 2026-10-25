@@ -1,55 +1,53 @@
 {
-  "date": "2026-10-25",
-  "puzzle_number": 24,
-  "type": "DRIVER",
-  "answer": "Neil McCallum",
+  "date": "2026-10-26",
+  "puzzle_number": 25,
+  "type": "HORSE",
+  "answer": "Wild Card NZ",
   "stats": {
-    "career_starts": 1647,
-    "career_wins": 110,
-    "recent_starts": 145,
-    "recent_wins": 8,
-    "recent_places": 26
+    "starts": 78,
+    "wins": 9,
+    "places": 23
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "In the past 12 months, I've had 145 drives.",
+      "text": "I've had 78 race starts.",
       "difficulty": 15,
-      "source": "recent_starts",
-      "revealed_letters": 1,
-      "name_pattern": "N _ _ _    _ _ _ _ _ _ _ _"
+      "source": "career_starts",
+      "revealed_letters": 0,
+      "name_pattern": "_ _ _ _    _ _ _ _    N Z"
     },
     {
       "clue_number": 2,
-      "text": "The track I've driven at most in the past 12 months is Kilmore.",
-      "difficulty": 40,
-      "source": "favourite_venue",
-      "revealed_letters": 2,
-      "name_pattern": "N _ _ _    M _ _ _ _ _ _ _"
+      "text": "I've won 9 races and placed 23 times.",
+      "difficulty": 25,
+      "source": "career_record",
+      "revealed_letters": 1,
+      "name_pattern": "W _ _ _    _ _ _ _    N Z"
     },
     {
       "clue_number": 3,
-      "text": "My win strike rate over the past 12 months is about 6%.",
-      "difficulty": 50,
-      "source": "win_pct",
-      "revealed_letters": 3,
-      "name_pattern": "N _ _ _    M C _ _ _ _ _ _"
+      "text": "I've won at tracks including Yarra Valley, Mildura, Newcastle.",
+      "difficulty": 55,
+      "source": "winning_tracks",
+      "revealed_letters": 2,
+      "name_pattern": "W _ _ _    C _ _ _    N Z"
     },
     {
       "clue_number": 4,
-      "text": "One of my most recent winners was Koufax at Kilmore.",
+      "text": "I'm currently associated most often with trainer Samantha Gangell.",
       "difficulty": 75,
-      "source": "recent_winner",
-      "revealed_letters": 4,
-      "name_pattern": "N _ _ _    M C _ _ L _ _ _"
+      "source": "trainer",
+      "revealed_letters": 3,
+      "name_pattern": "W _ _ D    C _ _ _    N Z"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Neil. ",
+      "text": "My most recent start was at Melton on 17 October 2026, where I finished 5th for trainer Samantha Gangell and driver Michael Bellman.",
       "difficulty": 95,
-      "source": "first_name",
-      "revealed_letters": 6,
-      "name_pattern": "N _ _ L    M C _ _ L _ U _"
+      "source": "last_start",
+      "revealed_letters": 4,
+      "name_pattern": "W _ _ D    C A _ _    N Z"
     }
   ]
 }
