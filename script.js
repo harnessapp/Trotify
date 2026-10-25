@@ -7411,6 +7411,18 @@ function renderLatestResultPopup(race, showBSP = false) {
                     <div>
                         <div class="race-panel-eyebrow">
                             Full result
+
+                            ${finishLink ? `
+                                <span style="margin:0 10px; opacity:0.5;">|</span>
+                                <a
+                                    href="${escapeHtml(finishLink)}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onclick="event.stopPropagation()"
+                                    style="color:inherit; text-decoration:none; font-weight:inherit;">
+                                    ▶ Watch
+                                </a>
+                            ` : ""}
                         </div>
 
                         <h2>
@@ -7447,22 +7459,7 @@ function renderLatestResultPopup(race, showBSP = false) {
                         </p>
                     </div>
 
-                    <div style="display:flex; align-items:center; gap:10px;">
-
-                        ${finishLink ? `
-                            <a
-                                href="${escapeHtml(finishLink)}"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style="white-space:nowrap; font-size:13px; text-decoration:none;"
-                                onclick="event.stopPropagation()">
-                                ▶ Watch Finish
-                            </a>
-                        ` : ""}
-
-                        <button onclick="closeLatestResultPopup()">×</button>
-
-                    </div>
+                    <button onclick="closeLatestResultPopup()">×</button>
                 </div>
 
 
