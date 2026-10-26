@@ -6383,7 +6383,7 @@ function renderTabDividendBox(raceKey) {
 
     return `
         <div class="latest-result-sections latest-result-dividends">
-            <span class="dividend-brand">SUPERTAB</span>
+            <span class="dividend-brand">POOL</span>
 
             <span><strong>Win</strong> ${escapeHtml(formatDividend(row.W1))}</span>
             <span><strong>Pla</strong> ${escapeHtml(formatDividend(row.P1))} | ${escapeHtml(formatDividend(row.P2))} | ${escapeHtml(formatDividend(row.P3, true))}</span>
