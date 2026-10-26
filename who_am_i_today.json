@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-26",
-  "puzzle_number": 25,
+  "date": "2026-10-27",
+  "puzzle_number": 26,
   "type": "HORSE",
-  "answer": "Wild Card NZ",
+  "answer": "Likeable Rogue",
   "stats": {
-    "starts": 78,
-    "wins": 9,
-    "places": 23
+    "starts": 66,
+    "wins": 10,
+    "places": 17
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 78 race starts.",
+      "text": "I've had 66 race starts.",
       "difficulty": 15,
       "source": "career_starts",
-      "revealed_letters": 0,
-      "name_pattern": "_ _ _ _    _ _ _ _    N Z"
+      "revealed_letters": 1,
+      "name_pattern": "L _ _ _ _ _ _ _    _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've won 9 races and placed 23 times.",
+      "text": "I've won 10 races and placed 17 times.",
       "difficulty": 25,
       "source": "career_record",
-      "revealed_letters": 1,
-      "name_pattern": "W _ _ _    _ _ _ _    N Z"
+      "revealed_letters": 2,
+      "name_pattern": "L _ _ _ _ _ _ _    R _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Yarra Valley, Mildura, Newcastle.",
+      "text": "I've won at tracks including Young, Melton, Mildura.",
       "difficulty": 55,
       "source": "winning_tracks",
-      "revealed_letters": 2,
-      "name_pattern": "W _ _ _    C _ _ _    N Z"
+      "revealed_letters": 3,
+      "name_pattern": "L _ _ _ _ _ L _    R _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Samantha Gangell.",
+      "text": "I'm currently associated most often with trainer Geoffrey Smith.",
       "difficulty": 75,
       "source": "trainer",
-      "revealed_letters": 3,
-      "name_pattern": "W _ _ D    C _ _ _    N Z"
+      "revealed_letters": 5,
+      "name_pattern": "L _ _ E _ _ L _    R O _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Melton on 17 October 2026, where I finished 5th for trainer Samantha Gangell and driver Michael Bellman.",
+      "text": "My most recent start was at Burnie on 23 October 2026, where I finished 1st for trainer Geoffrey Smith and driver Brodie Davis.",
       "difficulty": 95,
       "source": "last_start",
-      "revealed_letters": 4,
-      "name_pattern": "W _ _ D    C A _ _    N Z"
+      "revealed_letters": 6,
+      "name_pattern": "L _ _ E _ _ L _    R O _ U _"
     }
   ]
 }
