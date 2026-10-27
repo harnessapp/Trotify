@@ -1,3 +1,4 @@
 RaceAnchorFull,Date,Venue,State,Race No,RaceStartUTC,Horse,Barrier,TrotifyPrice,TABFixedWin,TABOpenPrice,TABHighPrice,PriceDifference,TAB_URL,CapturedAtUTC
 BH281026_R2,2026-10-28,Bathurst,NSW,2,2026-10-28T07:39:00Z,TOUIE LOUIE NZ,Fr6,1.10,2.00,,2.00,0.90,https://www.tab.com.au/racing/2026-10-28/BATHURST/BAT/H/2?jurisdiction=VIC,2026-10-27T20:20:59.519449+00:00
 SP281026_R4,2026-10-28,Shepparton,VIC,4,2026-10-28T08:30:00Z,DELIZIOSO,Fr4,1.90,1.50,1.95,2.00,-0.40,https://www.tab.com.au/racing/2026-10-28/SHEPPARTON/SHE/H/4?jurisdiction=VIC,2026-10-27T20:45:54.034658+00:00
+SP281026_R8,2026-10-28,Shepparton,VIC,8,2026-10-28T10:30:00Z,SASSY GABBY,Fr7,1.70,2.25,2.70,2.70,0.55,https://www.tab.com.au/racing/2026-10-28/SHEPPARTON/SHE/H/8?jurisdiction=VIC,2026-10-27T20:49:56.581677+00:00
