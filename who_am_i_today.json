@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-27",
-  "puzzle_number": 26,
-  "type": "HORSE",
-  "answer": "Likeable Rogue",
+  "date": "2026-10-28",
+  "puzzle_number": 27,
+  "type": "TRAINER",
+  "answer": "Juanita Breen",
   "stats": {
-    "starts": 66,
-    "wins": 10,
-    "places": 17
+    "recent_starts": 73,
+    "recent_wins": 7,
+    "horses": 7
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 66 race starts.",
+      "text": "My stable has had 73 race starts in the past 12 months.",
       "difficulty": 15,
-      "source": "career_starts",
+      "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "L _ _ _ _ _ _ _    _ _ _ _ _"
+      "name_pattern": "J _ _ _ _ _ _    _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've won 10 races and placed 17 times.",
-      "difficulty": 25,
-      "source": "career_record",
+      "text": "I've trained 7 winners in the past 12 months.",
+      "difficulty": 40,
+      "source": "recent_wins",
       "revealed_letters": 2,
-      "name_pattern": "L _ _ _ _ _ _ _    R _ _ _ _"
+      "name_pattern": "J _ _ _ _ _ _    B _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Young, Melton, Mildura.",
+      "text": "The track where I've had the most runners in the past 12 months is Shepparton.",
       "difficulty": 55,
-      "source": "winning_tracks",
+      "source": "favourite_venue",
       "revealed_letters": 3,
-      "name_pattern": "L _ _ _ _ _ L _    R _ _ _ _"
+      "name_pattern": "J _ _ _ _ _ A    B _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Geoffrey Smith.",
-      "difficulty": 75,
-      "source": "trainer",
-      "revealed_letters": 5,
-      "name_pattern": "L _ _ E _ _ L _    R O _ _ _"
+      "text": "I am the driver used most often by my stable recently.",
+      "difficulty": 70,
+      "source": "favourite_driver",
+      "revealed_letters": 4,
+      "name_pattern": "J _ _ _ _ _ A    B R _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Burnie on 23 October 2026, where I finished 1st for trainer Geoffrey Smith and driver Brodie Davis.",
+      "text": "My first name is Juanita. ",
       "difficulty": 95,
-      "source": "last_start",
+      "source": "first_name",
       "revealed_letters": 6,
-      "name_pattern": "L _ _ E _ _ L _    R O _ U _"
+      "name_pattern": "J _ _ N _ _ A    B R _ E _"
     }
   ]
 }
