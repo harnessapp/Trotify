@@ -9730,6 +9730,11 @@ const selectionsText = selections
 
                     <span class="toggle-divider"></span>
 
+                    <button class="${runnerDisplayMode === "form" ? "selected" : ""}"
+                        onclick="setRunnerDisplayMode('form', '${escapeHtml(venue)}', '${escapeHtml(state)}', '${escapeHtml(dateValue)}', '${escapeHtml(raceNo)}')">
+                        Form
+                    </button>
+
                     <button class="${runnerDisplayMode === "trials" ? "selected" : ""}"
                         onclick="setRunnerDisplayMode('trials', '${escapeHtml(venue)}', '${escapeHtml(state)}', '${escapeHtml(dateValue)}', '${escapeHtml(raceNo)}')">
                         Trials
@@ -9827,13 +9832,17 @@ const selectionsText = selections
 
                     const previewComment = fullComment;
 
+
                     const runnerInfoHtml = isScratched
                         ? ""
-                        : runnerDisplayMode === "trials"
-                            ? renderRunnerTrialsInline(row)
-                            : runnerDisplayMode === "map"
-                                ? renderRunnerSpeedMapInline(row)
-                                : renderRunnerCommentInline(fullComment, previewComment);
+                        : runnerDisplayMode === "form"
+                            ? renderRunnerFormInline(row)
+                            : runnerDisplayMode === "trials"
+                                ? renderRunnerTrialsInline(row)
+                                : runnerDisplayMode === "map"
+                                    ? renderRunnerSpeedMapInline(row)
+                                    : renderRunnerCommentInline(fullComment, previewComment);
+
 
                     return `
                         ${dividerLabel ? `
@@ -9914,11 +9923,17 @@ const selectionsText = selections
                             <!-- MOBILE RUNNER -->
                             <div class="runner-mobile-content">
 
-                                ${runnerDisplayMode === "trials" && !isScratched ? `
+
+                                ${runnerDisplayMode === "form" && !isScratched ? `
+
+                                    ${renderRunnerFormMobile(row)}
+
+                                ` : runnerDisplayMode === "trials" && !isScratched ? `
 
                                     ${renderRunnerTrialsMobile(row)}
 
                                 ` : runnerDisplayMode === "map" ? `
+
 
                                     ${renderRunnerSpeedMapMobile(row)}
 
@@ -10584,6 +10599,199 @@ function toggleCommentTooltip(el) {
 
     el.classList.toggle("comment-is-truncated", isTruncated);
 }
+
+
+function buildRunnerFormLineHtml(row, n) {
+    const p = `F${n}`;
+    const get = key => clean(row[`${p} ${key}`] || "");
+
+    const venue = get("Venue");
+    const date = get("Date");
+    const pos = get("Pos");
+    const runners = get("Runners");
+
+    if (!venue && !date && !pos) return "";
+
+    const dist = get("Dist");
+    const start = get("Start");
+    const barrier = get("Barrier");
+    const driver = get("Driver");
+    const winPrice = get("BSP Win");
+    const placePrice = get("BSP Place");
+    const margin = get("Mgn");
+    const winner = get("Winner");
+    const rate = get("Rate");
+    const half = get("Half");
+    const gapFlag = get("GapFlag").toUpperCase();
+    const firstUp = get("FirstUp").toUpperCase();
+    const vision = get("Vision");
+    const url = get("URL");
+
+    const position = formatTrialOrdinal(pos);
+    const venueText = venue.slice(0, 4).toUpperCase();
+    const dateText = formatTrialDate(date);
+
+    const startUpper = start.toUpperCase();
+    const startText =
+        startUpper === "MS" || startUpper.includes("MOBILE") ? "MS" :
+        startUpper === "SS" || startUpper.includes("STAND") ? "SS" : start;
+
+    const distText = dist
+        ? `${cleanIntish(dist).replace(/m$/i, "")}m`
+        : "";
+
+    const barrierText = barrier ? `[${barrier}]` : "";
+
+    const prices = [winPrice, placePrice]
+        .filter(Boolean)
+        .map(v => {
+            const num = Number(v);
+            return Number.isFinite(num) ? `$${num.toFixed(2)}` : v;
+        })
+        .join("/");
+
+    const isWin = Number(pos) === 1;
+
+    const details = [];
+
+    if (driver) details.push(`(${driver})`);
+    if (prices) details.push(`[${prices}]`);
+
+    if (margin) {
+        details.push(
+            `${isWin ? "won by" : "btn"} ${mgnFmtTrial(margin)}`
+        );
+    }
+
+    if (winner && !isWin) {
+        details.push(`wnr ${winner.toUpperCase()}`);
+    }
+
+    if (rate) details.push(formatTrialRate(rate));
+    if (half) details.push(formatOneDecimal(half));
+
+    const firstUpHtml = firstUp === "YES"
+        ? `<span class="trial-fresh-badge">FIRST UP</span>`
+        : "";
+
+    const gapHtml =
+        gapFlag === "BETTER"
+            ? `<span style="color:#63ffb0;font-weight:900" title="Better than expected">↑</span>`
+            : gapFlag === "WORSE"
+                ? `<span style="color:#ff7777;font-weight:900" title="Worse than expected">↓</span>`
+                : "";
+
+    const desktopHtml = `
+        ${firstUpHtml}
+        <span class="runner-trial-main">
+            ${escapeHtml([
+                position,
+                runners ? `(of ${cleanIntish(runners)})` : "",
+                venueText,
+                dateText
+            ].filter(Boolean).join(" "))}
+        </span>
+        <span class="runner-trial-extra">
+            ${escapeHtml([distText, startText, barrierText]
+                .filter(Boolean).join(" "))}
+        </span>
+        <span class="runner-trial-detail">
+            ${details.length ? ", " + escapeHtml(details.join(", ")) : ""}
+            ${gapHtml}
+        </span>
+    `;
+
+    const mobileDetails = [];
+
+    if (margin) {
+        mobileDetails.push(
+            `${isWin ? "won by" : "btn"} ${mgnFmtTrial(margin)}`
+        );
+    }
+    if (winner && !isWin) {
+        mobileDetails.push(`wnr ${winner.toUpperCase()}`);
+    }
+    if (rate) mobileDetails.push(formatTrialRate(rate));
+    if (half) mobileDetails.push(formatOneDecimal(half));
+
+    const mobileHtml = `
+        ${firstUpHtml}
+        <span class="runner-trial-main">
+            ${escapeHtml([
+                position,
+                venueText,
+                dateText,
+                distText,
+                startText,
+                barrierText
+            ].filter(Boolean).join(" "))}
+        </span>
+        <span class="runner-trial-detail">
+            ${mobileDetails.length
+                ? ", " + escapeHtml(mobileDetails.join(", "))
+                : ""}
+            ${gapHtml}
+        </span>
+    `;
+
+    const innerHtml = `
+        <span class="runner-trial-desktop">${desktopHtml}</span>
+        <span class="runner-trial-mobile">${mobileHtml}</span>
+    `;
+
+    const visionHtml = /^https?:\/\//i.test(vision)
+        ? `<a class="runner-trial-play"
+              href="${escapeHtml(vision)}"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Watch vision"
+              onclick="event.stopPropagation()">▶</a>`
+        : "";
+
+    const content = /^https?:\/\//i.test(url)
+        ? `<a class="runner-trial-link"
+              href="${escapeHtml(url)}"
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick="event.stopPropagation()">${innerHtml}</a>`
+        : `<span class="runner-trial-link">${innerHtml}</span>`;
+
+    return `
+        <div class="runner-trial-line">
+            ${visionHtml}
+            ${content}
+        </div>
+    `;
+}
+
+function renderRunnerFormInline(row) {
+    const lines = [1, 2, 3]
+        .map(n => buildRunnerFormLineHtml(row, n))
+        .filter(Boolean);
+
+    return `
+        <div class="runner-trials-inline">
+            ${lines.length
+                ? lines.join("")
+                : '<div class="runner-trials-empty">No recent form found</div>'}
+        </div>
+    `;
+}
+
+function renderRunnerFormMobile(row) {
+    const lines = [1, 2, 3]
+        .map(n => buildRunnerFormLineHtml(row, n))
+        .filter(Boolean);
+
+    return `
+        <div class="mobile-trials-list">
+            ${lines.length
+                ? lines.join("")
+                : '<div class="mobile-trial-empty">No recent form found</div>'}
+        </div>
+    `;
+}
+
 
 function renderRunnerTrialsInline(row) {
     const trialRunner = findTrialRunnerForRow(row);
