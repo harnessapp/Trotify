@@ -10670,7 +10670,7 @@ function buildRunnerFormLineHtml(row, n) {
     if (rate) details.push(formatTrialRate(rate));
     if (half) details.push(formatOneDecimal(half));
 
-    const firstUpHtml = firstUp === "YES"
+    const firstUpHtml = firstUp === "FIRST UP" || firstUp === "YES"
         ? `<span class="trial-fresh-badge">FIRST UP</span>`
         : "";
 
