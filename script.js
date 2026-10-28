@@ -10683,7 +10683,7 @@ function buildRunnerFormLineHtml(row, n) {
                 : "";
 
     const bellHtml = bellPosition
-        ? `<span style="font-weight:600" title="Bell position"> ${escapeHtml(bellPosition)}</span>`
+        ? `<span style="font-weight:700; color:#ffffff" title="Bell position"> ${escapeHtml(bellPosition)}</span>`
         : "";
 
     const desktopHtml = `
