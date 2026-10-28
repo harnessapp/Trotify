@@ -10739,12 +10739,13 @@ function buildRunnerFormLineHtml(row, n) {
         <span class="runner-trial-mobile">${mobileHtml}</span>
     `;
 
-    const visionHtml = /^https?:\/\//i.test(vision)
+    // F1/F2/F3 Vision is a marker (▶); the actual replay link is in URL.
+    const visionHtml = /^https?:\/\//i.test(url) && vision
         ? `<a class="runner-trial-play"
-              href="${escapeHtml(vision)}"
+              href="${escapeHtml(url)}"
               target="_blank"
               rel="noopener noreferrer"
-              title="Watch vision"
+              title="Watch full race replay"
               onclick="event.stopPropagation()">▶</a>`
         : "";
 
