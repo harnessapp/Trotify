@@ -10623,6 +10623,7 @@ function buildRunnerFormLineHtml(row, n) {
     const rate = get("Rate");
     const half = get("Half");
     const gapFlag = get("GapFlag").toUpperCase();
+    const bellPosition = get("BellPosition");
     const firstUp = get("FirstUp").toUpperCase();
     const vision = get("Vision");
     const url = get("URL");
@@ -10681,6 +10682,10 @@ function buildRunnerFormLineHtml(row, n) {
                 ? `<span style="color:#ff7777;font-weight:900" title="Worse than expected">↓</span>`
                 : "";
 
+    const bellHtml = bellPosition
+        ? `<span style="font-weight:600" title="Bell position"> ${escapeHtml(bellPosition)}</span>`
+        : "";
+
     const desktopHtml = `
         ${firstUpHtml}
         <span class="runner-trial-main">
@@ -10697,7 +10702,7 @@ function buildRunnerFormLineHtml(row, n) {
         </span>
         <span class="runner-trial-detail">
             ${details.length ? ", " + escapeHtml(details.join(", ")) : ""}
-            ${gapHtml}
+            ${gapHtml}${bellHtml}
         </span>
     `;
 
@@ -10730,7 +10735,7 @@ function buildRunnerFormLineHtml(row, n) {
             ${mobileDetails.length
                 ? ", " + escapeHtml(mobileDetails.join(", "))
                 : ""}
-            ${gapHtml}
+            ${gapHtml}${bellHtml}
         </span>
     `;
 
