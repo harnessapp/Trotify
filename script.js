@@ -10808,14 +10808,30 @@ function buildMobileFormLineHtml(row, n) {
 
     const position = formatTrialOrdinal(pos);
     const venueText = venue.slice(0, 4).toUpperCase();
-    const dateText = formatTrialDate(date);
 
-    const placingText =
-        `${position}${runners ? `/${cleanIntish(runners)}` : ""}`;
+    const dateText = (() => {
+        const formatted = formatTrialDate(date);
+        const match = formatted.match(/^(\d{1,2})([A-Za-z]{3})\d{2}$/);
+        if (!match) return formatted;
+
+        const months = [
+            "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        ];
+
+        const month = months.indexOf(match[2]) + 1;
+        return month
+            ? `${match[1].padStart(2, "0")}/${String(month).padStart(2, "0")}`
+            : formatted;
+    })();
+
+
+    const placingText = position;
 
     const distText = dist
-        ? `${cleanIntish(dist).replace(/m$/i, "")}m`
+        ? cleanIntish(dist).replace(/m$/i, "")
         : "";
+
 
     const startUpper = start.toUpperCase();
     const startText =
@@ -10825,9 +10841,12 @@ function buildMobileFormLineHtml(row, n) {
 
     const isWin = Number(pos) === 1;
 
-    const marginText = margin
-        ? `${isWin ? "won" : "btn"} ${mgnFmtTrial(margin)}`
-        : "";
+    const marginNumber = Number(margin);
+
+    const marginText = margin &&
+        Number.isFinite(marginNumber)
+            ? `(${formatOneDecimal(marginNumber)}m)`
+            : "";
 
     const rateText = rate ? formatTrialRate(rate) : "";
     const halfText = half ? formatOneDecimal(half) : "";
@@ -10842,13 +10861,12 @@ function buildMobileFormLineHtml(row, n) {
     const mainText = [
         placingText,
         venueText,
-        dateText
+        dateText,
+        marginText
     ].filter(Boolean).join(" ");
 
     const detailsText = [
         distText,
-        startText,
-        marginText,
         rateText,
         halfText,
         bspText
