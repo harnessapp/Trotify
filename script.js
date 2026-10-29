@@ -10896,7 +10896,6 @@ function buildMobileFormLineHtml(row, n) {
             font-weight:700;
             white-space:nowrap;
         ">
-            ${firstUpHtml}
             ${escapeHtml(mainText)}
             ${detailsText ? ` · ${escapeHtml(detailsText)}` : ""}
             ${bellHtml}
