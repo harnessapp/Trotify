@@ -10854,7 +10854,7 @@ function buildMobileFormLineHtml(row, n) {
     const bspNumber = Number(bsp.replace(/[$,]/g, ""));
     const bspText = bsp
         ? (Number.isFinite(bspNumber)
-            ? `$${bspNumber.toFixed(2)}`
+            ? `$${bspNumber.toFixed(bspNumber < 10 ? 1 : 0)}`
             : bsp)
         : "";
 
@@ -10866,7 +10866,6 @@ function buildMobileFormLineHtml(row, n) {
     ].filter(Boolean).join(" ");
 
     const detailsText = [
-        distText,
         rateText,
         halfText,
         bspText
