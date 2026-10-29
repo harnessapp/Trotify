@@ -10784,9 +10784,155 @@ function renderRunnerFormInline(row) {
     `;
 }
 
+function buildMobileFormLineHtml(row, n) {
+    const p = `F${n}`;
+    const get = key => clean(row[`${p} ${key}`] || "");
+
+    const venue = get("Venue");
+    const date = get("Date");
+    const pos = get("Pos");
+    const runners = get("Runners");
+
+    if (!venue && !date && !pos) return "";
+
+    const dist = get("Dist");
+    const start = get("Start");
+    const margin = get("Mgn");
+    const rate = get("Rate");
+    const half = get("Half");
+    const bsp = get("BSP Win");
+    const bell = get("BellPosition");
+    const vision = get("Vision");
+    const url = get("URL");
+    const firstUp = get("FirstUp").toUpperCase();
+
+    const position = formatTrialOrdinal(pos);
+    const venueText = venue.slice(0, 4).toUpperCase();
+    const dateText = formatTrialDate(date);
+
+    const placingText =
+        `${position}${runners ? `/${cleanIntish(runners)}` : ""}`;
+
+    const distText = dist
+        ? `${cleanIntish(dist).replace(/m$/i, "")}m`
+        : "";
+
+    const startUpper = start.toUpperCase();
+    const startText =
+        startUpper === "MS" || startUpper.includes("MOBILE") ? "MS" :
+        startUpper === "SS" || startUpper.includes("STAND") ? "SS" :
+        start;
+
+    const isWin = Number(pos) === 1;
+
+    const marginText = margin
+        ? `${isWin ? "won" : "btn"} ${mgnFmtTrial(margin)}`
+        : "";
+
+    const rateText = rate ? formatTrialRate(rate) : "";
+    const halfText = half ? formatOneDecimal(half) : "";
+
+    const bspNumber = Number(bsp.replace(/[$,]/g, ""));
+    const bspText = bsp
+        ? (Number.isFinite(bspNumber)
+            ? `$${bspNumber.toFixed(2)}`
+            : bsp)
+        : "";
+
+    const mainText = [
+        placingText,
+        venueText,
+        dateText
+    ].filter(Boolean).join(" ");
+
+    const detailsText = [
+        distText,
+        startText,
+        marginText,
+        rateText,
+        halfText,
+        bspText
+    ].filter(Boolean).join(", ");
+
+    const firstUpHtml =
+        firstUp === "FIRST UP" || firstUp === "YES"
+            ? `<span style="
+                color:#63ffb0;
+                font-weight:900;
+                margin-right:3px;
+            ">FIRST UP</span>`
+            : "";
+
+    const bellHtml = bell
+        ? `<span style="
+            color:#ffffff;
+            font-weight:900;
+            margin-left:4px;
+        ">${escapeHtml(bell)}</span>`
+        : "";
+
+    const textHtml = `
+        <span style="
+            color:rgba(255,255,255,0.78);
+            font-size:8.5px;
+            line-height:1.1;
+            font-weight:700;
+            white-space:nowrap;
+        ">
+            ${firstUpHtml}
+            ${escapeHtml(mainText)}
+            ${detailsText ? ` · ${escapeHtml(detailsText)}` : ""}
+            ${bellHtml}
+        </span>
+    `;
+
+    const hasVision =
+        vision &&
+        /^https?:\/\//i.test(url);
+
+    const commonStyle = `
+        display:block;
+        width:100%;
+        padding:1px 0;
+        color:rgba(255,255,255,0.78);
+        text-decoration:none;
+        font-size:8.5px;
+        line-height:1.1;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        box-sizing:border-box;
+    `;
+
+    if (hasVision) {
+        return `
+            <a
+                href="${escapeHtml(url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                onclick="event.stopPropagation()"
+                style="${commonStyle}"
+            >
+                <span style="
+                    color:#74ff8f;
+                    font-size:8.5px;
+                    margin-right:3px;
+                ">▶</span>
+                ${textHtml}
+            </a>
+        `;
+    }
+
+    return `
+        <div style="${commonStyle}">
+            ${textHtml}
+        </div>
+    `;
+}
+
 function renderRunnerFormMobile(row) {
     const lines = [1, 2, 3]
-        .map(n => buildRunnerFormLineHtml(row, n))
+        .map(n => buildMobileFormLineHtml(row, n))
         .filter(Boolean);
 
     return `
