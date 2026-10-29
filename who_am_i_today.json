@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-29",
-  "puzzle_number": 28,
-  "type": "HORSE",
-  "answer": "Waves Of Chance",
+  "date": "2026-10-30",
+  "puzzle_number": 29,
+  "type": "TRAINER",
+  "answer": "Anthony Missen",
   "stats": {
-    "starts": 37,
-    "wins": 11,
-    "places": 17
+    "recent_starts": 223,
+    "recent_wins": 26,
+    "horses": 27
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 37 race starts.",
+      "text": "My stable has had 223 race starts in the past 12 months.",
       "difficulty": 15,
-      "source": "career_starts",
+      "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "W _ _ _ _    _ _    _ _ _ _ _ _"
+      "name_pattern": "A _ _ _ _ _ _    _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've won 11 races and placed 17 times.",
-      "difficulty": 25,
-      "source": "career_record",
+      "text": "I've trained 26 winners in the past 12 months.",
+      "difficulty": 40,
+      "source": "recent_wins",
       "revealed_letters": 2,
-      "name_pattern": "W _ _ _ _    O _    _ _ _ _ _ _"
+      "name_pattern": "A _ _ _ _ _ _    M _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Goulburn, Coolamon, Canberra.",
+      "text": "The track where I've had the most runners in the past 12 months is Tamworth.",
       "difficulty": 55,
-      "source": "winning_tracks",
+      "source": "favourite_venue",
       "revealed_letters": 3,
-      "name_pattern": "W _ _ _ _    O _    C _ _ _ _ _"
+      "name_pattern": "A _ _ _ _ _ Y    M _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Juanita McKenzie.",
-      "difficulty": 75,
-      "source": "trainer",
+      "text": "The driver used most often by my stable recently is Blake Hughes.",
+      "difficulty": 70,
+      "source": "favourite_driver",
       "revealed_letters": 5,
-      "name_pattern": "W _ _ _ _    O F    C H _ _ _ _"
+      "name_pattern": "A _ _ H _ _ Y    M _ S _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Hobart on 11 October 2026, where I finished 2nd for trainer Juanita McKenzie and driver Rodney Ashwood.",
+      "text": "My first name is Anthony. ",
       "difficulty": 95,
-      "source": "last_start",
+      "source": "first_name",
       "revealed_letters": 6,
-      "name_pattern": "W _ _ E _    O F    C H _ _ _ _"
+      "name_pattern": "A _ _ H _ _ Y    M _ S _ E _"
     }
   ]
 }
