@@ -1,53 +1,55 @@
 {
-  "date": "2026-10-30",
-  "puzzle_number": 29,
-  "type": "TRAINER",
-  "answer": "Anthony Missen",
+  "date": "2026-10-31",
+  "puzzle_number": 30,
+  "type": "DRIVER",
+  "answer": "Jordan Leedham",
   "stats": {
-    "recent_starts": 223,
-    "recent_wins": 26,
-    "horses": 27
+    "career_starts": 3690,
+    "career_wins": 414,
+    "recent_starts": 801,
+    "recent_wins": 93,
+    "recent_places": 293
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "My stable has had 223 race starts in the past 12 months.",
+      "text": "In the past 12 months, I've had 801 drives.",
       "difficulty": 15,
       "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "A _ _ _ _ _ _    _ _ _ _ _ _"
+      "name_pattern": "J _ _ _ _ _    _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've trained 26 winners in the past 12 months.",
+      "text": "The track I've driven at most in the past 12 months is Melton.",
       "difficulty": 40,
-      "source": "recent_wins",
+      "source": "favourite_venue",
       "revealed_letters": 2,
-      "name_pattern": "A _ _ _ _ _ _    M _ _ _ _ _"
+      "name_pattern": "J _ _ _ _ _    L _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "The track where I've had the most runners in the past 12 months is Tamworth.",
-      "difficulty": 55,
-      "source": "favourite_venue",
+      "text": "My win strike rate over the past 12 months is about 12%.",
+      "difficulty": 50,
+      "source": "win_pct",
       "revealed_letters": 3,
-      "name_pattern": "A _ _ _ _ _ Y    M _ _ _ _ _"
+      "name_pattern": "J _ _ _ _ N    L _ _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "The driver used most often by my stable recently is Blake Hughes.",
-      "difficulty": 70,
-      "source": "favourite_driver",
+      "text": "One of my most recent winners was Miley Kay at Melton.",
+      "difficulty": 75,
+      "source": "recent_winner",
       "revealed_letters": 5,
-      "name_pattern": "A _ _ H _ _ Y    M _ S _ _ _"
+      "name_pattern": "J _ _ D _ N    L _ _ D _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Anthony. ",
+      "text": "My first name is Jordan. ",
       "difficulty": 95,
       "source": "first_name",
       "revealed_letters": 6,
-      "name_pattern": "A _ _ H _ _ Y    M _ S _ E _"
+      "name_pattern": "J _ _ D _ N    L _ _ D _ A _"
     }
   ]
 }
