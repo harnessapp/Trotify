@@ -12489,3 +12489,112 @@ body.legal-modal-open {
     color: #9aa8b6;
     margin-left: 4px;
 }
+
+/* HOME STRAIGHT - COMPACT RACE ROWS */
+
+.home-straight-layout {
+    width: 100%;
+}
+
+.home-straight-layout .next-up-race-list {
+    gap: 6px;
+}
+
+.home-straight-layout .next-up-race-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 0;
+    padding: 11px 16px;
+}
+
+.home-straight-layout .next-up-main {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 18px;
+    min-width: 0;
+}
+
+.home-straight-layout .next-up-title {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.home-straight-layout .next-up-meta {
+    margin: 0;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.home-straight-layout .card-button {
+    flex-shrink: 0;
+    width: auto;
+    min-width: 140px;
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .home-straight-layout .next-up-race-card {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .home-straight-layout .next-up-main {
+        gap: 8px;
+    }
+
+    .home-straight-layout .next-up-title {
+        font-size: 12px;
+    }
+
+    .home-straight-layout .next-up-meta {
+        font-size: 10px;
+    }
+
+    .home-straight-layout .card-button {
+        min-width: 0;
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+}
+
+/* HOME STRAIGHT - DAILY SEPARATORS */
+
+.home-straight-date {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin: 22px 0 10px;
+    color: #75e0c7;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.home-straight-date::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(117, 224, 199, 0.2);
+}
+
+.home-straight-date:first-child {
+    margin-top: 4px;
+}
+
+/* HOME STRAIGHT - CLICKABLE RACES */
+
+.home-straight-race-card {
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.home-straight-race-card:hover {
+    background: #253642;
+    border-color: rgba(117, 224, 199, 0.4);
+}

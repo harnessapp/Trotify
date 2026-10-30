@@ -1073,6 +1073,8 @@ function setupNavigation() {
                 showNextUpView();
             } else if (view === "trotify-tips") {
                 showTrotifyTipsView();
+            } else if (view === "home-straight") {
+                showHomeStraightView();
             } else if (view === "feature-races") {
                 showFeatureRacesView();
             } else if (view === "latest-results") {
@@ -6435,6 +6437,127 @@ function stopLatestResultsRefresh() {
         latestResultsRefreshTimer = null;
     }
 }
+
+
+function showHomeStraightView() {
+    resetMobileViewScroll();
+    stopTimelineRefresh();
+    clearNextUpTimer();
+
+    document.querySelector(".hero").style.display = "none";
+    document.querySelector(".dashboard-grid").style.display = "none";
+    document.querySelector(".meetings-panel").style.display = "";
+
+    document.querySelector(".panel-heading").innerHTML = `
+        <span>🎬</span>
+        <span>Home Straight</span>
+    `;
+
+    renderHomeStraightView();
+}
+
+function renderHomeStraightView() {
+    const raceMap = new Map();
+
+    // Combine today's live results with historical results.
+    // Keep only races that have a valid Watch Finish link.
+    [...(liveResultsRows || []), ...(resultsRecentRows || [])].forEach(row => {
+        const raceKey = clean(row.RaceAnchorFull || "");
+        const url = clean(row.FinishVideoLink || "").trim();
+
+        if (!raceKey || !/^https:\/\/players\.brightcove\.net\//i.test(url)) {
+            return;
+        }
+
+        if (!raceMap.has(raceKey)) {
+            raceMap.set(raceKey, row);
+        }
+    });
+
+    const races = [...raceMap.values()].sort((a, b) => {
+        const dateA = parseDateToKey(clean(a.Date || ""));
+        const dateB = parseDateToKey(clean(b.Date || ""));
+
+        // Most recent date first
+        if (dateA !== dateB) {
+            return dateB.localeCompare(dateA);
+        }
+
+        // Within each date, latest scheduled race time first
+        const timeA = buildRaceDateTime(dateA, clean(a.Time || ""));
+        const timeB = buildRaceDateTime(dateB, clean(b.Time || ""));
+
+        const timestampA = timeA?.getTime() || 0;
+        const timestampB = timeB?.getTime() || 0;
+
+        if (timestampA !== timestampB) {
+            return timestampB - timestampA;
+        }
+
+        return Number(b["Race No"] || 0) - Number(a["Race No"] || 0);
+    });
+
+    document.getElementById("meetingStrip").innerHTML = `
+        <div class="next-up-layout home-straight-layout">
+            <div class="next-up-race-list">
+                ${races.length ? races.map((row, index) => {
+                    const dateKey = parseDateToKey(clean(row.Date || ""));
+
+                    const previousDateKey = index > 0
+                        ? parseDateToKey(clean(races[index - 1].Date || ""))
+                        : "";
+
+                    const showDateHeading = dateKey !== previousDateKey;
+
+                    const dateHeading = showDateHeading ? `
+                        <div class="home-straight-date">
+                            ${new Date(dateKey + "T12:00:00").toLocaleDateString("en-AU", {
+                                weekday: "long",
+                                day: "numeric",
+                                month: "long",
+                                year: "numeric"
+                            })}
+                        </div>
+                    ` : "";
+                    const venue = clean(row.Venue || "");
+                    const raceNo = clean(row["Race No"] || "").replace(/^R/i, "");
+                    const time = clean(row.Time || "");
+                    const distance = clean(row.Distance || "");
+                    const url = clean(row.FinishVideoLink || "").trim();
+
+                    return `
+                        ${dateHeading}
+                        <div class="next-up-race-card home-straight-race-card"
+                             onclick="openTimelineResultPopup('${escapeHtml(clean(row.RaceAnchorFull || ""))}')">
+                            <div class="next-up-main">
+                                <div class="next-up-title">
+                                    ${escapeHtml(venue)} R${escapeHtml(raceNo)}
+                                </div>
+                                <div class="next-up-meta">
+                                    ${escapeHtml(time)}
+                                    ${distance ? ` · ${escapeHtml(distance)}m` : ""}
+                                </div>
+                            </div>
+                            <a class="card-button compact"
+                               href="${escapeHtml(url)}"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               onclick="event.stopPropagation()">
+                                ▶ Watch Finish
+                            </a>
+                        </div>
+                    `;
+                }).join("") : `
+                    <div class="coming-soon-card">
+                        <div class="coming-soon-title">No race finishes available</div>
+                        <p>Race finishes will appear here when video links become available.</p>
+                    </div>
+                `}
+            </div>
+        </div>
+    `;
+}
+
 
 function showLatestResultsView() {
     resetMobileViewScroll();
