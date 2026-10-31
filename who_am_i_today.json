@@ -1,55 +1,53 @@
 {
-  "date": "2026-10-31",
-  "puzzle_number": 30,
-  "type": "DRIVER",
-  "answer": "Jordan Leedham",
+  "date": "2026-11-01",
+  "puzzle_number": 31,
+  "type": "HORSE",
+  "answer": "Media Mogul",
   "stats": {
-    "career_starts": 3690,
-    "career_wins": 414,
-    "recent_starts": 801,
-    "recent_wins": 93,
-    "recent_places": 293
+    "starts": 37,
+    "wins": 4,
+    "places": 12
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "In the past 12 months, I've had 801 drives.",
+      "text": "I've had 37 race starts.",
       "difficulty": 15,
-      "source": "recent_starts",
+      "source": "career_starts",
       "revealed_letters": 1,
-      "name_pattern": "J _ _ _ _ _    _ _ _ _ _ _ _"
+      "name_pattern": "M _ _ _ _    _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "The track I've driven at most in the past 12 months is Melton.",
-      "difficulty": 40,
-      "source": "favourite_venue",
+      "text": "I've won 4 races and placed 12 times.",
+      "difficulty": 25,
+      "source": "career_record",
       "revealed_letters": 2,
-      "name_pattern": "J _ _ _ _ _    L _ _ _ _ _ _"
+      "name_pattern": "M _ _ _ _    M _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "My win strike rate over the past 12 months is about 12%.",
-      "difficulty": 50,
-      "source": "win_pct",
+      "text": "I've won at tracks including Mount Gambier, Terang, Newcastle.",
+      "difficulty": 55,
+      "source": "winning_tracks",
       "revealed_letters": 3,
-      "name_pattern": "J _ _ _ _ N    L _ _ _ _ _ _"
+      "name_pattern": "M _ _ _ A    M _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "One of my most recent winners was Miley Kay at Melton.",
+      "text": "I'm currently associated most often with trainer Lachlan Prothero.",
       "difficulty": 75,
-      "source": "recent_winner",
-      "revealed_letters": 5,
-      "name_pattern": "J _ _ D _ N    L _ _ D _ _ _"
+      "source": "trainer",
+      "revealed_letters": 4,
+      "name_pattern": "M _ _ _ A    M O _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Jordan. ",
+      "text": "My most recent start was at Newcastle on 16 October 2026, where I finished 8th for trainer Lachlan Prothero and driver Robert Morris.",
       "difficulty": 95,
-      "source": "first_name",
-      "revealed_letters": 6,
-      "name_pattern": "J _ _ D _ N    L _ _ D _ A _"
+      "source": "last_start",
+      "revealed_letters": 5,
+      "name_pattern": "M _ D _ A    M O _ _ _"
     }
   ]
 }
