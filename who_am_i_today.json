@@ -1,53 +1,55 @@
 {
-  "date": "2026-11-01",
-  "puzzle_number": 31,
-  "type": "HORSE",
-  "answer": "Media Mogul",
+  "date": "2026-11-02",
+  "puzzle_number": 32,
+  "type": "DRIVER",
+  "answer": "Katie Wilson",
   "stats": {
-    "starts": 37,
-    "wins": 4,
-    "places": 12
+    "career_starts": 480,
+    "career_wins": 37,
+    "recent_starts": 133,
+    "recent_wins": 14,
+    "recent_places": 40
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 37 race starts.",
+      "text": "In the past 12 months, I've had 133 drives.",
       "difficulty": 15,
-      "source": "career_starts",
+      "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "M _ _ _ _    _ _ _ _ _"
+      "name_pattern": "K _ _ _ _    _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've won 4 races and placed 12 times.",
-      "difficulty": 25,
-      "source": "career_record",
+      "text": "The track I've driven at most in the past 12 months is Globe Derby Park.",
+      "difficulty": 40,
+      "source": "favourite_venue",
       "revealed_letters": 2,
-      "name_pattern": "M _ _ _ _    M _ _ _ _"
+      "name_pattern": "K _ _ _ _    W _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Mount Gambier, Terang, Newcastle.",
-      "difficulty": 55,
-      "source": "winning_tracks",
+      "text": "My win strike rate over the past 12 months is about 11%.",
+      "difficulty": 50,
+      "source": "win_pct",
       "revealed_letters": 3,
-      "name_pattern": "M _ _ _ A    M _ _ _ _"
+      "name_pattern": "K _ _ _ E    W _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Lachlan Prothero.",
+      "text": "One of my most recent winners was Just Mocha at Globe Derby Park.",
       "difficulty": 75,
-      "source": "trainer",
+      "source": "recent_winner",
       "revealed_letters": 4,
-      "name_pattern": "M _ _ _ A    M O _ _ _"
+      "name_pattern": "K _ _ _ E    W _ L _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Newcastle on 16 October 2026, where I finished 8th for trainer Lachlan Prothero and driver Robert Morris.",
+      "text": "My first name is Katie. ",
       "difficulty": 95,
-      "source": "last_start",
+      "source": "first_name",
       "revealed_letters": 5,
-      "name_pattern": "M _ D _ A    M O _ _ _"
+      "name_pattern": "K _ _ I E    W _ L _ _ _"
     }
   ]
 }
