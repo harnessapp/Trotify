@@ -1,55 +1,53 @@
 {
-  "date": "2026-11-02",
-  "puzzle_number": 32,
-  "type": "DRIVER",
-  "answer": "Katie Wilson",
+  "date": "2026-11-03",
+  "puzzle_number": 33,
+  "type": "TRAINER",
+  "answer": "Brad Hewitt",
   "stats": {
-    "career_starts": 480,
-    "career_wins": 37,
-    "recent_starts": 133,
-    "recent_wins": 14,
-    "recent_places": 40
+    "recent_starts": 338,
+    "recent_wins": 95,
+    "horses": 55
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "In the past 12 months, I've had 133 drives.",
+      "text": "My stable has had 338 race starts in the past 12 months.",
       "difficulty": 15,
       "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "K _ _ _ _    _ _ _ _ _ _"
+      "name_pattern": "B _ _ _    _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "The track I've driven at most in the past 12 months is Globe Derby Park.",
+      "text": "I've trained 95 winners in the past 12 months.",
       "difficulty": 40,
-      "source": "favourite_venue",
+      "source": "recent_wins",
       "revealed_letters": 2,
-      "name_pattern": "K _ _ _ _    W _ _ _ _ _"
+      "name_pattern": "B _ _ _    H _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "My win strike rate over the past 12 months is about 11%.",
-      "difficulty": 50,
-      "source": "win_pct",
+      "text": "The track where I've had the most runners in the past 12 months is Menangle.",
+      "difficulty": 55,
+      "source": "favourite_venue",
       "revealed_letters": 3,
-      "name_pattern": "K _ _ _ E    W _ _ _ _ _"
+      "name_pattern": "B _ _ _    H E _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "One of my most recent winners was Just Mocha at Globe Derby Park.",
-      "difficulty": 75,
-      "source": "recent_winner",
+      "text": "I am the driver used most often by my stable recently.",
+      "difficulty": 70,
+      "source": "favourite_driver",
       "revealed_letters": 4,
-      "name_pattern": "K _ _ _ E    W _ L _ _ _"
+      "name_pattern": "B _ _ _    H E W _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Katie. ",
+      "text": "My first name is Brad. ",
       "difficulty": 95,
       "source": "first_name",
       "revealed_letters": 5,
-      "name_pattern": "K _ _ I E    W _ L _ _ _"
+      "name_pattern": "B _ A _    H E W _ _ _"
     }
   ]
 }
