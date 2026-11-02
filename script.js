@@ -1103,7 +1103,7 @@ function setupNavigation() {
                 showAdcView();
             } else if (view === "horsham") {
                 showHorshamView();
-            else if (view === "club-championship") {
+            } else if (view === "club-championship") {
                 showClubChampionshipView();
             } else if (view === "watchlist") {
                 showWatchlistView();
@@ -8959,6 +8959,8 @@ function renderClubChampionship() {
 
         if (m.eliminated) {
             odds = "ELIM";
+        } else if (m.longshot) {
+            odds = "LONG";
         } else if (m.trotify_odds != null) {
             const price = Number(m.trotify_odds);
             odds = price >= 10
