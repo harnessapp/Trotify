@@ -54,7 +54,7 @@ let selectedTippingTipster = null;
 
 let adcData = null;
 let horshamData = null;
-
+let clubChampionshipData = null;
 
 
 const RACE_CHART_URL_PARAMS =
@@ -1103,6 +1103,8 @@ function setupNavigation() {
                 showAdcView();
             } else if (view === "horsham") {
                 showHorshamView();
+            else if (view === "club-championship") {
+                showClubChampionshipView();
             } else if (view === "watchlist") {
                 showWatchlistView();
             } else if (view === "good-leaders") {
@@ -3614,6 +3616,40 @@ async function loadHorshamData() {
         return null;
     }
 }
+
+
+async function loadClubChampionshipData() {
+
+    try {
+
+        const response = await fetch(
+            `club_championship_today.json?v=${Date.now()}`,
+            {
+                cache: "no-store"
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+
+        clubChampionshipData = await response.json();
+
+        return clubChampionshipData;
+
+    } catch (error) {
+
+        console.error(
+            "Could not load Club Championship data:",
+            error
+        );
+
+        clubChampionshipData = null;
+
+        return null;
+    }
+}
+
 
 
 function getWhoAmIStorageKey() {
@@ -8605,6 +8641,50 @@ async function showHorshamView() {
 }
 
 
+async function showClubChampionshipView() {
+
+    const meetingStrip =
+        document.getElementById("meetingStrip");
+
+    meetingStrip.innerHTML = `
+        <div class="who-am-i-layout">
+            <div class="coming-soon-card">
+                <div class="coming-soon-title">
+                    Loading Club Championships...
+                </div>
+            </div>
+        </div>
+    `;
+
+    const club =
+        clubChampionshipData ||
+        await loadClubChampionshipData();
+
+    if (
+        !club ||
+        !Array.isArray(club.drivers) ||
+        !Array.isArray(club.trainers)
+    ) {
+
+        meetingStrip.innerHTML = `
+            <div class="who-am-i-layout">
+                <div class="coming-soon-card">
+                    <div class="coming-soon-title">
+                        Club Championship data unavailable
+                    </div>
+                    <p>Please check back shortly.</p>
+                </div>
+            </div>
+        `;
+
+        return;
+    }
+
+    clubChampionshipTab = "drivers";
+    renderClubChampionship();
+}
+
+
 function renderHorsham() {
 
     const container =
@@ -8739,6 +8819,180 @@ function renderHorsham() {
 
     container.innerHTML = html;
 }
+
+
+let clubChampionshipTab = "drivers";
+
+
+function renderClubChampionship() {
+
+    const container = document.getElementById("meetingStrip");
+
+    if (!container || !clubChampionshipData) return;
+
+    const data = clubChampionshipData;
+    const type = clubChampionshipTab;
+
+    const competitors = [...(data[type] || [])]
+        .sort((a, b) => b.total - a.total || a.name.localeCompare(b.name));
+
+    const market = data.market?.[type] || [];
+
+    const raceAnchors = Object.keys(data.races || {})
+        .sort((a, b) => {
+            const numA = Number(a.match(/_R(\d+)$/)?.[1] || 0);
+            const numB = Number(b.match(/_R(\d+)$/)?.[1] || 0);
+            return numA - numB;
+        });
+
+    const scoring = data.scoring?.[type] || {};
+
+    function racePoints(name, anchor) {
+
+        const race = data.races[anchor];
+
+        if (!race) return null;
+
+        const runners = (race.runners || []).filter(r =>
+            r[type === "drivers" ? "driver" : "trainer"] === name &&
+            !r.scratched
+        );
+
+        if (!runners.length) return null;
+
+        let points = 0;
+        let hasResult = false;
+
+        runners.forEach(r => {
+
+            if (r.placing == null) return;
+
+            const placing = Number(r.placing);
+
+            if (!Number.isInteger(placing) || placing < 1) return;
+
+            const earned = scoring.positions?.[String(placing)]
+                ?? scoring.other
+                ?? 0;
+
+            points += earned;
+            hasResult = true;
+        });
+
+        return hasResult ? points : null;
+    }
+
+    let html = `
+        <div class="adc-card">
+
+            <h2>${data.event || "Club Championships"}</h2>
+
+            <div class="club-tabs">
+                <button class="club-tab ${type === "drivers" ? "active" : ""}"
+                    onclick="switchClubChampionshipTab('drivers')">
+                    Drivers
+                </button>
+                <button class="club-tab ${type === "trainers" ? "active" : ""}"
+                    onclick="switchClubChampionshipTab('trainers')">
+                    Trainers
+                </button>
+            </div>
+
+            <h2>Live Standings (UNOFFICIAL)</h2>
+
+            <div class="table-scroll">
+                <table class="adc-table">
+                    <tr>
+                        <th class="driver-col">
+                            ${type === "drivers" ? "Driver" : "Trainer"}
+                        </th>
+                        <th>Total</th>
+                        ${raceAnchors.map(anchor => {
+                            const match = anchor.match(/_R(\d+)$/);
+                            return `<th>R${match ? match[1] : "?"}</th>`;
+                        }).join("")}
+                    </tr>
+    `;
+
+    competitors.forEach(c => {
+
+        html += `
+            <tr>
+                <td>${c.name}</td>
+                <td class="points-cell total-cell">
+                    <strong>${c.total ?? 0}</strong>
+                </td>
+        `;
+
+        raceAnchors.forEach(anchor => {
+
+            const points = racePoints(c.name, anchor);
+
+            html += `
+                <td class="points-cell">
+                    ${points ?? "-"}
+                </td>
+            `;
+        });
+
+        html += `</tr>`;
+    });
+
+    html += `
+                </table>
+            </div>
+
+            <h2>Trotify Market (UNOFFICIAL)</h2>
+
+            <table class="adc-market-table">
+                <tr>
+                    <th>${type === "drivers" ? "Driver" : "Trainer"}</th>
+                    <th>Odds</th>
+                </tr>
+    `;
+
+    market.forEach(m => {
+
+        const name = m.name || m.driver || m.trainer || "";
+
+        let odds = "-";
+
+        if (m.eliminated) {
+            odds = "ELIM";
+        } else if (m.trotify_odds != null) {
+            const price = Number(m.trotify_odds);
+            odds = price >= 10
+                ? `$${Math.round(price)}`
+                : `$${price.toFixed(2)}`;
+        }
+
+        html += `
+            <tr>
+                <td>${name}</td>
+                <td class="odds-cell">${odds}</td>
+            </tr>
+        `;
+    });
+
+    html += `
+            </table>
+        </div>
+    `;
+
+    container.innerHTML = html;
+}
+
+function switchClubChampionshipTab(type) {
+    clubChampionshipTab = type;
+    renderClubChampionship();
+}
+
+
+function switchClubChampionshipTab(type) {
+    clubChampionshipTab = type;
+    renderClubChampionship();
+}
+
 
 function renderDashboard(rows) {
     const todayRows = rows.filter(isTodayRow);

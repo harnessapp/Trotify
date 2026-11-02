@@ -12598,3 +12598,27 @@ body.legal-modal-open {
     background: #253642;
     border-color: rgba(117, 224, 199, 0.4);
 }
+
+
+.club-tabs {
+    display: flex;
+    gap: 8px;
+    margin: 15px 0 20px;
+}
+
+.club-tab {
+    flex: 1;
+    padding: 11px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f5f5f5;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.club-tab.active {
+    background: #174a70;
+    border-color: #174a70;
+    color: white;
+}
