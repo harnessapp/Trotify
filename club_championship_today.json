@@ -3,7 +3,7 @@
   "date": "2026-11-03",
   "venue": "Redcliffe",
   "generated": "2026-11-02T12:17:29",
-  "last_updated": "2026-11-03T15:21:02",
+  "last_updated": "2026-11-03T15:26:02",
   "scoring": {
     "drivers": {
       "positions": {
@@ -832,7 +832,7 @@
   ],
   "market": {
     "enabled": true,
-    "generated": "2026-11-03T15:21:10",
+    "generated": "2026-11-03T15:26:09",
     "simulations": 100000,
     "market_percent": 125.0,
     "remaining_races": [
@@ -843,8 +843,8 @@
         "name": "Greg Bennett",
         "driver": "Greg Bennett",
         "current_points": 10,
-        "simulation_wins": 94371,
-        "probability": 94.37,
+        "simulation_wins": 94324,
+        "probability": 94.32,
         "eliminated": false,
         "longshot": false,
         "fair_odds": 1.06,
@@ -856,13 +856,13 @@
         "name": "Nathan Rothwell",
         "driver": "Nathan Rothwell",
         "current_points": 7,
-        "simulation_wins": 5629,
-        "probability": 5.63,
+        "simulation_wins": 5676,
+        "probability": 5.68,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 17.77,
+        "fair_odds": 17.62,
         "market_percent": 125.0,
-        "market_odds": 14.21,
+        "market_odds": 14.09,
         "trotify_odds": 14
       },
       {
