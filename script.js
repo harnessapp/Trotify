@@ -8642,6 +8642,18 @@ async function showHorshamView() {
 
 
 async function showClubChampionshipView() {
+    resetMobileViewScroll();
+    stopTimelineRefresh();
+    clearNextUpTimer();
+
+    document.querySelector(".hero").style.display = "none";
+    document.querySelector(".dashboard-grid").style.display = "none";
+    document.querySelector(".meetings-panel").style.display = "";
+
+    document.querySelector(".panel-heading").innerHTML = `
+        <span>🏆</span>
+        <span>Club Championships</span>
+    `;
 
     const meetingStrip =
         document.getElementById("meetingStrip");
