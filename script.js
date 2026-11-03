@@ -8897,7 +8897,7 @@ function renderClubChampionship() {
     let html = `
         <div class="adc-card">
 
-            <h2>St Arnaud 2026</h2>
+            <h2>St Arnaud: 8 November 2026</h2>
 
             <div class="club-tabs">
                 <button class="club-tab ${type === "drivers" ? "active" : ""}"
