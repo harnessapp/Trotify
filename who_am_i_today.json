@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-03",
-  "puzzle_number": 33,
-  "type": "TRAINER",
-  "answer": "Brad Hewitt",
+  "date": "2026-11-04",
+  "puzzle_number": 34,
+  "type": "HORSE",
+  "answer": "Uncle Tony",
   "stats": {
-    "recent_starts": 338,
-    "recent_wins": 95,
-    "horses": 55
+    "starts": 64,
+    "wins": 7,
+    "places": 27
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "My stable has had 338 race starts in the past 12 months.",
+      "text": "I've had 64 race starts.",
       "difficulty": 15,
-      "source": "recent_starts",
-      "revealed_letters": 1,
-      "name_pattern": "B _ _ _    _ _ _ _ _ _"
+      "source": "career_starts",
+      "revealed_letters": 0,
+      "name_pattern": "_ _ _ _ _    _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've trained 95 winners in the past 12 months.",
-      "difficulty": 40,
-      "source": "recent_wins",
-      "revealed_letters": 2,
-      "name_pattern": "B _ _ _    H _ _ _ _ _"
+      "text": "I've won 7 races and placed 27 times.",
+      "difficulty": 25,
+      "source": "career_record",
+      "revealed_letters": 1,
+      "name_pattern": "U _ _ _ _    _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "The track where I've had the most runners in the past 12 months is Menangle.",
+      "text": "I've won at tracks including Bathurst, Menangle, Albion Park.",
       "difficulty": 55,
-      "source": "favourite_venue",
-      "revealed_letters": 3,
-      "name_pattern": "B _ _ _    H E _ _ _ _"
+      "source": "winning_tracks",
+      "revealed_letters": 2,
+      "name_pattern": "U _ _ _ _    T _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I am the driver used most often by my stable recently.",
-      "difficulty": 70,
-      "source": "favourite_driver",
-      "revealed_letters": 4,
-      "name_pattern": "B _ _ _    H E W _ _ _"
+      "text": "I'm currently associated most often with trainer Chris Frisby.",
+      "difficulty": 75,
+      "source": "trainer",
+      "revealed_letters": 3,
+      "name_pattern": "U _ _ _ E    T _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Brad. ",
+      "text": "My most recent start was at Albion Park on 27 October 2026, where I finished 4th for trainer Chris Frisby and driver Nathan Dawson.",
       "difficulty": 95,
-      "source": "first_name",
-      "revealed_letters": 5,
-      "name_pattern": "B _ A _    H E W _ _ _"
+      "source": "last_start",
+      "revealed_letters": 4,
+      "name_pattern": "U _ _ _ E    T O _ _"
     }
   ]
 }
