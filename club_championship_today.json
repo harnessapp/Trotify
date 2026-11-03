@@ -3,7 +3,7 @@
   "date": "2026-11-03",
   "venue": "Redcliffe",
   "generated": "2026-11-02T12:17:29",
-  "last_updated": "2026-11-03T18:06:02",
+  "last_updated": "2026-11-03T18:11:02",
   "scoring": {
     "drivers": {
       "positions": {
@@ -832,7 +832,7 @@
   ],
   "market": {
     "enabled": true,
-    "generated": "2026-11-03T18:06:03",
+    "generated": "2026-11-03T18:11:03",
     "simulations": 100000,
     "market_percent": 125.0,
     "remaining_races": [],
