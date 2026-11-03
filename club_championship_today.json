@@ -3,7 +3,7 @@
   "date": "2026-11-03",
   "venue": "Redcliffe",
   "generated": "2026-11-02T12:17:29",
-  "last_updated": "2026-11-03T15:01:02",
+  "last_updated": "2026-11-03T15:06:02",
   "scoring": {
     "drivers": {
       "positions": {
@@ -480,8 +480,8 @@
           "barrier": "Fr1",
           "scratched": false,
           "fair_pct": 9.51543217741624,
-          "placing": null,
-          "status": "upcoming"
+          "placing": 4,
+          "status": "complete"
         },
         {
           "horse": "YOGI",
@@ -490,8 +490,8 @@
           "barrier": "Fr2",
           "scratched": false,
           "fair_pct": 7.174150004617212,
-          "placing": null,
-          "status": "upcoming"
+          "placing": 9,
+          "status": "complete"
         },
         {
           "horse": "ILLBEWATCHING",
@@ -500,8 +500,8 @@
           "barrier": "Fr3",
           "scratched": false,
           "fair_pct": 3.095842744541924,
-          "placing": null,
-          "status": "upcoming"
+          "placing": 2,
+          "status": "complete"
         },
         {
           "horse": "ONE CHAIN ROAD",
@@ -510,8 +510,8 @@
           "barrier": "Fr4",
           "scratched": false,
           "fair_pct": 23.250044294477306,
-          "placing": null,
-          "status": "upcoming"
+          "placing": 1,
+          "status": "complete"
         },
         {
           "horse": "ROLLONX",
@@ -520,8 +520,8 @@
           "barrier": "Fr5",
           "scratched": false,
           "fair_pct": 4.356247024434887,
-          "placing": null,
-          "status": "upcoming"
+          "placing": 3,
+          "status": "complete"
         },
         {
           "horse": "CARLY PEREZ",
@@ -530,8 +530,8 @@
           "barrier": "Fr6",
           "scratched": false,
           "fair_pct": 23.250044294477306,
-          "placing": null,
-          "status": "upcoming"
+          "placing": 6,
+          "status": "complete"
         },
         {
           "horse": "MISTER DELWIN",
@@ -540,8 +540,8 @@
           "barrier": "Sr1",
           "scratched": false,
           "fair_pct": 7.379220839493169,
-          "placing": null,
-          "status": "upcoming"
+          "placing": 5,
+          "status": "complete"
         },
         {
           "horse": "OUR UNCLE LES",
@@ -550,8 +550,8 @@
           "barrier": "Sr2",
           "scratched": false,
           "fair_pct": 10.366926542516424,
-          "placing": null,
-          "status": "upcoming"
+          "placing": 8,
+          "status": "complete"
         },
         {
           "horse": "SHEZ A WARRIOR",
@@ -560,11 +560,11 @@
           "barrier": "Sr3",
           "scratched": false,
           "fair_pct": 11.612092078025531,
-          "placing": null,
-          "status": "upcoming"
+          "placing": 7,
+          "status": "complete"
         }
       ],
-      "status": "upcoming"
+      "status": "complete"
     },
     "RE031126_R7": {
       "runners": [
@@ -668,16 +668,20 @@
       "total": 10
     },
     {
+      "name": "Nathan Rothwell",
+      "total": 7
+    },
+    {
       "name": "Jonah Hutchinson",
-      "total": 5
+      "total": 6
     },
     {
       "name": "Adam Richardson",
       "total": 4
     },
     {
-      "name": "Nathan Rothwell",
-      "total": 4
+      "name": "Chloe Butler",
+      "total": 2
     },
     {
       "name": "Edd Bailey",
@@ -704,10 +708,6 @@
       "total": 0
     },
     {
-      "name": "Chloe Butler",
-      "total": 0
-    },
-    {
       "name": "Dean Weller",
       "total": 0
     },
@@ -727,7 +727,7 @@
   "trainers": [
     {
       "name": "Graham Dwyer",
-      "total": 9
+      "total": 10
     },
     {
       "name": "Dean Weller",
@@ -739,6 +739,14 @@
     },
     {
       "name": "David Rodger",
+      "total": 4
+    },
+    {
+      "name": "Ricky Hart",
+      "total": 4
+    },
+    {
+      "name": "Alanah Richardson",
       "total": 3
     },
     {
@@ -750,12 +758,12 @@
       "total": 3
     },
     {
-      "name": "Ricky Hart",
+      "name": "Michael Nutley",
       "total": 3
     },
     {
-      "name": "Alanah Richardson",
-      "total": 2
+      "name": "Stewart Dickson",
+      "total": 3
     },
     {
       "name": "David Stewart",
@@ -774,6 +782,10 @@
       "total": 2
     },
     {
+      "name": "Graham White",
+      "total": 2
+    },
+    {
       "name": "Jurgen Strohschon",
       "total": 2
     },
@@ -786,7 +798,7 @@
       "total": 1
     },
     {
-      "name": "Graham White",
+      "name": "Donny Smith",
       "total": 1
     },
     {
@@ -798,6 +810,10 @@
       "total": 1
     },
     {
+      "name": "Mick Benham",
+      "total": 1
+    },
+    {
       "name": "Phill Keats",
       "total": 1
     },
@@ -806,37 +822,20 @@
       "total": 1
     },
     {
-      "name": "Stewart Dickson",
-      "total": 1
-    },
-    {
       "name": "Chloe Butler",
-      "total": 0
-    },
-    {
-      "name": "Donny Smith",
       "total": 0
     },
     {
       "name": "John Livingstone",
       "total": 0
-    },
-    {
-      "name": "Michael Nutley",
-      "total": 0
-    },
-    {
-      "name": "Mick Benham",
-      "total": 0
     }
   ],
   "market": {
     "enabled": true,
-    "generated": "2026-11-03T15:01:14",
+    "generated": "2026-11-03T15:06:10",
     "simulations": 100000,
     "market_percent": 125.0,
     "remaining_races": [
-      "RE031126_R6",
       "RE031126_R7"
     ],
     "drivers": [
@@ -844,45 +843,58 @@
         "name": "Greg Bennett",
         "driver": "Greg Bennett",
         "current_points": 10,
-        "simulation_wins": 98812,
-        "probability": 98.81,
+        "simulation_wins": 94290,
+        "probability": 94.29,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 1.01,
+        "fair_odds": 1.06,
         "market_percent": 125.0,
-        "market_odds": 0.81,
+        "market_odds": 0.85,
         "trotify_odds": 1
       },
       {
         "name": "Nathan Rothwell",
         "driver": "Nathan Rothwell",
-        "current_points": 4,
-        "simulation_wins": 1006,
-        "probability": 1.01,
+        "current_points": 7,
+        "simulation_wins": 5710,
+        "probability": 5.71,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 99.4,
+        "fair_odds": 17.51,
         "market_percent": 125.0,
-        "market_odds": 79.52,
-        "trotify_odds": 81
+        "market_odds": 14.01,
+        "trotify_odds": 14
       },
       {
         "name": "Jonah Hutchinson",
         "driver": "Jonah Hutchinson",
-        "current_points": 5,
-        "simulation_wins": 182,
-        "probability": 0.18,
-        "eliminated": false,
+        "current_points": 6,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
         "longshot": false,
-        "fair_odds": 549.45,
+        "fair_odds": null,
         "market_percent": 125.0,
-        "market_odds": 439.56,
-        "trotify_odds": 501
+        "market_odds": null,
+        "trotify_odds": null
       },
       {
         "name": "Adam Richardson",
         "driver": "Adam Richardson",
         "current_points": 4,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Chloe Butler",
+        "driver": "Chloe Butler",
+        "current_points": 2,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -971,19 +983,6 @@
         "trotify_odds": null
       },
       {
-        "name": "Chloe Butler",
-        "driver": "Chloe Butler",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
         "name": "Dean Weller",
         "driver": "Dean Weller",
         "current_points": 0,
@@ -1040,7 +1039,7 @@
       {
         "name": "Graham Dwyer",
         "trainer": "Graham Dwyer",
-        "current_points": 9,
+        "current_points": 10,
         "simulation_wins": 100000,
         "probability": 100.0,
         "eliminated": false,
@@ -1079,6 +1078,32 @@
       {
         "name": "David Rodger",
         "trainer": "David Rodger",
+        "current_points": 4,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Ricky Hart",
+        "trainer": "Ricky Hart",
+        "current_points": 4,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Alanah Richardson",
+        "trainer": "Alanah Richardson",
         "current_points": 3,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -1116,8 +1141,8 @@
         "trotify_odds": null
       },
       {
-        "name": "Ricky Hart",
-        "trainer": "Ricky Hart",
+        "name": "Michael Nutley",
+        "trainer": "Michael Nutley",
         "current_points": 3,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -1129,9 +1154,9 @@
         "trotify_odds": null
       },
       {
-        "name": "Alanah Richardson",
-        "trainer": "Alanah Richardson",
-        "current_points": 2,
+        "name": "Stewart Dickson",
+        "trainer": "Stewart Dickson",
+        "current_points": 3,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -1194,6 +1219,19 @@
         "trotify_odds": null
       },
       {
+        "name": "Graham White",
+        "trainer": "Graham White",
+        "current_points": 2,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
         "name": "Jurgen Strohschon",
         "trainer": "Jurgen Strohschon",
         "current_points": 2,
@@ -1233,8 +1271,8 @@
         "trotify_odds": null
       },
       {
-        "name": "Graham White",
-        "trainer": "Graham White",
+        "name": "Donny Smith",
+        "trainer": "Donny Smith",
         "current_points": 1,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -1272,6 +1310,19 @@
         "trotify_odds": null
       },
       {
+        "name": "Mick Benham",
+        "trainer": "Mick Benham",
+        "current_points": 1,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
         "name": "Phill Keats",
         "trainer": "Phill Keats",
         "current_points": 1,
@@ -1298,19 +1349,6 @@
         "trotify_odds": null
       },
       {
-        "name": "Stewart Dickson",
-        "trainer": "Stewart Dickson",
-        "current_points": 1,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
         "name": "Chloe Butler",
         "trainer": "Chloe Butler",
         "current_points": 0,
@@ -1324,47 +1362,8 @@
         "trotify_odds": null
       },
       {
-        "name": "Donny Smith",
-        "trainer": "Donny Smith",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
         "name": "John Livingstone",
         "trainer": "John Livingstone",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Michael Nutley",
-        "trainer": "Michael Nutley",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Mick Benham",
-        "trainer": "Mick Benham",
         "current_points": 0,
         "simulation_wins": 0,
         "probability": 0.0,
