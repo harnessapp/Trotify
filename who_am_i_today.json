@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-04",
-  "puzzle_number": 34,
+  "date": "2026-11-05",
+  "puzzle_number": 35,
   "type": "HORSE",
-  "answer": "Uncle Tony",
+  "answer": "Tasbmiki",
   "stats": {
-    "starts": 64,
-    "wins": 7,
-    "places": 27
+    "starts": 50,
+    "wins": 8,
+    "places": 17
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 64 race starts.",
+      "text": "I've had 50 race starts.",
       "difficulty": 15,
       "source": "career_starts",
       "revealed_letters": 0,
-      "name_pattern": "_ _ _ _ _    _ _ _ _"
+      "name_pattern": "_ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've won 7 races and placed 27 times.",
-      "difficulty": 25,
-      "source": "career_record",
+      "text": "All of my recorded starts have been in New South Wales.",
+      "difficulty": 35,
+      "source": "state",
       "revealed_letters": 1,
-      "name_pattern": "U _ _ _ _    _ _ _ _"
+      "name_pattern": "T _ _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Bathurst, Menangle, Albion Park.",
+      "text": "I've won at tracks including Parkes, Dubbo, Young.",
       "difficulty": 55,
       "source": "winning_tracks",
       "revealed_letters": 2,
-      "name_pattern": "U _ _ _ _    T _ _ _"
+      "name_pattern": "T _ _ B _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Chris Frisby.",
+      "text": "I'm currently associated most often with trainer Aaron Williams.",
       "difficulty": 75,
       "source": "trainer",
       "revealed_letters": 3,
-      "name_pattern": "U _ _ _ E    T _ _ _"
+      "name_pattern": "T _ _ B _ I _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Albion Park on 27 October 2026, where I finished 4th for trainer Chris Frisby and driver Nathan Dawson.",
+      "text": "My most recent start was at Bathurst on 4 November 2026, where I finished 7th for trainer Aaron Williams and driver Declan Murphy.",
       "difficulty": 95,
       "source": "last_start",
       "revealed_letters": 4,
-      "name_pattern": "U _ _ _ E    T O _ _"
+      "name_pattern": "T _ S B _ I _ _"
     }
   ]
 }
