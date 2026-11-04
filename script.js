@@ -376,10 +376,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     } else if (window.location.search.includes("adc")) {
         await showAdcView();
+
+    } else if (window.location.search.includes("starnaud")) {
+        await showClubChampionshipView();
     }
 
     });
-
 
 function closeMobileStatsPopup() {
     document.querySelector(".mobile-stats-popup")?.remove();
