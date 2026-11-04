@@ -3,7 +3,7 @@
   "date": "2026-11-08",
   "venue": "St Arnaud",
   "generated": "2026-11-04T13:15:55",
-  "last_updated": "2026-11-04T13:15:56",
+  "last_updated": "2026-11-04T13:21:04",
   "scoring": {
     "drivers": {
       "positions": {
@@ -36,7 +36,8 @@
           "scratched": false,
           "fair_pct": 6.179047547315643,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Liam Older"
         },
         {
           "horse": "CRYPTO CROOK",
@@ -46,7 +47,8 @@
           "scratched": false,
           "fair_pct": 39.853060812708286,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Scott Torney"
         },
         {
           "horse": "BANGBANG BOBBIE",
@@ -56,7 +58,8 @@
           "scratched": false,
           "fair_pct": 4.686532918270077,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Matthew Craven"
         },
         {
           "horse": "FASTTALKINPATTI",
@@ -66,7 +69,8 @@
           "scratched": false,
           "fair_pct": 3.3141374929562573,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Leigh Sutton"
         },
         {
           "horse": "STORMS",
@@ -76,7 +80,8 @@
           "scratched": false,
           "fair_pct": 7.439405532544323,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Michael Bellman"
         },
         {
           "horse": "HALF AS TOUGH",
@@ -86,7 +91,8 @@
           "scratched": false,
           "fair_pct": 24.095565367483243,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jason Ainsworth"
         },
         {
           "horse": "TAMALIA",
@@ -96,7 +102,8 @@
           "scratched": false,
           "fair_pct": 14.43225032872218,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jack Laugher"
         }
       ],
       "status": "upcoming"
@@ -111,7 +118,8 @@
           "scratched": false,
           "fair_pct": 5.802745712897579,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Chris Alford"
         },
         {
           "horse": "DULCIE MAUREEN",
@@ -121,7 +129,8 @@
           "scratched": false,
           "fair_pct": 9.260914115670577,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Hannah Parish"
         },
         {
           "horse": "LOAN SAILOR",
@@ -131,7 +140,8 @@
           "scratched": false,
           "fair_pct": 10.629277442988776,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "SKADI",
@@ -141,7 +151,8 @@
           "scratched": false,
           "fair_pct": 10.629277442988776,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jackie Barker"
         },
         {
           "horse": "ARRAPS",
@@ -151,7 +162,8 @@
           "scratched": false,
           "fair_pct": 6.808675902855624,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Donna Castles"
         },
         {
           "horse": "STELLAR QUEEN",
@@ -161,7 +173,8 @@
           "scratched": false,
           "fair_pct": 7.98472082507497,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Lauren White"
         },
         {
           "horse": "SWISS LIGHTNING",
@@ -171,7 +184,8 @@
           "scratched": false,
           "fair_pct": 13.553331331596446,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Daryl Douglas"
         },
         {
           "horse": "OUR ULTIMATE ELLA",
@@ -181,7 +195,8 @@
           "scratched": false,
           "fair_pct": 3.0130353764561857,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Scott Torney"
         },
         {
           "horse": "THE REGULATOR",
@@ -191,7 +206,8 @@
           "scratched": false,
           "fair_pct": 16.27199221591608,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Allan McDonough"
         },
         {
           "horse": "POLLY PEACHUM",
@@ -201,7 +217,8 @@
           "scratched": false,
           "fair_pct": 10.002347252392322,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Tony Vlaeminck"
         },
         {
           "horse": "MALANI JOH",
@@ -211,7 +228,8 @@
           "scratched": false,
           "fair_pct": 6.043682381162678,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         }
       ],
       "status": "upcoming"
@@ -226,7 +244,8 @@
           "scratched": false,
           "fair_pct": 3.2576462503663786,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Liam Older"
         },
         {
           "horse": "WICKED MITZI",
@@ -236,7 +255,8 @@
           "scratched": false,
           "fair_pct": 13.355010117617637,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "EMILY VINCENT",
@@ -246,7 +266,8 @@
           "scratched": false,
           "fair_pct": 10.908751563235278,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "WILD CARD NZ",
@@ -256,7 +277,8 @@
           "scratched": false,
           "fair_pct": 12.540898882651655,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Matthew Cain"
         },
         {
           "horse": "EL LAZZAR",
@@ -266,7 +288,8 @@
           "scratched": false,
           "fair_pct": 16.10829008690372,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Lochie Cook"
         },
         {
           "horse": "SHOTINTHEDARK",
@@ -276,7 +299,8 @@
           "scratched": false,
           "fair_pct": 3.364977895402927,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jackie Barker"
         },
         {
           "horse": "RABADA",
@@ -286,7 +310,8 @@
           "scratched": false,
           "fair_pct": 40.46442520382241,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Michael Bellman"
         }
       ],
       "status": "upcoming"
@@ -301,7 +326,8 @@
           "scratched": false,
           "fair_pct": 21.97114843429368,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Matthew Craven"
         },
         {
           "horse": "SWIM SUIT",
@@ -311,7 +337,8 @@
           "scratched": false,
           "fair_pct": 7.305526715052831,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "SURETHING",
@@ -321,7 +348,8 @@
           "scratched": false,
           "fair_pct": 3.0220135367430885,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "PHILS BOY",
@@ -331,7 +359,8 @@
           "scratched": false,
           "fair_pct": 3.855984311596553,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jack Laugher"
         },
         {
           "horse": "LOUS MAMBO",
@@ -341,7 +370,8 @@
           "scratched": false,
           "fair_pct": 19.02905037378365,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "XLENDI STAR",
@@ -351,7 +381,8 @@
           "scratched": false,
           "fair_pct": 31.110817221347187,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jackie Barker"
         },
         {
           "horse": "QUEENS BOULEVARD",
@@ -361,7 +392,8 @@
           "scratched": false,
           "fair_pct": 10.449055509947751,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "YOUVE BEEN SERVED",
@@ -371,7 +403,8 @@
           "scratched": false,
           "fair_pct": 3.256403897235258,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Scott Torney"
         }
       ],
       "status": "upcoming"
@@ -386,7 +419,8 @@
           "scratched": false,
           "fair_pct": 16.840098940867147,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "DOUBLE THE HUNTER",
@@ -396,7 +430,8 @@
           "scratched": false,
           "fair_pct": 5.826857996658032,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Leigh Sutton"
         },
         {
           "horse": "TOPHUT JOHNY",
@@ -406,7 +441,8 @@
           "scratched": false,
           "fair_pct": 12.311035307778416,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Liam Older"
         },
         {
           "horse": "OUTBACK QUEENIE",
@@ -416,7 +452,8 @@
           "scratched": false,
           "fair_pct": 9.829229123915695,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jack Laugher"
         },
         {
           "horse": "JAMES GARNER NZ",
@@ -426,7 +463,8 @@
           "scratched": false,
           "fair_pct": 15.177836555474746,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Michael Bellman"
         },
         {
           "horse": "VILLAGE VOICE",
@@ -436,7 +474,8 @@
           "scratched": false,
           "fair_pct": 12.311035307778416,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jackie Barker"
         },
         {
           "horse": "YANKEE RAIN",
@@ -446,7 +485,8 @@
           "scratched": false,
           "fair_pct": 21.74005132776731,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "GIDGETT KAY",
@@ -456,7 +496,8 @@
           "scratched": false,
           "fair_pct": 5.963855439760244,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Chris Alford"
         }
       ],
       "status": "upcoming"
@@ -471,7 +512,8 @@
           "scratched": false,
           "fair_pct": 3.0870790512464703,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Daryl Crone"
         },
         {
           "horse": "BETTOR DOO NZ",
@@ -481,7 +523,8 @@
           "scratched": false,
           "fair_pct": 6.566463390430322,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "YANKEE GAMBLER",
@@ -491,7 +534,8 @@
           "scratched": false,
           "fair_pct": 22.444198624084745,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Hannah Parish"
         },
         {
           "horse": "PRESIDENTIALCHANGE",
@@ -501,7 +545,8 @@
           "scratched": false,
           "fair_pct": 12.76399532833595,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jackie Barker"
         },
         {
           "horse": "TEX GOES BANG",
@@ -511,7 +556,8 @@
           "scratched": false,
           "fair_pct": 18.9247780121014,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Liam Older"
         },
         {
           "horse": "ITTAKESLUV",
@@ -521,7 +567,8 @@
           "scratched": false,
           "fair_pct": 4.811537359509481,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Michael Bellman"
         },
         {
           "horse": "BOND GIRL",
@@ -531,7 +578,8 @@
           "scratched": false,
           "fair_pct": 17.391931438559162,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Allan McDonough"
         },
         {
           "horse": "ONYX",
@@ -541,7 +589,8 @@
           "scratched": false,
           "fair_pct": 14.010016795732469,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Chelsie O'Driscoll"
         }
       ],
       "status": "upcoming"
@@ -556,7 +605,8 @@
           "scratched": false,
           "fair_pct": 7.781944114020469,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Sean O'Sullivan"
         },
         {
           "horse": "ATEGO ROBBO",
@@ -566,7 +616,8 @@
           "scratched": false,
           "fair_pct": 2.8161579080978565,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "HAPPY ESCAPE",
@@ -576,7 +627,8 @@
           "scratched": false,
           "fair_pct": 9.029635008686787,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "John Meade"
         },
         {
           "horse": "MISS AVENGER",
@@ -586,7 +638,8 @@
           "scratched": false,
           "fair_pct": 2.9377887946961643,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "SUZYS DREAM",
@@ -596,7 +649,8 @@
           "scratched": false,
           "fair_pct": 9.029635008686787,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Donna Castles"
         },
         {
           "horse": "NEDZA THRILLER",
@@ -606,7 +660,8 @@
           "scratched": false,
           "fair_pct": 5.990192508264022,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Liam Older"
         },
         {
           "horse": "TOUCHANDGO",
@@ -616,7 +671,8 @@
           "scratched": false,
           "fair_pct": 5.892749390471863,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Lauren White"
         },
         {
           "horse": "I AM SKYE CHIOLA",
@@ -626,7 +682,8 @@
           "scratched": false,
           "fair_pct": 5.892749390471863,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Mark Hayes"
         },
         {
           "horse": "WHISKEY DAWN",
@@ -636,7 +693,8 @@
           "scratched": false,
           "fair_pct": 8.0915998883445,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "MUSCLE VALLEY",
@@ -646,7 +704,8 @@
           "scratched": false,
           "fair_pct": 22.06304558748234,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Lochie Cook"
         },
         {
           "horse": "WHY NOW",
@@ -656,7 +715,8 @@
           "scratched": false,
           "fair_pct": 20.47450240077734,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jackie Barker"
         }
       ],
       "status": "upcoming"
@@ -671,7 +731,8 @@
           "scratched": false,
           "fair_pct": 2.851821403514876,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "John Meade"
         },
         {
           "horse": "KENNYWOULD",
@@ -681,7 +742,8 @@
           "scratched": false,
           "fair_pct": 0.3324357990915043,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Tristan Larsen"
         },
         {
           "horse": "ROMANTIC NINA",
@@ -691,7 +753,8 @@
           "scratched": false,
           "fair_pct": 5.420639088281052,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "MAXIMEZ",
@@ -701,7 +764,8 @@
           "scratched": false,
           "fair_pct": 36.95348011304236,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Michelle Wight"
         },
         {
           "horse": "EL CONQUEROR NZ",
@@ -711,7 +775,8 @@
           "scratched": false,
           "fair_pct": 4.489807312352601,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Chris Alford"
         },
         {
           "horse": "CHAMPAGNE CHARLEY",
@@ -721,7 +786,8 @@
           "scratched": false,
           "fair_pct": 5.420639088281052,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jack Laugher"
         },
         {
           "horse": "IZARRA",
@@ -731,7 +797,8 @@
           "scratched": false,
           "fair_pct": 9.143985253686782,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Damian Wilson"
         },
         {
           "horse": "AVANT GUARD",
@@ -741,7 +808,8 @@
           "scratched": false,
           "fair_pct": 10.495071542837342,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Liam Older"
         },
         {
           "horse": "MEADOW VALLEY STAR",
@@ -751,7 +819,8 @@
           "scratched": false,
           "fair_pct": 6.722709148926846,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "I DREAM OF MILLIE",
@@ -761,7 +830,8 @@
           "scratched": false,
           "fair_pct": 11.446702101058715,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Tina Ridis"
         },
         {
           "horse": "THE DARK THUNDER",
@@ -771,7 +841,8 @@
           "scratched": false,
           "fair_pct": 6.722709148926846,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Sean O'Sullivan"
         }
       ],
       "status": "upcoming"
@@ -786,7 +857,8 @@
           "scratched": false,
           "fair_pct": 11.897138167709286,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "TELEMACHUS",
@@ -796,7 +868,8 @@
           "scratched": false,
           "fair_pct": 3.1005981234420785,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Nathan Cahir"
         },
         {
           "horse": "WITH IN REASON",
@@ -806,7 +879,8 @@
           "scratched": false,
           "fair_pct": 3.1005981234420785,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Donna Castles"
         },
         {
           "horse": "TO THE NINES",
@@ -816,7 +890,8 @@
           "scratched": false,
           "fair_pct": 4.912991964799784,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Connor Clarke"
         },
         {
           "horse": "ROCKIN GEMMA",
@@ -826,7 +901,8 @@
           "scratched": false,
           "fair_pct": 3.671491036695139,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Hannah Lewis"
         },
         {
           "horse": "ZENARIO",
@@ -836,7 +912,8 @@
           "scratched": false,
           "fair_pct": 9.22607142088262,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Luke Dunne"
         },
         {
           "horse": "MADIGAN",
@@ -846,7 +923,8 @@
           "scratched": false,
           "fair_pct": 3.1005981234420785,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Leigh Sutton"
         },
         {
           "horse": "ROADMASTER",
@@ -856,7 +934,8 @@
           "scratched": false,
           "fair_pct": 9.22607142088262,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jackie Barker"
         },
         {
           "horse": "PESCI",
@@ -866,7 +945,8 @@
           "scratched": false,
           "fair_pct": 11.897138167709286,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "WORDS NZ",
@@ -876,7 +956,8 @@
           "scratched": false,
           "fair_pct": 34.47621826381792,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Chris Alford"
         },
         {
           "horse": "SHADOW CELT",
@@ -886,7 +967,8 @@
           "scratched": false,
           "fair_pct": 5.391085187177124,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         }
       ],
       "status": "upcoming"
@@ -901,7 +983,8 @@
           "scratched": false,
           "fair_pct": 6.125305655078692,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": ""
         },
         {
           "horse": "BLACK OPAL JACK",
@@ -911,7 +994,8 @@
           "scratched": false,
           "fair_pct": 17.238289396615954,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jason Lee"
         },
         {
           "horse": "IMAGINATION ORO",
@@ -921,7 +1005,8 @@
           "scratched": false,
           "fair_pct": 7.160431111759992,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Luke Dunne"
         },
         {
           "horse": "YNOBE NOVA",
@@ -931,7 +1016,8 @@
           "scratched": false,
           "fair_pct": 4.309703134279965,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Hannah Lewis"
         },
         {
           "horse": "FEEL THE REIGN",
@@ -941,7 +1027,8 @@
           "scratched": false,
           "fair_pct": 9.233304990733018,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Ellen Tormey"
         },
         {
           "horse": "YARRAMAN JOLT",
@@ -951,7 +1038,8 @@
           "scratched": false,
           "fair_pct": 4.382993414798776,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jack Laugher"
         },
         {
           "horse": "MISTER JIMARINGLE",
@@ -961,7 +1049,8 @@
           "scratched": false,
           "fair_pct": 12.31538106846179,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Ewa Justice"
         },
         {
           "horse": "DELIGHTFUL CHARM",
@@ -971,7 +1060,8 @@
           "scratched": false,
           "fair_pct": 7.957471520882708,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Connor Ronan"
         },
         {
           "horse": "HUXHAM CHUBB",
@@ -981,7 +1071,8 @@
           "scratched": false,
           "fair_pct": 8.274111806312275,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Michelle Wight"
         },
         {
           "horse": "YANKEE MOJOH",
@@ -991,7 +1082,8 @@
           "scratched": false,
           "fair_pct": 8.510282653570439,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jackie Barker"
         },
         {
           "horse": "TALLARAS SHADOW",
@@ -1001,7 +1093,8 @@
           "scratched": false,
           "fair_pct": 14.492725247506396,
           "placing": null,
-          "status": "upcoming"
+          "status": "upcoming",
+          "model_driver": "Jason Ainsworth"
         }
       ],
       "status": "upcoming"
@@ -1361,7 +1454,7 @@
   ],
   "market": {
     "enabled": true,
-    "generated": "2026-11-04T13:16:37",
+    "generated": "2026-11-04T13:21:53",
     "simulations": 100000,
     "market_percent": 125.0,
     "remaining_races": [
@@ -1381,169 +1474,208 @@
         "name": "Jackie Barker",
         "driver": "Jackie Barker",
         "current_points": 0,
-        "simulation_wins": 68570,
-        "probability": 68.57,
+        "simulation_wins": 52426,
+        "probability": 52.43,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 1.46,
+        "fair_odds": 1.91,
         "market_percent": 125.0,
-        "market_odds": 1.17,
-        "trotify_odds": 1.15
+        "market_odds": 1.53,
+        "trotify_odds": 1.55
       },
       {
         "name": "Liam Older",
         "driver": "Liam Older",
         "current_points": 0,
-        "simulation_wins": 13488,
-        "probability": 13.49,
+        "simulation_wins": 13423,
+        "probability": 13.42,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 7.41,
+        "fair_odds": 7.45,
         "market_percent": 125.0,
-        "market_odds": 5.93,
+        "market_odds": 5.96,
         "trotify_odds": 6
       },
       {
         "name": "Michael Bellman",
         "driver": "Michael Bellman",
         "current_points": 0,
-        "simulation_wins": 5939,
-        "probability": 5.94,
+        "simulation_wins": 11280,
+        "probability": 11.28,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 16.84,
+        "fair_odds": 8.87,
         "market_percent": 125.0,
-        "market_odds": 13.47,
-        "trotify_odds": 13
+        "market_odds": 7.09,
+        "trotify_odds": 7
       },
       {
         "name": "Jack Laugher",
         "driver": "Jack Laugher",
         "current_points": 0,
-        "simulation_wins": 3656,
-        "probability": 3.66,
+        "simulation_wins": 5155,
+        "probability": 5.16,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 27.35,
+        "fair_odds": 19.4,
         "market_percent": 125.0,
-        "market_odds": 21.88,
-        "trotify_odds": 21
+        "market_odds": 15.52,
+        "trotify_odds": 15
       },
       {
         "name": "Chris Alford",
         "driver": "Chris Alford",
         "current_points": 0,
-        "simulation_wins": 2407,
-        "probability": 2.41,
+        "simulation_wins": 4744,
+        "probability": 4.74,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 41.55,
+        "fair_odds": 21.08,
         "market_percent": 125.0,
-        "market_odds": 33.24,
-        "trotify_odds": 31
+        "market_odds": 16.86,
+        "trotify_odds": 17
       },
       {
         "name": "Lochie Cook",
         "driver": "Lochie Cook",
         "current_points": 0,
-        "simulation_wins": 920,
-        "probability": 0.92,
+        "simulation_wins": 2018,
+        "probability": 2.02,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 108.7,
+        "fair_odds": 49.55,
         "market_percent": 125.0,
-        "market_odds": 86.96,
-        "trotify_odds": 81
+        "market_odds": 39.64,
+        "trotify_odds": 41
       },
       {
         "name": "Jason Ainsworth",
         "driver": "Jason Ainsworth",
         "current_points": 0,
-        "simulation_wins": 783,
-        "probability": 0.78,
+        "simulation_wins": 1917,
+        "probability": 1.92,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 127.71,
+        "fair_odds": 52.16,
         "market_percent": 125.0,
-        "market_odds": 102.17,
-        "trotify_odds": 101
+        "market_odds": 41.73,
+        "trotify_odds": 41
       },
       {
         "name": "Allan McDonough",
         "driver": "Allan McDonough",
         "current_points": 0,
-        "simulation_wins": 759,
-        "probability": 0.76,
+        "simulation_wins": 1641,
+        "probability": 1.64,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 131.75,
+        "fair_odds": 60.94,
         "market_percent": 125.0,
-        "market_odds": 105.4,
-        "trotify_odds": 101
+        "market_odds": 48.75,
+        "trotify_odds": 51
       },
       {
         "name": "Scott Torney",
         "driver": "Scott Torney",
         "current_points": 0,
-        "simulation_wins": 753,
-        "probability": 0.75,
+        "simulation_wins": 1608,
+        "probability": 1.61,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 132.8,
+        "fair_odds": 62.19,
         "market_percent": 125.0,
-        "market_odds": 106.24,
-        "trotify_odds": 101
+        "market_odds": 49.75,
+        "trotify_odds": 51
       },
       {
         "name": "Michelle Wight",
         "driver": "Michelle Wight",
         "current_points": 0,
-        "simulation_wins": 613,
-        "probability": 0.61,
+        "simulation_wins": 1494,
+        "probability": 1.49,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 163.13,
+        "fair_odds": 66.93,
         "market_percent": 125.0,
-        "market_odds": 130.51,
-        "trotify_odds": 101
+        "market_odds": 53.55,
+        "trotify_odds": 51
       },
       {
         "name": "Hannah Parish",
         "driver": "Hannah Parish",
         "current_points": 0,
-        "simulation_wins": 546,
-        "probability": 0.55,
+        "simulation_wins": 1208,
+        "probability": 1.21,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 183.15,
+        "fair_odds": 82.78,
         "market_percent": 125.0,
-        "market_odds": 146.52,
-        "trotify_odds": 101
+        "market_odds": 66.23,
+        "trotify_odds": 67
       },
       {
         "name": "Donna Castles",
         "driver": "Donna Castles",
         "current_points": 0,
-        "simulation_wins": 391,
-        "probability": 0.39,
+        "simulation_wins": 777,
+        "probability": 0.78,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 255.75,
+        "fair_odds": 128.7,
         "market_percent": 125.0,
-        "market_odds": 204.6,
-        "trotify_odds": 201
+        "market_odds": 102.96,
+        "trotify_odds": 101
       },
       {
         "name": "Matthew Craven",
         "driver": "Matthew Craven",
         "current_points": 0,
-        "simulation_wins": 299,
+        "simulation_wins": 677,
+        "probability": 0.68,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 147.71,
+        "market_percent": 125.0,
+        "market_odds": 118.17,
+        "trotify_odds": 101
+      },
+      {
+        "name": "Leigh Sutton",
+        "driver": "Leigh Sutton",
+        "current_points": 0,
+        "simulation_wins": 399,
+        "probability": 0.4,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 250.63,
+        "market_percent": 125.0,
+        "market_odds": 200.5,
+        "trotify_odds": 201
+      },
+      {
+        "name": "Luke Dunne",
+        "driver": "Luke Dunne",
+        "current_points": 0,
+        "simulation_wins": 361,
+        "probability": 0.36,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 277.01,
+        "market_percent": 125.0,
+        "market_odds": 221.61,
+        "trotify_odds": 201
+      },
+      {
+        "name": "Sean O'Sullivan",
+        "driver": "Sean O'Sullivan",
+        "current_points": 0,
+        "simulation_wins": 300,
         "probability": 0.3,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 334.45,
+        "fair_odds": 333.33,
         "market_percent": 125.0,
-        "market_odds": 267.56,
+        "market_odds": 266.67,
         "trotify_odds": 201
       },
       {
@@ -1560,73 +1692,151 @@
         "trotify_odds": 201
       },
       {
-        "name": "Leigh Sutton",
-        "driver": "Leigh Sutton",
-        "current_points": 0,
-        "simulation_wins": 175,
-        "probability": 0.18,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 571.43,
-        "market_percent": 125.0,
-        "market_odds": 457.14,
-        "trotify_odds": 501
-      },
-      {
-        "name": "Sean O'Sullivan",
-        "driver": "Sean O'Sullivan",
-        "current_points": 0,
-        "simulation_wins": 154,
-        "probability": 0.15,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 649.35,
-        "market_percent": 125.0,
-        "market_odds": 519.48,
-        "trotify_odds": 501
-      },
-      {
-        "name": "Luke Dunne",
-        "driver": "Luke Dunne",
-        "current_points": 0,
-        "simulation_wins": 144,
-        "probability": 0.14,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 694.44,
-        "market_percent": 125.0,
-        "market_odds": 555.56,
-        "trotify_odds": 501
-      },
-      {
         "name": "John Meade",
         "driver": "John Meade",
         "current_points": 0,
-        "simulation_wins": 83,
-        "probability": 0.08,
+        "simulation_wins": 171,
+        "probability": 0.17,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 1204.82,
+        "fair_odds": 584.8,
         "market_percent": 125.0,
-        "market_odds": 963.86,
-        "trotify_odds": 1001
+        "market_odds": 467.84,
+        "trotify_odds": 501
       },
       {
         "name": "Hannah Lewis",
         "driver": "Hannah Lewis",
         "current_points": 0,
-        "simulation_wins": 44,
-        "probability": 0.04,
+        "simulation_wins": 93,
+        "probability": 0.09,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 2272.73,
+        "fair_odds": 1075.27,
         "market_percent": 125.0,
-        "market_odds": 1818.18,
+        "market_odds": 860.22,
         "trotify_odds": 1001
       },
       {
         "name": "Jason Lee",
         "driver": "Jason Lee",
+        "current_points": 0,
+        "simulation_wins": 8,
+        "probability": 0.01,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 12500.0,
+        "market_percent": 125.0,
+        "market_odds": 10000.0,
+        "trotify_odds": 1001
+      },
+      {
+        "name": "Daryl Douglas",
+        "driver": "Daryl Douglas",
+        "current_points": 0,
+        "simulation_wins": 5,
+        "probability": 0.01,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 20000.0,
+        "market_percent": 125.0,
+        "market_odds": 16000.0,
+        "trotify_odds": 1001
+      },
+      {
+        "name": "Matthew Cain",
+        "driver": "Matthew Cain",
+        "current_points": 0,
+        "simulation_wins": 5,
+        "probability": 0.01,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 20000.0,
+        "market_percent": 125.0,
+        "market_odds": 16000.0,
+        "trotify_odds": 1001
+      },
+      {
+        "name": "Chelsie O'Driscoll",
+        "driver": "Chelsie O'Driscoll",
+        "current_points": 0,
+        "simulation_wins": 3,
+        "probability": 0.0,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 33333.33,
+        "market_percent": 125.0,
+        "market_odds": 26666.67,
+        "trotify_odds": 1001
+      },
+      {
+        "name": "Connor Clarke",
+        "driver": "Connor Clarke",
+        "current_points": 0,
+        "simulation_wins": 2,
+        "probability": 0.0,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 50000.0,
+        "market_percent": 125.0,
+        "market_odds": 40000.0,
+        "trotify_odds": 1001
+      },
+      {
+        "name": "Ellen Tormey",
+        "driver": "Ellen Tormey",
+        "current_points": 0,
+        "simulation_wins": 2,
+        "probability": 0.0,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 50000.0,
+        "market_percent": 125.0,
+        "market_odds": 40000.0,
+        "trotify_odds": 1001
+      },
+      {
+        "name": "Ewa Justice",
+        "driver": "Ewa Justice",
+        "current_points": 0,
+        "simulation_wins": 2,
+        "probability": 0.0,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 50000.0,
+        "market_percent": 125.0,
+        "market_odds": 40000.0,
+        "trotify_odds": 1001
+      },
+      {
+        "name": "Mark Hayes",
+        "driver": "Mark Hayes",
+        "current_points": 0,
+        "simulation_wins": 2,
+        "probability": 0.0,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 50000.0,
+        "market_percent": 125.0,
+        "market_odds": 40000.0,
+        "trotify_odds": 1001
+      },
+      {
+        "name": "Tina Ridis",
+        "driver": "Tina Ridis",
+        "current_points": 0,
+        "simulation_wins": 2,
+        "probability": 0.0,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 50000.0,
+        "market_percent": 125.0,
+        "market_odds": 40000.0,
+        "trotify_odds": 1001
+      },
+      {
+        "name": "Daryl Crone",
+        "driver": "Daryl Crone",
         "current_points": 0,
         "simulation_wins": 1,
         "probability": 0.0,
@@ -1638,30 +1848,17 @@
         "trotify_odds": 1001
       },
       {
-        "name": "Chelsie O'Driscoll",
-        "driver": "Chelsie O'Driscoll",
+        "name": "Tony Vlaeminck",
+        "driver": "Tony Vlaeminck",
         "current_points": 0,
-        "simulation_wins": 0,
+        "simulation_wins": 1,
         "probability": 0.0,
         "eliminated": false,
-        "longshot": true,
-        "fair_odds": null,
+        "longshot": false,
+        "fair_odds": 100000.0,
         "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Connor Clarke",
-        "driver": "Connor Clarke",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": false,
-        "longshot": true,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
+        "market_odds": 80000.0,
+        "trotify_odds": 1001
       },
       {
         "name": "Connor Ronan",
@@ -1690,112 +1887,8 @@
         "trotify_odds": null
       },
       {
-        "name": "Daryl Crone",
-        "driver": "Daryl Crone",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": false,
-        "longshot": true,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Daryl Douglas",
-        "driver": "Daryl Douglas",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": false,
-        "longshot": true,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Ellen Tormey",
-        "driver": "Ellen Tormey",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": false,
-        "longshot": true,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Ewa Justice",
-        "driver": "Ewa Justice",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": false,
-        "longshot": true,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Mark Hayes",
-        "driver": "Mark Hayes",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": false,
-        "longshot": true,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Matthew Cain",
-        "driver": "Matthew Cain",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": false,
-        "longshot": true,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
         "name": "Nathan Cahir",
         "driver": "Nathan Cahir",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": false,
-        "longshot": true,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Tina Ridis",
-        "driver": "Tina Ridis",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": false,
-        "longshot": true,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Tony Vlaeminck",
-        "driver": "Tony Vlaeminck",
         "current_points": 0,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -1825,161 +1918,174 @@
         "name": "Jason Ainsworth",
         "trainer": "Jason Ainsworth",
         "current_points": 0,
-        "simulation_wins": 29393,
-        "probability": 29.39,
+        "simulation_wins": 29488,
+        "probability": 29.49,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 3.4,
+        "fair_odds": 3.39,
         "market_percent": 125.0,
-        "market_odds": 2.72,
+        "market_odds": 2.71,
         "trotify_odds": 2.7
       },
       {
         "name": "S M McNaulty, J M McNaulty",
         "trainer": "S M McNaulty, J M McNaulty",
         "current_points": 0,
-        "simulation_wins": 24718,
-        "probability": 24.72,
+        "simulation_wins": 24735,
+        "probability": 24.73,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 4.05,
+        "fair_odds": 4.04,
         "market_percent": 125.0,
-        "market_odds": 3.24,
+        "market_odds": 3.23,
         "trotify_odds": 3.2
       },
       {
         "name": "Tim McGuigan",
         "trainer": "Tim McGuigan",
         "current_points": 0,
-        "simulation_wins": 15058,
-        "probability": 15.06,
+        "simulation_wins": 15025,
+        "probability": 15.02,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 6.64,
+        "fair_odds": 6.66,
         "market_percent": 125.0,
-        "market_odds": 5.31,
+        "market_odds": 5.32,
         "trotify_odds": 5.5
       },
       {
         "name": "Ross Graham",
         "trainer": "Ross Graham",
         "current_points": 0,
-        "simulation_wins": 14332,
-        "probability": 14.33,
+        "simulation_wins": 14211,
+        "probability": 14.21,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 6.98,
+        "fair_odds": 7.04,
         "market_percent": 125.0,
-        "market_odds": 5.58,
+        "market_odds": 5.63,
         "trotify_odds": 5.5
       },
       {
         "name": "Denis McIntyre",
         "trainer": "Denis McIntyre",
         "current_points": 0,
-        "simulation_wins": 8068,
-        "probability": 8.07,
+        "simulation_wins": 8108,
+        "probability": 8.11,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 12.39,
+        "fair_odds": 12.33,
         "market_percent": 125.0,
-        "market_odds": 9.92,
+        "market_odds": 9.87,
         "trotify_odds": 10
       },
       {
         "name": "Samantha Gangell",
         "trainer": "Samantha Gangell",
         "current_points": 0,
-        "simulation_wins": 1471,
-        "probability": 1.47,
+        "simulation_wins": 1382,
+        "probability": 1.38,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 67.98,
+        "fair_odds": 72.36,
         "market_percent": 125.0,
-        "market_odds": 54.38,
+        "market_odds": 57.89,
         "trotify_odds": 51
-      },
-      {
-        "name": "John Tormey",
-        "trainer": "John Tormey",
-        "current_points": 0,
-        "simulation_wins": 1297,
-        "probability": 1.3,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 77.1,
-        "market_percent": 125.0,
-        "market_odds": 61.68,
-        "trotify_odds": 67
       },
       {
         "name": "Brent Lilley",
         "trainer": "Brent Lilley",
         "current_points": 0,
-        "simulation_wins": 1209,
-        "probability": 1.21,
+        "simulation_wins": 1315,
+        "probability": 1.31,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 82.71,
+        "fair_odds": 76.05,
         "market_percent": 125.0,
-        "market_odds": 66.17,
+        "market_odds": 60.84,
         "trotify_odds": 67
       },
       {
-        "name": "Julie Brimacombe",
-        "trainer": "Julie Brimacombe",
+        "name": "John Tormey",
+        "trainer": "John Tormey",
         "current_points": 0,
-        "simulation_wins": 890,
-        "probability": 0.89,
+        "simulation_wins": 1240,
+        "probability": 1.24,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 112.36,
+        "fair_odds": 80.65,
         "market_percent": 125.0,
-        "market_odds": 89.89,
-        "trotify_odds": 81
+        "market_odds": 64.52,
+        "trotify_odds": 67
       },
       {
         "name": "Donna Castles",
         "trainer": "Donna Castles",
         "current_points": 0,
-        "simulation_wins": 797,
-        "probability": 0.8,
+        "simulation_wins": 850,
+        "probability": 0.85,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 125.47,
+        "fair_odds": 117.65,
         "market_percent": 125.0,
-        "market_odds": 100.38,
+        "market_odds": 94.12,
+        "trotify_odds": 101
+      },
+      {
+        "name": "Julie Brimacombe",
+        "trainer": "Julie Brimacombe",
+        "current_points": 0,
+        "simulation_wins": 827,
+        "probability": 0.83,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 120.92,
+        "market_percent": 125.0,
+        "market_odds": 96.74,
         "trotify_odds": 101
       },
       {
         "name": "Tim Mortlock",
         "trainer": "Tim Mortlock",
         "current_points": 0,
-        "simulation_wins": 654,
-        "probability": 0.65,
+        "simulation_wins": 698,
+        "probability": 0.7,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 152.91,
+        "fair_odds": 143.27,
         "market_percent": 125.0,
-        "market_odds": 122.32,
+        "market_odds": 114.61,
         "trotify_odds": 101
       },
       {
         "name": "Sam Barker",
         "trainer": "Sam Barker",
         "current_points": 0,
-        "simulation_wins": 307,
-        "probability": 0.31,
+        "simulation_wins": 304,
+        "probability": 0.3,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 325.73,
+        "fair_odds": 328.95,
         "market_percent": 125.0,
-        "market_odds": 260.59,
+        "market_odds": 263.16,
         "trotify_odds": 201
       },
       {
         "name": "Mark Thompson",
         "trainer": "Mark Thompson",
+        "current_points": 0,
+        "simulation_wins": 284,
+        "probability": 0.28,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 352.11,
+        "market_percent": 125.0,
+        "market_odds": 281.69,
+        "trotify_odds": 201
+      },
+      {
+        "name": "Matthew Craven",
+        "trainer": "Matthew Craven",
         "current_points": 0,
         "simulation_wins": 283,
         "probability": 0.28,
@@ -1991,160 +2097,147 @@
         "trotify_odds": 201
       },
       {
-        "name": "Matthew Craven",
-        "trainer": "Matthew Craven",
-        "current_points": 0,
-        "simulation_wins": 268,
-        "probability": 0.27,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 373.13,
-        "market_percent": 125.0,
-        "market_odds": 298.51,
-        "trotify_odds": 201
-      },
-      {
         "name": "Desleigh Parish",
         "trainer": "Desleigh Parish",
         "current_points": 0,
-        "simulation_wins": 208,
-        "probability": 0.21,
+        "simulation_wins": 220,
+        "probability": 0.22,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 480.77,
+        "fair_odds": 454.55,
         "market_percent": 125.0,
-        "market_odds": 384.62,
+        "market_odds": 363.64,
         "trotify_odds": 501
       },
       {
         "name": "Jim Barker",
         "trainer": "Jim Barker",
         "current_points": 0,
-        "simulation_wins": 208,
+        "simulation_wins": 215,
         "probability": 0.21,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 480.77,
+        "fair_odds": 465.12,
         "market_percent": 125.0,
-        "market_odds": 384.62,
+        "market_odds": 372.09,
         "trotify_odds": 501
       },
       {
         "name": "T K Gange, J G Allan-Gange",
         "trainer": "T K Gange, J G Allan-Gange",
         "current_points": 0,
-        "simulation_wins": 206,
+        "simulation_wins": 213,
         "probability": 0.21,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 485.44,
+        "fair_odds": 469.48,
         "market_percent": 125.0,
-        "market_odds": 388.35,
-        "trotify_odds": 501
-      },
-      {
-        "name": "Tom Rundle",
-        "trainer": "Tom Rundle",
-        "current_points": 0,
-        "simulation_wins": 201,
-        "probability": 0.2,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 497.51,
-        "market_percent": 125.0,
-        "market_odds": 398.01,
+        "market_odds": 375.59,
         "trotify_odds": 501
       },
       {
         "name": "Trevor Patching",
         "trainer": "Trevor Patching",
         "current_points": 0,
-        "simulation_wins": 163,
-        "probability": 0.16,
+        "simulation_wins": 170,
+        "probability": 0.17,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 613.5,
+        "fair_odds": 588.24,
         "market_percent": 125.0,
-        "market_odds": 490.8,
+        "market_odds": 470.59,
+        "trotify_odds": 501
+      },
+      {
+        "name": "Tom Rundle",
+        "trainer": "Tom Rundle",
+        "current_points": 0,
+        "simulation_wins": 167,
+        "probability": 0.17,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 598.8,
+        "market_percent": 125.0,
+        "market_odds": 479.04,
         "trotify_odds": 501
       },
       {
         "name": "Matthew Horsnell",
         "trainer": "Matthew Horsnell",
         "current_points": 0,
-        "simulation_wins": 111,
-        "probability": 0.11,
+        "simulation_wins": 94,
+        "probability": 0.09,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 900.9,
+        "fair_odds": 1063.83,
         "market_percent": 125.0,
-        "market_odds": 720.72,
-        "trotify_odds": 501
+        "market_odds": 851.06,
+        "trotify_odds": 1001
       },
       {
         "name": "David Barbetti",
         "trainer": "David Barbetti",
         "current_points": 0,
-        "simulation_wins": 72,
+        "simulation_wins": 68,
         "probability": 0.07,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 1388.89,
+        "fair_odds": 1470.59,
         "market_percent": 125.0,
-        "market_odds": 1111.11,
+        "market_odds": 1176.47,
         "trotify_odds": 1001
       },
       {
         "name": "Ray Cross",
         "trainer": "Ray Cross",
         "current_points": 0,
-        "simulation_wins": 29,
-        "probability": 0.03,
+        "simulation_wins": 47,
+        "probability": 0.05,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 3448.28,
+        "fair_odds": 2127.66,
         "market_percent": 125.0,
-        "market_odds": 2758.62,
-        "trotify_odds": 1001
-      },
-      {
-        "name": "Bill White",
-        "trainer": "Bill White",
-        "current_points": 0,
-        "simulation_wins": 26,
-        "probability": 0.03,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 3846.15,
-        "market_percent": 125.0,
-        "market_odds": 3076.92,
+        "market_odds": 1702.13,
         "trotify_odds": 1001
       },
       {
         "name": "John Meade",
         "trainer": "John Meade",
         "current_points": 0,
-        "simulation_wins": 26,
+        "simulation_wins": 31,
         "probability": 0.03,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 3846.15,
+        "fair_odds": 3225.81,
         "market_percent": 125.0,
-        "market_odds": 3076.92,
+        "market_odds": 2580.65,
+        "trotify_odds": 1001
+      },
+      {
+        "name": "Bill White",
+        "trainer": "Bill White",
+        "current_points": 0,
+        "simulation_wins": 25,
+        "probability": 0.03,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 4000.0,
+        "market_percent": 125.0,
+        "market_odds": 3200.0,
         "trotify_odds": 1001
       },
       {
         "name": "Ian Slater",
         "trainer": "Ian Slater",
         "current_points": 0,
-        "simulation_wins": 5,
-        "probability": 0.01,
+        "simulation_wins": 0,
+        "probability": 0.0,
         "eliminated": false,
-        "longshot": false,
-        "fair_odds": 20000.0,
+        "longshot": true,
+        "fair_odds": null,
         "market_percent": 125.0,
-        "market_odds": 16000.0,
-        "trotify_odds": 1001
+        "market_odds": null,
+        "trotify_odds": null
       },
       {
         "name": "Adam Stephens",
