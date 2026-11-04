@@ -365,21 +365,27 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 
+    });
+
     /*
        =====================================================
        DIRECT LINK - CHAMPIONSHIPS
        =====================================================
     */
 
-    if (window.location.search.includes("horsham")) {
-        await showHorshamView();
+    window.addEventListener("load", async () => {
 
-    } else if (window.location.search.includes("adc")) {
-        await showAdcView();
+        const params = window.location.search.toLowerCase();
 
-    } else if (window.location.search.includes("starnaud")) {
-        await showClubChampionshipView();
-    }
+        if (params.includes("horsham")) {
+            await showHorshamView();
+
+        } else if (params.includes("adc")) {
+            await showAdcView();
+
+        } else if (params.includes("starnaud")) {
+            await showClubChampionshipView();
+        }
 
     });
 
@@ -8899,7 +8905,7 @@ function renderClubChampionship() {
     let html = `
         <div class="adc-card">
 
-            <h2>St Arnaud: 8 November 2026</h2>
+            <h2>St Arnaud: 8 Nov 2026</h2>
 
             <div class="club-tabs">
                 <button class="club-tab ${type === "drivers" ? "active" : ""}"
