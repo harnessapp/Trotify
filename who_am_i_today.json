@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-05",
-  "puzzle_number": 35,
+  "date": "2026-11-06",
+  "puzzle_number": 36,
   "type": "HORSE",
-  "answer": "Tasbmiki",
+  "answer": "Annie Crocker",
   "stats": {
-    "starts": 50,
+    "starts": 68,
     "wins": 8,
-    "places": 17
+    "places": 33
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 50 race starts.",
+      "text": "I've had 68 race starts.",
       "difficulty": 15,
       "source": "career_starts",
-      "revealed_letters": 0,
-      "name_pattern": "_ _ _ _ _ _ _ _"
+      "revealed_letters": 1,
+      "name_pattern": "A _ _ _ _    _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "All of my recorded starts have been in New South Wales.",
-      "difficulty": 35,
-      "source": "state",
-      "revealed_letters": 1,
-      "name_pattern": "T _ _ _ _ _ _ _"
+      "text": "I've won 8 races and placed 33 times.",
+      "difficulty": 25,
+      "source": "career_record",
+      "revealed_letters": 2,
+      "name_pattern": "A _ _ _ _    C _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Parkes, Dubbo, Young.",
+      "text": "I've won at tracks including Globe Derby Park, Tamworth, Dubbo.",
       "difficulty": 55,
       "source": "winning_tracks",
-      "revealed_letters": 2,
-      "name_pattern": "T _ _ B _ _ _ _"
+      "revealed_letters": 3,
+      "name_pattern": "A _ _ _ _    C R _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Aaron Williams.",
+      "text": "I'm currently associated most often with trainer Jemma Hayman.",
       "difficulty": 75,
       "source": "trainer",
-      "revealed_letters": 3,
-      "name_pattern": "T _ _ B _ I _ _"
+      "revealed_letters": 4,
+      "name_pattern": "A _ _ _ _    C R _ C _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Bathurst on 4 November 2026, where I finished 7th for trainer Aaron Williams and driver Declan Murphy.",
+      "text": "My most recent start was at Bunbury on 17 October 2026, where I finished 9th for trainer Jemma Hayman and driver Stuart McDonald.",
       "difficulty": 95,
       "source": "last_start",
-      "revealed_letters": 4,
-      "name_pattern": "T _ S B _ I _ _"
+      "revealed_letters": 6,
+      "name_pattern": "A _ _ I _    C R _ C _ E _"
     }
   ]
 }
