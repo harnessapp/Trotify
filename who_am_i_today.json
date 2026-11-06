@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-06",
-  "puzzle_number": 36,
+  "date": "2026-11-07",
+  "puzzle_number": 37,
   "type": "HORSE",
-  "answer": "Annie Crocker",
+  "answer": "Whiskey Royale",
   "stats": {
-    "starts": 68,
-    "wins": 8,
-    "places": 33
+    "starts": 72,
+    "wins": 7,
+    "places": 21
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 68 race starts.",
+      "text": "I've had 72 race starts.",
       "difficulty": 15,
       "source": "career_starts",
       "revealed_letters": 1,
-      "name_pattern": "A _ _ _ _    _ _ _ _ _ _ _"
+      "name_pattern": "W _ _ _ _ _ _    _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've won 8 races and placed 33 times.",
-      "difficulty": 25,
-      "source": "career_record",
+      "text": "All of my recorded starts have been in New South Wales.",
+      "difficulty": 35,
+      "source": "state",
       "revealed_letters": 2,
-      "name_pattern": "A _ _ _ _    C _ _ _ _ _ _"
+      "name_pattern": "W _ _ _ _ _ _    R _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Globe Derby Park, Tamworth, Dubbo.",
+      "text": "I've won at tracks including Newcastle, Penrith, Tamworth.",
       "difficulty": 55,
       "source": "winning_tracks",
       "revealed_letters": 3,
-      "name_pattern": "A _ _ _ _    C R _ _ _ _ _"
+      "name_pattern": "W _ _ _ _ _ Y    R _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Jemma Hayman.",
+      "text": "I'm currently associated most often with trainer Jamie Donovan.",
       "difficulty": 75,
       "source": "trainer",
-      "revealed_letters": 4,
-      "name_pattern": "A _ _ _ _    C R _ C _ _ _"
+      "revealed_letters": 5,
+      "name_pattern": "W _ _ S _ _ Y    R _ Y _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Bunbury on 17 October 2026, where I finished 9th for trainer Jemma Hayman and driver Stuart McDonald.",
+      "text": "My most recent start was at Newcastle on 6 November 2026, where I finished 7th for trainer Jamie Donovan and driver Grace Panella.",
       "difficulty": 95,
       "source": "last_start",
       "revealed_letters": 6,
-      "name_pattern": "A _ _ I _    C R _ C _ E _"
+      "name_pattern": "W _ _ S _ _ Y    R _ Y _ L _"
     }
   ]
 }
