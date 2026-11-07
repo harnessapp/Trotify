@@ -8837,6 +8837,19 @@ function renderClubChampionship() {
     const data = clubChampionshipData;
     const type = clubChampionshipTab;
 
+    const market = data.market?.[type] || [];
+
+    const hasTabMarket = data.tab_market?.enabled === true;
+
+    const tabOddsByName = new Map(
+        (hasTabMarket ? data.tab_market?.[type] || [] : [])
+            .map(m => [
+                String(m.name || m.driver || m.trainer || "")
+                    .trim().toLocaleLowerCase(),
+                m
+            ])
+    );
+
     const competitors = [...(data[type] || [])];
 
     competitors.sort((a, b) => {
@@ -8861,14 +8874,6 @@ function renderClubChampionship() {
 
         return b.total - a.total || a.name.localeCompare(b.name);
     });
-
-    const market = data.market?.[type] || [];
-
-    const hasTabMarket = data.tab_market?.enabled === true;
-    const tabOddsByName = new Map(
-        (hasTabMarket ? data.tab_market?.[type] || [] : [])
-            .map(m => [String(m.name || m.driver || m.trainer || "").trim().toLocaleLowerCase(), m])
-    );
 
     function formatChampionshipOdds(m) {
         if (!m) return "-";
