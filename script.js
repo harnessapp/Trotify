@@ -6656,26 +6656,10 @@ function getLatestResultRaces(todayByRaceDate = false) {
     const todayKey = new Date().toLocaleDateString("en-CA");
 
     return [...raceMap.values()]
-        .filter(race => {
+        .filter(race => parseDateToKey(race.dateValue) === todayKey)
 
-            // Homepage:
-            // only actual races dated today.
-            if (todayByRaceDate) {
-                return parseDateToKey(race.dateValue) === todayKey;
-            }
 
-            // Existing Latest Results behaviour:
-            // anything captured today.
-            if (!race.capturedAt) return false;
 
-            const captured = new Date(race.capturedAt);
-
-            if (Number.isNaN(captured.getTime())) {
-                return false;
-            }
-
-            return captured.toLocaleDateString("en-CA") === todayKey;
-        })
         .sort((a, b) => {
             const capturedA = new Date(a.capturedAt || "").getTime() || 0;
             const capturedB = new Date(b.capturedAt || "").getTime() || 0;
