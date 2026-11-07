@@ -8956,6 +8956,11 @@ function renderClubChampionship() {
             `;
         });
 
+        if (hasTabMarket) {
+            const tabEntry = tabOddsByName.get(String(c.name || "").trim().toLocaleLowerCase());
+            html += `<td class="odds-cell">${formatChampionshipOdds(tabEntry)}</td>`;
+        }
+
         html += `</tr>`;
     });
 
