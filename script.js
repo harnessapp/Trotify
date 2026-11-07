@@ -8958,7 +8958,7 @@ function renderClubChampionship() {
                             const match = anchor.match(/_R(\d+)$/);
                             return `<th>R${match ? match[1] : "?"}</th>`;
                         }).join("")}
-                        ${hasTabMarket ? "<th>TAB Model</th>" : ""}
+                        ${hasTabMarket ? "<th>Proj</th>" : ""}
                     </tr>
     `;
 
