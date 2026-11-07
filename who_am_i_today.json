@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-07",
-  "puzzle_number": 37,
-  "type": "HORSE",
-  "answer": "Whiskey Royale",
+  "date": "2026-11-08",
+  "puzzle_number": 38,
+  "type": "TRAINER",
+  "answer": "Peter Salathiel",
   "stats": {
-    "starts": 72,
-    "wins": 7,
-    "places": 21
+    "recent_starts": 56,
+    "recent_wins": 2,
+    "horses": 7
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 72 race starts.",
+      "text": "My stable has had 56 race starts in the past 12 months.",
       "difficulty": 15,
-      "source": "career_starts",
+      "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "W _ _ _ _ _ _    _ _ _ _ _ _"
+      "name_pattern": "P _ _ _ _    _ _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "All of my recorded starts have been in New South Wales.",
-      "difficulty": 35,
-      "source": "state",
+      "text": "I've trained 2 winners in the past 12 months.",
+      "difficulty": 40,
+      "source": "recent_wins",
       "revealed_letters": 2,
-      "name_pattern": "W _ _ _ _ _ _    R _ _ _ _ _"
+      "name_pattern": "P _ _ _ _    S _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Newcastle, Penrith, Tamworth.",
+      "text": "The track where I've had the most runners in the past 12 months is Shepparton.",
       "difficulty": 55,
-      "source": "winning_tracks",
-      "revealed_letters": 3,
-      "name_pattern": "W _ _ _ _ _ Y    R _ _ _ _ _"
+      "source": "favourite_venue",
+      "revealed_letters": 4,
+      "name_pattern": "P _ _ _ _    S A _ _ T _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Jamie Donovan.",
-      "difficulty": 75,
-      "source": "trainer",
+      "text": "I am the driver used most often by my stable recently.",
+      "difficulty": 70,
+      "source": "favourite_driver",
       "revealed_letters": 5,
-      "name_pattern": "W _ _ S _ _ Y    R _ Y _ _ _"
+      "name_pattern": "P _ _ E _    S A _ _ T _ _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Newcastle on 6 November 2026, where I finished 7th for trainer Jamie Donovan and driver Grace Panella.",
+      "text": "My first name is Peter. ",
       "difficulty": 95,
-      "source": "last_start",
-      "revealed_letters": 6,
-      "name_pattern": "W _ _ S _ _ Y    R _ Y _ L _"
+      "source": "first_name",
+      "revealed_letters": 7,
+      "name_pattern": "P E _ E _    S A _ _ T _ _ E _"
     }
   ]
 }
