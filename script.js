@@ -8837,8 +8837,30 @@ function renderClubChampionship() {
     const data = clubChampionshipData;
     const type = clubChampionshipTab;
 
-    const competitors = [...(data[type] || [])]
-        .sort((a, b) => b.total - a.total || a.name.localeCompare(b.name));
+    const competitors = [...(data[type] || [])];
+
+    competitors.sort((a, b) => {
+        if (hasTabMarket) {
+            const getOdds = c => {
+                const entry = tabOddsByName.get(
+                    String(c.name || "").trim().toLocaleLowerCase()
+                );
+
+                if (!entry || entry.eliminated || entry.longshot) return Infinity;
+
+                const odds = Number(entry.trotify_odds);
+                return Number.isFinite(odds) && odds > 0 ? odds : Infinity;
+            };
+
+            const difference = getOdds(a) - getOdds(b);
+
+            if (!Number.isNaN(difference) && difference !== 0) {
+                return difference;
+            }
+        }
+
+        return b.total - a.total || a.name.localeCompare(b.name);
+    });
 
     const market = data.market?.[type] || [];
 
