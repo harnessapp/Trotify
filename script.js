@@ -8842,6 +8842,22 @@ function renderClubChampionship() {
 
     const market = data.market?.[type] || [];
 
+    const hasTabMarket = data.tab_market?.enabled === true;
+    const tabOddsByName = new Map(
+        (hasTabMarket ? data.tab_market?.[type] || [] : [])
+            .map(m => [String(m.name || m.driver || m.trainer || "").trim().toLocaleLowerCase(), m])
+    );
+
+    function formatChampionshipOdds(m) {
+        if (!m) return "-";
+        if (m.eliminated) return "ELIM";
+        if (m.longshot) return "LONG";
+        if (m.trotify_odds == null) return "-";
+        const price = Number(m.trotify_odds);
+        if (!Number.isFinite(price)) return "-";
+        return price >= 10 ? `$${Math.round(price)}` : `$${price.toFixed(2)}`;
+    }
+
     const raceAnchors = Object.keys(data.races || {})
         .sort((a, b) => {
             const numA = Number(a.match(/_R(\d+)$/)?.[1] || 0);
@@ -8915,6 +8931,7 @@ function renderClubChampionship() {
                             const match = anchor.match(/_R(\d+)$/);
                             return `<th>R${match ? match[1] : "?"}</th>`;
                         }).join("")}
+                        ${hasTabMarket ? "<th>TAB Model</th>" : ""}
                     </tr>
     `;
 
