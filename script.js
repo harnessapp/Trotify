@@ -8972,6 +8972,11 @@ function renderClubChampionship() {
                 </td>
         `;
 
+        if (hasTabMarket) {
+            const tabEntry = tabOddsByName.get(String(c.name || "").trim().toLocaleLowerCase());
+            html += `<td class="odds-cell">${formatChampionshipOdds(tabEntry)}</td>`;
+        }
+
         raceAnchors.forEach(anchor => {
 
             const points = racePoints(c.name, anchor);
@@ -8982,11 +8987,6 @@ function renderClubChampionship() {
                 </td>
             `;
         });
-
-        if (hasTabMarket) {
-            const tabEntry = tabOddsByName.get(String(c.name || "").trim().toLocaleLowerCase());
-            html += `<td class="odds-cell">${formatChampionshipOdds(tabEntry)}</td>`;
-        }
 
         html += `</tr>`;
     });
