@@ -3,7 +3,7 @@
   "date": "2026-11-08",
   "venue": "St Arnaud",
   "generated": "2026-11-04T13:15:55",
-  "last_updated": "2026-11-08T20:15:02",
+  "last_updated": "2026-11-08T20:20:02",
   "scoring": {
     "drivers": {
       "positions": {
@@ -1435,7 +1435,7 @@
   ],
   "market": {
     "enabled": true,
-    "generated": "2026-11-08T20:15:03",
+    "generated": "2026-11-08T20:20:03",
     "simulations": 100000,
     "market_percent": 125.0,
     "remaining_races": [],
@@ -2512,7 +2512,7 @@
   },
   "tab_market": {
     "enabled": true,
-    "generated": "2026-11-08T20:15:03",
+    "generated": "2026-11-08T20:20:03",
     "simulations": 100000,
     "market_percent": 125.0,
     "remaining_races": [],
