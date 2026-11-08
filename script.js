@@ -8954,11 +8954,11 @@ function renderClubChampionship() {
                             ${type === "drivers" ? "Driver" : "Trainer"}
                         </th>
                         <th>Total</th>
+                        ${hasTabMarket ? "<th>Proj</th>" : ""}
                         ${raceAnchors.map(anchor => {
                             const match = anchor.match(/_R(\d+)$/);
                             return `<th>R${match ? match[1] : "?"}</th>`;
                         }).join("")}
-                        ${hasTabMarket ? "<th>Proj</th>" : ""}
                     </tr>
     `;
 
