@@ -3,7 +3,7 @@
   "date": "2026-11-08",
   "venue": "St Arnaud",
   "generated": "2026-11-04T13:15:55",
-  "last_updated": "2026-11-08T16:00:02",
+  "last_updated": "2026-11-08T16:15:02",
   "scoring": {
     "drivers": {
       "positions": {
@@ -731,8 +731,8 @@
           "barrier": "FT Fr1",
           "scratched": false,
           "fair_pct": 2.970059616067997,
-          "placing": null,
-          "status": "upcoming",
+          "placing": 6,
+          "status": "complete",
           "model_driver": "John Meade"
         },
         {
@@ -742,8 +742,8 @@
           "barrier": "FT Fr2",
           "scratched": false,
           "fair_pct": 0.3572008098093238,
-          "placing": null,
-          "status": "upcoming",
+          "placing": 1,
+          "status": "complete",
           "model_driver": "Tristan Larsen"
         },
         {
@@ -753,8 +753,8 @@
           "barrier": "FT Fr3",
           "scratched": false,
           "fair_pct": 5.645382010788048,
-          "placing": null,
-          "status": "upcoming",
+          "placing": 8,
+          "status": "complete",
           "model_driver": "Chris Alford"
         },
         {
@@ -764,8 +764,8 @@
           "barrier": "FT Fr4",
           "scratched": false,
           "fair_pct": 38.48559339012144,
-          "placing": null,
-          "status": "upcoming",
+          "placing": 3,
+          "status": "complete",
           "model_driver": "Michelle Wight"
         },
         {
@@ -786,8 +786,8 @@
           "barrier": "FT Fr6",
           "scratched": false,
           "fair_pct": 5.844209397416864,
-          "placing": null,
-          "status": "upcoming",
+          "placing": 9,
+          "status": "complete",
           "model_driver": "Jack Laugher"
         },
         {
@@ -797,8 +797,8 @@
           "barrier": "FT Sr1",
           "scratched": false,
           "fair_pct": 9.836866683023,
-          "placing": null,
-          "status": "upcoming",
+          "placing": 4,
+          "status": "complete",
           "model_driver": "Damian Wilson"
         },
         {
@@ -808,8 +808,8 @@
           "barrier": "FT Sr2",
           "scratched": false,
           "fair_pct": 10.930203454784136,
-          "placing": null,
-          "status": "upcoming",
+          "placing": 5,
+          "status": "complete",
           "model_driver": "Liam Older"
         },
         {
@@ -819,8 +819,8 @@
           "barrier": "20 Fr1",
           "scratched": false,
           "fair_pct": 7.001436671030417,
-          "placing": null,
-          "status": "upcoming",
+          "placing": 7,
+          "status": "complete",
           "model_driver": "Jason Lee"
         },
         {
@@ -830,8 +830,8 @@
           "barrier": "FT Sr3",
           "scratched": false,
           "fair_pct": 11.92761129592835,
-          "placing": null,
-          "status": "upcoming",
+          "placing": 2,
+          "status": "complete",
           "model_driver": "Tina Ridis"
         },
         {
@@ -841,12 +841,12 @@
           "barrier": "FT Fr5",
           "scratched": false,
           "fair_pct": 7.001436671030417,
-          "placing": null,
-          "status": "upcoming",
+          "placing": 10,
+          "status": "complete",
           "model_driver": "Sean O'Sullivan"
         }
       ],
-      "status": "upcoming"
+      "status": "complete"
     },
     "SA081126_R8": {
       "runners": [
@@ -1139,7 +1139,19 @@
       "total": 3
     },
     {
+      "name": "Tristan Larsen",
+      "total": 3
+    },
+    {
+      "name": "Tina Ridis",
+      "total": 2
+    },
+    {
       "name": "Lochie Cook",
+      "total": 1
+    },
+    {
+      "name": "Michelle Wight",
       "total": 1
     },
     {
@@ -1203,10 +1215,6 @@
       "total": 0
     },
     {
-      "name": "Michelle Wight",
-      "total": 0
-    },
-    {
       "name": "Nathan Cahir",
       "total": 0
     },
@@ -1220,14 +1228,6 @@
     },
     {
       "name": "Sean O'Sullivan",
-      "total": 0
-    },
-    {
-      "name": "Tina Ridis",
-      "total": 0
-    },
-    {
-      "name": "Tristan Larsen",
       "total": 0
     }
   ],
@@ -1246,6 +1246,14 @@
     },
     {
       "name": "John Meade",
+      "total": 6
+    },
+    {
+      "name": "Tom Rundle",
+      "total": 6
+    },
+    {
+      "name": "Brent Lilley",
       "total": 5
     },
     {
@@ -1257,8 +1265,12 @@
       "total": 5
     },
     {
-      "name": "Tom Rundle",
-      "total": 5
+      "name": "Ray Cross",
+      "total": 4
+    },
+    {
+      "name": "Ross Graham",
+      "total": 4
     },
     {
       "name": "Tim McGuigan",
@@ -1281,15 +1293,11 @@
       "total": 3
     },
     {
-      "name": "Ray Cross",
-      "total": 3
-    },
-    {
-      "name": "Ross Graham",
-      "total": 3
-    },
-    {
       "name": "T K Gange, J G Allan-Gange",
+      "total": 3
+    },
+    {
+      "name": "Tina Ridis",
       "total": 3
     },
     {
@@ -1302,6 +1310,10 @@
     },
     {
       "name": "Matthew Horsnell",
+      "total": 2
+    },
+    {
+      "name": "Michelle Wight",
       "total": 2
     },
     {
@@ -1325,6 +1337,10 @@
       "total": 1
     },
     {
+      "name": "Damian Wilson",
+      "total": 1
+    },
+    {
       "name": "Daryl Crone",
       "total": 1
     },
@@ -1341,11 +1357,19 @@
       "total": 1
     },
     {
+      "name": "Fred Spiteri",
+      "total": 1
+    },
+    {
       "name": "Janet Exell",
       "total": 1
     },
     {
       "name": "Julie Brimacombe",
+      "total": 1
+    },
+    {
+      "name": "Mary-Jane Mifsud",
       "total": 1
     },
     {
@@ -1365,15 +1389,7 @@
       "total": 0
     },
     {
-      "name": "Brent Lilley",
-      "total": 0
-    },
-    {
       "name": "Bruce Morgan",
-      "total": 0
-    },
-    {
-      "name": "Damian Wilson",
       "total": 0
     },
     {
@@ -1385,15 +1401,7 @@
       "total": 0
     },
     {
-      "name": "Fred Spiteri",
-      "total": 0
-    },
-    {
       "name": "Ian Slater",
-      "total": 0
-    },
-    {
-      "name": "Mary-Jane Mifsud",
       "total": 0
     },
     {
@@ -1402,10 +1410,6 @@
     },
     {
       "name": "Michael Laugher",
-      "total": 0
-    },
-    {
-      "name": "Michelle Wight",
       "total": 0
     },
     {
@@ -1425,22 +1429,17 @@
       "total": 0
     },
     {
-      "name": "Tina Ridis",
-      "total": 0
-    },
-    {
       "name": "Tony Bond",
       "total": 0
     }
   ],
   "market": {
     "enabled": true,
-    "generated": "2026-11-08T16:01:11",
+    "generated": "2026-11-08T16:15:19",
     "simulations": 100000,
     "market_percent": 125.0,
     "remaining_races": [
       "SA081126_R10",
-      "SA081126_R7",
       "SA081126_R8",
       "SA081126_R9"
     ],
@@ -1449,97 +1448,123 @@
         "name": "Jack Laugher",
         "driver": "Jack Laugher",
         "current_points": 5,
-        "simulation_wins": 29413,
-        "probability": 29.41,
+        "simulation_wins": 30474,
+        "probability": 30.47,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 3.4,
+        "fair_odds": 3.28,
         "market_percent": 125.0,
-        "market_odds": 2.72,
-        "trotify_odds": 2.7
-      },
-      {
-        "name": "Liam Older",
-        "driver": "Liam Older",
-        "current_points": 5,
-        "simulation_wins": 28430,
-        "probability": 28.43,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 3.52,
-        "market_percent": 125.0,
-        "market_odds": 2.81,
-        "trotify_odds": 2.8
+        "market_odds": 2.63,
+        "trotify_odds": 2.6
       },
       {
         "name": "Jackie Barker",
         "driver": "Jackie Barker",
         "current_points": 4,
-        "simulation_wins": 19894,
-        "probability": 19.89,
+        "simulation_wins": 27515,
+        "probability": 27.52,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 5.03,
+        "fair_odds": 3.63,
         "market_percent": 125.0,
-        "market_odds": 4.02,
-        "trotify_odds": 4
+        "market_odds": 2.91,
+        "trotify_odds": 2.9
+      },
+      {
+        "name": "Liam Older",
+        "driver": "Liam Older",
+        "current_points": 5,
+        "simulation_wins": 20909,
+        "probability": 20.91,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 4.78,
+        "market_percent": 125.0,
+        "market_odds": 3.83,
+        "trotify_odds": 3.8
       },
       {
         "name": "Jason Lee",
         "driver": "Jason Lee",
         "current_points": 4,
-        "simulation_wins": 16571,
-        "probability": 16.57,
+        "simulation_wins": 14406,
+        "probability": 14.41,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 6.03,
+        "fair_odds": 6.94,
         "market_percent": 125.0,
-        "market_odds": 4.83,
-        "trotify_odds": 5
-      },
-      {
-        "name": "Chris Alford",
-        "driver": "Chris Alford",
-        "current_points": 4,
-        "simulation_wins": 3271,
-        "probability": 3.27,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 30.57,
-        "market_percent": 125.0,
-        "market_odds": 24.46,
-        "trotify_odds": 26
+        "market_odds": 5.55,
+        "trotify_odds": 5.5
       },
       {
         "name": "Ellen Tormey",
         "driver": "Ellen Tormey",
         "current_points": 4,
-        "simulation_wins": 1333,
-        "probability": 1.33,
+        "simulation_wins": 2792,
+        "probability": 2.79,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 75.02,
+        "fair_odds": 35.82,
         "market_percent": 125.0,
-        "market_odds": 60.02,
-        "trotify_odds": 67
+        "market_odds": 28.65,
+        "trotify_odds": 31
+      },
+      {
+        "name": "Chris Alford",
+        "driver": "Chris Alford",
+        "current_points": 4,
+        "simulation_wins": 1883,
+        "probability": 1.88,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 53.11,
+        "market_percent": 125.0,
+        "market_odds": 42.49,
+        "trotify_odds": 41
       },
       {
         "name": "Hannah Lewis",
         "driver": "Hannah Lewis",
         "current_points": 3,
-        "simulation_wins": 777,
-        "probability": 0.78,
+        "simulation_wins": 1356,
+        "probability": 1.36,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 128.7,
+        "fair_odds": 73.75,
         "market_percent": 125.0,
-        "market_odds": 102.96,
-        "trotify_odds": 101
+        "market_odds": 59.0,
+        "trotify_odds": 51
       },
       {
         "name": "Michael Bellman",
         "driver": "Michael Bellman",
         "current_points": 3,
+        "simulation_wins": 351,
+        "probability": 0.35,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 284.9,
+        "market_percent": 125.0,
+        "market_odds": 227.92,
+        "trotify_odds": 201
+      },
+      {
+        "name": "Luke Dunne",
+        "driver": "Luke Dunne",
+        "current_points": 0,
+        "simulation_wins": 142,
+        "probability": 0.14,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 704.23,
+        "market_percent": 125.0,
+        "market_odds": 563.38,
+        "trotify_odds": 501
+      },
+      {
+        "name": "Lauren White",
+        "driver": "Lauren White",
+        "current_points": 0,
         "simulation_wins": 114,
         "probability": 0.11,
         "eliminated": false,
@@ -1550,73 +1575,73 @@
         "trotify_odds": 501
       },
       {
-        "name": "Michelle Wight",
-        "driver": "Michelle Wight",
+        "name": "Donna Castles",
+        "driver": "Donna Castles",
         "current_points": 0,
-        "simulation_wins": 57,
+        "simulation_wins": 58,
         "probability": 0.06,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 1754.39,
+        "fair_odds": 1724.14,
         "market_percent": 125.0,
-        "market_odds": 1403.51,
-        "trotify_odds": 1001
-      },
-      {
-        "name": "Luke Dunne",
-        "driver": "Luke Dunne",
-        "current_points": 0,
-        "simulation_wins": 49,
-        "probability": 0.05,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 2040.82,
-        "market_percent": 125.0,
-        "market_odds": 1632.65,
+        "market_odds": 1379.31,
         "trotify_odds": 1001
       },
       {
         "name": "John Meade",
         "driver": "John Meade",
         "current_points": 3,
-        "simulation_wins": 46,
-        "probability": 0.05,
-        "eliminated": false,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
         "longshot": false,
-        "fair_odds": 2173.91,
+        "fair_odds": null,
         "market_percent": 125.0,
-        "market_odds": 1739.13,
-        "trotify_odds": 1001
+        "market_odds": null,
+        "trotify_odds": null
       },
       {
-        "name": "Donna Castles",
-        "driver": "Donna Castles",
-        "current_points": 0,
-        "simulation_wins": 23,
-        "probability": 0.02,
-        "eliminated": false,
+        "name": "Tristan Larsen",
+        "driver": "Tristan Larsen",
+        "current_points": 3,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
         "longshot": false,
-        "fair_odds": 4347.83,
+        "fair_odds": null,
         "market_percent": 125.0,
-        "market_odds": 3478.26,
-        "trotify_odds": 1001
+        "market_odds": null,
+        "trotify_odds": null
       },
       {
-        "name": "Lauren White",
-        "driver": "Lauren White",
-        "current_points": 0,
-        "simulation_wins": 22,
-        "probability": 0.02,
-        "eliminated": false,
+        "name": "Tina Ridis",
+        "driver": "Tina Ridis",
+        "current_points": 2,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
         "longshot": false,
-        "fair_odds": 4545.45,
+        "fair_odds": null,
         "market_percent": 125.0,
-        "market_odds": 3636.36,
-        "trotify_odds": 1001
+        "market_odds": null,
+        "trotify_odds": null
       },
       {
         "name": "Lochie Cook",
         "driver": "Lochie Cook",
+        "current_points": 1,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Michelle Wight",
+        "driver": "Michelle Wight",
         "current_points": 1,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -1834,32 +1859,6 @@
         "market_percent": 125.0,
         "market_odds": null,
         "trotify_odds": null
-      },
-      {
-        "name": "Tina Ridis",
-        "driver": "Tina Ridis",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Tristan Larsen",
-        "driver": "Tristan Larsen",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
       }
     ],
     "trainers": [
@@ -1867,156 +1866,104 @@
         "name": "Jason Ainsworth",
         "trainer": "Jason Ainsworth",
         "current_points": 7,
-        "simulation_wins": 58406,
-        "probability": 58.41,
+        "simulation_wins": 65821,
+        "probability": 65.82,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 1.71,
+        "fair_odds": 1.52,
         "market_percent": 125.0,
-        "market_odds": 1.37,
-        "trotify_odds": 1.35
+        "market_odds": 1.22,
+        "trotify_odds": 1.2
       },
       {
         "name": "S M McNaulty, J M McNaulty",
         "trainer": "S M McNaulty, J M McNaulty",
         "current_points": 2,
-        "simulation_wins": 17132,
-        "probability": 17.13,
+        "simulation_wins": 19184,
+        "probability": 19.18,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 5.84,
+        "fair_odds": 5.21,
         "market_percent": 125.0,
-        "market_odds": 4.67,
-        "trotify_odds": 4.5
-      },
-      {
-        "name": "Tom Rundle",
-        "trainer": "Tom Rundle",
-        "current_points": 5,
-        "simulation_wins": 6039,
-        "probability": 6.04,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 16.56,
-        "market_percent": 125.0,
-        "market_odds": 13.25,
-        "trotify_odds": 13
+        "market_odds": 4.17,
+        "trotify_odds": 4
       },
       {
         "name": "Tim McGuigan",
         "trainer": "Tim McGuigan",
         "current_points": 4,
-        "simulation_wins": 4458,
-        "probability": 4.46,
+        "simulation_wins": 4885,
+        "probability": 4.88,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 22.43,
+        "fair_odds": 20.47,
         "market_percent": 125.0,
-        "market_odds": 17.95,
+        "market_odds": 16.38,
         "trotify_odds": 17
       },
       {
         "name": "John Tormey",
         "trainer": "John Tormey",
         "current_points": 5,
-        "simulation_wins": 4447,
-        "probability": 4.45,
+        "simulation_wins": 4731,
+        "probability": 4.73,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 22.49,
+        "fair_odds": 21.14,
         "market_percent": 125.0,
-        "market_odds": 17.99,
+        "market_odds": 16.91,
         "trotify_odds": 17
-      },
-      {
-        "name": "John Meade",
-        "trainer": "John Meade",
-        "current_points": 5,
-        "simulation_wins": 2601,
-        "probability": 2.6,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 38.45,
-        "market_percent": 125.0,
-        "market_odds": 30.76,
-        "trotify_odds": 31
       },
       {
         "name": "T K Gange, J G Allan-Gange",
         "trainer": "T K Gange, J G Allan-Gange",
         "current_points": 3,
-        "simulation_wins": 2081,
-        "probability": 2.08,
+        "simulation_wins": 2544,
+        "probability": 2.54,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 48.05,
+        "fair_odds": 39.31,
         "market_percent": 125.0,
-        "market_odds": 38.44,
-        "trotify_odds": 41
-      },
-      {
-        "name": "Ross Graham",
-        "trainer": "Ross Graham",
-        "current_points": 3,
-        "simulation_wins": 1496,
-        "probability": 1.5,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 66.84,
-        "market_percent": 125.0,
-        "market_odds": 53.48,
-        "trotify_odds": 51
+        "market_odds": 31.45,
+        "trotify_odds": 31
       },
       {
         "name": "Julie Brimacombe",
         "trainer": "Julie Brimacombe",
         "current_points": 1,
-        "simulation_wins": 1417,
-        "probability": 1.42,
+        "simulation_wins": 1565,
+        "probability": 1.57,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 70.57,
+        "fair_odds": 63.9,
         "market_percent": 125.0,
-        "market_odds": 56.46,
+        "market_odds": 51.12,
         "trotify_odds": 51
       },
       {
         "name": "Donna Castles",
         "trainer": "Donna Castles",
         "current_points": 1,
-        "simulation_wins": 1006,
-        "probability": 1.01,
+        "simulation_wins": 1082,
+        "probability": 1.08,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 99.4,
+        "fair_odds": 92.42,
         "market_percent": 125.0,
-        "market_odds": 79.52,
-        "trotify_odds": 81
-      },
-      {
-        "name": "Ray Cross",
-        "trainer": "Ray Cross",
-        "current_points": 3,
-        "simulation_wins": 768,
-        "probability": 0.77,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 130.21,
-        "market_percent": 125.0,
-        "market_odds": 104.17,
-        "trotify_odds": 101
+        "market_odds": 73.94,
+        "trotify_odds": 67
       },
       {
         "name": "Ian Slater",
         "trainer": "Ian Slater",
         "current_points": 0,
-        "simulation_wins": 149,
-        "probability": 0.15,
+        "simulation_wins": 188,
+        "probability": 0.19,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 671.14,
+        "fair_odds": 531.91,
         "market_percent": 125.0,
-        "market_odds": 536.91,
+        "market_odds": 425.53,
         "trotify_odds": 501
       },
       {
@@ -2046,9 +1993,74 @@
         "trotify_odds": null
       },
       {
+        "name": "John Meade",
+        "trainer": "John Meade",
+        "current_points": 6,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Tom Rundle",
+        "trainer": "Tom Rundle",
+        "current_points": 6,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Brent Lilley",
+        "trainer": "Brent Lilley",
+        "current_points": 5,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
         "name": "Lochie Cook",
         "trainer": "Lochie Cook",
         "current_points": 5,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Ray Cross",
+        "trainer": "Ray Cross",
+        "current_points": 4,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Ross Graham",
+        "trainer": "Ross Graham",
+        "current_points": 4,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -2111,6 +2123,19 @@
         "trotify_odds": null
       },
       {
+        "name": "Tina Ridis",
+        "trainer": "Tina Ridis",
+        "current_points": 3,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
         "name": "Adam Stephens",
         "trainer": "Adam Stephens",
         "current_points": 2,
@@ -2139,6 +2164,19 @@
       {
         "name": "Matthew Horsnell",
         "trainer": "Matthew Horsnell",
+        "current_points": 2,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Michelle Wight",
+        "trainer": "Michelle Wight",
         "current_points": 2,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -2202,6 +2240,19 @@
         "trotify_odds": null
       },
       {
+        "name": "Damian Wilson",
+        "trainer": "Damian Wilson",
+        "current_points": 1,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
         "name": "Daryl Crone",
         "trainer": "Daryl Crone",
         "current_points": 1,
@@ -2241,8 +2292,34 @@
         "trotify_odds": null
       },
       {
+        "name": "Fred Spiteri",
+        "trainer": "Fred Spiteri",
+        "current_points": 1,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
         "name": "Janet Exell",
         "trainer": "Janet Exell",
+        "current_points": 1,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Mary-Jane Mifsud",
+        "trainer": "Mary-Jane Mifsud",
         "current_points": 1,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -2306,34 +2383,8 @@
         "trotify_odds": null
       },
       {
-        "name": "Brent Lilley",
-        "trainer": "Brent Lilley",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
         "name": "Bruce Morgan",
         "trainer": "Bruce Morgan",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Damian Wilson",
-        "trainer": "Damian Wilson",
         "current_points": 0,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -2371,32 +2422,6 @@
         "trotify_odds": null
       },
       {
-        "name": "Fred Spiteri",
-        "trainer": "Fred Spiteri",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Mary-Jane Mifsud",
-        "trainer": "Mary-Jane Mifsud",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
         "name": "Michael Gadsden",
         "trainer": "Michael Gadsden",
         "current_points": 0,
@@ -2412,19 +2437,6 @@
       {
         "name": "Michael Laugher",
         "trainer": "Michael Laugher",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Michelle Wight",
-        "trainer": "Michelle Wight",
         "current_points": 0,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -2477,19 +2489,6 @@
       {
         "name": "Tim Mannix",
         "trainer": "Tim Mannix",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Tina Ridis",
-        "trainer": "Tina Ridis",
         "current_points": 0,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -2517,188 +2516,213 @@
   },
   "tab_market": {
     "enabled": true,
-    "generated": "2026-11-08T16:01:33",
+    "generated": "2026-11-08T16:15:37",
     "simulations": 100000,
     "market_percent": 125.0,
     "remaining_races": [
       "SA081126_R10",
-      "SA081126_R7",
       "SA081126_R8",
       "SA081126_R9"
     ],
     "drivers": [
       {
-        "name": "Jason Lee",
-        "driver": "Jason Lee",
-        "current_points": 4,
-        "simulation_wins": 29808,
-        "probability": 29.81,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 3.35,
-        "market_percent": 125.0,
-        "market_odds": 2.68,
-        "trotify_odds": 2.7
-      },
-      {
         "name": "Jackie Barker",
         "driver": "Jackie Barker",
         "current_points": 4,
-        "simulation_wins": 22990,
-        "probability": 22.99,
+        "simulation_wins": 38003,
+        "probability": 38.0,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 4.35,
+        "fair_odds": 2.63,
         "market_percent": 125.0,
-        "market_odds": 3.48,
-        "trotify_odds": 3.4
+        "market_odds": 2.11,
+        "trotify_odds": 2.1
       },
       {
-        "name": "Liam Older",
-        "driver": "Liam Older",
-        "current_points": 5,
-        "simulation_wins": 19015,
-        "probability": 19.02,
+        "name": "Jason Lee",
+        "driver": "Jason Lee",
+        "current_points": 4,
+        "simulation_wins": 17113,
+        "probability": 17.11,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 5.26,
+        "fair_odds": 5.84,
         "market_percent": 125.0,
-        "market_odds": 4.21,
-        "trotify_odds": 4
+        "market_odds": 4.67,
+        "trotify_odds": 4.5
       },
       {
         "name": "Jack Laugher",
         "driver": "Jack Laugher",
         "current_points": 5,
-        "simulation_wins": 18037,
-        "probability": 18.04,
+        "simulation_wins": 16670,
+        "probability": 16.67,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 5.54,
+        "fair_odds": 6.0,
         "market_percent": 125.0,
-        "market_odds": 4.44,
-        "trotify_odds": 4.5
+        "market_odds": 4.8,
+        "trotify_odds": 5
       },
       {
-        "name": "Chris Alford",
-        "driver": "Chris Alford",
-        "current_points": 4,
-        "simulation_wins": 6492,
-        "probability": 6.49,
+        "name": "Liam Older",
+        "driver": "Liam Older",
+        "current_points": 5,
+        "simulation_wins": 13636,
+        "probability": 13.64,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 15.4,
+        "fair_odds": 7.33,
         "market_percent": 125.0,
-        "market_odds": 12.32,
-        "trotify_odds": 12
+        "market_odds": 5.87,
+        "trotify_odds": 6
       },
       {
         "name": "Hannah Lewis",
         "driver": "Hannah Lewis",
         "current_points": 3,
-        "simulation_wins": 3175,
-        "probability": 3.17,
+        "simulation_wins": 6914,
+        "probability": 6.91,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 31.5,
+        "fair_odds": 14.46,
         "market_percent": 125.0,
-        "market_odds": 25.2,
-        "trotify_odds": 26
+        "market_odds": 11.57,
+        "trotify_odds": 12
+      },
+      {
+        "name": "Chris Alford",
+        "driver": "Chris Alford",
+        "current_points": 4,
+        "simulation_wins": 5460,
+        "probability": 5.46,
+        "eliminated": false,
+        "longshot": false,
+        "fair_odds": 18.32,
+        "market_percent": 125.0,
+        "market_odds": 14.65,
+        "trotify_odds": 15
       },
       {
         "name": "Ellen Tormey",
         "driver": "Ellen Tormey",
         "current_points": 4,
-        "simulation_wins": 428,
-        "probability": 0.43,
+        "simulation_wins": 1862,
+        "probability": 1.86,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 233.64,
+        "fair_odds": 53.71,
         "market_percent": 125.0,
-        "market_odds": 186.92,
-        "trotify_odds": 201
+        "market_odds": 42.96,
+        "trotify_odds": 41
       },
       {
         "name": "Michael Bellman",
         "driver": "Michael Bellman",
         "current_points": 3,
-        "simulation_wins": 30,
-        "probability": 0.03,
+        "simulation_wins": 245,
+        "probability": 0.24,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 3333.33,
+        "fair_odds": 408.16,
         "market_percent": 125.0,
-        "market_odds": 2666.67,
-        "trotify_odds": 1001
+        "market_odds": 326.53,
+        "trotify_odds": 201
       },
       {
         "name": "Luke Dunne",
         "driver": "Luke Dunne",
         "current_points": 0,
-        "simulation_wins": 13,
-        "probability": 0.01,
+        "simulation_wins": 60,
+        "probability": 0.06,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 7692.31,
+        "fair_odds": 1666.67,
         "market_percent": 125.0,
-        "market_odds": 6153.85,
+        "market_odds": 1333.33,
         "trotify_odds": 1001
       },
       {
         "name": "Donna Castles",
         "driver": "Donna Castles",
         "current_points": 0,
-        "simulation_wins": 4,
-        "probability": 0.0,
+        "simulation_wins": 32,
+        "probability": 0.03,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 25000.0,
+        "fair_odds": 3125.0,
         "market_percent": 125.0,
-        "market_odds": 20000.0,
-        "trotify_odds": 1001
-      },
-      {
-        "name": "Michelle Wight",
-        "driver": "Michelle Wight",
-        "current_points": 0,
-        "simulation_wins": 4,
-        "probability": 0.0,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 25000.0,
-        "market_percent": 125.0,
-        "market_odds": 20000.0,
-        "trotify_odds": 1001
-      },
-      {
-        "name": "John Meade",
-        "driver": "John Meade",
-        "current_points": 3,
-        "simulation_wins": 2,
-        "probability": 0.0,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 50000.0,
-        "market_percent": 125.0,
-        "market_odds": 40000.0,
+        "market_odds": 2500.0,
         "trotify_odds": 1001
       },
       {
         "name": "Lauren White",
         "driver": "Lauren White",
         "current_points": 0,
-        "simulation_wins": 2,
-        "probability": 0.0,
+        "simulation_wins": 5,
+        "probability": 0.01,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 50000.0,
+        "fair_odds": 20000.0,
         "market_percent": 125.0,
-        "market_odds": 40000.0,
+        "market_odds": 16000.0,
         "trotify_odds": 1001
+      },
+      {
+        "name": "John Meade",
+        "driver": "John Meade",
+        "current_points": 3,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Tristan Larsen",
+        "driver": "Tristan Larsen",
+        "current_points": 3,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Tina Ridis",
+        "driver": "Tina Ridis",
+        "current_points": 2,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
       },
       {
         "name": "Lochie Cook",
         "driver": "Lochie Cook",
+        "current_points": 1,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Michelle Wight",
+        "driver": "Michelle Wight",
         "current_points": 1,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -2916,32 +2940,6 @@
         "market_percent": 125.0,
         "market_odds": null,
         "trotify_odds": null
-      },
-      {
-        "name": "Tina Ridis",
-        "driver": "Tina Ridis",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Tristan Larsen",
-        "driver": "Tristan Larsen",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
       }
     ],
     "trainers": [
@@ -2949,157 +2947,105 @@
         "name": "Jason Ainsworth",
         "trainer": "Jason Ainsworth",
         "current_points": 7,
-        "simulation_wins": 36707,
-        "probability": 36.71,
+        "simulation_wins": 60802,
+        "probability": 60.8,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 2.72,
+        "fair_odds": 1.64,
         "market_percent": 125.0,
-        "market_odds": 2.18,
-        "trotify_odds": 2.2
-      },
-      {
-        "name": "Tom Rundle",
-        "trainer": "Tom Rundle",
-        "current_points": 5,
-        "simulation_wins": 26906,
-        "probability": 26.91,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 3.72,
-        "market_percent": 125.0,
-        "market_odds": 2.97,
-        "trotify_odds": 3
+        "market_odds": 1.32,
+        "trotify_odds": 1.3
       },
       {
         "name": "John Tormey",
         "trainer": "John Tormey",
         "current_points": 5,
-        "simulation_wins": 13232,
-        "probability": 13.23,
+        "simulation_wins": 16328,
+        "probability": 16.33,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 7.56,
+        "fair_odds": 6.12,
         "market_percent": 125.0,
-        "market_odds": 6.05,
-        "trotify_odds": 6
+        "market_odds": 4.9,
+        "trotify_odds": 5
       },
       {
         "name": "S M McNaulty, J M McNaulty",
         "trainer": "S M McNaulty, J M McNaulty",
         "current_points": 2,
-        "simulation_wins": 5856,
-        "probability": 5.86,
+        "simulation_wins": 8611,
+        "probability": 8.61,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 17.08,
+        "fair_odds": 11.61,
         "market_percent": 125.0,
-        "market_odds": 13.66,
-        "trotify_odds": 14
+        "market_odds": 9.29,
+        "trotify_odds": 9
       },
       {
         "name": "Tim McGuigan",
         "trainer": "Tim McGuigan",
         "current_points": 4,
-        "simulation_wins": 5286,
-        "probability": 5.29,
+        "simulation_wins": 7051,
+        "probability": 7.05,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 18.92,
+        "fair_odds": 14.18,
         "market_percent": 125.0,
-        "market_odds": 15.13,
-        "trotify_odds": 15
-      },
-      {
-        "name": "Ross Graham",
-        "trainer": "Ross Graham",
-        "current_points": 3,
-        "simulation_wins": 4173,
-        "probability": 4.17,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 23.96,
-        "market_percent": 125.0,
-        "market_odds": 19.17,
-        "trotify_odds": 19
+        "market_odds": 11.35,
+        "trotify_odds": 11
       },
       {
         "name": "Julie Brimacombe",
         "trainer": "Julie Brimacombe",
         "current_points": 1,
-        "simulation_wins": 2316,
-        "probability": 2.32,
+        "simulation_wins": 2914,
+        "probability": 2.91,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 43.18,
+        "fair_odds": 34.32,
         "market_percent": 125.0,
-        "market_odds": 34.54,
-        "trotify_odds": 31
-      },
-      {
-        "name": "Ray Cross",
-        "trainer": "Ray Cross",
-        "current_points": 3,
-        "simulation_wins": 1973,
-        "probability": 1.97,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 50.68,
-        "market_percent": 125.0,
-        "market_odds": 40.55,
-        "trotify_odds": 41
+        "market_odds": 27.45,
+        "trotify_odds": 26
       },
       {
         "name": "T K Gange, J G Allan-Gange",
         "trainer": "T K Gange, J G Allan-Gange",
         "current_points": 3,
-        "simulation_wins": 1189,
-        "probability": 1.19,
+        "simulation_wins": 1930,
+        "probability": 1.93,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 84.1,
+        "fair_odds": 51.81,
         "market_percent": 125.0,
-        "market_odds": 67.28,
-        "trotify_odds": 67
+        "market_odds": 41.45,
+        "trotify_odds": 41
       },
       {
         "name": "Donna Castles",
         "trainer": "Donna Castles",
         "current_points": 1,
-        "simulation_wins": 1138,
-        "probability": 1.14,
+        "simulation_wins": 1385,
+        "probability": 1.39,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 87.87,
+        "fair_odds": 72.2,
         "market_percent": 125.0,
-        "market_odds": 70.3,
-        "trotify_odds": 67
-      },
-      {
-        "name": "John Meade",
-        "trainer": "John Meade",
-        "current_points": 5,
-        "simulation_wins": 631,
-        "probability": 0.63,
-        "eliminated": false,
-        "longshot": false,
-        "fair_odds": 158.48,
-        "market_percent": 125.0,
-        "market_odds": 126.78,
-        "trotify_odds": 101
+        "market_odds": 57.76,
+        "trotify_odds": 51
       },
       {
         "name": "Ian Slater",
         "trainer": "Ian Slater",
         "current_points": 0,
-        "simulation_wins": 593,
-        "probability": 0.59,
+        "simulation_wins": 979,
+        "probability": 0.98,
         "eliminated": false,
         "longshot": false,
-        "fair_odds": 168.63,
+        "fair_odds": 102.15,
         "market_percent": 125.0,
-        "market_odds": 134.91,
-        "trotify_odds": 101
+        "market_odds": 81.72,
+        "trotify_odds": 81
       },
       {
         "name": "Denis McIntyre",
@@ -3128,9 +3074,74 @@
         "trotify_odds": null
       },
       {
+        "name": "John Meade",
+        "trainer": "John Meade",
+        "current_points": 6,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Tom Rundle",
+        "trainer": "Tom Rundle",
+        "current_points": 6,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Brent Lilley",
+        "trainer": "Brent Lilley",
+        "current_points": 5,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
         "name": "Lochie Cook",
         "trainer": "Lochie Cook",
         "current_points": 5,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Ray Cross",
+        "trainer": "Ray Cross",
+        "current_points": 4,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Ross Graham",
+        "trainer": "Ross Graham",
+        "current_points": 4,
         "simulation_wins": 0,
         "probability": 0.0,
         "eliminated": true,
@@ -3193,6 +3204,19 @@
         "trotify_odds": null
       },
       {
+        "name": "Tina Ridis",
+        "trainer": "Tina Ridis",
+        "current_points": 3,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
         "name": "Adam Stephens",
         "trainer": "Adam Stephens",
         "current_points": 2,
@@ -3221,6 +3245,19 @@
       {
         "name": "Matthew Horsnell",
         "trainer": "Matthew Horsnell",
+        "current_points": 2,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Michelle Wight",
+        "trainer": "Michelle Wight",
         "current_points": 2,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -3284,6 +3321,19 @@
         "trotify_odds": null
       },
       {
+        "name": "Damian Wilson",
+        "trainer": "Damian Wilson",
+        "current_points": 1,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
         "name": "Daryl Crone",
         "trainer": "Daryl Crone",
         "current_points": 1,
@@ -3323,8 +3373,34 @@
         "trotify_odds": null
       },
       {
+        "name": "Fred Spiteri",
+        "trainer": "Fred Spiteri",
+        "current_points": 1,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
         "name": "Janet Exell",
         "trainer": "Janet Exell",
+        "current_points": 1,
+        "simulation_wins": 0,
+        "probability": 0.0,
+        "eliminated": true,
+        "longshot": false,
+        "fair_odds": null,
+        "market_percent": 125.0,
+        "market_odds": null,
+        "trotify_odds": null
+      },
+      {
+        "name": "Mary-Jane Mifsud",
+        "trainer": "Mary-Jane Mifsud",
         "current_points": 1,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -3388,34 +3464,8 @@
         "trotify_odds": null
       },
       {
-        "name": "Brent Lilley",
-        "trainer": "Brent Lilley",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
         "name": "Bruce Morgan",
         "trainer": "Bruce Morgan",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Damian Wilson",
-        "trainer": "Damian Wilson",
         "current_points": 0,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -3453,32 +3503,6 @@
         "trotify_odds": null
       },
       {
-        "name": "Fred Spiteri",
-        "trainer": "Fred Spiteri",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Mary-Jane Mifsud",
-        "trainer": "Mary-Jane Mifsud",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
         "name": "Michael Gadsden",
         "trainer": "Michael Gadsden",
         "current_points": 0,
@@ -3494,19 +3518,6 @@
       {
         "name": "Michael Laugher",
         "trainer": "Michael Laugher",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Michelle Wight",
-        "trainer": "Michelle Wight",
         "current_points": 0,
         "simulation_wins": 0,
         "probability": 0.0,
@@ -3559,19 +3570,6 @@
       {
         "name": "Tim Mannix",
         "trainer": "Tim Mannix",
-        "current_points": 0,
-        "simulation_wins": 0,
-        "probability": 0.0,
-        "eliminated": true,
-        "longshot": false,
-        "fair_odds": null,
-        "market_percent": 125.0,
-        "market_odds": null,
-        "trotify_odds": null
-      },
-      {
-        "name": "Tina Ridis",
-        "trainer": "Tina Ridis",
         "current_points": 0,
         "simulation_wins": 0,
         "probability": 0.0,
