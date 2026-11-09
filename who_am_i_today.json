@@ -1,55 +1,53 @@
 {
-  "date": "2026-11-09",
-  "puzzle_number": 39,
-  "type": "DRIVER",
-  "answer": "Blake Hughes",
+  "date": "2026-11-10",
+  "puzzle_number": 40,
+  "type": "HORSE",
+  "answer": "Doc Harvey",
   "stats": {
-    "career_starts": 3398,
-    "career_wins": 457,
-    "recent_starts": 625,
-    "recent_wins": 68,
-    "recent_places": 200
+    "starts": 153,
+    "wins": 13,
+    "places": 37
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "In the past 12 months, I've had 625 drives.",
+      "text": "I've had 153 race starts.",
       "difficulty": 15,
-      "source": "recent_starts",
-      "revealed_letters": 1,
-      "name_pattern": "B _ _ _ _    _ _ _ _ _ _"
+      "source": "career_starts",
+      "revealed_letters": 0,
+      "name_pattern": "_ _ _    _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "The track I've driven at most in the past 12 months is Newcastle.",
-      "difficulty": 40,
-      "source": "favourite_venue",
-      "revealed_letters": 2,
-      "name_pattern": "B _ _ _ _    H _ _ _ _ _"
+      "text": "I've won 13 races and placed 37 times.",
+      "difficulty": 25,
+      "source": "career_record",
+      "revealed_letters": 1,
+      "name_pattern": "D _ _    _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "My win strike rate over the past 12 months is about 11%.",
-      "difficulty": 50,
-      "source": "win_pct",
-      "revealed_letters": 3,
-      "name_pattern": "B _ _ _ E    H _ _ _ _ _"
+      "text": "I've won at tracks including Mildura, Goulburn, Albion Park.",
+      "difficulty": 55,
+      "source": "winning_tracks",
+      "revealed_letters": 2,
+      "name_pattern": "D _ _    H _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "One of my most recent winners was Georgia Pines at Newcastle.",
+      "text": "I'm currently associated most often with trainer Errol O'Shea.",
       "difficulty": 75,
-      "source": "recent_winner",
-      "revealed_letters": 4,
-      "name_pattern": "B _ _ _ E    H _ G _ _ _"
+      "source": "trainer",
+      "revealed_letters": 3,
+      "name_pattern": "D _ _    H A _ _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Blake. ",
+      "text": "My most recent start was at Redcliffe on 25 October 2026, where I finished 7th for trainer Errol O'Shea and driver Adam Richardson.",
       "difficulty": 95,
-      "source": "first_name",
-      "revealed_letters": 5,
-      "name_pattern": "B _ _ K E    H _ G _ _ _"
+      "source": "last_start",
+      "revealed_letters": 4,
+      "name_pattern": "D _ _    H A _ V _ _"
     }
   ]
 }
