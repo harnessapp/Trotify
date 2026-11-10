@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-10",
-  "puzzle_number": 40,
+  "date": "2026-11-11",
+  "puzzle_number": 41,
   "type": "HORSE",
-  "answer": "Doc Harvey",
+  "answer": "Nyack",
   "stats": {
-    "starts": 153,
-    "wins": 13,
-    "places": 37
+    "starts": 74,
+    "wins": 24,
+    "places": 49
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 153 race starts.",
+      "text": "I've had 74 race starts.",
       "difficulty": 15,
       "source": "career_starts",
       "revealed_letters": 0,
-      "name_pattern": "_ _ _    _ _ _ _ _ _"
+      "name_pattern": "_ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've won 13 races and placed 37 times.",
+      "text": "I've won 24 races and placed 49 times.",
       "difficulty": 25,
       "source": "career_record",
       "revealed_letters": 1,
-      "name_pattern": "D _ _    _ _ _ _ _ _"
+      "name_pattern": "N _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Mildura, Goulburn, Albion Park.",
+      "text": "I've won at tracks including Launceston, Hobart, Menangle.",
       "difficulty": 55,
       "source": "winning_tracks",
-      "revealed_letters": 2,
-      "name_pattern": "D _ _    H _ _ _ _ _"
+      "revealed_letters": 1,
+      "name_pattern": "N _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Errol O'Shea.",
+      "text": "I'm currently associated most often with trainer James Rattray.",
       "difficulty": 75,
       "source": "trainer",
-      "revealed_letters": 3,
-      "name_pattern": "D _ _    H A _ _ _ _"
+      "revealed_letters": 2,
+      "name_pattern": "N _ A _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Redcliffe on 25 October 2026, where I finished 7th for trainer Errol O'Shea and driver Adam Richardson.",
+      "text": "My most recent start was at Riverina Paceway on 6 November 2026, where I finished 10th for trainer James Rattray and driver James Rattray.",
       "difficulty": 95,
       "source": "last_start",
-      "revealed_letters": 4,
-      "name_pattern": "D _ _    H A _ V _ _"
+      "revealed_letters": 2,
+      "name_pattern": "N _ A _ _"
     }
   ]
 }
