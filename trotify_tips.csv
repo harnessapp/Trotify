@@ -1,3 +1,4 @@
 RaceAnchorFull,Date,Venue,State,Race No,RaceStartUTC,Horse,Barrier,TrotifyPrice,TABFixedWin,TABOpenPrice,TABHighPrice,PriceDifference,TAB_URL,CapturedAtUTC
 MX111126_R4,2026-11-11,Melton,VIC,4,2026-11-11T09:23:00Z,DANCE FIGHTER,Fr6,1.30,3.80,2.90,4.00,2.50,https://www.tab.com.au/racing/2026-11-11/MELTON/MLT/H/4?jurisdiction=VIC,2026-11-11T06:15:42.662747+00:00
 MX111126_R6,2026-11-11,Melton,VIC,6,2026-11-11T10:19:00Z,OOH AH LISTAH,Fr5,2.00,2.25,4.00,4.00,0.25,https://www.tab.com.au/racing/2026-11-11/MELTON/MLT/H/6?jurisdiction=VIC,2026-11-11T06:25:43.156516+00:00
+RE111126_R6,2026-11-11,Redcliffe,QLD,6,2026-11-11T10:43:00Z,BETTOR ONE,Sr1,1.40,1.25,2.30,2.30,-0.15,https://www.tab.com.au/racing/2026-11-11/REDCLIFFE/RED/H/6?jurisdiction=VIC,2026-11-11T06:35:40.707599+00:00
