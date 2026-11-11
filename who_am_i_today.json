@@ -1,53 +1,55 @@
 {
-  "date": "2026-11-11",
-  "puzzle_number": 41,
-  "type": "HORSE",
-  "answer": "Nyack",
+  "date": "2026-11-12",
+  "puzzle_number": 42,
+  "type": "DRIVER",
+  "answer": "Olivia Frisby",
   "stats": {
-    "starts": 74,
-    "wins": 24,
-    "places": 49
+    "career_starts": 1587,
+    "career_wins": 143,
+    "recent_starts": 302,
+    "recent_wins": 29,
+    "recent_places": 87
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 74 race starts.",
+      "text": "In the past 12 months, I've had 302 drives.",
       "difficulty": 15,
-      "source": "career_starts",
-      "revealed_letters": 0,
-      "name_pattern": "_ _ _ _ _"
+      "source": "recent_starts",
+      "revealed_letters": 1,
+      "name_pattern": "O _ _ _ _ _    _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've won 24 races and placed 49 times.",
-      "difficulty": 25,
-      "source": "career_record",
-      "revealed_letters": 1,
-      "name_pattern": "N _ _ _ _"
+      "text": "The track I've driven at most in the past 12 months is Bathurst.",
+      "difficulty": 40,
+      "source": "favourite_venue",
+      "revealed_letters": 2,
+      "name_pattern": "O _ _ _ _ _    F _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Launceston, Hobart, Menangle.",
-      "difficulty": 55,
-      "source": "winning_tracks",
-      "revealed_letters": 1,
-      "name_pattern": "N _ _ _ _"
+      "text": "My win strike rate over the past 12 months is about 10%.",
+      "difficulty": 50,
+      "source": "win_pct",
+      "revealed_letters": 3,
+      "name_pattern": "O _ _ _ _ A    F _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer James Rattray.",
+      "text": "One of my most recent winners was Studleigh Sandy at Bathurst.",
       "difficulty": 75,
-      "source": "trainer",
-      "revealed_letters": 2,
-      "name_pattern": "N _ A _ _"
+      "source": "recent_winner",
+      "revealed_letters": 4,
+      "name_pattern": "O _ _ _ _ A    F _ I _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Riverina Paceway on 6 November 2026, where I finished 10th for trainer James Rattray and driver James Rattray.",
+      "text": "My first name is Olivia. ",
       "difficulty": 95,
-      "source": "last_start",
-      "revealed_letters": 2,
-      "name_pattern": "N _ A _ _"
+      "source": "first_name",
+      "revealed_letters": 6,
+      "name_pattern": "O _ _ V _ A    F _ I _ B _"
     }
   ]
 }
