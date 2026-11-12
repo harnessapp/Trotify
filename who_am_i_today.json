@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-12",
-  "puzzle_number": 42,
+  "date": "2026-11-13",
+  "puzzle_number": 43,
   "type": "DRIVER",
-  "answer": "Olivia Frisby",
+  "answer": "Owen Shea",
   "stats": {
-    "career_starts": 1587,
-    "career_wins": 143,
-    "recent_starts": 302,
-    "recent_wins": 29,
-    "recent_places": 87
+    "career_starts": 440,
+    "career_wins": 17,
+    "recent_starts": 300,
+    "recent_wins": 14,
+    "recent_places": 68
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "In the past 12 months, I've had 302 drives.",
+      "text": "In the past 12 months, I've had 300 drives.",
       "difficulty": 15,
       "source": "recent_starts",
-      "revealed_letters": 1,
-      "name_pattern": "O _ _ _ _ _    _ _ _ _ _ _"
+      "revealed_letters": 0,
+      "name_pattern": "_ _ _ _    _ _ _ _"
     },
     {
       "clue_number": 2,
       "text": "The track I've driven at most in the past 12 months is Bathurst.",
       "difficulty": 40,
       "source": "favourite_venue",
-      "revealed_letters": 2,
-      "name_pattern": "O _ _ _ _ _    F _ _ _ _ _"
+      "revealed_letters": 1,
+      "name_pattern": "O _ _ _    _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "My win strike rate over the past 12 months is about 10%.",
+      "text": "My win strike rate over the past 12 months is about 5%.",
       "difficulty": 50,
       "source": "win_pct",
-      "revealed_letters": 3,
-      "name_pattern": "O _ _ _ _ A    F _ _ _ _ _"
+      "revealed_letters": 2,
+      "name_pattern": "O _ _ _    S _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "One of my most recent winners was Studleigh Sandy at Bathurst.",
+      "text": "One of my most recent winners was Sunset Jay Jay at Bathurst.",
       "difficulty": 75,
       "source": "recent_winner",
-      "revealed_letters": 4,
-      "name_pattern": "O _ _ _ _ A    F _ I _ _ _"
+      "revealed_letters": 3,
+      "name_pattern": "O _ _ N    S _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Olivia. ",
+      "text": "My first name is Owen. ",
       "difficulty": 95,
       "source": "first_name",
-      "revealed_letters": 6,
-      "name_pattern": "O _ _ V _ A    F _ I _ B _"
+      "revealed_letters": 4,
+      "name_pattern": "O _ _ N    S H _ _"
     }
   ]
 }
