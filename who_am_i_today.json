@@ -1,55 +1,53 @@
 {
-  "date": "2026-11-13",
-  "puzzle_number": 43,
-  "type": "DRIVER",
-  "answer": "Owen Shea",
+  "date": "2026-11-14",
+  "puzzle_number": 44,
+  "type": "TRAINER",
+  "answer": "Matt Elkins",
   "stats": {
-    "career_starts": 440,
-    "career_wins": 17,
-    "recent_starts": 300,
-    "recent_wins": 14,
-    "recent_places": 68
+    "recent_starts": 402,
+    "recent_wins": 65,
+    "horses": 49
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "In the past 12 months, I've had 300 drives.",
+      "text": "My stable has had 402 race starts in the past 12 months.",
       "difficulty": 15,
       "source": "recent_starts",
-      "revealed_letters": 0,
-      "name_pattern": "_ _ _ _    _ _ _ _"
+      "revealed_letters": 1,
+      "name_pattern": "M _ _ _    _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "The track I've driven at most in the past 12 months is Bathurst.",
+      "text": "I've trained 65 winners in the past 12 months.",
       "difficulty": 40,
-      "source": "favourite_venue",
-      "revealed_letters": 1,
-      "name_pattern": "O _ _ _    _ _ _ _"
+      "source": "recent_wins",
+      "revealed_letters": 2,
+      "name_pattern": "M _ _ _    E _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "My win strike rate over the past 12 months is about 5%.",
-      "difficulty": 50,
-      "source": "win_pct",
-      "revealed_letters": 2,
-      "name_pattern": "O _ _ _    S _ _ _"
+      "text": "The track where I've had the most runners in the past 12 months is Albion Park.",
+      "difficulty": 55,
+      "source": "favourite_venue",
+      "revealed_letters": 3,
+      "name_pattern": "M _ _ _    E L _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "One of my most recent winners was Sunset Jay Jay at Bathurst.",
-      "difficulty": 75,
-      "source": "recent_winner",
-      "revealed_letters": 3,
-      "name_pattern": "O _ _ N    S _ _ _"
+      "text": "I am the driver used most often by my stable recently.",
+      "difficulty": 70,
+      "source": "favourite_driver",
+      "revealed_letters": 4,
+      "name_pattern": "M _ _ _    E L K _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Owen. ",
+      "text": "My first name is Matt. ",
       "difficulty": 95,
       "source": "first_name",
-      "revealed_letters": 4,
-      "name_pattern": "O _ _ N    S H _ _"
+      "revealed_letters": 5,
+      "name_pattern": "M _ T _    E L K _ _ _"
     }
   ]
 }
