@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-14",
-  "puzzle_number": 44,
-  "type": "TRAINER",
-  "answer": "Matt Elkins",
+  "date": "2026-11-15",
+  "puzzle_number": 45,
+  "type": "HORSE",
+  "answer": "Sneaky Philtra",
   "stats": {
-    "recent_starts": 402,
-    "recent_wins": 65,
-    "horses": 49
+    "starts": 52,
+    "wins": 8,
+    "places": 21
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "My stable has had 402 race starts in the past 12 months.",
+      "text": "I've had 52 race starts.",
       "difficulty": 15,
-      "source": "recent_starts",
+      "source": "career_starts",
       "revealed_letters": 1,
-      "name_pattern": "M _ _ _    _ _ _ _ _ _"
+      "name_pattern": "S _ _ _ _ _    _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've trained 65 winners in the past 12 months.",
-      "difficulty": 40,
-      "source": "recent_wins",
+      "text": "I've won 8 races and placed 21 times.",
+      "difficulty": 25,
+      "source": "career_record",
       "revealed_letters": 2,
-      "name_pattern": "M _ _ _    E _ _ _ _ _"
+      "name_pattern": "S _ _ _ _ _    P _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "The track where I've had the most runners in the past 12 months is Albion Park.",
+      "text": "I've won at tracks including Kilmore, Mildura, Globe Derby Park.",
       "difficulty": 55,
-      "source": "favourite_venue",
+      "source": "winning_tracks",
       "revealed_letters": 3,
-      "name_pattern": "M _ _ _    E L _ _ _ _"
+      "name_pattern": "S _ _ _ _ Y    P _ _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I am the driver used most often by my stable recently.",
-      "difficulty": 70,
-      "source": "favourite_driver",
-      "revealed_letters": 4,
-      "name_pattern": "M _ _ _    E L K _ _ _"
+      "text": "I'm currently associated most often with trainer Naomi Kerr.",
+      "difficulty": 75,
+      "source": "trainer",
+      "revealed_letters": 5,
+      "name_pattern": "S _ _ A _ Y    P _ _ L _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Matt. ",
+      "text": "My most recent start was at Mildura on 6 November 2026, where I finished 1st for trainer Naomi Kerr and driver Jack Laugher.",
       "difficulty": 95,
-      "source": "first_name",
-      "revealed_letters": 5,
-      "name_pattern": "M _ T _    E L K _ _ _"
+      "source": "last_start",
+      "revealed_letters": 6,
+      "name_pattern": "S _ _ A _ Y    P _ _ L _ R _"
     }
   ]
 }
