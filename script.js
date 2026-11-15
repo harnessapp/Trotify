@@ -132,13 +132,14 @@ let positionChartSelectedGait = "ALL";
 let positionChartSelectedStart = "MOBILE";
 let positionChartSelectedCategory = "BARRIER";
 let positionChartSelectedMetric = "STRIKE_RATE";
-
+let selectedTrotDriverPeriod = "100";
 
 const DRIVER_TABLES = [
     { file: "Hot Drivers 30.csv", title: "Hot Drivers - last 30 days" },
     { file: "Hot Drivers.csv", title: "Hot Drivers - last 100" },
     { file: "Cold Drivers 30.csv", title: "Cold Drivers - last 30 days" },
     { file: "Cold Drivers.csv", title: "Cold Drivers - last 100" },
+    { file: "Trot Drivers.csv", title: "Trotters" },
     { file: "Lead Drivers.csv", title: "Leader Drivers" },
     { file: "First Over Crush Drivers.csv", title: "Death Seat Drivers" },
     { file: "Odds On Drivers.csv", title: "Odds on Drivers" },
@@ -151,6 +152,7 @@ const TRAINER_TABLES = [
     { file: "Hot Trainers.csv", title: "Hot Trainers - last 100" },
     { file: "Cold Trainers 30.csv", title: "Cold Trainers - last 30 days" },
     { file: "Cold Trainers.csv", title: "Cold Trainers - last 100" },
+    { file: "Trot Trainers.csv", title: "Trotters" },
     { file: "Lead Trainers.csv", title: "Leader Trainers" },
     { file: "First Over Crush Trainers.csv", title: "Death Seat Trainers" },
     { file: "Odds On Trainers.csv", title: "Odds on Trainers" },
@@ -13749,17 +13751,71 @@ async function changeMobileTrainerTable(file) {
     await renderSelectedTrainerTable(table);
 }
 
+
 async function renderSelectedTrainerTable(table) {
     const panel = document.getElementById("trainersTablePanel");
+    if (!panel || !table) return;
 
     panel.innerHTML = `
         <div class="coming-soon-card">
-            <div class="coming-soon-title">Loading ${escapeHtml(table.title)}...</div>
+            <div class="coming-soon-title">
+                Loading ${escapeHtml(table.title)}...
+            </div>
         </div>
     `;
 
-    panel.innerHTML = await loadTrainerTable(table);
+    // All other trainer tables retain their existing behaviour.
+    if (table.file !== "Trot Trainers.csv") {
+        panel.innerHTML = await loadTrainerTable(table);
+        return;
+    }
+
+    // Trotters: allow switching between Last 100 and All starts.
+    panel.innerHTML = `
+        <div class="trotters-period-selector"
+             style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px;">
+            <label for="trotTrainersPeriod">Trotters statistics:</label>
+            <select id="trotTrainersPeriod"
+                    style="padding:7px 10px;border-radius:6px;">
+                <option value="100">Last 100</option>
+                <option value="all">All starts</option>
+            </select>
+        </div>
+
+        <div id="trotTrainersTableContent"></div>
+    `;
+
+    const selector = document.getElementById("trotTrainersPeriod");
+    const content = document.getElementById("trotTrainersTableContent");
+
+    async function updateTrotTrainersTable() {
+        const file = selector.value === "all"
+            ? "Trot Trainers All.csv"
+            : "Trot Trainers.csv";
+
+        content.innerHTML = `
+            <div class="coming-soon-card">
+                <div class="coming-soon-title">
+                    Loading Trotters...
+                </div>
+            </div>
+        `;
+
+        const html = await loadTrainerTable({
+            ...table,
+            file
+        });
+
+        if (content.isConnected) {
+            content.innerHTML = html;
+        }
+    }
+
+    selector.addEventListener("change", updateTrotTrainersTable);
+
+    await updateTrotTrainersTable();
 }
+
 
 async function loadTrainerTable(table) {
     try {
@@ -14015,17 +14071,99 @@ function buildTrainerStateMap(rows) {
     return map;
 }
 
+
 async function renderSelectedDriverTable(table) {
     const panel = document.getElementById("driversTablePanel");
+    if (!panel || !table) return;
 
     panel.innerHTML = `
         <div class="coming-soon-card">
-            <div class="coming-soon-title">Loading ${escapeHtml(table.title)}...</div>
+            <div class="coming-soon-title">
+                Loading ${escapeHtml(table.title)}...
+            </div>
         </div>
     `;
 
-    panel.innerHTML = await loadDriverTable(table);
+    // Other driver tables remain unchanged.
+    if (table.file !== "Trot Drivers.csv") {
+        panel.innerHTML = await loadDriverTable(table);
+        return;
+    }
+
+    // Trotters period selector.
+    panel.innerHTML = `
+        <div class="trotters-period-selector"
+             style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+
+            <span style="font-size:13px;font-weight:600;margin-right:6px;">
+                Trotters statistics:
+            </span>
+
+            <button
+                type="button"
+                class="driver-state-button ${selectedTrotDriverPeriod === "100" ? "selected" : ""}"
+                data-trot-period="100">
+                Last 100
+            </button>
+
+            <button
+                type="button"
+                class="driver-state-button ${selectedTrotDriverPeriod === "all" ? "selected" : ""}"
+                data-trot-period="all">
+                All starts
+            </button>
+        </div>
+
+        <div id="trotDriversTableContent"></div>
+    `;
+
+    const content = panel.querySelector("#trotDriversTableContent");
+
+    async function updateTrotDriversTable() {
+        const file = selectedTrotDriverPeriod === "all"
+            ? "Trot Drivers All.csv"
+            : "Trot Drivers.csv";
+
+        content.innerHTML = `
+            <div class="coming-soon-card">
+                <div class="coming-soon-title">
+                    Loading Trotters...
+                </div>
+            </div>
+        `;
+
+        const html = await loadDriverTable({
+            ...table,
+            file
+        });
+
+        if (content.isConnected) {
+            content.innerHTML = html;
+        }
+    }
+
+    panel.querySelectorAll("[data-trot-period]").forEach(button => {
+        button.addEventListener("click", async () => {
+            const nextPeriod = button.dataset.trotPeriod;
+
+            if (nextPeriod === selectedTrotDriverPeriod) return;
+
+            selectedTrotDriverPeriod = nextPeriod;
+
+            panel.querySelectorAll("[data-trot-period]").forEach(b => {
+                b.classList.toggle(
+                    "selected",
+                    b.dataset.trotPeriod === selectedTrotDriverPeriod
+                );
+            });
+
+            await updateTrotDriversTable();
+        });
+    });
+
+    await updateTrotDriversTable();
 }
+
 
 async function loadDriverTable(table) {
     try {
