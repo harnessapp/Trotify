@@ -133,6 +133,7 @@ let positionChartSelectedStart = "MOBILE";
 let positionChartSelectedCategory = "BARRIER";
 let positionChartSelectedMetric = "STRIKE_RATE";
 let selectedTrotDriverPeriod = "100";
+let selectedTrotTrainerPeriod = "100";
 
 const DRIVER_TABLES = [
     { file: "Hot Drivers 30.csv", title: "Hot Drivers - last 30 days" },
@@ -13752,6 +13753,7 @@ async function changeMobileTrainerTable(file) {
 }
 
 
+
 async function renderSelectedTrainerTable(table) {
     const panel = document.getElementById("trainersTablePanel");
     if (!panel || !table) return;
@@ -13764,32 +13766,43 @@ async function renderSelectedTrainerTable(table) {
         </div>
     `;
 
-    // All other trainer tables retain their existing behaviour.
+    // Other trainer tables remain unchanged.
     if (table.file !== "Trot Trainers.csv") {
         panel.innerHTML = await loadTrainerTable(table);
         return;
     }
 
-    // Trotters: allow switching between Last 100 and All starts.
+    // Trotters period selector.
     panel.innerHTML = `
         <div class="trotters-period-selector"
-             style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px;">
-            <label for="trotTrainersPeriod">Trotters statistics:</label>
-            <select id="trotTrainersPeriod"
-                    style="padding:7px 10px;border-radius:6px;">
-                <option value="100">Last 100</option>
-                <option value="all">All starts</option>
-            </select>
+             style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+
+            <span style="font-size:13px;font-weight:600;margin-right:6px;">
+                Trotters statistics:
+            </span>
+
+            <button
+                type="button"
+                class="driver-state-button ${selectedTrotTrainerPeriod === "100" ? "selected" : ""}"
+                data-trot-trainer-period="100">
+                Last 100
+            </button>
+
+            <button
+                type="button"
+                class="driver-state-button ${selectedTrotTrainerPeriod === "all" ? "selected" : ""}"
+                data-trot-trainer-period="all">
+                All starts
+            </button>
         </div>
 
         <div id="trotTrainersTableContent"></div>
     `;
 
-    const selector = document.getElementById("trotTrainersPeriod");
-    const content = document.getElementById("trotTrainersTableContent");
+    const content = panel.querySelector("#trotTrainersTableContent");
 
     async function updateTrotTrainersTable() {
-        const file = selector.value === "all"
+        const file = selectedTrotTrainerPeriod === "all"
             ? "Trot Trainers All.csv"
             : "Trot Trainers.csv";
 
@@ -13811,10 +13824,28 @@ async function renderSelectedTrainerTable(table) {
         }
     }
 
-    selector.addEventListener("change", updateTrotTrainersTable);
+    panel.querySelectorAll("[data-trot-trainer-period]").forEach(button => {
+        button.addEventListener("click", async () => {
+            const nextPeriod = button.dataset.trotTrainerPeriod;
+
+            if (nextPeriod === selectedTrotTrainerPeriod) return;
+
+            selectedTrotTrainerPeriod = nextPeriod;
+
+            panel.querySelectorAll("[data-trot-trainer-period]").forEach(b => {
+                b.classList.toggle(
+                    "selected",
+                    b.dataset.trotTrainerPeriod === selectedTrotTrainerPeriod
+                );
+            });
+
+            await updateTrotTrainersTable();
+        });
+    });
 
     await updateTrotTrainersTable();
 }
+
 
 
 async function loadTrainerTable(table) {
