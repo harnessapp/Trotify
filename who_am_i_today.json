@@ -1,55 +1,53 @@
 {
-  "date": "2026-11-16",
-  "puzzle_number": 46,
-  "type": "DRIVER",
-  "answer": "Liam Elliott",
+  "date": "2026-11-17",
+  "puzzle_number": 47,
+  "type": "HORSE",
+  "answer": "Iseeubaby",
   "stats": {
-    "career_starts": 1358,
-    "career_wins": 151,
-    "recent_starts": 522,
-    "recent_wins": 70,
-    "recent_places": 169
+    "starts": 30,
+    "wins": 8,
+    "places": 16
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "In the past 12 months, I've had 522 drives.",
+      "text": "I've had 30 race starts.",
       "difficulty": 15,
-      "source": "recent_starts",
-      "revealed_letters": 1,
-      "name_pattern": "L _ _ _    _ _ _ _ _ _ _"
+      "source": "career_starts",
+      "revealed_letters": 0,
+      "name_pattern": "_ _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "The track I've driven at most in the past 12 months is Gloucester Park.",
-      "difficulty": 40,
-      "source": "favourite_venue",
-      "revealed_letters": 2,
-      "name_pattern": "L _ _ _    E _ _ _ _ _ _"
+      "text": "All of my recorded starts have been in Western Australia.",
+      "difficulty": 35,
+      "source": "state",
+      "revealed_letters": 1,
+      "name_pattern": "I _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "My win strike rate over the past 12 months is about 13%.",
-      "difficulty": 50,
-      "source": "win_pct",
-      "revealed_letters": 3,
-      "name_pattern": "L _ _ _    E L _ _ _ _ _"
+      "text": "I've won at tracks including Bunbury, Gloucester Park.",
+      "difficulty": 55,
+      "source": "winning_tracks",
+      "revealed_letters": 2,
+      "name_pattern": "I _ _ _ U _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "One of my most recent winners was Control The Room at Gloucester Park.",
+      "text": "I'm currently associated most often with trainer Michael Young.",
       "difficulty": 75,
-      "source": "recent_winner",
-      "revealed_letters": 4,
-      "name_pattern": "L _ _ _    E L _ I _ _ _"
+      "source": "trainer",
+      "revealed_letters": 3,
+      "name_pattern": "I _ _ _ U _ A _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Liam. ",
+      "text": "My most recent start was at Gloucester Park on 13 November 2026, where I finished 1st for trainer Michael Young and driver Emily Suvaljko.",
       "difficulty": 95,
-      "source": "first_name",
-      "revealed_letters": 5,
-      "name_pattern": "L _ _ M    E L _ I _ _ _"
+      "source": "last_start",
+      "revealed_letters": 4,
+      "name_pattern": "I _ E _ U _ A _ _"
     }
   ]
 }
