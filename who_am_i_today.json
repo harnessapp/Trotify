@@ -1,53 +1,55 @@
 {
-  "date": "2026-11-15",
-  "puzzle_number": 45,
-  "type": "HORSE",
-  "answer": "Sneaky Philtra",
+  "date": "2026-11-16",
+  "puzzle_number": 46,
+  "type": "DRIVER",
+  "answer": "Liam Elliott",
   "stats": {
-    "starts": 52,
-    "wins": 8,
-    "places": 21
+    "career_starts": 1358,
+    "career_wins": 151,
+    "recent_starts": 522,
+    "recent_wins": 70,
+    "recent_places": 169
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 52 race starts.",
+      "text": "In the past 12 months, I've had 522 drives.",
       "difficulty": 15,
-      "source": "career_starts",
+      "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "S _ _ _ _ _    _ _ _ _ _ _ _"
+      "name_pattern": "L _ _ _    _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've won 8 races and placed 21 times.",
-      "difficulty": 25,
-      "source": "career_record",
+      "text": "The track I've driven at most in the past 12 months is Gloucester Park.",
+      "difficulty": 40,
+      "source": "favourite_venue",
       "revealed_letters": 2,
-      "name_pattern": "S _ _ _ _ _    P _ _ _ _ _ _"
+      "name_pattern": "L _ _ _    E _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Kilmore, Mildura, Globe Derby Park.",
-      "difficulty": 55,
-      "source": "winning_tracks",
+      "text": "My win strike rate over the past 12 months is about 13%.",
+      "difficulty": 50,
+      "source": "win_pct",
       "revealed_letters": 3,
-      "name_pattern": "S _ _ _ _ Y    P _ _ _ _ _ _"
+      "name_pattern": "L _ _ _    E L _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Naomi Kerr.",
+      "text": "One of my most recent winners was Control The Room at Gloucester Park.",
       "difficulty": 75,
-      "source": "trainer",
-      "revealed_letters": 5,
-      "name_pattern": "S _ _ A _ Y    P _ _ L _ _ _"
+      "source": "recent_winner",
+      "revealed_letters": 4,
+      "name_pattern": "L _ _ _    E L _ I _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Mildura on 6 November 2026, where I finished 1st for trainer Naomi Kerr and driver Jack Laugher.",
+      "text": "My first name is Liam. ",
       "difficulty": 95,
-      "source": "last_start",
-      "revealed_letters": 6,
-      "name_pattern": "S _ _ A _ Y    P _ _ L _ R _"
+      "source": "first_name",
+      "revealed_letters": 5,
+      "name_pattern": "L _ _ M    E L _ I _ _ _"
     }
   ]
 }
