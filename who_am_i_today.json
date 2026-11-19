@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-19",
-  "puzzle_number": 49,
-  "type": "HORSE",
-  "answer": "Its All Right Now",
+  "date": "2026-11-20",
+  "puzzle_number": 50,
+  "type": "TRAINER",
+  "answer": "June Henderson",
   "stats": {
-    "starts": 38,
-    "wins": 2,
-    "places": 11
+    "recent_starts": 99,
+    "recent_wins": 5,
+    "horses": 9
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 38 race starts.",
+      "text": "My stable has had 99 race starts in the past 12 months.",
       "difficulty": 15,
-      "source": "career_starts",
+      "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "I _ _    _ _ _    _ _ _ _ _    _ _ _"
+      "name_pattern": "J _ _ _    _ _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've won 2 races and placed 11 times.",
-      "difficulty": 25,
-      "source": "career_record",
+      "text": "I've trained 5 winners in the past 12 months.",
+      "difficulty": 40,
+      "source": "recent_wins",
       "revealed_letters": 2,
-      "name_pattern": "I _ _    A _ _    _ _ _ _ _    _ _ _"
+      "name_pattern": "J _ _ _    H _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Albion Park.",
+      "text": "The track where I've had the most runners in the past 12 months is Pinjarra.",
       "difficulty": 55,
-      "source": "winning_tracks",
-      "revealed_letters": 4,
-      "name_pattern": "I _ _    A _ _    R _ _ _ _    N _ _"
+      "source": "favourite_venue",
+      "revealed_letters": 3,
+      "name_pattern": "J _ _ _    H E _ _ _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Stephen Cini.",
-      "difficulty": 75,
-      "source": "trainer",
+      "text": "The driver used most often by my stable recently is Sara Grout.",
+      "difficulty": 70,
+      "source": "favourite_driver",
       "revealed_letters": 5,
-      "name_pattern": "I _ _    A _ _    R I _ _ _    N _ _"
+      "name_pattern": "J _ _ E    H E _ _ _ R _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Albion Park on 13 November 2026, where I finished 1st for trainer Stephen Cini and driver Nathan Dawson.",
+      "text": "My first name is June. ",
       "difficulty": 95,
-      "source": "last_start",
-      "revealed_letters": 7,
-      "name_pattern": "I _ _    A L _    R I _ _ T    N _ _"
+      "source": "first_name",
+      "revealed_letters": 6,
+      "name_pattern": "J _ _ E    H E _ _ _ R _ O _"
     }
   ]
 }
