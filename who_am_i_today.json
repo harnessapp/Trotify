@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-20",
-  "puzzle_number": 50,
-  "type": "TRAINER",
-  "answer": "June Henderson",
+  "date": "2026-11-21",
+  "puzzle_number": 51,
+  "type": "HORSE",
+  "answer": "King Bling",
   "stats": {
-    "recent_starts": 99,
-    "recent_wins": 5,
-    "horses": 9
+    "starts": 31,
+    "wins": 6,
+    "places": 13
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "My stable has had 99 race starts in the past 12 months.",
+      "text": "I've had 31 race starts.",
       "difficulty": 15,
-      "source": "recent_starts",
-      "revealed_letters": 1,
-      "name_pattern": "J _ _ _    _ _ _ _ _ _ _ _ _"
+      "source": "career_starts",
+      "revealed_letters": 0,
+      "name_pattern": "_ _ _ _    _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've trained 5 winners in the past 12 months.",
-      "difficulty": 40,
-      "source": "recent_wins",
-      "revealed_letters": 2,
-      "name_pattern": "J _ _ _    H _ _ _ _ _ _ _ _"
+      "text": "All of my recorded starts have been in Queensland.",
+      "difficulty": 35,
+      "source": "state",
+      "revealed_letters": 1,
+      "name_pattern": "K _ _ _    _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "The track where I've had the most runners in the past 12 months is Pinjarra.",
+      "text": "I've won at tracks including Redcliffe, Albion Park.",
       "difficulty": 55,
-      "source": "favourite_venue",
-      "revealed_letters": 3,
-      "name_pattern": "J _ _ _    H E _ _ _ _ _ _ _"
+      "source": "winning_tracks",
+      "revealed_letters": 2,
+      "name_pattern": "K _ _ _    B _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "The driver used most often by my stable recently is Sara Grout.",
-      "difficulty": 70,
-      "source": "favourite_driver",
-      "revealed_letters": 5,
-      "name_pattern": "J _ _ E    H E _ _ _ R _ _ _"
+      "text": "I'm currently associated most often with trainer Grant Dixon.",
+      "difficulty": 75,
+      "source": "trainer",
+      "revealed_letters": 3,
+      "name_pattern": "K _ _ G    B _ _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is June. ",
+      "text": "My most recent start was at Albion Park on 24 October 2026, where I finished 6th for trainer Grant Dixon and driver Trista Dixon.",
       "difficulty": 95,
-      "source": "first_name",
-      "revealed_letters": 6,
-      "name_pattern": "J _ _ E    H E _ _ _ R _ O _"
+      "source": "last_start",
+      "revealed_letters": 4,
+      "name_pattern": "K _ _ G    B _ I _ _"
     }
   ]
 }
