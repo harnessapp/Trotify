@@ -1,53 +1,55 @@
 {
-  "date": "2026-11-22",
-  "puzzle_number": 52,
-  "type": "HORSE",
-  "answer": "Caulonia Terror",
+  "date": "2026-11-23",
+  "puzzle_number": 53,
+  "type": "DRIVER",
+  "answer": "Ryan Warwick",
   "stats": {
-    "starts": 159,
-    "wins": 6,
-    "places": 43
+    "career_starts": 2245,
+    "career_wins": 353,
+    "recent_starts": 485,
+    "recent_wins": 35,
+    "recent_places": 134
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "I've had 159 race starts.",
+      "text": "In the past 12 months, I've had 485 drives.",
       "difficulty": 15,
-      "source": "career_starts",
+      "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "C _ _ _ _ _ _ _    _ _ _ _ _ _"
+      "name_pattern": "R _ _ _    _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've won 6 races and placed 43 times.",
-      "difficulty": 25,
-      "source": "career_record",
+      "text": "The track I've driven at most in the past 12 months is Gloucester Park.",
+      "difficulty": 40,
+      "source": "favourite_venue",
       "revealed_letters": 2,
-      "name_pattern": "C _ _ _ _ _ _ _    T _ _ _ _ _"
+      "name_pattern": "R _ _ _    W _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "I've won at tracks including Ballarat, Mildura.",
-      "difficulty": 55,
-      "source": "winning_tracks",
-      "revealed_letters": 4,
-      "name_pattern": "C _ _ _ _ _ _ A    T E _ _ _ _"
+      "text": "My win strike rate over the past 12 months is about 7%.",
+      "difficulty": 50,
+      "source": "win_pct",
+      "revealed_letters": 3,
+      "name_pattern": "R _ _ _    W A _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "I'm currently associated most often with trainer Luke Watson.",
+      "text": "One of my most recent winners was Diamondsareforever at Pinjarra.",
       "difficulty": 75,
-      "source": "trainer",
-      "revealed_letters": 5,
-      "name_pattern": "C _ _ L _ _ _ A    T E _ _ _ _"
+      "source": "recent_winner",
+      "revealed_letters": 4,
+      "name_pattern": "R _ _ _    W A _ W _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My most recent start was at Mildura on 19 November 2026, where I finished 1st for trainer Luke Watson and driver Luke Watson.",
+      "text": "My first name is Ryan. ",
       "difficulty": 95,
-      "source": "last_start",
-      "revealed_letters": 7,
-      "name_pattern": "C A _ L _ _ _ A    T E _ _ O _"
+      "source": "first_name",
+      "revealed_letters": 5,
+      "name_pattern": "R _ _ N    W A _ W _ _ _"
     }
   ]
 }

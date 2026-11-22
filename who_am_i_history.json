@@ -2778,5 +2778,60 @@
         "name_pattern": "C A _ L _ _ _ A    T E _ _ O _"
       }
     ]
+  },
+  {
+    "date": "2026-11-23",
+    "puzzle_number": 53,
+    "type": "DRIVER",
+    "answer": "Ryan Warwick",
+    "stats": {
+      "career_starts": 2245,
+      "career_wins": 353,
+      "recent_starts": 485,
+      "recent_wins": 35,
+      "recent_places": 134
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "In the past 12 months, I've had 485 drives.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "R _ _ _    _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "The track I've driven at most in the past 12 months is Gloucester Park.",
+        "difficulty": 40,
+        "source": "favourite_venue",
+        "revealed_letters": 2,
+        "name_pattern": "R _ _ _    W _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "My win strike rate over the past 12 months is about 7%.",
+        "difficulty": 50,
+        "source": "win_pct",
+        "revealed_letters": 3,
+        "name_pattern": "R _ _ _    W A _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "One of my most recent winners was Diamondsareforever at Pinjarra.",
+        "difficulty": 75,
+        "source": "recent_winner",
+        "revealed_letters": 4,
+        "name_pattern": "R _ _ _    W A _ W _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Ryan. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 5,
+        "name_pattern": "R _ _ N    W A _ W _ _ _"
+      }
+    ]
   }
 ]
