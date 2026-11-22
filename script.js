@@ -4292,7 +4292,6 @@ async function renderWhoAmIArchive() {
         (a, b) => b.puzzle_number - a.puzzle_number
     );
 
-    meetingStrip.innerHTML = `
     function getArchiveStatus(puzzle) {
         const saved = localStorage.getItem(
             `trotifyWhoAmI_${puzzle.date}`
