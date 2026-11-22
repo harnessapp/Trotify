@@ -4205,6 +4205,16 @@ function renderWhoAmIGame() {
     const nextClueButton =
         document.getElementById("whoAmINextClue");
 
+    const archiveButton =
+        document.getElementById("whoAmIArchiveButton");
+
+    if (archiveButton) {
+        archiveButton.addEventListener(
+            "click",
+            renderWhoAmIArchive
+        );
+    }
+
     if (form) {
         form.addEventListener(
             "submit",
@@ -4268,6 +4278,59 @@ function renderWhoAmIGame() {
     ) {
         input.focus();
     }
+}
+
+async function renderWhoAmIArchive() {
+    const meetingStrip =
+        document.getElementById("meetingStrip");
+
+    if (!whoAmIHistory.length) {
+        await loadWhoAmIHistory();
+    }
+
+    const puzzles = [...whoAmIHistory].sort(
+        (a, b) => b.puzzle_number - a.puzzle_number
+    );
+
+    meetingStrip.innerHTML = `
+        <div class="who-am-i-layout">
+            <div class="who-am-i-game-card">
+
+                <div class="who-am-i-eyebrow">
+                    WHO AM I? · PUZZLE ARCHIVE
+                </div>
+
+                <div style="margin: 20px 0;">
+                    ${puzzles.length} puzzles available
+                </div>
+
+                ${puzzles.map(puzzle => `
+                    <div style="
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 12px 8px;
+                        border-bottom: 1px solid rgba(255,255,255,0.08);
+                    ">
+                        <span>Puzzle #${puzzle.puzzle_number}</span>
+                        <span>${escapeHtml(puzzle.date)}</span>
+                    </div>
+                `).join("")}
+
+                <button
+                    type="button"
+                    class="who-am-i-next-clue"
+                    id="whoAmIBackButton"
+                    style="margin-top: 24px;"
+                >
+                    ← BACK TO GAME
+                </button>
+
+            </div>
+        </div>
+    `;
+
+    document.getElementById("whoAmIBackButton")
+        .addEventListener("click", renderWhoAmIGame);
 }
 
 function getWhoAmIFullGuess() {
