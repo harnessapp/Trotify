@@ -1139,6 +1139,24 @@ function setupNavigation() {
     });
 }
 
+
+function openWhoAmIFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get("view") !== "who-am-i") {
+        return;
+    }
+
+    const whoAmITab = document.querySelector(
+        '.nav-item[data-view="who-am-i"]'
+    );
+
+    if (whoAmITab) {
+        whoAmITab.click();
+    }
+}
+
+
 function showModelTipsView() {
 
     if (
