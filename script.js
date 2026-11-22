@@ -4340,12 +4340,19 @@ async function renderWhoAmIArchive() {
                 </div>
 
                 ${puzzles.map(puzzle => `
-                    <div style="
-                        display: flex;
-                        justify-content: space-between;
-                        padding: 12px 8px;
-                        border-bottom: 1px solid rgba(255,255,255,0.08);
-                    ">
+                    <div
+                        class="who-am-i-archive-row"
+                        data-puzzle-date="${escapeHtml(puzzle.date)}"
+                        role="button"
+                        tabindex="0"
+                        style="
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 12px 8px;
+                            border-bottom: 1px solid rgba(255,255,255,0.08);
+                            cursor: pointer;
+                        "
+                    >
                         <span>Puzzle #${puzzle.puzzle_number}</span>
 
                         <span style="display: flex; gap: 16px; align-items: center;">
@@ -4380,6 +4387,31 @@ async function renderWhoAmIArchive() {
 
     document.getElementById("whoAmIBackButton")
         .addEventListener("click", renderWhoAmIGame);
+
+document.querySelectorAll(".who-am-i-archive-row")
+    .forEach(row => {
+
+        const openPuzzle = () => {
+            const selectedPuzzle = whoAmIHistory.find(
+                puzzle => puzzle.date === row.dataset.puzzleDate
+            );
+
+            if (!selectedPuzzle) return;
+
+            whoAmIPuzzle = selectedPuzzle;
+            renderWhoAmIGame();
+        };
+
+        row.addEventListener("click", openPuzzle);
+
+        row.addEventListener("keydown", event => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openPuzzle();
+            }
+        });
+    });
+
 }
 
 function getWhoAmIFullGuess() {
