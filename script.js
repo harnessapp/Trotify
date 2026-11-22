@@ -4180,6 +4180,15 @@ function renderWhoAmIGame() {
 
             </div>
 
+            <button
+                type="button"
+                class="who-am-i-next-clue"
+                id="whoAmIArchiveButton"
+                style="margin-top: 24px;"
+            >
+                📚 PAST PUZZLES
+            </button>
+
         </div>
     `;
 
