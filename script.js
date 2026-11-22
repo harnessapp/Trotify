@@ -4582,6 +4582,12 @@ async function showWhoAmIView() {
         </div>
     `;
 
+    // Always return to today's puzzle when opening
+    // Who Am I from the main navigation.
+    if (whoAmITodayPuzzle) {
+        whoAmIPuzzle = whoAmITodayPuzzle;
+    }
+
     const puzzle =
         whoAmIPuzzle ||
         await loadWhoAmIPuzzle();
