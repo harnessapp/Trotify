@@ -4293,6 +4293,40 @@ async function renderWhoAmIArchive() {
     );
 
     meetingStrip.innerHTML = `
+    function getArchiveStatus(puzzle) {
+        const saved = localStorage.getItem(
+            `trotifyWhoAmI_${puzzle.date}`
+        );
+
+        if (!saved) {
+            return "⚪ Not played";
+        }
+
+        try {
+            const state = JSON.parse(saved);
+
+            if (state.solved) {
+                return "🟢 Solved";
+            }
+
+            if (state.finished) {
+                return "🔴 Unsolved";
+            }
+
+            if (
+                state.guesses?.length ||
+                state.clueIndex > 0
+            ) {
+                return "🟡 In progress";
+            }
+
+            return "⚪ Not played";
+
+        } catch (error) {
+            return "⚪ Not played";
+        }
+    }
+
         <div class="who-am-i-layout">
             <div class="who-am-i-game-card">
 
@@ -4312,7 +4346,11 @@ async function renderWhoAmIArchive() {
                         border-bottom: 1px solid rgba(255,255,255,0.08);
                     ">
                         <span>Puzzle #${puzzle.puzzle_number}</span>
-                        <span>${escapeHtml(puzzle.date)}</span>
+
+                        <span style="display: flex; gap: 16px; align-items: center;">
+                            <span>${getArchiveStatus(puzzle)}</span>
+                            <span>${escapeHtml(puzzle.date)}</span>
+                        </span>
                     </div>
                 `).join("")}
 
