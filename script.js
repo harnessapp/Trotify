@@ -3545,6 +3545,7 @@ function showUpcomingFieldsView() {
 // ============================================================
 
 let whoAmIPuzzle = null;
+let whoAmITodayPuzzle = null;
 
 const WHO_AM_I_STORAGE_PREFIX = "trotifyWhoAmI_";
 
@@ -3565,6 +3566,9 @@ async function loadWhoAmIPuzzle() {
         }
 
         whoAmIPuzzle = await response.json();
+
+        // Keep today's puzzle separate from archive selections
+        whoAmITodayPuzzle = whoAmIPuzzle;
 
         return whoAmIPuzzle;
 
