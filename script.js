@@ -4077,10 +4077,24 @@ function renderWhoAmIGame() {
         meetingStrip.innerHTML = `
             <div class="who-am-i-layout">
                 <div class="who-am-i-game-card">
+
                     ${getWhoAmIResultMessage(state)}
+
+                    <button
+                        type="button"
+                        class="who-am-i-next-clue"
+                        id="whoAmIArchiveButton"
+                        style="margin-top: 24px;"
+                    >
+                        📚 PAST PUZZLES
+                    </button>
+
                 </div>
             </div>
         `;
+
+        document.getElementById("whoAmIArchiveButton")
+            .addEventListener("click", renderWhoAmIArchive);
 
         return;
     }
