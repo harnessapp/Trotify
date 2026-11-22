@@ -4377,7 +4377,7 @@ async function renderWhoAmIArchive() {
 
             if (state.finished) {
                 return {
-                    text: "Unsolved",
+                    text: `${puzzle.answer} ✕`,
                     color: "#f87171"
                 };
             }
