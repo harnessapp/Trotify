@@ -4434,7 +4434,14 @@ async function renderWhoAmIArchive() {
                                 font-weight: 700;
                                 white-space: nowrap;
                             ">
-                                🐴 ${puzzle.puzzle_number}
+                                ${puzzle.type?.toUpperCase() === "HORSE"
+                                    ? "🐴"
+                                    : puzzle.type?.toUpperCase() === "DRIVER"
+                                        ? "👤"
+                                        : puzzle.type?.toUpperCase() === "TRAINER"
+                                            ? "🎓"
+                                            : "🐴"
+                                } ${puzzle.puzzle_number}
                             </span>
 
                             <span style="
