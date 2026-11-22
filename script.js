@@ -4131,7 +4131,11 @@ function renderWhoAmIGame() {
             <div class="who-am-i-game-card">
 
                 <div class="who-am-i-eyebrow">
-                    TODAY'S HARNESS RACING CHALLENGE · #${whoAmIPuzzle.puzzle_number}
+                    ${
+                        whoAmIPuzzle.date === whoAmITodayPuzzle?.date
+                            ? "TODAY'S"
+                            : "PAST"
+                    } HARNESS RACING CHALLENGE · #${whoAmIPuzzle.puzzle_number}
                 </div>
 
                 <div class="who-am-i-progress">
