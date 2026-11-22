@@ -4399,12 +4399,29 @@ async function renderWhoAmIArchive() {
                     ← BACK TO GAME
                 </button>
 
+                <button
+                    type="button"
+                    class="who-am-i-next-clue"
+                    id="whoAmITodayButton"
+                    style="margin-top: 12px;"
+                >
+                    TODAY'S PUZZLE →
+                </button>
+
             </div>
         </div>
     `;
 
     document.getElementById("whoAmIBackButton")
         .addEventListener("click", renderWhoAmIGame);
+
+    document.getElementById("whoAmITodayButton")
+        .addEventListener("click", () => {
+            if (!whoAmITodayPuzzle) return;
+
+            whoAmIPuzzle = whoAmITodayPuzzle;
+            renderWhoAmIGame();
+        });
 
 document.querySelectorAll(".who-am-i-archive-row")
     .forEach(row => {
