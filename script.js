@@ -370,9 +370,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     });
 
+
     /*
        =====================================================
-       DIRECT LINK - CHAMPIONSHIPS
+       DIRECT LINKS - CHAMPIONSHIPS & WHO AM I
        =====================================================
     */
 
@@ -380,7 +381,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const params = window.location.search.toLowerCase();
 
-        if (params.includes("horsham")) {
+        if (params.includes("who-am-i")) {
+
+            const tab = document.querySelector(
+                '.nav-item[data-view="who-am-i"]'
+            );
+
+            if (tab) {
+                tab.click();
+            }
+
+        } else if (params.includes("horsham")) {
             await showHorshamView();
 
         } else if (params.includes("adc")) {
@@ -391,6 +402,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
     });
+
 
 function closeMobileStatsPopup() {
     document.querySelector(".mobile-stats-popup")?.remove();
