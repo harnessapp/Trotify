@@ -1,0 +1,2782 @@
+[
+  {
+    "date": "2026-10-02",
+    "puzzle_number": 1,
+    "type": "TRAINER",
+    "answer": "Andy Gath",
+    "stats": {
+      "recent_starts": 403,
+      "recent_wins": 69,
+      "horses": 56
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "My stable has had 403 race starts in the past 12 months.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 0,
+        "name_pattern": "_ _ _ _    _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've trained 69 winners in the past 12 months.",
+        "difficulty": 40,
+        "source": "recent_wins",
+        "revealed_letters": 1,
+        "name_pattern": "A _ _ _    _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "The track where I've had the most runners in the past 12 months is Melton.",
+        "difficulty": 55,
+        "source": "favourite_venue",
+        "revealed_letters": 2,
+        "name_pattern": "A _ _ _    G _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "The driver used most often by my stable recently is Kate Gath.",
+        "difficulty": 70,
+        "source": "favourite_driver",
+        "revealed_letters": 3,
+        "name_pattern": "A _ _ Y    G _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Andy. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 4,
+        "name_pattern": "A _ _ Y    G A _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-03",
+    "puzzle_number": 2,
+    "type": "HORSE",
+    "answer": "Nonis Gold Class",
+    "stats": {
+      "starts": 10,
+      "wins": 1,
+      "places": 6
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 10 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "N _ _ _ _    _ _ _ _    _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in Queensland.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 2,
+        "name_pattern": "N _ _ _ _    G _ _ _    _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Albion Park.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 4,
+        "name_pattern": "N _ _ _ _    G O _ _    C _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Shane Graham.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 5,
+        "name_pattern": "N _ _ _ _    G O _ _    C L _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Albion Park on 2 October 2026, where I finished 7th for trainer Shane Graham and driver Shane Graham.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 7,
+        "name_pattern": "N _ _ _ S    G O _ _    C L A _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-04",
+    "puzzle_number": 3,
+    "type": "DRIVER",
+    "answer": "Kate Gath",
+    "stats": {
+      "career_starts": 2936,
+      "career_wins": 603,
+      "recent_starts": 393,
+      "recent_wins": 63,
+      "recent_places": 165
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "In the past 12 months, I've had 393 drives.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 0,
+        "name_pattern": "_ _ _ _    _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "The track I've driven at most in the past 12 months is Melton.",
+        "difficulty": 40,
+        "source": "favourite_venue",
+        "revealed_letters": 1,
+        "name_pattern": "K _ _ _    _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "My win strike rate over the past 12 months is about 16%.",
+        "difficulty": 50,
+        "source": "win_pct",
+        "revealed_letters": 2,
+        "name_pattern": "K _ _ _    G _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "One of my most recent winners was Ollies The Boss at Geelong.",
+        "difficulty": 75,
+        "source": "recent_winner",
+        "revealed_letters": 3,
+        "name_pattern": "K _ _ E    G _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Kate. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 4,
+        "name_pattern": "K _ _ E    G A _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-05",
+    "puzzle_number": 4,
+    "type": "HORSE",
+    "answer": "Mondo Glitz",
+    "stats": {
+      "starts": 11,
+      "wins": 2,
+      "places": 4
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 11 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "M _ _ _ _    _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in New South Wales.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 2,
+        "name_pattern": "M _ _ _ _    G _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Parkes, Eugowra.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 3,
+        "name_pattern": "M _ _ _ O    G _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Nathan Hurst.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 4,
+        "name_pattern": "M _ _ _ O    G L _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Eugowra on 27 September 2026, where I finished 1st for trainer Nathan Hurst and driver Nathan Hurst.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 5,
+        "name_pattern": "M _ N _ O    G L _ _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "puzzle_number": 5,
+    "type": "HORSE",
+    "answer": "Angelic Attitude",
+    "stats": {
+      "starts": 10,
+      "wins": 4,
+      "places": 7
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 10 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "A _ _ _ _ _ _    _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in New South Wales.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 3,
+        "name_pattern": "A _ _ _ _ _ C    A _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Riverina Paceway, Albury, Leeton.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 4,
+        "name_pattern": "A _ _ _ _ _ C    A _ _ I _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Jackson Painting.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 6,
+        "name_pattern": "A _ _ _ L _ C    A _ _ I _ U _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Young on 29 September 2026, where I finished 5th for trainer Jackson Painting and driver Eli Lepper.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 7,
+        "name_pattern": "A N _ _ L _ C    A _ _ I _ U _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-07",
+    "puzzle_number": 6,
+    "type": "HORSE",
+    "answer": "Metallica Man",
+    "stats": {
+      "starts": 10,
+      "wins": 1,
+      "places": 3
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 10 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "M _ _ _ _ _ _ _ _    _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in New South Wales.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 2,
+        "name_pattern": "M _ _ _ _ _ _ _ _    M _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Newcastle.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 3,
+        "name_pattern": "M _ _ _ _ _ I _ _    M _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Tom Ison.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 4,
+        "name_pattern": "M _ _ _ _ _ I _ A    M _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Newcastle on 25 September 2026, where I finished 1st for trainer Tom Ison and driver Cooper Griffiths.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 6,
+        "name_pattern": "M _ _ A _ _ I _ A    M A _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-08",
+    "puzzle_number": 7,
+    "type": "HORSE",
+    "answer": "Racing Writer",
+    "stats": {
+      "starts": 11,
+      "wins": 3,
+      "places": 5
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 11 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "R _ _ _ _ _    _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in New South Wales.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 2,
+        "name_pattern": "R _ _ _ _ _    W _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Penrith, Menangle.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 3,
+        "name_pattern": "R _ _ _ _ G    W _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Chris Judd.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 4,
+        "name_pattern": "R _ _ _ _ G    W _ I _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Penrith on 1 October 2026, where I finished 7th for trainer Chris Judd and driver Mason Bigeni.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 6,
+        "name_pattern": "R _ _ I _ G    W _ I _ E _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-09",
+    "puzzle_number": 8,
+    "type": "DRIVER",
+    "answer": "Todd Rattray",
+    "stats": {
+      "career_starts": 1923,
+      "career_wins": 244,
+      "recent_starts": 329,
+      "recent_wins": 39,
+      "recent_places": 125
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "In the past 12 months, I've had 329 drives.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "T _ _ _    _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "The track I've driven at most in the past 12 months is Launceston.",
+        "difficulty": 40,
+        "source": "favourite_venue",
+        "revealed_letters": 2,
+        "name_pattern": "T _ _ _    R _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "My win strike rate over the past 12 months is about 12%.",
+        "difficulty": 50,
+        "source": "win_pct",
+        "revealed_letters": 3,
+        "name_pattern": "T _ _ _    R A _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "One of my most recent winners was Phlow Jo at Hobart.",
+        "difficulty": 75,
+        "source": "recent_winner",
+        "revealed_letters": 4,
+        "name_pattern": "T _ _ _    R A _ T _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Todd. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 5,
+        "name_pattern": "T _ _ D    R A _ T _ _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-10",
+    "puzzle_number": 9,
+    "type": "HORSE",
+    "answer": "Feelin Forastar",
+    "stats": {
+      "starts": 14,
+      "wins": 2,
+      "places": 2
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 14 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "F _ _ _ _ _    _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in Queensland.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 2,
+        "name_pattern": "F _ _ _ _ _    F _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Redcliffe.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 4,
+        "name_pattern": "F _ _ _ _ _    F O _ A _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Jonah Hutchinson.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 5,
+        "name_pattern": "F _ _ L _ _    F O _ A _ _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Redcliffe on 7 October 2026, where I finished 8th for trainer Jonah Hutchinson and driver Jonah Hutchinson.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 7,
+        "name_pattern": "F E _ L _ _    F O _ A _ _ A _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-11",
+    "puzzle_number": 10,
+    "type": "DRIVER",
+    "answer": "Dylan Ford",
+    "stats": {
+      "career_starts": 2765,
+      "career_wins": 371,
+      "recent_starts": 516,
+      "recent_wins": 85,
+      "recent_places": 213
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "In the past 12 months, I've had 516 drives.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 0,
+        "name_pattern": "_ _ _ _ _    _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "The track I've driven at most in the past 12 months is Hobart.",
+        "difficulty": 40,
+        "source": "favourite_venue",
+        "revealed_letters": 1,
+        "name_pattern": "D _ _ _ _    _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "My win strike rate over the past 12 months is about 16%.",
+        "difficulty": 50,
+        "source": "win_pct",
+        "revealed_letters": 2,
+        "name_pattern": "D _ _ _ _    F _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "One of my most recent winners was Bearhunta at Launceston.",
+        "difficulty": 75,
+        "source": "recent_winner",
+        "revealed_letters": 3,
+        "name_pattern": "D _ _ _ N    F _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Dylan. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 4,
+        "name_pattern": "D _ _ _ N    F O _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-12",
+    "puzzle_number": 11,
+    "type": "HORSE",
+    "answer": "Major Friend",
+    "stats": {
+      "starts": 10,
+      "wins": 1,
+      "places": 8
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 10 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "M _ _ _ _    _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in Victoria.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 2,
+        "name_pattern": "M _ _ _ _    F _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Shepparton.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 3,
+        "name_pattern": "M _ _ _ R    F _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer David Abrahams.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 4,
+        "name_pattern": "M _ _ _ R    F _ I _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Shepparton on 6 October 2026, where I finished 1st for trainer David Abrahams and driver Mark Pitt.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 5,
+        "name_pattern": "M _ _ O R    F _ I _ _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-13",
+    "puzzle_number": 12,
+    "type": "TRAINER",
+    "answer": "Ashleigh Chalmers",
+    "stats": {
+      "recent_starts": 69,
+      "recent_wins": 7,
+      "horses": 8
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "My stable has had 69 race starts in the past 12 months.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "A _ _ _ _ _ _ _    _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've trained 7 winners in the past 12 months.",
+        "difficulty": 40,
+        "source": "recent_wins",
+        "revealed_letters": 3,
+        "name_pattern": "A _ _ _ _ _ _ H    C _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "The track where I've had the most runners in the past 12 months is Redcliffe.",
+        "difficulty": 55,
+        "source": "favourite_venue",
+        "revealed_letters": 4,
+        "name_pattern": "A _ _ _ _ _ _ H    C _ _ L _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "The driver used most often by my stable recently is Holly Chalmers.",
+        "difficulty": 70,
+        "source": "favourite_driver",
+        "revealed_letters": 6,
+        "name_pattern": "A _ _ _ E _ _ H    C _ _ L _ E _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Ashleigh. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 8,
+        "name_pattern": "A _ H _ E _ _ H    C H _ L _ E _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-14",
+    "puzzle_number": 13,
+    "type": "DRIVER",
+    "answer": "Jack Chapple",
+    "stats": {
+      "career_starts": 3149,
+      "career_wins": 315,
+      "recent_starts": 1350,
+      "recent_wins": 137,
+      "recent_places": 435
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "In the past 12 months, I've had 1,350 drives.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "J _ _ _    _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "The track I've driven at most in the past 12 months is Redcliffe.",
+        "difficulty": 40,
+        "source": "favourite_venue",
+        "revealed_letters": 2,
+        "name_pattern": "J _ _ _    C _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "My win strike rate over the past 12 months is about 10%.",
+        "difficulty": 50,
+        "source": "win_pct",
+        "revealed_letters": 3,
+        "name_pattern": "J _ _ _    C H _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "One of my most recent winners was Rocky Leigh at Albion Park.",
+        "difficulty": 75,
+        "source": "recent_winner",
+        "revealed_letters": 4,
+        "name_pattern": "J _ _ _    C H _ P _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Jack. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 5,
+        "name_pattern": "J _ _ K    C H _ P _ _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-15",
+    "puzzle_number": 14,
+    "type": "TRAINER",
+    "answer": "Peter Keogh",
+    "stats": {
+      "recent_starts": 98,
+      "recent_wins": 5,
+      "horses": 8
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "My stable has had 98 race starts in the past 12 months.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "P _ _ _ _    _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've trained 5 winners in the past 12 months.",
+        "difficulty": 40,
+        "source": "recent_wins",
+        "revealed_letters": 2,
+        "name_pattern": "P _ _ _ _    K _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "The track where I've had the most runners in the past 12 months is Bathurst.",
+        "difficulty": 55,
+        "source": "favourite_venue",
+        "revealed_letters": 3,
+        "name_pattern": "P _ _ _ R    K _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "The driver used most often by my stable recently is Vaughan Duncan.",
+        "difficulty": 70,
+        "source": "favourite_driver",
+        "revealed_letters": 4,
+        "name_pattern": "P _ _ _ R    K E _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Peter. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 5,
+        "name_pattern": "P _ T _ R    K E _ _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-16",
+    "puzzle_number": 15,
+    "type": "HORSE",
+    "answer": "Queenhigh Flush NZ",
+    "stats": {
+      "starts": 12,
+      "wins": 2,
+      "places": 6
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 12 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "Q _ _ _ _ _ _ _ _    _ _ _ _ _    _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in Victoria.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 3,
+        "name_pattern": "Q _ _ _ _ _ _ _ _    F _ _ _ _    N _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Kilmore, Melton.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 4,
+        "name_pattern": "Q _ _ _ _ _ _ _ H    F _ _ _ _    N _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Michael Tobin.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 6,
+        "name_pattern": "Q _ _ _ N _ _ _ H    F _ _ S _    N _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Shepparton on 13 October 2026, where I finished 4th for trainer Michael Tobin and driver Liam Older.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 8,
+        "name_pattern": "Q _ E _ N _ _ _ H    F _ _ S H    N _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-17",
+    "puzzle_number": 16,
+    "type": "TRAINER",
+    "answer": "Tim Gillespie",
+    "stats": {
+      "recent_starts": 87,
+      "recent_wins": 8,
+      "horses": 15
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "My stable has had 87 race starts in the past 12 months.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "T _ _    _ _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've trained 8 winners in the past 12 months.",
+        "difficulty": 40,
+        "source": "recent_wins",
+        "revealed_letters": 2,
+        "name_pattern": "T _ _    G _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "The track where I've had the most runners in the past 12 months is Albion Park.",
+        "difficulty": 55,
+        "source": "favourite_venue",
+        "revealed_letters": 3,
+        "name_pattern": "T _ _    G _ L _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I am the driver used most often by my stable recently.",
+        "difficulty": 70,
+        "source": "favourite_driver",
+        "revealed_letters": 4,
+        "name_pattern": "T _ _    G _ L _ _ S _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Tim. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 6,
+        "name_pattern": "T _ M    G _ L _ _ S _ I _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-18",
+    "puzzle_number": 17,
+    "type": "TRAINER",
+    "answer": "David Simmonds",
+    "stats": {
+      "recent_starts": 178,
+      "recent_wins": 11,
+      "horses": 19
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "My stable has had 178 race starts in the past 12 months.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "D _ _ _ _    _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've trained 11 winners in the past 12 months.",
+        "difficulty": 40,
+        "source": "recent_wins",
+        "revealed_letters": 2,
+        "name_pattern": "D _ _ _ _    S _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "The track where I've had the most runners in the past 12 months is Pinjarra.",
+        "difficulty": 55,
+        "source": "favourite_venue",
+        "revealed_letters": 3,
+        "name_pattern": "D _ _ _ _    S I _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "The driver used most often by my stable recently is Gary Hall Jnr.",
+        "difficulty": 70,
+        "source": "favourite_driver",
+        "revealed_letters": 5,
+        "name_pattern": "D _ _ I _    S I _ _ O _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is David. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 6,
+        "name_pattern": "D _ _ I _    S I _ _ O _ D _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-19",
+    "puzzle_number": 18,
+    "type": "HORSE",
+    "answer": "Rose Noire NZ",
+    "stats": {
+      "starts": 10,
+      "wins": 2,
+      "places": 5
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 10 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "R _ _ _    _ _ _ _ _    _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in Tasmania.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 2,
+        "name_pattern": "R _ _ _    N _ _ _ _    _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Hobart, Launceston.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 3,
+        "name_pattern": "R _ _ _    N _ _ _ _    N _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Jordan Chibnall.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 4,
+        "name_pattern": "R _ _ _    N O _ _ _    N _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Launceston on 18 October 2026, where I finished 1st for trainer Jordan Chibnall and driver Jordan Chibnall.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 5,
+        "name_pattern": "R _ _ _    N O _ _ E    N _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-20",
+    "puzzle_number": 19,
+    "type": "DRIVER",
+    "answer": "Ryan Sanderson",
+    "stats": {
+      "career_starts": 4002,
+      "career_wins": 565,
+      "recent_starts": 556,
+      "recent_wins": 85,
+      "recent_places": 236
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "In the past 12 months, I've had 556 drives.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "R _ _ _    _ _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "The track I've driven at most in the past 12 months is Melton.",
+        "difficulty": 40,
+        "source": "favourite_venue",
+        "revealed_letters": 2,
+        "name_pattern": "R _ _ _    S _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "My win strike rate over the past 12 months is about 15%.",
+        "difficulty": 50,
+        "source": "win_pct",
+        "revealed_letters": 3,
+        "name_pattern": "R _ _ _    S A _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "One of my most recent winners was Sandelton at Melton.",
+        "difficulty": 75,
+        "source": "recent_winner",
+        "revealed_letters": 5,
+        "name_pattern": "R _ _ N    S A _ _ _ R _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Ryan. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 6,
+        "name_pattern": "R _ _ N    S A _ _ _ R _ O _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-21",
+    "puzzle_number": 20,
+    "type": "TRAINER",
+    "answer": "Tonia Stampalia",
+    "stats": {
+      "recent_starts": 70,
+      "recent_wins": 8,
+      "horses": 9
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "My stable has had 70 race starts in the past 12 months.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "T _ _ _ _    _ _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've trained 8 winners in the past 12 months.",
+        "difficulty": 40,
+        "source": "recent_wins",
+        "revealed_letters": 2,
+        "name_pattern": "T _ _ _ _    S _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "The track where I've had the most runners in the past 12 months is Gloucester Park.",
+        "difficulty": 55,
+        "source": "favourite_venue",
+        "revealed_letters": 4,
+        "name_pattern": "T _ _ _ _    S T _ _ P _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "The driver used most often by my stable recently is Vance Stampalia.",
+        "difficulty": 70,
+        "source": "favourite_driver",
+        "revealed_letters": 5,
+        "name_pattern": "T _ _ I _    S T _ _ P _ _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Tonia. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 7,
+        "name_pattern": "T O _ I _    S T _ _ P _ _ I _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-22",
+    "puzzle_number": 21,
+    "type": "HORSE",
+    "answer": "Magicol Ideal NZ",
+    "stats": {
+      "starts": 175,
+      "wins": 20,
+      "places": 52
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 175 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "M _ _ _ _ _ _    _ _ _ _ _    N Z"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in Queensland.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 2,
+        "name_pattern": "M _ _ _ _ _ _    I _ _ _ _    N Z"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Marburg, Albion Park, Redcliffe.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 3,
+        "name_pattern": "M _ _ _ _ _ L    I _ _ _ _    N Z"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer John Stariha.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 4,
+        "name_pattern": "M _ _ _ _ _ L    I D _ _ _    N Z"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Albion Park on 9 October 2026, where I finished 8th for trainer John Stariha and driver Adam Sanderson.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 6,
+        "name_pattern": "M _ _ I _ _ L    I D _ A _    N Z"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-23",
+    "puzzle_number": 22,
+    "type": "HORSE",
+    "answer": "Majestic Tooth",
+    "stats": {
+      "starts": 86,
+      "wins": 10,
+      "places": 29
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 86 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "M _ _ _ _ _ _ _    _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've won 10 races and placed 29 times.",
+        "difficulty": 25,
+        "source": "career_record",
+        "revealed_letters": 2,
+        "name_pattern": "M _ _ _ _ _ _ _    T _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Shepparton, Geelong, Kilmore.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 3,
+        "name_pattern": "M _ _ _ _ _ I _    T _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Kari Males.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 5,
+        "name_pattern": "M _ _ E _ _ I _    T O _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Melton on 9 October 2026, where I finished 9th for trainer Kari Males and driver Ellen Tormey.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 6,
+        "name_pattern": "M _ _ E _ _ I _    T O _ T _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-24",
+    "puzzle_number": 23,
+    "type": "TRAINER",
+    "answer": "Ross Adams",
+    "stats": {
+      "recent_starts": 168,
+      "recent_wins": 14,
+      "horses": 18
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "My stable has had 168 race starts in the past 12 months.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 0,
+        "name_pattern": "_ _ _ _    _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've trained 14 winners in the past 12 months.",
+        "difficulty": 40,
+        "source": "recent_wins",
+        "revealed_letters": 1,
+        "name_pattern": "R _ _ _    _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "The track where I've had the most runners in the past 12 months is Penrith.",
+        "difficulty": 55,
+        "source": "favourite_venue",
+        "revealed_letters": 2,
+        "name_pattern": "R _ _ _    A _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "The driver used most often by my stable recently is Stephanie Morris.",
+        "difficulty": 70,
+        "source": "favourite_driver",
+        "revealed_letters": 3,
+        "name_pattern": "R _ _ S    A _ _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Ross. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 4,
+        "name_pattern": "R _ _ S    A _ A _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-25",
+    "puzzle_number": 24,
+    "type": "DRIVER",
+    "answer": "Neil McCallum",
+    "stats": {
+      "career_starts": 1647,
+      "career_wins": 110,
+      "recent_starts": 145,
+      "recent_wins": 8,
+      "recent_places": 26
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "In the past 12 months, I've had 145 drives.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "N _ _ _    _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "The track I've driven at most in the past 12 months is Kilmore.",
+        "difficulty": 40,
+        "source": "favourite_venue",
+        "revealed_letters": 2,
+        "name_pattern": "N _ _ _    M _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "My win strike rate over the past 12 months is about 6%.",
+        "difficulty": 50,
+        "source": "win_pct",
+        "revealed_letters": 3,
+        "name_pattern": "N _ _ _    M C _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "One of my most recent winners was Koufax at Kilmore.",
+        "difficulty": 75,
+        "source": "recent_winner",
+        "revealed_letters": 4,
+        "name_pattern": "N _ _ _    M C _ _ L _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Neil. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 6,
+        "name_pattern": "N _ _ L    M C _ _ L _ U _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-26",
+    "puzzle_number": 25,
+    "type": "HORSE",
+    "answer": "Wild Card NZ",
+    "stats": {
+      "starts": 78,
+      "wins": 9,
+      "places": 23
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 78 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 0,
+        "name_pattern": "_ _ _ _    _ _ _ _    N Z"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've won 9 races and placed 23 times.",
+        "difficulty": 25,
+        "source": "career_record",
+        "revealed_letters": 1,
+        "name_pattern": "W _ _ _    _ _ _ _    N Z"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Yarra Valley, Mildura, Newcastle.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 2,
+        "name_pattern": "W _ _ _    C _ _ _    N Z"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Samantha Gangell.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 3,
+        "name_pattern": "W _ _ D    C _ _ _    N Z"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Melton on 17 October 2026, where I finished 5th for trainer Samantha Gangell and driver Michael Bellman.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 4,
+        "name_pattern": "W _ _ D    C A _ _    N Z"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-27",
+    "puzzle_number": 26,
+    "type": "HORSE",
+    "answer": "Likeable Rogue",
+    "stats": {
+      "starts": 66,
+      "wins": 10,
+      "places": 17
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 66 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "L _ _ _ _ _ _ _    _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've won 10 races and placed 17 times.",
+        "difficulty": 25,
+        "source": "career_record",
+        "revealed_letters": 2,
+        "name_pattern": "L _ _ _ _ _ _ _    R _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Young, Melton, Mildura.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 3,
+        "name_pattern": "L _ _ _ _ _ L _    R _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Geoffrey Smith.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 5,
+        "name_pattern": "L _ _ E _ _ L _    R O _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Burnie on 23 October 2026, where I finished 1st for trainer Geoffrey Smith and driver Brodie Davis.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 6,
+        "name_pattern": "L _ _ E _ _ L _    R O _ U _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-28",
+    "puzzle_number": 27,
+    "type": "TRAINER",
+    "answer": "Juanita Breen",
+    "stats": {
+      "recent_starts": 73,
+      "recent_wins": 7,
+      "horses": 7
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "My stable has had 73 race starts in the past 12 months.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "J _ _ _ _ _ _    _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've trained 7 winners in the past 12 months.",
+        "difficulty": 40,
+        "source": "recent_wins",
+        "revealed_letters": 2,
+        "name_pattern": "J _ _ _ _ _ _    B _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "The track where I've had the most runners in the past 12 months is Shepparton.",
+        "difficulty": 55,
+        "source": "favourite_venue",
+        "revealed_letters": 3,
+        "name_pattern": "J _ _ _ _ _ A    B _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I am the driver used most often by my stable recently.",
+        "difficulty": 70,
+        "source": "favourite_driver",
+        "revealed_letters": 4,
+        "name_pattern": "J _ _ _ _ _ A    B R _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Juanita. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 6,
+        "name_pattern": "J _ _ N _ _ A    B R _ E _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-29",
+    "puzzle_number": 28,
+    "type": "HORSE",
+    "answer": "Waves Of Chance",
+    "stats": {
+      "starts": 37,
+      "wins": 11,
+      "places": 17
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 37 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "W _ _ _ _    _ _    _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've won 11 races and placed 17 times.",
+        "difficulty": 25,
+        "source": "career_record",
+        "revealed_letters": 2,
+        "name_pattern": "W _ _ _ _    O _    _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Goulburn, Coolamon, Canberra.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 3,
+        "name_pattern": "W _ _ _ _    O _    C _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Juanita McKenzie.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 5,
+        "name_pattern": "W _ _ _ _    O F    C H _ _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Hobart on 11 October 2026, where I finished 2nd for trainer Juanita McKenzie and driver Rodney Ashwood.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 6,
+        "name_pattern": "W _ _ E _    O F    C H _ _ _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "puzzle_number": 29,
+    "type": "TRAINER",
+    "answer": "Anthony Missen",
+    "stats": {
+      "recent_starts": 223,
+      "recent_wins": 26,
+      "horses": 27
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "My stable has had 223 race starts in the past 12 months.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "A _ _ _ _ _ _    _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've trained 26 winners in the past 12 months.",
+        "difficulty": 40,
+        "source": "recent_wins",
+        "revealed_letters": 2,
+        "name_pattern": "A _ _ _ _ _ _    M _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "The track where I've had the most runners in the past 12 months is Tamworth.",
+        "difficulty": 55,
+        "source": "favourite_venue",
+        "revealed_letters": 3,
+        "name_pattern": "A _ _ _ _ _ Y    M _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "The driver used most often by my stable recently is Blake Hughes.",
+        "difficulty": 70,
+        "source": "favourite_driver",
+        "revealed_letters": 5,
+        "name_pattern": "A _ _ H _ _ Y    M _ S _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Anthony. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 6,
+        "name_pattern": "A _ _ H _ _ Y    M _ S _ E _"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-31",
+    "puzzle_number": 30,
+    "type": "DRIVER",
+    "answer": "Jordan Leedham",
+    "stats": {
+      "career_starts": 3690,
+      "career_wins": 414,
+      "recent_starts": 801,
+      "recent_wins": 93,
+      "recent_places": 293
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "In the past 12 months, I've had 801 drives.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "J _ _ _ _ _    _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "The track I've driven at most in the past 12 months is Melton.",
+        "difficulty": 40,
+        "source": "favourite_venue",
+        "revealed_letters": 2,
+        "name_pattern": "J _ _ _ _ _    L _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "My win strike rate over the past 12 months is about 12%.",
+        "difficulty": 50,
+        "source": "win_pct",
+        "revealed_letters": 3,
+        "name_pattern": "J _ _ _ _ N    L _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "One of my most recent winners was Miley Kay at Melton.",
+        "difficulty": 75,
+        "source": "recent_winner",
+        "revealed_letters": 5,
+        "name_pattern": "J _ _ D _ N    L _ _ D _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Jordan. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 6,
+        "name_pattern": "J _ _ D _ N    L _ _ D _ A _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-01",
+    "puzzle_number": 31,
+    "type": "HORSE",
+    "answer": "Media Mogul",
+    "stats": {
+      "starts": 37,
+      "wins": 4,
+      "places": 12
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 37 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "M _ _ _ _    _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've won 4 races and placed 12 times.",
+        "difficulty": 25,
+        "source": "career_record",
+        "revealed_letters": 2,
+        "name_pattern": "M _ _ _ _    M _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Mount Gambier, Terang, Newcastle.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 3,
+        "name_pattern": "M _ _ _ A    M _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Lachlan Prothero.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 4,
+        "name_pattern": "M _ _ _ A    M O _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Newcastle on 16 October 2026, where I finished 8th for trainer Lachlan Prothero and driver Robert Morris.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 5,
+        "name_pattern": "M _ D _ A    M O _ _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-02",
+    "puzzle_number": 32,
+    "type": "DRIVER",
+    "answer": "Katie Wilson",
+    "stats": {
+      "career_starts": 480,
+      "career_wins": 37,
+      "recent_starts": 133,
+      "recent_wins": 14,
+      "recent_places": 40
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "In the past 12 months, I've had 133 drives.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "K _ _ _ _    _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "The track I've driven at most in the past 12 months is Globe Derby Park.",
+        "difficulty": 40,
+        "source": "favourite_venue",
+        "revealed_letters": 2,
+        "name_pattern": "K _ _ _ _    W _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "My win strike rate over the past 12 months is about 11%.",
+        "difficulty": 50,
+        "source": "win_pct",
+        "revealed_letters": 3,
+        "name_pattern": "K _ _ _ E    W _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "One of my most recent winners was Just Mocha at Globe Derby Park.",
+        "difficulty": 75,
+        "source": "recent_winner",
+        "revealed_letters": 4,
+        "name_pattern": "K _ _ _ E    W _ L _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Katie. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 5,
+        "name_pattern": "K _ _ I E    W _ L _ _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-03",
+    "puzzle_number": 33,
+    "type": "TRAINER",
+    "answer": "Brad Hewitt",
+    "stats": {
+      "recent_starts": 338,
+      "recent_wins": 95,
+      "horses": 55
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "My stable has had 338 race starts in the past 12 months.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "B _ _ _    _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've trained 95 winners in the past 12 months.",
+        "difficulty": 40,
+        "source": "recent_wins",
+        "revealed_letters": 2,
+        "name_pattern": "B _ _ _    H _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "The track where I've had the most runners in the past 12 months is Menangle.",
+        "difficulty": 55,
+        "source": "favourite_venue",
+        "revealed_letters": 3,
+        "name_pattern": "B _ _ _    H E _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I am the driver used most often by my stable recently.",
+        "difficulty": 70,
+        "source": "favourite_driver",
+        "revealed_letters": 4,
+        "name_pattern": "B _ _ _    H E W _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Brad. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 5,
+        "name_pattern": "B _ A _    H E W _ _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "puzzle_number": 34,
+    "type": "HORSE",
+    "answer": "Uncle Tony",
+    "stats": {
+      "starts": 64,
+      "wins": 7,
+      "places": 27
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 64 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 0,
+        "name_pattern": "_ _ _ _ _    _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've won 7 races and placed 27 times.",
+        "difficulty": 25,
+        "source": "career_record",
+        "revealed_letters": 1,
+        "name_pattern": "U _ _ _ _    _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Bathurst, Menangle, Albion Park.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 2,
+        "name_pattern": "U _ _ _ _    T _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Chris Frisby.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 3,
+        "name_pattern": "U _ _ _ E    T _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Albion Park on 27 October 2026, where I finished 4th for trainer Chris Frisby and driver Nathan Dawson.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 4,
+        "name_pattern": "U _ _ _ E    T O _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-05",
+    "puzzle_number": 35,
+    "type": "HORSE",
+    "answer": "Tasbmiki",
+    "stats": {
+      "starts": 50,
+      "wins": 8,
+      "places": 17
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 50 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 0,
+        "name_pattern": "_ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in New South Wales.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 1,
+        "name_pattern": "T _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Parkes, Dubbo, Young.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 2,
+        "name_pattern": "T _ _ B _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Aaron Williams.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 3,
+        "name_pattern": "T _ _ B _ I _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Bathurst on 4 November 2026, where I finished 7th for trainer Aaron Williams and driver Declan Murphy.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 4,
+        "name_pattern": "T _ S B _ I _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-06",
+    "puzzle_number": 36,
+    "type": "HORSE",
+    "answer": "Annie Crocker",
+    "stats": {
+      "starts": 68,
+      "wins": 8,
+      "places": 33
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 68 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "A _ _ _ _    _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've won 8 races and placed 33 times.",
+        "difficulty": 25,
+        "source": "career_record",
+        "revealed_letters": 2,
+        "name_pattern": "A _ _ _ _    C _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Globe Derby Park, Tamworth, Dubbo.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 3,
+        "name_pattern": "A _ _ _ _    C R _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Jemma Hayman.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 4,
+        "name_pattern": "A _ _ _ _    C R _ C _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Bunbury on 17 October 2026, where I finished 9th for trainer Jemma Hayman and driver Stuart McDonald.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 6,
+        "name_pattern": "A _ _ I _    C R _ C _ E _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-07",
+    "puzzle_number": 37,
+    "type": "HORSE",
+    "answer": "Whiskey Royale",
+    "stats": {
+      "starts": 72,
+      "wins": 7,
+      "places": 21
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 72 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "W _ _ _ _ _ _    _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in New South Wales.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 2,
+        "name_pattern": "W _ _ _ _ _ _    R _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Newcastle, Penrith, Tamworth.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 3,
+        "name_pattern": "W _ _ _ _ _ Y    R _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Jamie Donovan.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 5,
+        "name_pattern": "W _ _ S _ _ Y    R _ Y _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Newcastle on 6 November 2026, where I finished 7th for trainer Jamie Donovan and driver Grace Panella.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 6,
+        "name_pattern": "W _ _ S _ _ Y    R _ Y _ L _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-08",
+    "puzzle_number": 38,
+    "type": "TRAINER",
+    "answer": "Peter Salathiel",
+    "stats": {
+      "recent_starts": 56,
+      "recent_wins": 2,
+      "horses": 7
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "My stable has had 56 race starts in the past 12 months.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "P _ _ _ _    _ _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've trained 2 winners in the past 12 months.",
+        "difficulty": 40,
+        "source": "recent_wins",
+        "revealed_letters": 2,
+        "name_pattern": "P _ _ _ _    S _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "The track where I've had the most runners in the past 12 months is Shepparton.",
+        "difficulty": 55,
+        "source": "favourite_venue",
+        "revealed_letters": 4,
+        "name_pattern": "P _ _ _ _    S A _ _ T _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I am the driver used most often by my stable recently.",
+        "difficulty": 70,
+        "source": "favourite_driver",
+        "revealed_letters": 5,
+        "name_pattern": "P _ _ E _    S A _ _ T _ _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Peter. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 7,
+        "name_pattern": "P E _ E _    S A _ _ T _ _ E _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-09",
+    "puzzle_number": 39,
+    "type": "DRIVER",
+    "answer": "Blake Hughes",
+    "stats": {
+      "career_starts": 3398,
+      "career_wins": 457,
+      "recent_starts": 625,
+      "recent_wins": 68,
+      "recent_places": 200
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "In the past 12 months, I've had 625 drives.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "B _ _ _ _    _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "The track I've driven at most in the past 12 months is Newcastle.",
+        "difficulty": 40,
+        "source": "favourite_venue",
+        "revealed_letters": 2,
+        "name_pattern": "B _ _ _ _    H _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "My win strike rate over the past 12 months is about 11%.",
+        "difficulty": 50,
+        "source": "win_pct",
+        "revealed_letters": 3,
+        "name_pattern": "B _ _ _ E    H _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "One of my most recent winners was Georgia Pines at Newcastle.",
+        "difficulty": 75,
+        "source": "recent_winner",
+        "revealed_letters": 4,
+        "name_pattern": "B _ _ _ E    H _ G _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Blake. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 5,
+        "name_pattern": "B _ _ K E    H _ G _ _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-10",
+    "puzzle_number": 40,
+    "type": "HORSE",
+    "answer": "Doc Harvey",
+    "stats": {
+      "starts": 153,
+      "wins": 13,
+      "places": 37
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 153 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 0,
+        "name_pattern": "_ _ _    _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've won 13 races and placed 37 times.",
+        "difficulty": 25,
+        "source": "career_record",
+        "revealed_letters": 1,
+        "name_pattern": "D _ _    _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Mildura, Goulburn, Albion Park.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 2,
+        "name_pattern": "D _ _    H _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Errol O'Shea.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 3,
+        "name_pattern": "D _ _    H A _ _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Redcliffe on 25 October 2026, where I finished 7th for trainer Errol O'Shea and driver Adam Richardson.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 4,
+        "name_pattern": "D _ _    H A _ V _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-11",
+    "puzzle_number": 41,
+    "type": "HORSE",
+    "answer": "Nyack",
+    "stats": {
+      "starts": 74,
+      "wins": 24,
+      "places": 49
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 74 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 0,
+        "name_pattern": "_ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've won 24 races and placed 49 times.",
+        "difficulty": 25,
+        "source": "career_record",
+        "revealed_letters": 1,
+        "name_pattern": "N _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Launceston, Hobart, Menangle.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 1,
+        "name_pattern": "N _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer James Rattray.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 2,
+        "name_pattern": "N _ A _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Riverina Paceway on 6 November 2026, where I finished 10th for trainer James Rattray and driver James Rattray.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 2,
+        "name_pattern": "N _ A _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-12",
+    "puzzle_number": 42,
+    "type": "DRIVER",
+    "answer": "Olivia Frisby",
+    "stats": {
+      "career_starts": 1587,
+      "career_wins": 143,
+      "recent_starts": 302,
+      "recent_wins": 29,
+      "recent_places": 87
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "In the past 12 months, I've had 302 drives.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "O _ _ _ _ _    _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "The track I've driven at most in the past 12 months is Bathurst.",
+        "difficulty": 40,
+        "source": "favourite_venue",
+        "revealed_letters": 2,
+        "name_pattern": "O _ _ _ _ _    F _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "My win strike rate over the past 12 months is about 10%.",
+        "difficulty": 50,
+        "source": "win_pct",
+        "revealed_letters": 3,
+        "name_pattern": "O _ _ _ _ A    F _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "One of my most recent winners was Studleigh Sandy at Bathurst.",
+        "difficulty": 75,
+        "source": "recent_winner",
+        "revealed_letters": 4,
+        "name_pattern": "O _ _ _ _ A    F _ I _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Olivia. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 6,
+        "name_pattern": "O _ _ V _ A    F _ I _ B _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-13",
+    "puzzle_number": 43,
+    "type": "DRIVER",
+    "answer": "Owen Shea",
+    "stats": {
+      "career_starts": 440,
+      "career_wins": 17,
+      "recent_starts": 300,
+      "recent_wins": 14,
+      "recent_places": 68
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "In the past 12 months, I've had 300 drives.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 0,
+        "name_pattern": "_ _ _ _    _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "The track I've driven at most in the past 12 months is Bathurst.",
+        "difficulty": 40,
+        "source": "favourite_venue",
+        "revealed_letters": 1,
+        "name_pattern": "O _ _ _    _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "My win strike rate over the past 12 months is about 5%.",
+        "difficulty": 50,
+        "source": "win_pct",
+        "revealed_letters": 2,
+        "name_pattern": "O _ _ _    S _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "One of my most recent winners was Sunset Jay Jay at Bathurst.",
+        "difficulty": 75,
+        "source": "recent_winner",
+        "revealed_letters": 3,
+        "name_pattern": "O _ _ N    S _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Owen. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 4,
+        "name_pattern": "O _ _ N    S H _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-14",
+    "puzzle_number": 44,
+    "type": "TRAINER",
+    "answer": "Matt Elkins",
+    "stats": {
+      "recent_starts": 402,
+      "recent_wins": 65,
+      "horses": 49
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "My stable has had 402 race starts in the past 12 months.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "M _ _ _    _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've trained 65 winners in the past 12 months.",
+        "difficulty": 40,
+        "source": "recent_wins",
+        "revealed_letters": 2,
+        "name_pattern": "M _ _ _    E _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "The track where I've had the most runners in the past 12 months is Albion Park.",
+        "difficulty": 55,
+        "source": "favourite_venue",
+        "revealed_letters": 3,
+        "name_pattern": "M _ _ _    E L _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I am the driver used most often by my stable recently.",
+        "difficulty": 70,
+        "source": "favourite_driver",
+        "revealed_letters": 4,
+        "name_pattern": "M _ _ _    E L K _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Matt. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 5,
+        "name_pattern": "M _ T _    E L K _ _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-15",
+    "puzzle_number": 45,
+    "type": "HORSE",
+    "answer": "Sneaky Philtra",
+    "stats": {
+      "starts": 52,
+      "wins": 8,
+      "places": 21
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 52 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "S _ _ _ _ _    _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've won 8 races and placed 21 times.",
+        "difficulty": 25,
+        "source": "career_record",
+        "revealed_letters": 2,
+        "name_pattern": "S _ _ _ _ _    P _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Kilmore, Mildura, Globe Derby Park.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 3,
+        "name_pattern": "S _ _ _ _ Y    P _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Naomi Kerr.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 5,
+        "name_pattern": "S _ _ A _ Y    P _ _ L _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Mildura on 6 November 2026, where I finished 1st for trainer Naomi Kerr and driver Jack Laugher.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 6,
+        "name_pattern": "S _ _ A _ Y    P _ _ L _ R _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-16",
+    "puzzle_number": 46,
+    "type": "DRIVER",
+    "answer": "Liam Elliott",
+    "stats": {
+      "career_starts": 1358,
+      "career_wins": 151,
+      "recent_starts": 522,
+      "recent_wins": 70,
+      "recent_places": 169
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "In the past 12 months, I've had 522 drives.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "L _ _ _    _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "The track I've driven at most in the past 12 months is Gloucester Park.",
+        "difficulty": 40,
+        "source": "favourite_venue",
+        "revealed_letters": 2,
+        "name_pattern": "L _ _ _    E _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "My win strike rate over the past 12 months is about 13%.",
+        "difficulty": 50,
+        "source": "win_pct",
+        "revealed_letters": 3,
+        "name_pattern": "L _ _ _    E L _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "One of my most recent winners was Control The Room at Gloucester Park.",
+        "difficulty": 75,
+        "source": "recent_winner",
+        "revealed_letters": 4,
+        "name_pattern": "L _ _ _    E L _ I _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Liam. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 5,
+        "name_pattern": "L _ _ M    E L _ I _ _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-17",
+    "puzzle_number": 47,
+    "type": "HORSE",
+    "answer": "Iseeubaby",
+    "stats": {
+      "starts": 30,
+      "wins": 8,
+      "places": 16
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 30 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 0,
+        "name_pattern": "_ _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in Western Australia.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 1,
+        "name_pattern": "I _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Bunbury, Gloucester Park.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 2,
+        "name_pattern": "I _ _ _ U _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Michael Young.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 3,
+        "name_pattern": "I _ _ _ U _ A _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Gloucester Park on 13 November 2026, where I finished 1st for trainer Michael Young and driver Emily Suvaljko.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 4,
+        "name_pattern": "I _ E _ U _ A _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-18",
+    "puzzle_number": 48,
+    "type": "HORSE",
+    "answer": "Studleigh Fury",
+    "stats": {
+      "starts": 26,
+      "wins": 5,
+      "places": 11
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 26 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "S _ _ _ _ _ _ _ _    _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in New South Wales.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 2,
+        "name_pattern": "S _ _ _ _ _ _ _ _    F _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Bathurst.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 3,
+        "name_pattern": "S _ _ _ _ _ I _ _    F _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Jake Davis.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 5,
+        "name_pattern": "S _ _ D _ _ I _ _    F U _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Menangle on 9 November 2026, where I finished 7th for trainer Jake Davis and driver Chloe Formosa.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 6,
+        "name_pattern": "S _ _ D _ _ I _ _    F U R _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-19",
+    "puzzle_number": 49,
+    "type": "HORSE",
+    "answer": "Its All Right Now",
+    "stats": {
+      "starts": 38,
+      "wins": 2,
+      "places": 11
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 38 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "I _ _    _ _ _    _ _ _ _ _    _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've won 2 races and placed 11 times.",
+        "difficulty": 25,
+        "source": "career_record",
+        "revealed_letters": 2,
+        "name_pattern": "I _ _    A _ _    _ _ _ _ _    _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Albion Park.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 4,
+        "name_pattern": "I _ _    A _ _    R _ _ _ _    N _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Stephen Cini.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 5,
+        "name_pattern": "I _ _    A _ _    R I _ _ _    N _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Albion Park on 13 November 2026, where I finished 1st for trainer Stephen Cini and driver Nathan Dawson.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 7,
+        "name_pattern": "I _ _    A L _    R I _ _ T    N _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-20",
+    "puzzle_number": 50,
+    "type": "TRAINER",
+    "answer": "June Henderson",
+    "stats": {
+      "recent_starts": 99,
+      "recent_wins": 5,
+      "horses": 9
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "My stable has had 99 race starts in the past 12 months.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "J _ _ _    _ _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've trained 5 winners in the past 12 months.",
+        "difficulty": 40,
+        "source": "recent_wins",
+        "revealed_letters": 2,
+        "name_pattern": "J _ _ _    H _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "The track where I've had the most runners in the past 12 months is Pinjarra.",
+        "difficulty": 55,
+        "source": "favourite_venue",
+        "revealed_letters": 3,
+        "name_pattern": "J _ _ _    H E _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "The driver used most often by my stable recently is Sara Grout.",
+        "difficulty": 70,
+        "source": "favourite_driver",
+        "revealed_letters": 5,
+        "name_pattern": "J _ _ E    H E _ _ _ R _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is June. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 6,
+        "name_pattern": "J _ _ E    H E _ _ _ R _ O _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-21",
+    "puzzle_number": 51,
+    "type": "HORSE",
+    "answer": "King Bling",
+    "stats": {
+      "starts": 31,
+      "wins": 6,
+      "places": 13
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 31 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 0,
+        "name_pattern": "_ _ _ _    _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in Queensland.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 1,
+        "name_pattern": "K _ _ _    _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Redcliffe, Albion Park.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 2,
+        "name_pattern": "K _ _ _    B _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Grant Dixon.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 3,
+        "name_pattern": "K _ _ G    B _ _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Albion Park on 24 October 2026, where I finished 6th for trainer Grant Dixon and driver Trista Dixon.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 4,
+        "name_pattern": "K _ _ G    B _ I _ _"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-22",
+    "puzzle_number": 52,
+    "type": "HORSE",
+    "answer": "Caulonia Terror",
+    "stats": {
+      "starts": 159,
+      "wins": 6,
+      "places": 43
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 159 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 1,
+        "name_pattern": "C _ _ _ _ _ _ _    _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've won 6 races and placed 43 times.",
+        "difficulty": 25,
+        "source": "career_record",
+        "revealed_letters": 2,
+        "name_pattern": "C _ _ _ _ _ _ _    T _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Ballarat, Mildura.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 4,
+        "name_pattern": "C _ _ _ _ _ _ A    T E _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer Luke Watson.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 5,
+        "name_pattern": "C _ _ L _ _ _ A    T E _ _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Mildura on 19 November 2026, where I finished 1st for trainer Luke Watson and driver Luke Watson.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 7,
+        "name_pattern": "C A _ L _ _ _ A    T E _ _ O _"
+      }
+    ]
+  }
+]
