@@ -4434,7 +4434,7 @@ async function renderWhoAmIArchive() {
                                 font-weight: 700;
                                 white-space: nowrap;
                             ">
-                                🏇 ${puzzle.puzzle_number}
+                                🐴 ${puzzle.puzzle_number}
                             </span>
 
                             <span style="
@@ -16849,7 +16849,7 @@ async function showPositionRaceChartView() {
                         class="race-chart-library-card"
                         onclick="setRaceChartType('DRIVER')"
                     >
-                        <span>🏇</span>
+                        <span>🐴</span>
                         <strong>Driver Wins Race</strong>
                         <small>From January 2021</small>
                     </button>
@@ -18266,7 +18266,7 @@ async function showRaceChartsView() {
                         }"
                         onclick="setRaceChartType('DRIVER')"
                     >
-                        <span>🏇</span>
+                        <span>🐴</span>
                         <strong>Driver Wins Race</strong>
                         <small>From January 2021</small>
                     </button>
