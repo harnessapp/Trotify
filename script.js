@@ -4348,6 +4348,52 @@ async function renderWhoAmIArchive() {
         }
     }
 
+    function getCompactArchiveStatus(puzzle) {
+        const saved = localStorage.getItem(
+            `trotifyWhoAmI_${puzzle.date}`
+        );
+
+        if (!saved) {
+            return {
+                text: "Not played",
+                color: "#9ca3af"
+            };
+        }
+
+        try {
+            const state = JSON.parse(saved);
+
+            if (state.solved) {
+                return {
+                    text: puzzle.answer,
+                    color: "#6ee7b7"
+                };
+            }
+
+            if (state.finished) {
+                return {
+                    text: "Unsolved",
+                    color: "#f87171"
+                };
+            }
+
+            if (state.guesses?.length || state.clueIndex > 0) {
+                return {
+                    text: "In progress",
+                    color: "#fbbf24"
+                };
+            }
+
+        } catch (error) {
+            // Treat invalid saved progress as not played.
+        }
+
+        return {
+            text: "Not played",
+            color: "#9ca3af"
+        };
+    }
+
     meetingStrip.innerHTML = `
         <div class="who-am-i-layout">
 
@@ -4357,38 +4403,68 @@ async function renderWhoAmIArchive() {
                     WHO AM I? · PUZZLE ARCHIVE
                 </div>
 
-                ${puzzles.map(puzzle => `
-                    <div
-                        class="who-am-i-archive-row"
-                        data-puzzle-date="${escapeHtml(puzzle.date)}"
-                        role="button"
-                        tabindex="0"
-                        style="
-                            display: flex;
-                            justify-content: space-between;
-                            padding: 12px 8px;
-                            border-bottom: 1px solid rgba(255,255,255,0.08);
-                            cursor: pointer;
-                        "
-                    >
-                        <span>Puzzle #${puzzle.puzzle_number}</span>
+                ${puzzles.map(puzzle => {
+                    const status = getCompactArchiveStatus(puzzle);
 
-                        <span style="display: flex; gap: 16px; align-items: center;">
-                            <span>${getArchiveStatus(puzzle)}</span>
-                            <span>
-                                ${new Date(puzzle.date + "T00:00:00").toLocaleDateString(
-                                    "en-AU",
-                                    {
-                                        day: "numeric",
-                                        month: "short",
-                                        year: "numeric"
-                                    }
-                                )}
+                    const date = new Date(
+                        puzzle.date + "T00:00:00"
+                    ).toLocaleDateString("en-AU", {
+                        day: "numeric",
+                        month: "short"
+                    });
+
+                    return `
+                        <div
+                            class="who-am-i-archive-row"
+                            data-puzzle-date="${escapeHtml(puzzle.date)}"
+                            role="button"
+                            tabindex="0"
+                            style="
+                                display: grid;
+                                grid-template-columns: 62px minmax(0, 1fr) 52px 12px;
+                                align-items: center;
+                                gap: 8px;
+                                padding: 13px 4px;
+                                border-bottom: 1px solid rgba(255,255,255,0.08);
+                                cursor: pointer;
+                                text-align: left;
+                            "
+                        >
+                            <span style="
+                                font-weight: 700;
+                                white-space: nowrap;
+                            ">
+                                🏇 ${puzzle.puzzle_number}
                             </span>
 
-                        </span>
-                    </div>
-                `).join("")}
+                            <span style="
+                                color: ${status.color};
+                                font-weight: 600;
+                                min-width: 0;
+                                overflow-wrap: anywhere;
+                                line-height: 1.3;
+                            ">
+                                ${escapeHtml(status.text)}
+                            </span>
+
+                            <span style="
+                                color: #9ca3af;
+                                font-size: 12px;
+                                white-space: nowrap;
+                                text-align: right;
+                            ">
+                                ${date}
+                            </span>
+
+                            <span style="
+                                color: #64748b;
+                                font-size: 16px;
+                            ">
+                                ›
+                            </span>
+                        </div>
+                    `;
+                }).join("")}
 
                 <button
                     type="button"
