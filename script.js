@@ -4326,7 +4326,9 @@ async function renderWhoAmIArchive() {
         }
     }
 
+    meetingStrip.innerHTML = `
         <div class="who-am-i-layout">
+
             <div class="who-am-i-game-card">
 
                 <div class="who-am-i-eyebrow">
