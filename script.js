@@ -4305,7 +4305,7 @@ async function renderWhoAmIArchive() {
             const state = JSON.parse(saved);
 
             if (state.solved) {
-                return "🟢 Solved";
+                return `🟢 Solved: ${escapeHtml(puzzle.answer)}`;
             }
 
             if (state.finished) {
@@ -4335,10 +4335,6 @@ async function renderWhoAmIArchive() {
                     WHO AM I? · PUZZLE ARCHIVE
                 </div>
 
-                <div style="margin: 20px 0;">
-                    ${puzzles.length} puzzles available
-                </div>
-
                 ${puzzles.map(puzzle => `
                     <div style="
                         display: flex;
@@ -4350,7 +4346,17 @@ async function renderWhoAmIArchive() {
 
                         <span style="display: flex; gap: 16px; align-items: center;">
                             <span>${getArchiveStatus(puzzle)}</span>
-                            <span>${escapeHtml(puzzle.date)}</span>
+                            <span>
+                                ${new Date(puzzle.date + "T00:00:00").toLocaleDateString(
+                                    "en-AU",
+                                    {
+                                        day: "numeric",
+                                        month: "short",
+                                        year: "numeric"
+                                    }
+                                )}
+                            </span>
+
                         </span>
                     </div>
                 `).join("")}
