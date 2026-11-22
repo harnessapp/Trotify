@@ -4178,8 +4178,6 @@ function renderWhoAmIGame() {
                     }
                 </button>
 
-            </div>
-
             <button
                 type="button"
                 class="who-am-i-next-clue"
@@ -4188,6 +4186,9 @@ function renderWhoAmIGame() {
             >
                 📚 PAST PUZZLES
             </button>
+
+            </div>
+
 
         </div>
     `;
