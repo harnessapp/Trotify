@@ -4364,8 +4364,13 @@ async function renderWhoAmIArchive() {
             const state = JSON.parse(saved);
 
             if (state.solved) {
+                const clueNumber = Math.min(
+                    (Number(state.clueIndex) || 0) + 1,
+                    5
+                );
+
                 return {
-                    text: puzzle.answer,
+                    text: `${puzzle.answer} (${clueNumber})`,
                     color: "#6ee7b7"
                 };
             }
