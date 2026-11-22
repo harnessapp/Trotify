@@ -15005,6 +15005,13 @@ function countGoodLeaders(rows) {
 }
 
 function renderMeetings(meetings) {
+
+    // Don't overwrite Who Am I or other views
+    // while the dashboard finishes loading.
+    const activeView = document.querySelector(".nav-item.active")?.dataset.view;
+
+    if (activeView !== "home") return;
+
     const strip = document.getElementById("meetingStrip");
 
     if (!meetings.length) {
