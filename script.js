@@ -3580,6 +3580,41 @@ async function loadWhoAmIPuzzle() {
     }
 }
 
+let whoAmIHistory = [];
+
+async function loadWhoAmIHistory() {
+    try {
+        const response = await fetch(
+            `who_am_i_history.json?v=${Date.now()}`,
+            {
+                cache: "no-store"
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+
+        whoAmIHistory = await response.json();
+
+        console.log(
+            `Who Am I history loaded: ${whoAmIHistory.length} puzzles`
+        );
+
+        return whoAmIHistory;
+
+    } catch (error) {
+        console.error(
+            "Could not load Who Am I history:",
+            error
+        );
+
+        whoAmIHistory = [];
+
+        return [];
+    }
+}
+
 async function loadAdcData() {
 
     try {
@@ -4361,6 +4396,11 @@ async function showWhoAmIView() {
     const puzzle =
         whoAmIPuzzle ||
         await loadWhoAmIPuzzle();
+
+    // Load the historical puzzles for the archive
+    if (!whoAmIHistory.length) {
+        await loadWhoAmIHistory();
+    }
 
     if (
         !puzzle ||
