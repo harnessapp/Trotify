@@ -1,55 +1,53 @@
 {
-  "date": "2026-11-23",
-  "puzzle_number": 53,
-  "type": "DRIVER",
-  "answer": "Ryan Warwick",
+  "date": "2026-11-24",
+  "puzzle_number": 54,
+  "type": "TRAINER",
+  "answer": "Darrel Graham",
   "stats": {
-    "career_starts": 2245,
-    "career_wins": 353,
-    "recent_starts": 485,
-    "recent_wins": 35,
-    "recent_places": 134
+    "recent_starts": 103,
+    "recent_wins": 19,
+    "horses": 13
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "In the past 12 months, I've had 485 drives.",
+      "text": "My stable has had 103 race starts in the past 12 months.",
       "difficulty": 15,
       "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "R _ _ _    _ _ _ _ _ _ _"
+      "name_pattern": "D _ _ _ _ _    _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "The track I've driven at most in the past 12 months is Gloucester Park.",
+      "text": "I've trained 19 winners in the past 12 months.",
       "difficulty": 40,
-      "source": "favourite_venue",
+      "source": "recent_wins",
       "revealed_letters": 2,
-      "name_pattern": "R _ _ _    W _ _ _ _ _ _"
+      "name_pattern": "D _ _ _ _ _    G _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "My win strike rate over the past 12 months is about 7%.",
-      "difficulty": 50,
-      "source": "win_pct",
+      "text": "The track where I've had the most runners in the past 12 months is Albion Park.",
+      "difficulty": 55,
+      "source": "favourite_venue",
       "revealed_letters": 3,
-      "name_pattern": "R _ _ _    W A _ _ _ _ _"
+      "name_pattern": "D _ _ _ _ L    G _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "One of my most recent winners was Diamondsareforever at Pinjarra.",
-      "difficulty": 75,
-      "source": "recent_winner",
+      "text": "The driver used most often by my stable recently is Adam Sanderson.",
+      "difficulty": 70,
+      "source": "favourite_driver",
       "revealed_letters": 4,
-      "name_pattern": "R _ _ _    W A _ W _ _ _"
+      "name_pattern": "D _ _ _ _ L    G _ A _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Ryan. ",
+      "text": "My first name is Darrel. ",
       "difficulty": 95,
       "source": "first_name",
-      "revealed_letters": 5,
-      "name_pattern": "R _ _ N    W A _ W _ _ _"
+      "revealed_letters": 6,
+      "name_pattern": "D _ _ R _ L    G _ A _ A _"
     }
   ]
 }
