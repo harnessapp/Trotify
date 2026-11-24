@@ -4080,6 +4080,41 @@ function renderWhoAmIGame() {
 
                     ${getWhoAmIResultMessage(state)}
 
+                    <div style="
+                        margin: 24px 0 8px;
+                        padding-top: 20px;
+                        border-top: 1px solid rgba(255,255,255,0.08);
+                    ">
+                        <div class="who-am-i-eyebrow" style="margin-bottom: 14px;">
+                            ALL FIVE CLUES
+                        </div>
+
+                        ${whoAmIPuzzle.clues.map((clue, index) => `
+                            <div style="
+                                display: flex;
+                                gap: 12px;
+                                text-align: left;
+                                padding: 8px 0;
+                                font-size: 14px;
+                                line-height: 1.5;
+                            ">
+                                <span style="
+                                    color: #9ca3af;
+                                    font-weight: 700;
+                                    flex-shrink: 0;
+                                ">
+                                    ${index + 1}.
+                                </span>
+
+                                <span>
+                                    ${escapeHtml(clue.text)}
+                                </span>
+                            </div>
+                        `).join("")}
+                    </div>
+
+
+
                     <button
                         type="button"
                         class="who-am-i-next-clue"
