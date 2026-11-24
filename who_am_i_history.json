@@ -2886,5 +2886,60 @@
         "name_pattern": "D _ _ R _ L    G _ A _ A _"
       }
     ]
+  },
+  {
+    "date": "2026-11-25",
+    "puzzle_number": 55,
+    "type": "DRIVER",
+    "answer": "Gaita Pullicino",
+    "stats": {
+      "career_starts": 2207,
+      "career_wins": 377,
+      "recent_starts": 307,
+      "recent_wins": 52,
+      "recent_places": 130
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "In the past 12 months, I've had 307 drives.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "G _ _ _ _    _ _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "The track I've driven at most in the past 12 months is Globe Derby Park.",
+        "difficulty": 40,
+        "source": "favourite_venue",
+        "revealed_letters": 2,
+        "name_pattern": "G _ _ _ _    P _ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "My win strike rate over the past 12 months is about 17%.",
+        "difficulty": 50,
+        "source": "win_pct",
+        "revealed_letters": 4,
+        "name_pattern": "G _ _ _ _    P U _ _ I _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "One of my most recent winners was Normy at Globe Derby Park.",
+        "difficulty": 75,
+        "source": "recent_winner",
+        "revealed_letters": 5,
+        "name_pattern": "G _ _ T _    P U _ _ I _ _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Gaita. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 7,
+        "name_pattern": "G A _ T _    P U _ _ I _ _ N _"
+      }
+    ]
   }
 ]
