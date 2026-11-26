@@ -2994,5 +2994,58 @@
         "name_pattern": "T _ _ Y    R Y _ _"
       }
     ]
+  },
+  {
+    "date": "2026-11-27",
+    "puzzle_number": 57,
+    "type": "TRAINER",
+    "answer": "Stewart Dickson",
+    "stats": {
+      "recent_starts": 277,
+      "recent_wins": 23,
+      "horses": 15
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "My stable has had 277 race starts in the past 12 months.",
+        "difficulty": 15,
+        "source": "recent_starts",
+        "revealed_letters": 1,
+        "name_pattern": "S _ _ _ _ _ _    _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "I've trained 23 winners in the past 12 months.",
+        "difficulty": 40,
+        "source": "recent_wins",
+        "revealed_letters": 2,
+        "name_pattern": "S _ _ _ _ _ _    D _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "The track where I've had the most runners in the past 12 months is Redcliffe.",
+        "difficulty": 55,
+        "source": "favourite_venue",
+        "revealed_letters": 4,
+        "name_pattern": "S _ _ _ _ _ T    D _ C _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "The driver used most often by my stable recently is Leonard Cain.",
+        "difficulty": 70,
+        "source": "favourite_driver",
+        "revealed_letters": 5,
+        "name_pattern": "S _ _ W _ _ T    D _ C _ _ _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My first name is Stewart. ",
+        "difficulty": 95,
+        "source": "first_name",
+        "revealed_letters": 7,
+        "name_pattern": "S T _ W _ _ T    D _ C _ _ O _"
+      }
+    ]
   }
 ]
