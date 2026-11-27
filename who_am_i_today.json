@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-27",
-  "puzzle_number": 57,
+  "date": "2026-11-28",
+  "puzzle_number": 58,
   "type": "TRAINER",
-  "answer": "Stewart Dickson",
+  "answer": "Lisa McDonald",
   "stats": {
-    "recent_starts": 277,
-    "recent_wins": 23,
-    "horses": 15
+    "recent_starts": 51,
+    "recent_wins": 4,
+    "horses": 8
   },
   "clues": [
     {
       "clue_number": 1,
-      "text": "My stable has had 277 race starts in the past 12 months.",
+      "text": "My stable has had 51 race starts in the past 12 months.",
       "difficulty": 15,
       "source": "recent_starts",
       "revealed_letters": 1,
-      "name_pattern": "S _ _ _ _ _ _    _ _ _ _ _ _ _"
+      "name_pattern": "L _ _ _    _ _ _ _ _ _ _ _"
     },
     {
       "clue_number": 2,
-      "text": "I've trained 23 winners in the past 12 months.",
+      "text": "I've trained 4 winners in the past 12 months.",
       "difficulty": 40,
       "source": "recent_wins",
       "revealed_letters": 2,
-      "name_pattern": "S _ _ _ _ _ _    D _ _ _ _ _ _"
+      "name_pattern": "L _ _ _    M _ _ _ _ _ _ _"
     },
     {
       "clue_number": 3,
-      "text": "The track where I've had the most runners in the past 12 months is Redcliffe.",
+      "text": "The track where I've had the most runners in the past 12 months is Newcastle.",
       "difficulty": 55,
       "source": "favourite_venue",
-      "revealed_letters": 4,
-      "name_pattern": "S _ _ _ _ _ T    D _ C _ _ _ _"
+      "revealed_letters": 3,
+      "name_pattern": "L _ _ _    M C _ _ _ _ _ _"
     },
     {
       "clue_number": 4,
-      "text": "The driver used most often by my stable recently is Leonard Cain.",
+      "text": "The driver used most often by my stable recently is Jorja Daskalovski.",
       "difficulty": 70,
       "source": "favourite_driver",
-      "revealed_letters": 5,
-      "name_pattern": "S _ _ W _ _ T    D _ C _ _ _ _"
+      "revealed_letters": 4,
+      "name_pattern": "L _ _ _    M C _ _ N _ _ _"
     },
     {
       "clue_number": 5,
-      "text": "My first name is Stewart. ",
+      "text": "My first name is Lisa. ",
       "difficulty": 95,
       "source": "first_name",
-      "revealed_letters": 7,
-      "name_pattern": "S T _ W _ _ T    D _ C _ _ O _"
+      "revealed_letters": 6,
+      "name_pattern": "L _ _ A    M C _ _ N _ L _"
     }
   ]
 }
