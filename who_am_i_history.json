@@ -3100,5 +3100,58 @@
         "name_pattern": "L _ _ A    M C _ _ N _ L _"
       }
     ]
+  },
+  {
+    "date": "2026-11-29",
+    "puzzle_number": 59,
+    "type": "HORSE",
+    "answer": "Rocketon",
+    "stats": {
+      "starts": 90,
+      "wins": 9,
+      "places": 24
+    },
+    "clues": [
+      {
+        "clue_number": 1,
+        "text": "I've had 90 race starts.",
+        "difficulty": 15,
+        "source": "career_starts",
+        "revealed_letters": 0,
+        "name_pattern": "_ _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 2,
+        "text": "All of my recorded starts have been in New South Wales.",
+        "difficulty": 35,
+        "source": "state",
+        "revealed_letters": 1,
+        "name_pattern": "R _ _ _ _ _ _ _"
+      },
+      {
+        "clue_number": 3,
+        "text": "I've won at tracks including Penrith, Bankstown, Goulburn.",
+        "difficulty": 55,
+        "source": "winning_tracks",
+        "revealed_letters": 2,
+        "name_pattern": "R _ _ K _ _ _ _"
+      },
+      {
+        "clue_number": 4,
+        "text": "I'm currently associated most often with trainer John Micallef.",
+        "difficulty": 75,
+        "source": "trainer",
+        "revealed_letters": 3,
+        "name_pattern": "R _ _ K _ T _ _"
+      },
+      {
+        "clue_number": 5,
+        "text": "My most recent start was at Penrith on 19 November 2026, where I finished 9th for trainer John Micallef and driver Lucas Bucca.",
+        "difficulty": 95,
+        "source": "last_start",
+        "revealed_letters": 4,
+        "name_pattern": "R _ C K _ T _ _"
+      }
+    ]
   }
 ]
